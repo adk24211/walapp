@@ -114,6 +114,8 @@ def _build_prompt(
 
         content 작성 규칙:
         - title, summary, headline, content 모두 신문 기사체(평서형 '~다' 종결)로 작성하세요. 구어체 말투("~해요", "~네요" 등)는 어디에도 쓰지 마세요
+        - 한글과 영문만 사용하세요. 한자(漢字)는 절대 쓰지 마세요 (예: '詳細' X → '상세' O)
+        - 모든 줄은 들여쓰기 없이 행의 맨 앞에서 시작하세요. 공백으로 들여쓰지 마세요
         - 첫 줄은 반드시 <div class="summary-box [CATEGORY_CLASS]"> 블록으로 시작
         - [CATEGORY_CLASS] 자리에는 policy / jobs / tech 중 하나를 넣으세요
         - 이후 ## 소제목으로 섹션을 나누세요
@@ -161,6 +163,23 @@ def _escape_control_chars(raw: str) -> str:
     return "".join(out)
 
 
+# CJK 통합 한자 영역 (한국어 본문에 끼어드는 한자 제거용)
+_HANJA_RE = re.compile(r"[一-鿿㐀-䶿]")
+
+
+def _clean_content(content: str) -> str:
+    """LLM이 생성한 마크다운 본문 정리.
+
+    - 각 줄의 선행 공백을 제거한다. 모델이 본문 전체를 들여쓰면 kramdown이
+      4칸 이상 들여쓰기를 코드 블록으로 오인해 div/제목이 깨지기 때문이다.
+    - 한국어 문맥에 무작위로 끼어드는 한자(詳細, 文化 등)를 제거한다.
+    """
+    lines = [line.lstrip() for line in content.splitlines()]
+    cleaned = "\n".join(lines).strip()
+    cleaned = _HANJA_RE.sub("", cleaned)
+    return cleaned
+
+
 def generate(
     category: Category,
     items: list[RawItem],
@@ -190,6 +209,10 @@ def generate(
     except json.JSONDecodeError:
         # 문자열 값 안에 이스케이프되지 않은 제어문자(줄바꿈 등)가 섞인 경우 보정
         data = json.loads(_escape_control_chars(raw))
+
+    # content 후처리: 줄별 들여쓰기 제거(kramdown 코드블록 오인 방지) + 한자 제거
+    if data.get("content"):
+        data["content"] = _clean_content(data["content"])
 
     log.info("생성 완료: %s", data.get("title", "제목 없음"))
     return data
