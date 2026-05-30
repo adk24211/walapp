@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://adk2421.github.io/walapp/feed.xml" rel="self" type="application/atom+xml" /><link href="https://adk2421.github.io/walapp/" rel="alternate" type="text/html" hreflang="ko" /><updated>2026-05-30T18:07:31+00:00</updated><id>https://adk2421.github.io/walapp/feed.xml</id><title type="html">Walapp</title><subtitle>정부 지원금, 개발자 채용, IT 트렌드 — 매일 아침 딱 필요한 것만</subtitle><entry><title type="html">이번 주 IT·테크 브리핑 — WWDC 2026, Copilot 에이전트, EU AI Act 1주년</title><link href="https://adk2421.github.io/walapp/tech-news/2026/05/29/tech-news-weekly/" rel="alternate" type="text/html" title="이번 주 IT·테크 브리핑 — WWDC 2026, Copilot 에이전트, EU AI Act 1주년" /><published>2026-05-29T22:02:00+00:00</published><updated>2026-05-29T22:02:00+00:00</updated><id>https://adk2421.github.io/walapp/tech-news/2026/05/29/tech-news-weekly</id><content type="html" xml:base="https://adk2421.github.io/walapp/tech-news/2026/05/29/tech-news-weekly/"><![CDATA[<div class="summary-box tech">
+  <div class="summary-label">3줄 요약</div>
+  <ul>
+    <li>WWDC 2026 — Swift 6.1, Xcode 17 AI 코드 리뷰 내장, 빌드 속도 30% 개선</li>
+    <li>GitHub Copilot 에이전트 모드 베타 딱지 뗐어요</li>
+    <li>EU AI Act 시행 1주년 — 국내 기업 컴플라이언스 비용 증가</li>
+  </ul>
+</div>
+
+<h2 id="wwdc-2026-개발자-체크리스트">WWDC 2026 개발자 체크리스트</h2>
+
+<p>애플 WWDC 2026 키노트에서 개발자가 챙겨야 할 것들이에요.</p>
+
+<h3 id="swift-61-주요-변경사항">Swift 6.1 주요 변경사항</h3>
+
+<ul>
+  <li>Concurrency 모델 개선 — async/await 성능 향상</li>
+  <li>새로운 Macro 시스템 안정화</li>
+  <li>SwiftUI 컴포넌트 대폭 추가</li>
+</ul>
+
+<h3 id="xcode-17-신기능">Xcode 17 신기능</h3>
+
+<ul>
+  <li>AI 코드 리뷰 내장 (Copilot과 유사)</li>
+  <li>빌드 속도 평균 <strong>30%</strong> 개선</li>
+  <li>새로운 디버거 UI</li>
+</ul>
+
+<h2 id="github-copilot-에이전트-모드-정식-출시">GitHub Copilot 에이전트 모드 정식 출시</h2>
+
+<p>베타 딱지를 뗐어요. 이제 PR 생성, 테스트 작성, 버그 수정까지 Copilot이 자율적으로 수행할 수 있어요. 아직 완벽하진 않지만, 반복적인 작업 자동화에는 꽤 쓸 만하다는 평가가 나와요.</p>
+
+<p>GitHub Actions와 연동하면 CI 파이프라인도 자동화 가능해요.</p>
+
+<h2 id="eu-ai-act-시행-1주년">EU AI Act 시행 1주년</h2>
+
+<p>지난 5월로 EU AI Act 시행 1주년을 맞았어요. 고위험 AI 시스템에 대한 규제가 본격화되면서 유럽 진출을 준비하는 국내 AI 스타트업들의 컴플라이언스 비용이 증가하고 있어요.</p>
+
+<p>핵심은 <strong>투명성 요구</strong>예요. AI가 결정에 개입했다는 사실을 사용자에게 알려야 하고, 학습 데이터 출처를 문서화해야 해요.</p>
+
+<h2 id="이번-주-github-트렌딩">이번 주 GitHub 트렌딩</h2>
+
+<ul>
+  <li><strong>microsoft/TypeScript</strong> — v6.0 RC 릴리스</li>
+  <li><strong>astral-sh/uv</strong> — Python 패키지 매니저, pip 대비 10~100배 빠른 속도</li>
+  <li><strong>anthropics/claude-code</strong> — 에이전트 기능 추가 업데이트</li>
+</ul>]]></content><author><name></name></author><category term="tech-news" /><category term="WWDC" /><category term="Swift" /><category term="Copilot" /><category term="EU AI Act" /><category term="오픈소스" /><summary type="html"><![CDATA[3줄 요약 WWDC 2026 — Swift 6.1, Xcode 17 AI 코드 리뷰 내장, 빌드 속도 30% 개선 GitHub Copilot 에이전트 모드 베타 딱지 뗐어요 EU AI Act 시행 1주년 — 국내 기업 컴플라이언스 비용 증가]]></summary></entry><entry><title type="html">AI 엔지니어 채용 전년비 3배↑ — 백엔드엔 Rust · Go 바람이 불고 있어요</title><link href="https://adk2421.github.io/walapp/dev-jobs/2026/05/29/dev-jobs-trend/" rel="alternate" type="text/html" title="AI 엔지니어 채용 전년비 3배↑ — 백엔드엔 Rust · Go 바람이 불고 있어요" /><published>2026-05-29T22:01:00+00:00</published><updated>2026-05-29T22:01:00+00:00</updated><id>https://adk2421.github.io/walapp/dev-jobs/2026/05/29/dev-jobs-trend</id><content type="html" xml:base="https://adk2421.github.io/walapp/dev-jobs/2026/05/29/dev-jobs-trend/"><![CDATA[<div class="summary-box jobs">
+  <div class="summary-label">3줄 요약</div>
+  <ul>
+    <li>국내 IT 기업 AI 엔지니어 채용 공고, 전년 대비 약 3배 증가</li>
+    <li>백엔드 채용에서 Rust, Go 요구 비율 각각 40%·65% 급증</li>
+    <li>React/TypeScript는 여전히 프론트 필수, Next.js 요구도 증가세</li>
+  </ul>
+</div>
+
+<h2 id="이번-주-채용-시장-한눈에">이번 주 채용 시장 한눈에</h2>
+
+<p>원티드, 잡플래닛, 링크드인 등 주요 채용 플랫폼의 이번 주 공고를 분석했어요.</p>
+
+<p>가장 눈에 띄는 변화는 AI 관련 포지션의 폭발적인 증가예요. LLM 파인튜닝, RAG 파이프라인, AI 인프라 등 세부 직군이 세분화되고 있는 것도 특징이에요.</p>
+
+<h2 id="포지션별-채용-동향">포지션별 채용 동향</h2>
+
+<h3 id="aiml-엔지니어">AI/ML 엔지니어</h3>
+
+<p>가장 핫한 포지션이에요. 특히 이런 역량을 요구하는 곳이 많아요.</p>
+
+<ul>
+  <li>LLM 파인튜닝 경험 (LoRA, RLHF)</li>
+  <li>RAG 시스템 설계 및 구축</li>
+  <li>LangChain / LlamaIndex 활용</li>
+  <li>PyTorch, Hugging Face 실무 경험</li>
+</ul>
+
+<h3 id="백엔드-엔지니어">백엔드 엔지니어</h3>
+
+<p>Rust와 Go 요구가 눈에 띄게 늘었어요. 특히 고성능 서버, 금융·핀테크 도메인에서 Rust 채용이 두드러져요.</p>
+
+<ul>
+  <li>Rust: 전년 대비 <strong>+40%</strong></li>
+  <li>Go: 전년 대비 <strong>+65%</strong></li>
+  <li>Python: 전년 대비 <strong>+30%</strong></li>
+  <li>Node.js: 전년 대비 <strong>-10%</strong> (유일한 하락)</li>
+</ul>
+
+<h3 id="프론트엔드-엔지니어">프론트엔드 엔지니어</h3>
+
+<p>React + TypeScript는 사실상 필수가 됐고, Next.js App Router 경험을 요구하는 공고도 절반을 넘어섰어요.</p>
+
+<h2 id="이번-주-눈에-띈-공고">이번 주 눈에 띈 공고</h2>
+
+<ul>
+  <li><strong>카카오</strong>: AI 플랫폼 엔지니어 (경력 3~7년)</li>
+  <li><strong>토스</strong>: Backend Engineer — Rust 우대</li>
+  <li><strong>쿠팡</strong>: ML Platform Engineer</li>
+  <li><strong>라인</strong>: LLM Fine-tuning Engineer</li>
+</ul>
+
+<h2 id="이번-주-채용-tip">이번 주 채용 TIP</h2>
+
+<p>스택 트렌드만큼 중요한 게 포트폴리오 차별화예요. AI 포지션은 논문 구현 경험 또는 실서비스 적용 사례를 강조하는 게 유리해요. GitHub README에 결과 지표(정확도, latency 개선율 등)를 수치로 명시하는 것도 추천해요.</p>]]></content><author><name></name></author><category term="dev-jobs" /><category term="AI엔지니어" /><category term="Rust" /><category term="Go" /><category term="Python" /><category term="TypeScript" /><category term="Next.js" /><summary type="html"><![CDATA[3줄 요약 국내 IT 기업 AI 엔지니어 채용 공고, 전년 대비 약 3배 증가 백엔드 채용에서 Rust, Go 요구 비율 각각 40%·65% 급증 React/TypeScript는 여전히 프론트 필수, Next.js 요구도 증가세]]></summary></entry><entry><title type="html">청년 월세 지원 소득 기준 완화 — 작년에 떨어졌어도 다시 도전 가능해요</title><link href="https://adk2421.github.io/walapp/policy/2026/05/29/youth-rent-support/" rel="alternate" type="text/html" title="청년 월세 지원 소득 기준 완화 — 작년에 떨어졌어도 다시 도전 가능해요" /><published>2026-05-29T22:00:00+00:00</published><updated>2026-05-29T22:00:00+00:00</updated><id>https://adk2421.github.io/walapp/policy/2026/05/29/youth-rent-support</id><content type="html" xml:base="https://adk2421.github.io/walapp/policy/2026/05/29/youth-rent-support/"><![CDATA[<div class="summary-box policy">
+  <div class="summary-label">3줄 요약</div>
+  <ul>
+    <li>청년 월세 특별지원 2026년 개편, 소득 기준 완화됐어요</li>
+    <li>월 최대 20만 원 × 12개월 = 240만 원까지 지원받을 수 있어요</li>
+    <li>신청 기간: 2026년 6월 1일 ~ 8월 31일</li>
+  </ul>
+</div>
+
+<h2 id="이게-뭔데요">이게 뭔데요?</h2>
+
+<p>국토교통부가 운영하는 <strong>청년 월세 한시 특별지원</strong> 사업이에요. 월세로 사는 청년에게 최대 월 20만 원씩, 최대 12개월(총 240만 원)을 지원해주는 제도예요.</p>
+
+<p>2024년에 처음 시작해서 올해로 3번째 시즌을 맞이했는데요. 매년 조건이 조금씩 바뀌기 때문에 꼼꼼히 확인해야 해요.</p>
+
+<h2 id="2026년-달라진-점은요">2026년 달라진 점은요?</h2>
+
+<p><strong>① 소득 기준 완화</strong></p>
+
+<p>기존엔 기준 중위소득 60% 이하만 신청 가능했는데, 올해부터 <strong>70% 이하</strong>까지 완화됐어요. 작년에 소득 때문에 떨어졌다면 이번엔 가능할 수 있어요.</p>
+
+<p><strong>② 부모님 소득 기준도 바뀌었어요</strong></p>
+
+<p>원가구(부모님 포함) 소득 기준도 중위소득 100% → <strong>120%</strong>로 완화됐어요. 부모님 소득이 높다는 이유로 탈락하는 경우를 줄이겠다는 취지예요.</p>
+
+<p><strong>③ 신청 기간 연장</strong></p>
+
+<p>기존 2개월 → <strong>3개월</strong>로 늘어났어요. 바빠서 놓쳤던 분들도 여유 있게 신청할 수 있어요.</p>
+
+<h2 id="누가-신청할-수-있나요">누가 신청할 수 있나요?</h2>
+
+<p>아래 조건을 <strong>모두</strong> 충족해야 해요.</p>
+
+<ul>
+  <li><strong>나이</strong>: 만 19~34세</li>
+  <li><strong>거주 형태</strong>: 임차보증금 5천만 원 이하, 월세 70만 원 이하 주택</li>
+  <li><strong>소득</strong>: 본인 소득 기준 중위소득 70% 이하</li>
+  <li><strong>부모 소득</strong>: 원가구 소득 중위소득 120% 이하</li>
+  <li><strong>주거 형태</strong>: 주거급여 수급자가 아닐 것</li>
+</ul>
+
+<blockquote>
+  <p>부모님과 따로 살고 있어도 부모님 소득이 기준에 포함돼요. 꼭 확인하세요.</p>
+</blockquote>
+
+<h2 id="어떻게-신청하나요">어떻게 신청하나요?</h2>
+
+<ol>
+  <li><strong>복지로</strong>(bokjiro.go.kr) 또는 <strong>주민센터</strong> 방문</li>
+  <li>신분증, 임대차계약서, 가족관계증명서 준비</li>
+  <li>소득·재산 조회 동의서 작성</li>
+  <li>심사 후 약 4~6주 내 결과 통보</li>
+</ol>
+
+<hr />
+
+<p>작년에 탈락하셨더라도 조건이 완화됐으니 꼭 다시 확인해보세요.</p>]]></content><author><name></name></author><category term="policy" /><category term="청년정책" /><category term="월세지원" /><category term="주거지원" /><summary type="html"><![CDATA[3줄 요약 청년 월세 특별지원 2026년 개편, 소득 기준 완화됐어요 월 최대 20만 원 × 12개월 = 240만 원까지 지원받을 수 있어요 신청 기간: 2026년 6월 1일 ~ 8월 31일]]></summary></entry></feed>
