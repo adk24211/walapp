@@ -119,11 +119,11 @@ def _build_prompt(
         - 존댓말 권유체("~하세요", "~보세요")도 쓰지 마세요. 객관적 서술로만 작성하세요
 
         content 작성 규칙:
-        - 한글과 영문만 사용하세요. 한자(漢字)는 절대 쓰지 마세요 (예: '詳細' X → '상세' O)
+        - 한글과 영문(+숫자)만 사용하세요. 한자(漢字)와 일본어 가나(カタカナ·ひらがな)는 절대 쓰지 마세요 (예: '詳細' → '상세', 'サイバー' → '사이버')
         - 모든 줄은 들여쓰기 없이 행의 맨 앞에서 시작하세요. 공백으로 들여쓰지 마세요
-        - 첫 줄은 반드시 <div class="summary-box [CATEGORY_CLASS]"> 블록으로 시작
+        - 첫 줄은 반드시 <div class="summary-box [CATEGORY_CLASS]">핵심을 요약하는 1~2문장</div> 형태의 한 줄짜리 요약 박스로 작성하세요. 본문 전체를 이 박스 안에 넣지 마세요
         - [CATEGORY_CLASS] 자리에는 policy / jobs / tech 중 하나를 넣으세요
-        - 이후 ## 소제목으로 섹션을 나누세요
+        - summary-box 다음부터는 반드시 마크다운 ## 소제목으로 섹션을 나누세요. <h2>·<p> 같은 HTML 태그를 쓰지 말고 순수 마크다운으로 작성하세요
         - 본문 길이: 600~900자 (한국어 기준)
         - 마크다운 표, 굵은 글씨, blockquote 자유롭게 사용
         - URL 링크는 포함하지 마세요 (보안 이슈)
@@ -168,8 +168,23 @@ def _escape_control_chars(raw: str) -> str:
     return "".join(out)
 
 
-# CJK 통합 한자 영역 (한국어 본문에 끼어드는 한자 제거용)
-_HANJA_RE = re.compile(r"[一-鿿㐀-䶿]")
+# 한국어 텍스트에 끼어드는 외국 문자 제거용.
+# CJK 한자(통합 + 확장 A), 일본어 히라가나/가타카나(음장기호 ー 포함).
+# 가타카나 가운뎃점 U+30FB는 한국어 가운뎃점과 혼동되므로 범위에서 제외한다.
+_FOREIGN_RE = re.compile(
+    r"[㐀-䶿一-鿿぀-ゟ゠-ヺー-ヿ]"
+)
+
+
+def _strip_foreign(text: str) -> str:
+    """한국어 문맥에 무작위로 끼어드는 한자·일본어 가나를 제거한다.
+
+    예) '詳細' → '', 'サイバー攻撃' → ''. 영문/숫자/한글은 보존한다.
+    제거 후 생기는 이중 공백은 한 칸으로 정리한다.
+    """
+    cleaned = _FOREIGN_RE.sub("", text)
+    cleaned = re.sub(r"[ \t]{2,}", " ", cleaned)
+    return cleaned.strip()
 
 
 def _clean_content(content: str) -> str:
@@ -177,11 +192,11 @@ def _clean_content(content: str) -> str:
 
     - 각 줄의 선행 공백을 제거한다. 모델이 본문 전체를 들여쓰면 kramdown이
       4칸 이상 들여쓰기를 코드 블록으로 오인해 div/제목이 깨지기 때문이다.
-    - 한국어 문맥에 무작위로 끼어드는 한자(詳細, 文化 등)를 제거한다.
+    - 한자·일본어 가나를 제거한다.
     """
     lines = [line.lstrip() for line in content.splitlines()]
     cleaned = "\n".join(lines).strip()
-    cleaned = _HANJA_RE.sub("", cleaned)
+    cleaned = _FOREIGN_RE.sub("", cleaned)
     return cleaned
 
 
@@ -215,12 +230,28 @@ def generate(
         # 문자열 값 안에 이스케이프되지 않은 제어문자(줄바꿈 등)가 섞인 경우 보정
         data = json.loads(_escape_control_chars(raw))
 
-    # content 후처리: 줄별 들여쓰기 제거(kramdown 코드블록 오인 방지) + 한자 제거
+    # content 후처리: 줄별 들여쓰기 제거(kramdown 코드블록 오인 방지) + 외국 문자 제거
     if data.get("content"):
         data["content"] = _clean_content(data["content"])
 
+    # 나머지 텍스트 필드 외국 문자(한자·일본어 가나) 제거
+    for key in ("title", "summary", "headline", "callout", "callout_label"):
+        if data.get(key):
+            data[key] = _strip_foreign(str(data[key]))
+    if isinstance(data.get("tags"), list):
+        data["tags"] = [t for t in (_strip_foreign(str(t)) for t in data["tags"]) if t]
+
     log.info("생성 완료: %s", data.get("title", "제목 없음"))
     return data
+
+
+def _yaml_safe(text: str) -> str:
+    """큰따옴표로 감싸는 YAML 스칼라용으로 안전하게 정리.
+
+    줄바꿈을 공백으로 바꾸고 내부 큰따옴표를 작은따옴표로 치환해
+    front matter 파싱이 깨지지 않게 한다.
+    """
+    return " ".join(str(text).split()).replace('"', "'")
 
 
 def to_jekyll_markdown(
@@ -231,26 +262,26 @@ def to_jekyll_markdown(
     """생성된 데이터를 Jekyll front matter + 마크다운으로 변환"""
     meta = CATEGORY_META[category]
     date_str = post_date.strftime("%Y-%m-%d %H:%M:%S +0900")
-    tags_yaml = "\n".join(f"  - {t}" for t in data.get("tags", []))
+    tags_yaml = "\n".join(f"  - {_yaml_safe(t)}" for t in data.get("tags", []))
 
     front_matter_parts = [
         "---",
         "layout: post",
-        f'title: "{data["title"]}"',
+        f'title: "{_yaml_safe(data["title"])}"',
         f"date: {date_str}",
         f"categories: [{meta['jekyll_cat']}]",
         f"tags:\n{tags_yaml}",
-        f'summary: "{data.get("summary", "")}"',
+        f'summary: "{_yaml_safe(data.get("summary", ""))}"',
     ]
 
     if data.get("callout"):
-        front_matter_parts.append(f'callout: "{data["callout"]}"')
+        front_matter_parts.append(f'callout: "{_yaml_safe(data["callout"])}"')
         front_matter_parts.append(
-            f'callout_label: "{data.get("callout_label", "핵심")}"'
+            f'callout_label: "{_yaml_safe(data.get("callout_label", "핵심"))}"'
         )
 
     if data.get("headline"):
-        front_matter_parts.append(f'headline: "{data["headline"]}"')
+        front_matter_parts.append(f'headline: "{_yaml_safe(data["headline"])}"')
 
     front_matter_parts.append("---")
     front_matter = "\n".join(front_matter_parts)
