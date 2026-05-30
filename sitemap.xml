@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://adk2421.github.io/walapp/policy/2026/05/27/policy/</loc>
+<lastmod>2026-05-27T22:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://adk2421.github.io/walapp/dev-jobs/2026/05/27/dev-jobs/</loc>
+<lastmod>2026-05-27T22:01:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://adk2421.github.io/walapp/tech-news/2026/05/27/tech-news/</loc>
+<lastmod>2026-05-27T22:02:00+00:00</lastmod>
+</url>
+<url>
 <loc>https://adk2421.github.io/walapp/policy/2026/05/29/policy/</loc>
 <lastmod>2026-05-29T22:00:00+00:00</lastmod>
 </url>
@@ -16,6 +28,15 @@
 <loc>https://adk2421.github.io/walapp/archive/</loc>
 </url>
 <url>
+<loc>https://adk2421.github.io/walapp/disclaimer/</loc>
+</url>
+<url>
 <loc>https://adk2421.github.io/walapp/</loc>
+</url>
+<url>
+<loc>https://adk2421.github.io/walapp/privacy/</loc>
+</url>
+<url>
+<loc>https://adk2421.github.io/walapp/terms/</loc>
 </url>
 </urlset>
