@@ -137,7 +137,7 @@ def generate(
     log.info("Gemini API 호출: %s (%d건)", category, len(items))
 
     response = client.models.generate_content(
-        model="gemini-2.0-flash",
+        model="gemini-2.0-flash-lite",
         contents=prompt,
     )
     raw = response.text.strip()
