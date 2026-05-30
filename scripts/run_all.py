@@ -21,7 +21,7 @@ from datetime import datetime
 from pathlib import Path
 
 from dotenv import load_dotenv
-import google.generativeai as genai
+from google import genai
 
 # 프로젝트 루트를 sys.path에 추가
 ROOT = Path(__file__).parent.parent
@@ -122,7 +122,7 @@ def collect_all(skip: bool = False) -> dict:
 
 def generate_posts(
     collected: dict,
-    client: genai.GenerativeModel,
+    client: genai.Client,
     post_date: datetime,
     dry_run: bool = False,
 ) -> list[Path]:
@@ -198,8 +198,7 @@ def main() -> None:
     collected = collect_all(skip=skip_collect)
 
     # 생성
-    genai.configure(api_key=api_key)
-    client = genai.GenerativeModel("gemini-1.5-flash")
+    client = genai.Client(api_key=api_key)
     saved  = generate_posts(collected, client, post_date, dry_run=dry_run)
 
     if saved:

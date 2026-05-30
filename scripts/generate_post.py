@@ -9,7 +9,7 @@ import textwrap
 from datetime import datetime
 from typing import Literal
 
-import google.generativeai as genai
+from google import genai
 
 from collect.base import RawItem
 
@@ -127,7 +127,7 @@ def _build_prompt(
 def generate(
     category: Category,
     items: list[RawItem],
-    client: genai.GenerativeModel,
+    client: genai.Client,
     extra: dict | None = None,
 ) -> dict:
     """Gemini API 호출 → 포스트 데이터 반환"""
@@ -136,7 +136,10 @@ def generate(
     prompt = _build_prompt(category, items, extra)
     log.info("Gemini API 호출: %s (%d건)", category, len(items))
 
-    response = client.generate_content(prompt)
+    response = client.models.generate_content(
+        model="gemini-2.0-flash",
+        contents=prompt,
+    )
     raw = response.text.strip()
 
     # JSON 펜스 제거
