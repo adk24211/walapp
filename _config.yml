@@ -12,6 +12,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate
 
 categories_label:
   policy: "정부·청년 정책"

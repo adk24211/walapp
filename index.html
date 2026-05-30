@@ -3,7 +3,6 @@ layout: default
 title: 홈
 ---
 
-{% assign today_posts = site.posts | where_exp: "p", "p.date >= site.time | date: '%Y-%m-%d'" %}
 {% assign all_posts = site.posts %}
 {% assign policy_posts = all_posts | where_exp: "p", "p.categories contains 'policy'" %}
 {% assign jobs_posts   = all_posts | where_exp: "p", "p.categories contains 'dev-jobs'" %}
