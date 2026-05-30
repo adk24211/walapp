@@ -23,6 +23,13 @@ WANTED_RSS_URLS = [
     ("https://www.wanted.co.kr/jobsfeed/rss?job_category_id=669", "원티드-데이터"),
 ]
 
+# 기타 채용 플랫폼 RSS
+JOB_RSS_URLS = [
+    ("https://www.saramin.co.kr/zf_user/rss", "사람인"),
+    ("https://rss.jobkorea.co.kr/rss/it", "잡코리아-IT"),
+    ("https://career.programmers.co.kr/job/rss", "프로그래머스"),
+]
+
 # 주목할 기술 스택 키워드
 HOT_STACKS = {
     "AI/ML": ["LLM", "RAG", "파인튜닝", "PyTorch", "LangChain", "Hugging Face", "AI 엔지니어"],
@@ -57,6 +64,17 @@ def collect_jumpit() -> list[RawItem]:
     except Exception as e:
         log.warning("점핏 수집 실패: %s", e)
         return []
+
+
+def collect_other_boards() -> list[RawItem]:
+    """사람인·잡코리아·프로그래머스 등 기타 채용 플랫폼 수집"""
+    items: list[RawItem] = []
+    for url, name in JOB_RSS_URLS:
+        try:
+            items.extend(parse_rss(url, name, limit=6))
+        except Exception as e:
+            log.warning("채용 수집 실패 [%s]: %s", name, e)
+    return items
 
 
 def collect_github_trending() -> list[RawItem]:
@@ -125,6 +143,7 @@ def collect() -> tuple[list[RawItem], dict[str, int]]:
     job_items: list[RawItem] = []
     job_items.extend(collect_wanted())
     job_items.extend(collect_jumpit())
+    job_items.extend(collect_other_boards())
 
     trend_items = collect_github_trending()
 

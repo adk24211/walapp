@@ -21,6 +21,12 @@ SOURCES = [
     },
     {
         "type": "rss",
+        "name": "정책브리핑-뉴스",
+        "url": "https://www.korea.kr/rss/dept_news.xml",
+        "limit": 8,
+    },
+    {
+        "type": "rss",
         "name": "고용노동부",
         "url": "https://www.moel.go.kr/rss/pressCategoryList.do",
         "limit": 5,
@@ -29,6 +35,36 @@ SOURCES = [
         "type": "rss",
         "name": "국토교통부",
         "url": "https://www.molit.go.kr/rss/pressCategoryList.do",
+        "limit": 5,
+    },
+    {
+        "type": "rss",
+        "name": "정부24-뉴스",
+        "url": "https://www.gov.kr/rss/news.do",
+        "limit": 8,
+    },
+    {
+        "type": "rss",
+        "name": "교육부",
+        "url": "https://www.moe.go.kr/rssFeed.do?m=010902",
+        "limit": 5,
+    },
+    {
+        "type": "rss",
+        "name": "중소벤처기업부",
+        "url": "https://www.mss.go.kr/site/smba/ex/bbs/RssList.do?cbIdx=86",
+        "limit": 5,
+    },
+    {
+        "type": "rss",
+        "name": "여성가족부",
+        "url": "https://www.mogef.go.kr/rss/news_rss.do",
+        "limit": 5,
+    },
+    {
+        "type": "rss",
+        "name": "보건복지부",
+        "url": "https://www.mohw.go.kr/board.es?mid=a10503000000&bid=0027&rss=Y",
         "limit": 5,
     },
 ]
