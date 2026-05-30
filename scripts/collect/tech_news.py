@@ -1,10 +1,8 @@
 """
 IT·테크 뉴스 수집기
-- GeekNews RSS (한국 HN 계열)
-- Bloter RSS
-- ZDNet Korea RSS
+- GeekNews / 하다 / 바이라인네트워크 (국내)
+- TechCrunch / Ars Technica / The Verge / Engadget (영문)
 - Hacker News Top Stories API
-- TechCrunch RSS (영문, 요약용)
 """
 from __future__ import annotations
 
@@ -26,29 +24,9 @@ RSS_SOURCES = [
         "limit": 10,
     },
     {
-        "url":   "https://yozm.wishket.com/magazine/feed/",
-        "name":  "요즘IT",
-        "limit": 8,
-    },
-    {
-        "url":   "https://www.bloter.net/feed",
-        "name":  "Bloter",
-        "limit": 8,
-    },
-    {
-        "url":   "https://zdnet.co.kr/rss/latest",
-        "name":  "ZDNet Korea",
-        "limit": 8,
-    },
-    {
-        "url":   "https://www.itworld.co.kr/rss/all.xml",
-        "name":  "ITWorld Korea",
-        "limit": 6,
-    },
-    {
         "url":   "https://byline.network/feed/",
         "name":  "바이라인네트워크",
-        "limit": 6,
+        "limit": 8,
     },
     {
         "url":   "https://techcrunch.com/feed/",
@@ -150,10 +128,7 @@ def score_item(item: RawItem) -> int:
     if item.source == "Hacker News":
         score += min(item.extra.get("score", 0) // 50, 10)
     # 한국어 소스 가산
-    if item.source in (
-        "GeekNews", "GeekNews(하다)", "요즘IT", "Bloter",
-        "ZDNet Korea", "ITWorld Korea", "바이라인네트워크",
-    ):
+    if item.source in ("GeekNews", "GeekNews(하다)", "바이라인네트워크"):
         score += 3
     return score
 

@@ -1,9 +1,7 @@
 """
 개발자 채용 & 기술 스택 동향 수집기
-- 원티드 개발 직군 RSS
-- 점핏 RSS
-- GitHub Trending (Python 스크래핑)
-- Hacker News Who's Hiring (월별)
+- GitHub Trending (Python 스크래핑) — 현재 유일하게 안정적인 소스
+- JOB_RSS_URLS — 채용 플랫폼 RSS (확인된 소스가 생기면 추가)
 """
 from __future__ import annotations
 
@@ -15,20 +13,10 @@ from bs4 import BeautifulSoup
 
 log = logging.getLogger(__name__)
 
-# 원티드 개발 카테고리 RSS
-WANTED_RSS_URLS = [
-    ("https://www.wanted.co.kr/jobsfeed/rss?job_category_id=518", "원티드-백엔드"),
-    ("https://www.wanted.co.kr/jobsfeed/rss?job_category_id=672", "원티드-프론트엔드"),
-    ("https://www.wanted.co.kr/jobsfeed/rss?job_category_id=655", "원티드-AI/ML"),
-    ("https://www.wanted.co.kr/jobsfeed/rss?job_category_id=669", "원티드-데이터"),
-]
-
-# 기타 채용 플랫폼 RSS
-JOB_RSS_URLS = [
-    ("https://www.saramin.co.kr/zf_user/rss", "사람인"),
-    ("https://rss.jobkorea.co.kr/rss/it", "잡코리아-IT"),
-    ("https://career.programmers.co.kr/job/rss", "프로그래머스"),
-]
+# 주의: 원티드/점핏/사람인/잡코리아/프로그래머스의 공개 RSS는 모두 폐기(404)되었거나
+# 유효한 항목을 반환하지 않아 제거했다. 현재 채용 동향은 GitHub Trending으로만 수집한다.
+# 새로운 채용 RSS가 확인되면 JOB_RSS_URLS에 추가하면 collect_other_boards()가 자동 처리한다.
+JOB_RSS_URLS: list[tuple[str, str]] = []
 
 # 주목할 기술 스택 키워드
 HOT_STACKS = {
@@ -41,33 +29,8 @@ HOT_STACKS = {
 }
 
 
-def collect_wanted() -> list[RawItem]:
-    """원티드 채용 공고 수집"""
-    items: list[RawItem] = []
-    for url, name in WANTED_RSS_URLS:
-        try:
-            result = parse_rss(url, name, limit=6)
-            items.extend(result)
-        except Exception as e:
-            log.warning("원티드 수집 실패 [%s]: %s", name, e)
-    return items
-
-
-def collect_jumpit() -> list[RawItem]:
-    """점핏 채용 공고 수집"""
-    try:
-        return parse_rss(
-            "https://www.jumpit.co.kr/rss",
-            "점핏",
-            limit=10,
-        )
-    except Exception as e:
-        log.warning("점핏 수집 실패: %s", e)
-        return []
-
-
 def collect_other_boards() -> list[RawItem]:
-    """사람인·잡코리아·프로그래머스 등 기타 채용 플랫폼 수집"""
+    """채용 플랫폼 RSS 수집 (JOB_RSS_URLS에 등록된 소스)"""
     items: list[RawItem] = []
     for url, name in JOB_RSS_URLS:
         try:
@@ -141,8 +104,6 @@ def collect() -> tuple[list[RawItem], dict[str, int]]:
     log.info("=== 개발자 채용 수집 시작 ===")
 
     job_items: list[RawItem] = []
-    job_items.extend(collect_wanted())
-    job_items.extend(collect_jumpit())
     job_items.extend(collect_other_boards())
 
     trend_items = collect_github_trending()
