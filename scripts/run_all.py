@@ -1,5 +1,5 @@
 """
-데일리브리프 자동화 파이프라인 진입점
+왈랩 자동화 파이프라인 진입점
 
 실행 방법:
     python scripts/run_all.py
@@ -190,7 +190,7 @@ def main() -> None:
     skip_collect = os.environ.get("SKIP_COLLECT") == "1"
     dry_run      = os.environ.get("DRY_RUN") == "1"
 
-    log.info("━━━ 데일리브리프 파이프라인 시작 ━━━")
+    log.info("━━━ 왈랩 파이프라인 시작 ━━━")
     log.info("날짜: %s | DRY_RUN: %s | SKIP_COLLECT: %s",
              post_date.strftime("%Y-%m-%d"), dry_run, skip_collect)
 
