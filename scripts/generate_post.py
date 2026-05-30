@@ -124,6 +124,42 @@ def _build_prompt(
     return f"{base}\n\n{instruction}\n\n{output_format}"
 
 
+def _escape_control_chars(raw: str) -> str:
+    """JSON 문자열 값 내부의 이스케이프되지 않은 제어문자를 이스케이프 처리.
+
+    LLM이 content 등의 값 안에 실제 줄바꿈/탭을 그대로 넣으면 json.loads가
+    'Invalid control character' 에러를 내므로, 따옴표 안쪽에 있을 때만 변환한다.
+    """
+    out = []
+    in_string = False
+    escaped = False
+    for ch in raw:
+        if escaped:
+            out.append(ch)
+            escaped = False
+            continue
+        if ch == "\\":
+            out.append(ch)
+            escaped = True
+            continue
+        if ch == '"':
+            in_string = not in_string
+            out.append(ch)
+            continue
+        if in_string:
+            if ch == "\n":
+                out.append("\\n")
+            elif ch == "\r":
+                out.append("\\r")
+            elif ch == "\t":
+                out.append("\\t")
+            else:
+                out.append(ch)
+        else:
+            out.append(ch)
+    return "".join(out)
+
+
 def generate(
     category: Category,
     items: list[RawItem],
@@ -140,6 +176,7 @@ def generate(
         model="llama-3.3-70b-versatile",
         messages=[{"role": "user", "content": prompt}],
         max_tokens=2000,
+        response_format={"type": "json_object"},
     )
     raw = response.choices[0].message.content.strip()
 
@@ -149,9 +186,9 @@ def generate(
 
     try:
         data = json.loads(raw)
-    except json.JSONDecodeError as e:
-        log.error("JSON 파싱 실패: %s\n원문: %s", e, raw[:200])
-        raise
+    except json.JSONDecodeError:
+        # 문자열 값 안에 이스케이프되지 않은 제어문자(줄바꿈 등)가 섞인 경우 보정
+        data = json.loads(_escape_control_chars(raw))
 
     log.info("생성 완료: %s", data.get("title", "제목 없음"))
     return data
