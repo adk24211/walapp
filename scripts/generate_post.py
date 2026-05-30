@@ -1,5 +1,5 @@
 """
-Claude API를 사용해 수집된 데이터를 Jekyll 포스트로 변환
+Gemini API를 사용해 수집된 데이터를 Jekyll 포스트로 변환
 """
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ import textwrap
 from datetime import datetime
 from typing import Literal
 
-import anthropic
+import google.generativeai as genai
 
 from collect.base import RawItem
 
@@ -127,22 +127,17 @@ def _build_prompt(
 def generate(
     category: Category,
     items: list[RawItem],
-    client: anthropic.Anthropic,
+    client: genai.GenerativeModel,
     extra: dict | None = None,
 ) -> dict:
-    """Claude API 호출 → 포스트 데이터 반환"""
+    """Gemini API 호출 → 포스트 데이터 반환"""
     import json
 
     prompt = _build_prompt(category, items, extra)
-    log.info("Claude API 호출: %s (%d건)", category, len(items))
+    log.info("Gemini API 호출: %s (%d건)", category, len(items))
 
-    message = client.messages.create(
-        model="claude-sonnet-4-20250514",
-        max_tokens=2000,
-        messages=[{"role": "user", "content": prompt}],
-    )
-
-    raw = message.content[0].text.strip()
+    response = client.generate_content(prompt)
+    raw = response.text.strip()
 
     # JSON 펜스 제거
     raw = re.sub(r"^```json\s*", "", raw)

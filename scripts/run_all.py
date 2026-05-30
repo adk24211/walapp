@@ -5,7 +5,7 @@
     python scripts/run_all.py
 
 환경변수 (.env 또는 GitHub Secrets):
-    ANTHROPIC_API_KEY  — Claude API 키 (필수)
+    GEMINI_API_KEY     — Gemini API 키 (필수)
     POST_DATE          — 포스팅 날짜 override (선택, YYYY-MM-DD 형식)
     SKIP_COLLECT       — "1" 이면 수집 스킵, 캐시 사용 (개발용)
     DRY_RUN            — "1" 이면 파일 저장 없이 출력만 (개발용)
@@ -21,7 +21,7 @@ from datetime import datetime
 from pathlib import Path
 
 from dotenv import load_dotenv
-import anthropic
+import google.generativeai as genai
 
 # 프로젝트 루트를 sys.path에 추가
 ROOT = Path(__file__).parent.parent
@@ -122,7 +122,7 @@ def collect_all(skip: bool = False) -> dict:
 
 def generate_posts(
     collected: dict,
-    client: anthropic.Anthropic,
+    client: genai.GenerativeModel,
     post_date: datetime,
     dry_run: bool = False,
 ) -> list[Path]:
@@ -175,9 +175,9 @@ def generate_posts(
 
 
 def main() -> None:
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        log.error("ANTHROPIC_API_KEY 환경변수가 없어요.")
+        log.error("GEMINI_API_KEY 환경변수가 없어요.")
         sys.exit(1)
 
     # 날짜 설정
@@ -198,7 +198,8 @@ def main() -> None:
     collected = collect_all(skip=skip_collect)
 
     # 생성
-    client = anthropic.Anthropic(api_key=api_key)
+    genai.configure(api_key=api_key)
+    client = genai.GenerativeModel("gemini-1.5-flash")
     saved  = generate_posts(collected, client, post_date, dry_run=dry_run)
 
     if saved:
