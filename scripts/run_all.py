@@ -21,7 +21,7 @@ from datetime import datetime
 from pathlib import Path
 
 from dotenv import load_dotenv
-from google import genai
+from groq import Groq
 
 # 프로젝트 루트를 sys.path에 추가
 ROOT = Path(__file__).parent.parent
@@ -122,7 +122,7 @@ def collect_all(skip: bool = False) -> dict:
 
 def generate_posts(
     collected: dict,
-    client: genai.Client,
+    client: Groq,
     post_date: datetime,
     dry_run: bool = False,
 ) -> list[Path]:
@@ -175,9 +175,9 @@ def generate_posts(
 
 
 def main() -> None:
-    api_key = os.environ.get("GEMINI_API_KEY")
+    api_key = os.environ.get("GROQ_API_KEY")
     if not api_key:
-        log.error("GEMINI_API_KEY 환경변수가 없어요.")
+        log.error("GROQ_API_KEY 환경변수가 없어요.")
         sys.exit(1)
 
     # 날짜 설정
@@ -198,7 +198,7 @@ def main() -> None:
     collected = collect_all(skip=skip_collect)
 
     # 생성
-    client = genai.Client(api_key=api_key)
+    client = Groq(api_key=api_key)
     saved  = generate_posts(collected, client, post_date, dry_run=dry_run)
 
     if saved:

@@ -9,7 +9,7 @@ import textwrap
 from datetime import datetime
 from typing import Literal
 
-from google import genai
+from groq import Groq
 
 from collect.base import RawItem
 
@@ -127,20 +127,21 @@ def _build_prompt(
 def generate(
     category: Category,
     items: list[RawItem],
-    client: genai.Client,
+    client: Groq,
     extra: dict | None = None,
 ) -> dict:
-    """Gemini API 호출 → 포스트 데이터 반환"""
+    """Groq API 호출 → 포스트 데이터 반환"""
     import json
 
     prompt = _build_prompt(category, items, extra)
-    log.info("Gemini API 호출: %s (%d건)", category, len(items))
+    log.info("Groq API 호출: %s (%d건)", category, len(items))
 
-    response = client.models.generate_content(
-        model="gemini-2.0-flash-lite",
-        contents=prompt,
+    response = client.chat.completions.create(
+        model="llama-3.3-70b-versatile",
+        messages=[{"role": "user", "content": prompt}],
+        max_tokens=2000,
     )
-    raw = response.text.strip()
+    raw = response.choices[0].message.content.strip()
 
     # JSON 펜스 제거
     raw = re.sub(r"^```json\s*", "", raw)
