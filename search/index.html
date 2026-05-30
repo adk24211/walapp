@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>검색 · Walapp</title>
+  <meta name="description" content="정부 지원금, 개발자 채용, IT 트렌드 — 매일 아침 딱 필요한 것만">
+  <meta property="og:site_name" content="Walapp">
+  <meta property="og:image" content="https://adk2421.github.io/walapp/assets/images/logo.png">
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>검색 | Walapp</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="검색" />
+<meta property="og:locale" content="ko" />
+<meta name="description" content="정부 지원금, 개발자 채용, IT 트렌드 — 매일 아침 딱 필요한 것만" />
+<meta name="twitter:description" property="og:description" content="정부 지원금, 개발자 채용, IT 트렌드 — 매일 아침 딱 필요한 것만" />
+<link rel="canonical" href="https://adk2421.github.io/walapp/search/" />
+<meta property="og:url" content="https://adk2421.github.io/walapp/search/" />
+<meta property="og:site_name" content="Walapp" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="검색" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"정부 지원금, 개발자 채용, IT 트렌드 — 매일 아침 딱 필요한 것만","headline":"검색","url":"https://adk2421.github.io/walapp/search/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link type="application/atom+xml" rel="alternate" href="https://adk2421.github.io/walapp/feed.xml" title="Walapp" />
+  <link rel="icon" type="image/png" href="/walapp/assets/images/logo.png">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="/walapp/assets/css/main.css">
+  <script>
+    (function(){
+      var t = localStorage.getItem('walapp-theme');
+      if(t === 'dark') document.documentElement.setAttribute('data-theme','dark');
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="header-inner">
+    <a href="/walapp/" class="site-logo" aria-label="Walapp 홈">
+      <img class="logo-icon" src="/walapp/assets/images/logo.png" alt="Walapp" width="32" height="32">
+      <span class="logo-text">Walapp</span>
+    </a>
+    <div class="header-right">
+      <a href="/walapp/search/" class="theme-btn" aria-label="검색">
+        <i class="ti ti-search" aria-hidden="true"></i>
+      </a>
+      <a href="/walapp/archive/" class="header-link">아카이브</a>
+      <button class="theme-btn" id="theme-btn" aria-label="다크모드로 전환">
+        <i class="ti ti-moon" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+  <main><div class="page-header">
+  <div class="ph-top">
+    <span class="ph-issue">Search</span>
+  </div>
+  <h1 class="ph-title">검색</h1>
+  <p class="ph-sub">제목·요약·본문·태그에서 키워드를 찾습니다.</p>
+</div>
+
+<div class="feed">
+  <div class="search-box">
+    <i class="ti ti-search" aria-hidden="true"></i>
+    <input type="search" id="search-input" placeholder="검색어를 입력하세요 (예: 청년 월세, AI, 채용)"
+           autocomplete="off" autofocus aria-label="검색어 입력">
+  </div>
+
+  <p class="search-status" id="search-status">검색어를 입력해 주세요.</p>
+
+  <div class="cards" id="search-results"></div>
+</div>
+
+<script>
+(function () {
+  var SEARCH_URL = "/walapp/search.json";
+  var input   = document.getElementById('search-input');
+  var status  = document.getElementById('search-status');
+  var results = document.getElementById('search-results');
+  var CAT = { 'policy': 'policy', 'dev-jobs': 'jobs', 'tech-news': 'tech' };
+  var CAT_LABEL = { 'policy': '정부·청년 정책', 'dev-jobs': '개발자 채용', 'tech-news': 'IT·테크' };
+  var docs = [];
+  var ready = false;
+
+  fetch(SEARCH_URL)
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      docs = data;
+      ready = true;
+      if (input.value.trim()) run(input.value);
+    })
+    .catch(function () {
+      status.textContent = '검색 인덱스를 불러오지 못했습니다.';
+    });
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function highlight(text, terms) {
+    var out = escapeHtml(text);
+    terms.forEach(function (t) {
+      if (!t) return;
+      var re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      out = out.replace(re, '<mark>$1</mark>');
+    });
+    return out;
+  }
+
+  function snippet(content, terms) {
+    var lower = content.toLowerCase();
+    var pos = -1;
+    for (var i = 0; i < terms.length; i++) {
+      var p = lower.indexOf(terms[i].toLowerCase());
+      if (p !== -1) { pos = p; break; }
+    }
+    if (pos === -1) return content.slice(0, 120);
+    var start = Math.max(0, pos - 40);
+    return (start > 0 ? '…' : '') + content.slice(start, start + 140);
+  }
+
+  function run(query) {
+    var q = query.trim();
+    if (!q) { results.innerHTML = ''; status.textContent = '검색어를 입력해 주세요.'; return; }
+    if (!ready) { status.textContent = '검색 인덱스를 불러오는 중…'; return; }
+
+    var terms = q.toLowerCase().split(/\s+/).filter(Boolean);
+    var matched = docs.filter(function (d) {
+      var hay = (d.title + ' ' + d.summary + ' ' + d.content + ' ' + (d.tags || []).join(' ')).toLowerCase();
+      return terms.every(function (t) { return hay.indexOf(t) !== -1; });
+    });
+
+    if (matched.length === 0) {
+      results.innerHTML = '';
+      status.textContent = '"' + q + '"에 대한 검색 결과가 없습니다.';
+      return;
+    }
+
+    status.textContent = '"' + q + '" 검색 결과 ' + matched.length + '건';
+    results.innerHTML = matched.map(function (d) {
+      var cc = CAT[d.category] || 'policy';
+      return '' +
+        '<a href="' + d.url + '" class="post-card">' +
+          '<div class="card-inner">' +
+            '<div class="card-accent ' + cc + '"></div>' +
+            '<div class="card-body">' +
+              '<div class="card-top">' +
+                '<h2 class="card-title ' + cc + '">' + highlight(d.title, terms) + '</h2>' +
+                '<span class="card-num">' + d.date + '</span>' +
+              '</div>' +
+              '<p class="card-desc">' + highlight(snippet(d.content, terms), terms) + '</p>' +
+              '<div class="card-footer">' +
+                '<div class="card-meta"><span>' + (CAT_LABEL[d.category] || d.category) + '</span></div>' +
+                '<span class="card-cta ' + cc + '">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+        '</a>';
+    }).join('');
+  }
+
+  var timer;
+  input.addEventListener('input', function () {
+    clearTimeout(timer);
+    timer = setTimeout(function () { run(input.value); }, 150);
+  });
+
+  // ?q= 쿼리스트링 지원
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('q')) { input.value = params.get('q'); }
+})();
+</script>
+</main>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="/walapp/assets/images/logo.png" alt="Walapp" width="24" height="24">
+      <span class="footer-logo-text">Walapp</span>
+    </div>
+    <div class="footer-links">
+      <a href="#" target="_blank" rel="noopener">GitHub</a>
+      <a href="/walapp/feed.xml">RSS</a>
+      <a href="/walapp/archive/">아카이브</a>
+      <a href="/walapp/disclaimer/">면책 조항</a>
+      <a href="/walapp/privacy/">개인정보 처리방침</a>
+      <a href="/walapp/terms/">이용약관</a>
+    </div>
+  </div>
+  <p class="footer-note">본 사이트의 콘텐츠는 AI와 자동 크롤링으로 생성된 정보성 자료이며, 정확성을 보장하지 않습니다. 단순 참고용으로만 활용해 주세요.</p>
+</footer>
+
+  <script src="/walapp/assets/js/main.js"></script>
+</body>
+</html>
