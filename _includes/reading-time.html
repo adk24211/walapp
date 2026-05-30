@@ -1,0 +1,12 @@
+{% assign words = include.content | number_of_words %}
+{% if words < 360 %}
+약 1분 읽기
+{% elsif words < 720 %}
+약 2분 읽기
+{% elsif words < 1080 %}
+약 3분 읽기
+{% elsif words < 1800 %}
+약 5분 읽기
+{% else %}
+약 {{ words | divided_by: 360 }}분 읽기
+{% endif %}

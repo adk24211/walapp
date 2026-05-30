@@ -1,0 +1,28 @@
+---
+layout: default
+---
+{% assign cat = page.categories | first %}
+
+<div class="post-hero">
+  <div class="post-hero-inner">
+    <div class="post-hero-top">
+      <a href="{{ '/' | relative_url }}" class="back-link">← 홈으로</a>
+      {% if cat %}
+      <span class="post-cat-badge {{ cat }}">{% include category-label.html category=cat %}</span>
+      {% endif %}
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.summary %}<p class="post-summary">{{ page.summary }}</p>{% endif %}
+    <div class="post-meta-row">
+      <span>{{ page.date | date: "%Y년 %m월 %d일" }}</span>
+      <span class="meta-dot"></span>
+      <span>{% include reading-time.html content=content %}</span>
+    </div>
+  </div>
+</div>
+
+<div class="post-content-wrap">
+  <article class="post-content">
+    {{ content }}
+  </article>
+</div>

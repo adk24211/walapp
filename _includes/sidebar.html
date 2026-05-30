@@ -1,0 +1,26 @@
+<div class="sidebar-widget">
+  <h3 class="widget-title">이번 주 인기글</h3>
+  <ol class="hot-list">
+    {% assign recent = site.posts | limit: 5 %}
+    {% for post in recent %}
+    <li class="hot-item">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ol>
+</div>
+
+<div class="sidebar-widget">
+  <h3 class="widget-title">카테고리</h3>
+  <ul class="cat-list">
+    <li><a href="{{ '/category/policy' | relative_url }}">🏛 정부·청년 정책</a></li>
+    <li><a href="{{ '/category/dev-jobs' | relative_url }}">💼 개발자 채용</a></li>
+    <li><a href="{{ '/category/tech-news' | relative_url }}">🖥 IT·테크</a></li>
+  </ul>
+</div>
+
+<div class="sidebar-widget sidebar-subscribe">
+  <h3 class="widget-title">📬 구독하기</h3>
+  <p>새 글이 올라오면 이메일로 알려드려요.</p>
+  <a href="{{ '/feed.xml' | relative_url }}" class="rss-btn">RSS 구독</a>
+</div>

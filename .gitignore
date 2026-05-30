@@ -1,0 +1,21 @@
+# Jekyll
+_site/
+_site_check/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.cache/
+venv/
+.venv/
+
+# 환경변수 (절대 커밋 금지)
+.env
+
+# 기타
+.DS_Store
+*.log

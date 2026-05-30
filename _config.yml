@@ -1,0 +1,35 @@
+title: Walapp
+description: 정부 지원금, 개발자 채용, IT 트렌드 — 매일 아침 딱 필요한 것만
+baseurl: "/walapp"
+url: "https://adk2421.github.io"
+lang: ko
+
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+categories_label:
+  policy: "정부·청년 정책"
+  dev-jobs: "개발자 채용"
+  tech-news: "IT·테크"
+
+exclude:
+  - scripts/
+  - requirements.txt
+  - "*.py"
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .github/
+  - HANDOFF.md
+
+paginate: 10
+paginate_path: "/page/:num/"
+
+feed:
+  posts_limit: 20

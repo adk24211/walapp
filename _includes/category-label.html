@@ -1,0 +1,6 @@
+{% case include.category %}
+  {% when 'policy' %}정부·청년 정책
+  {% when 'dev-jobs' %}개발자 채용
+  {% when 'tech-news' %}IT·테크
+  {% else %}{{ include.category }}
+{% endcase %}
