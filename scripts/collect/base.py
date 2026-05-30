@@ -66,11 +66,21 @@ def fetch(url: str, **kwargs) -> Optional[requests.Response]:
 
 
 def parse_rss(url: str, source_name: str, limit: int = 10) -> list[RawItem]:
-    """RSS/Atom 피드 파싱"""
+    """RSS/Atom 피드 파싱
+
+    feedparser.parse(url)를 직접 쓰면 feedparser 기본 봇 User-Agent로 요청하게 돼
+    한국 정부·기업 사이트가 차단하는 경우가 많다. 따라서 브라우저 헤더를 가진
+    fetch()로 먼저 본문을 받아온 뒤 그 내용을 파싱한다.
+    """
     log = logging.getLogger(__name__)
     log.info("RSS 수집: %s", url)
 
-    feed = feedparser.parse(url)
+    resp = fetch(url)
+    if resp is None:
+        log.info("  → 0건 수집 (응답 없음)")
+        return []
+
+    feed = feedparser.parse(resp.content)
     items: list[RawItem] = []
 
     for entry in feed.entries[:limit]:
