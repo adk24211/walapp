@@ -1,0 +1,127 @@
+---
+layout: default
+title: 검색
+permalink: /search/
+---
+
+<div class="page-header">
+  <div class="ph-top">
+    <span class="ph-issue">Search</span>
+  </div>
+  <h1 class="ph-title">검색</h1>
+  <p class="ph-sub">제목·요약·본문·태그에서 키워드를 찾습니다.</p>
+</div>
+
+<div class="feed">
+  <div class="search-box">
+    <i class="ti ti-search" aria-hidden="true"></i>
+    <input type="search" id="search-input" placeholder="검색어를 입력하세요 (예: 청년 월세, AI, 채용)"
+           autocomplete="off" autofocus aria-label="검색어 입력">
+  </div>
+
+  <p class="search-status" id="search-status">검색어를 입력해 주세요.</p>
+
+  <div class="cards" id="search-results"></div>
+</div>
+
+<script>
+(function () {
+  var SEARCH_URL = "{{ '/search.json' | relative_url }}";
+  var input   = document.getElementById('search-input');
+  var status  = document.getElementById('search-status');
+  var results = document.getElementById('search-results');
+  var CAT = { 'policy': 'policy', 'dev-jobs': 'jobs', 'tech-news': 'tech' };
+  var CAT_LABEL = { 'policy': '정부·청년 정책', 'dev-jobs': '개발자 채용', 'tech-news': 'IT·테크' };
+  var docs = [];
+  var ready = false;
+
+  fetch(SEARCH_URL)
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      docs = data;
+      ready = true;
+      if (input.value.trim()) run(input.value);
+    })
+    .catch(function () {
+      status.textContent = '검색 인덱스를 불러오지 못했습니다.';
+    });
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function highlight(text, terms) {
+    var out = escapeHtml(text);
+    terms.forEach(function (t) {
+      if (!t) return;
+      var re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      out = out.replace(re, '<mark>$1</mark>');
+    });
+    return out;
+  }
+
+  function snippet(content, terms) {
+    var lower = content.toLowerCase();
+    var pos = -1;
+    for (var i = 0; i < terms.length; i++) {
+      var p = lower.indexOf(terms[i].toLowerCase());
+      if (p !== -1) { pos = p; break; }
+    }
+    if (pos === -1) return content.slice(0, 120);
+    var start = Math.max(0, pos - 40);
+    return (start > 0 ? '…' : '') + content.slice(start, start + 140);
+  }
+
+  function run(query) {
+    var q = query.trim();
+    if (!q) { results.innerHTML = ''; status.textContent = '검색어를 입력해 주세요.'; return; }
+    if (!ready) { status.textContent = '검색 인덱스를 불러오는 중…'; return; }
+
+    var terms = q.toLowerCase().split(/\s+/).filter(Boolean);
+    var matched = docs.filter(function (d) {
+      var hay = (d.title + ' ' + d.summary + ' ' + d.content + ' ' + (d.tags || []).join(' ')).toLowerCase();
+      return terms.every(function (t) { return hay.indexOf(t) !== -1; });
+    });
+
+    if (matched.length === 0) {
+      results.innerHTML = '';
+      status.textContent = '"' + q + '"에 대한 검색 결과가 없습니다.';
+      return;
+    }
+
+    status.textContent = '"' + q + '" 검색 결과 ' + matched.length + '건';
+    results.innerHTML = matched.map(function (d) {
+      var cc = CAT[d.category] || 'policy';
+      return '' +
+        '<a href="' + d.url + '" class="post-card">' +
+          '<div class="card-inner">' +
+            '<div class="card-accent ' + cc + '"></div>' +
+            '<div class="card-body">' +
+              '<div class="card-top">' +
+                '<h2 class="card-title ' + cc + '">' + highlight(d.title, terms) + '</h2>' +
+                '<span class="card-num">' + d.date + '</span>' +
+              '</div>' +
+              '<p class="card-desc">' + highlight(snippet(d.content, terms), terms) + '</p>' +
+              '<div class="card-footer">' +
+                '<div class="card-meta"><span>' + (CAT_LABEL[d.category] || d.category) + '</span></div>' +
+                '<span class="card-cta ' + cc + '">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+        '</a>';
+    }).join('');
+  }
+
+  var timer;
+  input.addEventListener('input', function () {
+    clearTimeout(timer);
+    timer = setTimeout(function () { run(input.value); }, 150);
+  });
+
+  // ?q= 쿼리스트링 지원
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('q')) { input.value = params.get('q'); }
+})();
+</script>
