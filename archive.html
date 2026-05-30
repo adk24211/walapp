@@ -1,0 +1,59 @@
+---
+layout: default
+title: 아카이브
+permalink: /archive/
+---
+
+<div class="page-header">
+  <div class="ph-top">
+    <span class="ph-issue">Archive</span>
+    <span class="ph-date">총 {{ site.posts | size }}개 포스팅</span>
+  </div>
+  <h1 class="ph-title">지난 브리핑</h1>
+  <p class="ph-sub">날짜별로 모아 본 모든 발행 기록</p>
+</div>
+
+<div class="feed">
+  {% assign posts_by_month = site.posts | group_by_exp: "post", "post.date | date: '%Y년 %m월'" %}
+  {% for group in posts_by_month %}
+  <div class="section-group">
+    <div class="section-label">
+      <span class="sec-tag">{{ group.name }}</span>
+      <div class="sec-rule"></div>
+      <span class="sec-count">{{ group.items | size }}개</span>
+    </div>
+    <div class="cards">
+      {% for post in group.items %}
+      {% assign cat = post.categories | first %}
+      {% case cat %}
+        {% when 'dev-jobs' %}{% assign cc = 'jobs' %}
+        {% when 'tech-news' %}{% assign cc = 'tech' %}
+        {% else %}{% assign cc = 'policy' %}
+      {% endcase %}
+      <a href="{{ post.url | relative_url }}" class="post-card">
+        <div class="card-inner">
+          <div class="card-accent {{ cc }}"></div>
+          <div class="card-body">
+            <div class="card-top">
+              <h2 class="card-title {{ cc }}">{{ post.title }}</h2>
+              <span class="card-num">{{ post.date | date: "%m.%d" }}</span>
+            </div>
+            {% if post.summary %}
+            <p class="card-desc">{{ post.summary }}</p>
+            {% endif %}
+            <div class="card-footer">
+              <div class="card-meta">
+                <span>{% include category-label.html category=cat %}</span>
+                <span class="meta-dot"></span>
+                <span>{% include reading-time.html content=post.content %}</span>
+              </div>
+              <span class="card-cta {{ cc }}">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>
+            </div>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
