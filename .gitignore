@@ -19,3 +19,7 @@ venv/
 # 기타
 .DS_Store
 *.log
+
+# 로컬 미리보기/빌드 도구 설정 및 잠금파일 (CI가 자체 생성)
+.claude/
+Gemfile.lock
