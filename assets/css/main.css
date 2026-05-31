@@ -682,3 +682,36 @@ a.post-nav-item:hover { border-color: var(--line2); transform: translateY(-2px);
   .footer-links { justify-content: center; }
   .post-content table { font-size: 13px; }
 }
+
+/* ---- 접근성: 본문 바로가기(스크린리더/키보드) ---- */
+.skip-link {
+  position: absolute; left: 8px; top: -48px;
+  background: var(--brand); color: #fff;
+  padding: 8px 14px; border-radius: 8px; z-index: 300;
+  font-size: 14px; transition: top .15s;
+}
+.skip-link:focus { top: 8px; }
+
+/* ---- 정책 가이드 허브 ---- */
+.guide-intro p { font-size: 15px; line-height: 1.85; color: var(--ink2); margin-bottom: 1.5rem; }
+.guide-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px; margin-bottom: 1.5rem;
+}
+.guide-cat {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 1.25rem;
+}
+.guide-cat h2 {
+  font-family: var(--font-serif); font-size: 18px; font-weight: 400;
+  color: var(--ink); margin-bottom: .5rem;
+}
+.guide-cat p { font-size: 14px; line-height: 1.75; color: var(--ink2); }
+.guide-note {
+  display: flex; gap: 10px; align-items: flex-start;
+  background: var(--brand-bg); border-radius: var(--radius);
+  padding: 14px 16px; margin-bottom: 2.5rem;
+}
+.guide-note i { font-size: 18px; color: var(--brand-dark); flex-shrink: 0; margin-top: 1px; }
+.guide-note p { font-size: 13px; line-height: 1.7; color: var(--ink); margin: 0; }
+.guide-note strong { color: var(--brand-dark); }
