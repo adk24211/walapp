@@ -33,6 +33,7 @@ plugins:
 categories_label:
   domestic: "국내 핫뉴스"
   world: "해외 핫뉴스"
+  curious: "흥미로운 발견"
   policy: "정부·청년 정책"
 
 exclude:

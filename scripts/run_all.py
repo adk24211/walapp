@@ -40,12 +40,13 @@ POSTS_DIR  = ROOT / "_posts"
 CACHE_DIR  = ROOT / ".cache"
 CACHE_FILE = CACHE_DIR / "last_collect.json"
 
-CATEGORY_ORDER = ["domestic", "world", "policy"]
+CATEGORY_ORDER = ["domestic", "world", "curious", "policy"]
 # 카테고리별 포스팅 시간 (KST)
 POST_HOURS = {
     "domestic": "07:00:00",
     "world":    "07:01:00",
-    "policy":   "07:02:00",
+    "curious":  "07:02:00",
+    "policy":   "07:03:00",
 }
 
 
@@ -70,6 +71,7 @@ def collect_all(skip: bool = False) -> dict:
 
     from collect.domestic_news import collect as collect_domestic
     from collect.world_news import collect as collect_world
+    from collect.curious import collect as collect_curious
     from collect.gov_policy import collect as collect_policy
 
     log.info("━━━ 데이터 수집 시작 ━━━")
@@ -100,6 +102,20 @@ def collect_all(skip: bool = False) -> dict:
     except Exception as e:
         log.error("해외 핫뉴스 수집 실패: %s", e)
         collected["world"] = {"items": [], "extra": {}}
+
+    time.sleep(1)
+
+    # 흥미로운 발견
+    try:
+        curious_items = collect_curious()
+        collected["curious"] = {
+            "items": [vars(i) for i in curious_items],
+            "extra": {},
+        }
+        log.info("흥미로운 발견: %d건", len(curious_items))
+    except Exception as e:
+        log.error("흥미로운 발견 수집 실패: %s", e)
+        collected["curious"] = {"items": [], "extra": {}}
 
     time.sleep(1)
 

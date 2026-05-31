@@ -1,6 +1,7 @@
 {% case include.category %}
   {% when 'domestic' %}국내 핫뉴스
   {% when 'world' %}해외 핫뉴스
+  {% when 'curious' %}흥미로운 발견
   {% when 'policy' %}정부·청년 정책
   {% else %}{{ include.category }}
 {% endcase %}

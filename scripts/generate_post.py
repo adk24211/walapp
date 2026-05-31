@@ -15,7 +15,7 @@ from collect.base import RawItem
 
 log = logging.getLogger(__name__)
 
-Category = Literal["domestic", "world", "policy"]
+Category = Literal["domestic", "world", "policy", "curious"]
 
 CATEGORY_META = {
     "domestic": {
@@ -32,6 +32,11 @@ CATEGORY_META = {
         "jekyll_cat": "policy",
         "label": "정부·청년 정책",
         "summary_label": "summary-box policy",
+    },
+    "curious": {
+        "jekyll_cat": "curious",
+        "label": "흥미로운 발견",
+        "summary_label": "summary-box curious",
     },
 }
 
@@ -86,6 +91,20 @@ def _build_prompt(
             - 마지막에 오늘 국제 뉴스를 관통하는 큰 흐름을 한 문단으로 정리하세요
         """).strip()
 
+    elif category == "curious":
+        instruction = textwrap.dedent("""
+            === 작성 지침 ===
+            - 대상 독자: 신기하고 재미있는 이야기, 새로운 발견과 신기술에 흥미를 느끼는 일반 독자
+            - 주제: 과학적 발견, 우주, 자연, 역사 속 미스터리, 흥미로운 사실, 신기술 등 '읽는 재미'가 있는 이야기
+            - 문체: 신문 기사체(평서형 '~다' 종결)를 유지하되, 호기심을 자극하는 흥미로운 서술로 작성하세요. 구어체·말투는 쓰지 마세요
+            - 첫 문단은 독자의 호기심을 강하게 끄는 도입부로 시작하세요 (놀라운 사실, 의외의 발견 등)
+            - 수집된 소재 중 가장 흥미로운 4~6개를 선별하고, 각 소재마다 ## 소제목을 두세요
+            - 각 소재는 '무엇이 발견·발표됐는가' → '왜 놀랍거나 흥미로운가' → '배경 지식과 맥락' → '의미와 시사점' 순으로 충실히 풀어 쓰세요
+            - 독자가 몰랐을 배경지식이나 관련 사실을 곁들여 '아하' 하는 깨달음을 주세요
+            - 영어 원문 소재는 한국어로 정확하게 옮기되, 전문 용어는 쉽게 풀어 설명하세요
+            - 마지막에 이번 이야기들을 관통하는 흥미로운 통찰이나 여운을 남기는 문장으로 마무리하세요
+        """).strip()
+
     else:  # policy
         instruction = textwrap.dedent("""
             === 작성 지침 ===
@@ -119,14 +138,24 @@ def _build_prompt(
         - '~요', '~해요', '~네요', '~거든요', '~이에요', '~죠', '~세요' 같은 구어체 종결은 제목·요약·본문 어디에도 절대 쓰지 마세요
         - 존댓말 권유체("~하세요", "~보세요")도 쓰지 마세요. 객관적 서술로만 작성하세요
 
+        ★ 독자 몰입 규칙 (조회수·체류시간을 높이는 핵심) ★
+        - 단순 사실 요약에 그치지 말고, 독자가 끝까지 읽고 싶게 만드는 깊이 있는 글을 쓰세요
+        - 리드 문단은 호기심을 자극하는 강력한 도입부로 시작하세요 (놀라운 수치, 의외의 사실, 핵심 쟁점 등). 단, 과장이나 낚시성 표현은 금지
+        - 각 항목마다 '무슨 일인가' → '왜 그런가(배경·맥락)' → '그래서 무엇이 달라지나(의미·영향)' → '앞으로 어떻게 되나(전망)' 흐름으로 풍부하게 서술하세요
+        - 독자가 "몰랐던 사실"이나 "숨은 맥락", "관련 배경지식"을 곁들여 정보의 밀도를 높이세요
+        - 가능하면 구체적 수치, 사례, 비교, 인용 등 근거를 들어 설득력과 흥미를 동시에 확보하세요
+        - 딱딱한 나열 대신, 사안들을 연결해 하나의 이야기처럼 자연스럽게 이어 쓰세요 (단, 문체는 평서형 기사체 유지)
+        - 마지막 섹션에서는 전체를 관통하는 통찰이나 독자가 곱씹을 만한 시사점을 제시하세요
+
         content 작성 규칙:
         - 한글과 영문(+숫자)만 사용하세요. 한자(漢字)와 일본어 가나(カタカナ·ひらがな)는 절대 쓰지 마세요 (예: '詳細' → '상세', 'サイバー' → '사이버')
         - 모든 줄은 들여쓰기 없이 행의 맨 앞에서 시작하세요. 공백으로 들여쓰지 마세요
         - 첫 줄은 반드시 <div class="summary-box [CATEGORY_CLASS]">핵심을 요약하는 1~2문장</div> 형태의 한 줄짜리 요약 박스로 작성하세요. 본문 전체를 이 박스 안에 넣지 마세요
-        - [CATEGORY_CLASS] 자리에는 domestic / world / policy 중 하나를 넣으세요
+        - [CATEGORY_CLASS] 자리에는 domestic / world / policy / curious 중 하나를 넣으세요
         - summary-box 다음부터는 반드시 마크다운 ## 소제목으로 섹션을 나누세요. <h2>·<p> 같은 HTML 태그를 쓰지 말고 순수 마크다운으로 작성하세요
-        - 본문 길이: 1200~1800자 (한국어 기준). 정보성 글이므로 각 섹션을 충실하게 채우되, 의미 없는 반복이나 군더더기 없이 밀도 있게 작성하세요
-        - 최소 3개 이상의 ## 소제목 섹션으로 구성하세요
+        - 각 ## 섹션 본문은 최소 4~6문장 이상으로 충실히 작성하세요. 한두 문장으로 끝내지 마세요
+        - 본문 길이: 1800~2800자 (한국어 기준). 정보성 글이므로 풍부하게 채우되, 의미 없는 반복이나 군더더기는 피하세요
+        - 최소 4개 이상의 ## 소제목 섹션으로 구성하세요
         - 마크다운 표, 굵은 글씨, blockquote, 글머리 기호(목록)를 적극 활용해 정보를 구조적으로 정리하세요
         - URL 링크는 포함하지 마세요 (보안 이슈)
     """).strip()
@@ -217,7 +246,7 @@ def generate(
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         messages=[{"role": "user", "content": prompt}],
-        max_tokens=4096,
+        max_tokens=6144,
         response_format={"type": "json_object"},
     )
     raw = response.choices[0].message.content.strip()
@@ -299,6 +328,7 @@ def make_filename(category: Category, post_date: datetime, title: str) -> str:
         "domestic": "domestic",
         "world":    "world",
         "policy":   "policy",
+        "curious":  "curious",
     }
     slug = slug_map[category]
 

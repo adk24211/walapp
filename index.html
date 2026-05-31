@@ -6,6 +6,7 @@ title: 홈
 {% assign all_posts = site.posts %}
 {% assign domestic_posts = all_posts | where_exp: "p", "p.categories contains 'domestic'" %}
 {% assign world_posts    = all_posts | where_exp: "p", "p.categories contains 'world'" %}
+{% assign curious_posts  = all_posts | where_exp: "p", "p.categories contains 'curious'" %}
 {% assign policy_posts   = all_posts | where_exp: "p", "p.categories contains 'policy'" %}
 
 <div class="page-header">
@@ -16,31 +17,51 @@ title: 홈
   {% assign featured = site.posts.first %}
   {% if featured %}
   <h1 class="ph-title">{{ featured.headline | default: "오늘의 주요 뉴스" }}</h1>
-  <p class="ph-sub">{{ domestic_posts | size }}개 국내 · {{ world_posts | size }}개 해외 · {{ policy_posts | size }}개 정책 — 매일 아침 핵심만 모아 전합니다</p>
+  <p class="ph-sub">국내·해외 핫뉴스부터 흥미로운 발견, 청년 정책까지 — 매일 아침 핵심만 모아 전합니다.</p>
   {% endif %}
 </div>
 
+{% if featured %}
+{% assign fcat = featured.categories | first %}
+<a href="{{ featured.url | relative_url }}" class="hero-card {{ fcat }}">
+  <div class="hero-tag-row">
+    <span class="sec-tag {{ fcat }}">{% include category-label.html category=fcat %}</span>
+    <span class="hero-badge">오늘의 헤드라인</span>
+  </div>
+  <h2 class="hero-title">{{ featured.title }}</h2>
+  {% if featured.summary %}<p class="hero-desc">{{ featured.summary }}</p>{% endif %}
+  <div class="hero-meta">
+    <span>{{ featured.date | date: "%Y.%m.%d" }}</span>
+    <span class="meta-dot"></span>
+    <span>{% include reading-time.html content=featured.content %}</span>
+    <span class="hero-cta">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:13px"></i></span>
+  </div>
+</a>
+{% endif %}
+
 <div class="tab-bar">
   <button class="tab-btn active" data-filter="all">전체</button>
-  <button class="tab-btn" data-filter="domestic">🇰🇷 국내 핫뉴스</button>
-  <button class="tab-btn" data-filter="world">🌐 해외 핫뉴스</button>
-  <button class="tab-btn" data-filter="policy">🏛 정부·청년 정책</button>
+  <button class="tab-btn" data-filter="domestic">🇰🇷 국내</button>
+  <button class="tab-btn" data-filter="world">🌐 해외</button>
+  <button class="tab-btn" data-filter="curious">✨ 흥미로운 발견</button>
+  <button class="tab-btn" data-filter="policy">🏛 청년 정책</button>
 </div>
 
 <div class="feed">
 
-  {% assign sections = "domestic,world,policy" | split: "," %}
+  {% assign sections = "domestic,world,curious,policy" | split: "," %}
   {% for sec in sections %}
     {% case sec %}
-      {% when 'domestic' %}{% assign sec_posts = domestic_posts %}{% assign sec_label = '국내 핫뉴스' %}
-      {% when 'world' %}{% assign sec_posts = world_posts %}{% assign sec_label = '해외 핫뉴스' %}
-      {% when 'policy' %}{% assign sec_posts = policy_posts %}{% assign sec_label = '정부·청년 정책' %}
+      {% when 'domestic' %}{% assign sec_posts = domestic_posts %}{% assign sec_label = '국내 핫뉴스' %}{% assign sec_emoji = '🇰🇷' %}
+      {% when 'world' %}{% assign sec_posts = world_posts %}{% assign sec_label = '해외 핫뉴스' %}{% assign sec_emoji = '🌐' %}
+      {% when 'curious' %}{% assign sec_posts = curious_posts %}{% assign sec_label = '흥미로운 발견' %}{% assign sec_emoji = '✨' %}
+      {% when 'policy' %}{% assign sec_posts = policy_posts %}{% assign sec_label = '정부·청년 정책' %}{% assign sec_emoji = '🏛' %}
     {% endcase %}
 
     {% if sec_posts.size > 0 %}
     <div class="section-group" data-cat="{{ sec }}">
       <div class="section-label">
-        <span class="sec-tag {{ sec }}">{{ sec_label }}</span>
+        <span class="sec-tag {{ sec }}">{{ sec_emoji }} {{ sec_label }}</span>
         <div class="sec-rule"></div>
         <span class="sec-count">{{ sec_posts | size }}개</span>
       </div>
