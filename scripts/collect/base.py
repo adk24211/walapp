@@ -48,6 +48,31 @@ class RawItem:
         return f"[{self.source}] {self.title}"
 
 
+def normalize_title(title: str) -> str:
+    """중복 판별용 제목 정규화 키 생성.
+
+    - Google News 형식 '제목 - 매체명'에서 끝의 매체명 제거
+    - 공백·문장부호 제거 후 소문자화 → 표기가 조금 달라도 같은 기사 검출
+    """
+    import re as _re
+    t = (title or "").strip()
+    if " - " in t:
+        t = t.rsplit(" - ", 1)[0]
+    return _re.sub(r"[\s\W_]+", "", t).lower()
+
+
+def dedupe_by_title(items: list["RawItem"]) -> list["RawItem"]:
+    """정규화된 제목 기준 중복 제거 (앞선 항목 우선)."""
+    seen: set[str] = set()
+    unique: list[RawItem] = []
+    for item in items:
+        key = normalize_title(item.title)
+        if key and key not in seen:
+            seen.add(key)
+            unique.append(item)
+    return unique
+
+
 def fetch(url: str, **kwargs) -> Optional[requests.Response]:
     """재시도 포함 HTTP GET"""
     for attempt in range(RETRY_COUNT + 1):

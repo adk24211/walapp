@@ -8,7 +8,7 @@
 from __future__ import annotations
 
 import logging
-from .base import RawItem, parse_rss
+from .base import RawItem, parse_rss, dedupe_by_title
 
 log = logging.getLogger(__name__)
 
@@ -52,14 +52,8 @@ def collect() -> list[RawItem]:
         except Exception as e:
             log.error("수집 실패 [%s]: %s", src["name"], e)
 
-    # 제목 기준 중복 제거
-    seen: set[str] = set()
-    unique: list[RawItem] = []
-    for item in all_items:
-        key = item.title.strip()
-        if key and key not in seen:
-            seen.add(key)
-            unique.append(item)
+    # 정규화 제목 기준 중복 제거
+    unique = dedupe_by_title(all_items)
 
     log.info("흥미로운 발견 수집 완료: 전체 %d건 → 중복 제거 %d건", len(all_items), len(unique))
     return unique[:12]
