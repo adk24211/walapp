@@ -24,8 +24,8 @@ SOURCES = [
         "limit": 10,
     },
     {
-        "url": "https://www.iflscience.com/rss",
-        "name": "IFLScience",
+        "url": "https://www.sciencedaily.com/rss/all.xml",
+        "name": "ScienceDaily",
         "limit": 10,
     },
     {

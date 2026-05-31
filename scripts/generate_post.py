@@ -243,12 +243,28 @@ def generate(
     prompt = _build_prompt(category, items, extra)
     log.info("Groq API 호출: %s (%d건)", category, len(items))
 
-    response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
-        messages=[{"role": "user", "content": prompt}],
-        max_tokens=6144,
-        response_format={"type": "json_object"},
-    )
+    # 기본 모델로 호출하되, 일일 토큰 한도(429) 도달 시 별도 한도를 가진
+    # 경량 모델로 폴백해 포스트 생성을 보장한다.
+    primary_model = "llama-3.3-70b-versatile"
+    fallback_model = "llama-3.1-8b-instant"
+
+    def _call(model: str):
+        return client.chat.completions.create(
+            model=model,
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=4096,
+            response_format={"type": "json_object"},
+        )
+
+    try:
+        response = _call(primary_model)
+    except Exception as e:
+        if "rate_limit" in str(e) or "429" in str(e):
+            log.warning("%s 한도 초과 → 폴백 모델(%s)로 재시도", primary_model, fallback_model)
+            response = _call(fallback_model)
+        else:
+            raise
+
     raw = response.choices[0].message.content.strip()
 
     # JSON 펜스 제거
