@@ -63,7 +63,7 @@ title: 홈
       <div class="section-label">
         <span class="sec-tag {{ sec }}">{{ sec_emoji }} {{ sec_label }}</span>
         <div class="sec-rule"></div>
-        <span class="sec-count">{{ sec_posts | size }}개</span>
+        <a class="sec-more" href="{{ '/category/' | append: sec | append: '/' | relative_url }}">더보기 →</a>
       </div>
       <div class="cards">
         {% for post in sec_posts limit: 8 %}

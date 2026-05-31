@@ -24,6 +24,11 @@ layout: default
 </div>
 
 <div class="post-content-wrap">
+  <nav class="post-toc" id="post-toc" hidden>
+    <div class="post-toc-title"><i class="ti ti-list" aria-hidden="true"></i> 목차</div>
+    <ol id="post-toc-list"></ol>
+  </nav>
+
   <article class="post-content">
     {{ content }}
   </article>
@@ -97,9 +102,34 @@ layout: default
 
 <script>
 (function () {
+  var article = document.querySelector('.post-content');
+
+  // 목차(TOC) 생성 — 본문 ## / ### 제목 기반
+  var toc = document.getElementById('post-toc');
+  var tocList = document.getElementById('post-toc-list');
+  if (article && toc && tocList) {
+    var heads = article.querySelectorAll('h2, h3');
+    var count = 0;
+    heads.forEach(function (h) {
+      if (!h.id) {
+        h.id = 'sec-' + (++count) + '-' + (h.textContent || '').trim().replace(/\s+/g, '-').slice(0, 24);
+      }
+      var li = document.createElement('li');
+      if (h.tagName.toLowerCase() === 'h3') li.className = 'toc-h3';
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.textContent = h.textContent;
+      li.appendChild(a);
+      tocList.appendChild(li);
+      count++;
+    });
+    if (tocList.children.length >= 2) {
+      toc.hidden = false;
+    }
+  }
+
   // 읽기 진행바
   var bar = document.getElementById('reading-progress');
-  var article = document.querySelector('.post-content');
   function onScroll() {
     if (!article || !bar) return;
     var rect = article.getBoundingClientRect();
