@@ -471,3 +471,76 @@ img { max-width: 100%; display: block; }
 .post-cat-badge.world    { background: var(--tech-bg); color: var(--tech); }
 .summary-box.domestic { border-left-color: var(--jobs-mid); }
 .summary-box.world    { border-left-color: var(--tech-mid); }
+
+/* ---- 흥미로운 발견(curious) 카테고리: 보라 ---- */
+:root {
+  --curious:     #5B3A8E;
+  --curious-bg:  #EFE9F8;
+  --curious-mid: #8B5CF6;
+}
+[data-theme="dark"] {
+  --curious:     #C4B0F0;
+  --curious-bg:  #2A1F45;
+  --curious-mid: #8B5CF6;
+}
+.sec-tag.curious { background: var(--curious-bg); color: var(--curious); }
+.card-accent.curious { background: var(--curious-mid); }
+.card-title.curious em { color: var(--curious); }
+.card-cta.curious { color: var(--curious); }
+.post-cat-badge.curious { background: var(--curious-bg); color: var(--curious); }
+.summary-box.curious { border-left-color: var(--curious-mid); }
+
+/* ---- 히어로(대표) 카드 ---- */
+.hero-card {
+  display: block;
+  max-width: var(--container);
+  margin: 1.75rem auto 0;
+  padding: 1.75rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s;
+}
+.hero-card::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px;
+  background: var(--policy-mid);
+}
+.hero-card.domestic::before { background: var(--jobs-mid); }
+.hero-card.world::before    { background: var(--tech-mid); }
+.hero-card.curious::before  { background: var(--curious-mid); }
+.hero-card.policy::before   { background: var(--policy-mid); }
+.hero-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -12px rgba(0,0,0,.18);
+  border-color: var(--line2);
+}
+.hero-tag-row { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
+.hero-badge {
+  font-size: 11px; font-weight: 600; letter-spacing: .5px;
+  color: var(--brand-dark); background: var(--brand-bg);
+  padding: 4px 10px; border-radius: 20px;
+}
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 26px; line-height: 1.35; letter-spacing: -.4px;
+  color: var(--ink); margin-bottom: .75rem; font-weight: 400;
+}
+.hero-desc { font-size: 15px; line-height: 1.75; color: var(--ink2); margin-bottom: 1.25rem; }
+.hero-meta { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--ink3); }
+.hero-cta { margin-left: auto; color: var(--brand-dark); font-weight: 500; display: inline-flex; align-items: center; gap: 4px; }
+
+/* ---- 카드 호버 강화 (몰입도) ---- */
+.post-card { transition: transform .15s ease, box-shadow .15s ease, border-color .15s; }
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px -14px rgba(0,0,0,.22);
+}
+
+@media (max-width: 640px) {
+  .hero-card { padding: 1.35rem; margin-top: 1.25rem; }
+  .hero-title { font-size: 21px; }
+  .hero-meta { flex-wrap: wrap; }
+  .hero-cta { margin-left: 0; }
+}
