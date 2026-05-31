@@ -6,8 +6,7 @@
   <meta name="theme-color" content="#16161a" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#F6F6F3" media="(prefers-color-scheme: light)">
   <link rel="apple-touch-icon" href="{{ '/assets/images/logo.png' | relative_url }}">
-  <title>{% if page.title and page.title != '홈' %}{{ page.title }} · Walapp{% else %}Walapp — 매일 아침 딱 필요한 정보만{% endif %}</title>
-  <meta name="description" content="{% if page.summary %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}">
+  {% comment %} title·description·og·twitter·json-ld 는 jekyll-seo-tag가 담당 {% endcomment %}
   {% seo %}
   {% feed_meta %}
   {% if site.google_analytics and site.google_analytics != "" %}

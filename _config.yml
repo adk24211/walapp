@@ -14,6 +14,13 @@ social:
 logo: /assets/images/logo.png
 image: /assets/images/logo-full.png
 
+# 모든 페이지 기본 공유 이미지(og:image/twitter:image) — jekyll-seo-tag가 page.image로 사용
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/logo-full.png
+
 # Google Search Console 사이트 소유 인증 (HTML 태그 방식의 content 값).
 google_site_verification: "5IRKXouoxlQsJLyugZIoOCw7sXlWB-mYV9Trnlm88a4"
 
