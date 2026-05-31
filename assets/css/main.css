@@ -288,7 +288,7 @@ img { max-width: 100%; display: block; }
 
 /* ---- 포스트 상세 히어로 ---- */
 .post-hero {
-  background: var(--ink); color: #fff;
+  background: #16161a; color: #fff;
   padding: 3rem 1.5rem;
   border-bottom: 3px solid var(--brand);
 }
@@ -378,7 +378,7 @@ img { max-width: 100%; display: block; }
   font-size: 16px; font-weight: 800;
   letter-spacing: -.3px; color: var(--ink2);
 }
-.footer-links { display: flex; gap: 1.25rem; }
+.footer-links { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; justify-content: flex-end; }
 .footer-links a { font-size: 12px; color: var(--ink3); }
 .footer-links a:hover { color: var(--ink); }
 
@@ -652,3 +652,33 @@ a.post-nav-item:hover { border-color: var(--line2); transform: translateY(-2px);
 
 /* TOC 앵커 점프 시 고정 헤더 가림 방지 */
 .post-content h2, .post-content h3 { scroll-margin-top: 68px; }
+
+/* ---- 포스트 본문 표 (마크다운 table) ---- */
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 14px;
+  display: block;
+  overflow-x: auto;          /* 모바일에서 넓은 표 가로 스크롤 */
+  white-space: nowrap;
+}
+.post-content thead th {
+  background: var(--surface2);
+  color: var(--ink);
+  font-weight: 600;
+  text-align: left;
+}
+.post-content th, .post-content td {
+  border: 1px solid var(--line);
+  padding: 8px 12px;
+  line-height: 1.6;
+  color: var(--ink2);
+}
+.post-content tbody tr:nth-child(even) { background: var(--surface2); }
+
+/* ---- 모바일 정렬 보강 ---- */
+@media (max-width: 600px) {
+  .footer-links { justify-content: center; }
+  .post-content table { font-size: 13px; }
+}
