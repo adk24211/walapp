@@ -2,6 +2,28 @@
 layout: default
 ---
 {% assign cat = page.categories | first %}
+{% capture cat_label %}{% include category-label.html category=cat %}{% endcapture %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  "description": {{ page.summary | default: page.title | jsonify }},
+  "articleSection": {{ cat_label | strip | jsonify }},
+  "image": ["{{ '/assets/images/logo-full.png' | absolute_url }}"],
+  "inLanguage": "ko-KR",
+  "author": { "@type": "Organization", "name": "Walapp", "url": "{{ '/' | absolute_url }}" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Walapp",
+    "logo": { "@type": "ImageObject", "url": "{{ '/assets/images/logo.png' | absolute_url }}" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" }
+}
+</script>
 
 <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
 
