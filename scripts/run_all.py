@@ -40,12 +40,12 @@ POSTS_DIR  = ROOT / "_posts"
 CACHE_DIR  = ROOT / ".cache"
 CACHE_FILE = CACHE_DIR / "last_collect.json"
 
-CATEGORY_ORDER = ["policy", "dev-jobs", "tech-news"]
+CATEGORY_ORDER = ["domestic", "world", "policy"]
 # 카테고리별 포스팅 시간 (KST)
 POST_HOURS = {
-    "policy":    "07:00:00",
-    "dev-jobs":  "07:01:00",
-    "tech-news": "07:02:00",
+    "domestic": "07:00:00",
+    "world":    "07:01:00",
+    "policy":   "07:02:00",
 }
 
 
@@ -68,14 +68,42 @@ def collect_all(skip: bool = False) -> dict:
         log.info("캐시에서 수집 데이터 로드")
         return load_cache()
 
+    from collect.domestic_news import collect as collect_domestic
+    from collect.world_news import collect as collect_world
     from collect.gov_policy import collect as collect_policy
-    from collect.dev_jobs import collect as collect_jobs
-    from collect.tech_news import collect as collect_tech
 
     log.info("━━━ 데이터 수집 시작 ━━━")
     collected: dict = {}
 
-    # 정책
+    # 국내 핫뉴스
+    try:
+        domestic_items = collect_domestic()
+        collected["domestic"] = {
+            "items": [vars(i) for i in domestic_items],
+            "extra": {},
+        }
+        log.info("국내 핫뉴스: %d건", len(domestic_items))
+    except Exception as e:
+        log.error("국내 핫뉴스 수집 실패: %s", e)
+        collected["domestic"] = {"items": [], "extra": {}}
+
+    time.sleep(1)
+
+    # 해외 핫뉴스
+    try:
+        world_items = collect_world()
+        collected["world"] = {
+            "items": [vars(i) for i in world_items],
+            "extra": {},
+        }
+        log.info("해외 핫뉴스: %d건", len(world_items))
+    except Exception as e:
+        log.error("해외 핫뉴스 수집 실패: %s", e)
+        collected["world"] = {"items": [], "extra": {}}
+
+    time.sleep(1)
+
+    # 정부·청년 정책
     try:
         policy_items = collect_policy()
         collected["policy"] = {
@@ -86,34 +114,6 @@ def collect_all(skip: bool = False) -> dict:
     except Exception as e:
         log.error("정책 수집 실패: %s", e)
         collected["policy"] = {"items": [], "extra": {}}
-
-    time.sleep(1)
-
-    # 채용
-    try:
-        jobs_items, stack_counts = collect_jobs()
-        collected["dev-jobs"] = {
-            "items": [vars(i) for i in jobs_items],
-            "extra": {"stack_counts": stack_counts},
-        }
-        log.info("채용: %d건", len(jobs_items))
-    except Exception as e:
-        log.error("채용 수집 실패: %s", e)
-        collected["dev-jobs"] = {"items": [], "extra": {}}
-
-    time.sleep(1)
-
-    # 테크 뉴스
-    try:
-        tech_items = collect_tech()
-        collected["tech-news"] = {
-            "items": [vars(i) for i in tech_items],
-            "extra": {},
-        }
-        log.info("테크: %d건", len(tech_items))
-    except Exception as e:
-        log.error("테크 수집 실패: %s", e)
-        collected["tech-news"] = {"items": [], "extra": {}}
 
     save_cache(collected)
     log.info("수집 완료 — 캐시 저장")

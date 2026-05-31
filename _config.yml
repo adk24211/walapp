@@ -15,9 +15,9 @@ plugins:
   - jekyll-paginate
 
 categories_label:
+  domestic: "국내 핫뉴스"
+  world: "해외 핫뉴스"
   policy: "정부·청년 정책"
-  dev-jobs: "개발자 채용"
-  tech-news: "IT·테크"
 
 exclude:
   - scripts/

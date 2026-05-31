@@ -15,23 +15,23 @@ from collect.base import RawItem
 
 log = logging.getLogger(__name__)
 
-Category = Literal["policy", "dev-jobs", "tech-news"]
+Category = Literal["domestic", "world", "policy"]
 
 CATEGORY_META = {
+    "domestic": {
+        "jekyll_cat": "domestic",
+        "label": "국내 핫뉴스",
+        "summary_label": "summary-box domestic",
+    },
+    "world": {
+        "jekyll_cat": "world",
+        "label": "해외 핫뉴스",
+        "summary_label": "summary-box world",
+    },
     "policy": {
         "jekyll_cat": "policy",
         "label": "정부·청년 정책",
         "summary_label": "summary-box policy",
-    },
-    "dev-jobs": {
-        "jekyll_cat": "dev-jobs",
-        "label": "개발자 채용",
-        "summary_label": "summary-box jobs",
-    },
-    "tech-news": {
-        "jekyll_cat": "tech-news",
-        "label": "IT·테크",
-        "summary_label": "summary-box tech",
     },
 }
 
@@ -59,7 +59,34 @@ def _build_prompt(
         {item_text}
     """).strip()
 
-    if category == "policy":
+    if category == "domestic":
+        instruction = textwrap.dedent("""
+            === 작성 지침 ===
+            - 대상 독자: 오늘의 주요 뉴스를 빠르게 파악하려는 일반 독자
+            - 주제: 오늘 국내에서 가장 화제가 된 주요 뉴스 정리
+            - 문체: 신문 기사체. 평서형 종결어미('~다', '~했다', '~라고 밝혔다')를 사용하고, 객관적이고 중립적인 보도 어조를 유지하세요. 구어체·말투는 절대 쓰지 마세요
+            - 첫 문단은 오늘 국내 뉴스의 전체 흐름을 요약하는 리드 문장으로 시작하세요
+            - 수집된 뉴스 중 가장 중요한 5~7개를 선별하고, 각 뉴스마다 ## 소제목을 두세요
+            - 각 뉴스는 핵심 사실(무엇이·언제·누가) → 배경·맥락 → 의미·파급 효과 순으로 최소 3문장 이상 충실히 작성하세요
+            - 정치적으로 민감한 사안은 특정 입장에 치우치지 말고 사실 위주로 균형 있게 서술하세요
+            - 마지막에 오늘 뉴스를 관통하는 큰 흐름을 한 문단으로 정리하세요
+        """).strip()
+
+    elif category == "world":
+        instruction = textwrap.dedent("""
+            === 작성 지침 ===
+            - 대상 독자: 오늘의 해외 주요 뉴스를 빠르게 파악하려는 일반 독자
+            - 주제: 오늘 해외에서 가장 화제가 된 주요 뉴스 정리
+            - 문체: 신문 기사체. 평서형 종결어미('~다', '~라고 밝혔다', '~으로 전해졌다')를 사용하고, 객관적이고 중립적인 보도 어조를 유지하세요. 구어체·말투는 절대 쓰지 마세요
+            - 영어 원문 뉴스를 한국어 기사체로 정확하게 번역·요약하세요. 오역에 주의하세요
+            - 첫 문단은 오늘 해외 뉴스의 전체 흐름을 요약하는 리드 문장으로 시작하세요
+            - 수집된 뉴스 중 가장 중요한 5~7개를 선별하고, 각 뉴스마다 ## 소제목을 두세요
+            - 각 뉴스는 핵심 사실 → 배경·맥락 → 국제적 의미·파급 효과 순으로 최소 3문장 이상 작성하세요
+            - 국내 독자가 생소할 수 있는 인물·지명·기관은 간단히 부연 설명을 덧붙이세요
+            - 마지막에 오늘 국제 뉴스를 관통하는 큰 흐름을 한 문단으로 정리하세요
+        """).strip()
+
+    else:  # policy
         instruction = textwrap.dedent("""
             === 작성 지침 ===
             - 대상 독자: 정책 정보를 찾는 20~35세 청년 및 일반 독자
@@ -70,39 +97,6 @@ def _build_prompt(
             - 독자가 자신이 해당되는지 판단할 수 있도록 자격 요건(나이·소득·거주지 등)을 구체적으로 풀어 쓰세요
             - 표(마크다운 table)를 활용해 지원 내용/대상/금액을 정리하면 좋습니다
             - 단순 사실 나열을 넘어, 이 정책이 청년에게 어떤 의미가 있는지 맥락을 함께 제시하세요
-        """).strip()
-
-    elif category == "dev-jobs":
-        stack_info = ""
-        if extra and extra.get("stack_counts"):
-            top5 = list(extra["stack_counts"].items())[:5]
-            stack_info = "기술 스택 언급 빈도: " + ", ".join(
-                f"{k}({v})" for k, v in top5
-            )
-        instruction = textwrap.dedent(f"""
-            === 작성 지침 ===
-            - 대상 독자: 취업 준비 중이거나 이직을 고려하는 개발자
-            - 문체: 신문 기사체. 평서형 종결어미('~다', '~로 집계됐다', '~한 것으로 분석된다')를 사용하고, 객관적인 보도 어조를 유지하세요. 구어체·말투는 절대 쓰지 마세요
-            - 첫 문단은 이번 주 채용 시장 및 기술 트렌드의 흐름을 요약하는 리드 문장으로 시작하세요
-            - ## 소제목으로 최소 3개 섹션을 구성하세요 (예: 시장 동향 / 주목 기술 스택 / 주목할 프로젝트·공고 / 구직 전략)
-            - 기술 스택 트렌드는 언급 빈도 등 수치 근거와 함께 보도하고, 왜 그 기술이 부상하는지 배경을 2~3문장으로 설명하세요
-            - 주목할 만한 프로젝트나 동향 3~5개를 각각 무엇이고 왜 중요한지 구체적으로 소개하세요 (각 항목 2문장 이상)
-            - 마지막 섹션에서는 구직자가 참고할 실질적인 시장 전망과 준비 방향을 객관적 분석으로 제시하세요
-            - 표(마크다운 table)로 기술 스택별 수요나 프로젝트 특징을 정리하면 좋습니다
-            {stack_info}
-        """).strip()
-
-    else:  # tech-news
-        instruction = textwrap.dedent("""
-            === 작성 지침 ===
-            - 대상 독자: IT에 관심 있는 개발자, 테크 종사자
-            - 문체: 신문 기사체. 평서형 종결어미('~다', '~라고 밝혔다', '~으로 전해졌다')를 사용하고, 간결하고 객관적인 보도 어조를 유지하세요. 구어체·말투는 절대 쓰지 마세요
-            - 수집된 뉴스 중 개발자에게 가장 임팩트 있는 3~5개를 선별하세요
-            - 각 뉴스마다 ## 소제목을 두고, 핵심 사실(무엇이 일어났는가) → 배경·맥락 → 의미와 파급 효과 순으로 최소 3~4문장 이상 충실히 작성하세요
-            - "왜 중요한가"를 단순 한 줄이 아니라, 기술적·산업적 배경을 들어 구체적으로 설명하세요
-            - 영어 뉴스는 한국어 기사체로 정확하게 옮기되, 국내 독자가 생소할 수 있는 용어나 회사·기술은 간단히 부연하세요
-            - 글로벌 동향이 국내 개발 생태계나 실무에 미치는 영향을 사실에 근거해 서술하세요
-            - 마지막에 이번 뉴스들을 관통하는 큰 흐름을 한 문단으로 정리하면 좋습니다
         """).strip()
 
     output_format = textwrap.dedent("""
@@ -129,7 +123,7 @@ def _build_prompt(
         - 한글과 영문(+숫자)만 사용하세요. 한자(漢字)와 일본어 가나(カタカナ·ひらがな)는 절대 쓰지 마세요 (예: '詳細' → '상세', 'サイバー' → '사이버')
         - 모든 줄은 들여쓰기 없이 행의 맨 앞에서 시작하세요. 공백으로 들여쓰지 마세요
         - 첫 줄은 반드시 <div class="summary-box [CATEGORY_CLASS]">핵심을 요약하는 1~2문장</div> 형태의 한 줄짜리 요약 박스로 작성하세요. 본문 전체를 이 박스 안에 넣지 마세요
-        - [CATEGORY_CLASS] 자리에는 policy / jobs / tech 중 하나를 넣으세요
+        - [CATEGORY_CLASS] 자리에는 domestic / world / policy 중 하나를 넣으세요
         - summary-box 다음부터는 반드시 마크다운 ## 소제목으로 섹션을 나누세요. <h2>·<p> 같은 HTML 태그를 쓰지 말고 순수 마크다운으로 작성하세요
         - 본문 길이: 1200~1800자 (한국어 기준). 정보성 글이므로 각 섹션을 충실하게 채우되, 의미 없는 반복이나 군더더기 없이 밀도 있게 작성하세요
         - 최소 3개 이상의 ## 소제목 섹션으로 구성하세요
@@ -302,9 +296,9 @@ def make_filename(category: Category, post_date: datetime, title: str) -> str:
     date_prefix = post_date.strftime("%Y-%m-%d")
 
     slug_map = {
-        "policy":    "policy",
-        "dev-jobs":  "dev-jobs",
-        "tech-news": "tech-news",
+        "domestic": "domestic",
+        "world":    "world",
+        "policy":   "policy",
     }
     slug = slug_map[category]
 

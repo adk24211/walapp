@@ -457,3 +457,17 @@ img { max-width: 100%; display: block; }
   background: var(--brand-bg); color: var(--brand-dark);
   padding: 0 2px; border-radius: 3px;
 }
+
+/* ---- 신규 카테고리(국내/해외) 색상: domestic=주황, world=초록 재사용 ---- */
+.sec-tag.domestic { background: var(--jobs-bg); color: var(--jobs); }
+.sec-tag.world    { background: var(--tech-bg); color: var(--tech); }
+.card-accent.domestic { background: var(--jobs-mid); }
+.card-accent.world    { background: var(--tech-mid); }
+.card-title.domestic em { color: var(--jobs); }
+.card-title.world    em { color: var(--tech); }
+.card-cta.domestic { color: var(--jobs); }
+.card-cta.world    { color: var(--tech); }
+.post-cat-badge.domestic { background: var(--jobs-bg); color: var(--jobs); }
+.post-cat-badge.world    { background: var(--tech-bg); color: var(--tech); }
+.summary-box.domestic { border-left-color: var(--jobs-mid); }
+.summary-box.world    { border-left-color: var(--tech-mid); }

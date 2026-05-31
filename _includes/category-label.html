@@ -1,6 +1,6 @@
 {% case include.category %}
+  {% when 'domestic' %}국내 핫뉴스
+  {% when 'world' %}해외 핫뉴스
   {% when 'policy' %}정부·청년 정책
-  {% when 'dev-jobs' %}개발자 채용
-  {% when 'tech-news' %}IT·테크
   {% else %}{{ include.category }}
 {% endcase %}

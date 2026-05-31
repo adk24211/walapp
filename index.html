@@ -4,152 +4,79 @@ title: 홈
 ---
 
 {% assign all_posts = site.posts %}
-{% assign policy_posts = all_posts | where_exp: "p", "p.categories contains 'policy'" %}
-{% assign jobs_posts   = all_posts | where_exp: "p", "p.categories contains 'dev-jobs'" %}
-{% assign tech_posts   = all_posts | where_exp: "p", "p.categories contains 'tech-news'" %}
+{% assign domestic_posts = all_posts | where_exp: "p", "p.categories contains 'domestic'" %}
+{% assign world_posts    = all_posts | where_exp: "p", "p.categories contains 'world'" %}
+{% assign policy_posts   = all_posts | where_exp: "p", "p.categories contains 'policy'" %}
 
 <div class="page-header">
   <div class="ph-top">
-    <span class="ph-issue">Issue #{{ site.posts | size | plus: 1 | minus: 1 }}</span>
+    <span class="ph-issue">Daily Brief</span>
     <span class="ph-date">{{ 'now' | date: "%Y년 %m월 %d일" }}</span>
   </div>
   {% assign featured = site.posts.first %}
   {% if featured %}
-  <h1 class="ph-title">{{ featured.headline | default: "오늘의 브리핑" }}</h1>
-  <p class="ph-sub">{{ policy_posts | size }}개 정책 · {{ jobs_posts | size }}개 채용 · {{ tech_posts | size }}개 테크 — 총 {{ all_posts | size }}개 포스팅</p>
+  <h1 class="ph-title">{{ featured.headline | default: "오늘의 주요 뉴스" }}</h1>
+  <p class="ph-sub">{{ domestic_posts | size }}개 국내 · {{ world_posts | size }}개 해외 · {{ policy_posts | size }}개 정책 — 매일 아침 핵심만 모아 전합니다</p>
   {% endif %}
 </div>
 
 <div class="tab-bar">
   <button class="tab-btn active" data-filter="all">전체</button>
+  <button class="tab-btn" data-filter="domestic">🇰🇷 국내 핫뉴스</button>
+  <button class="tab-btn" data-filter="world">🌐 해외 핫뉴스</button>
   <button class="tab-btn" data-filter="policy">🏛 정부·청년 정책</button>
-  <button class="tab-btn" data-filter="dev-jobs">💼 개발자 채용</button>
-  <button class="tab-btn" data-filter="tech-news">🖥 IT·테크</button>
 </div>
 
 <div class="feed">
 
-  {% if policy_posts.size > 0 %}
-  <div class="section-group" data-cat="policy">
-    <div class="section-label">
-      <span class="sec-tag policy">정부·청년 정책</span>
-      <div class="sec-rule"></div>
-      <span class="sec-count">{{ policy_posts | size }}개</span>
-    </div>
-    <div class="cards">
-      {% for post in policy_posts limit: 5 %}
-      {% assign loop_index = forloop.index | prepend: "0" | slice: -2, 2 %}
-      <a href="{{ post.url | relative_url }}" class="post-card">
-        <div class="card-inner">
-          <div class="card-accent policy"></div>
-          <div class="card-body">
-            <div class="card-top">
-              <h2 class="card-title policy">{{ post.title }}</h2>
-              <span class="card-num">{{ loop_index }}</span>
-            </div>
-            {% if post.summary %}
-            <p class="card-desc">{{ post.summary }}</p>
-            {% endif %}
-            {% if post.callout %}
-            <div class="card-callout"><strong>{{ post.callout_label | default: "핵심" }}</strong> {{ post.callout }}</div>
-            {% endif %}
-            <div class="card-footer">
-              <div class="card-meta">
-                {% if post.tags.first %}<span>{{ post.tags.first }}</span><span class="meta-dot"></span>{% endif %}
-                <span>{% include reading-time.html content=post.content %}</span>
-                <span class="meta-dot"></span>
-                <span>{{ post.date | date: "%Y.%m.%d" }}</span>
-              </div>
-              <span class="card-cta policy">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>
-            </div>
-          </div>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-  {% endif %}
+  {% assign sections = "domestic,world,policy" | split: "," %}
+  {% for sec in sections %}
+    {% case sec %}
+      {% when 'domestic' %}{% assign sec_posts = domestic_posts %}{% assign sec_label = '국내 핫뉴스' %}
+      {% when 'world' %}{% assign sec_posts = world_posts %}{% assign sec_label = '해외 핫뉴스' %}
+      {% when 'policy' %}{% assign sec_posts = policy_posts %}{% assign sec_label = '정부·청년 정책' %}
+    {% endcase %}
 
-  {% if jobs_posts.size > 0 %}
-  <div class="section-group" data-cat="dev-jobs">
-    <div class="section-label">
-      <span class="sec-tag jobs">개발자 채용</span>
-      <div class="sec-rule"></div>
-      <span class="sec-count">{{ jobs_posts | size }}개</span>
-    </div>
-    <div class="cards">
-      {% for post in jobs_posts limit: 5 %}
-      {% assign loop_index = forloop.index | prepend: "0" | slice: -2, 2 %}
-      <a href="{{ post.url | relative_url }}" class="post-card">
-        <div class="card-inner">
-          <div class="card-accent jobs"></div>
-          <div class="card-body">
-            <div class="card-top">
-              <h2 class="card-title jobs">{{ post.title }}</h2>
-              <span class="card-num">{{ loop_index }}</span>
-            </div>
-            {% if post.summary %}
-            <p class="card-desc">{{ post.summary }}</p>
-            {% endif %}
-            {% if post.tags.size > 0 %}
-            <div class="pill-row">
-              {% for tag in post.tags limit: 6 %}
-              <span class="pill {% if forloop.index <= 3 %}hot jobs{% endif %}">{{ tag }}</span>
-              {% endfor %}
-            </div>
-            {% endif %}
-            <div class="card-footer">
-              <div class="card-meta">
-                <span>{% include reading-time.html content=post.content %}</span>
-                <span class="meta-dot"></span>
-                <span>{{ post.date | date: "%Y.%m.%d" }}</span>
+    {% if sec_posts.size > 0 %}
+    <div class="section-group" data-cat="{{ sec }}">
+      <div class="section-label">
+        <span class="sec-tag {{ sec }}">{{ sec_label }}</span>
+        <div class="sec-rule"></div>
+        <span class="sec-count">{{ sec_posts | size }}개</span>
+      </div>
+      <div class="cards">
+        {% for post in sec_posts limit: 8 %}
+        {% assign loop_index = forloop.index | prepend: "0" | slice: -2, 2 %}
+        <a href="{{ post.url | relative_url }}" class="post-card">
+          <div class="card-inner">
+            <div class="card-accent {{ sec }}"></div>
+            <div class="card-body">
+              <div class="card-top">
+                <h2 class="card-title {{ sec }}">{{ post.title }}</h2>
+                <span class="card-num">{{ loop_index }}</span>
               </div>
-              <span class="card-cta jobs">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>
+              {% if post.summary %}
+              <p class="card-desc">{{ post.summary }}</p>
+              {% endif %}
+              {% if post.callout %}
+              <div class="card-callout"><strong>{{ post.callout_label | default: "핵심" }}</strong> {{ post.callout }}</div>
+              {% endif %}
+              <div class="card-footer">
+                <div class="card-meta">
+                  {% if post.tags.first %}<span>{{ post.tags.first }}</span><span class="meta-dot"></span>{% endif %}
+                  <span>{% include reading-time.html content=post.content %}</span>
+                  <span class="meta-dot"></span>
+                  <span>{{ post.date | date: "%Y.%m.%d" }}</span>
+                </div>
+                <span class="card-cta {{ sec }}">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>
+              </div>
             </div>
           </div>
-        </div>
-      </a>
-      {% endfor %}
+        </a>
+        {% endfor %}
+      </div>
     </div>
-  </div>
-  {% endif %}
-
-  {% if tech_posts.size > 0 %}
-  <div class="section-group" data-cat="tech-news">
-    <div class="section-label">
-      <span class="sec-tag tech">IT · 테크</span>
-      <div class="sec-rule"></div>
-      <span class="sec-count">{{ tech_posts | size }}개</span>
-    </div>
-    <div class="cards">
-      {% for post in tech_posts limit: 5 %}
-      {% assign loop_index = forloop.index | prepend: "0" | slice: -2, 2 %}
-      <a href="{{ post.url | relative_url }}" class="post-card">
-        <div class="card-inner">
-          <div class="card-accent tech"></div>
-          <div class="card-body">
-            <div class="card-top">
-              <h2 class="card-title tech">{{ post.title }}</h2>
-              <span class="card-num">{{ loop_index }}</span>
-            </div>
-            {% if post.summary %}
-            <p class="card-desc">{{ post.summary }}</p>
-            {% endif %}
-            <div class="card-footer">
-              <div class="card-meta">
-                {% if post.tags.first %}<span>{{ post.tags.first }}</span><span class="meta-dot"></span>{% endif %}
-                <span>{% include reading-time.html content=post.content %}</span>
-                <span class="meta-dot"></span>
-                <span>{{ post.date | date: "%Y.%m.%d" }}</span>
-              </div>
-              <span class="card-cta tech">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>
-            </div>
-          </div>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-  {% endif %}
+    {% endif %}
+  {% endfor %}
 
 </div>

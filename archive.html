@@ -24,12 +24,7 @@ permalink: /archive/
     </div>
     <div class="cards">
       {% for post in group.items %}
-      {% assign cat = post.categories | first %}
-      {% case cat %}
-        {% when 'dev-jobs' %}{% assign cc = 'jobs' %}
-        {% when 'tech-news' %}{% assign cc = 'tech' %}
-        {% else %}{% assign cc = 'policy' %}
-      {% endcase %}
+      {% assign cc = post.categories | first %}
       <a href="{{ post.url | relative_url }}" class="post-card">
         <div class="card-inner">
           <div class="card-accent {{ cc }}"></div>
@@ -43,7 +38,7 @@ permalink: /archive/
             {% endif %}
             <div class="card-footer">
               <div class="card-meta">
-                <span>{% include category-label.html category=cat %}</span>
+                <span>{% include category-label.html category=cc %}</span>
                 <span class="meta-dot"></span>
                 <span>{% include reading-time.html content=post.content %}</span>
               </div>
