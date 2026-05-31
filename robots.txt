@@ -1,1 +1,4 @@
-Sitemap: https://adk2421.github.io/walapp/sitemap.xml
+User-agent: *
+Allow: /
+
+Sitemap: https://adk24211.github.io/walapp/sitemap.xml
