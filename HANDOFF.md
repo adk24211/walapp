@@ -6,12 +6,15 @@
 
 ## 프로젝트 개요
 
-**Walapp** — 정부 청년 정책, 개발자 채용 동향, IT 테크 뉴스를 매일 자동으로 수집·요약해서 발행하는 Jekyll 기반 정적 사이트.
+**Walapp** — 국내·해외 핫뉴스, 흥미로운 발견, 정부·청년 정책을 매일 자동으로 수집·요약해서 발행하는 Jekyll 기반 정적 사이트.
 
-- 배포: GitHub Pages
-- 자동화: GitHub Actions (매일 KST 07:00)
-- AI 생성: Anthropic Claude API (claude-sonnet-4-20250514)
-- 스타일: 카드형 뉴스레터 UI, 라이트/다크 모드 지원
+- 배포: GitHub Pages (gh-pages 브랜치, peaceiris/actions-gh-pages)
+- 자동화: GitHub Actions "Daily Post Generator" (매일 KST 07:00 + 수동 실행)
+- AI 생성: Groq API (llama-3.3-70b-versatile, 폴백 llama-3.1-8b-instant) — 무료
+- 카테고리: domestic(국내) / world(해외) / curious(흥미로운 발견) / policy(정책)
+- 스타일: 카드형 뉴스레터 UI + 히어로 카드, 라이트/다크 모드, Pretendard(로고 Ubuntu)
+- 부가: 검색(/search/), 아카이브(/archive/), 카테고리 페이지(/category/*),
+  포스트 TOC·공유·이전다음·관련글, 법적 페이지(면책/개인정보/약관/소개), SEO(GA4·Search Console)
 
 ---
 
@@ -91,112 +94,47 @@ dailybrief/
 
 ---
 
-## 남은 작업 (우선순위 순)
+## 진행 현황 (HANDOFF C~G 전부 완료)
 
-### C) 배포 세팅 — 가장 먼저 해야 함
+### C) 배포 세팅 — ✅ 완료
+- `_config.yml`: `url: https://adk24211.github.io`, `baseurl: /walapp`
+- 레포 `adk24211/walapp` 생성·push, Secret `GROQ_API_KEY` 등록
+- GitHub Pages: `gh-pages` 브랜치(Actions가 자동 생성·배포)
 
-```bash
-# 1. _config.yml 수정
-url: "https://YOUR_USERNAME.github.io"
-# repo 이름이 있다면 baseurl도 수정
-# baseurl: "/dailybrief"
+### D) 수집 소스 검증 및 보강 — ✅ 완료
+- **핵심 수정**: `parse_rss`가 `feedparser.parse(url)` 직접 호출 → 봇 UA로 한국 사이트 차단.
+  `fetch()`(브라우저 UA)로 받아 파싱하도록 변경 → 한국 매체 정상화
+- 죽은 소스(404/DNS/403) 제거, 카테고리 개편에 맞춰 소스 재구성:
+  - `domestic_news.py` — 구글뉴스(KR)·연합뉴스·한겨레
+  - `world_news.py` — 구글뉴스(World)·BBC·Al Jazeera
+  - `curious.py` — ScienceAlert·LiveScience·ScienceDaily·Smithsonian·MIT Tech Review
+  - `gov_policy.py` — 정책브리핑(korea.kr) + 청년 키워드 필터
 
-# 2. GitHub 레포 생성 후 push
-git init
-git add .
-git commit -m "init: dailybrief"
-git remote add origin https://github.com/YOUR_USERNAME/dailybrief.git
-git push -u origin main
+### E) 포스팅 품질 튜닝 — ✅ 완료
+- 문체: 신문 기사체('-요' 금지, '-다'/명사형 종결)
+- 분량: 1800~2800자, 섹션별 4~6문장, 독자 몰입 규칙(도입부·배경·전망)
+- 후처리: 들여쓰기 제거, 한자·일본어 가나 제거, `_yaml_safe()` front matter 보정
+- `max_tokens` 4096, 일일 한도 초과 시 경량 모델 폴백
 
-# 3. GitHub Secrets 등록
-# Settings → Secrets and variables → Actions → New repository secret
-# Name: ANTHROPIC_API_KEY
-# Value: sk-ant-...
+### F) 아카이브 페이지 — ✅ 완료
+- `/archive/` 월별 그룹핑 카드 리스트
 
-# 4. GitHub Pages 설정
-# Settings → Pages → Source: gh-pages 브랜치 선택
-```
+### G) 카테고리 페이지 — ✅ 완료
+- `/category/{domestic,world,curious,policy}/` (공통 include 사용)
 
-### D) 수집 소스 검증 및 보강
-
-실제로 돌려보면 RSS URL이 막히거나 바뀐 것들이 있을 수 있음.
-
-```bash
-# 로컬에서 수집 테스트
-cp .env.example .env        # .env에 ANTHROPIC_API_KEY 입력
-pip install -r requirements.txt
-
-# 수집만 테스트 (API 호출 없음)
-cd scripts
-python -c "from collect.gov_policy import collect; r = collect(); print(len(r))"
-python -c "from collect.dev_jobs import collect; r, s = collect(); print(len(r), s)"
-python -c "from collect.tech_news import collect; r = collect(); print(len(r))"
-
-# 전체 파이프라인 테스트 (파일 저장 없음)
-DRY_RUN=1 python run_all.py
-```
-
-**검증 포인트:**
-- `gov_policy.py` — 정책브리핑 RSS URL이 실제 작동하는지 확인. 안 되면 `https://www.korea.kr/rss/policy.xml` 대신 다른 엔드포인트로 교체
-- `dev_jobs.py` — 원티드 RSS는 로그인이 필요할 수 있음. 안 되면 사람인 RSS(`https://www.saramin.co.kr/zf_user/rss`) 로 대체
-- `tech_news.py` — GeekNews RSS URL(`https://feeds.feedburner.com/geeknews-feed`) 확인 필요
-
-**대체 소스 후보:**
-```python
-# 정책
-"https://www.gov.kr/rss/news.do"                     # 정부24 뉴스
-"https://www.moe.go.kr/rssFeed.do?m=010902"          # 교육부
-
-# 채용
-"https://www.saramin.co.kr/zf_user/rss"              # 사람인
-"https://rss.jobkorea.co.kr/rss/it"                  # 잡코리아 IT
-
-# 테크
-"https://news.hada.io/rss"                           # GeekNews (대체)
-"https://yozm.wishket.com/magazine/feed/"            # 요즘IT
-```
-
-### E) 포스팅 품질 튜닝
-
-`scripts/generate_post.py`의 `_build_prompt()` 함수가 핵심.
-실제 생성 결과를 보면서 프롬프트를 다듬는 작업.
-
-```bash
-# API 비용 아끼면서 프롬프트 테스트
-SKIP_COLLECT=1 DRY_RUN=1 python scripts/run_all.py
-# → .cache/last_collect.json 캐시 재사용, 파일 저장 없이 생성 결과만 출력
-```
-
-**튜닝 포인트:**
-- 카드 `summary` 길이 (현재 80자 제한 → 너무 짧으면 늘리기)
-- 본문 길이 (현재 600~900자 → 원하는 길이로 조정)
-- `callout` 생성 품질 — 정책 포스트에서 핵심 수치가 잘 추출되는지 확인
-- `headline` 생성 — index.html h1에 쓰이는 오늘의 헤드라인
-
-### F) 아카이브 페이지
-
-날짜별로 지난 포스팅을 모아보는 페이지.
-`archive.html` 파일 하나 추가하면 됨.
-
-```html
 ---
-layout: default
-title: 아카이브
----
-<!-- 월별 그룹핑해서 포스트 목록 표시 -->
-{% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y년 %m월'" %}
-{% for group in postsByYear %}
-  <h2>{{ group.name }}</h2>
-  {% for post in group.items %}
-    <!-- 카드 또는 리스트 형태로 표시 -->
-  {% endfor %}
-{% endfor %}
-```
 
-### G) (선택) 카테고리 페이지
+## 추가 완료 항목 (HANDOFF 외)
+- 검색(`/search/` + `/search.json`), 포스트 TOC·공유·이전다음·관련글
+- 히어로 카드, 카드 호버 효과, 탭 이모지, Pretendard 폰트, favicon
+- 법적 페이지: `/disclaimer/` `/privacy/` `/terms/` `/about/`, 포스트 하단 면책 박스
+- SEO: robots.txt, 404, OG/트위터/JSON-LD, GA4(G-NS58PGSBFP), Search Console 인증
 
-`/category/policy`, `/category/dev-jobs`, `/category/tech-news` 각각의 페이지.
-`jekyll-archives` 플러그인 또는 수동 페이지 생성 방식으로 구현.
+## 향후 후보 (선택)
+- Groq 토큰 리셋 후 워크플로우 실행 → 4카테고리 포스트 최종 확인
+- AdSense 신청 및 승인 후 `ads.txt` 추가
+- Search Console에 `sitemap.xml` 제출
+- 페이지네이션(글 누적 시), 카테고리별 OG 메타 최적화
 
 ---
 
