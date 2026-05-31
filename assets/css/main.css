@@ -682,3 +682,12 @@ a.post-nav-item:hover { border-color: var(--line2); transform: translateY(-2px);
   .footer-links { justify-content: center; }
   .post-content table { font-size: 13px; }
 }
+
+/* ---- 접근성: 본문 바로가기(스크린리더/키보드) ---- */
+.skip-link {
+  position: absolute; left: 8px; top: -48px;
+  background: var(--brand); color: #fff;
+  padding: 8px 14px; border-radius: 8px; z-index: 300;
+  font-size: 14px; transition: top .15s;
+}
+.skip-link:focus { top: 8px; }

@@ -27,9 +27,11 @@ const tabBtns = document.querySelectorAll('.tab-btn');
 const sectionGroups = document.querySelectorAll('.section-group[data-cat]');
 
 tabBtns.forEach(btn => {
+  btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
   btn.addEventListener('click', () => {
-    tabBtns.forEach(b => b.classList.remove('active'));
+    tabBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
     const f = btn.dataset.filter;
     sectionGroups.forEach(g => {
       g.style.display = (f === 'all' || g.dataset.cat === f) ? 'block' : 'none';
