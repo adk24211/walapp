@@ -15,11 +15,10 @@ logo: /assets/images/logo.png
 image: /assets/images/logo-full.png
 
 # Google Search Console 사이트 소유 인증 (HTML 태그 방식의 content 값).
-# 아래 주석을 풀고 값을 넣으면 jekyll-seo-tag가 인증 메타태그를 자동 출력합니다.
-# google_site_verification: "여기에_인증코드"
+google_site_verification: "5IRKXouoxlQsJLyugZIoOCw7sXlWB-mYV9Trnlm88a4"
 
-# Google Analytics(GA4) 측정 ID (예: G-XXXXXXXXXX). 값을 넣으면 추적 스크립트 자동 삽입.
-google_analytics: ""
+# Google Analytics(GA4) 측정 ID. 값을 넣으면 추적 스크립트 자동 삽입.
+google_analytics: "G-NS58PGSBFP"
 
 markdown: kramdown
 highlighter: rouge
