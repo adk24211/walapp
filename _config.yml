@@ -1,8 +1,25 @@
 title: Walapp
-description: 정부 지원금, 개발자 채용, IT 트렌드 — 매일 아침 딱 필요한 것만
+description: 오늘의 국내·해외 핫뉴스와 청년 정책을 매일 아침 한눈에. 공신력 있는 매체의 주요 뉴스를 요약해 전합니다.
 baseurl: "/walapp"
-url: "https://adk2421.github.io"
+url: "https://adk24211.github.io"
 lang: ko
+
+# ---- SEO / 소셜 ----
+author: Walapp
+twitter:
+  card: summary_large_image
+social:
+  name: Walapp
+  links: []
+logo: /assets/images/logo.png
+image: /assets/images/logo-full.png
+
+# Google Search Console 사이트 소유 인증 (HTML 태그 방식의 content 값).
+# 아래 주석을 풀고 값을 넣으면 jekyll-seo-tag가 인증 메타태그를 자동 출력합니다.
+# google_site_verification: "여기에_인증코드"
+
+# Google Analytics(GA4) 측정 ID (예: G-XXXXXXXXXX). 값을 넣으면 추적 스크립트 자동 삽입.
+google_analytics: ""
 
 markdown: kramdown
 highlighter: rouge
