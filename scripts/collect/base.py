@@ -103,6 +103,41 @@ _NOISE_RE = re.compile(
 )
 
 
+def _resolve_google_news(url: str) -> str:
+    """Google News RSS 기사 링크(news.google.com/rss/articles/...)를 실제 기사 URL로 해석.
+
+    1) 링크에 인코딩된 base64(protobuf)에서 http URL을 추출(구형 포맷).
+    2) 실패하면 실제 요청 후 최종 리다이렉트 URL을 사용.
+    해석 실패 시 원본 URL을 그대로 반환한다.
+    """
+    if "news.google.com" not in url:
+        return url
+
+    # 1) base64 디코드로 원본 URL 추출 시도
+    try:
+        import base64
+        seg = url.split("/articles/", 1)[1].split("?", 1)[0]
+        raw = base64.urlsafe_b64decode(seg + "===")
+        text = raw.decode("latin1", "ignore")
+        m = re.search(r"https?://[^\s\x00-\x1f\"'<>]+", text)
+        if m:
+            cand = m.group(0)
+            if "news.google.com" not in cand and "." in cand:
+                return cand
+    except Exception:
+        pass
+
+    # 2) 최종 리다이렉트 URL 사용
+    try:
+        resp = requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT, allow_redirects=True)
+        if resp.url and "news.google.com" not in resp.url:
+            return resp.url
+    except requests.RequestException:
+        pass
+
+    return url
+
+
 def fetch_article_text(url: str, max_chars: int = 1800) -> str:
     """기사 URL에서 본문 텍스트를 추출한다.
 
@@ -111,6 +146,7 @@ def fetch_article_text(url: str, max_chars: int = 1800) -> str:
     """
     if not url or not url.startswith("http"):
         return ""
+    url = _resolve_google_news(url)
     resp = fetch(url)
     if resp is None:
         return ""
