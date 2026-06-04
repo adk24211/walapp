@@ -40,13 +40,13 @@ POSTS_DIR  = ROOT / "_posts"
 CACHE_DIR  = ROOT / ".cache"
 CACHE_FILE = CACHE_DIR / "last_collect.json"
 
-CATEGORY_ORDER = ["domestic", "world", "curious", "policy"]
+CATEGORY_ORDER = ["policy", "youth", "data", "curious"]
 # 카테고리별 포스팅 시간 (KST)
 POST_HOURS = {
-    "domestic": "07:00:00",
-    "world":    "07:01:00",
-    "curious":  "07:02:00",
-    "policy":   "07:03:00",
+    "policy":  "07:00:00",
+    "youth":   "07:01:00",
+    "data":    "07:02:00",
+    "curious": "07:03:00",
 }
 
 
@@ -69,67 +69,28 @@ def collect_all(skip: bool = False) -> dict:
         log.info("캐시에서 수집 데이터 로드")
         return load_cache()
 
-    from collect.domestic_news import collect as collect_domestic
-    from collect.world_news import collect as collect_world
-    from collect.curious import collect as collect_curious
-    from collect.gov_policy import collect as collect_policy
+    from collect import (
+        collect_policy, collect_youth, collect_data, collect_curious,
+    )
 
     log.info("━━━ 데이터 수집 시작 ━━━")
     collected: dict = {}
 
-    # 국내 핫뉴스
-    try:
-        domestic_items = collect_domestic()
-        collected["domestic"] = {
-            "items": [vars(i) for i in domestic_items],
-            "extra": {},
-        }
-        log.info("국내 핫뉴스: %d건", len(domestic_items))
-    except Exception as e:
-        log.error("국내 핫뉴스 수집 실패: %s", e)
-        collected["domestic"] = {"items": [], "extra": {}}
-
-    time.sleep(1)
-
-    # 해외 핫뉴스
-    try:
-        world_items = collect_world()
-        collected["world"] = {
-            "items": [vars(i) for i in world_items],
-            "extra": {},
-        }
-        log.info("해외 핫뉴스: %d건", len(world_items))
-    except Exception as e:
-        log.error("해외 핫뉴스 수집 실패: %s", e)
-        collected["world"] = {"items": [], "extra": {}}
-
-    time.sleep(1)
-
-    # 흥미로운 발견
-    try:
-        curious_items = collect_curious()
-        collected["curious"] = {
-            "items": [vars(i) for i in curious_items],
-            "extra": {},
-        }
-        log.info("흥미로운 발견: %d건", len(curious_items))
-    except Exception as e:
-        log.error("흥미로운 발견 수집 실패: %s", e)
-        collected["curious"] = {"items": [], "extra": {}}
-
-    time.sleep(1)
-
-    # 정부·청년 정책
-    try:
-        policy_items = collect_policy()
-        collected["policy"] = {
-            "items": [vars(i) for i in policy_items],
-            "extra": {},
-        }
-        log.info("정책: %d건", len(policy_items))
-    except Exception as e:
-        log.error("정책 수집 실패: %s", e)
-        collected["policy"] = {"items": [], "extra": {}}
+    jobs = [
+        ("policy",  "국내 정책",      collect_policy),
+        ("youth",   "청년 정책",      collect_youth),
+        ("data",    "통계·생활정보",  collect_data),
+        ("curious", "흥미로운 발견",  collect_curious),
+    ]
+    for key, label, fn in jobs:
+        try:
+            items = fn()
+            collected[key] = {"items": [vars(i) for i in items], "extra": {}}
+            log.info("%s: %d건", label, len(items))
+        except Exception as e:
+            log.error("%s 수집 실패: %s", label, e)
+            collected[key] = {"items": [], "extra": {}}
+        time.sleep(1)
 
     save_cache(collected)
     log.info("수집 완료 — 캐시 저장")
@@ -171,7 +132,9 @@ def generate_posts(
         h, m, s = POST_HOURS[category].split(":")
         dated = post_date.replace(hour=int(h), minute=int(m), second=int(s))
 
-        md_content = to_jekyll_markdown(post_data, category, dated)
+        # 대표 출처 링크 = 수집된 첫 항목의 URL (공공누리 출처표시용)
+        source_url = items[0].url if items else ""
+        md_content = to_jekyll_markdown(post_data, category, dated, source_url=source_url)
         filename = make_filename(category, dated, post_data["title"])
         filepath = POSTS_DIR / filename
 

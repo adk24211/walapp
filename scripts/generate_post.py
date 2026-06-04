@@ -1,8 +1,16 @@
 """
-Gemini API를 사용해 수집된 데이터를 Jekyll 포스트로 변환
+Groq API로 수집 데이터를 구조화 JSON으로 받아 → 카드뉴스 HTML 컴포넌트 포스트로 렌더링.
+
+설계 원칙:
+- LLM은 '구조화된 JSON 필드'만 생성한다(lead/stats/compare/steps/checklist/note/source).
+- HTML 컴포넌트(.cn-*)는 파이썬이 결정론적으로 렌더링한다.
+  → 매 포스트가 동일한 디자인으로 안정적으로 나오고, 마크다운/HTML 깨짐이 없다.
+- 문체는 '존대말투'(~합니다/~하세요). 출처는 공공·1차(공공누리) 기준으로 표기.
 """
 from __future__ import annotations
 
+import html
+import json
 import logging
 import re
 import textwrap
@@ -15,39 +23,64 @@ from collect.base import RawItem
 
 log = logging.getLogger(__name__)
 
-Category = Literal["domestic", "world", "policy", "curious"]
+Category = Literal["policy", "youth", "data", "curious"]
 
 CATEGORY_META = {
-    "domestic": {
-        "jekyll_cat": "domestic",
-        "label": "국내 핫뉴스",
-        "summary_label": "summary-box domestic",
-    },
-    "world": {
-        "jekyll_cat": "world",
-        "label": "해외 핫뉴스",
-        "summary_label": "summary-box world",
-    },
     "policy": {
         "jekyll_cat": "policy",
-        "label": "정부·청년 정책",
-        "summary_label": "summary-box policy",
+        "label": "국내 정책",
+        "lead_icon": "ti-building-bank",
+        "audience": "정부 정책·제도의 핵심과 영향을 빠르게 파악하고 싶은 일반 독자",
+        "focus": (
+            "정부·지자체가 발표한 국내 정책·제도를 다룹니다. "
+            "도입 배경, 핵심 내용, 대상과 영향, 시행 일정을 사실·수치 중심으로 정리하세요."
+        ),
+    },
+    "youth": {
+        "jekyll_cat": "youth",
+        "label": "청년 정책",
+        "lead_icon": "ti-user-star",
+        "audience": "지원금·정책 혜택을 찾는 19~34세 청년",
+        "focus": (
+            "청년 대상 지원금·일자리·주거·자산형성 정책을 다룹니다. "
+            "'내가 받을 수 있는지, 얼마를, 어떻게 신청하는지'를 끝까지 해결하는 실전 가이드로 작성하세요. "
+            "자격 요건은 checklist로, 유형 비교는 compare 표로 정리하면 좋습니다."
+        ),
+    },
+    "data": {
+        "jekyll_cat": "data",
+        "label": "통계·생활정보",
+        "lead_icon": "ti-chart-bar",
+        "audience": "물가·고용·복지 등 생활에 직결되는 공공 통계와 생활정보를 알고 싶은 독자",
+        "focus": (
+            "공공기관이 발표한 통계·지표·생활밀착 정보를 다룹니다. "
+            "핵심 수치를 stats로 강조하고, 수치가 의미하는 바와 생활에 미치는 영향을 해설하세요."
+        ),
     },
     "curious": {
         "jekyll_cat": "curious",
         "label": "흥미로운 발견",
-        "summary_label": "summary-box curious",
+        "lead_icon": "ti-bulb",
+        "audience": "과학적 발견·신기술·흥미로운 사실에 호기심을 느끼는 일반 독자",
+        "focus": (
+            "과학·우주·자연·역사·신기술 등 '읽는 재미'가 있는 이야기를 다룹니다. "
+            "호기심을 자극하는 도입과 배경지식을 곁들여 steps(소재별 카드)로 풀어 쓰세요. "
+            "stats/compare/checklist는 어울릴 때만 선택적으로 사용하세요."
+        ),
     },
 }
 
 
+# ─────────────────────────────────────────────────────────────
+#  프롬프트
+# ─────────────────────────────────────────────────────────────
 def _build_prompt(
     category: Category,
     items: list[RawItem],
     extra: dict | None = None,
 ) -> str:
-    """카테고리별 프롬프트 생성"""
     today = datetime.now().strftime("%Y년 %m월 %d일")
+    meta = CATEGORY_META[category]
 
     item_text = "\n\n".join(
         f"[{i+1}] 출처: {item.source}\n제목: {item.title}\nURL: {item.url}\n요약: {item.summary}"
@@ -56,204 +89,148 @@ def _build_prompt(
 
     base = textwrap.dedent(f"""
         오늘 날짜: {today}
-        카테고리: {CATEGORY_META[category]["label"]}
+        카테고리: {meta["label"]}
+        대상 독자: {meta["audience"]}
 
-        아래 수집된 데이터를 바탕으로 Jekyll 블로그 포스트를 작성해주세요.
+        아래 수집된 공공 발표 자료를 바탕으로, 카드뉴스형 정보 콘텐츠를 작성합니다.
+        {meta["focus"]}
 
         === 수집된 데이터 ===
         {item_text}
     """).strip()
 
-    if category == "domestic":
-        instruction = textwrap.dedent("""
-            === 작성 지침 ===
-            - 대상 독자: 오늘의 주요 이슈를 맥락까지 이해하고 싶은 일반 독자
-            - 목표: 단순 나열형 요약이 아니라, 흩어진 뉴스를 '주제'로 묶어 흐름과 맥락을 짚어주는 종합 분석 브리핑
-            - 문체: 신문 기사체. 평서형 종결어미('~다', '~했다', '~로 분석된다')를 사용하고, 객관적이고 중립적인 어조를 유지하세요. 구어체·말투는 절대 쓰지 마세요
-            - 첫 문단(summary-box 다음)은 오늘 국내 정세의 큰 그림을 짚는 리드로 시작하세요
-            - '## 한눈에 보기' 섹션을 만들어, 오늘의 핵심 이슈를 마크다운 표로 정리하세요 (이슈 / 핵심 내용 / 왜 중요한가)
-            - 수집된 뉴스를 개별 나열하지 말고 3~4개의 '주제'로 묶으세요. 각 주제마다 ## 소제목을 두고, 관련 뉴스들을 엮어 배경·쟁점·파급 효과를 분석하세요 (주제당 5문장 이상)
-            - 단순 사실 전달을 넘어 '이 사안이 독자에게 어떤 의미인지', '앞으로 무엇을 지켜봐야 하는지'를 제시하세요
-            - 정치적으로 민감한 사안은 특정 입장에 치우치지 말고 균형 있게 서술하세요
-            - 마지막 '## 오늘의 정리' 섹션에서 전체를 관통하는 흐름과 시사점을 정리하세요
-        """).strip()
+    rules = textwrap.dedent(r"""
+        === 작성 원칙 ===
+        ★ 문체(가장 중요) — 반드시 '존대말투'
+        - 본문의 모든 문장은 '~합니다 / ~입니다 / ~됩니다 / ~하세요' 같은 존댓말로 끝맺습니다.
+        - 평서형 기사체('~다/~했다')나 구어체('~해요/~거든요/~죠')는 쓰지 않습니다.
+        - 다만 title·summary·headline·callout 은 명사(체언)로 끝내거나 '~합니다'로 끝냅니다.
 
-    elif category == "world":
-        instruction = textwrap.dedent("""
-            === 작성 지침 ===
-            - 대상 독자: 해외 정세를 맥락과 함께 이해하고 싶은 한국 독자
-            - 목표: 단순 번역 요약이 아니라, 해외 뉴스를 '주제'로 묶고 한국 관점에서 의미를 해석하는 종합 분석 브리핑
-            - 문체: 신문 기사체. 평서형 종결어미('~다', '~라고 밝혔다', '~로 평가된다')를 사용하고, 객관적이고 중립적인 어조를 유지하세요. 구어체·말투는 절대 쓰지 마세요
-            - 영어 원문은 정확히 이해해 한국어로 재구성하세요. 문장을 그대로 직역하지 말고 핵심을 자신의 언어로 풀어 쓰세요. 오역에 주의하세요
-            - 첫 문단은 오늘 국제 정세의 큰 흐름을 짚는 리드로 시작하세요
-            - '## 한눈에 보기' 섹션에 오늘의 핵심 이슈를 마크다운 표로 정리하세요 (이슈 / 핵심 내용 / 한국·세계에 미치는 영향)
-            - 뉴스를 개별 나열하지 말고 3~4개 '주제'로 묶어 각각 ## 소제목으로 다루세요. 배경·맥락·국제적 함의를 분석하세요 (주제당 5문장 이상)
-            - 국내 독자가 생소할 인물·지명·기관·개념은 쉽게 부연하고, 가능하면 한국과의 연관성을 짚으세요
-            - 마지막 '## 오늘의 정리' 섹션에서 전체 흐름과 한국에 주는 시사점을 정리하세요
-        """).strip()
+        ★ 독창성·저작권
+        - 수집 원문의 문장·표현을 절대 그대로 베끼지 않습니다. 사실·수치만 취해 완전히 자신의 언어로 다시 씁니다.
+        - 개별 항목을 나열·복제하지 말고, 여러 정보를 엮어 '종합·해설'한 독창적 글로 재구성합니다.
+        - 맥락·배경지식·의미를 더해 원문에 없는 부가가치를 만듭니다.
 
-    elif category == "curious":
-        instruction = textwrap.dedent("""
-            === 작성 지침 ===
-            - 대상 독자: 신기하고 재미있는 이야기, 새로운 발견과 신기술에 흥미를 느끼는 일반 독자
-            - 주제: 과학적 발견, 우주, 자연, 역사 속 미스터리, 흥미로운 사실, 신기술 등 '읽는 재미'가 있는 이야기
-            - 문체: 신문 기사체(평서형 '~다' 종결)를 유지하되, 호기심을 자극하는 흥미로운 서술로 작성하세요. 구어체·말투는 쓰지 마세요
-            - 첫 문단은 독자의 호기심을 강하게 끄는 도입부로 시작하세요 (놀라운 사실, 의외의 발견 등)
-            - 수집된 소재 중 가장 흥미로운 4~6개를 선별하고, 각 소재마다 ## 소제목을 두세요
-            - 각 소재는 '무엇이 발견·발표됐는가' → '왜 놀랍거나 흥미로운가' → '배경 지식과 맥락' → '의미와 시사점' 순으로 충실히 풀어 쓰세요
-            - 독자가 몰랐을 배경지식이나 관련 사실을 곁들여 '아하' 하는 깨달음을 주세요
-            - 영어 원문 소재는 한국어로 정확하게 옮기되, 전문 용어는 쉽게 풀어 설명하세요
-            - 마지막에 이번 이야기들을 관통하는 흥미로운 통찰이나 여운을 남기는 문장으로 마무리하세요
-        """).strip()
+        ★ 정확성
+        - 한글과 영문(+숫자)만 사용합니다. 한자·일본어 가나는 절대 쓰지 않습니다.
+        - 수집 자료에 없는 수치를 지어내지 않습니다. 불확실하면 단정하지 않습니다.
+        - 정치적으로 민감한 사안은 한쪽에 치우치지 않고 균형 있게 서술합니다.
 
-    else:  # policy
-        instruction = textwrap.dedent("""
-            === 작성 지침 ===
-            - 대상 독자: 정책·지원금 정보를 찾는 20~35세 청년 및 일반 독자
-            - 목표: 독자가 '내가 받을 수 있는지, 어떻게 신청하는지'를 이 글 하나로 끝까지 해결할 수 있는 실전 가이드. 단순 보도가 아니라 실용 정보 콘텐츠로 작성
-            - 문체: 신문 기사체. 평서형 종결어미('~다', '~했다', '~로 나타났다')를 사용하고, 객관적이고 단정적인 어조를 유지하세요. "~해요", "~거든요" 같은 구어체·말투는 절대 쓰지 마세요
-            - 첫 문단은 핵심(누가·무엇을·얼마·언제까지)을 요약하는 리드로 시작하세요
-            - 가장 중요한 정책 1~2개를 선정해 깊이 있게 다루세요. 각 정책마다 ## 소제목을 두세요
-            - 다음을 빠짐없이 구체적 수치와 함께 담으세요: 도입 배경·목적, 지원 대상·자격 요건, 지원 금액·규모, 신청 기간·방법·필요 서류, 주의사항
-            - '## 지원 내용 한눈에 보기' 섹션에 마크다운 표로 핵심을 정리하세요 (구분 / 내용)
-            - '## 나도 받을 수 있을까' 섹션에 자격 요건을 체크리스트(글머리 기호)로 풀어, 독자가 해당 여부를 스스로 판단하게 하세요
-            - '## 신청 방법' 섹션에 단계별 절차를 순서대로 안내하세요
-            - 비슷한 다른 정책이 있으면 간단히 비교해 차이를 짚으세요
-        """).strip()
-
-    output_format = textwrap.dedent("""
-        === 출력 형식 ===
-        반드시 아래 JSON 형식으로만 응답하세요. JSON 외 다른 텍스트는 절대 포함하지 마세요.
-
+        === 출력 형식(JSON만, 그 외 텍스트 금지) ===
         {
-          "title": "포스트 제목 (40자 이내, 명사로 끝나는 신문 헤드라인 형식)",
-          "summary": "카드에 표시될 한 줄 요약 (80자 이내, 명사 또는 '~다'로 종결)",
-          "headline": "홈 대문 h1용 헤드라인 (45자 이내의 임팩트 있는 한 줄, 마침표 없이 명사형으로 끝냄, 여러 문장 금지)",
-          "callout": "강조할 핵심 정보 한 줄 (선택사항, 정책류에 유용)",
-          "callout_label": "callout 앞 라벨 (예: 신청 기간, 핵심)",
+          "title": "포스트 제목 (40자 이내, 명사 또는 '~합니다'로 끝맺음)",
+          "summary": "카드 한 줄 요약 (80자 이내)",
+          "headline": "홈 대문 헤드라인 (45자 이내, 마침표 없이 명사형, 한 문장)",
+          "callout": "강조할 핵심 한 줄 (선택)",
+          "callout_label": "callout 라벨 (예: 핵심, 신청 기간)",
           "tags": ["태그1", "태그2", "태그3"],
-          "content": "마크다운 본문 전체 (summary-box 포함)"
+          "lead": "핵심을 요약하는 1~2문장 (존댓말, 80~140자). 카드 상단 요약 배너에 들어갑니다.",
+          "stats": [
+            {"num": "19~34세", "label": "가입 연령"},
+            {"num": "최대 12%", "label": "정부 기여금"}
+          ],
+          "compare": {
+            "headers": ["구분", "일반형", "우대형"],
+            "rows": [["정부 기여금", "월 6%", "월 12%"], ["소득 요건", "6,000만 원 이하", "3,600만 원 이하"]]
+          },
+          "steps": [
+            {"title": "소제목", "body": "4~6문장의 충실한 설명 (존댓말). 배경·의미·영향을 풀어 씁니다."}
+          ],
+          "checklist": ["자격·확인 항목을 한 줄씩", "해당 여부를 스스로 판단하게"],
+          "timeline": [{"when": "2026년 6월", "what": "출시 및 신청 개시"}],
+          "faq": [{"q": "자주 묻는 질문", "a": "존댓말 답변 2~3문장"}],
+          "quote": "이 글의 핵심을 한 문장으로 압축한 인용구 (존댓말)",
+          "note": "독자가 꼭 확인해야 할 주의·안내 1~2문장 (존댓말)",
+          "source": {"name": "대한민국 정책브리핑(korea.kr)", "license": "공공누리 제1유형"}
         }
 
-        ★ 문장 종결 규칙 (가장 중요, 반드시 준수) ★
-        - 본문(content)의 모든 문장은 평서형 종결어미 '~다'/'~한다'/'~했다'/'~로 나타났다' 등으로 끝내세요
-        - title, summary, headline, callout 은 명사(체언)로 끝내거나 '~다'로 끝내세요. (예: "청년 월세 지원 확대" O, "월세를 지원해요" X)
-        - '~요', '~해요', '~네요', '~거든요', '~이에요', '~죠', '~세요' 같은 구어체 종결은 제목·요약·본문 어디에도 절대 쓰지 마세요
-        - 존댓말 권유체("~하세요", "~보세요")도 쓰지 마세요. 객관적 서술로만 작성하세요
-
-        ★ 독창성·재구성 원칙 (가장 중요 — 반드시 준수) ★
-        - 수집된 원문의 문장·표현을 그대로 베끼지 마세요. 핵심을 이해한 뒤 완전히 자신의 언어로 다시 쓰세요
-        - 개별 기사를 단순 나열·복제하지 말고, 여러 정보를 엮어 '종합·분석·정리'한 독창적인 글을 만드세요
-        - 원문에 없는 부가가치를 더하세요: 맥락 설명, 배경지식, 비교, 표/체크리스트로 정리, 독자에게 주는 의미
-        - 이 글은 '요약 모음'이 아니라 하나의 완결된 분석 콘텐츠여야 합니다
-
-        ★ 독자 몰입 규칙 (조회수·체류시간을 높이는 핵심) ★
-        - 단순 사실 요약에 그치지 말고, 독자가 끝까지 읽고 싶게 만드는 깊이 있는 글을 쓰세요
-        - 리드 문단은 호기심을 자극하는 강력한 도입부로 시작하세요 (놀라운 수치, 의외의 사실, 핵심 쟁점 등). 단, 과장이나 낚시성 표현은 금지
-        - 각 항목마다 '무슨 일인가' → '왜 그런가(배경·맥락)' → '그래서 무엇이 달라지나(의미·영향)' → '앞으로 어떻게 되나(전망)' 흐름으로 풍부하게 서술하세요
-        - 독자가 "몰랐던 사실"이나 "숨은 맥락", "관련 배경지식"을 곁들여 정보의 밀도를 높이세요
-        - 가능하면 구체적 수치, 사례, 비교, 인용 등 근거를 들어 설득력과 흥미를 동시에 확보하세요
-        - 딱딱한 나열 대신, 사안들을 연결해 하나의 이야기처럼 자연스럽게 이어 쓰세요 (단, 문체는 평서형 기사체 유지)
-        - 마지막 섹션에서는 전체를 관통하는 통찰이나 독자가 곱씹을 만한 시사점을 제시하세요
-
-        content 작성 규칙:
-        - 한글과 영문(+숫자)만 사용하세요. 한자(漢字)와 일본어 가나(カタカナ·ひらがな)는 절대 쓰지 마세요 (예: '詳細' → '상세', 'サイバー' → '사이버')
-        - 모든 줄은 들여쓰기 없이 행의 맨 앞에서 시작하세요. 공백으로 들여쓰지 마세요
-        - 첫 줄은 반드시 <div class="summary-box [CATEGORY_CLASS]">핵심을 요약하는 1~2문장</div> 형태의 한 줄짜리 요약 박스로 작성하세요. 본문 전체를 이 박스 안에 넣지 마세요
-        - [CATEGORY_CLASS] 자리에는 domestic / world / policy / curious 중 하나를 넣으세요
-        - summary-box 다음부터는 반드시 마크다운 ## 소제목으로 섹션을 나누세요. <h2>·<p> 같은 HTML 태그를 쓰지 말고 순수 마크다운으로 작성하세요
-        - 각 ## 섹션 본문은 최소 4~6문장 이상으로 충실히 작성하세요. 한두 문장으로 끝내지 마세요
-        - 본문 길이: 1800~2800자 (한국어 기준). 정보성 글이므로 풍부하게 채우되, 의미 없는 반복이나 군더더기는 피하세요
-        - 최소 4개 이상의 ## 소제목 섹션으로 구성하세요
-        - 마크다운 표, 굵은 글씨, blockquote, 글머리 기호(목록)를 적극 활용해 정보를 구조적으로 정리하세요
-        - URL 링크는 포함하지 마세요 (보안 이슈)
+        === 각 필드 작성 가이드 ===
+        - lead: 필수. 글 전체의 핵심을 한눈에 전달합니다.
+        - stats: 2~4개. 가장 중요한 수치/키워드를 짧게(num) + 라벨(label)로. 수치가 마땅치 않으면 빈 배열 [].
+        - compare: 유형·구분 비교가 자연스러울 때만. 없으면 생략하거나 null. headers 첫 칸은 '구분'.
+        - steps: 필수, 3~5개. 이 글의 본문에 해당합니다. 각 body는 최소 4문장 이상으로 충실히, 존댓말로.
+        - checklist: 신청 자격·확인 항목 등 행동 유도가 필요할 때만. 없으면 [] 또는 생략.
+        - timeline: 일정·절차가 있을 때만(when=시점, what=내용). 없으면 [] 또는 생략.
+        - faq: 독자가 궁금해할 질문 2~4개(q=질문, a=존댓말 답변). 없으면 [] 또는 생략.
+        - quote: 글의 핵심을 압축한 한 문장. 없으면 생략 가능.
+        - note: 변경 가능성·공식 확인처 안내 등. 없으면 생략 가능.
+        - source: 수집 데이터의 대표 출처 기관명을 name 에 적습니다. license 는 공공자료면 "공공누리 제1유형".
+        - URL은 어떤 필드에도 넣지 않습니다(보안). 출처 링크는 시스템이 별도로 부착합니다.
+        - 모든 값에서 한자·일본어 가나 금지.
     """).strip()
 
-    return f"{base}\n\n{instruction}\n\n{output_format}"
+    return f"{base}\n\n{rules}"
 
 
+# ─────────────────────────────────────────────────────────────
+#  정리 유틸
+# ─────────────────────────────────────────────────────────────
 def _escape_control_chars(raw: str) -> str:
-    """JSON 문자열 값 내부의 이스케이프되지 않은 제어문자를 이스케이프 처리.
-
-    LLM이 content 등의 값 안에 실제 줄바꿈/탭을 그대로 넣으면 json.loads가
-    'Invalid control character' 에러를 내므로, 따옴표 안쪽에 있을 때만 변환한다.
-    """
-    out = []
-    in_string = False
-    escaped = False
+    """JSON 문자열 값 내부의 이스케이프되지 않은 제어문자를 이스케이프."""
+    out, in_string, escaped = [], False, False
     for ch in raw:
         if escaped:
-            out.append(ch)
-            escaped = False
-            continue
+            out.append(ch); escaped = False; continue
         if ch == "\\":
-            out.append(ch)
-            escaped = True
-            continue
+            out.append(ch); escaped = True; continue
         if ch == '"':
-            in_string = not in_string
-            out.append(ch)
-            continue
-        if in_string:
-            if ch == "\n":
-                out.append("\\n")
-            elif ch == "\r":
-                out.append("\\r")
-            elif ch == "\t":
-                out.append("\\t")
-            else:
-                out.append(ch)
+            in_string = not in_string; out.append(ch); continue
+        if in_string and ch == "\n":
+            out.append("\\n")
+        elif in_string and ch == "\r":
+            out.append("\\r")
+        elif in_string and ch == "\t":
+            out.append("\\t")
         else:
             out.append(ch)
     return "".join(out)
 
 
-# 한국어 텍스트에 끼어드는 외국 문자 제거용.
-# CJK 한자(통합 + 확장 A), 일본어 히라가나/가타카나(음장기호 ー 포함).
-# 가타카나 가운뎃점 U+30FB는 한국어 가운뎃점과 혼동되므로 범위에서 제외한다.
-_FOREIGN_RE = re.compile(
-    r"[㐀-䶿一-鿿぀-ゟ゠-ヺー-ヿ]"
-)
+# 카테고리별 공식 포털 링크(고정값 — LLM이 생성한 URL은 사용하지 않음, 보안)
+OFFICIAL_LINKS = {
+    "policy": [
+        ("정부24 — 정책·민원 통합 포털", "https://www.gov.kr"),
+        ("대한민국 정책브리핑 — 정책 원문", "https://www.korea.kr"),
+    ],
+    "youth": [
+        ("온통청년 — 청년정책 통합 플랫폼", "https://www.youthcenter.go.kr"),
+        ("복지로 — 복지 자격 모의계산", "https://www.bokjiro.go.kr"),
+        ("정부24 — 정책·민원 통합 포털", "https://www.gov.kr"),
+    ],
+    "data": [
+        ("국가통계포털 KOSIS — 통계 원자료", "https://kosis.kr"),
+        ("e-나라지표 — 국가 주요 지표", "https://www.index.go.kr"),
+    ],
+}
+
+
+# CJK 한자 + 일본어 가나(가타카나 가운뎃점 U+30FB 제외)
+_FOREIGN_RE = re.compile(r"[㐀-䶿一-鿿぀-ゟ゠-ヺー-ヿ]")
 
 
 def _strip_foreign(text: str) -> str:
-    """한국어 문맥에 무작위로 끼어드는 한자·일본어 가나를 제거한다.
-
-    예) '詳細' → '', 'サイバー攻撃' → ''. 영문/숫자/한글은 보존한다.
-    제거 후 생기는 이중 공백은 한 칸으로 정리한다.
-    """
-    cleaned = _FOREIGN_RE.sub("", text)
+    cleaned = _FOREIGN_RE.sub("", str(text))
     cleaned = re.sub(r"[ \t]{2,}", " ", cleaned)
     return cleaned.strip()
 
 
-def _clean_content(content: str) -> str:
-    """LLM이 생성한 마크다운 본문 정리.
-
-    - 각 줄의 선행 공백을 제거한다. 모델이 본문 전체를 들여쓰면 kramdown이
-      4칸 이상 들여쓰기를 코드 블록으로 오인해 div/제목이 깨지기 때문이다.
-    - 한자·일본어 가나를 제거한다.
-    """
-    lines = [line.lstrip() for line in content.splitlines()]
-    cleaned = "\n".join(lines).strip()
-    cleaned = _FOREIGN_RE.sub("", cleaned)
-    return cleaned
+def _esc(text: str) -> str:
+    """HTML 본문 삽입용 이스케이프 + 외국문자 제거."""
+    return html.escape(_strip_foreign(text), quote=False)
 
 
+# ─────────────────────────────────────────────────────────────
+#  Groq 호출
+# ─────────────────────────────────────────────────────────────
 def generate(
     category: Category,
     items: list[RawItem],
     client: Groq,
     extra: dict | None = None,
 ) -> dict:
-    """Groq API 호출 → 포스트 데이터 반환"""
-    import json
-
     prompt = _build_prompt(category, items, extra)
     log.info("Groq API 호출: %s (%d건)", category, len(items))
 
-    # 기본 모델로 호출하되, 일일 토큰 한도(429) 도달 시 별도 한도를 가진
-    # 경량 모델로 폴백해 포스트 생성을 보장한다.
     primary_model = "llama-3.3-70b-versatile"
     fallback_model = "llama-3.1-8b-instant"
 
@@ -269,29 +246,22 @@ def generate(
         response = _call(primary_model)
     except Exception as e:
         if "rate_limit" in str(e) or "429" in str(e):
-            log.warning("%s 한도 초과 → 폴백 모델(%s)로 재시도", primary_model, fallback_model)
+            log.warning("%s 한도 초과 → 폴백 모델(%s)", primary_model, fallback_model)
             response = _call(fallback_model)
         else:
             raise
 
     raw = response.choices[0].message.content.strip()
-
-    # JSON 펜스 제거
     raw = re.sub(r"^```json\s*", "", raw)
     raw = re.sub(r"\s*```$", "", raw)
 
     try:
         data = json.loads(raw)
     except json.JSONDecodeError:
-        # 문자열 값 안에 이스케이프되지 않은 제어문자(줄바꿈 등)가 섞인 경우 보정
         data = json.loads(_escape_control_chars(raw))
 
-    # content 후처리: 줄별 들여쓰기 제거(kramdown 코드블록 오인 방지) + 외국 문자 제거
-    if data.get("content"):
-        data["content"] = _clean_content(data["content"])
-
-    # 나머지 텍스트 필드 외국 문자(한자·일본어 가나) 제거
-    for key in ("title", "summary", "headline", "callout", "callout_label"):
+    # 텍스트 필드 외국문자 제거
+    for key in ("title", "summary", "headline", "callout", "callout_label", "lead", "note"):
         if data.get(key):
             data[key] = _strip_foreign(str(data[key]))
     if isinstance(data.get("tags"), list):
@@ -301,12 +271,158 @@ def generate(
     return data
 
 
-def _yaml_safe(text: str) -> str:
-    """큰따옴표로 감싸는 YAML 스칼라용으로 안전하게 정리.
+# ─────────────────────────────────────────────────────────────
+#  HTML 컴포넌트 렌더링 (결정론적)
+# ─────────────────────────────────────────────────────────────
+def _render_components(data: dict, category: Category, source_url: str = "") -> str:
+    meta = CATEGORY_META[category]
+    cat = meta["jekyll_cat"]
+    parts: list[str] = [f'<div class="cn" data-cat="{cat}">', ""]
 
-    줄바꿈을 공백으로 바꾸고 내부 큰따옴표를 작은따옴표로 치환해
-    front matter 파싱이 깨지지 않게 한다.
-    """
+    # 1) lead
+    lead = data.get("lead") or data.get("summary") or ""
+    if lead:
+        parts += [
+            f'<div class="cn cn-lead" data-cat="{cat}">',
+            f'  <span class="cn-lead-icon"><i class="ti {meta["lead_icon"]}"></i></span>',
+            f'  <p>{_esc(lead)}</p>',
+            "</div>",
+            "",
+        ]
+
+    # 2) stats
+    stats = [s for s in (data.get("stats") or []) if s.get("num")]
+    if stats:
+        parts.append(f'<div class="cn cn-stats" data-cat="{cat}">')
+        for s in stats[:4]:
+            parts.append(
+                '  <div class="cn-stat">'
+                f'<span class="cn-stat-num">{_esc(s.get("num",""))}</span>'
+                f'<span class="cn-stat-label">{_esc(s.get("label",""))}</span></div>'
+            )
+        parts += ["</div>", ""]
+
+    # 3) compare 표
+    cmp = data.get("compare")
+    if cmp and cmp.get("headers") and cmp.get("rows"):
+        parts += [f'<h2 class="cn-h">한눈에 보기</h2>', f'<div class="cn cn-table" data-cat="{cat}">', "<table>"]
+        heads = "".join(f"<th>{_esc(h)}</th>" for h in cmp["headers"])
+        parts += ["  <thead>", f"    <tr>{heads}</tr>", "  </thead>", "  <tbody>"]
+        for row in cmp["rows"]:
+            if not row:
+                continue
+            cells = f"<th>{_esc(str(row[0]))}</th>" + "".join(
+                f"<td>{_esc(str(c))}</td>" for c in row[1:]
+            )
+            parts.append(f"    <tr>{cells}</tr>")
+        parts += ["  </tbody>", "</table>", "</div>", ""]
+
+    # 4) steps (본문)
+    steps = [s for s in (data.get("steps") or []) if s.get("body")]
+    if steps:
+        parts.append(f'<h2 class="cn-h">핵심 정리</h2>')
+        parts.append(f'<div class="cn cn-steps" data-cat="{cat}">')
+        for n, s in enumerate(steps, 1):
+            parts += [
+                '  <div class="cn-step">',
+                f'    <span class="cn-step-no">{n}</span>',
+                '    <div class="cn-step-body">',
+                f'      <h4>{_esc(s.get("title",""))}</h4>',
+                f'      <p>{_esc(s.get("body",""))}</p>',
+                "    </div>",
+                "  </div>",
+            ]
+        parts += ["</div>", ""]
+
+    # 5) checklist
+    checklist = [c for c in (data.get("checklist") or []) if str(c).strip()]
+    if checklist:
+        parts.append(f'<h2 class="cn-h">확인 체크리스트</h2>')
+        parts.append(f'<ul class="cn cn-check" data-cat="{cat}">')
+        for c in checklist:
+            parts.append(f"  <li>{_esc(str(c))}</li>")
+        parts += ["</ul>", ""]
+
+    # 5-b) timeline
+    timeline = [t for t in (data.get("timeline") or []) if t.get("what")]
+    if timeline:
+        parts.append('<h2 class="cn-h">일정·절차</h2>')
+        parts.append(f'<ul class="cn cn-timeline" data-cat="{cat}">')
+        for t in timeline:
+            parts.append(
+                f'  <li><span class="cn-tl-when">{_esc(t.get("when",""))}</span>'
+                f'<span class="cn-tl-what">{_esc(t.get("what",""))}</span></li>'
+            )
+        parts += ["</ul>", ""]
+
+    # 5-c) FAQ
+    faq = [f for f in (data.get("faq") or []) if f.get("q") and f.get("a")]
+    if faq:
+        parts.append('<h2 class="cn-h">자주 묻는 질문</h2>')
+        parts.append(f'<div class="cn cn-faq" data-cat="{cat}">')
+        for f in faq:
+            parts += [
+                "  <details>",
+                f'    <summary>{_esc(f.get("q",""))}</summary>',
+                f'    <div class="cn-faq-body">{_esc(f.get("a",""))}</div>',
+                "  </details>",
+            ]
+        parts += ["</div>", ""]
+
+    # 5-d) quote
+    quote = data.get("quote")
+    if quote:
+        parts += [
+            f'<div class="cn cn-quote" data-cat="{cat}">',
+            f"  {_esc(quote)}",
+            "</div>",
+            "",
+        ]
+
+    # 6) note
+    note = data.get("note")
+    if note:
+        parts += [
+            f'<div class="cn cn-note" data-cat="{cat}">',
+            '  <i class="ti ti-alert-triangle"></i>',
+            f'  <p>{_esc(note)}</p>',
+            "</div>",
+            "",
+        ]
+
+    # 6-b) 공식 포털 링크 (카테고리별 고정값)
+    links = OFFICIAL_LINKS.get(cat, [])
+    if links:
+        parts.append('<h2 class="cn-h">함께 보면 좋은 곳</h2>')
+        parts.append(f'<div class="cn cn-links" data-cat="{cat}">')
+        for label, url in links:
+            parts.append(
+                f'  <a href="{html.escape(url, quote=True)}" target="_blank" rel="noopener">'
+                f'<i class="ti ti-external-link"></i> {_esc(label)}'
+                f' <span class="cn-link-ext">↗</span></a>'
+            )
+        parts += ["</div>", ""]
+
+    # 7) source (공공누리 출처표시)
+    src = data.get("source") or {}
+    src_name = _esc(src.get("name", "공공 발표 자료"))
+    src_license = _esc(src.get("license", "공공누리 제1유형"))
+    if source_url:
+        name_html = f'<a href="{html.escape(source_url, quote=True)}" target="_blank" rel="noopener">{src_name}</a>'
+    else:
+        name_html = src_name
+    parts += [
+        f'<div class="cn cn-source" data-cat="{cat}">',
+        '  <span class="cn-source-tag">출처표시</span>',
+        f'  <p>{name_html} · {src_license}. 위 내용은 공공 발표 자료의 사실·수치를 토대로 본 사이트가 직접 재구성·해설한 것입니다.</p>',
+        "</div>",
+        "",
+        "</div>",
+    ]
+    return "\n".join(parts)
+
+
+def _yaml_safe(text: str) -> str:
     return " ".join(str(text).split()).replace('"', "'")
 
 
@@ -314,13 +430,13 @@ def to_jekyll_markdown(
     data: dict,
     category: Category,
     post_date: datetime,
+    source_url: str = "",
 ) -> str:
-    """생성된 데이터를 Jekyll front matter + 마크다운으로 변환"""
     meta = CATEGORY_META[category]
     date_str = post_date.strftime("%Y-%m-%d %H:%M:%S +0900")
     tags_yaml = "\n".join(f"  - {_yaml_safe(t)}" for t in data.get("tags", []))
 
-    front_matter_parts = [
+    fm = [
         "---",
         "layout: post",
         f'title: "{_yaml_safe(data["title"])}"',
@@ -329,36 +445,23 @@ def to_jekyll_markdown(
         f"tags:\n{tags_yaml}",
         f'summary: "{_yaml_safe(data.get("summary", ""))}"',
     ]
-
     if data.get("callout"):
-        front_matter_parts.append(f'callout: "{_yaml_safe(data["callout"])}"')
-        front_matter_parts.append(
-            f'callout_label: "{_yaml_safe(data.get("callout_label", "핵심"))}"'
-        )
-
+        fm.append(f'callout: "{_yaml_safe(data["callout"])}"')
+        fm.append(f'callout_label: "{_yaml_safe(data.get("callout_label", "핵심"))}"')
     if data.get("headline"):
-        front_matter_parts.append(f'headline: "{_yaml_safe(data["headline"])}"')
+        fm.append(f'headline: "{_yaml_safe(data["headline"])}"')
+    src = data.get("source") or {}
+    if src.get("name"):
+        fm.append(f'source: "{_yaml_safe(src["name"])}"')
+    if source_url:
+        fm.append(f'source_url: "{_yaml_safe(source_url)}"')
+    fm.append("---")
 
-    front_matter_parts.append("---")
-    front_matter = "\n".join(front_matter_parts)
-
-    return f"{front_matter}\n\n{data['content']}\n"
+    body = _render_components(data, category, source_url)
+    return f"{chr(10).join(fm)}\n\n{body}\n"
 
 
 def make_filename(category: Category, post_date: datetime, title: str) -> str:
-    """Jekyll 파일명 생성"""
     date_prefix = post_date.strftime("%Y-%m-%d")
-
-    slug_map = {
-        "domestic": "domestic",
-        "world":    "world",
-        "policy":   "policy",
-        "curious":  "curious",
-    }
-    slug = slug_map[category]
-
-    # 제목에서 영문/숫자 추출해서 슬러그에 추가
-    title_slug = re.sub(r"[^a-zA-Z0-9가-힣\s]", "", title)
-    title_slug = re.sub(r"\s+", "-", title_slug.strip())[:30]
-
+    slug = CATEGORY_META[category]["jekyll_cat"]
     return f"{date_prefix}-{slug}.md"
