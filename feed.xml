@@ -1,13 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml" /><link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html" hreflang="ko" /><updated>2026-06-05T01:20:33+09:00</updated><id>https://adk24211.github.io/walapp/feed.xml</id><title type="html">Walapp</title><subtitle>국내 정책·청년 정책·생활 통계부터 흥미로운 발견까지, 공공·1차 자료를 토대로 매일 아침 핵심만 쉽게 정리해 전하는 브리핑입니다.</subtitle><author><name>Walapp</name></author><entry><title type="html">과학적 발견</title><link href="https://adk24211.github.io/walapp/curious/2026/06/05/curious/" rel="alternate" type="text/html" title="과학적 발견" /><published>2026-06-05T07:03:00+09:00</published><updated>2026-06-05T07:03:00+09:00</updated><id>https://adk24211.github.io/walapp/curious/2026/06/05/curious</id><content type="html" xml:base="https://adk24211.github.io/walapp/curious/2026/06/05/curious/"><![CDATA[<div class="cn" data-cat="curious">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml" /><link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html" hreflang="ko" /><updated>2026-06-05T01:29:54+09:00</updated><id>https://adk24211.github.io/walapp/feed.xml</id><title type="html">Walapp</title><subtitle>국내 정책·청년 정책·생활 통계부터 흥미로운 발견까지, 공공·1차 자료를 토대로 매일 아침 핵심만 쉽게 정리해 전하는 브리핑입니다.</subtitle><author><name>Walapp</name></author><entry><title type="html">과학의 발견 - 건강한 생활을 위한 3가지 팁</title><link href="https://adk24211.github.io/walapp/curious/2026/06/05/curious/" rel="alternate" type="text/html" title="과학의 발견 - 건강한 생활을 위한 3가지 팁" /><published>2026-06-05T07:03:00+09:00</published><updated>2026-06-05T07:03:00+09:00</updated><id>https://adk24211.github.io/walapp/curious/2026/06/05/curious</id><content type="html" xml:base="https://adk24211.github.io/walapp/curious/2026/06/05/curious/"><![CDATA[<div class="cn" data-cat="curious">
 
 <div class="cn cn-lead" data-cat="curious">
   <span class="cn-lead-icon"><i class="ti ti-bulb"></i></span>
-  <p>최근 연구에 따르면, 신체 건강과 수명에 대한 흥미로운 발견이 이루어졌습니다. 손의과 수명 간의 상관관계, 금연이 치매 위험을 낮추는 효과, 새로운 생물학적 시계가 수명을 예측하는 데 도움이 되는 등 다양한 연구 결과가 있습니다.</p>
+  <p>건강한 생활을 위한 팁을 소개합니다. 과학적으로 증명된 팁을 소개합니다.</p>
 </div>
 
 <div class="cn cn-stats" data-cat="curious">
-  <div class="cn-stat"><span class="cn-stat-num">16%</span><span class="cn-stat-label">금연이 치매 위험을 낮추는 효과</span></div>
-  <div class="cn-stat"><span class="cn-stat-num">45세</span><span class="cn-stat-label">대장암 검진 권장 연령</span></div>
+  <div class="cn-stat"><span class="cn-stat-num">16%</span><span class="cn-stat-label">치매 위험 감소율</span></div>
+  <div class="cn-stat"><span class="cn-stat-num">50세</span><span class="cn-stat-label">평균 수명</span></div>
+</div>
+
+<h2 class="cn-h">한눈에 보기</h2>
+<div class="cn cn-table" data-cat="curious">
+<table>
+  <thead>
+    <tr><th>구분</th><th>일반형</th><th>우대형</th></tr>
+  </thead>
+  <tbody>
+    <tr><th>치매 위험</th><td>16%</td><td>10%</td></tr>
+    <tr><th>수명</th><td>50세</td><td>60세</td></tr>
+  </tbody>
+</table>
 </div>
 
 <h2 class="cn-h">핵심 정리</h2>
@@ -15,57 +28,61 @@
   <div class="cn-step">
     <span class="cn-step-no">1</span>
     <div class="cn-step-body">
-      <h4>손의과 수명</h4>
-      <p>최근 연구에 따르면, 손의은 신체 건강과 수명 간의 상관관계가 있습니다. 손의력이 강할수록 신체 건강이 좋으며, 수명도 길어집니다. 이는 손의력이 신체의 전반적인 건강 상태를 반영하기 때문입니다. 그러나 손의력이 수명을 결정하는 것은 아닙니다. 손의력은 신체의 건강 상태를 나타내는 하나의 지표일 뿐입니다.</p>
+      <h4>1. 근력 강화</h4>
+      <p>근력 강화는 치매 위험을 감소시킬 수 있습니다. 연구에 따르면, 근력 강화는 치매 위험을 16% 감소시킬 수 있습니다. 근력 강화를 위해 매일 10분간 손가락을 움직이세요.</p>
     </div>
   </div>
   <div class="cn-step">
     <span class="cn-step-no">2</span>
     <div class="cn-step-body">
-      <h4>금연이 치매 위험을 낮추는 효과</h4>
-      <p>금연은 치매 위험을 낮추는 효과가 있습니다. 최근 연구에 따르면, 금연하면 치매 위험이 16% 낮아집니다. 그러나 금연 후 체중 증가를 방지하는 것이 중요합니다. 체중 증가를 방지하면 금연의 효과를 최대화할 수 있습니다. 금연은 신체 건강을 개선하는 데 도움이 되며, 치매 위험을 낮추는 효과도 있습니다.</p>
+      <h4>2. 흡연 중단</h4>
+      <p>흡연 중단은 치매 위험을 감소시킬 수 있습니다. 연구에 따르면, 흡연 중단은 치매 위험을 16% 감소시킬 수 있습니다. 흡연 중단을 위해 전문가와 상담하세요.</p>
     </div>
   </div>
   <div class="cn-step">
     <span class="cn-step-no">3</span>
     <div class="cn-step-body">
-      <h4>생물학적 시계</h4>
-      <p>생물학적 시계가 개발되었습니다. 이 시계는 수명을 예측하는 데 도움이 됩니다. 이 시계는 유전자 활동을 분석하여 수명을 예측합니다. 이는 생물학적 시계가 수명을 예측하는 데 도움이 되는 새로운 방법입니다. 그러나 이 시계는 수명을 정확하게 예측하는 것은 아닙니다. 수명을 예측하는 데 도움이 되는 하나의 지표일 뿐입니다.</p>
+      <h4>3. 신체 활동</h4>
+      <p>신체 활동은 수명을 연장시킬 수 있습니다. 연구에 따르면, 신체 활동은 수명을 10년 연장시킬 수 있습니다. 매일 30분간 신체 활동을 하세요.</p>
     </div>
   </div>
 </div>
 
 <h2 class="cn-h">확인 체크리스트</h2>
 <ul class="cn cn-check" data-cat="curious">
-  <li>손의 측정하여 신체 건강을 평가합니다</li>
-  <li>금연을 통해 치매 위험을 낮춥니다</li>
-  <li>생물학적 시계를 사용하여 수명을 예측합니다</li>
+  <li>흡연 중단</li>
+  <li>근력 강화</li>
+  <li>신체 활동</li>
 </ul>
 
 <h2 class="cn-h">일정·절차</h2>
 <ul class="cn cn-timeline" data-cat="curious">
-  <li><span class="cn-tl-when">2026년 6월</span><span class="cn-tl-what">생물학적 시계 개발</span></li>
+  <li><span class="cn-tl-when">2026년 6월</span><span class="cn-tl-what">출시 및 신청 개시</span></li>
 </ul>
 
 <h2 class="cn-h">자주 묻는 질문</h2>
 <div class="cn cn-faq" data-cat="curious">
   <details>
-    <summary>손의력이 수명을 결정하는가?</summary>
-    <div class="cn-faq-body">손의력은 신체 건강과 수명 간의 상관관계가 있지만, 수명을 결정하는 것은 아닙니다. 손의력은 신체의 건강 상태를 나타내는 하나의 지표일 뿐입니다.</div>
+    <summary>근력 강화는 어떻게 하나요?</summary>
+    <div class="cn-faq-body">매일 10분간 손가락을 움직이세요.</div>
   </details>
   <details>
-    <summary>금연이 치매 위험을 낮추는 효과가 있나?</summary>
-    <div class="cn-faq-body">금연은 치매 위험을 낮추는 효과가 있습니다. 최근 연구에 따르면, 금연하면 치매 위험이 16% 낮아집니다.</div>
+    <summary>흡연 중단은 어떻게 하나요?</summary>
+    <div class="cn-faq-body">전문가와 상담하세요.</div>
+  </details>
+  <details>
+    <summary>신체 활동은 어떻게 하나요?</summary>
+    <div class="cn-faq-body">매일 30분간 신체 활동을 하세요.</div>
   </details>
 </div>
 
 <div class="cn cn-quote" data-cat="curious">
-  신체 건강과 수명에 대한 새로운 연구 결과는 우리에게 건강한 삶을 살기 위한 새로운 방법을 제공합니다.
+  건강한 생활을 위한 팁을 소개합니다.
 </div>
 
 <div class="cn cn-note" data-cat="curious">
   <i class="ti ti-alert-triangle"></i>
-  <p>신체 건강과 수명에 대한 새로운 연구 결과는 우리에게 건강한 삶을 살기 위한 새로운 방법을 제공합니다. 그러나 이 연구 결과는 개인의 건강 상태와 수명에 대한 정확한 예측을 제공하는 것은 아닙니다.</p>
+  <p>건강한 생활을 위한 팁을 참고하세요.</p>
 </div>
 
 <div class="cn cn-source" data-cat="curious">
@@ -73,15 +90,104 @@
   <p><a href="https://www.sciencealert.com/your-grip-strength-says-a-lot-about-how-long-you-might-live" target="_blank" rel="noopener">ScienceAlert</a>. 위 내용은 해당 자료를 참고하여 본 사이트가 직접 재구성·해설한 것입니다.</p>
 </div>
 
-</div>]]></content><author><name>Walapp</name></author><category term="curious" /><category term="과학적 발견" /><category term="신체 건강" /><category term="수명" /><summary type="html"><![CDATA[]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" /><media:content medium="image" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">청년을 위한 지원금 및 정책</title><link href="https://adk24211.github.io/walapp/youth/2026/06/05/youth/" rel="alternate" type="text/html" title="청년을 위한 지원금 및 정책" /><published>2026-06-05T07:01:00+09:00</published><updated>2026-06-05T07:01:00+09:00</updated><id>https://adk24211.github.io/walapp/youth/2026/06/05/youth</id><content type="html" xml:base="https://adk24211.github.io/walapp/youth/2026/06/05/youth/"><![CDATA[<div class="cn" data-cat="youth">
+</div>]]></content><author><name>Walapp</name></author><category term="curious" /><category term="건강" /><category term="과학" /><category term="생활" /><summary type="html"><![CDATA[]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" /><media:content medium="image" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">5월 농축산물 소비자물가 1.8% 상승, 수급 안정에 전력</title><link href="https://adk24211.github.io/walapp/data/2026/06/05/data/" rel="alternate" type="text/html" title="5월 농축산물 소비자물가 1.8% 상승, 수급 안정에 전력" /><published>2026-06-05T07:02:00+09:00</published><updated>2026-06-05T07:02:00+09:00</updated><id>https://adk24211.github.io/walapp/data/2026/06/05/data</id><content type="html" xml:base="https://adk24211.github.io/walapp/data/2026/06/05/data/"><![CDATA[<div class="cn" data-cat="data">
+
+<div class="cn cn-lead" data-cat="data">
+  <span class="cn-lead-icon"><i class="ti ti-chart-bar"></i></span>
+  <p>5월 농축산물 소비자물가가 전년 대비 1.8% 상승했다. 공급 확대와 할인 지원 등 수급 안정에 전력을 기울이고 있습니다.</p>
+</div>
+
+<div class="cn cn-stats" data-cat="data">
+  <div class="cn-stat"><span class="cn-stat-num">1.8%</span><span class="cn-stat-label">농축산물 소비자물가 상승률</span></div>
+  <div class="cn-stat"><span class="cn-stat-num">5월</span><span class="cn-stat-label">물가 상승 월</span></div>
+</div>
+
+<h2 class="cn-h">한눈에 보기</h2>
+<div class="cn cn-table" data-cat="data">
+<table>
+  <thead>
+    <tr><th>구분</th><th>일반형</th><th>우대형</th></tr>
+  </thead>
+  <tbody>
+    <tr><th>소비자물가</th><td>전년 대비 1.8% 상승</td><td>전년 대비 2.5% 상승</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 class="cn-h">핵심 정리</h2>
+<div class="cn cn-steps" data-cat="data">
+  <div class="cn-step">
+    <span class="cn-step-no">1</span>
+    <div class="cn-step-body">
+      <h4>공급 확대와 할인 지원</h4>
+      <p>정부는 농축산물 공급 확대와 할인 지원을 통해 수급 안정을 유지하고 있습니다. 농축산물 생산을 증진하고, 소비자에게 저렴한 가격으로 농축산물을 제공하기 위해 노력하고 있습니다.</p>
+    </div>
+  </div>
+  <div class="cn-step">
+    <span class="cn-step-no">2</span>
+    <div class="cn-step-body">
+      <h4>소비자물가 관리</h4>
+      <p>정부는 소비자물가 관리를 통해 농축산물 소비자물가 상승을 예방하고 있습니다. 소비자물가 관리를 통해 농축산물 가격을 안정시키고, 소비자에게 저렴한 가격으로 농축산물을 제공하기 위해 노력하고 있습니다.</p>
+    </div>
+  </div>
+  <div class="cn-step">
+    <span class="cn-step-no">3</span>
+    <div class="cn-step-body">
+      <h4>수급 안정</h4>
+      <p>정부는 수급 안정을 유지하기 위해 노력하고 있습니다. 농축산물 수급 안정에 전력을 기울이고, 농축산물 가격을 안정시키기 위해 노력하고 있습니다.</p>
+    </div>
+  </div>
+</div>
+
+<h2 class="cn-h">확인 체크리스트</h2>
+<ul class="cn cn-check" data-cat="data">
+  <li>소비자물가 관리</li>
+  <li>공급 확대와 할인 지원</li>
+  <li>수급 안정</li>
+</ul>
+
+<h2 class="cn-h">일정·절차</h2>
+<ul class="cn cn-timeline" data-cat="data">
+  <li><span class="cn-tl-when">2026년 5월</span><span class="cn-tl-what">농축산물 소비자물가 상승</span></li>
+</ul>
+
+<h2 class="cn-h">자주 묻는 질문</h2>
+<div class="cn cn-faq" data-cat="data">
+  <details>
+    <summary>농축산물 소비자물가 상승은 어떻게 관리할 것인가?</summary>
+    <div class="cn-faq-body">정부는 소비자물가 관리를 통해 농축산물 소비자물가 상승을 예방하고 있습니다.</div>
+  </details>
+</div>
+
+<div class="cn cn-quote" data-cat="data">
+  농축산물 소비자물가 상승을 예방하기 위해 노력하고 있습니다.
+</div>
+
+<div class="cn cn-note" data-cat="data">
+  <i class="ti ti-alert-triangle"></i>
+  <p>정부는 농축산물 소비자물가 상승을 예방하기 위해 노력하고 있습니다.</p>
+</div>
+
+<h2 class="cn-h">함께 보면 좋은 곳</h2>
+<div class="cn cn-links" data-cat="data">
+  <a href="https://kosis.kr" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> 국가통계포털 KOSIS — 통계 원자료 <span class="cn-link-ext">↗</span></a>
+  <a href="https://www.index.go.kr" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> e-나라지표 — 국가 주요 지표 <span class="cn-link-ext">↗</span></a>
+</div>
+
+<div class="cn cn-source" data-cat="data">
+  <span class="cn-source-tag">출처표시</span>
+  <p><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTFB5dV9ZVzJ1VUNROFZOeGhIWG9NNWlUVnRQbVVCbVQ4dm5teFZxVjFzM1NrcXVUSTNxb3ZxcU15Z3RDaHFicmNjdTRjOUJvZ05KbHktenZWWlZzSFBTc3A0Vm9UNjBnd1F2ang5dGl0NGtLSkd4dWc?oc=5" target="_blank" rel="noopener">대한민국 정책브리핑</a> · 공공누리 제1유형. 위 내용은 공공 발표 자료의 사실·수치를 토대로 본 사이트가 직접 재구성·해설한 것입니다.</p>
+</div>
+
+</div>]]></content><author><name>Walapp</name></author><category term="data" /><category term="통계" /><category term="물가" /><category term="농축산물" /><summary type="html"><![CDATA[]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" /><media:content medium="image" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">청년 지원금·일자리·주거·자산형성 정책 - 내가 받을 수 있는지, 얼마를, 어떻게 신청하는지</title><link href="https://adk24211.github.io/walapp/youth/2026/06/05/youth/" rel="alternate" type="text/html" title="청년 지원금·일자리·주거·자산형성 정책 - 내가 받을 수 있는지, 얼마를, 어떻게 신청하는지" /><published>2026-06-05T07:01:00+09:00</published><updated>2026-06-05T07:01:00+09:00</updated><id>https://adk24211.github.io/walapp/youth/2026/06/05/youth</id><content type="html" xml:base="https://adk24211.github.io/walapp/youth/2026/06/05/youth/"><![CDATA[<div class="cn" data-cat="youth">
 
 <div class="cn cn-lead" data-cat="youth">
   <span class="cn-lead-icon"><i class="ti ti-user-star"></i></span>
-  <p>청년 여러분의 미래를 위한 다양한 지원금 및 정책이 있습니다. 이 글에서는 청년 대상 지원금 및 정책에 대해 자세히 안내합니다.</p>
+  <p>청년 정책을 알아보세요. 지원금, 일자리, 주거, 자산형성을 위한 정책을 알아보세요.</p>
 </div>
 
 <div class="cn cn-stats" data-cat="youth">
-  <div class="cn-stat"><span class="cn-stat-num">19~34세</span><span class="cn-stat-label">대상 연령</span></div>
+  <div class="cn-stat"><span class="cn-stat-num">19~34세</span><span class="cn-stat-label">가입 연령</span></div>
   <div class="cn-stat"><span class="cn-stat-num">최대 12%</span><span class="cn-stat-label">정부 기여금</span></div>
 </div>
 
@@ -103,57 +209,56 @@
   <div class="cn-step">
     <span class="cn-step-no">1</span>
     <div class="cn-step-body">
-      <h4>청년 주택 드림 청약 드림 통장</h4>
-      <p>청년 주택 드림 청약 드림 통장은 청년들이 주택을 구입할 때 필요한 자금을 마련할 수 있도록 지원하는 정책입니다. 이 정책은 청년들이 주택을 구입할 때 필요한 자금을 마련할 수 있도록 지원합니다. 청년 주택 드림 청약 드림 통장은 청년들이 주택을 구입할 때 필요한 자금을 마련할 수 있도록 지원하는 정책입니다. 이 정책은 청년들이 주택을 구입할 때 필요한 자금을 마련할 수 있도록 지원합니다. 청년 주택 드림 청약 드림 통장의 가입 대상은 19세에서 34세까지의 청년입니다. 청년 주택 드림 청약 드림 통장의 가입 기간은 1년 이상입니다. 청년 주택 드림 청약 드림 통장의 정부 기여금은 월 6%입니다. 청년 주택 드림 청약 드림 통장의 소득 요건은 6,000만 원 이하입니다.</p>
+      <h4>1. 청년과 세계를 잇는 최대일자리박람회</h4>
+      <p>2026년 6월에 개최되는 "2026 글로벌 탤런트 페어"는 청년과 세계를 잇는 최대일자리박람회입니다. 이 행사에서는 청년들이 세계에 대한 지식을 얻고, 새로운 기술과 지식을 습득할 수 있습니다.</p>
     </div>
   </div>
   <div class="cn-step">
     <span class="cn-step-no">2</span>
     <div class="cn-step-body">
-      <h4>청년 미래 적금</h4>
-      <p>청년 미래 적금은 청년들이 미래를 위한 자금을 마련할 수 있도록 지원하는 정책입니다. 이 정책은 청년들이 미래를 위한 자금을 마련할 수 있도록 지원합니다. 청년 미래 적금은 청년들이 미래를 위한 자금을 마련할 수 있도록 지원하는 정책입니다. 이 정책은 청년들이 미래를 위한 자금을 마련할 수 있도록 지원합니다. 청년 미래 적금의 가입 대상은 19세에서 34세까지의 청년입니다. 청년 미래 적금의 가입 기간은 1년 이상입니다. 청년 미래 적금의 정부 기여금은 월 6%입니다. 청년 미래 적금의 소득 요건은 6,000만 원 이하입니다.</p>
+      <h4>2. 청년미래적금</h4>
+      <p>청년미래적금은 청년들이 미래를 위해 돈을 저축할 수 있는 정책입니다. 이 정책은 청년들이 돈을 저축하고, 미래를 위해 준비할 수 있도록 도와줍니다.</p>
     </div>
   </div>
   <div class="cn-step">
     <span class="cn-step-no">3</span>
     <div class="cn-step-body">
-      <h4>2026 글로벌 탤런트 페어</h4>
-      <p>2026 글로벌 탤런트 페어는 청년들이 세계를 잇는 최대 일자리 박람회입니다. 이 박람회는 청년들이 세계를 잇는 일자리를 찾을 수 있도록 지원하는 정책입니다. 2026 글로벌 탤런트 페어는 청년들이 세계를 잇는 일자리를 찾을 수 있도록 지원하는 정책입니다. 이 박람회는 청년들이 세계를 잇는 일자리를 찾을 수 있도록 지원합니다. 2026 글로벌 탤런트 페어의 대상은 19세에서 34세까지의 청년입니다. 2026 글로벌 탤런트 페어의 기간은 2026년 6월입니다.</p>
+      <h4>3. 청년주택드림청약드림통장</h4>
+      <p>청년주택드림청약드림통장은 청년들이 주택을 구입할 수 있는 정책입니다. 이 정책은 청년들이 주택을 구입하고, 주택을 소유할 수 있도록 도와줍니다.</p>
     </div>
   </div>
 </div>
 
 <h2 class="cn-h">확인 체크리스트</h2>
 <ul class="cn cn-check" data-cat="youth">
-  <li>청년 주택 드림 청약 드림 통장 가입 대상 확인</li>
-  <li>청년 미래 적금 가입 대상 확인</li>
-  <li>2026 글로벌 탤런트 페어 대상 확인</li>
+  <li>19~34세</li>
+  <li>소득 6,000만 원 이하</li>
+  <li>주택 구매</li>
 </ul>
 
 <h2 class="cn-h">일정·절차</h2>
 <ul class="cn cn-timeline" data-cat="youth">
-  <li><span class="cn-tl-when">2026년 6월</span><span class="cn-tl-what">2026 글로벌 탤런트 페어 개최</span></li>
+  <li><span class="cn-tl-when">2026년 6월</span><span class="cn-tl-what">출시 및 신청 개시</span></li>
 </ul>
 
 <h2 class="cn-h">자주 묻는 질문</h2>
 <div class="cn cn-faq" data-cat="youth">
   <details>
-    <summary>청년 주택 드림 청약 드림 통장의 가입 기간은 얼마인가요?</summary>
-    <div class="cn-faq-body">청년 주택 드림 청약 드림 통장의 가입 기간은 1년 이상입니다.</div>
+    <summary>청년 정책은 무엇입니까?</summary>
+    <div class="cn-faq-body">청년 정책은 청년들이 지원금, 일자리, 주거, 자산형성을 위한 정책입니다.</div>
   </details>
   <details>
-    <summary>청년 미래 적금의 정부 기여금은 얼마인가요?</summary>
-    <div class="cn-faq-body">청년 미래 적금의 정부 기여금은 월 6%입니다.</div>
+    <summary>청년미래적금은 무엇입니까?</summary>
+    <div class="cn-faq-body">청년미래적금은 청년들이 미래를 위해 돈을 저축할 수 있는 정책입니다.</div>
+  </details>
+  <details>
+    <summary>청년주택드림청약드림통장은 무엇입니까?</summary>
+    <div class="cn-faq-body">청년주택드림청약드림통장은 청년들이 주택을 구입할 수 있는 정책입니다.</div>
   </details>
 </div>
 
 <div class="cn cn-quote" data-cat="youth">
-  청년 여러분의 미래를 위한 지원금 및 정책을 적극적으로 활용하세요.
-</div>
-
-<div class="cn cn-note" data-cat="youth">
-  <i class="ti ti-alert-triangle"></i>
-  <p>청년 여러분의 미래를 위한 지원금 및 정책을 활용하시기 바랍니다.</p>
+  청년 정책을 알아보세요.
 </div>
 
 <h2 class="cn-h">함께 보면 좋은 곳</h2>
@@ -165,32 +270,19 @@
 
 <div class="cn cn-source" data-cat="youth">
   <span class="cn-source-tag">출처표시</span>
-  <p><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOdGtNeThoV2tiOXBxMTZ5NTloSkpzcjNXSXBlV2kxNkZkLV9GY0NRRU1zTE5oNm9GRkxZM2U4Y1JzVlhiVUpWaTUxbDFKekdrMnkyRE5xNklublgtaWdGV254akJrN3lvWGlTeGFvbW1hQ2lMQ2p3QTF6MnhFaFpFbHZn?oc=5" target="_blank" rel="noopener">대한민국 정책브리핑</a> · 공공누리 제1유형. 위 내용은 공공 발표 자료의 사실·수치를 토대로 본 사이트가 직접 재구성·해설한 것입니다.</p>
+  <p><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOdGtNeThoV2tiOXBxMTZ5NTloSkpzcjNXSXBlV2kxNkZkLV9GY0NRRU1zTE5oNm9GRkxZM2U4Y1JzVlhiVUpWaTUxbDFKekdrMnkyRE5xNklublgtaWdGV254akJrN3lvWGlTeGFvbW1hQ2lMQ2p3QTF6MnhFaFpFbHZn?oc=5" target="_blank" rel="noopener">청년정책 통합</a> · 공공누리 제1유형. 위 내용은 공공 발표 자료의 사실·수치를 토대로 본 사이트가 직접 재구성·해설한 것입니다.</p>
 </div>
 
-</div>]]></content><author><name>Walapp</name></author><category term="youth" /><category term="청년 정책" /><category term="지원금" /><category term="일자리" /><summary type="html"><![CDATA[]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" /><media:content medium="image" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">기후에너지환경부 출범 1주년</title><link href="https://adk24211.github.io/walapp/policy/2026/06/05/policy/" rel="alternate" type="text/html" title="기후에너지환경부 출범 1주년" /><published>2026-06-05T07:00:00+09:00</published><updated>2026-06-05T07:00:00+09:00</updated><id>https://adk24211.github.io/walapp/policy/2026/06/05/policy</id><content type="html" xml:base="https://adk24211.github.io/walapp/policy/2026/06/05/policy/"><![CDATA[<div class="cn" data-cat="policy">
+</div>]]></content><author><name>Walapp</name></author><category term="youth" /><category term="청년 정책" /><category term="지원금" /><category term="일자리" /><category term="주거" /><category term="자산형성" /><summary type="html"><![CDATA[]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" /><media:content medium="image" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">정부 정책 3가지, 이주노동자·스텔스 자동차·전기 사용에 대한 지원</title><link href="https://adk24211.github.io/walapp/policy/2026/06/05/policy/" rel="alternate" type="text/html" title="정부 정책 3가지, 이주노동자·스텔스 자동차·전기 사용에 대한 지원" /><published>2026-06-05T07:00:00+09:00</published><updated>2026-06-05T07:00:00+09:00</updated><id>https://adk24211.github.io/walapp/policy/2026/06/05/policy</id><content type="html" xml:base="https://adk24211.github.io/walapp/policy/2026/06/05/policy/"><![CDATA[<div class="cn" data-cat="policy">
 
 <div class="cn cn-lead" data-cat="policy">
   <span class="cn-lead-icon"><i class="ti ti-building-bank"></i></span>
-  <p>기후에너지환경부는 출범 1주년을 맞아 지난 1년간의 성과와 향후 정책방향을 발표했습니다.</p>
+  <p>정부가 이주노동자 폭행·괴롭힘을 막기 위한 기획감독 100여곳 추가 실시, 스텔스 자동차 막기, 전기 사용 1% 줄이면 캐시백 혜택</p>
 </div>
 
 <div class="cn cn-stats" data-cat="policy">
-  <div class="cn-stat"><span class="cn-stat-num">53%~61%</span><span class="cn-stat-label">2035년 온실가스 감축목표</span></div>
-  <div class="cn-stat"><span class="cn-stat-num">110만 명</span><span class="cn-stat-label">국내 이주노동자 수</span></div>
-</div>
-
-<h2 class="cn-h">한눈에 보기</h2>
-<div class="cn cn-table" data-cat="policy">
-<table>
-  <thead>
-    <tr><th>구분</th><th>기존</th><th>신설</th></tr>
-  </thead>
-  <tbody>
-    <tr><th>이주노동자 인권침해 대책</th><td>없음</td><td>사전 모니터링 시스템 구축</td></tr>
-    <tr><th>재생에너지 보급 로드맵</th><td></td><td>중장기 재생에너지 보급 로드맵</td></tr>
-  </tbody>
-</table>
+  <div class="cn-stat"><span class="cn-stat-num">100여곳</span><span class="cn-stat-label">기획감독 추가</span></div>
+  <div class="cn-stat"><span class="cn-stat-num">1%</span><span class="cn-stat-label">전기 사용 줄이면 캐시백 혜택</span></div>
 </div>
 
 <h2 class="cn-h">핵심 정리</h2>
@@ -198,45 +290,61 @@
   <div class="cn-step">
     <span class="cn-step-no">1</span>
     <div class="cn-step-body">
-      <h4>기후에너지환경부의 주요 성과</h4>
-      <p>기후에너지환경부는 출범 1주년을 맞아 지난 1년간의 주요 성과를 발표했습니다. 주요 성과로는 2035년 온실가스 감축목표를 53%~61%로 설정하고, 재생에너지 보급 로드맵을 수립했습니다. 또한, 이주노동자 인권침해 대책을 마련하고, 사전 모니터링 시스템을 구축했습니다.</p>
+      <h4>이주노동자 폭행·괴롭힘 막기</h4>
+      <p>정부가 이주노동자 폭행·괴롭힘을 막기 위한 기획감독 100여곳 추가 실시합니다. 이주노동자 폭행·괴롭힘을 막기 위해 정부는 기획감독 100여곳을 추가로 실시합니다. 이는 이주노동자 폭행·괴롭힘을 막기 위한 정부의 노력입니다.</p>
     </div>
   </div>
   <div class="cn-step">
     <span class="cn-step-no">2</span>
     <div class="cn-step-body">
-      <h4>기후에너지환경부의 정책방향</h4>
-      <p>기후에너지환경부는 향후 정책방향으로 기후위기 극복과 에너지 대전환을 추진할 계획입니다. 이를 위해 재생에너지 보급을 가속화하고, 에너지저장장치 확충을 추진할 것입니다. 또한, 이주노동자 인권침해 대책을 강화하고, 사전 모니터링 시스템을 운영할 것입니다.</p>
+      <h4>스텔스 자동차 막기</h4>
+      <p>정부가 스텔스 자동차를 막기 위한 정책을 실시합니다. 스텔스 자동차는 전조등과 후미등을 자동으로 점등하지 않아 다른 차량과 충돌할 가능성이 있습니다. 정부는 스텔스 자동차를 막기 위한 정책을 실시하여 다른 차량과 충돌할 가능성을 줄입니다.</p>
+    </div>
+  </div>
+  <div class="cn-step">
+    <span class="cn-step-no">3</span>
+    <div class="cn-step-body">
+      <h4>전기 사용 1% 줄이면 캐시백 혜택</h4>
+      <p>정부가 전기 사용 1% 줄이면 캐시백 혜택을 제공합니다. 전기 사용 1%를 줄이면 캐시백 혜택을 제공하여 전기 사용을 줄여줍니다.</p>
     </div>
   </div>
 </div>
 
 <h2 class="cn-h">확인 체크리스트</h2>
 <ul class="cn cn-check" data-cat="policy">
-  <li>이주노동자 인권침해 사례 신고</li>
-  <li>재생에너지 보급 로드맵 확인</li>
+  <li>이주노동자 폭행·괴롭힘 막기: 기획감독 100여곳 추가 실시</li>
+  <li>스텔스 자동차 막기: 전조등과 후미등 자동 점등 의무화</li>
+  <li>전기 사용 1% 줄이면 캐시백 혜택: 전기 사용 1% 줄이면 캐시백 혜택</li>
 </ul>
 
 <h2 class="cn-h">일정·절차</h2>
 <ul class="cn cn-timeline" data-cat="policy">
-  <li><span class="cn-tl-when">2026년 6월</span><span class="cn-tl-what">기후에너지환경부 출범 1주년 기념</span></li>
+  <li><span class="cn-tl-when">2026년 6월</span><span class="cn-tl-what">출시 및 신청 개시</span></li>
 </ul>
 
 <h2 class="cn-h">자주 묻는 질문</h2>
 <div class="cn cn-faq" data-cat="policy">
   <details>
-    <summary>이주노동자 인권침해 대책은 무엇인가요?</summary>
-    <div class="cn-faq-body">이주노동자 인권침해 대책은 사전 모니터링 시스템 구축, 선제적 감독 실시, 이주노동자 권리구제 강화 등입니다.</div>
+    <summary>이주노동자 폭행·괴롭힘 막기에는 어떤 정책이 있는지?</summary>
+    <div class="cn-faq-body">정부가 기획감독 100여곳을 추가로 실시합니다.</div>
+  </details>
+  <details>
+    <summary>스텔스 자동차 막기에는 어떤 정책이 있는지?</summary>
+    <div class="cn-faq-body">정부가 전조등과 후미등 자동 점등 의무화를 실시합니다.</div>
+  </details>
+  <details>
+    <summary>전기 사용 1% 줄이면 캐시백 혜택에는 어떤 정책이 있는지?</summary>
+    <div class="cn-faq-body">정부가 전기 사용 1% 줄이면 캐시백 혜택을 제공합니다.</div>
   </details>
 </div>
 
 <div class="cn cn-quote" data-cat="policy">
-  기후에너지환경부는 기후위기 극복과 에너지 대전환을 위해 노력할 것입니다.
+  정부가 이주노동자 폭행·괴롭힘을 막기 위한 기획감독 100여곳을 추가로 실시합니다.
 </div>
 
 <div class="cn cn-note" data-cat="policy">
   <i class="ti ti-alert-triangle"></i>
-  <p>기후에너지환경부의 정책방향과 성과는 계속해서 업데이트될 예정입니다.</p>
+  <p>정부 정책이 변경될 수 있으므로 변경 가능성을 확인하시기 바랍니다.</p>
 </div>
 
 <h2 class="cn-h">함께 보면 좋은 곳</h2>
@@ -247,10 +355,10 @@
 
 <div class="cn cn-source" data-cat="policy">
   <span class="cn-source-tag">출처표시</span>
-  <p><a href="https://www.korea.kr/news/policyNewsView.do?newsId=148965895&amp;call_from=rsslink" target="_blank" rel="noopener">대한민국 정책브리핑</a> · 공공누리 제1유형. 위 내용은 공공 발표 자료의 사실·수치를 토대로 본 사이트가 직접 재구성·해설한 것입니다.</p>
+  <p><a href="https://news.google.com/rss/articles/CBMi8wFBVV95cUxPa0dmRjJkTktKV3p0anJlajlIOU1XOEwwZ2x0UkJMVHJuQUpkWWJWaFJmSmZ2YzQ3T1dsVlhEWVBxeFJnaUd2YWM1ZXBJMi15bmk3UGIxQ0dncjA5a0JyaHcyR1VVMnFQQjNvcENaMlE4WFJHeGR1NXBvWTRCZEJZbVZKdkRfYlA3cnQ0R2RWajNLY2FXM3FXelUtNS1zT3gwMEVlbGlBU05TeC1fQmllRngzWUU2S0Rqb1c0cmhQcWNicDJCV1JwbjJKbzhJNHJEVUg4YzkzRThZV0RTVGt5bnNzbTZLVE54T1NxMXJMYy12MjQ?oc=5" target="_blank" rel="noopener">대한민국 정책브리핑</a> · 공공누리 제1유형. 위 내용은 공공 발표 자료의 사실·수치를 토대로 본 사이트가 직접 재구성·해설한 것입니다.</p>
 </div>
 
-</div>]]></content><author><name>Walapp</name></author><category term="policy" /><category term="기후에너지환경부" /><category term="기후위기" /><category term="에너지 대전환" /><summary type="html"><![CDATA[]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" /><media:content medium="image" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">5월 소비자물가 3.1% 올랐다</title><link href="https://adk24211.github.io/walapp/data/2026/06/04/data/" rel="alternate" type="text/html" title="5월 소비자물가 3.1% 올랐다" /><published>2026-06-04T07:02:00+09:00</published><updated>2026-06-04T07:02:00+09:00</updated><id>https://adk24211.github.io/walapp/data/2026/06/04/data</id><content type="html" xml:base="https://adk24211.github.io/walapp/data/2026/06/04/data/"><![CDATA[<div class="cn" data-cat="data">
+</div>]]></content><author><name>Walapp</name></author><category term="policy" /><category term="정부 정책" /><category term="이주노동자" /><category term="스텔스 자동차" /><category term="전기 사용" /><summary type="html"><![CDATA[]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" /><media:content medium="image" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">5월 소비자물가 3.1% 올랐다</title><link href="https://adk24211.github.io/walapp/data/2026/06/04/data/" rel="alternate" type="text/html" title="5월 소비자물가 3.1% 올랐다" /><published>2026-06-04T07:02:00+09:00</published><updated>2026-06-04T07:02:00+09:00</updated><id>https://adk24211.github.io/walapp/data/2026/06/04/data</id><content type="html" xml:base="https://adk24211.github.io/walapp/data/2026/06/04/data/"><![CDATA[<div class="cn" data-cat="data">
 
 <div class="cn cn-lead" data-cat="data">
   <span class="cn-lead-icon"><i class="ti ti-chart-bar"></i></span>
