@@ -116,7 +116,8 @@ def _build_prompt(
         === 작성 원칙 ===
         ★ 문체(가장 중요) — 반드시 '존대말투'
         - 본문의 모든 문장은 '~합니다 / ~입니다 / ~됩니다 / ~하세요' 같은 존댓말로 끝맺습니다.
-        - 평서형 기사체('~다/~했다')나 구어체('~해요/~거든요/~죠')는 쓰지 않습니다.
+        - 평서형 기사체('~다/~했다/~한다/~된다')나 구어체('~해요/~거든요/~죠')는 한 문장도 쓰지 않습니다.
+          (나쁜 예: "1.8% 상승했다" → 좋은 예: "1.8% 상승했습니다")
         - 다만 title·summary·headline·callout 은 명사(체언)로 끝내거나 '~합니다'로 끝냅니다.
 
         ★ 한국어 문법·맞춤법(매우 중요) — 비문 금지
@@ -189,7 +190,7 @@ def _build_prompt(
         === 각 필드 작성 가이드 ===
         - lead: 필수. 글 전체의 핵심을 한눈에 전달합니다.
         - stats: 2~4개. 가장 중요한 수치/키워드를 짧게(num) + 라벨(label)로. 수치가 마땅치 않으면 빈 배열 [].
-        - compare: 유형·구분 비교가 자연스러울 때만. 없으면 생략하거나 null. headers 첫 칸은 '구분'.
+        - compare: 본문에 '실제로 비교 대상'(예: 일반형 vs 우대형, 기존 vs 개정)이 있을 때만 사용합니다. 비교 대상이 없으면 넣지 마세요(null). 임의로 '일반형/우대형' 같은 칸을 지어내지 마세요. headers 첫 칸은 '구분'.
         - steps: 필수, 3~5개. 이 글의 본문에 해당합니다. 각 body는 최소 4문장 이상으로 충실히, 존댓말로.
         - checklist: 신청 자격·확인 항목 등 행동 유도가 필요할 때만. 없으면 [] 또는 생략.
         - timeline: 일정·절차가 있을 때만(when=시점, what=내용). 없으면 [] 또는 생략.
@@ -396,11 +397,13 @@ def _render_components(data: dict, category: Category, source_url: str = "") -> 
         parts.append(f'<h2 class="cn-h">핵심 정리</h2>')
         parts.append(f'<div class="cn cn-steps" data-cat="{cat}">')
         for n, s in enumerate(steps, 1):
+            # 제목 앞 '1. ' / '2) ' 같은 중복 번호 제거(컴포넌트가 번호를 따로 표시)
+            stitle = re.sub(r"^\s*\d+\s*[.)]\s*", "", str(s.get("title", "")))
             parts += [
                 '  <div class="cn-step">',
                 f'    <span class="cn-step-no">{n}</span>',
                 '    <div class="cn-step-body">',
-                f'      <h4>{_esc(s.get("title",""))}</h4>',
+                f'      <h4>{_esc(stitle)}</h4>',
                 f'      <p>{_esc(s.get("body",""))}</p>',
                 "    </div>",
                 "  </div>",
