@@ -82,10 +82,15 @@ def _build_prompt(
     today = datetime.now().strftime("%Y년 %m월 %d일")
     meta = CATEGORY_META[category]
 
-    item_text = "\n\n".join(
-        f"[{i+1}] 출처: {item.source}\n제목: {item.title}\nURL: {item.url}\n요약: {item.summary}"
-        for i, item in enumerate(items)
-    )
+    # 상위 항목만, 기사 본문까지 포함해 정보 밀도를 높인다(토큰 예산 고려해 5건·본문 1400자).
+    blocks = []
+    for i, item in enumerate(items[:5]):
+        body = (item.content or item.summary or "").strip()
+        body = re.sub(r"\n{2,}", "\n", body)[:1400]
+        blocks.append(
+            f"[{i+1}] 출처: {item.source}\n제목: {item.title}\n본문:\n{body}"
+        )
+    item_text = "\n\n".join(blocks)
 
     base = textwrap.dedent(f"""
         오늘 날짜: {today}
@@ -106,6 +111,20 @@ def _build_prompt(
         - 평서형 기사체('~다/~했다')나 구어체('~해요/~거든요/~죠')는 쓰지 않습니다.
         - 다만 title·summary·headline·callout 은 명사(체언)로 끝내거나 '~합니다'로 끝냅니다.
 
+        ★ 한국어 문법·맞춤법(매우 중요) — 비문 금지
+        - 맞춤법, 띄어쓰기, 조사(은/는/이/가/을/를/에/에서 등)를 정확하게 사용합니다.
+        - 주어와 서술어가 호응하는 완결된 문장만 씁니다. 어색한 번역투·비문·미완성 문장을 쓰지 않습니다.
+        - 한 문장에 한 가지 메시지만 담고, 지나치게 길어 호응이 깨지지 않게 합니다.
+        - 같은 표현·접속사('또한', '특히')를 반복하지 말고 자연스럽게 연결합니다.
+        - 숫자·단위·기관명·제도명은 본문 자료에 나온 표기를 정확히 따릅니다(예: '만 원', '%', '제도').
+
+        ★ 깊이·정보량(중요) — 부실한 글 금지
+        - 제공된 '본문'을 충분히 읽고, 핵심 사실·수치·배경·일정을 빠짐없이 활용합니다.
+        - steps는 4~5개를 만들고, 각 step의 body는 최소 4문장 이상으로 충실하게 작성합니다.
+        - 각 항목은 '무엇이' → '왜·배경' → '그래서 어떤 의미·영향' 흐름으로 풀어 씁니다.
+        - 구체적 수치, 대상, 조건, 일정 등 독자가 실제로 활용할 정보를 담습니다.
+        - 단순 한두 문장 요약으로 끝내지 않습니다.
+
         ★ 독창성·저작권
         - 수집 원문의 문장·표현을 절대 그대로 베끼지 않습니다. 사실·수치만 취해 완전히 자신의 언어로 다시 씁니다.
         - 개별 항목을 나열·복제하지 말고, 여러 정보를 엮어 '종합·해설'한 독창적 글로 재구성합니다.
@@ -113,7 +132,7 @@ def _build_prompt(
 
         ★ 정확성
         - 한글과 영문(+숫자)만 사용합니다. 한자·일본어 가나는 절대 쓰지 않습니다.
-        - 수집 자료에 없는 수치를 지어내지 않습니다. 불확실하면 단정하지 않습니다.
+        - 본문 자료에 없는 수치·사실을 지어내지 않습니다. 불확실하면 단정하지 않습니다.
         - 정치적으로 민감한 사안은 한쪽에 치우치지 않고 균형 있게 서술합니다.
 
         === 출력 형식(JSON만, 그 외 텍스트 금지) ===
@@ -237,8 +256,19 @@ def generate(
     def _call(model: str):
         return client.chat.completions.create(
             model=model,
-            messages=[{"role": "user", "content": prompt}],
-            max_tokens=4096,
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "당신은 한국어 정책·생활정보 전문 에디터입니다. "
+                        "맞춤법과 문법이 완벽하고, 사실에 근거해 깊이 있게 쓰며, "
+                        "정중한 존댓말('~합니다')로 일관되게 작성합니다."
+                    ),
+                },
+                {"role": "user", "content": prompt},
+            ],
+            temperature=0.45,
+            max_tokens=6000,
             response_format={"type": "json_object"},
         )
 

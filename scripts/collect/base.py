@@ -3,6 +3,7 @@
 """
 from __future__ import annotations
 
+import re
 import time
 import logging
 from dataclasses import dataclass, field
@@ -88,6 +89,69 @@ def fetch(url: str, **kwargs) -> Optional[requests.Response]:
             else:
                 logging.getLogger(__name__).warning("fetch 실패 [%s]: %s", url, e)
     return None
+
+
+# 기사 본문이 들어있을 가능성이 높은 컨테이너 후보 (korea.kr 등 정부 사이트 우선)
+_ARTICLE_SELECTORS = [
+    "#article_body", ".article_body", ".view_cont", ".view_con", ".cont_body",
+    "#contentArea", ".article-cont", ".article_cont", ".news_cont", ".board_view",
+    "article",
+]
+_NOISE_RE = re.compile(
+    r"(저작권|무단\s*전재|재배포\s*금지|공공누리|배너|관련기사|이전글|다음글|"
+    r"목록|프린트|페이스북|트위터|카카오|이메일|구독|뉴스레터)"
+)
+
+
+def fetch_article_text(url: str, max_chars: int = 1800) -> str:
+    """기사 URL에서 본문 텍스트를 추출한다.
+
+    RSS 요약(teaser)만으로는 LLM이 받을 정보가 빈약하므로, 실제 기사 페이지에서
+    본문 단락을 받아와 생성 품질(정보량)을 높인다. 추출 실패 시 빈 문자열 반환.
+    """
+    if not url or not url.startswith("http"):
+        return ""
+    resp = fetch(url)
+    if resp is None:
+        return ""
+
+    soup = BeautifulSoup(resp.text, "lxml")
+    for tag in soup(["script", "style", "nav", "header", "footer", "aside", "form"]):
+        tag.decompose()
+
+    node = None
+    for sel in _ARTICLE_SELECTORS:
+        cand = soup.select_one(sel)
+        if cand and len(cand.get_text(strip=True)) > 250:
+            node = cand
+            break
+
+    if node is not None:
+        paras = [p.get_text(" ", strip=True) for p in node.find_all(["p", "li"])]
+        if not paras:
+            paras = [node.get_text("\n", strip=True)]
+    else:
+        # 폴백: 페이지 전체에서 의미 있는 길이의 <p> 단락만 수집
+        paras = [
+            p.get_text(" ", strip=True)
+            for p in soup.find_all("p")
+            if len(p.get_text(strip=True)) > 30
+        ]
+
+    # 노이즈 단락 제거 + 중복 정리
+    clean: list[str] = []
+    seen: set[str] = set()
+    for p in paras:
+        p = re.sub(r"\s{2,}", " ", p).strip()
+        if len(p) < 15 or _NOISE_RE.search(p):
+            continue
+        if p in seen:
+            continue
+        seen.add(p)
+        clean.append(p)
+
+    text = "\n".join(clean).strip()
+    return text[:max_chars]
 
 
 def parse_rss(url: str, source_name: str, limit: int = 10) -> list[RawItem]:

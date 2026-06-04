@@ -14,12 +14,13 @@ from __future__ import annotations
 import logging
 from functools import lru_cache
 
-from .base import RawItem, parse_rss
+from .base import RawItem, parse_rss, fetch_article_text
 
 log = logging.getLogger(__name__)
 
 POLICY_FEED = "https://www.korea.kr/rss/policy.xml"
 FEED_LIMIT = 40  # 분류 후 카테고리별로 추리기 위해 넉넉히 수집
+ENRICH_TOP = 6   # 본문까지 받아올 카테고리별 상위 기사 수
 
 # 청년 정책 키워드 (가장 먼저 분류)
 YOUTH_KEYWORDS = [
@@ -64,28 +65,49 @@ def _dedupe(items: list[RawItem], limit: int) -> list[RawItem]:
     return out[:limit]
 
 
-def collect_policy(limit: int = 10) -> list[RawItem]:
+@lru_cache(maxsize=128)
+def _article_body(url: str) -> str:
+    """기사 본문을 한 번만 받아 캐시한다(동일 기사 재요청 방지)."""
+    return fetch_article_text(url)
+
+
+def _enrich(items: list[RawItem]) -> list[RawItem]:
+    """상위 기사에 한해 본문을 받아와 content/summary를 보강한다.
+
+    RSS 요약만으로는 정보가 빈약해 생성 품질이 낮아지므로, 실제 기사 본문을
+    덧붙여 LLM이 더 자세하고 정확한 글을 쓸 수 있게 한다.
+    """
+    for it in items[:ENRICH_TOP]:
+        body = _article_body(it.url)
+        if body and len(body) > len(it.content):
+            it.content = body
+            if len(it.summary) < 120:
+                it.summary = body[:300]
+    return items
+
+
+def collect_policy(limit: int = 8) -> list[RawItem]:
     """국내 정책 — 청년/통계로 분류되지 않은 일반 국내 정책."""
     items = [
         it for it in _fetch_all()
         if not _match(it, YOUTH_KEYWORDS) and not _match(it, DATA_KEYWORDS)
     ]
-    return _dedupe(items, limit)
+    return _enrich(_dedupe(items, limit))
 
 
-def collect_youth(limit: int = 10) -> list[RawItem]:
+def collect_youth(limit: int = 8) -> list[RawItem]:
     """청년 정책 — 청년 키워드가 포함된 항목."""
     items = [it for it in _fetch_all() if _match(it, YOUTH_KEYWORDS)]
-    return _dedupe(items, limit)
+    return _enrich(_dedupe(items, limit))
 
 
-def collect_data(limit: int = 10) -> list[RawItem]:
+def collect_data(limit: int = 8) -> list[RawItem]:
     """통계·생활정보 — 청년이 아니면서 통계/생활 키워드가 포함된 항목."""
     items = [
         it for it in _fetch_all()
         if not _match(it, YOUTH_KEYWORDS) and _match(it, DATA_KEYWORDS)
     ]
-    return _dedupe(items, limit)
+    return _enrich(_dedupe(items, limit))
 
 
 if __name__ == "__main__":
