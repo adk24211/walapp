@@ -234,7 +234,7 @@ img { max-width: 100%; display: block; }
 .card-inner { display: flex; }
 .card-accent { width: 4px; flex-shrink: 0; background: var(--c-mid, var(--policy-mid)); }
 
-.card-body { flex: 1; padding: 1.1rem 1.25rem 1.1rem 1.1rem; min-width: 0; }
+.card-body { flex: 1; padding: 1.45rem 1.25rem 1.45rem 1.1rem; min-width: 0; }
 .card-top {
   display: flex; align-items: baseline;
   justify-content: space-between; gap: 12px; margin-bottom: .5rem;

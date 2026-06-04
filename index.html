@@ -17,25 +17,6 @@ title: 오늘의 국내 정책·청년 정책·생활 통계 브리핑
   <p class="ph-sub">국내 정책과 청년 지원, 생활 통계부터 흥미로운 발견까지 — 공공·1차 자료를 토대로 핵심만 쉽게 정리해 전하는 브리핑입니다.</p>
 </div>
 
-{% assign featured = site.posts.first %}
-{% if featured %}
-{% assign fcat = featured.categories | first %}
-<a href="{{ featured.url | relative_url }}" class="hero-card {{ fcat }}">
-  <div class="hero-tag-row">
-    <span class="sec-tag {{ fcat }}">{% include category-label.html category=fcat %}</span>
-    <span class="hero-badge">오늘의 헤드라인</span>
-  </div>
-  <h2 class="hero-title">{{ featured.title }}</h2>
-  {% if featured.summary %}<p class="hero-desc">{{ featured.summary }}</p>{% endif %}
-  <div class="hero-meta">
-    <span>{{ featured.date | date: "%Y.%m.%d" }}</span>
-    <span class="meta-dot"></span>
-    <span>{% include reading-time.html content=featured.content %}</span>
-    <span class="hero-cta">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:13px"></i></span>
-  </div>
-</a>
-{% endif %}
-
 <div class="tab-bar">
   <button class="tab-btn active" data-filter="all">전체</button>
   <button class="tab-btn" data-filter="policy">🏛 국내 정책</button>
