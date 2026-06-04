@@ -1,8 +1,13 @@
 title: Walapp
-description: 오늘의 국내·해외 핫뉴스와 청년 정책을 매일 아침 한눈에. 공신력 있는 매체의 주요 뉴스를 요약해 전합니다.
+description: 국내 정책·청년 정책·생활 통계부터 흥미로운 발견까지, 공공·1차 자료를 토대로 매일 아침 핵심만 쉽게 정리해 전하는 브리핑입니다.
 baseurl: "/walapp"
 url: "https://adk24211.github.io"
 lang: ko
+
+# ---- 발행 시점 ----
+# 당일 07시(KST) 포스트가 빌드 시점에 '미래'로 간주돼 누락되는 것을 방지한다.
+# (날짜 표시는 워크플로우 빌드 스텝의 TZ=Asia/Seoul 로 KST로 렌더된다)
+future: true
 
 # ---- SEO / 소셜 ----
 author: Walapp

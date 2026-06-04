@@ -19,6 +19,7 @@ import sys
 import time
 from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from dotenv import load_dotenv
 from groq import Groq
@@ -159,12 +160,13 @@ def main() -> None:
         log.error("GROQ_API_KEY 환경변수가 없어요.")
         sys.exit(1)
 
-    # 날짜 설정
+    # 날짜 설정 — GitHub 러너는 UTC이므로 반드시 KST(Asia/Seoul) 기준으로 계산한다.
+    # 그래야 크론(UTC 22:00 = KST 07:00) 실행 시 '당일' 날짜로 포스트가 찍힌다.
     date_override = os.environ.get("POST_DATE")
     if date_override:
         post_date = datetime.strptime(date_override, "%Y-%m-%d")
     else:
-        post_date = datetime.now()
+        post_date = datetime.now(ZoneInfo("Asia/Seoul")).replace(tzinfo=None)
 
     skip_collect = os.environ.get("SKIP_COLLECT") == "1"
     dry_run      = os.environ.get("DRY_RUN") == "1"
