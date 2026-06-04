@@ -147,9 +147,9 @@ def generate_posts(
             log.info("저장 완료: %s", filepath.name)
             saved.append(filepath)
 
-        # API 레이트 리밋 방지
+        # 무료 등급 분당 토큰 한도(TPM) 회복을 위해 카테고리 사이를 충분히 띄운다.
         if idx < len(CATEGORY_ORDER) - 1:
-            time.sleep(2)
+            time.sleep(35)
 
     return saved
 

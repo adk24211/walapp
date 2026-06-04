@@ -14,6 +14,7 @@ import json
 import logging
 import re
 import textwrap
+import time
 from datetime import datetime
 from typing import Literal
 
@@ -86,14 +87,14 @@ def _build_prompt(
     meta = CATEGORY_META[category]
 
     # 본문이 풍부한 항목을 우선 사용한다(본문 추출 실패한 항목은 뒤로).
-    # 토큰 예산을 고려해 5건·본문 1400자.
+    # Groq 무료 등급 TPM(분당 토큰) 한도를 고려해 4건·본문 900자로 제한.
     ranked = sorted(
         items, key=lambda it: len((it.content or it.summary or "")), reverse=True
     )
     blocks = []
-    for i, item in enumerate(ranked[:5]):
+    for i, item in enumerate(ranked[:4]):
         body = (item.content or item.summary or "").strip()
-        body = re.sub(r"\n{2,}", "\n", body)[:1400]
+        body = re.sub(r"\n{2,}", "\n", body)[:700]
         blocks.append(
             f"[{i+1}] 출처: {item.source}\n제목: {item.title}\n본문:\n{body}"
         )
@@ -282,7 +283,7 @@ def generate(
     primary_model = "llama-3.3-70b-versatile"
     fallback_model = "llama-3.1-8b-instant"
 
-    def _call(model: str):
+    def _call(model: str, max_toks: int = 3000):
         return client.chat.completions.create(
             model=model,
             messages=[
@@ -297,18 +298,31 @@ def generate(
                 {"role": "user", "content": prompt},
             ],
             temperature=0.45,
-            max_tokens=6000,
+            max_tokens=max_toks,
             response_format={"type": "json_object"},
         )
 
-    try:
-        response = _call(primary_model)
-    except Exception as e:
-        if "rate_limit" in str(e) or "429" in str(e):
-            log.warning("%s 한도 초과 → 폴백 모델(%s)", primary_model, fallback_model)
-            response = _call(fallback_model)
-        else:
+    # 무료 등급 한도(TPM/RPM) 대응: 429는 대기 후 재시도, 413(크기 초과)은 더 작게 재시도,
+    # 그래도 안 되면 경량 폴백 모델로.
+    def _generate_with_retry():
+        try:
+            return _call(primary_model)
+        except Exception as e:
+            s = str(e).lower()
+            if "429" in s or "rate_limit" in s:
+                log.warning("%s 한도(429) → 25초 대기 후 재시도", primary_model)
+                time.sleep(25)
+                try:
+                    return _call(primary_model)
+                except Exception as e2:
+                    log.warning("재시도 실패 → 폴백(%s)", fallback_model)
+                    return _call(fallback_model, 2000)
+            if "413" in s or "too large" in s:
+                log.warning("요청 크기 초과(413) → 축소 재시도")
+                return _call(primary_model, 2000)
             raise
+
+    response = _generate_with_retry()
 
     raw = response.choices[0].message.content.strip()
     raw = re.sub(r"^```json\s*", "", raw)
