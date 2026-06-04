@@ -6,3 +6,4 @@ gem "jekyll-sitemap"
 gem "jekyll-seo-tag"
 gem "jekyll-paginate"
 gem "webrick"
+gem 'wdm', '>= 0.1.0'

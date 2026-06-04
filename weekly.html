@@ -17,32 +17,32 @@ permalink: /weekly/
 </div>
 
 <div class="feed">
-  {% assign sections = "domestic,world,curious,policy" | split: "," %}
+  {% assign sections = "policy,youth,data,curious" | split: "," %}
   {% assign total = 0 %}
   {% for sec in sections %}
     {% case sec %}
-      {% when 'domestic' %}{% assign sec_label = '국내 핫뉴스' %}{% assign sec_emoji = '🇰🇷' %}
-      {% when 'world' %}{% assign sec_label = '해외 핫뉴스' %}{% assign sec_emoji = '🌐' %}
+      {% when 'policy' %}{% assign sec_label = '국내 정책' %}{% assign sec_emoji = '🏛' %}
+      {% when 'youth' %}{% assign sec_label = '청년 정책' %}{% assign sec_emoji = '🧑‍🎓' %}
+      {% when 'data' %}{% assign sec_label = '통계·생활정보' %}{% assign sec_emoji = '📊' %}
       {% when 'curious' %}{% assign sec_label = '흥미로운 발견' %}{% assign sec_emoji = '✨' %}
-      {% when 'policy' %}{% assign sec_label = '정부·청년 정책' %}{% assign sec_emoji = '🏛' %}
     {% endcase %}
 
     {% capture cards %}
       {% for post in site.posts %}
         {% assign post_s = post.date | date: "%s" | plus: 0 %}
         {% if post_s > cutoff and post.categories contains sec %}
-        <a href="{{ post.url | relative_url }}" class="post-card">
+        <a href="{{ post.url | relative_url }}" class="post-card cn" data-cat="{{ sec }}">
           <div class="card-inner">
-            <div class="card-accent {{ sec }}"></div>
+            <div class="card-accent"></div>
             <div class="card-body">
               <div class="card-top">
-                <h2 class="card-title {{ sec }}">{{ post.title }}</h2>
+                <h2 class="card-title">{{ post.title }}</h2>
                 <span class="card-num">{{ post.date | date: "%m.%d" }}</span>
               </div>
               {% if post.summary %}<p class="card-desc">{{ post.summary }}</p>{% endif %}
               <div class="card-footer">
                 <div class="card-meta"><span>{% include reading-time.html content=post.content %}</span></div>
-                <span class="card-cta {{ sec }}">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>
+                <span class="card-cta">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>
               </div>
             </div>
           </div>

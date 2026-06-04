@@ -42,10 +42,13 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           POST_DATE: ${{ github.event.inputs.post_date }}
           DRY_RUN: ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
+          TZ: Asia/Seoul
         run: python scripts/run_all.py
 
       - name: Commit new posts
         if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          TZ: Asia/Seoul
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -64,9 +67,11 @@ jobs:
           bundler-cache: true
 
       - name: Build Jekyll (검증용)
-        run: bundle exec jekyll build --destination _site_check
+        run: bundle exec jekyll build --destination _site_check --future
         env:
           JEKYLL_ENV: production
+          # 러너는 UTC이므로 빌드 '현재 시각'도 KST로 맞춰 당일 포스트 누락을 방지
+          TZ: Asia/Seoul
 
       - name: Deploy to GitHub Pages
         if: ${{ github.event.inputs.dry_run != 'true' }}

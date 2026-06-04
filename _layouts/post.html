@@ -27,14 +27,16 @@ layout: default
 
 <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
 
-<div class="post-hero">
+<div class="post-hero cn" data-cat="{{ cat }}">
   <div class="post-hero-inner">
     <div class="post-hero-top">
       <a href="{{ '/' | relative_url }}" class="back-link">← 홈으로</a>
-      {% if cat %}
-      <span class="post-cat-badge {{ cat }}">{% include category-label.html category=cat %}</span>
-      {% endif %}
     </div>
+    {% if cat %}
+    <div class="post-hero-cat">
+      <span class="post-cat-badge {{ cat }}">{% include category-label.html category=cat %}</span>
+    </div>
+    {% endif %}
     <h1 class="post-title">{{ page.title }}</h1>
     {% if page.summary %}<p class="post-summary">{{ page.summary }}</p>{% endif %}
     <div class="post-meta-row">
@@ -46,7 +48,7 @@ layout: default
 </div>
 
 <div class="post-content-wrap">
-  <nav class="post-toc" id="post-toc" hidden>
+  <nav class="post-toc cn" id="post-toc" data-cat="{{ page.categories.first }}" hidden>
     <div class="post-toc-title"><i class="ti ti-list" aria-hidden="true"></i> 목차</div>
     <ol id="post-toc-list"></ol>
   </nav>

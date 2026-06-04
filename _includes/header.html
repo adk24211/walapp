@@ -5,14 +5,13 @@
       <span class="logo-text">Walapp</span>
     </a>
     <div class="header-right">
+      <a href="{{ '/archive/' | relative_url }}" class="header-link">아카이브</a>
+      <button class="theme-btn" id="theme-btn" aria-label="다크모드로 전환" hidden style="display:none">
+        <i class="ti ti-moon" aria-hidden="true"></i>
+      </button>
       <a href="{{ '/search/' | relative_url }}" class="theme-btn" aria-label="검색">
         <i class="ti ti-search" aria-hidden="true"></i>
       </a>
-      <a href="{{ '/guide/' | relative_url }}" class="header-link">정책가이드</a>
-      <a href="{{ '/archive/' | relative_url }}" class="header-link">아카이브</a>
-      <button class="theme-btn" id="theme-btn" aria-label="다크모드로 전환">
-        <i class="ti ti-moon" aria-hidden="true"></i>
-      </button>
     </div>
   </div>
 </header>

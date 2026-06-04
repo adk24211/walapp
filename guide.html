@@ -4,7 +4,7 @@ title: 청년 정책·지원금 총정리
 permalink: /guide/
 ---
 
-{% assign policy_posts = site.posts | where_exp: "p", "p.categories contains 'policy'" %}
+{% assign policy_posts = site.posts | where_exp: "p", "p.categories contains 'youth'" %}
 
 <div class="page-header">
   <div class="ph-top">
@@ -46,7 +46,7 @@ permalink: /guide/
   </div>
 
   <div class="section-label">
-    <span class="sec-tag policy">📋 최신 정책 브리핑</span>
+    <span class="sec-tag youth">📋 최신 청년 정책 브리핑</span>
     <div class="sec-rule"></div>
     <span class="sec-count">{{ policy_posts | size }}개</span>
   </div>
@@ -54,18 +54,18 @@ permalink: /guide/
   {% if policy_posts.size > 0 %}
   <div class="cards">
     {% for post in policy_posts %}
-    <a href="{{ post.url | relative_url }}" class="post-card">
+    <a href="{{ post.url | relative_url }}" class="post-card cn" data-cat="youth">
       <div class="card-inner">
-        <div class="card-accent policy"></div>
+        <div class="card-accent"></div>
         <div class="card-body">
           <div class="card-top">
-            <h2 class="card-title policy">{{ post.title }}</h2>
+            <h2 class="card-title">{{ post.title }}</h2>
             <span class="card-num">{{ post.date | date: "%m.%d" }}</span>
           </div>
           {% if post.summary %}<p class="card-desc">{{ post.summary }}</p>{% endif %}
           <div class="card-footer">
             <div class="card-meta"><span>{% include reading-time.html content=post.content %}</span></div>
-            <span class="card-cta policy">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>
+            <span class="card-cta">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>
           </div>
         </div>
       </div>

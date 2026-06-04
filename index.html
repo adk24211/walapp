@@ -1,61 +1,39 @@
 ---
 layout: default
-title: 오늘의 국내·해외 핫뉴스와 청년 정책
+title: 오늘의 국내 정책·청년 정책·생활 통계 브리핑
 ---
 
 {% assign all_posts = site.posts %}
-{% assign domestic_posts = all_posts | where_exp: "p", "p.categories contains 'domestic'" %}
-{% assign world_posts    = all_posts | where_exp: "p", "p.categories contains 'world'" %}
-{% assign curious_posts  = all_posts | where_exp: "p", "p.categories contains 'curious'" %}
-{% assign policy_posts   = all_posts | where_exp: "p", "p.categories contains 'policy'" %}
+{% assign policy_posts  = all_posts | where_exp: "p", "p.categories contains 'policy'" %}
+{% assign youth_posts   = all_posts | where_exp: "p", "p.categories contains 'youth'" %}
+{% assign data_posts    = all_posts | where_exp: "p", "p.categories contains 'data'" %}
+{% assign curious_posts = all_posts | where_exp: "p", "p.categories contains 'curious'" %}
 
 <div class="page-header">
   <div class="ph-top">
     <span class="ph-issue">Daily Brief</span>
     <span class="ph-date">{{ 'now' | date: "%Y년 %m월 %d일" }}</span>
   </div>
-  {% assign featured = site.posts.first %}
-  {% if featured %}
-  <h1 class="ph-title">{{ featured.headline | default: "오늘의 주요 뉴스" }}</h1>
-  <p class="ph-sub">국내·해외 핫뉴스부터 흥미로운 발견, 청년 정책까지 — 매일 아침 핵심만 모아 전합니다.</p>
-  {% endif %}
+  <p class="ph-sub">국내 정책과 청년 지원, 생활 통계부터 흥미로운 발견까지 — 공공·1차 자료를 토대로 핵심만 쉽게 정리해 전하는 브리핑입니다.</p>
 </div>
-
-{% if featured %}
-{% assign fcat = featured.categories | first %}
-<a href="{{ featured.url | relative_url }}" class="hero-card {{ fcat }}">
-  <div class="hero-tag-row">
-    <span class="sec-tag {{ fcat }}">{% include category-label.html category=fcat %}</span>
-    <span class="hero-badge">오늘의 헤드라인</span>
-  </div>
-  <h2 class="hero-title">{{ featured.title }}</h2>
-  {% if featured.summary %}<p class="hero-desc">{{ featured.summary }}</p>{% endif %}
-  <div class="hero-meta">
-    <span>{{ featured.date | date: "%Y.%m.%d" }}</span>
-    <span class="meta-dot"></span>
-    <span>{% include reading-time.html content=featured.content %}</span>
-    <span class="hero-cta">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:13px"></i></span>
-  </div>
-</a>
-{% endif %}
 
 <div class="tab-bar">
   <button class="tab-btn active" data-filter="all">전체</button>
-  <button class="tab-btn" data-filter="domestic">🇰🇷 국내</button>
-  <button class="tab-btn" data-filter="world">🌐 해외</button>
+  <button class="tab-btn" data-filter="policy">🏛 국내 정책</button>
+  <button class="tab-btn" data-filter="youth">🧑‍🎓 청년 정책</button>
+  <button class="tab-btn" data-filter="data">📊 통계·생활</button>
   <button class="tab-btn" data-filter="curious">✨ 흥미로운 발견</button>
-  <button class="tab-btn" data-filter="policy">🏛 청년 정책</button>
 </div>
 
 <div class="feed">
 
-  {% assign sections = "domestic,world,curious,policy" | split: "," %}
+  {% assign sections = "policy,youth,data,curious" | split: "," %}
   {% for sec in sections %}
     {% case sec %}
-      {% when 'domestic' %}{% assign sec_posts = domestic_posts %}{% assign sec_label = '국내 핫뉴스' %}{% assign sec_emoji = '🇰🇷' %}
-      {% when 'world' %}{% assign sec_posts = world_posts %}{% assign sec_label = '해외 핫뉴스' %}{% assign sec_emoji = '🌐' %}
+      {% when 'policy' %}{% assign sec_posts = policy_posts %}{% assign sec_label = '국내 정책' %}{% assign sec_emoji = '🏛' %}
+      {% when 'youth' %}{% assign sec_posts = youth_posts %}{% assign sec_label = '청년 정책' %}{% assign sec_emoji = '🧑‍🎓' %}
+      {% when 'data' %}{% assign sec_posts = data_posts %}{% assign sec_label = '통계·생활정보' %}{% assign sec_emoji = '📊' %}
       {% when 'curious' %}{% assign sec_posts = curious_posts %}{% assign sec_label = '흥미로운 발견' %}{% assign sec_emoji = '✨' %}
-      {% when 'policy' %}{% assign sec_posts = policy_posts %}{% assign sec_label = '정부·청년 정책' %}{% assign sec_emoji = '🏛' %}
     {% endcase %}
 
     {% if sec_posts.size > 0 %}
@@ -68,12 +46,12 @@ title: 오늘의 국내·해외 핫뉴스와 청년 정책
       <div class="cards">
         {% for post in sec_posts limit: 8 %}
         {% assign loop_index = forloop.index | prepend: "0" | slice: -2, 2 %}
-        <a href="{{ post.url | relative_url }}" class="post-card">
+        <a href="{{ post.url | relative_url }}" class="post-card cn" data-cat="{{ sec }}">
           <div class="card-inner">
-            <div class="card-accent {{ sec }}"></div>
+            <div class="card-accent"></div>
             <div class="card-body">
               <div class="card-top">
-                <h2 class="card-title {{ sec }}">{{ post.title }}</h2>
+                <h2 class="card-title">{{ post.title }}</h2>
                 <span class="card-num">{{ loop_index }}</span>
               </div>
               {% if post.summary %}
@@ -89,7 +67,7 @@ title: 오늘의 국내·해외 핫뉴스와 청년 정책
                   <span class="meta-dot"></span>
                   <span>{{ post.date | date: "%Y.%m.%d" }}</span>
                 </div>
-                <span class="card-cta {{ sec }}">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>
+                <span class="card-cta">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>
               </div>
             </div>
           </div>

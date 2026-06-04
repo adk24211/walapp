@@ -15,12 +15,12 @@
   <div class="cards">
     {% for post in cposts %}
     {% assign loop_index = forloop.index | prepend: "0" | slice: -2, 2 %}
-    <a href="{{ post.url | relative_url }}" class="post-card">
+    <a href="{{ post.url | relative_url }}" class="post-card cn" data-cat="{{ thecat }}">
       <div class="card-inner">
-        <div class="card-accent {{ thecat }}"></div>
+        <div class="card-accent"></div>
         <div class="card-body">
           <div class="card-top">
-            <h2 class="card-title {{ thecat }}">{{ post.title }}</h2>
+            <h2 class="card-title">{{ post.title }}</h2>
             <span class="card-num">{{ loop_index }}</span>
           </div>
           {% if post.summary %}<p class="card-desc">{{ post.summary }}</p>{% endif %}
@@ -34,7 +34,7 @@
               <span class="meta-dot"></span>
               <span>{{ post.date | date: "%Y.%m.%d" }}</span>
             </div>
-            <span class="card-cta {{ thecat }}">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>
+            <span class="card-cta">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>
           </div>
         </div>
       </div>
