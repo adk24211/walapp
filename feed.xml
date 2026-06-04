@@ -1,8 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml" /><link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html" hreflang="ko" /><updated>2026-06-05T00:22:02+09:00</updated><id>https://adk24211.github.io/walapp/feed.xml</id><title type="html">Walapp</title><subtitle>국내 정책·청년 정책·생활 통계부터 흥미로운 발견까지, 공공·1차 자료를 토대로 매일 아침 핵심만 쉽게 정리해 전하는 브리핑입니다.</subtitle><author><name>Walapp</name></author><entry><title type="html">과학의 새로운 발견</title><link href="https://adk24211.github.io/walapp/curious/2026/06/05/curious/" rel="alternate" type="text/html" title="과학의 새로운 발견" /><published>2026-06-05T07:03:00+09:00</published><updated>2026-06-05T07:03:00+09:00</updated><id>https://adk24211.github.io/walapp/curious/2026/06/05/curious</id><content type="html" xml:base="https://adk24211.github.io/walapp/curious/2026/06/05/curious/"><![CDATA[<div class="cn" data-cat="curious">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml" /><link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html" hreflang="ko" /><updated>2026-06-05T00:36:21+09:00</updated><id>https://adk24211.github.io/walapp/feed.xml</id><title type="html">Walapp</title><subtitle>국내 정책·청년 정책·생활 통계부터 흥미로운 발견까지, 공공·1차 자료를 토대로 매일 아침 핵심만 쉽게 정리해 전하는 브리핑입니다.</subtitle><author><name>Walapp</name></author><entry><title type="html">과학적 발견의 재미</title><link href="https://adk24211.github.io/walapp/curious/2026/06/05/curious/" rel="alternate" type="text/html" title="과학적 발견의 재미" /><published>2026-06-05T07:03:00+09:00</published><updated>2026-06-05T07:03:00+09:00</updated><id>https://adk24211.github.io/walapp/curious/2026/06/05/curious</id><content type="html" xml:base="https://adk24211.github.io/walapp/curious/2026/06/05/curious/"><![CDATA[<div class="cn" data-cat="curious">
 
 <div class="cn cn-lead" data-cat="curious">
   <span class="cn-lead-icon"><i class="ti ti-bulb"></i></span>
-  <p>새로운 과학적 발견과 신기술이 매일 발표됩니다. 이 글에서 이러한 새로운 발견을 더 자세히 알아보겠습니다.</p>
+  <p>과학적 발견과 신기술에 대한 흥미로운 이야기를 만나보세요. 새로운 발견과 기술에 대한 정보를 제공합니다.</p>
+</div>
+
+<div class="cn cn-stats" data-cat="curious">
+  <div class="cn-stat"><span class="cn-stat-num">16%</span><span class="cn-stat-label">금연의 치매 예방 효과</span></div>
+  <div class="cn-stat"><span class="cn-stat-num">45세</span><span class="cn-stat-label">대장암 검진 대상 연령</span></div>
+</div>
+
+<h2 class="cn-h">한눈에 보기</h2>
+<div class="cn cn-table" data-cat="curious">
+<table>
+  <thead>
+    <tr><th>구분</th><th>일반형</th><th>우대형</th></tr>
+  </thead>
+  <tbody>
+    <tr><th>정부 기여금</th><td>월 6%</td><td>월 12%</td></tr>
+    <tr><th>소득 요건</th><td>6,000만 원 이하</td><td>3,600만 원 이하</td></tr>
+  </tbody>
+</table>
 </div>
 
 <h2 class="cn-h">핵심 정리</h2>
@@ -10,41 +28,66 @@
   <div class="cn-step">
     <span class="cn-step-no">1</span>
     <div class="cn-step-body">
-      <h4>그립력과 수명</h4>
-      <p>과학적 연구에 따르면, 우리의 그립력이 수명과한 관련이 있습니다. 연구에 참여한 사람들의 그립력을 측정한 결과, 그립력이 약한 사람들의 수명이 짧은 것으로 나타났습니다. 이러한 연구 결과는 우리의 건강과 관련된 다양한 요인 중 하나임을 시사합니다. 또한, 이러한 연구는 우리가 건강을 유지하고, 수명을 연장하는 데 도움이 될 수 있습니다. 이러한 연구 결과를 통해, 우리의 삶을 더 건강하고 행복하게 만들기 위한 다양한 노력을 기울여야 합니다.</p>
+      <h4>과학적 발견의 재미</h4>
+      <p>과학적 발견과 신기술에 대한 흥미로운 이야기를 만나보세요. 새로운 발견과 기술에 대한 정보를 제공합니다. 과학적 발견은 우리의 삶을 더 편리하고 안전하게 만들 수 있습니다. 예를 들어, 금연은 치매의 위험을 16%까지 줄일 수 있습니다. 또한, 대장암 검진은 45세부터 시작해야 합니다. 이러한 과학적 발견과 기술은 우리의 건강과 삶의 질을 향상시킬 수 있습니다.</p>
     </div>
   </div>
   <div class="cn-step">
     <span class="cn-step-no">2</span>
     <div class="cn-step-body">
-      <h4>생활 양식과 치매 위험</h4>
-      <p>최근 연구에 따르면, certains한 생활 양식의 변경이 치매 위험을 16%까지 낮출 수 있다고 합니다. 이러한 연구 결과는 우리가 생활 양식에 대해 다시 생각해 볼 필요성을 제기합니다. 특히, 규칙적인 운동과 건강한 식습관, 충분한 휴식이 치매 위험을 낮추는 데 도움이 될 수 있습니다. 이러한 연구 결과를 통해, 우리가 더 건강하고 행복한 삶을 살기 위한 노력을 기울여야 합니다.</p>
+      <h4>신기술의 발전</h4>
+      <p>신기술의 발전은 우리의 삶을 더 편리하고 안전하게 만들 수 있습니다. 예를 들어, 자율 주행 자동차는 교통 사고의 위험을 줄일 수 있습니다. 또한, 인공지능은 의료 분야에서 질병을 진단하고 치료하는 데 도움이 될 수 있습니다. 이러한 신기술은 우리의 삶을 더 편리하고 안전하게 만들 수 있습니다.</p>
     </div>
   </div>
   <div class="cn-step">
     <span class="cn-step-no">3</span>
     <div class="cn-step-body">
-      <h4>나사의 생물학적 시계</h4>
-      <p>새로운 연구에 따르면, 나사의 생물학적 시계가 발명되었습니다. 이러한 시계는 나사의를 측정하여, 언제 사망할지 예측할 수 있습니다. 이러한 기술은 다양한 분야에서 이용될 수 있을 것입니다. 특히, 이러한 기술은 의학 분야에서 이용되어, 나사의 건강 상태를 더 정확하게 측정할 수 있을 것입니다.</p>
+      <h4>과학적 발견의 중요성</h4>
+      <p>과학적 발견은 우리의 삶을 더 편리하고 안전하게 만들 수 있습니다. 과학적 발견은 새로운 기술과 제품의 개발을 가능하게 합니다. 또한, 과학적 발견은 우리의 건강과 삶의 질을 향상시킬 수 있습니다. 예를 들어, 과학적 발견은 새로운 질병의 치료법을 개발하는 데 도움이 될 수 있습니다. 이러한 과학적 발견은 우리의 삶을 더 편리하고 안전하게 만들 수 있습니다.</p>
     </div>
   </div>
 </div>
 
+<h2 class="cn-h">확인 체크리스트</h2>
+<ul class="cn cn-check" data-cat="curious">
+  <li>과학적 발견의 중요성을 이해하세요</li>
+  <li>신기술의 발전을 주목하세요</li>
+  <li>과학적 발견의 재미를 즐겨보세요</li>
+</ul>
+
+<h2 class="cn-h">일정·절차</h2>
+<ul class="cn cn-timeline" data-cat="curious">
+  <li><span class="cn-tl-when">2026년 6월</span><span class="cn-tl-what">새로운 과학적 발견의 발표</span></li>
+  <li><span class="cn-tl-when">2026년 7월</span><span class="cn-tl-what">신기술의 발전</span></li>
+</ul>
+
+<h2 class="cn-h">자주 묻는 질문</h2>
+<div class="cn cn-faq" data-cat="curious">
+  <details>
+    <summary>과학적 발견의 중요성은 무엇인가요?</summary>
+    <div class="cn-faq-body">과학적 발견은 우리의 삶을 더 편리하고 안전하게 만들 수 있습니다. 새로운 기술과 제품의 개발을 가능하게 합니다.</div>
+  </details>
+  <details>
+    <summary>신기술의 발전은 무엇인가요?</summary>
+    <div class="cn-faq-body">신기술의 발전은 우리의 삶을 더 편리하고 안전하게 만들 수 있습니다. 예를 들어, 자율 주행 자동차와 인공지능은 우리의 삶을 더 편리하고 안전하게 만들 수 있습니다.</div>
+  </details>
+</div>
+
 <div class="cn cn-quote" data-cat="curious">
-  과학은 우리의 삶을 더 편리하고 행복하게 만듭니다.
+  과학적 발견과 신기술은 우리의 삶을 더 편리하고 안전하게 만들 수 있습니다.
 </div>
 
 <div class="cn cn-note" data-cat="curious">
   <i class="ti ti-alert-triangle"></i>
-  <p>이 글의 내용은 과학적 연구에 기반하여 작성되었습니다.</p>
+  <p>과학적 발견과 신기술에 대한 정보를 제공합니다. 새로운 발견과 기술에 대한 정보를 제공합니다.</p>
 </div>
 
 <div class="cn cn-source" data-cat="curious">
-  <span class="cn-source-tag">출처표시</span>
-  <p><a href="https://www.sciencealert.com/your-grip-strength-says-a-lot-about-how-long-you-might-live" target="_blank" rel="noopener">ScienceAlert</a> · 공공누리 제1유형. 위 내용은 공공 발표 자료의 사실·수치를 토대로 본 사이트가 직접 재구성·해설한 것입니다.</p>
+  <span class="cn-source-tag">출처</span>
+  <p><a href="https://www.sciencealert.com/your-grip-strength-says-a-lot-about-how-long-you-might-live" target="_blank" rel="noopener">ScienceAlert</a>. 위 내용은 해당 자료를 참고하여 본 사이트가 직접 재구성·해설한 것입니다.</p>
 </div>
 
-</div>]]></content><author><name>Walapp</name></author><category term="curious" /><category term="과학" /><category term="신기술" /><category term="발견" /><summary type="html"><![CDATA[]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" /><media:content medium="image" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">5월 소비자물가 3.1% 올랐다</title><link href="https://adk24211.github.io/walapp/data/2026/06/04/data/" rel="alternate" type="text/html" title="5월 소비자물가 3.1% 올랐다" /><published>2026-06-04T07:02:00+09:00</published><updated>2026-06-04T07:02:00+09:00</updated><id>https://adk24211.github.io/walapp/data/2026/06/04/data</id><content type="html" xml:base="https://adk24211.github.io/walapp/data/2026/06/04/data/"><![CDATA[<div class="cn" data-cat="data">
+</div>]]></content><author><name>Walapp</name></author><category term="curious" /><category term="과학적 발견" /><category term="신기술" /><category term="흥미로운 이야기" /><summary type="html"><![CDATA[]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" /><media:content medium="image" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">5월 소비자물가 3.1% 올랐다</title><link href="https://adk24211.github.io/walapp/data/2026/06/04/data/" rel="alternate" type="text/html" title="5월 소비자물가 3.1% 올랐다" /><published>2026-06-04T07:02:00+09:00</published><updated>2026-06-04T07:02:00+09:00</updated><id>https://adk24211.github.io/walapp/data/2026/06/04/data</id><content type="html" xml:base="https://adk24211.github.io/walapp/data/2026/06/04/data/"><![CDATA[<div class="cn" data-cat="data">
 
 <div class="cn cn-lead" data-cat="data">
   <span class="cn-lead-icon"><i class="ti ti-chart-bar"></i></span>
@@ -120,46 +163,7 @@
   <p><a href="https://www.korea.kr/briefing/policyBriefingView.do?newsId=156764864" target="_blank" rel="noopener">대한민국 정책브리핑(korea.kr)</a> · 공공누리 제1유형. 위 내용은 공공 발표 자료의 사실·수치를 토대로 본 사이트가 직접 재구성·해설한 것입니다.</p>
 </div>
 
-</div>]]></content><author><name>Walapp</name></author><category term="data" /><category term="소비자물가" /><category term="통계청" /><category term="생활물가" /><summary type="html"><![CDATA[]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" /><media:content medium="image" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">과학의 발견</title><link href="https://adk24211.github.io/walapp/curious/2026/06/03/curious/" rel="alternate" type="text/html" title="과학의 발견" /><published>2026-06-03T07:02:00+09:00</published><updated>2026-06-03T07:02:00+09:00</updated><id>https://adk24211.github.io/walapp/curious/2026/06/03/curious</id><content type="html" xml:base="https://adk24211.github.io/walapp/curious/2026/06/03/curious/"><![CDATA[<div class="summary-box curious">과학적 발견과 신기한 사건들을합니다. 최신 연구와 발견들을 통해 과학적 호기심을 자극하세요.</div>
-<h2 id="고양이의">고양이의</h2>
-<p>고양이가 정신건강에 미치는 영향에 대한 연구가 최근에 발표되었습니다. 이 연구에 따르면, 고양이를 기르면 정신건강에 영향을 미칠 수 있다고 합니다. 그러나, 일부 연구에 따르면 고양이를 기르면 정신병의 위험이 증가할 수 있다고 합니다.</p>
-<h2 id="새들의">새들의</h2>
-<p>새들이 자위행위를 하는 이유에 대한 연구가 최근에 발표되었습니다. 이 연구에 따르면, 새들이 자위행위를 하는 이유는 진화의 이유로 설명될 수 있다고 합니다.</p>
-<h2 id="엘니뇨의">엘니뇨의</h2>
-<p>엘니뇨이 다시 발생할 수 있다는.Warning이 최근에되었습니다. 이 Warning에 따르면, 엘니뇨이 발생하면 극한 날씨에 영향을 미칠 수 있다고 합니다.</p>
-<h2 id="뼈마디통증의-위험">뼈마디통증의 위험</h2>
-<p>뼈마디통증을 치료하기 위한 약물이 최근에 개발되었습니다. 그러나, 이 약물이 정신건강에을 미칠 수 있다는 연구결과가 발표되었습니다.</p>
-<h2 id="미세조류의">미세조류의</h2>
-<p>미세조류가 인간의 건강에 좋은 영향을 미칠 수 있다는 연구결과가 최근에 발표되었습니다. 이 연구결과에 따르면, 미세조류는 인간의 정신건강과 신체건강에 영향을 미칠 수 있다고 합니다.
-과학적 발견과 신기한 사건들을 통해 과학적 호기심을 자극하고, 새로운 세계로 떠나보세요.</p>]]></content><author><name>Walapp</name></author><category term="curious" /><category term="과학" /><category term="최신 발견" /><category term="신기함" /><summary type="html"><![CDATA[과학적 발견과 신기한 사건들을합니다. 최신 연구와 발견들을 통해 과학적 호기심을 자극하세요. 고양이의 고양이가 정신건강에 미치는 영향에 대한 연구가 최근에 발표되었습니다. 이 연구에 따르면, 고양이를 기르면 정신건강에 영향을 미칠 수 있다고 합니다. 그러나, 일부 연구에 따르면 고양이를 기르면 정신병의 위험이 증가할 수 있다고 합니다. 새들의 새들이 자위행위를 하는 이유에 대한 연구가 최근에 발표되었습니다. 이 연구에 따르면, 새들이 자위행위를 하는 이유는 진화의 이유로 설명될 수 있다고 합니다. 엘니뇨의 엘니뇨이 다시 발생할 수 있다는.Warning이 최근에되었습니다. 이 Warning에 따르면, 엘니뇨이 발생하면 극한 날씨에 영향을 미칠 수 있다고 합니다. 뼈마디통증의 위험 뼈마디통증을 치료하기 위한 약물이 최근에 개발되었습니다. 그러나, 이 약물이 정신건강에을 미칠 수 있다는 연구결과가 발표되었습니다. 미세조류의 미세조류가 인간의 건강에 좋은 영향을 미칠 수 있다는 연구결과가 최근에 발표되었습니다. 이 연구결과에 따르면, 미세조류는 인간의 정신건강과 신체건강에 영향을 미칠 수 있다고 합니다. 과학적 발견과 신기한 사건들을 통해 과학적 호기심을 자극하고, 새로운 세계로 떠나보세요.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" /><media:content medium="image" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">2026년 6월 3일 해외 핫뉴스</title><link href="https://adk24211.github.io/walapp/world/2026/06/03/world/" rel="alternate" type="text/html" title="2026년 6월 3일 해외 핫뉴스" /><published>2026-06-03T07:01:00+09:00</published><updated>2026-06-03T07:01:00+09:00</updated><id>https://adk24211.github.io/walapp/world/2026/06/03/world</id><content type="html" xml:base="https://adk24211.github.io/walapp/world/2026/06/03/world/"><![CDATA[<div class="summary-box world">2026년 6월 3일, 세계는 사건들이 발생했다. 이란은 의 공격에 대한 보복으로 쿠웨이트의 키우트 공항을 공격했다. 한편, 는 유엔 안전보장이사회 의석을 획득하지 못했다.</div>
-<h2 id="한눈에-보기">한눈에 보기</h2>
-<p>| 이슈 | 핵심 내용 | 한국·세계에 미치는 영향 |
-| — | — | — |
-| 이란의 키우트 공항 공격 | 이란, 의 공격에 대한 보복으로 키우트 공항 공격 | 중동 지역의 긴장이 고조될수록 유가 상승과 함께 글로벌 경제에 부정적인 영향을 미칠 수 있다. |
-| 의 유엔 안전보장이사회 의석 실패 | , 유엔 안전보장이사회 의석을 획득하지 못했다. | 유럽의 대세력국인 의 영향력 감소와 함께 국제 사회에서의 균형이 흐트러질 수 있다. |</p>
-
-<h2 id="이란의-키우트-공항-공격">이란의 키우트 공항 공격</h2>
-<p>이란은 의 공격에 대한 보복으로 쿠웨이트의 키우트 공항을 공격했다. 이란의 공격으로 인해 여러 명의 사상자가 발생했다. 는 이란의 공격에 강력히 항의했다.</p>
-
-<h2 id="의-유엔-안전보장이사회-의석-실패">의 유엔 안전보장이사회 의석 실패</h2>
-<p>는 유엔 안전보장이사회 의석을 획득하지 못했다. 의 실패는 유럽의 대세력국인 의 영향력 감소와 함께 국제 사회에서의 균형이 흐트러질 수 있다.</p>
-
-<h2 id="오늘의-정리">오늘의 정리</h2>
-<p>오늘의 세계 주요 뉴스는 이란의 키우트 공항 공격과 의 유엔 안전보장이사회 의석 실패로 구성되어 있다. 이란의 공격으로 인해 중동 지역의긴장이 고조되어 유가 상승과 함께 글로벌 경제에 부정적인 영향을 미칠 수 있다. 또한, 의 실패는 유럽의 대세력국인 의 영향력 감소와 함께 국제 사회에서의 균형이 흐트러질 수 있다. 이러한 상황에서 한국은 어떻게 대응할 것인지 주목된다.</p>]]></content><author><name>Walapp</name></author><category term="world" /><category term="이란" /><category term="미국" /><category term="유럽" /><category term="핫뉴스" /><summary type="html"><![CDATA[2026년 6월 3일, 세계는 사건들이 발생했다. 이란은 의 공격에 대한 보복으로 쿠웨이트의 키우트 공항을 공격했다. 한편, 는 유엔 안전보장이사회 의석을 획득하지 못했다. 한눈에 보기 | 이슈 | 핵심 내용 | 한국·세계에 미치는 영향 | | — | — | — | | 이란의 키우트 공항 공격 | 이란, 의 공격에 대한 보복으로 키우트 공항 공격 | 중동 지역의 긴장이 고조될수록 유가 상승과 함께 글로벌 경제에 부정적인 영향을 미칠 수 있다. | | 의 유엔 안전보장이사회 의석 실패 | , 유엔 안전보장이사회 의석을 획득하지 못했다. | 유럽의 대세력국인 의 영향력 감소와 함께 국제 사회에서의 균형이 흐트러질 수 있다. |]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" /><media:content medium="image" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">6·3 지방선거 결과 분석</title><link href="https://adk24211.github.io/walapp/domestic/2026/06/03/domestic/" rel="alternate" type="text/html" title="6·3 지방선거 결과 분석" /><published>2026-06-03T07:00:00+09:00</published><updated>2026-06-03T07:00:00+09:00</updated><id>https://adk24211.github.io/walapp/domestic/2026/06/03/domestic</id><content type="html" xml:base="https://adk24211.github.io/walapp/domestic/2026/06/03/domestic/"><![CDATA[<div class="summary-box domestic">6·3 지방선거 결과, 서울시장 선거는 초접전이 진행 중이다. 민주당이 전국적으로 승리했다.</div>
-<h2 id="한눈에-보기">한눈에 보기</h2>
-<p>| 이슈 | 핵심 내용 | 왜 중요한가 |
-| — | — | — |
-| 서울시장 선거 | 정원오 48.62%, 오세훈 48.66% | 초접전이 진행 중 |
-| 광역단체장 선거 | 민주당 12곳, 국민의힘 2곳 승리 | 민주당의 전국적 승리 |
-| 민선9기 | 추미애 경기지사 당선 | 첫 여성 광역단체장 |</p>
-<h2 id="서울시장-선거-현황">서울시장 선거 현황</h2>
-<p>서울시장 선거는 현재 정원오와 오세훈의 초접전이 진행 중이다. 개표율 93.84%에서 정원오는 48.62%, 오세훈은 48.66%를 기록했다. 이는 초접전이 진행 중임을 의미한다.</p>
-<h2 id="광역단체장-선거-결과">광역단체장 선거 결과</h2>
-<p>광역단체장 선거 결과, 민주당이 12곳, 국민의힘은 2곳에서 승리했다. 이는 민주당의 전국적 승리임을 나타낸다.</p>
-<h2 id="민선9기-현황">민선9기 현황</h2>
-<p>민선9기에서는 추미애가 경기지사로 당선되었다. 이는 첫 여성 광역단체장 기록이다.</p>
-<h2 id="오늘의-정리">오늘의 정리</h2>
-<p>6·3 지방선거 결과, 서울시장 선거는 초접전이 진행 중이다. 민주당은 전국적으로 승리했다. 앞으로의 정치 상황이 주목된다.</p>]]></content><author><name>Walapp</name></author><category term="domestic" /><category term="6·3 지방선거" /><category term="서울시장 선거" /><category term="민주당 승리" /><summary type="html"><![CDATA[6·3 지방선거 결과, 서울시장 선거는 초접전이 진행 중이다. 민주당이 전국적으로 승리했다. 한눈에 보기 | 이슈 | 핵심 내용 | 왜 중요한가 | | — | — | — | | 서울시장 선거 | 정원오 48.62%, 오세훈 48.66% | 초접전이 진행 중 | | 광역단체장 선거 | 민주당 12곳, 국민의힘 2곳 승리 | 민주당의 전국적 승리 | | 민선9기 | 추미애 경기지사 당선 | 첫 여성 광역단체장 | 서울시장 선거 현황 서울시장 선거는 현재 정원오와 오세훈의 초접전이 진행 중이다. 개표율 93.84%에서 정원오는 48.62%, 오세훈은 48.66%를 기록했다. 이는 초접전이 진행 중임을 의미한다. 광역단체장 선거 결과 광역단체장 선거 결과, 민주당이 12곳, 국민의힘은 2곳에서 승리했다. 이는 민주당의 전국적 승리임을 나타낸다. 민선9기 현황 민선9기에서는 추미애가 경기지사로 당선되었다. 이는 첫 여성 광역단체장 기록이다. 오늘의 정리 6·3 지방선거 결과, 서울시장 선거는 초접전이 진행 중이다. 민주당은 전국적으로 승리했다. 앞으로의 정치 상황이 주목된다.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" /><media:content medium="image" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">청년미래적금 3년 최대 얼마?</title><link href="https://adk24211.github.io/walapp/youth/2026/06/03/policy-sample/" rel="alternate" type="text/html" title="청년미래적금 3년 최대 얼마?" /><published>2026-06-03T07:00:00+09:00</published><updated>2026-06-03T07:00:00+09:00</updated><id>https://adk24211.github.io/walapp/youth/2026/06/03/policy-sample</id><content type="html" xml:base="https://adk24211.github.io/walapp/youth/2026/06/03/policy-sample/"><![CDATA[<div class="cn" data-cat="youth">
+</div>]]></content><author><name>Walapp</name></author><category term="data" /><category term="소비자물가" /><category term="통계청" /><category term="생활물가" /><summary type="html"><![CDATA[]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" /><media:content medium="image" url="https://adk24211.github.io/walapp/assets/images/logo-full.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">청년미래적금 3년 최대 얼마?</title><link href="https://adk24211.github.io/walapp/youth/2026/06/03/policy-sample/" rel="alternate" type="text/html" title="청년미래적금 3년 최대 얼마?" /><published>2026-06-03T07:00:00+09:00</published><updated>2026-06-03T07:00:00+09:00</updated><id>https://adk24211.github.io/walapp/youth/2026/06/03/policy-sample</id><content type="html" xml:base="https://adk24211.github.io/walapp/youth/2026/06/03/policy-sample/"><![CDATA[<div class="cn" data-cat="youth">
 
 <div class="cn cn-lead" data-cat="youth">
   <span class="cn-lead-icon"><i class="ti ti-pig-money"></i></span>
