@@ -14,7 +14,7 @@ import logging
 from functools import lru_cache
 from urllib.parse import quote_plus
 
-from .base import RawItem, parse_rss, fetch_article_text, dedupe_by_title
+from .base import RawItem, parse_rss, fetch_article_text, dedupe_by_title, _resolve_google_news
 
 log = logging.getLogger(__name__)
 
@@ -98,8 +98,11 @@ def _article_body(url: str) -> str:
 
 
 def _enrich(items: list[RawItem]) -> list[RawItem]:
-    """상위 기사 본문을 받아와 정보 밀도를 높인다."""
+    """상위 기사 본문을 받아와 정보 밀도를 높인다(구글뉴스 링크는 실제 URL로 교체)."""
     for it in items[:ENRICH_TOP]:
+        real = _resolve_google_news(it.url)
+        if real and real != it.url:
+            it.url = real
         body = _article_body(it.url)
         if body and len(body) > len(it.content):
             it.content = body
