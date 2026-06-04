@@ -25,6 +25,9 @@ log = logging.getLogger(__name__)
 
 Category = Literal["policy", "youth", "data", "curious"]
 
+# 공공누리(공공 발표 자료) 출처 표기를 쓰는 카테고리. curious는 해외 매체라 제외.
+PUBLIC_CATS = {"policy", "youth", "data"}
+
 CATEGORY_META = {
     "policy": {
         "jekyll_cat": "policy",
@@ -160,7 +163,7 @@ def _build_prompt(
           "faq": [{"q": "자주 묻는 질문", "a": "존댓말 답변 2~3문장"}],
           "quote": "이 글의 핵심을 한 문장으로 압축한 인용구 (존댓말)",
           "note": "독자가 꼭 확인해야 할 주의·안내 1~2문장 (존댓말)",
-          "source": {"name": "대한민국 정책브리핑(korea.kr)", "license": "공공누리 제1유형"}
+          "source": {"name": "자료를 제공한 기관 또는 매체명"}
         }
 
         === 각 필드 작성 가이드 ===
@@ -173,7 +176,7 @@ def _build_prompt(
         - faq: 독자가 궁금해할 질문 2~4개(q=질문, a=존댓말 답변). 없으면 [] 또는 생략.
         - quote: 글의 핵심을 압축한 한 문장. 없으면 생략 가능.
         - note: 변경 가능성·공식 확인처 안내 등. 없으면 생략 가능.
-        - source: 수집 데이터의 대표 출처 기관명을 name 에 적습니다. license 는 공공자료면 "공공누리 제1유형".
+        - source.name: 자료를 제공한 기관 또는 매체명만 적습니다(예: 대한민국 정책브리핑, ScienceAlert). 출처 문구·링크는 시스템이 자동 처리하므로 license 등은 넣지 않습니다.
         - URL은 어떤 필드에도 넣지 않습니다(보안). 출처 링크는 시스템이 별도로 부착합니다.
         - 모든 값에서 한자·일본어 가나 금지.
     """).strip()
@@ -433,18 +436,25 @@ def _render_components(data: dict, category: Category, source_url: str = "") -> 
             )
         parts += ["</div>", ""]
 
-    # 7) source (공공누리 출처표시)
+    # 7) source — 카테고리에 따라 출처 문구를 다르게 렌더(공공누리는 공공자료에만)
     src = data.get("source") or {}
-    src_name = _esc(src.get("name", "공공 발표 자료"))
-    src_license = _esc(src.get("license", "공공누리 제1유형"))
+    src_name = _esc(src.get("name") or "원자료")
     if source_url:
         name_html = f'<a href="{html.escape(source_url, quote=True)}" target="_blank" rel="noopener">{src_name}</a>'
     else:
         name_html = src_name
+    if cat in PUBLIC_CATS:
+        tag = "출처표시"
+        body = (f'{name_html} · 공공누리 제1유형. 위 내용은 공공 발표 자료의 사실·수치를 '
+                f'토대로 본 사이트가 직접 재구성·해설한 것입니다.')
+    else:
+        tag = "출처"
+        body = (f'{name_html}. 위 내용은 해당 자료를 참고하여 '
+                f'본 사이트가 직접 재구성·해설한 것입니다.')
     parts += [
         f'<div class="cn cn-source" data-cat="{cat}">',
-        '  <span class="cn-source-tag">출처표시</span>',
-        f'  <p>{name_html} · {src_license}. 위 내용은 공공 발표 자료의 사실·수치를 토대로 본 사이트가 직접 재구성·해설한 것입니다.</p>',
+        f'  <span class="cn-source-tag">{tag}</span>',
+        f'  <p>{body}</p>',
         "</div>",
         "",
         "</div>",

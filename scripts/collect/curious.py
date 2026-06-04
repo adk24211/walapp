@@ -8,9 +8,17 @@
 from __future__ import annotations
 
 import logging
-from .base import RawItem, parse_rss, dedupe_by_title
+from functools import lru_cache
+from .base import RawItem, parse_rss, dedupe_by_title, fetch_article_text
 
 log = logging.getLogger(__name__)
+
+ENRICH_TOP = 6  # 본문까지 받아올 상위 기사 수
+
+
+@lru_cache(maxsize=128)
+def _article_body(url: str) -> str:
+    return fetch_article_text(url)
 
 SOURCES = [
     {
@@ -53,10 +61,18 @@ def collect() -> list[RawItem]:
             log.error("수집 실패 [%s]: %s", src["name"], e)
 
     # 정규화 제목 기준 중복 제거
-    unique = dedupe_by_title(all_items)
+    unique = dedupe_by_title(all_items)[:10]
+
+    # 상위 기사 본문 보강 — RSS 요약만으로는 번역·재구성 품질이 낮아지기 때문
+    for it in unique[:ENRICH_TOP]:
+        body = _article_body(it.url)
+        if body and len(body) > len(it.content):
+            it.content = body
+            if len(it.summary) < 120:
+                it.summary = body[:300]
 
     log.info("흥미로운 발견 수집 완료: 전체 %d건 → 중복 제거 %d건", len(all_items), len(unique))
-    return unique[:12]
+    return unique
 
 
 if __name__ == "__main__":
