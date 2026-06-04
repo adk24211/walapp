@@ -18,6 +18,10 @@
     gtag('config', '{{ site.google_analytics }}');
   </script>
   {% endif %}
+  {% if site.google_adsense and site.google_adsense != "" %}
+  <!-- Google AdSense (자동 광고) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.google_adsense }}" crossorigin="anonymous"></script>
+  {% endif %}
   <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
   <link rel="shortcut icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>

@@ -32,6 +32,10 @@ google_site_verification: "5IRKXouoxlQsJLyugZIoOCw7sXlWB-mYV9Trnlm88a4"
 # Google Analytics(GA4) 측정 ID. 값을 넣으면 추적 스크립트 자동 삽입.
 google_analytics: "G-NS58PGSBFP"
 
+# Google AdSense 게시자 ID (예: "ca-pub-1234567890123456").
+# 값을 넣으면 자동 광고(Auto ads) 스크립트와 ads.txt 가 자동 적용된다.
+google_adsense: ""
+
 markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:year/:month/:day/:title/
