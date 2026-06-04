@@ -14,13 +14,10 @@ title: 오늘의 국내 정책·청년 정책·생활 통계 브리핑
     <span class="ph-issue">Daily Brief</span>
     <span class="ph-date">{{ 'now' | date: "%Y년 %m월 %d일" }}</span>
   </div>
-  {% assign featured = site.posts.first %}
-  {% if featured %}
-  <h1 class="ph-title">{{ featured.headline | default: "오늘의 정책 브리핑" }}</h1>
-  <p class="ph-sub">국내 정책과 청년 지원, 생활 통계부터 흥미로운 발견까지 — 공공·1차 자료를 토대로 매일 아침 정리해 전합니다.</p>
-  {% endif %}
+  <p class="ph-sub">국내 정책과 청년 지원, 생활 통계부터 흥미로운 발견까지 — 공공·1차 자료를 토대로 핵심만 쉽게 정리해 전하는 브리핑입니다.</p>
 </div>
 
+{% assign featured = site.posts.first %}
 {% if featured %}
 {% assign fcat = featured.categories | first %}
 <a href="{{ featured.url | relative_url }}" class="hero-card {{ fcat }}">
@@ -73,9 +70,9 @@ title: 오늘의 국내 정책·청년 정책·생활 통계 브리핑
             <div class="card-accent"></div>
             <div class="card-body">
               <div class="card-top">
+                <h2 class="card-title">{{ post.title }}</h2>
                 <span class="card-num">{{ loop_index }}</span>
               </div>
-              <h2 class="card-title">{{ post.title }}</h2>
               {% if post.summary %}
               <p class="card-desc">{{ post.summary }}</p>
               {% endif %}

@@ -20,9 +20,9 @@
         <div class="card-accent"></div>
         <div class="card-body">
           <div class="card-top">
+            <h2 class="card-title">{{ post.title }}</h2>
             <span class="card-num">{{ loop_index }}</span>
           </div>
-          <h2 class="card-title">{{ post.title }}</h2>
           {% if post.summary %}<p class="card-desc">{{ post.summary }}</p>{% endif %}
           {% if post.callout %}
           <div class="card-callout"><strong>{{ post.callout_label | default: "핵심" }}</strong> {{ post.callout }}</div>

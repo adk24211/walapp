@@ -59,9 +59,9 @@ permalink: /guide/
         <div class="card-accent"></div>
         <div class="card-body">
           <div class="card-top">
+            <h2 class="card-title">{{ post.title }}</h2>
             <span class="card-num">{{ post.date | date: "%m.%d" }}</span>
           </div>
-          <h2 class="card-title">{{ post.title }}</h2>
           {% if post.summary %}<p class="card-desc">{{ post.summary }}</p>{% endif %}
           <div class="card-footer">
             <div class="card-meta"><span>{% include reading-time.html content=post.content %}</span></div>
