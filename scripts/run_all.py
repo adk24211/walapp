@@ -123,8 +123,19 @@ def generate_posts(
         # dict → RawItem 복원
         items = [RawItem(**i) for i in raw_items]
 
+        # 한 포스트 = 한 토픽: 본문이 가장 풍부한(=공식 1차 자료가 잘 잡힌) 항목을 주제로 선택
+        primary = max(items, key=lambda it: len(it.content or it.summary or ""))
+
+        # 웹에서 부연 자료 수집(배경·맥락 보강) — 실패해도 주제 본문만으로 진행
         try:
-            post_data = generate(category, items, client, extra)
+            from collect.base import gather_supplementary
+            supplementary = gather_supplementary(primary.title, exclude_url=primary.url)
+        except Exception as e:
+            log.warning("%s 부연 자료 수집 실패: %s", category, e)
+            supplementary = []
+
+        try:
+            post_data = generate(category, primary, supplementary, client)
         except Exception as e:
             log.error("%s 포스팅 생성 실패: %s", category, e)
             continue
@@ -133,8 +144,8 @@ def generate_posts(
         h, m, s = POST_HOURS[category].split(":")
         dated = post_date.replace(hour=int(h), minute=int(m), second=int(s))
 
-        # 대표 출처 링크 = 수집된 첫 항목의 URL (공공누리 출처표시용)
-        source_url = items[0].url if items else ""
+        # 대표 출처 링크 = 주제 중심 항목의 URL (공식 출처)
+        source_url = primary.url
         md_content = to_jekyll_markdown(post_data, category, dated, source_url=source_url)
         filename = make_filename(category, dated, post_data["title"])
         filepath = POSTS_DIR / filename

@@ -80,36 +80,37 @@ CATEGORY_META = {
 # ─────────────────────────────────────────────────────────────
 def _build_prompt(
     category: Category,
-    items: list[RawItem],
-    extra: dict | None = None,
+    primary: RawItem,
+    supplementary: list[tuple[str, str, str]] | None = None,
 ) -> str:
     today = datetime.now().strftime("%Y년 %m월 %d일")
     meta = CATEGORY_META[category]
+    supplementary = supplementary or []
 
-    # 본문이 풍부한 항목을 우선 사용한다(본문 추출 실패한 항목은 뒤로).
-    # Groq 무료 등급 TPM(분당 토큰) 한도를 고려해 4건·본문 900자로 제한.
-    ranked = sorted(
-        items, key=lambda it: len((it.content or it.summary or "")), reverse=True
-    )
-    blocks = []
-    for i, item in enumerate(ranked[:4]):
-        body = (item.content or item.summary or "").strip()
-        body = re.sub(r"\n{2,}", "\n", body)[:700]
-        blocks.append(
-            f"[{i+1}] 출처: {item.source}\n제목: {item.title}\n본문:\n{body}"
-        )
-    item_text = "\n\n".join(blocks)
+    primary_body = re.sub(r"\n{2,}", "\n", (primary.content or primary.summary or "").strip())[:1500]
+
+    supp_blocks = []
+    for i, (s_title, _s_url, s_body) in enumerate(supplementary[:2], 1):
+        s_body = re.sub(r"\n{2,}", "\n", (s_body or "").strip())[:600]
+        supp_blocks.append(f"[부연 {i}] {s_title}\n{s_body}")
+    supp_text = "\n\n".join(supp_blocks) if supp_blocks else "(없음)"
 
     base = textwrap.dedent(f"""
         오늘 날짜: {today}
         카테고리: {meta["label"]}
         대상 독자: {meta["audience"]}
 
-        아래 수집된 공공 발표 자료를 바탕으로, 카드뉴스형 정보 콘텐츠를 작성합니다.
+        이 글은 '하나의 주제'만 깊이 있게 다루는 카드뉴스형 정보 콘텐츠입니다.
         {meta["focus"]}
 
-        === 수집된 데이터 ===
-        {item_text}
+        === 주제 중심 자료 (공식/1차 출처 — 이 사안 하나만 다룹니다) ===
+        제목: {primary.title}
+        출처: {primary.source}
+        본문:
+        {primary_body}
+
+        === 부연 자료 (웹에서 수집한 배경·맥락 — 보조 설명에만 사용) ===
+        {supp_text}
     """).strip()
 
     rules = textwrap.dedent(r"""
@@ -127,10 +128,16 @@ def _build_prompt(
         - 같은 표현·접속사('또한', '특히')를 반복하지 말고 자연스럽게 연결합니다.
         - 숫자·단위·기관명·제도명은 본문 자료에 나온 표기를 정확히 따릅니다(예: '만 원', '%', '제도').
 
-        ★ 깊이·정보량(중요) — 부실한 글 금지
-        - 제공된 '본문'을 충분히 읽고, 핵심 사실·수치·배경·일정을 빠짐없이 활용합니다.
-        - 각 항목은 '무엇이' → '왜·배경' → '그래서 어떤 의미·영향' 흐름으로 풀어 씁니다.
-        - 구체적 수치, 대상, 조건, 일정 등 독자가 실제로 활용할 정보를 담습니다.
+        ★ 단일 주제 원칙(가장 중요)
+        - '주제 중심 자료'에 담긴 '하나의 사안'만 다룹니다. 다른 주제를 절대 섞지 않습니다.
+        - '부연 자료'는 그 주제의 배경·맥락·용어 설명·의미·영향을 보강하는 데에만 활용합니다. 부연 자료의 다른 사건을 새 주제로 끌어오지 않습니다.
+        - 제목·요약·stats·표·steps 모두 '그 하나의 주제'에 대한 내용이어야 합니다.
+
+        ★ 깊이·정보량·읽는 맛(중요) — 부실하지도, 산만하지도 않게
+        - 주제 중심 자료를 충분히 읽고, 핵심 사실·수치·대상·조건·일정을 정확히 반영합니다.
+        - 부연 자료로 '왜 중요한가', '배경이 무엇인가', '어떤 의미·영향이 있는가'를 깊이 있게 설명합니다.
+        - 전체 흐름: 도입(왜 주목해야 하는가) → 핵심 내용 → 배경·맥락 → 대상·조건·수치 → 영향·전망 → 정리.
+        - 한 주제를 깊게 파되, 문단이 자연스럽게 이어져 끝까지 잘 읽히도록 구성합니다.
 
         ★ 반복·분량 늘리기 절대 금지(매우 중요)
         - 같은 문장이나 같은 뜻의 문장을 두 번 이상 쓰지 않습니다.
@@ -140,18 +147,13 @@ def _build_prompt(
         - 의미 없는 일반론('중요한 역할을 합니다', '도움이 됩니다')으로 채우지 않습니다.
         - steps 개수는 '자료로 충실히 쓸 수 있는 만큼'만 만듭니다(2~5개). 내용이 부족한 항목은 아예 넣지 않습니다.
 
-        ★ 주제 일관성(중요)
-        - 제공된 항목들이 서로 무관한 주제라면 억지로 한 글에 섞지 마세요.
-        - 가장 중요하고 자료가 풍부한 '하나의 주제'를 중심으로 깊이 있게 작성하고, 관련된 내용만 함께 다룹니다.
-        - 제목·요약·stats·표는 본문에서 실제로 다룬 그 주제와 일치해야 합니다.
-
         ★ FAQ
         - faq를 넣을 때 각 답변(a)은 2~3문장으로 구체적으로 작성합니다. '~하면 됩니다' 한 문장으로 끝내지 않습니다.
         - 본문 정보로 제대로 답할 수 없는 질문은 만들지 않습니다(없으면 faq 생략).
 
         ★ 독창성·저작권
         - 수집 원문의 문장·표현을 절대 그대로 베끼지 않습니다. 사실·수치만 취해 완전히 자신의 언어로 다시 씁니다.
-        - 개별 항목을 나열·복제하지 말고, 여러 정보를 엮어 '종합·해설'한 독창적 글로 재구성합니다.
+        - 주제 중심 자료의 사실에 부연 자료의 배경지식을 더해, 독자가 한 주제를 제대로 이해하게 해설합니다.
         - 맥락·배경지식·의미를 더해 원문에 없는 부가가치를 만듭니다.
 
         ★ 정확성
@@ -274,12 +276,13 @@ def _esc(text: str) -> str:
 # ─────────────────────────────────────────────────────────────
 def generate(
     category: Category,
-    items: list[RawItem],
-    client: Groq,
-    extra: dict | None = None,
+    primary: RawItem,
+    supplementary: list[tuple[str, str, str]] | None = None,
+    client: Groq | None = None,
 ) -> dict:
-    prompt = _build_prompt(category, items, extra)
-    log.info("Groq API 호출: %s (%d건)", category, len(items))
+    prompt = _build_prompt(category, primary, supplementary)
+    log.info("Groq API 호출: %s (주제: %s, 부연 %d건)",
+             category, primary.title[:30], len(supplementary or []))
 
     primary_model = "llama-3.3-70b-versatile"
     fallback_model = "llama-3.1-8b-instant"
