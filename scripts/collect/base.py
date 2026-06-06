@@ -190,6 +190,76 @@ def fetch_article_text(url: str, max_chars: int = 1800) -> str:
     return text[:max_chars]
 
 
+def _ddg_real_url(href: str) -> str:
+    """DuckDuckGo 결과 링크에서 실제 대상 URL을 추출."""
+    from urllib.parse import urlparse, parse_qs, unquote
+    if href.startswith("//"):
+        href = "https:" + href
+    if "duckduckgo.com/l/" in href:
+        q = parse_qs(urlparse(href).query)
+        if "uddg" in q:
+            return unquote(q["uddg"][0])
+    return href
+
+
+def web_search(query: str, limit: int = 4) -> list[tuple[str, str]]:
+    """DuckDuckGo HTML 검색(키 불필요). (제목, URL) 목록 반환. 실패 시 빈 목록."""
+    from urllib.parse import urlparse
+    log = logging.getLogger(__name__)
+    try:
+        resp = requests.post(
+            "https://html.duckduckgo.com/html/",
+            data={"q": query},
+            headers=HEADERS,
+            timeout=REQUEST_TIMEOUT,
+        )
+        resp.raise_for_status()
+    except requests.RequestException as e:
+        log.warning("웹 검색 실패 [%s]: %s", query, e)
+        return []
+
+    soup = BeautifulSoup(resp.text, "lxml")
+    out: list[tuple[str, str]] = []
+    seen_dom: set[str] = set()
+    for a in soup.select("a.result__a"):
+        href = _ddg_real_url(a.get("href", ""))
+        if not href.startswith("http"):
+            continue
+        dom = urlparse(href).netloc.replace("www.", "")
+        if dom in seen_dom:
+            continue
+        seen_dom.add(dom)
+        out.append((a.get_text(" ", strip=True), href))
+        if len(out) >= limit:
+            break
+    return out
+
+
+def gather_supplementary(
+    query: str, exclude_url: str = "", limit: int = 2, max_chars: int = 700
+) -> list[tuple[str, str, str]]:
+    """주제에 대한 부연 자료를 웹에서 수집한다. (제목, URL, 본문) 목록 반환.
+
+    공식 1차 출처(주제 중심)를 보강할 배경·맥락 자료를 모은다. 본문 추출이 되는
+    신뢰 가능한 페이지만 채택하며, 주제 출처와 같은 도메인은 제외한다.
+    """
+    from urllib.parse import urlparse
+    log = logging.getLogger(__name__)
+    exclude_dom = urlparse(exclude_url).netloc.replace("www.", "") if exclude_url else ""
+    results: list[tuple[str, str, str]] = []
+    for title, url in web_search(query, limit=limit + 3):
+        dom = urlparse(url).netloc.replace("www.", "")
+        if exclude_dom and dom == exclude_dom:
+            continue
+        body = fetch_article_text(url, max_chars=max_chars)
+        if body and len(body) > 200:
+            results.append((title, url, body))
+        if len(results) >= limit:
+            break
+    log.info("부연 자료 %d건 수집 (검색어: %s)", len(results), query[:30])
+    return results
+
+
 def parse_rss(url: str, source_name: str, limit: int = 10) -> list[RawItem]:
     """RSS/Atom 피드 파싱
 
