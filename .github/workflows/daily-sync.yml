@@ -5,9 +5,18 @@ name: Daily Program Sync
 # 억지 생성이 중복의 직접 원인이었다. (REDESIGN.md §1.2)
 
 on:
-  schedule:
-    # 매일 KST 07:00 = UTC 22:00 (전날)
-    - cron: "0 22 * * *"
+  # ⏸️ 자동 실행 중지 — 단계 0(API 활용신청) 완료 전까지.
+  #
+  # DATA_GO_KR_API_KEY 가 없으면 아래 가드 스텝이 워크플로우를 중단시킨다.
+  # 목 데이터가 배포되는 것을 막기 위한 의도된 동작이지만, 그대로 두면 매일
+  # 실패 알림이 온다. 그래서 크론 자체를 꺼 둔다.
+  #
+  # 재개 방법: Secrets 에 DATA_GO_KR_API_KEY 를 등록한 뒤 아래 두 줄의
+  # 주석을 풀면 된다. (그전에 workflow_dispatch 로 수동 실행해 확인할 것)
+  #
+  # schedule:
+  #   # 매일 KST 07:00 = UTC 22:00 (전날)
+  #   - cron: "0 22 * * *"
   workflow_dispatch:
     inputs:
       post_date:
