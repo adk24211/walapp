@@ -25,6 +25,17 @@ class BaseAdapter:
     def fetch(self, limit: int | None = None) -> list[ProgramRecord]:
         raise NotImplementedError
 
+    def enrich(self, record: ProgramRecord) -> None:
+        """발행·갱신 직전에 레코드를 보강한다. 기본은 아무것도 하지 않는다.
+
+        상세 조회에 일일 트래픽 제한이 걸린 소스(중앙부처복지서비스는 100회)를 위해
+        존재한다. 수집 단계에서 전부 받지 않고, 그날 실제로 쓸 것만 받는다.
+
+        ⚠️ 구현할 때 `content_hash` 를 다시 계산하지 말 것. 동기화는 목록 응답만으로
+        해시를 만들므로, 보강분을 해시에 넣으면 다음 날 전부 '변경됨'으로 잡힌다.
+        """
+        return None
+
     # ── 구현체가 쓰는 공통 헬퍼 ──
     def build(
         self,
@@ -49,6 +60,7 @@ class BaseAdapter:
         audiences: list[str] | None = None,
         source_category_raw: str = "",
         is_mock: bool = False,
+        deferred_detail: bool = False,
     ) -> ProgramRecord:
         """원천 값 → 표준 레코드. 분류가 비면 키워드로 추정한다."""
         name = clean_text(name)
@@ -79,6 +91,7 @@ class BaseAdapter:
             official_url=official_url.strip(),
             source_category_raw=clean_text(source_category_raw),
             is_mock=is_mock,
+            deferred_detail=deferred_detail,
         )
         record.content_hash = schema.compute_hash(record)
         return record

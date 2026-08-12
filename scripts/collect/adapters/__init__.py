@@ -42,6 +42,16 @@ def use_mock() -> bool:
     return not os.environ.get("DATA_GO_KR_API_KEY")
 
 
+# source 이름 → 이번 실행의 어댑터 인스턴스.
+# publish 단계가 enrich() 를 부르려면 어댑터에 다시 닿아야 한다.
+_ACTIVE: dict[str, object] = {}
+
+
+def get(source: str):
+    """활성 어댑터 조회. 없으면 None."""
+    return _ACTIVE.get(source)
+
+
 def load_adapters(mock: bool | None = None) -> list:
     """활성 어댑터 인스턴스 목록."""
     from importlib import import_module
@@ -55,9 +65,13 @@ def load_adapters(mock: bool | None = None) -> list:
                 table[name] = module_path
 
     adapters = []
+    _ACTIVE.clear()
     for name, module_path in table.items():
         try:
-            adapters.append(import_module(module_path).Adapter())
+            instance = import_module(module_path).Adapter()
         except Exception as e:
             log.error("어댑터 로드 실패 [%s]: %s", name, e)
+            continue
+        adapters.append(instance)
+        _ACTIVE[getattr(instance, "source", name)] = instance
     return adapters

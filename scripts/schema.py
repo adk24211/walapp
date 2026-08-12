@@ -105,8 +105,13 @@ class ProgramRecord:
     revision: int = 0
     status: str = STATUS_ACTIVE
 
-    # ── 개발용 플래그 ──
+    # ── 플래그 ──
     is_mock: bool = False         # True면 페이지에 경고 배너 + noindex
+    # True면 필수 필드가 상세 조회로만 채워진다. 동기화 단계의 완결성 검사를
+    # 건너뛰고, 발행 직전 enrich() 뒤에 다시 검사한다.
+    # (이 플래그가 없으면 목록에 지원대상이 없는 소스는 격리되어 enrich 가
+    #  영영 호출되지 않는다 — 닭과 달걀 문제)
+    deferred_detail: bool = False
 
     # ── 파생 ──
     def path(self) -> str:

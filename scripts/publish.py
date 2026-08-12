@@ -15,6 +15,7 @@ from pathlib import Path
 
 import generate_program
 import registry
+from collect import adapters
 import render
 import verify
 from schema import ProgramRecord
@@ -48,6 +49,27 @@ def _write_one(
     record.last_updated = today_str
     if not record.first_published:
         record.first_published = today_str
+
+    # ── 상세 보강 ──
+    # 상세 조회에 일일 트래픽 제한이 있는 소스는 수집 단계에서 전부 받지 않는다.
+    # 그날 실제로 쓸 레코드에만 붙인다. (collect/adapters/base.py:enrich 참고)
+    adapter = adapters.get(record.source)
+    if adapter is not None:
+        try:
+            adapter.enrich(record)
+        except Exception as e:
+            log.warning("상세 보강 실패 [%s]: %s — 목록 정보만으로 진행합니다.", record.id, e)
+
+    # 보강 뒤에도 필수 필드가 비면 발행하지 않는다. 지원대상 없는 빈 페이지를
+    # 양산하느니 다음 실행에 다시 시도하는 편이 낫다.
+    if not record.is_complete():
+        log.warning("필수 필드 누락 [%s]: %s — 발행하지 않습니다.",
+                    record.id, ", ".join(record.missing_fields()))
+        result.rejected.append({
+            "id": record.id, "name": record.name,
+            "reason": "상세 보강 후에도 필수 필드 누락: " + ", ".join(record.missing_fields()),
+        })
+        return
 
     # ── 해설 생성 ──
     try:

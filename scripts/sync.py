@@ -87,7 +87,9 @@ def run(
             _apply_status(record, today)
 
             # ── 필수 필드 검사 ──
-            if not record.is_complete():
+            # deferred_detail 인 소스는 목록 응답에 지원대상이 없다. 여기서 걸러 내면
+            # 상세를 붙일 기회(publish 의 enrich)조차 오지 않는다. 발행 직전에 다시 본다.
+            if not record.is_complete() and not record.deferred_detail:
                 result.incomplete.append({
                     "id": record.id,
                     "name": record.name,

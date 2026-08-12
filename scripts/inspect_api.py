@@ -63,14 +63,53 @@ WANTED: dict[str, tuple[tuple[str, int], ...]] = {
 }
 
 
+def fetch_text(target: str) -> str:
+    """URL 또는 로컬 파일에서 원문 읽기."""
+    if not target.lower().startswith(("http://", "https://")):
+        return Path(target).read_text(encoding="utf-8")
+    request = urllib.request.Request(target, headers={"User-Agent": UA})
+    with urllib.request.urlopen(request, timeout=TIMEOUT) as resp:
+        raw = resp.read()
+    for encoding in ("utf-8", "euc-kr", "cp949"):
+        try:
+            return raw.decode(encoding)
+        except UnicodeDecodeError:
+            continue
+    return raw.decode("utf-8", errors="replace")
+
+
 def fetch_json(target: str) -> dict:
     """URL 또는 로컬 파일에서 JSON 읽기."""
-    if not target.lower().startswith(("http://", "https://")):
-        return json.loads(Path(target).read_text(encoding="utf-8"))
+    return json.loads(fetch_text(target))
 
-    request = urllib.request.Request(target, headers={"User-Agent": UA, "Accept": "application/json"})
-    with urllib.request.urlopen(request, timeout=TIMEOUT) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+
+def parse_xml_rows(text: str) -> list[dict]:
+    """XML 응답에서 반복되는 레코드 요소를 dict 리스트로.
+
+    래퍼 태그명(wantedList, servList 등)이 API 마다 달라서 하드코딩하지 않는다.
+    '자식이 여럿이고 손자가 없는' 요소 중 가장 많이 반복되는 태그를 레코드로 본다.
+    """
+    import xml.etree.ElementTree as ET
+    from collections import Counter
+
+    try:
+        root = ET.fromstring(text)
+    except ET.ParseError as e:
+        raise ValueError(f"XML 파싱 실패: {e}") from e
+
+    candidates = [
+        el for el in root.iter()
+        if len(el) >= 2 and all(len(child) == 0 for child in el)
+    ]
+    if not candidates:
+        return []
+    common = Counter(el.tag for el in candidates).most_common(1)[0][0]
+    rows = []
+    for el in candidates:
+        if el.tag != common:
+            continue
+        rows.append({child.tag: (child.text or "").strip() for child in el})
+    return rows
 
 
 # ─────────────────────────────────────────────────────────────
@@ -160,28 +199,58 @@ def inspect_docs(target: str) -> None:
 # ─────────────────────────────────────────────────────────────
 #  ② 실제 응답 프로브
 # ─────────────────────────────────────────────────────────────
-def inspect_probe(endpoint: str, api_key: str, per_page: int = 3) -> None:
-    query = urllib.parse.urlencode({"page": 1, "perPage": per_page, "serviceKey": api_key})
+def inspect_probe(endpoint: str, api_key: str, per_page: int = 3, extra: str = "") -> None:
+    # odcloud 계열은 page/perPage, apis.data.go.kr 계열은 pageNo/numOfRows 를 쓴다.
+    # 양쪽을 다 넣어도 서로 무시하므로 한 번에 보낸다.
+    params = {
+        "serviceKey": api_key,
+        "page": 1, "perPage": per_page,
+        "pageNo": 1, "numOfRows": per_page,
+    }
+    query = urllib.parse.urlencode(params)
+    if extra:
+        query += "&" + extra.lstrip("&")
     url = f"{endpoint}{'&' if '?' in endpoint else '?'}{query}"
-    print(f"호출: {endpoint} (perPage={per_page})\n")
+    print(f"호출: {endpoint} (rows={per_page}{' · ' + extra if extra else ''})\n")
 
     try:
-        payload = fetch_json(url)
+        text = fetch_text(url)
     except Exception as e:
         print(f"✗ 요청 실패: {e}")
         print("\n  키가 승인 직후면 반영에 시간이 걸릴 수 있습니다.")
         print("  Encoding/Decoding 키를 바꿔 넣어 보세요 — 둘 중 하나만 통하는 경우가 흔합니다.")
         sys.exit(1)
 
-    rows = payload.get("data") or payload.get("body") or payload.get("items") or []
-    if isinstance(rows, dict):
-        rows = rows.get("items") or [rows]
-    if not rows:
-        print("✗ 응답에 데이터 행이 없습니다. 최상위 키:", list(payload.keys()))
-        print(json.dumps(payload, ensure_ascii=False, indent=2)[:1200])
-        sys.exit(1)
+    stripped = text.lstrip()
+    if stripped.startswith("<"):
+        # 복지로 계열은 XML 로만 응답한다
+        try:
+            rows = parse_xml_rows(text)
+        except ValueError as e:
+            print(f"✗ {e}")
+            print(text[:800])
+            sys.exit(1)
+        total = "?"
+        import re as _re
+        m = _re.search(r"<totalCount>\s*(\d+)\s*</totalCount>", text)
+        if m:
+            total = m.group(1)
+        if not rows:
+            print("✗ 응답에서 레코드를 찾지 못했습니다. 원문 앞부분:")
+            print(text[:1200])
+            sys.exit(1)
+    else:
+        payload = json.loads(text)
+        rows = payload.get("data") or payload.get("body") or payload.get("items") or []
+        if isinstance(rows, dict):
+            rows = rows.get("items") or [rows]
+        if not rows:
+            print("✗ 응답에 데이터 행이 없습니다. 최상위 키:", list(payload.keys()))
+            print(json.dumps(payload, ensure_ascii=False, indent=2)[:1200])
+            sys.exit(1)
+        total = payload.get("totalCount", "?")
 
-    print(f"[응답 메타] 총 {payload.get('totalCount', '?')}건 · 이번 응답 {len(rows)}행\n")
+    print(f"[응답 메타] 총 {total}건 · 이번 응답 {len(rows)}행\n")
 
     first = rows[0]
     print("[첫 행의 필드와 값]")
@@ -288,6 +357,8 @@ def main() -> int:
                        help="실제 API 엔드포인트를 호출해 응답 키를 덤프 (--key 필요)")
     parser.add_argument("--key", help="공공데이터포털 인증키 (--probe 와 함께)")
     parser.add_argument("--rows", type=int, default=3, help="프로브로 받아 볼 행 수 (기본 3)")
+    parser.add_argument("--extra", default="",
+                        help="추가 쿼리스트링 (예: \"callTp=L&srchKeyCode=001\")")
     args = parser.parse_args()
 
     if args.docs:
@@ -296,7 +367,7 @@ def main() -> int:
         api_key = args.key or __import__("os").environ.get("DATA_GO_KR_API_KEY", "")
         if not api_key:
             parser.error("--probe 에는 --key 또는 DATA_GO_KR_API_KEY 환경변수가 필요합니다.")
-        inspect_probe(args.probe, api_key, args.rows)
+        inspect_probe(args.probe, api_key, args.rows, args.extra)
     return 0
 
 
