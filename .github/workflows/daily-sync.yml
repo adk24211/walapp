@@ -22,6 +22,10 @@ on:
         description: "갱신 상한"
         required: false
         default: "10"
+      region_scope:
+        description: "발행 범위 (중앙부처만: national / 지자체 포함: national,sido,sigungu)"
+        required: false
+        default: "national"
       dry_run:
         description: "Dry run (파일 저장 없이 테스트)"
         required: false
@@ -70,6 +74,8 @@ jobs:
           POST_DATE: ${{ github.event.inputs.post_date }}
           PUBLISH_LIMIT: ${{ github.event.inputs.publish_limit || '5' }}
           REFRESH_LIMIT: ${{ github.event.inputs.refresh_limit || '10' }}
+          # 중앙부처 우선 (REDESIGN.md §11 확정). 지자체로 넓힐 때 값을 바꾼다.
+          REGION_SCOPE: ${{ github.event.inputs.region_scope || 'national' }}
           DRY_RUN: ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
           TZ: Asia/Seoul
         run: python scripts/run_all.py

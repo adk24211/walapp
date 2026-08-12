@@ -23,6 +23,12 @@ from schema import STATUS_CLOSED, ProgramRecord
 log = logging.getLogger(__name__)
 
 
+# 초기 운영 범위. 중앙부처(전국) 제도부터 시작한다 — 데이터 품질이 균일하고,
+# 지자체는 건수가 많아 초기에 품질 관리가 어렵다. (REDESIGN.md §11 확정)
+# 지자체까지 넓힐 때는 REGION_SCOPE 환경변수에 "national,sido,sigungu" 를 준다.
+DEFAULT_SCOPES = ("national",)
+
+
 @dataclass
 class SyncResult:
     new: list[ProgramRecord] = field(default_factory=list)
@@ -30,15 +36,19 @@ class SyncResult:
     unchanged: list[ProgramRecord] = field(default_factory=list)
     incomplete: list[dict] = field(default_factory=list)
     review_needed: list[dict] = field(default_factory=list)
+    out_of_scope: int = 0
 
     @property
     def total(self) -> int:
         return (len(self.new) + len(self.changed) + len(self.unchanged)
-                + len(self.incomplete) + len(self.review_needed))
+                + len(self.incomplete) + len(self.review_needed) + self.out_of_scope)
 
     def summary(self) -> str:
-        return (f"신규 {len(self.new)} · 변경 {len(self.changed)} · 동일 {len(self.unchanged)} "
+        text = (f"신규 {len(self.new)} · 변경 {len(self.changed)} · 동일 {len(self.unchanged)} "
                 f"· 필드누락 {len(self.incomplete)} · 유사검토 {len(self.review_needed)}")
+        if self.out_of_scope:
+            text += f" · 범위밖 {self.out_of_scope}"
+        return text
 
 
 def run(
@@ -46,6 +56,7 @@ def run(
     today: date,
     mock: bool | None = None,
     limit: int | None = None,
+    scopes: tuple[str, ...] = DEFAULT_SCOPES,
 ) -> SyncResult:
     result = SyncResult()
     today_str = today.isoformat()
@@ -86,6 +97,15 @@ def run(
                 continue
 
             existing = reg.get(record.id)
+
+            # ── 운영 범위 검사 ──
+            # 이미 발행된 제도는 범위와 무관하게 계속 추적한다. 범위를 좁혔다고
+            # 살아 있는 페이지를 방치하면 정보가 낡은 채로 남는다.
+            # 아직 발행 전인 제도만 범위 밖이면 건너뛴다 — 원천에서 매번 다시 읽으므로,
+            # 나중에 REGION_SCOPE 를 넓히면 그날 신규로 잡혀 그대로 발행된다.
+            if existing is None and record.region.scope not in scopes:
+                result.out_of_scope += 1
+                continue
 
             # ── 이미 발행된 제도 ──
             if existing is not None:

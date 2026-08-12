@@ -107,7 +107,16 @@ module Walapp
            "hub_axis" => "region",
            "hub_key"  => "national")
 
+      # 중앙부처 우선 단계에서는 지자체 제도가 아직 없다. 빈 시도 허브를 17개
+      # 만들면 내용 없는 페이지만 늘어 색인에 해롭다. 제도가 실제로 있는 시도만 만든다.
+      # 지자체까지 범위를 넓히면 그날부터 자동으로 생긴다.
+      programs = site.collections["programs"]&.docs || []
+      populated = programs.map { |d| d.data["region_sido"] }.compact.uniq
+      skipped = (taxonomy["sido_order"] || []).size - populated.size
+
       (taxonomy["sido_order"] || []).each do |key|
+        next unless populated.include?(key)
+
         name = taxonomy.dig("sido", key) || key
         push(site, "/region/#{key}/",
              "title"    => "#{name} 지원금 총정리",
@@ -117,6 +126,10 @@ module Walapp
              "hub_axis" => "region",
              "hub_key"  => key)
       end
+
+      return if skipped.zero?
+
+      Jekyll.logger.info "HubGenerator:", "제도가 없는 시도 허브 #{skipped}개는 건너뜀"
     end
   end
 end

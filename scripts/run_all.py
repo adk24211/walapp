@@ -18,6 +18,8 @@
     POST_DATE            기준 날짜 override (YYYY-MM-DD)
     PUBLISH_LIMIT        하루 신규 발행 상한 (기본 5)
     REFRESH_LIMIT        하루 갱신 상한 (기본 10)
+    REGION_SCOPE         발행 범위 (기본 "national" — 중앙부처 우선)
+                         지자체까지 넓히려면 "national,sido,sigungu"
     DRY_RUN              "1" 이면 파일을 쓰지 않는다
 """
 from __future__ import annotations
@@ -102,11 +104,17 @@ def main() -> int:
     dry_run = os.environ.get("DRY_RUN") == "1"
     publish_limit = int(os.environ.get("PUBLISH_LIMIT", DEFAULT_PUBLISH_LIMIT))
     refresh_limit = int(os.environ.get("REFRESH_LIMIT", DEFAULT_REFRESH_LIMIT))
+    scopes = tuple(
+        s.strip() for s in
+        os.environ.get("REGION_SCOPE", ",".join(sync.DEFAULT_SCOPES)).split(",")
+        if s.strip()
+    )
     mock = adapters.use_mock()
 
     log.info("━━━ 지원금 도감 파이프라인 ━━━")
     log.info("날짜 %s · 데이터 %s · DRY_RUN %s · 발행상한 %d · 갱신상한 %d",
              today, "목(mock)" if mock else "실 API", dry_run, publish_limit, refresh_limit)
+    log.info("발행 범위: %s", " + ".join(scopes))
     if mock:
         log.warning("목 데이터 모드입니다. 생성된 페이지는 noindex 처리되며 커밋되지 않습니다.")
 
@@ -114,7 +122,10 @@ def main() -> int:
     log.info("원장 로드: 기발행 %d건", len(reg))
 
     # ── ① 동기화 ──
-    result = sync.run(reg, today, mock=mock)
+    result = sync.run(reg, today, mock=mock, scopes=scopes)
+    if result.out_of_scope:
+        log.info("범위 밖으로 건너뛴 제도 %d건 — REGION_SCOPE 를 넓히면 그날 신규로 잡힙니다.",
+                 result.out_of_scope)
     if result.total == 0:
         log.error("수집 결과가 비었습니다. 중단합니다.")
         return 1

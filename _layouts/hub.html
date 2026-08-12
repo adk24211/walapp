@@ -65,10 +65,17 @@ layout: default
 {% elsif axis == 'region' %}
 <nav class="hub-nav" aria-label="지역별 탐색">
   <a class="hub-chip{% if key == 'national' %} active{% endif %}" href="{{ '/region/national/' | relative_url }}">전국</a>
+  {% comment %}
+    제도가 없는 시도는 허브 페이지 자체를 만들지 않으므로(_plugins/hub_generator.rb)
+    여기서도 링크를 걸지 않는다. 걸면 404 가 된다.
+  {% endcomment %}
   {% for s in site.data.taxonomy.sido_order %}
+  {% assign sido_count = site.programs | where: "region_sido", s | size %}
+  {% if sido_count > 0 %}
   <a class="hub-chip{% if key == s %} active{% endif %}" href="{{ '/region/' | append: s | append: '/' | relative_url }}">
     {{ site.data.taxonomy.sido[s] | replace: '특별자치도', '' | replace: '특별자치시', '' | replace: '특별시', '' | replace: '광역시', '' }}
   </a>
+  {% endif %}
   {% endfor %}
 </nav>
 {% endif %}

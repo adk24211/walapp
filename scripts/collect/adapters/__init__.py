@@ -13,8 +13,13 @@ import os
 log = logging.getLogger(__name__)
 
 # 어댑터 이름 → 모듈 경로
+#
+# 중앙부처 우선 방침(REDESIGN.md §11)에 따라 이 둘부터 시작한다.
+# 지자체로 넓힐 때 welfare_local(15108347)·youth(15143273)를 여기에 추가하고
+# REGION_SCOPE 를 "national,sido,sigungu" 로 바꾸면 된다.
 REAL_ADAPTERS = {
     "bojo24": "collect.adapters.bojo24",
+    "welfare-central": "collect.adapters.welfare_central",
 }
 MOCK_ADAPTERS = {
     "mock": "collect.adapters.mock",

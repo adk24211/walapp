@@ -10,7 +10,7 @@
 API 키가 하나도 없어도 파이프라인 전체가 끝까지 돕니다. 목 모드는 **표준 라이브러리만** 씁니다.
 
 ```bash
-# 1) 제도 페이지 생성 (목 데이터 29건)
+# 1) 제도 페이지 생성 (목 데이터 중 중앙부처 25건)
 python3 scripts/run_all.py
 
 # 2) 사이트 빌드
@@ -24,6 +24,7 @@ bundle exec jekyll serve --future
 | 변수 | 기본값 | 설명 |
 |------|--------|------|
 | `MOCK_DATA` | 자동 | `DATA_GO_KR_API_KEY` 가 없으면 자동으로 목 모드. `1`/`0` 으로 강제 가능 |
+| `REGION_SCOPE` | `national` | 발행 범위. 중앙부처 우선 방침의 구현체. 지자체 포함은 `national,sido,sigungu` |
 | `PUBLISH_LIMIT` | 5 | 하루 신규 발행 상한 |
 | `REFRESH_LIMIT` | 10 | 하루 갱신 상한 |
 | `POST_DATE` | 오늘(KST) | 기준 날짜 override |
@@ -33,16 +34,17 @@ bundle exec jekyll serve --future
 
 ## 목 데이터 안전장치 ⚠️
 
-지원금 정보는 YMYL 영역이라 **가짜 수치가 공개되면 실제 피해로 이어집니다.** 4중으로 막아 뒀습니다.
+지원금 정보는 YMYL 영역이라 **가짜 수치가 공개되면 실제 피해로 이어집니다.** 5중으로 막아 뒀습니다.
 
 1. 목 레코드는 `is_mock=true` → 제도 페이지 상단에 **경고 배너** 렌더
 2. 같은 플래그로 `<meta name="robots" content="noindex, nofollow">` 삽입
 3. `search.json` 색인에서 제외
-4. `.gitignore` 에 `_programs/` · `_records/` → **생성물이 커밋되지 않음**
+4. `.gitignore` 에 `_programs/` · `_records/` · 원장 JSON → **생성물이 커밋되지 않음**
 5. `daily-sync.yml` 첫 스텝이 `DATA_GO_KR_API_KEY` 부재 시 워크플로우를 **중단**
 
-> 실 API 전환 시 `.gitignore` 의 `_programs/` · `_records/` 두 줄을 지워야 워크플로우가
-> 생성물을 커밋할 수 있습니다.
+> 실 API 전환 시 `.gitignore` 의 목 데이터 블록을 통째로 지워야 워크플로우가
+> 생성물과 원장을 커밋할 수 있습니다. (`_data/taxonomy.json` 은 목 데이터가 아니라
+> 계속 커밋됩니다 — 빌드 때 허브 생성기가 읽습니다.)
 
 ---
 
@@ -51,10 +53,13 @@ bundle exec jekyll serve --future
 ### ① 중복이 구조적으로 불가능한가
 
 ```
-1회차:  신규 29 · 변경 0 · 동일  0 · 필드누락 1 · 유사검토 1
-2회차:  신규  0 · 변경 0 · 동일 29 · 필드누락 1 · 유사검토 1
+1회차:  신규 25 · 변경 0 · 동일  0 · 필드누락 1 · 유사검토 1 · 범위밖 4
+2회차:  신규  0 · 변경 0 · 동일 25 · 필드누락 1 · 유사검토 1 · 범위밖 4
         → "발행할 것도 갱신할 것도 없습니다. 오늘은 아무것도 쓰지 않습니다."
 ```
+
+(목 데이터 31건 중 중앙부처 25건만 발행됩니다. 지자체 4건은 `REGION_SCOPE=national`
+방침에 따라 보류, 1건은 필드 누락 격리, 1건은 유사 제도 검토 대기입니다.)
 
 같은 소스를 다시 수집해도 신규 발행이 0입니다. 규칙이 아니라 **파일 경로가 제도 ID로 결정되기 때문**입니다.
 
@@ -62,7 +67,7 @@ bundle exec jekyll serve --future
 
 | 계층 | 대상 | 결과 |
 |------|------|------|
-| 1 · ID 조회 | 재수집분 29건 | 전부 `unchanged` 로 흡수 |
+| 1 · ID 조회 | 재수집분 25건 | 전부 `unchanged` 로 흡수 |
 | 2 · `content_hash` | 내용 동일 | 갱신 스킵, `last_checked` 만 갱신 |
 | 3 · 유사도 | `청년 월세 한시 특별지원` vs `청년월세 한시 특별지원` | 유사도 1.0 → `_data/review_needed.json` 격리 (자동 병합 안 함) |
 | 필수 필드 | 지원대상 누락 1건 | `_data/incomplete.json` 격리, 발행 안 함 |
@@ -97,12 +102,22 @@ bundle exec jekyll serve --future
 
 | 허브 | 건수 | 검증 |
 |------|------|------|
-| `/support/` | 29 | 전체 |
-| `/who/youth/` | 16 | 대상 교차 필터 |
+| `/support/` | 25 | 전체 |
+| `/support/finance/` | 4 | 분야 필터 |
+| `/who/youth/` | 12 | 대상 교차 필터 (홈 카드 숫자와 일치) |
+| `/who/parent/` | 3 | |
 | `/region/national/` | 25 | 중앙부처만 |
-| `/region/gyeonggi/` | 2 | 시군구(성남시)가 시도로 정상 롤업 |
-| `/region/seoul/` | 1 | |
-| `/deadline/` | 8 | 상시·마감분 정확히 제외 |
+| `/deadline/` | 6 | 상시·마감분 정확히 제외 |
+
+시도 허브 17개는 해당 제도가 없어 **생성하지 않았고**, 탐색바에서도 링크를 뺐습니다.
+빌드 결과물의 내부 링크를 전수 검사해 **깨진 링크 0건**을 확인했습니다.
+
+범위 확대·축소도 확인했습니다.
+
+```
+REGION_SCOPE=national,sido,sigungu  →  신규 4 · 동일 25   (보류분이 그대로 발행됨)
+REGION_SCOPE=national (다시 좁힘)   →  신규 0 · 동일 29   (발행분은 계속 추적됨)
+```
 
 ---
 
@@ -114,7 +129,7 @@ bundle exec jekyll serve --future
 |--------|------|------|
 | `scripts/queue.py` | `scripts/queueing.py` | `scripts/` 가 `sys.path` 에 들어가 표준 라이브러리 `queue` 를 가린다. `urllib3` 등이 이를 import 하므로 이름을 비켰다 |
 | `_data/programs/{id}.json` | `_records/{id}.json` | Jekyll 은 `_data` 하위를 전부 파싱해 `site.data` 에 올린다. 레코드가 수천 건이 되면 빌드마다 낭비다. 밑줄 디렉터리는 Jekyll 이 통째로 무시한다 |
-| 허브 33개 stub 파일 | `_plugins/hub_generator.rb` | 분류를 고칠 때마다 파일 33개를 손대야 한다. `_data/taxonomy.json` 하나를 진실로 두고 빌드 시점에 36개를 생성한다 |
+| 허브 33개 stub 파일 | `_plugins/hub_generator.rb` | 분류를 고칠 때마다 파일 33개를 손대야 한다. `_data/taxonomy.json` 하나를 진실로 두고 빌드 시점에 생성하며, 제도가 없는 시도 허브는 아예 만들지 않는다 |
 | `/support/{category}/{slug}/` 수동 | `permalink: /support/:path/` | 파일 경로가 곧 URL. 별도 매핑이 필요 없다 |
 
 `_plugins/` 를 쓸 수 있는 이유는 배포가 GitHub Pages 기본 빌더가 아니라 워크플로우 안의
@@ -140,12 +155,13 @@ scripts/
 └── collect/adapters/
     ├── base.py           어댑터 인터페이스 + 정규화
     ├── mock.py           목 데이터 31건 (모든 분기를 밟도록 구성)
-    └── bojo24.py         실 API 어댑터 — ⚠️ 필드명 확정 필요
+    ├── bojo24.py         보조금24 어댑터 — ⚠️ 필드명 확정 필요
+    └── welfare_central.py 중앙부처복지서비스 어댑터 — ⚠️ 필드명 확정 필요
 
 _layouts/program.html     제도 상세
 _layouts/hub.html         분야·대상·지역·마감·신규 공용
 _includes/program-card.html
-_plugins/hub_generator.rb 허브 36개 자동 생성
+_plugins/hub_generator.rb 허브 자동 생성 (제도 있는 축만)
 assets/css/support.css    분야 컬러 7종 + 제도 페이지 컴포넌트
 ```
 
@@ -168,13 +184,32 @@ assets/css/support.css    분야 컬러 7종 + 제도 페이지 컴포넌트
 
 | 단계 | 내용 | 담당 |
 |------|------|------|
-| **0** | 공공데이터포털 활용신청 → 키 발급 → `bojo24.py` 의 `ID_FIELD`·`FIELD_MAP` 확정 | **사용자** |
-| 6 | `.gitignore` 에서 `_programs/`·`_records/` 제거, 실 API 로 첫 동기화 | 단계 0 이후 |
+| **0** | 공공데이터포털 **API 2개** 활용신청 → 키 발급 → 어댑터 필드 확정 | **사용자** |
+| 6 | `.gitignore` 의 목 데이터 블록 제거, 실 API 로 첫 동기화 | 단계 0 이후 |
 | 7 | 초기 백필 (상위 100~300건 일괄 발행) | 단계 6 이후 |
 
-`bojo24.py` 의 `ID_FIELD` 가 가장 중요합니다. **이 값이 흔들리면 같은 제도가 매일 새 페이지로
+중앙부처 우선 방침이라 단계 0에서 신청할 API 는 **2개뿐**입니다.
+
+| 데이터셋 | 어댑터 | 확정할 것 |
+|----------|--------|-----------|
+| `15113968` 보조금24 | `collect/adapters/bojo24.py` | `ID_FIELD`, `FIELD_MAP` |
+| `15090532` 중앙부처복지서비스 | `collect/adapters/welfare_central.py` | `ID_FIELD`, `FIELD_MAP`, 상세조회 필요 여부 |
+
+지자체복지서비스(`15108347`)와 온통청년(`15143273`)은 범위를 넓힐 때 신청합니다.
+
+두 어댑터 모두 `ID_FIELD` 가 가장 중요합니다. **이 값이 흔들리면 같은 제도가 매일 새 페이지로
 발행되어** 컨셉 전환의 의미가 사라집니다. 활용가이드에서 가장 먼저 확인하세요.
 
-미결 결정 사항은 `REDESIGN.md` §11 에 그대로 남아 있습니다. 그중 **기존 272개 포스트 처리**는
-`/brief/` 격리로 일단 구현했으나, Search Console 유입 데이터를 보고 `noindex` 로 바꿀지
-최종 판단이 필요합니다.
+### 지자체까지 넓힐 때
+
+세 가지만 바꾸면 됩니다.
+
+1. 추가 API 활용신청 후 `collect/adapters/__init__.py` 의 `REAL_ADAPTERS` 에 등록
+2. `REGION_SCOPE` 를 `national,sido,sigungu` 로 변경 (워크플로우 입력 또는 env)
+3. 그 외에는 없음 — 시도 허브는 제도가 생기는 날 자동으로 만들어집니다
+
+범위 밖 제도는 **버려지지 않고 발행만 보류**됩니다. 원천에서 매번 다시 읽으므로,
+범위를 넓힌 날 신규로 잡혀 그대로 발행됩니다. 반대로 범위를 좁혀도 **이미 발행된
+제도는 계속 추적**되므로 살아 있는 페이지가 낡은 채로 방치되지 않습니다.
+
+`REDESIGN.md` §11 의 미결 항목은 모두 확정됐습니다.
