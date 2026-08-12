@@ -1,48 +1,53 @@
 ---
 layout: default
-title: 아카이브
-permalink: /archive/
+title: 지난 브리핑 아카이브
+permalink: /brief/
 ---
 
 <div class="page-header">
   <div class="ph-top">
     <span class="ph-issue">Archive</span>
-    <span class="ph-date">총 {{ site.posts | size }}개 포스팅</span>
+    <span class="ph-date">총 {{ site.posts | size }}건</span>
   </div>
   <h1 class="ph-title">지난 브리핑</h1>
-  <p class="ph-sub">날짜별로 모아 본 모든 발행 기록</p>
+  <p class="ph-sub">
+    2026년 8월까지 매일 발행하던 뉴스 브리핑 기록입니다. 현재는 발행을 중단하고
+    <a href="{{ '/support/' | relative_url }}">지원 제도 정리</a>로 사이트를 전환했습니다.
+  </p>
 </div>
+
+<aside class="hub-footnote" role="note">
+  <i class="ti ti-archive" aria-hidden="true"></i>
+  <p>
+    아래 글은 발행 당시의 뉴스를 요약한 것으로, 지금은 내용이 맞지 않을 수 있습니다.
+    최신 지원 제도 정보는 <a href="{{ '/support/' | relative_url }}">전체 지원 제도</a>에서 확인해 주세요.
+  </p>
+</aside>
 
 <div class="feed">
   {% assign posts_by_month = site.posts | group_by_exp: "post", "post.date | date: '%Y년 %m월'" %}
   {% for group in posts_by_month %}
   <div class="section-group">
     <div class="section-label">
-      <span class="sec-tag">{{ group.name }}</span>
+      <span class="sec-tag muted">{{ group.name }}</span>
       <div class="sec-rule"></div>
-      <span class="sec-count">{{ group.items | size }}개</span>
+      <span class="sec-count">{{ group.items | size }}건</span>
     </div>
     <div class="cards">
       {% for post in group.items %}
       {% assign cc = post.categories | first %}
-      <a href="{{ post.url | relative_url }}" class="post-card">
+      <a href="{{ post.url | relative_url }}" class="post-card cn is-closed" data-cat="{{ cc }}">
         <div class="card-inner">
-          <div class="card-accent {{ cc }}"></div>
+          <div class="card-accent"></div>
           <div class="card-body">
             <div class="card-top">
-              <h2 class="card-title {{ cc }}">{{ post.title }}</h2>
+              <h2 class="card-title">{{ post.title }}</h2>
               <span class="card-num">{{ post.date | date: "%m.%d" }}</span>
             </div>
-            {% if post.summary %}
-            <p class="card-desc">{{ post.summary }}</p>
-            {% endif %}
-            <div class="card-footer">
-              <div class="card-meta">
-                <span>{% include category-label.html category=cc %}</span>
-                <span class="meta-dot"></span>
-                <span>{% include reading-time.html content=post.content %}</span>
-              </div>
-              <span class="card-cta {{ cc }}">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>
+            {% if post.summary %}<p class="card-desc">{{ post.summary }}</p>{% endif %}
+            <div class="card-chips">
+              <span class="chip">{% include category-label.html category=cc %}</span>
+              {% if post.canonical_url %}<span class="chip chip-closed">중복 · 정본으로 연결</span>{% endif %}
             </div>
           </div>
         </div>

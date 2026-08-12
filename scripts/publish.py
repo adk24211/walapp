@@ -1,0 +1,113 @@
+"""③ 발행 · ④ 갱신 — 레코드를 실제 페이지 파일로 쓴다.
+
+발행과 갱신을 한 모듈에 두는 이유: 둘의 차이는 원장 기록 방식뿐이고,
+"해설 생성 → 검증 → 파일 쓰기" 과정은 완전히 같다. 같은 코드를 두 번 쓰지 않는다.
+
+파일 경로는 `record.path()` 로 결정된다. 같은 제도는 항상 같은 경로이므로
+갱신은 자연스럽게 덮어쓰기가 된다. 이것이 중복 방지의 1계층이다.
+"""
+from __future__ import annotations
+
+import logging
+from dataclasses import dataclass, field
+from datetime import date
+from pathlib import Path
+
+import generate_program
+import registry
+import render
+import verify
+from schema import ProgramRecord
+
+log = logging.getLogger(__name__)
+
+
+@dataclass
+class WriteResult:
+    published: list[str] = field(default_factory=list)
+    updated: list[str] = field(default_factory=list)
+    rejected: list[dict] = field(default_factory=list)
+    paths: list[Path] = field(default_factory=list)
+
+    def summary(self) -> str:
+        return (f"발행 {len(self.published)} · 갱신 {len(self.updated)} "
+                f"· 반려 {len(self.rejected)}")
+
+
+def _write_one(
+    record: ProgramRecord,
+    reg: registry.Registry,
+    today: date,
+    client,
+    is_update: bool,
+    dry_run: bool,
+    result: WriteResult,
+) -> None:
+    today_str = today.isoformat()
+    record.last_checked = today_str
+    record.last_updated = today_str
+    if not record.first_published:
+        record.first_published = today_str
+
+    # ── 해설 생성 ──
+    try:
+        prose = generate_program.generate(record, client)
+    except Exception as e:
+        log.error("해설 생성 실패 [%s]: %s", record.id, e)
+        result.rejected.append({"id": record.id, "name": record.name, "reason": f"생성 실패: {e}"})
+        return
+
+    # ── 사실 검증 ──
+    prose, report = verify.scrub(prose, record)
+    if report.fatal:
+        log.error("검증 치명적 실패 [%s] — 발행하지 않습니다", record.id)
+        result.rejected.append({
+            "id": record.id, "name": record.name,
+            "reason": "요약이 검증에서 전량 폐기됨",
+            "violations": report.violations,
+        })
+        return
+
+    # ── 렌더 ──
+    markdown = render.to_markdown(record, prose)
+    path = registry.PROGRAMS_DIR / record.path()
+
+    if dry_run:
+        log.info("[DRY RUN] %s\n%s", path.relative_to(registry.ROOT), markdown[:280])
+    else:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(markdown, encoding="utf-8")
+        registry.save_record(record)
+        result.paths.append(path)
+
+    # ── 원장 기록 ──
+    if is_update:
+        reg.mark_updated(record, today_str)
+        result.updated.append(record.id)
+        log.info("갱신: %s (rev %d)", record.name, reg.entries[record.id].revision)
+    else:
+        reg.register(record, today_str)
+        result.published.append(record.id)
+        log.info("발행: %s", record.name)
+
+    if report.violations:
+        log.info("  └ 검증: %s", report.summary_line())
+
+
+def run(
+    new_records: list[ProgramRecord],
+    changed_records: list[ProgramRecord],
+    reg: registry.Registry,
+    today: date,
+    client=None,
+    dry_run: bool = False,
+) -> WriteResult:
+    result = WriteResult()
+
+    for record in new_records:
+        _write_one(record, reg, today, client, False, dry_run, result)
+    for record in changed_records:
+        _write_one(record, reg, today, client, True, dry_run, result)
+
+    log.info("쓰기 완료 — %s", result.summary())
+    return result

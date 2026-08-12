@@ -23,3 +23,16 @@ venv/
 # 로컬 미리보기/빌드 도구 설정 및 잠금파일 (CI가 자체 생성)
 .claude/
 Gemfile.lock
+
+# 목 데이터 모드 산출물 — 실제 제도 정보가 아니므로 커밋하지 않는다.
+# 실 API 전환(REDESIGN.md 단계 0) 후 아래 블록을 통째로 지울 것.
+#   → 그래야 daily-sync.yml 이 제도 페이지와 원장을 커밋할 수 있다.
+_programs/
+_records/
+_data/registry.json
+_data/queue.json
+_data/review_needed.json
+_data/incomplete.json
+
+# _data/taxonomy.json 은 커밋한다 — 목 데이터가 아니라 scripts/taxonomy.py 에서
+# 파생된 값이고, _plugins/hub_generator.rb 가 빌드 시점에 이 파일을 읽는다.

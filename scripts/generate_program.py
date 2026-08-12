@@ -1,0 +1,261 @@
+"""③ 해설 생성 — LLM은 '문장'만 만든다.
+
+구 generate_post.py 와의 결정적 차이:
+
+    구:  기사 본문을 던지고 title·summary·stats·compare·steps 를 전부 자유 생성
+         → 금액·연령·기간까지 LLM이 지어낼 수 있었다
+    현재: 금액·대상·기간·기관·URL 은 프롬프트에 '고정 사실'로 주고,
+         LLM에게는 그것을 쉬운 말로 풀어 쓰는 일만 맡긴다
+
+출력 계약(prose):
+    {
+      "summary":     "한두 문장 요약",
+      "eligibility": ["자격 확인 항목", ...],
+      "steps":       [{"title": ..., "body": ...}, ...],
+      "faq":         [{"q": ..., "a": ...}, ...],
+      "note":        "주의 안내"
+    }
+제목·금액·URL 은 이 계약에 아예 없다. 만들 수 없으면 틀릴 수도 없다.
+"""
+from __future__ import annotations
+
+import json
+import logging
+import re
+import textwrap
+import time
+
+import taxonomy
+from schema import ProgramRecord
+
+log = logging.getLogger(__name__)
+
+PRIMARY_MODEL = "llama-3.3-70b-versatile"
+FALLBACK_MODEL = "llama-3.1-8b-instant"
+
+SYSTEM_PROMPT = (
+    "당신은 정부 지원 제도를 일반 국민이 이해할 수 있게 풀어 쓰는 한국어 편집자입니다. "
+    "맞춤법과 문법이 정확하고, 주어진 사실 밖으로 절대 나가지 않으며, "
+    "정중한 존댓말('~합니다', '~하세요')로 일관되게 씁니다."
+)
+
+
+def build_prompt(record: ProgramRecord) -> str:
+    cat_label = taxonomy.CATEGORIES.get(record.category, {}).get("label", "지원 제도")
+    audience_labels = [taxonomy.AUDIENCES[a]["label"]
+                       for a in record.audiences if a in taxonomy.AUDIENCES]
+
+    period = record.apply_period
+    if period.always:
+        period_text = "상시 접수"
+    elif period.start and period.end:
+        period_text = f"{period.start} ~ {period.end}"
+    elif period.end:
+        period_text = f"{period.end}까지"
+    else:
+        period_text = "명시되지 않음"
+
+    facts = textwrap.dedent(f"""
+        === 고정 사실 (원문 그대로. 이 밖의 수치·조건은 존재하지 않습니다) ===
+        제도명: {record.name}
+        분야: {cat_label}
+        소관 기관: {record.org or "명시되지 않음"}
+        지원 지역: {record.region.label}
+        주요 대상: {", ".join(audience_labels) or "명시되지 않음"}
+
+        [지원 대상]
+        {record.target_raw or "(내용 없음)"}
+
+        [지원 내용]
+        {record.benefit_raw or "(내용 없음)"}
+
+        [선정 기준]
+        {record.criteria_raw or "(내용 없음)"}
+
+        [신청 방법]
+        {record.how_to_raw or "(내용 없음)"}
+
+        [구비 서류]
+        {chr(10).join(f"- {d}" for d in record.documents_raw) or "(내용 없음)"}
+
+        [신청 기간]
+        {period_text}
+    """).strip()
+
+    rules = textwrap.dedent(r"""
+        === 당신이 할 일 ===
+        위 '고정 사실'을 처음 보는 사람도 이해할 수 있게 풀어 씁니다.
+        사실을 새로 만들지 말고, 이미 있는 사실을 쉽게 설명하는 것이 전부입니다.
+
+        ★ 수치 규칙 (가장 중요)
+        - 금액·연령·기간·비율·횟수는 '고정 사실'에 적힌 값만 씁니다.
+        - 고정 사실에 없는 숫자는 어떤 이유로도 쓰지 않습니다. 추정·반올림·예시 계산 모두 금지입니다.
+        - 확실하지 않으면 숫자를 아예 빼고 서술합니다. ("소득 기준을 충족해야 합니다" 처럼)
+        - 이 규칙 위반은 자동 검사로 걸러져 해당 문장이 통째로 삭제됩니다. 문장을 잃지 않으려면 지키세요.
+
+        ★ 금지 사항
+        - URL, 링크, 전화번호를 쓰지 않습니다. 공식 창구 링크는 시스템이 따로 붙입니다.
+        - 제도명을 바꾸거나 새 제도명을 만들지 않습니다.
+        - '고정 사실'에 없는 기관명·법령명·사업명을 쓰지 않습니다.
+        - 한자와 일본어 가나를 쓰지 않습니다. 한글과 영문·숫자만 씁니다.
+
+        ★ 문체
+        - 모든 문장을 '~합니다 / ~입니다 / ~하세요' 로 끝맺습니다.
+        - 기사체('~한다')와 구어체('~해요')를 쓰지 않습니다.
+        - 같은 뜻의 문장을 반복하지 않습니다. 내용이 적으면 짧게 끝냅니다.
+
+        === 출력 형식 (JSON만, 다른 텍스트 금지) ===
+        {
+          "summary": "이 제도가 무엇인지 한두 문장으로. 80~140자.",
+          "eligibility": [
+            "신청 자격을 스스로 확인할 수 있는 항목을 한 줄씩. 3~6개.",
+            "'고정 사실'의 지원 대상·선정 기준을 항목으로 나눠 쓰세요."
+          ],
+          "steps": [
+            {"title": "단계 제목", "body": "신청 절차를 2~4문장으로 설명. 존댓말."}
+          ],
+          "faq": [
+            {"q": "독자가 궁금해할 질문", "a": "고정 사실로 답할 수 있는 내용만 2~3문장."}
+          ],
+          "note": "변경 가능성·확인 방법 안내 1~2문장."
+        }
+
+        === 필드 가이드 ===
+        - summary: 필수.
+        - eligibility: 3~6개. 고정 사실로 판단할 수 없는 조건은 넣지 않습니다.
+        - steps: 2~4개. '신청 방법'에 근거가 있는 만큼만 만듭니다. 근거가 한 줄뿐이면 1개만 만드세요.
+        - faq: 0~4개. 고정 사실로 답할 수 없는 질문은 만들지 않습니다. 없으면 빈 배열.
+        - note: 선택.
+    """).strip()
+
+    return f"{facts}\n\n{rules}"
+
+
+# ─────────────────────────────────────────────────────────────
+#  LLM 호출
+# ─────────────────────────────────────────────────────────────
+def generate(record: ProgramRecord, client) -> dict:
+    """Groq 호출 → prose dict. client 가 None 이면 오프라인 폴백을 쓴다."""
+    if client is None:
+        return generate_offline(record)
+
+    prompt = build_prompt(record)
+    log.info("해설 생성: %s", record.name)
+
+    def _call(model: str, max_tokens: int = 2400):
+        return client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": prompt},
+            ],
+            temperature=0.35,
+            max_tokens=max_tokens,
+            response_format={"type": "json_object"},
+        )
+
+    try:
+        response = _call(PRIMARY_MODEL)
+    except Exception as e:
+        text = str(e).lower()
+        if "429" in text or "rate_limit" in text:
+            log.warning("%s 한도(429) → 25초 대기 후 재시도", PRIMARY_MODEL)
+            time.sleep(25)
+            try:
+                response = _call(PRIMARY_MODEL)
+            except Exception:
+                log.warning("재시도 실패 → 폴백(%s)", FALLBACK_MODEL)
+                response = _call(FALLBACK_MODEL, 1800)
+        elif "413" in text or "too large" in text:
+            response = _call(PRIMARY_MODEL, 1600)
+        else:
+            raise
+
+    raw = response.choices[0].message.content.strip()
+    raw = re.sub(r"^```json\s*", "", raw)
+    raw = re.sub(r"\s*```$", "", raw)
+    return _coerce(json.loads(raw))
+
+
+def _coerce(data: dict) -> dict:
+    """LLM 출력에서 계약에 있는 키만 남기고 타입을 맞춘다."""
+    out: dict = {
+        "summary": str(data.get("summary") or "").strip(),
+        "note": str(data.get("note") or "").strip(),
+        "eligibility": [],
+        "steps": [],
+        "faq": [],
+    }
+    for item in data.get("eligibility") or []:
+        text = str(item).strip()
+        if text:
+            out["eligibility"].append(text)
+    for item in data.get("steps") or []:
+        if isinstance(item, dict) and str(item.get("body") or "").strip():
+            out["steps"].append({
+                "title": str(item.get("title") or "").strip(),
+                "body": str(item["body"]).strip(),
+            })
+    for item in data.get("faq") or []:
+        if isinstance(item, dict) and item.get("q") and item.get("a"):
+            out["faq"].append({"q": str(item["q"]).strip(), "a": str(item["a"]).strip()})
+    return out
+
+
+# ─────────────────────────────────────────────────────────────
+#  오프라인 폴백 — API 키 없이 파이프라인을 끝까지 돌리기 위한 것
+# ─────────────────────────────────────────────────────────────
+# '·' 로는 자르지 않는다. 한국어에서 가운뎃점은 문장 구분자가 아니라 낱말 이음표라
+# ('소득·재산 조사') 여기서 자르면 '신청 후 소득' 같은 토막 문장이 나온다.
+_SENT_SPLIT_RE = re.compile(r"(?<=다\.)\s*|(?<=니다\.)\s*|\n")
+
+
+def generate_offline(record: ProgramRecord) -> dict:
+    """LLM 없이 원본 필드를 재배치해 해설 형태를 만든다.
+
+    문장을 '지어내지' 않고 원본을 항목으로 쪼개기만 하므로 검증에 걸릴 수치가
+    구조적으로 생기지 않는다. 레이아웃·렌더러·검증기를 API 키 없이 확인하는 용도다.
+    실제 발행 품질은 아니며, GROQ_API_KEY 가 있으면 이 함수는 호출되지 않는다.
+    """
+    region = record.region.label
+    summary = record.benefit_raw or record.target_raw
+    if record.org:
+        summary = f"{record.org}이(가) {region} 대상으로 운영하는 제도입니다. {summary}"
+
+    eligibility: list[str] = []
+    for chunk in _split_items(record.target_raw):
+        eligibility.append(chunk if chunk.endswith(("다", "요", ".")) else f"{chunk}에 해당하는지 확인하세요")
+    for chunk in _split_items(record.criteria_raw):
+        eligibility.append(chunk)
+    eligibility = [e for e in dict.fromkeys(eligibility) if e][:6]
+
+    steps: list[dict] = []
+    how_to_items = _split_items(record.how_to_raw)
+    for index, chunk in enumerate(how_to_items[:4], 1):
+        steps.append({"title": f"{index}단계", "body": chunk})
+    if not steps and record.how_to_raw:
+        steps = [{"title": "신청 방법", "body": record.how_to_raw}]
+
+    faq: list[dict] = []
+    if record.documents_raw:
+        faq.append({
+            "q": "어떤 서류를 준비해야 하나요?",
+            "a": "필요한 서류는 " + ", ".join(record.documents_raw) + "입니다. 기관에 따라 추가 서류를 요청할 수 있습니다.",
+        })
+    if record.apply_period.always:
+        faq.append({"q": "언제까지 신청할 수 있나요?", "a": "상시 접수하는 제도입니다. 예산 사정에 따라 조기 마감될 수 있습니다."})
+
+    return {
+        "summary": summary,
+        "eligibility": eligibility,
+        "steps": steps,
+        "faq": faq,
+        "note": "지원 금액과 자격 요건은 지침 개정으로 바뀔 수 있으니 신청 전 공식 창구에서 확인하세요.",
+    }
+
+
+def _split_items(text: str) -> list[str]:
+    if not text:
+        return []
+    parts = [p.strip(" -–—") for p in _SENT_SPLIT_RE.split(text)]
+    return [p for p in parts if len(p) > 4]

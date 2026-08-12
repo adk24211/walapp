@@ -1,0 +1,145 @@
+{
+  "categories": {
+    "housing": {
+      "label": "주거",
+      "emoji": "🏠",
+      "icon": "ti-home",
+      "desc": "월세·전세·공공임대 등 사는 곳과 관련된 지원 제도입니다."
+    },
+    "jobs": {
+      "label": "일자리·창업",
+      "emoji": "💼",
+      "icon": "ti-briefcase",
+      "desc": "취업 준비, 재직자 지원, 창업 자금까지 일과 관련된 제도입니다."
+    },
+    "care": {
+      "label": "양육·돌봄",
+      "emoji": "👶",
+      "icon": "ti-baby-carriage",
+      "desc": "임신·출산부터 육아, 가족 돌봄까지 지원하는 제도입니다."
+    },
+    "health": {
+      "label": "건강·의료",
+      "emoji": "🩺",
+      "icon": "ti-heartbeat",
+      "desc": "의료비, 건강검진, 심리 상담 등 건강과 관련된 지원입니다."
+    },
+    "education": {
+      "label": "교육·역량",
+      "emoji": "📚",
+      "icon": "ti-school",
+      "desc": "학비, 장학금, 직무 교육 등 배움을 지원하는 제도입니다."
+    },
+    "finance": {
+      "label": "금융·자산",
+      "emoji": "💰",
+      "icon": "ti-coin",
+      "desc": "목돈 마련, 대출, 세금 환급 등 돈과 관련된 제도입니다."
+    },
+    "living": {
+      "label": "생활·문화",
+      "emoji": "🎫",
+      "icon": "ti-ticket",
+      "desc": "교통, 통신, 문화생활 등 일상의 부담을 덜어 주는 제도입니다."
+    }
+  },
+  "category_order": [
+    "housing",
+    "jobs",
+    "care",
+    "health",
+    "education",
+    "finance",
+    "living"
+  ],
+  "audiences": {
+    "youth": {
+      "label": "청년",
+      "emoji": "🧑‍🎓",
+      "desc": "만 19~39세 청년이 신청할 수 있는 제도를 모았습니다."
+    },
+    "newlywed": {
+      "label": "신혼·예비부부",
+      "emoji": "💍",
+      "desc": "결혼을 준비하거나 신혼 기간에 있는 가구를 위한 제도입니다."
+    },
+    "parent": {
+      "label": "양육가정",
+      "emoji": "👪",
+      "desc": "아이를 키우는 가정이 받을 수 있는 지원입니다."
+    },
+    "senior": {
+      "label": "어르신",
+      "emoji": "🧓",
+      "desc": "만 65세 이상 어르신을 위한 제도입니다."
+    },
+    "disabled": {
+      "label": "장애인",
+      "emoji": "♿",
+      "desc": "장애인 당사자와 가족을 위한 지원 제도입니다."
+    },
+    "jobseeker": {
+      "label": "구직자",
+      "emoji": "🔎",
+      "desc": "일자리를 찾고 있는 분을 위한 제도입니다."
+    },
+    "lowincome": {
+      "label": "저소득 가구",
+      "emoji": "🤝",
+      "desc": "소득 기준을 충족하면 받을 수 있는 지원입니다."
+    },
+    "business": {
+      "label": "소상공인",
+      "emoji": "🏪",
+      "desc": "소상공인·자영업자를 위한 지원 제도입니다."
+    }
+  },
+  "audience_order": [
+    "youth",
+    "newlywed",
+    "parent",
+    "senior",
+    "disabled",
+    "jobseeker",
+    "lowincome",
+    "business"
+  ],
+  "sido": {
+    "seoul": "서울특별시",
+    "busan": "부산광역시",
+    "daegu": "대구광역시",
+    "incheon": "인천광역시",
+    "gwangju": "광주광역시",
+    "daejeon": "대전광역시",
+    "ulsan": "울산광역시",
+    "sejong": "세종특별자치시",
+    "gyeonggi": "경기도",
+    "gangwon": "강원특별자치도",
+    "chungbuk": "충청북도",
+    "chungnam": "충청남도",
+    "jeonbuk": "전북특별자치도",
+    "jeonnam": "전라남도",
+    "gyeongbuk": "경상북도",
+    "gyeongnam": "경상남도",
+    "jeju": "제주특별자치도"
+  },
+  "sido_order": [
+    "seoul",
+    "busan",
+    "daegu",
+    "incheon",
+    "gwangju",
+    "daejeon",
+    "ulsan",
+    "sejong",
+    "gyeonggi",
+    "gangwon",
+    "chungbuk",
+    "chungnam",
+    "jeonbuk",
+    "jeonnam",
+    "gyeongbuk",
+    "gyeongnam",
+    "jeju"
+  ]
+}

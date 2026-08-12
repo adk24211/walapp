@@ -1,81 +1,93 @@
 ---
 layout: default
-title: 오늘의 국내 정책·청년 정책·생활 통계 브리핑
+title: 정부·지자체 지원금과 복지 제도 총정리
 ---
 
-{% assign all_posts = site.posts %}
-{% assign policy_posts  = all_posts | where_exp: "p", "p.categories contains 'policy'" %}
-{% assign youth_posts   = all_posts | where_exp: "p", "p.categories contains 'youth'" %}
-{% assign data_posts    = all_posts | where_exp: "p", "p.categories contains 'data'" %}
-{% assign curious_posts = all_posts | where_exp: "p", "p.categories contains 'curious'" %}
+{% assign programs = site.programs %}
+{% assign open_programs = programs | where_exp: "p", "p.status != 'closed'" %}
 
 <div class="page-header">
   <div class="ph-top">
-    <span class="ph-issue">Daily Brief</span>
-    <span class="ph-date">{{ 'now' | date: "%Y년 %m월 %d일" }}</span>
+    <span class="ph-issue">지원금 도감</span>
+    <span class="ph-date">제도 {{ programs | size }}건 수록</span>
   </div>
-  <p class="ph-sub">국내 정책과 청년 지원, 생활 통계부터 흥미로운 발견까지 — 공공·1차 자료를 토대로 핵심만 쉽게 정리해 전하는 브리핑입니다.</p>
+  <h1 class="ph-title">받을 수 있는 지원금, 하나씩 정리했습니다</h1>
+  <p class="ph-sub">
+    정부와 지방자치단체가 운영하는 지원 제도를 제도 하나당 한 페이지로 정리합니다.
+    금액과 자격 요건은 공공데이터 원문을 그대로 옮기고, 설명만 쉬운 말로 다시 씁니다.
+  </p>
 </div>
 
-<div class="tab-bar">
-  <button class="tab-btn active" data-filter="all">전체</button>
-  <button class="tab-btn" data-filter="policy">🏛 국내 정책</button>
-  <button class="tab-btn" data-filter="youth">🧑‍🎓 청년 정책</button>
-  <button class="tab-btn" data-filter="data">📊 통계·생활</button>
-  <button class="tab-btn" data-filter="curious">✨ 흥미로운 발견</button>
+{% comment %} ── 대상별 진입 — 검색 의도에 가장 가까운 축이라 맨 위에 둔다 ── {% endcomment %}
+<div class="home-axis">
+  {% for a in site.data.taxonomy.audience_order %}
+  {% assign am = site.data.taxonomy.audiences[a] %}
+  {% assign acount = open_programs | where_exp: "p", "p.audiences contains a" | size %}
+  <a class="axis-card" href="{{ '/who/' | append: a | append: '/' | relative_url }}">
+    <span class="axis-emoji">{{ am.emoji }}</span>
+    <span class="axis-label">{{ am.label }}</span>
+    <span class="axis-count">{{ acount }}건</span>
+  </a>
+  {% endfor %}
 </div>
 
 <div class="feed">
 
-  {% assign sections = "policy,youth,data,curious" | split: "," %}
-  {% for sec in sections %}
-    {% case sec %}
-      {% when 'policy' %}{% assign sec_posts = policy_posts %}{% assign sec_label = '국내 정책' %}{% assign sec_emoji = '🏛' %}
-      {% when 'youth' %}{% assign sec_posts = youth_posts %}{% assign sec_label = '청년 정책' %}{% assign sec_emoji = '🧑‍🎓' %}
-      {% when 'data' %}{% assign sec_posts = data_posts %}{% assign sec_label = '통계·생활정보' %}{% assign sec_emoji = '📊' %}
-      {% when 'curious' %}{% assign sec_posts = curious_posts %}{% assign sec_label = '흥미로운 발견' %}{% assign sec_emoji = '✨' %}
-    {% endcase %}
+  {% comment %} ── 마감 임박 ── {% endcomment %}
+  {% assign dated = open_programs | where_exp: "p", "p.apply_always != true" %}
+  {% assign closing = dated | where_exp: "p", "p.apply_end" | sort: "apply_end" %}
+  {% if closing.size > 0 %}
+  <div class="section-group">
+    <div class="section-label">
+      <span class="sec-tag">⏰ 마감 임박</span>
+      <div class="sec-rule"></div>
+      <a class="sec-more" href="{{ '/deadline/' | relative_url }}">더보기 →</a>
+    </div>
+    <div class="cards">
+      {% for p in closing limit: 4 %}{% include program-card.html program=p %}{% endfor %}
+    </div>
+  </div>
+  {% endif %}
 
-    {% if sec_posts.size > 0 %}
-    <div class="section-group" data-cat="{{ sec }}">
+  {% comment %} ── 새로 추가된 제도 ── {% endcomment %}
+  {% assign recent = programs | sort: "first_published" | reverse %}
+  {% if recent.size > 0 %}
+  <div class="section-group">
+    <div class="section-label">
+      <span class="sec-tag">✨ 새로 추가</span>
+      <div class="sec-rule"></div>
+      <a class="sec-more" href="{{ '/new/' | relative_url }}">더보기 →</a>
+    </div>
+    <div class="cards">
+      {% for p in recent limit: 4 %}{% include program-card.html program=p %}{% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% comment %} ── 분야별 ── {% endcomment %}
+  {% for c in site.data.taxonomy.category_order %}
+    {% assign cm = site.data.taxonomy.categories[c] %}
+    {% assign citems = open_programs | where: "category", c %}
+    {% if citems.size > 0 %}
+    <div class="section-group" data-cat="{{ c }}">
       <div class="section-label">
-        <span class="sec-tag {{ sec }}">{{ sec_emoji }} {{ sec_label }}</span>
+        <span class="sec-tag {{ c }}">{{ cm.emoji }} {{ cm.label }}</span>
         <div class="sec-rule"></div>
-        <a class="sec-more" href="{{ '/category/' | append: sec | append: '/' | relative_url }}">더보기 →</a>
+        <a class="sec-more" href="{{ '/support/' | append: c | append: '/' | relative_url }}">더보기 →</a>
       </div>
       <div class="cards">
-        {% for post in sec_posts limit: 8 %}
-        {% assign loop_index = forloop.index | prepend: "0" | slice: -2, 2 %}
-        <a href="{{ post.url | relative_url }}" class="post-card cn" data-cat="{{ sec }}">
-          <div class="card-inner">
-            <div class="card-accent"></div>
-            <div class="card-body">
-              <div class="card-top">
-                <h2 class="card-title">{{ post.title }}</h2>
-                <span class="card-num">{{ loop_index }}</span>
-              </div>
-              {% if post.summary %}
-              <p class="card-desc">{{ post.summary }}</p>
-              {% endif %}
-              {% if post.callout %}
-              <div class="card-callout"><strong>{{ post.callout_label | default: "핵심" }}</strong> {{ post.callout }}</div>
-              {% endif %}
-              <div class="card-footer">
-                <div class="card-meta">
-                  {% if post.tags.first %}<span>{{ post.tags.first }}</span><span class="meta-dot"></span>{% endif %}
-                  <span>{% include reading-time.html content=post.content %}</span>
-                  <span class="meta-dot"></span>
-                  <span>{{ post.date | date: "%Y.%m.%d" }}</span>
-                </div>
-                <span class="card-cta">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>
-              </div>
-            </div>
-          </div>
-        </a>
-        {% endfor %}
+        {% for p in citems limit: 4 %}{% include program-card.html program=p show_category=false %}{% endfor %}
       </div>
     </div>
     {% endif %}
   {% endfor %}
 
 </div>
+
+<aside class="hub-footnote" role="note">
+  <i class="ti ti-info-circle" aria-hidden="true"></i>
+  <p>
+    본 사이트는 정부 공식 사이트가 아닙니다. 각 제도의 금액·요건·기간은 공공데이터 원문을 옮긴 것이며,
+    지침 개정으로 바뀔 수 있습니다. 신청과 최종 확인은 반드시 각 제도 페이지에 안내된 공식 창구를 이용해 주세요.
+  </p>
+</aside>

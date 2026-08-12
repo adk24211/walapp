@@ -1,0 +1,112 @@
+name: Daily Program Sync
+
+# 구 "Daily Post Generator" 를 대체한다.
+# 차이: 매일 4개를 강제 발행하지 않는다. 큐가 비면 아무것도 쓰지 않고 넘어간다.
+# 억지 생성이 중복의 직접 원인이었다. (REDESIGN.md §1.2)
+
+on:
+  schedule:
+    # 매일 KST 07:00 = UTC 22:00 (전날)
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+    inputs:
+      post_date:
+        description: "기준 날짜 (YYYY-MM-DD, 비워두면 오늘)"
+        required: false
+        default: ""
+      publish_limit:
+        description: "신규 발행 상한"
+        required: false
+        default: "5"
+      refresh_limit:
+        description: "갱신 상한"
+        required: false
+        default: "10"
+      dry_run:
+        description: "Dry run (파일 저장 없이 테스트)"
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 실 API 키 없이 스케줄 실행되면 목 데이터가 배포된다.
+      # 지원금 정보는 YMYL 영역이라 가짜 수치가 공개되면 실제 피해로 이어지므로 여기서 막는다.
+      - name: Guard against mock data deployment
+        env:
+          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY }}
+        run: |
+          if [ -z "$DATA_GO_KR_API_KEY" ]; then
+            echo "::error::DATA_GO_KR_API_KEY 가 설정되지 않았습니다."
+            echo "이 키가 없으면 파이프라인이 목(mock) 데이터로 동작하며, 가짜 지원금 정보가 배포됩니다."
+            echo "공공데이터포털에서 활용신청 후 Secrets 에 등록하세요. (REDESIGN.md 단계 0)"
+            exit 1
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY }}
+          MOCK_DATA: "0"
+          POST_DATE: ${{ github.event.inputs.post_date }}
+          PUBLISH_LIMIT: ${{ github.event.inputs.publish_limit || '5' }}
+          REFRESH_LIMIT: ${{ github.event.inputs.refresh_limit || '10' }}
+          DRY_RUN: ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
+          TZ: Asia/Seoul
+        run: python scripts/run_all.py
+
+      - name: Commit new and updated programs
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          TZ: Asia/Seoul
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _programs/ _records/ _data/
+          if git diff --staged --quiet; then
+            echo "변경 없음 — 커밋 스킵"
+          else
+            NEW=$(git diff --staged --name-only --diff-filter=A -- _programs/ | wc -l)
+            MOD=$(git diff --staged --name-only --diff-filter=M -- _programs/ | wc -l)
+            git commit -m "📋 제도 동기화 $(date +'%Y-%m-%d') — 신규 ${NEW} · 갱신 ${MOD}"
+            git push
+          fi
+
+      - name: Setup Ruby for Jekyll build
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+
+      - name: Build Jekyll
+        run: bundle exec jekyll build --destination _site_check --future
+        env:
+          JEKYLL_ENV: production
+          TZ: Asia/Seoul
+
+      - name: Deploy to GitHub Pages
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site_check
+          publish_branch: gh-pages

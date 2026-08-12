@@ -30,8 +30,14 @@ permalink: /search/
   var input   = document.getElementById('search-input');
   var status  = document.getElementById('search-status');
   var results = document.getElementById('search-results');
-  var CAT = { 'policy': 'policy', 'youth': 'youth', 'data': 'data', 'curious': 'curious' };
-  var CAT_LABEL = { 'policy': '국내 정책', 'youth': '청년 정책', 'data': '통계·생활정보', 'curious': '흥미로운 발견' };
+  // 분야 라벨은 _data/taxonomy.json 에서 그대로 가져온다 (템플릿에 한글 라벨 하드코딩 금지).
+  // 구 브리핑 카테고리는 아카이브 검색 결과 표시용으로만 남겨 둔다.
+  var CAT_LABEL = {
+    {% for c in site.data.taxonomy.category_order %}
+    {{ c | jsonify }}: {{ site.data.taxonomy.categories[c].label | jsonify }},
+    {% endfor %}
+    'policy': '국내 정책', 'youth': '청년 정책', 'data': '통계·생활정보', 'curious': '흥미로운 발견'
+  };
   var docs = [];
   var ready = false;
 
@@ -93,20 +99,22 @@ permalink: /search/
 
     status.textContent = '"' + q + '" 검색 결과 ' + matched.length + '건';
     results.innerHTML = matched.map(function (d) {
-      var cc = CAT[d.category] || 'policy';
+      var chips = '<span class="chip chip-cat">' + escapeHtml(CAT_LABEL[d.category] || d.category) + '</span>';
+      if (d.region) chips += '<span class="chip">' + escapeHtml(d.region) + '</span>';
+      if (d.type === 'brief') chips += '<span class="chip chip-closed">지난 브리핑</span>';
       return '' +
-        '<a href="' + d.url + '" class="post-card">' +
+        '<a href="' + d.url + '" class="post-card cn" data-cat="' + escapeHtml(d.category) + '">' +
           '<div class="card-inner">' +
-            '<div class="card-accent ' + cc + '"></div>' +
+            '<div class="card-accent"></div>' +
             '<div class="card-body">' +
               '<div class="card-top">' +
-                '<h2 class="card-title ' + cc + '">' + highlight(d.title, terms) + '</h2>' +
-                '<span class="card-num">' + d.date + '</span>' +
+                '<h2 class="card-title">' + highlight(d.title, terms) + '</h2>' +
               '</div>' +
               '<p class="card-desc">' + highlight(snippet(d.content, terms), terms) + '</p>' +
+              '<div class="card-chips">' + chips + '</div>' +
               '<div class="card-footer">' +
-                '<div class="card-meta"><span>' + (CAT_LABEL[d.category] || d.category) + '</span></div>' +
-                '<span class="card-cta ' + cc + '">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>' +
+                '<div class="card-meta"><span>' + escapeHtml(d.org || d.date || '') + '</span></div>' +
+                '<span class="card-cta">자세히 보기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>' +
               '</div>' +
             '</div>' +
           '</div>' +

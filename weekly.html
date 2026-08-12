@@ -1,70 +1,23 @@
 ---
-layout: default
+layout: null
 title: 이번 주 브리핑
 permalink: /weekly/
+sitemap: false
 ---
-
-{% assign now_s = site.time | date: "%s" | plus: 0 %}
-{% assign cutoff = now_s | minus: 604800 %}
-
-<div class="page-header">
-  <div class="ph-top">
-    <span class="ph-issue">Weekly</span>
-    <span class="ph-date">최근 7일</span>
-  </div>
-  <h1 class="ph-title">이번 주 브리핑</h1>
-  <p class="ph-sub">지난 일주일 동안 발행된 핵심 소식을 카테고리별로 모았습니다.</p>
-</div>
-
-<div class="feed">
-  {% assign sections = "policy,youth,data,curious" | split: "," %}
-  {% assign total = 0 %}
-  {% for sec in sections %}
-    {% case sec %}
-      {% when 'policy' %}{% assign sec_label = '국내 정책' %}{% assign sec_emoji = '🏛' %}
-      {% when 'youth' %}{% assign sec_label = '청년 정책' %}{% assign sec_emoji = '🧑‍🎓' %}
-      {% when 'data' %}{% assign sec_label = '통계·생활정보' %}{% assign sec_emoji = '📊' %}
-      {% when 'curious' %}{% assign sec_label = '흥미로운 발견' %}{% assign sec_emoji = '✨' %}
-    {% endcase %}
-
-    {% capture cards %}
-      {% for post in site.posts %}
-        {% assign post_s = post.date | date: "%s" | plus: 0 %}
-        {% if post_s > cutoff and post.categories contains sec %}
-        <a href="{{ post.url | relative_url }}" class="post-card cn" data-cat="{{ sec }}">
-          <div class="card-inner">
-            <div class="card-accent"></div>
-            <div class="card-body">
-              <div class="card-top">
-                <h2 class="card-title">{{ post.title }}</h2>
-                <span class="card-num">{{ post.date | date: "%m.%d" }}</span>
-              </div>
-              {% if post.summary %}<p class="card-desc">{{ post.summary }}</p>{% endif %}
-              <div class="card-footer">
-                <div class="card-meta"><span>{% include reading-time.html content=post.content %}</span></div>
-                <span class="card-cta">자세히 읽기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>
-              </div>
-            </div>
-          </div>
-        </a>
-        {% endif %}
-      {% endfor %}
-    {% endcapture %}
-
-    {% assign trimmed = cards | strip %}
-    {% if trimmed != "" %}
-    {% assign total = total | plus: 1 %}
-    <div class="section-group">
-      <div class="section-label">
-        <span class="sec-tag {{ sec }}">{{ sec_emoji }} {{ sec_label }}</span>
-        <div class="sec-rule"></div>
-      </div>
-      <div class="cards">{{ cards }}</div>
-    </div>
-    {% endif %}
-  {% endfor %}
-
-  {% if total == 0 %}
-  <p class="search-status">최근 7일 동안 발행된 글이 없습니다.</p>
-  {% endif %}
-</div>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>마감 임박 제도로 이동합니다</title>
+  {% comment %}
+    구 `/weekly/` 는 최근 7일 브리핑을 모으던 페이지다. 뉴스 발행을 중단해
+    항상 비게 되므로, 지금 확인할 값어치가 있는 `/deadline/` 으로 넘긴다.
+  {% endcomment %}
+  <link rel="canonical" href="{{ '/deadline/' | absolute_url }}">
+  <meta name="robots" content="noindex, follow">
+  <meta http-equiv="refresh" content="0; url={{ '/deadline/' | relative_url }}">
+</head>
+<body>
+  <p><a href="{{ '/deadline/' | relative_url }}">마감이 다가오는 제도로 이동합니다.</a></p>
+</body>
+</html>

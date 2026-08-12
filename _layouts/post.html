@@ -30,13 +30,24 @@ layout: default
 <div class="post-hero cn" data-cat="{{ cat }}">
   <div class="post-hero-inner">
     <div class="post-hero-top">
-      <a href="{{ '/' | relative_url }}" class="back-link">← 홈으로</a>
+      <a href="{{ '/brief/' | relative_url }}" class="back-link">← 지난 브리핑</a>
     </div>
     {% if cat %}
     <div class="post-hero-cat">
       <span class="post-cat-badge {{ cat }}">{% include category-label.html category=cat %}</span>
     </div>
     {% endif %}
+    {% if page.archived %}
+    <div class="status-banner closed" role="status">
+      <i class="ti ti-archive" aria-hidden="true"></i>
+      <div>
+        <strong>발행이 중단된 지난 브리핑입니다.</strong>
+        {{ page.date | date: "%Y년 %m월 %d일" }} 시점의 뉴스 요약으로, 지금은 내용이 맞지 않을 수 있습니다.
+        최신 지원 제도는 <a href="{{ '/support/' | relative_url }}">전체 지원 제도</a>에서 확인해 주세요.
+      </div>
+    </div>
+    {% endif %}
+
     <h1 class="post-title">{{ page.title }}</h1>
     {% if page.summary %}<p class="post-summary">{{ page.summary }}</p>{% endif %}
     <div class="post-meta-row">
@@ -103,6 +114,7 @@ layout: default
   </nav>
 
   {% assign related = site.posts | where_exp: "p", "p.categories contains cat" %}
+  {% comment %} 아카이브 글끼리만 연결한다. 현행 제도 페이지로 섞어 보내지 않는다. {% endcomment %}
   {% assign related_count = 0 %}
   {% capture related_html %}
     {% for post in related %}
@@ -124,67 +136,4 @@ layout: default
   {% endif %}
 </div>
 
-<script>
-(function () {
-  var article = document.querySelector('.post-content');
-
-  // 목차(TOC) 생성 — 본문 ## / ### 제목 기반
-  var toc = document.getElementById('post-toc');
-  var tocList = document.getElementById('post-toc-list');
-  if (article && toc && tocList) {
-    var heads = article.querySelectorAll('h2, h3');
-    var count = 0;
-    heads.forEach(function (h) {
-      if (!h.id) {
-        h.id = 'sec-' + (++count) + '-' + (h.textContent || '').trim().replace(/\s+/g, '-').slice(0, 24);
-      }
-      var li = document.createElement('li');
-      if (h.tagName.toLowerCase() === 'h3') li.className = 'toc-h3';
-      var a = document.createElement('a');
-      a.href = '#' + h.id;
-      a.textContent = h.textContent;
-      li.appendChild(a);
-      tocList.appendChild(li);
-      count++;
-    });
-    if (tocList.children.length >= 2) {
-      toc.hidden = false;
-    }
-  }
-
-  // 읽기 진행바
-  var bar = document.getElementById('reading-progress');
-  function onScroll() {
-    if (!article || !bar) return;
-    var rect = article.getBoundingClientRect();
-    var total = article.offsetHeight - window.innerHeight;
-    var scrolled = Math.min(Math.max(-rect.top, 0), total);
-    var pct = total > 0 ? (scrolled / total) * 100 : 0;
-    bar.style.width = pct + '%';
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll);
-  onScroll();
-
-  // 링크 복사
-  var copyBtn = document.getElementById('share-copy');
-  if (copyBtn) {
-    copyBtn.addEventListener('click', function () {
-      var url = window.location.href;
-      var done = function () {
-        var orig = copyBtn.innerHTML;
-        copyBtn.innerHTML = '<i class="ti ti-check"></i> 복사됨';
-        setTimeout(function () { copyBtn.innerHTML = orig; }, 1500);
-      };
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(url).then(done).catch(done);
-      } else {
-        var t = document.createElement('textarea');
-        t.value = url; document.body.appendChild(t); t.select();
-        try { document.execCommand('copy'); } catch (e) {}
-        document.body.removeChild(t); done();
-      }
-    });
-  }
-})();
-</script>
+<script src="{{ '/assets/js/program.js' | relative_url }}"></script>

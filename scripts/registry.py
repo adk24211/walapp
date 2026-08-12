@@ -1,0 +1,243 @@
+"""발행 원장 — 중복 방지의 단일 진실 공급원.
+
+`_data/registry.json` 은 "이 사이트가 지금까지 무엇을 발행했는가" 를 기록한다.
+수집·발행·갱신 모든 단계가 이 파일을 먼저 조회하므로, 같은 제도가 두 번
+새 글로 나가는 일이 자료구조 차원에서 불가능해진다. (REDESIGN.md §6.2)
+
+git 에 커밋되므로 워크플로우 재실행이나 롤백에도 이력이 보존된다.
+"""
+from __future__ import annotations
+
+import json
+import logging
+import re
+from dataclasses import dataclass
+from pathlib import Path
+
+from schema import ProgramRecord
+
+log = logging.getLogger(__name__)
+
+ROOT = Path(__file__).parent.parent
+DATA_DIR = ROOT / "_data"
+PROGRAMS_DIR = ROOT / "_programs"
+
+REGISTRY_FILE = DATA_DIR / "registry.json"
+QUEUE_FILE = DATA_DIR / "queue.json"
+REVIEW_FILE = DATA_DIR / "review_needed.json"
+INCOMPLETE_FILE = DATA_DIR / "incomplete.json"
+
+# 제도 원본 레코드. REDESIGN.md 는 `_data/programs/` 로 적었으나 `_records/` 로 옮겼다.
+# Jekyll 은 `_data` 하위를 전부 읽어 site.data 에 올리는데, 레코드가 수천 건이 되면
+# 빌드마다 쓸데없이 파싱된다. 밑줄로 시작하는 디렉터리는 Jekyll 이 통째로 무시한다.
+RECORDS_DIR = ROOT / "_records"
+
+# 유사도 임계값 — 이 이상이면 사람이 확인하도록 검토 대기열에 넣는다.
+# 자동 병합하지 않는 이유: '청년월세지원' 과 '청년월세 한시 특별지원' 처럼
+# 이름이 비슷해도 실제로 다른 제도인 경우가 있다.
+SIMILARITY_THRESHOLD = 0.85
+
+
+# ─────────────────────────────────────────────────────────────
+#  JSON I/O
+# ─────────────────────────────────────────────────────────────
+def _read_json(path: Path, default):
+    if not path.exists():
+        return default
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as e:
+        log.error("JSON 읽기 실패 [%s]: %s", path.name, e)
+        return default
+
+
+def _write_json(path: Path, data) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+
+
+# ─────────────────────────────────────────────────────────────
+#  원장
+# ─────────────────────────────────────────────────────────────
+@dataclass
+class Entry:
+    name: str
+    slug: str
+    path: str
+    content_hash: str
+    first_published: str
+    last_updated: str
+    last_checked: str = ""
+    revision: int = 1
+    status: str = "active"
+
+    def to_dict(self) -> dict:
+        return self.__dict__.copy()
+
+
+class Registry:
+    def __init__(self, path: Path = REGISTRY_FILE):
+        self.path = path
+        raw = _read_json(path, {})
+        self.entries: dict[str, Entry] = {
+            program_id: Entry(**data) for program_id, data in raw.items()
+        }
+
+    # ── 조회 ──
+    def __contains__(self, program_id: str) -> bool:
+        return program_id in self.entries
+
+    def __len__(self) -> int:
+        return len(self.entries)
+
+    def get(self, program_id: str) -> Entry | None:
+        return self.entries.get(program_id)
+
+    def is_changed(self, record: ProgramRecord) -> bool:
+        """이미 발행된 제도의 내용이 원천에서 바뀌었는지."""
+        entry = self.entries.get(record.id)
+        return entry is not None and entry.content_hash != record.content_hash
+
+    def published_names(self) -> dict[str, str]:
+        """유사도 비교용 {제도명: program_id}."""
+        return {e.name or e.slug: pid for pid, e in self.entries.items()}
+
+    # ── 기록 ──
+    def register(self, record: ProgramRecord, today: str) -> Entry:
+        """신규 발행 기록."""
+        entry = Entry(
+            name=record.name,
+            slug=record.slug,
+            path=f"_programs/{record.path()}",
+            content_hash=record.content_hash,
+            first_published=today,
+            last_updated=today,
+            last_checked=today,
+            revision=1,
+            status=record.status,
+        )
+        self.entries[record.id] = entry
+        return entry
+
+    def mark_updated(self, record: ProgramRecord, today: str) -> Entry:
+        """내용이 바뀌어 갱신했을 때."""
+        entry = self.entries.get(record.id)
+        if entry is None:
+            return self.register(record, today)
+        entry.name = record.name
+        entry.slug = record.slug
+        entry.path = f"_programs/{record.path()}"
+        entry.content_hash = record.content_hash
+        entry.last_updated = today
+        entry.last_checked = today
+        entry.revision += 1
+        entry.status = record.status
+        return entry
+
+    def mark_checked(self, program_id: str, today: str, status: str | None = None) -> None:
+        """내용은 그대로고 확인만 했을 때. revision 은 올리지 않는다."""
+        entry = self.entries.get(program_id)
+        if entry is None:
+            return
+        entry.last_checked = today
+        if status:
+            entry.status = status
+
+    def save(self) -> None:
+        _write_json(self.path, {pid: e.to_dict() for pid, e in self.entries.items()})
+        log.info("원장 저장: %d건 (%s)", len(self.entries), self.path.name)
+
+
+# ─────────────────────────────────────────────────────────────
+#  레코드 저장소 (_data/programs/{id}.json)
+# ─────────────────────────────────────────────────────────────
+def save_record(record: ProgramRecord) -> None:
+    _write_json(RECORDS_DIR / f"{record.id}.json", record.to_dict())
+
+
+def load_record(program_id: str) -> ProgramRecord | None:
+    data = _read_json(RECORDS_DIR / f"{program_id}.json", None)
+    return ProgramRecord.from_dict(data) if data else None
+
+
+def load_all_records() -> dict[str, ProgramRecord]:
+    if not RECORDS_DIR.exists():
+        return {}
+    out: dict[str, ProgramRecord] = {}
+    for path in sorted(RECORDS_DIR.glob("*.json")):
+        data = _read_json(path, None)
+        if data:
+            record = ProgramRecord.from_dict(data)
+            out[record.id] = record
+    return out
+
+
+# ─────────────────────────────────────────────────────────────
+#  보조 대기열
+# ─────────────────────────────────────────────────────────────
+def save_queue(payload: dict) -> None:
+    _write_json(QUEUE_FILE, payload)
+
+
+def load_queue() -> dict:
+    return _read_json(QUEUE_FILE, {"generated_at": "", "pending": []})
+
+
+def save_review_needed(items: list[dict]) -> None:
+    _write_json(REVIEW_FILE, {"count": len(items), "items": items})
+
+
+def save_incomplete(items: list[dict]) -> None:
+    _write_json(INCOMPLETE_FILE, {"count": len(items), "items": items})
+
+
+# ─────────────────────────────────────────────────────────────
+#  유사도 (3계층 중복 방지)
+# ─────────────────────────────────────────────────────────────
+_NAME_STRIP_RE = re.compile(r"[\s\W_]+")
+# 제도명에 흔한 수식어. 빼고 비교해야 '2026년 청년 지원' 과 '청년 지원' 이 붙는다.
+_NOISE_TOKENS = ("사업", "지원사업", "제도", "정책", "20", "년도", "차")
+
+
+def normalize_name(name: str) -> str:
+    """비교용 이름 정규화. 기존 collect/base.py 의 normalize_title 과 같은 발상."""
+    text = _NAME_STRIP_RE.sub("", str(name or "")).lower()
+    for token in _NOISE_TOKENS:
+        text = text.replace(token, "")
+    return text
+
+
+def _bigrams(text: str) -> set[str]:
+    return {text[i:i + 2] for i in range(len(text) - 1)} or {text}
+
+
+def similarity(a: str, b: str) -> float:
+    """정규화 이름의 문자 바이그램 자카드 유사도."""
+    sa, sb = _bigrams(normalize_name(a)), _bigrams(normalize_name(b))
+    if not sa or not sb:
+        return 0.0
+    return len(sa & sb) / len(sa | sb)
+
+
+def find_similar(
+    record: ProgramRecord,
+    known: dict[str, str],
+    threshold: float = SIMILARITY_THRESHOLD,
+) -> tuple[str, float] | None:
+    """이미 발행된 제도 중 유사한 것을 찾는다.
+
+    `known` 은 {비교용 이름: program_id}. 자기 자신은 건너뛴다.
+    """
+    best_id, best_score = None, 0.0
+    for name, program_id in known.items():
+        if program_id == record.id:
+            continue
+        score = similarity(record.name, name)
+        if score > best_score:
+            best_id, best_score = program_id, score
+    if best_id and best_score >= threshold:
+        return best_id, round(best_score, 3)
+    return None
