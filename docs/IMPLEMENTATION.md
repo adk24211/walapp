@@ -25,6 +25,8 @@ bundle exec jekyll serve --future
 |------|--------|------|
 | `MOCK_DATA` | 자동 | `DATA_GO_KR_API_KEY` 가 없으면 자동으로 목 모드. `1`/`0` 으로 강제 가능 |
 | `REGION_SCOPE` | `national` | 발행 범위. 중앙부처 우선 방침의 구현체. 지자체 포함은 `national,sido,sigungu` |
+| `SYNC_SINCE` | (없음) | `YYYY-MM-DD`. 이 날짜 이후 수정된 제도만 받는 증분 동기화 |
+| `BOJO24_BASE_URL` | 실 API | 엔드포인트 override (로컬 복제 서버 테스트용) |
 | `PUBLISH_LIMIT` | 5 | 하루 신규 발행 상한 |
 | `REFRESH_LIMIT` | 10 | 하루 갱신 상한 |
 | `POST_DATE` | 오늘(KST) | 기준 날짜 override |
@@ -155,8 +157,10 @@ scripts/
 └── collect/adapters/
     ├── base.py           어댑터 인터페이스 + 정규화
     ├── mock.py           목 데이터 31건 (모든 분기를 밟도록 구성)
-    ├── bojo24.py         보조금24 어댑터 — ⚠️ 필드명 확정 필요
-    └── welfare_central.py 중앙부처복지서비스 어댑터 — ⚠️ 필드명 확정 필요
+    ├── bojo24.py         보조금24 어댑터 — ✅ 필드 확정, 목록+상세 병합·증분 동기화
+    └── welfare_central.py 중앙부처복지서비스 — 선택(ENABLE_WELFARE_CENTRAL=1), 필드 미확정
+
+scripts/inspect_api.py     새 API 의 필드명 조사 (--docs / --probe)
 
 _layouts/program.html     제도 상세
 _layouts/hub.html         분야·대상·지역·마감·신규 공용
@@ -182,27 +186,61 @@ assets/css/support.css    분야 컬러 7종 + 제도 페이지 컴포넌트
 
 ## 남은 일
 
-| 단계 | 내용 | 담당 |
+| 단계 | 내용 | 상태 |
 |------|------|------|
-| **0** | 공공데이터포털 **API 2개** 활용신청 → 키 발급 → 어댑터 필드 확정 | **사용자** |
-| 6 | `.gitignore` 의 목 데이터 블록 제거, 실 API 로 첫 동기화 | 단계 0 이후 |
-| 7 | 초기 백필 (상위 100~300건 일괄 발행) | 단계 6 이후 |
+| **0** | 보조금24(`15113968`) 활용신청 → 어댑터 필드 확정 | ✅ **완료** |
+| 6 | `.gitignore` 의 목 데이터 블록 제거, 실 API 로 첫 동기화 | 다음 차례 |
+| 7 | 초기 백필 | 단계 6 이후 |
 
-중앙부처 우선 방침이라 단계 0에서 신청할 API 는 **2개뿐**입니다.
+### 보조금24 어댑터 — 필드 확정됨
 
-| 데이터셋 | 어댑터 | 확정할 것 |
-|----------|--------|-----------|
-| `15113968` 보조금24 | `collect/adapters/bojo24.py` | `ID_FIELD`, `FIELD_MAP` |
-| `15090532` 중앙부처복지서비스 | `collect/adapters/welfare_central.py` | `ID_FIELD`, `FIELD_MAP`, 상세조회 필요 여부 |
+활용가이드(`infuser.odcloud.kr/api/stages/44436/api-docs`)로 **추정이 아니라 확정**했습니다.
 
-지자체복지서비스(`15108347`)와 온통청년(`15143273`)은 범위를 넓힐 때 신청합니다.
+```
+ID_FIELD = "서비스ID"          ← supportConditions 파라미터 설명이 "공공서비스 고유 식별자"로 명시
+Base URL = https://api.odcloud.kr/api/gov24/v3
+```
 
-두 어댑터 모두 `ID_FIELD` 가 가장 중요합니다. **이 값이 흔들리면 같은 제도가 매일 새 페이지로
-발행되어** 컨셉 전환의 의미가 사라집니다.
+| 오퍼레이션 | 쓰는 곳 |
+|-----------|---------|
+| `GET /serviceList` | 지원대상·지원내용·선정기준·신청방법·신청기한·서비스분야·소관기관유형 |
+| `GET /serviceDetail` | 구비서류·온라인신청사이트URL·문의처·법령 |
+| `GET /supportConditions` | JA* 코드 (의미 미확인 — §지원조건 참고) |
 
-### ID_FIELD 를 확인하는 법
+**API 하나로 충분합니다.** 보조금24가 중앙부처·지자체·공공기관·교육청 수혜서비스를 모두
+담고 `소관기관유형` 으로 구분해 주기 때문에, 중앙부처 우선 단계에서는 `REGION_SCOPE` 가
+범위를 걸러 줍니다. 복지로 기반 중앙부처복지서비스(`15090532`)는 겹치는 사업이 많아
+유사도 검토 대기열만 키우므로, 필요할 때 `ENABLE_WELFARE_CENTRAL=1` 로 켜는 선택 어댑터로
+돌렸습니다.
 
-`scripts/inspect_api.py` 가 필드명을 뽑아 `ID_FIELD` 후보와 `FIELD_MAP` 초안까지 출력합니다.
+설계상 주의한 점:
+
+- `serviceDetail` 은 `cond[서비스ID::EQ]` 로 한 건씩 조회할 수 있지만, 제도 수천 건을
+  한 건씩 호출하면 트래픽을 다 씁니다. **목록과 상세를 각각 통째로 페이지네이션해
+  서비스ID 로 합칩니다.**
+- `cond[수정일시::GTE]` 를 지원하므로 `SYNC_SINCE=YYYY-MM-DD` 로 **증분 동기화**가 됩니다.
+  매일 전체를 다시 훑지 않아도 됩니다.
+- 상세 조회가 실패해도 목록만으로 발행합니다(구비서류·신청URL만 빠짐).
+
+#### 지원조건(JA* 코드)을 쓰지 않는 이유
+
+`supportConditions` 응답은 `JA0101`, `JA0201` 같은 **코드 컬럼으로만** 오고 활용가이드에
+코드표가 없습니다. `JA0110`/`JA0111` 이 정수형이라 연령 하한/상한으로 보이지만,
+**추측해서 자격 요건에 쓰면 틀린 조건을 페이지에 싣게 됩니다.** 그래서 의미를 부여하지 않고
+보류했습니다. 코드표를 확인하면 `CONDITION_CODE_LABELS` 를 채워 대상 분류 정확도를
+높일 수 있습니다.
+
+확인 방법: 지원조건을 받아 같은 서비스ID 의 `지원대상` 원문과 대조합니다.
+
+```bash
+python3 scripts/inspect_api.py --probe \
+  "https://api.odcloud.kr/api/gov24/v3/supportConditions" --key "키" --rows 20
+```
+
+### 다른 API 의 ID_FIELD 를 확인하는 법
+
+범위를 넓혀 새 API 를 붙일 때 씁니다. `scripts/inspect_api.py` 가 필드명을 뽑아
+`ID_FIELD` 후보와 `FIELD_MAP` 초안까지 출력합니다.
 
 ```bash
 # ① 활용가이드(Swagger/OpenAPI) 문서에서 — 키 발급 전에도 가능
