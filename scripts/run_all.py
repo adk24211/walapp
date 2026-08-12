@@ -1,14 +1,26 @@
-"""
-왈랩 자동화 파이프라인 진입점
+"""지원금 도감 파이프라인 진입점.
 
-실행 방법:
-    python scripts/run_all.py
+    ① 동기화   원천 API 목록 → 원장 대조 → 신규/변경/동일/격리 분류
+    ② 큐 산출   신규 후보에 우선순위 점수 부여
+    ③ 발행      큐 상위 N건을 해설 생성 → 검증 → 페이지 작성
+    ④ 갱신      내용이 바뀐 제도 상위 M건을 다시 렌더
+    ⑤ 인덱스    분류 데이터를 Jekyll 로 내보냄
 
-환경변수 (.env 또는 GitHub Secrets):
-    GEMINI_API_KEY     — Gemini API 키 (필수)
-    POST_DATE          — 포스팅 날짜 override (선택, YYYY-MM-DD 형식)
-    SKIP_COLLECT       — "1" 이면 수집 스킵, 캐시 사용 (개발용)
-    DRY_RUN            — "1" 이면 파일 저장 없이 출력만 (개발용)
+구 파이프라인(매일 4개 강제 발행)과의 차이:
+  · 소재를 RSS 최신순이 아니라 큐에서 꺼낸다
+  · 큐가 비면 아무것도 발행하지 않는다 — 억지 생성이 중복의 직접 원인이었다
+  · 같은 제도의 재등장은 새 글이 아니라 갱신으로 흡수된다
+
+환경변수:
+    GROQ_API_KEY         해설 생성용. 없으면 오프라인 폴백으로 동작한다.
+    DATA_GO_KR_API_KEY   공공데이터포털 키. 없으면 목 데이터로 동작한다.
+    MOCK_DATA            "1" 강제 목 모드 / "0" 강제 실 API 모드
+    POST_DATE            기준 날짜 override (YYYY-MM-DD)
+    PUBLISH_LIMIT        하루 신규 발행 상한 (기본 5)
+    REFRESH_LIMIT        하루 갱신 상한 (기본 10)
+    REGION_SCOPE         발행 범위 (기본 "national" — 중앙부처 우선)
+                         지자체까지 넓히려면 "national,sido,sigungu"
+    DRY_RUN              "1" 이면 파일을 쓰지 않는다
 """
 from __future__ import annotations
 
@@ -16,19 +28,12 @@ import json
 import logging
 import os
 import sys
-import time
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from dotenv import load_dotenv
-from groq import Groq
-
-# 프로젝트 루트를 sys.path에 추가
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(Path(__file__).parent))
-
-load_dotenv(ROOT / ".env")
 
 logging.basicConfig(
     level=logging.INFO,
@@ -37,169 +42,138 @@ logging.basicConfig(
 )
 log = logging.getLogger("run_all")
 
-POSTS_DIR  = ROOT / "_posts"
-CACHE_DIR  = ROOT / ".cache"
-CACHE_FILE = CACHE_DIR / "last_collect.json"
-
-CATEGORY_ORDER = ["policy", "youth", "data", "curious"]
-# 카테고리별 포스팅 시간 (KST)
-POST_HOURS = {
-    "policy":  "07:00:00",
-    "youth":   "07:01:00",
-    "data":    "07:02:00",
-    "curious": "07:03:00",
-}
+DEFAULT_PUBLISH_LIMIT = 5
+DEFAULT_REFRESH_LIMIT = 10
 
 
-def load_cache() -> dict:
-    if CACHE_FILE.exists():
-        return json.loads(CACHE_FILE.read_text(encoding="utf-8"))
-    return {}
-
-
-def save_cache(data: dict) -> None:
-    CACHE_DIR.mkdir(exist_ok=True)
-    CACHE_FILE.write_text(
-        json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
-
-
-def collect_all(skip: bool = False) -> dict:
-    """전체 수집 실행"""
-    if skip and CACHE_FILE.exists():
-        log.info("캐시에서 수집 데이터 로드")
-        return load_cache()
-
-    from collect import (
-        collect_policy, collect_youth, collect_data, collect_curious,
-    )
-
-    log.info("━━━ 데이터 수집 시작 ━━━")
-    collected: dict = {}
-
-    jobs = [
-        ("policy",  "국내 정책",      collect_policy),
-        ("youth",   "청년 정책",      collect_youth),
-        ("data",    "통계·생활정보",  collect_data),
-        ("curious", "흥미로운 발견",  collect_curious),
-    ]
-    for key, label, fn in jobs:
-        try:
-            items = fn()
-            collected[key] = {"items": [vars(i) for i in items], "extra": {}}
-            log.info("%s: %d건", label, len(items))
-        except Exception as e:
-            log.error("%s 수집 실패: %s", label, e)
-            collected[key] = {"items": [], "extra": {}}
-        time.sleep(1)
-
-    save_cache(collected)
-    log.info("수집 완료 — 캐시 저장")
-    return collected
-
-
-def generate_posts(
-    collected: dict,
-    client: Groq,
-    post_date: datetime,
-    dry_run: bool = False,
-) -> list[Path]:
-    """포스팅 생성 및 저장"""
-    from collect.base import RawItem
-    from generate_post import generate, to_jekyll_markdown, make_filename
-
-    log.info("━━━ 포스팅 생성 시작 ━━━")
-    saved: list[Path] = []
-
-    for idx, category in enumerate(CATEGORY_ORDER):
-        data = collected.get(category, {})
-        raw_items = data.get("items", [])
-        extra = data.get("extra", {})
-
-        if not raw_items:
-            log.warning("%s: 수집 데이터 없음, 스킵", category)
+def _load_dotenv() -> None:
+    """python-dotenv 가 없어도 동작하도록 최소 구현."""
+    env_path = ROOT / ".env"
+    if not env_path.exists():
+        return
+    for line in env_path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
             continue
-
-        # dict → RawItem 복원
-        items = [RawItem(**i) for i in raw_items]
-
-        # 한 포스트 = 한 토픽: 본문이 가장 풍부한(=공식 1차 자료가 잘 잡힌) 항목을 주제로 선택
-        primary = max(items, key=lambda it: len(it.content or it.summary or ""))
-
-        # 웹에서 부연 자료 수집(배경·맥락 보강) — 실패해도 주제 본문만으로 진행
-        try:
-            from collect.base import gather_supplementary
-            supplementary = gather_supplementary(primary.title, exclude_url=primary.url)
-        except Exception as e:
-            log.warning("%s 부연 자료 수집 실패: %s", category, e)
-            supplementary = []
-
-        try:
-            post_data = generate(category, primary, supplementary, client)
-        except Exception as e:
-            log.error("%s 포스팅 생성 실패: %s", category, e)
-            continue
-
-        # 날짜에 카테고리별 시간 반영
-        h, m, s = POST_HOURS[category].split(":")
-        dated = post_date.replace(hour=int(h), minute=int(m), second=int(s))
-
-        # 대표 출처 링크 = 주제 중심 항목의 URL (공식 출처)
-        source_url = primary.url
-        md_content = to_jekyll_markdown(post_data, category, dated, source_url=source_url)
-        filename = make_filename(category, dated, post_data["title"])
-        filepath = POSTS_DIR / filename
-
-        if dry_run:
-            log.info("[DRY RUN] %s 생성 예정:\n%s", filename, md_content[:300])
-        else:
-            POSTS_DIR.mkdir(exist_ok=True)
-            filepath.write_text(md_content, encoding="utf-8")
-            log.info("저장 완료: %s", filepath.name)
-            saved.append(filepath)
-
-        # 무료 등급 분당 토큰 한도(TPM) 회복을 위해 카테고리 사이를 충분히 띄운다.
-        if idx < len(CATEGORY_ORDER) - 1:
-            time.sleep(35)
-
-    return saved
+        key, _, value = line.partition("=")
+        os.environ.setdefault(key.strip(), value.strip().strip("'\""))
 
 
-def main() -> None:
+def _groq_client():
+    """Groq 클라이언트. 키가 없거나 패키지가 없으면 None (오프라인 폴백)."""
     api_key = os.environ.get("GROQ_API_KEY")
     if not api_key:
-        log.error("GROQ_API_KEY 환경변수가 없어요.")
-        sys.exit(1)
+        log.warning("GROQ_API_KEY 없음 → 오프라인 해설 생성으로 진행합니다.")
+        return None
+    try:
+        from groq import Groq
+    except ImportError:
+        log.warning("groq 패키지 없음 → 오프라인 해설 생성으로 진행합니다.")
+        return None
+    return Groq(api_key=api_key)
 
-    # 날짜 설정 — GitHub 러너는 UTC이므로 반드시 KST(Asia/Seoul) 기준으로 계산한다.
-    # 그래야 크론(UTC 22:00 = KST 07:00) 실행 시 '당일' 날짜로 포스트가 찍힌다.
+
+def _export_taxonomy() -> None:
+    """Liquid 템플릿이 쓰는 `_data/taxonomy.json` 갱신."""
+    import taxonomy
+
+    path = ROOT / "_data" / "taxonomy.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        json.dumps(taxonomy.export_for_jekyll(), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    log.info("분류 데이터 내보내기: %s", path.name)
+
+
+def main() -> int:
+    _load_dotenv()
+
+    import publish
+    import queueing
+    import registry
+    import sync
+    from collect import adapters
+
     date_override = os.environ.get("POST_DATE")
-    if date_override:
-        post_date = datetime.strptime(date_override, "%Y-%m-%d")
-    else:
-        post_date = datetime.now(ZoneInfo("Asia/Seoul")).replace(tzinfo=None)
+    today: date = (
+        datetime.strptime(date_override, "%Y-%m-%d").date()
+        if date_override
+        else datetime.now(ZoneInfo("Asia/Seoul")).date()
+    )
+    dry_run = os.environ.get("DRY_RUN") == "1"
+    publish_limit = int(os.environ.get("PUBLISH_LIMIT", DEFAULT_PUBLISH_LIMIT))
+    refresh_limit = int(os.environ.get("REFRESH_LIMIT", DEFAULT_REFRESH_LIMIT))
+    scopes = tuple(
+        s.strip() for s in
+        os.environ.get("REGION_SCOPE", ",".join(sync.DEFAULT_SCOPES)).split(",")
+        if s.strip()
+    )
+    mock = adapters.use_mock()
 
-    skip_collect = os.environ.get("SKIP_COLLECT") == "1"
-    dry_run      = os.environ.get("DRY_RUN") == "1"
+    log.info("━━━ 지원금 도감 파이프라인 ━━━")
+    log.info("날짜 %s · 데이터 %s · DRY_RUN %s · 발행상한 %d · 갱신상한 %d",
+             today, "목(mock)" if mock else "실 API", dry_run, publish_limit, refresh_limit)
+    log.info("발행 범위: %s", " + ".join(scopes))
+    if mock:
+        log.warning("목 데이터 모드입니다. 생성된 페이지는 noindex 처리되며 커밋되지 않습니다.")
 
-    log.info("━━━ 왈랩 파이프라인 시작 ━━━")
-    log.info("날짜: %s | DRY_RUN: %s | SKIP_COLLECT: %s",
-             post_date.strftime("%Y-%m-%d"), dry_run, skip_collect)
+    reg = registry.Registry()
+    log.info("원장 로드: 기발행 %d건", len(reg))
 
-    # 수집
-    collected = collect_all(skip=skip_collect)
+    # ── ① 동기화 ──
+    result = sync.run(reg, today, mock=mock, scopes=scopes)
+    if result.out_of_scope:
+        log.info("범위 밖으로 건너뛴 제도 %d건 — REGION_SCOPE 를 넓히면 그날 신규로 잡힙니다.",
+                 result.out_of_scope)
+    if result.total == 0:
+        log.error("수집 결과가 비었습니다. 중단합니다.")
+        return 1
 
-    # 생성
-    client = Groq(api_key=api_key)
-    saved  = generate_posts(collected, client, post_date, dry_run=dry_run)
+    registry.save_incomplete(result.incomplete)
+    registry.save_review_needed(result.review_needed)
 
-    if saved:
-        log.info("━━━ 완료: 총 %d개 포스트 저장 ━━━", len(saved))
-        for p in saved:
-            log.info("  → %s", p.name)
-    else:
-        log.info("━━━ 완료 (저장된 파일 없음) ━━━")
+    # ── ② 큐 산출 ──
+    queue_payload = queueing.build(result.new, today)
+    if not dry_run:
+        registry.save_queue(queue_payload)
+
+    by_id = {r.id: r for r in result.new}
+    to_publish = queueing.take(queue_payload, by_id, publish_limit)
+    to_refresh = result.changed[:refresh_limit]
+
+    if not to_publish and not to_refresh:
+        log.info("발행할 것도 갱신할 것도 없습니다. 오늘은 아무것도 쓰지 않습니다.")
+        _export_taxonomy()
+        if not dry_run:
+            reg.save()
+        return 0
+
+    remaining = len(result.new) - len(to_publish)
+    if remaining > 0:
+        log.info("큐에 %d건이 남았습니다 (상한 %d건 적용).", remaining, publish_limit)
+    if len(result.changed) > refresh_limit:
+        log.info("갱신 대기 %d건이 남았습니다 (상한 %d건 적용).",
+                 len(result.changed) - refresh_limit, refresh_limit)
+
+    # ── ③④ 발행·갱신 ──
+    client = _groq_client()
+    write_result = publish.run(to_publish, to_refresh, reg, today, client, dry_run)
+
+    # ── ⑤ 인덱스 ──
+    _export_taxonomy()
+    if not dry_run:
+        reg.save()
+
+    log.info("━━━ 완료 — %s ━━━", write_result.summary())
+    for path in write_result.paths:
+        log.info("  → %s", path.relative_to(ROOT))
+    if write_result.rejected:
+        log.warning("반려 %d건:", len(write_result.rejected))
+        for item in write_result.rejected:
+            log.warning("  ✗ %s — %s", item["name"], item["reason"])
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

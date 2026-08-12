@@ -1,6 +1,7 @@
-groq>=0.9.0
-requests>=2.31.0
-beautifulsoup4>=4.12.0
-feedparser>=6.0.10
-python-dotenv>=1.0.0
-lxml>=5.0.0
+# 지원금 도감 파이프라인 의존성
+#
+# 목(mock) 모드는 표준 라이브러리만으로 동작한다 — API 키 없이도
+# `python3 scripts/run_all.py` 로 전체 파이프라인을 검증할 수 있다.
+# 아래는 실 운영에서만 필요하다.
+
+groq>=0.9.0            # 해설 생성 (없으면 오프라인 폴백으로 동작)

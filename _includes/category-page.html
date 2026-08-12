@@ -3,12 +3,20 @@
 
 <div class="page-header">
   <div class="ph-top">
-    <span class="ph-issue">Category</span>
+    <span class="ph-issue">Archive</span>
     <span class="ph-date">총 {{ cposts | size }}개</span>
   </div>
   <h1 class="ph-title">{{ include.emoji }} {% include category-label.html category=thecat %}</h1>
-  {% if include.desc %}<p class="ph-sub">{{ include.desc }}</p>{% endif %}
+  <p class="ph-sub">발행이 중단된 지난 뉴스 브리핑의 분류별 기록입니다.</p>
 </div>
+
+<aside class="hub-footnote" role="note">
+  <i class="ti ti-archive" aria-hidden="true"></i>
+  <p>
+    이 분류는 지난 브리핑 아카이브입니다. 현재 운영 중인 지원 제도 정보는
+    <a href="{{ '/support/' | relative_url }}">전체 지원 제도</a>에서 확인해 주세요.
+  </p>
+</aside>
 
 <div class="feed">
   {% if cposts.size > 0 %}

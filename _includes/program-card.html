@@ -1,0 +1,44 @@
+{% comment %}
+  제도 카드 한 장. 홈·허브·검색 결과가 모두 이걸 쓴다.
+  파라미터: program (필수), show_category (선택, 기본 true)
+{% endcomment %}
+{% assign p = include.program %}
+{% assign pcat = p.category %}
+{% assign pcat_meta = site.data.taxonomy.categories[pcat] %}
+{% assign pclosed = false %}
+{% if p.status == 'closed' %}{% assign pclosed = true %}{% endif %}
+
+<a href="{{ p.url | relative_url }}" class="post-card cn{% if pclosed %} is-closed{% endif %}" data-cat="{{ pcat }}">
+  <div class="card-inner">
+    <div class="card-accent"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <h2 class="card-title">{{ p.title }}</h2>
+        {% if p.highlight %}<span class="card-badge">{{ p.highlight }}</span>{% endif %}
+      </div>
+
+      {% if p.summary %}<p class="card-desc">{{ p.summary | strip_html | truncate: 110 }}</p>{% endif %}
+
+      <div class="card-chips">
+        {% unless include.show_category == false %}
+        <span class="chip chip-cat">{{ pcat_meta.emoji }} {{ pcat_meta.label | default: pcat }}</span>
+        {% endunless %}
+        <span class="chip">{{ p.region_label | default: '전국' }}</span>
+        {% if pclosed %}
+          <span class="chip chip-closed">접수 종료</span>
+        {% elsif p.apply_always %}
+          <span class="chip chip-always">상시 접수</span>
+        {% elsif p.apply_end %}
+          <span class="chip chip-deadline">~ {{ p.apply_end }}</span>
+        {% endif %}
+      </div>
+
+      <div class="card-footer">
+        <div class="card-meta">
+          {% if p.org %}<span>{{ p.org }}</span>{% endif %}
+        </div>
+        <span class="card-cta">자세히 보기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>
+      </div>
+    </div>
+  </div>
+</a>

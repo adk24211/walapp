@@ -1,8 +1,16 @@
-title: Walapp
-description: 국내 정책·청년 정책·생활 통계부터 흥미로운 발견까지, 공공·1차 자료를 토대로 매일 아침 핵심만 쉽게 정리해 전하는 브리핑입니다.
+title: 지원금 도감
+description: 정부·지자체 지원금과 복지 제도를 받을 수 있는지부터 신청 방법까지 하나씩 정리합니다. 공공데이터 원문을 토대로 쉬운 말로 풀어 씁니다.
 baseurl: "/walapp"
 url: "https://adk24211.github.io"
 lang: ko
+
+# ---- 제도 컬렉션 ----
+# 발행 단위가 '날짜'가 아니라 '제도'다. _posts 와 달리 파일명에 날짜가 강제되지 않으므로
+# 같은 제도는 항상 같은 경로에 쓰인다 → 재수집이 새 글이 아니라 갱신이 된다.
+collections:
+  programs:
+    output: true
+    permalink: /support/:path/
 
 # ---- 발행 시점 ----
 # 당일 07시(KST) 포스트가 빌드 시점에 '미래'로 간주돼 누락되는 것을 방지한다.
@@ -25,6 +33,11 @@ defaults:
       path: ""
     values:
       image: /assets/images/logo-full.png
+  - scope:
+      path: ""
+      type: programs
+    values:
+      layout: program
 
 # Google Search Console 사이트 소유 인증 (HTML 태그 방식의 content 값).
 google_site_verification: "5IRKXouoxlQsJLyugZIoOCw7sXlWB-mYV9Trnlm88a4"
@@ -38,7 +51,10 @@ google_adsense: "ca-pub-4499851283666675"
 
 markdown: kramdown
 highlighter: rouge
-permalink: /:categories/:year/:month/:day/:title/
+
+# 구 뉴스 브리핑은 `/brief/` 로 격리한다. 삭제하지 않는 이유는 REDESIGN.md §7.2 참고.
+# 이 경로 변경으로 구 URL 은 404 가 되므로, 404.html 이 /brief/ 로 안내한다.
+permalink: /brief/:categories/:year/:month/:day/:title/
 
 plugins:
   - jekyll-feed
@@ -61,6 +77,8 @@ exclude:
   - README.md
   - .github/
   - HANDOFF.md
+  - REDESIGN.md
+  - docs/
 
 paginate: 10
 paginate_path: "/page/:num/"

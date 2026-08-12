@@ -1,0 +1,202 @@
+---
+layout: default
+---
+{% assign cat = page.category %}
+{% assign cat_meta = site.data.taxonomy.categories[cat] %}
+{% assign is_closed = false %}
+{% if page.status == 'closed' %}{% assign is_closed = true %}{% endif %}
+
+{% comment %}
+  목 데이터로 만든 페이지는 검색엔진에 절대 노출되면 안 된다.
+  지원금 정보는 YMYL 영역이라 가짜 수치가 색인되면 실제 피해로 이어진다.
+{% endcomment %}
+{% if page.is_mock %}
+<meta name="robots" content="noindex, nofollow">
+{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GovernmentService",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.summary | default: page.title | jsonify }},
+  "serviceType": {{ cat_meta.label | default: "지원 제도" | jsonify }},
+  "provider": {
+    "@type": "GovernmentOrganization",
+    "name": {{ page.org | default: "대한민국 정부" | jsonify }}
+  },
+  "areaServed": { "@type": "AdministrativeArea", "name": {{ page.region_label | default: "전국" | jsonify }} },
+  {% if page.audiences.size > 0 %}
+  "audience": [
+    {% for aud in page.audiences %}{% assign aud_meta = site.data.taxonomy.audiences[aud] %}
+    { "@type": "Audience", "audienceType": {{ aud_meta.label | default: aud | jsonify }} }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  {% endif %}
+  {% if page.apply_url %}
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": {{ page.apply_url | jsonify }}
+  },
+  {% endif %}
+  "inLanguage": "ko-KR",
+  "dateModified": "{{ page.last_updated | default: page.last_checked }}",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" }
+}
+</script>
+
+<div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+
+<div class="program-hero cn" data-cat="{{ cat }}">
+  <div class="program-hero-inner">
+    <nav class="crumbs" aria-label="현재 위치">
+      <a href="{{ '/' | relative_url }}">홈</a>
+      <span aria-hidden="true">›</span>
+      <a href="{{ '/support/' | relative_url }}">지원 제도</a>
+      <span aria-hidden="true">›</span>
+      <a href="{{ '/support/' | append: cat | append: '/' | relative_url }}">{{ cat_meta.label | default: cat }}</a>
+    </nav>
+
+    {% if page.is_mock %}
+    <div class="mock-banner" role="alert">
+      <i class="ti ti-flask" aria-hidden="true"></i>
+      <div>
+        <strong>개발용 샘플 데이터입니다.</strong>
+        이 페이지의 금액·요건·기간은 실제 제도 정보가 아닙니다. 파이프라인 검증용으로 생성된 가짜 값이므로 신청 판단에 사용하지 마세요.
+      </div>
+    </div>
+    {% endif %}
+
+    {% if is_closed %}
+    <div class="status-banner closed" role="status">
+      <i class="ti ti-clock-off" aria-hidden="true"></i>
+      <div>
+        <strong>접수가 종료된 제도입니다.</strong>
+        아래 내용은 마지막 접수 회차 기준이며, 다음 회차가 열리면 갱신됩니다.
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="program-badges">
+      <span class="badge-cat {{ cat }}">{{ cat_meta.emoji }} {{ cat_meta.label | default: cat }}</span>
+      <span class="badge-region">{{ page.region_label | default: '전국' }}</span>
+      {% if page.apply_always %}
+      <span class="badge-period always">상시 접수</span>
+      {% elsif page.apply_end and is_closed == false %}
+      <span class="badge-period">~ {{ page.apply_end }}</span>
+      {% endif %}
+    </div>
+
+    <h1 class="program-title">{{ page.title }}</h1>
+    {% if page.summary %}<p class="program-summary">{{ page.summary }}</p>{% endif %}
+
+    <div class="program-meta-row">
+      {% if page.org %}<span><i class="ti ti-building-bank" aria-hidden="true"></i> {{ page.org }}</span>{% endif %}
+      {% if page.last_checked %}
+      <span class="meta-dot"></span>
+      <span><i class="ti ti-refresh" aria-hidden="true"></i> 최종 확인 {{ page.last_checked }}</span>
+      {% endif %}
+    </div>
+
+    <aside class="official-notice" role="note">
+      <i class="ti ti-info-circle" aria-hidden="true"></i>
+      <p>본 사이트는 정부 공식 사이트가 아닙니다. 신청과 최종 확인은 반드시 아래 공식 창구를 이용하세요.</p>
+    </aside>
+
+    {% if page.apply_url or page.official_url %}
+    <div class="program-cta">
+      {% if page.apply_url %}
+      <a class="cta-primary" href="{{ page.apply_url }}" target="_blank" rel="noopener nofollow">
+        <i class="ti ti-external-link" aria-hidden="true"></i> 공식 창구에서 신청하기
+      </a>
+      {% endif %}
+      {% if page.official_url %}
+      <a class="cta-secondary" href="{{ page.official_url }}" target="_blank" rel="noopener nofollow">
+        소관 기관 안내 보기
+      </a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<div class="post-content-wrap">
+  <nav class="post-toc cn" id="post-toc" data-cat="{{ cat }}" hidden>
+    <div class="post-toc-title"><i class="ti ti-list" aria-hidden="true"></i> 목차</div>
+    <ol id="post-toc-list"></ol>
+  </nav>
+
+  <article class="post-content">
+    {{ content }}
+  </article>
+
+  {% comment %} ── 대상 태그 ── {% endcomment %}
+  {% if page.audiences.size > 0 %}
+  <div class="post-tags">
+    {% for aud in page.audiences %}
+    {% assign aud_meta = site.data.taxonomy.audiences[aud] %}
+    <a class="post-tag" href="{{ '/who/' | append: aud | append: '/' | relative_url }}">
+      {{ aud_meta.emoji }} {{ aud_meta.label | default: aud }}
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% comment %} ── 출처 ── {% endcomment %}
+  <div class="cn cn-source" data-cat="{{ cat }}">
+    <span class="cn-source-tag">출처표시</span>
+    <p>
+      {{ page.org | default: '소관 기관' }} · 공공누리 제1유형.
+      제도의 금액·요건·기간은 공공데이터 원문을 그대로 옮긴 것이며, 설명 문장만 본 사이트가 쉬운 말로 다시 썼습니다.
+      {% if page.last_checked %}최종 확인일은 {{ page.last_checked }}이며, 이후 변경되었을 수 있습니다.{% endif %}
+    </p>
+  </div>
+
+  <aside class="post-disclaimer" role="note">
+    <i class="ti ti-info-circle" aria-hidden="true"></i>
+    <p>지원 금액과 자격 요건은 예산 사정이나 지침 개정으로 수시로 바뀝니다. 신청 전 반드시 공식 창구에서 최신 내용을 확인해 주세요. 자세한 내용은 <a href="{{ '/disclaimer/' | relative_url }}">면책 조항</a>을 확인해 주세요.</p>
+  </aside>
+
+  {% comment %} ── 함께 보면 좋은 제도 — 같은 분야 → 같은 대상 순 ── {% endcomment %}
+  {% assign same_cat = site.programs | where: "category", cat %}
+  {% assign related_count = 0 %}
+  {% capture related_html %}
+    {% for p in same_cat %}
+      {% if p.url != page.url and related_count < 4 %}
+        {% assign related_count = related_count | plus: 1 %}
+        <a href="{{ p.url | relative_url }}" class="related-card">
+          <span class="related-cat {{ cat }}">{{ p.region_label | default: '전국' }}</span>
+          <span class="related-title">{{ p.title }}</span>
+          <span class="related-date">{% if p.apply_always %}상시 접수{% elsif p.apply_end %}~ {{ p.apply_end }}{% endif %}</span>
+        </a>
+      {% endif %}
+    {% endfor %}
+  {% endcapture %}
+  {% if related_count > 0 %}
+  <section class="related-section">
+    <h3 class="related-heading">함께 보면 좋은 제도</h3>
+    <div class="related-grid">{{ related_html }}</div>
+  </section>
+  {% endif %}
+
+  <div class="post-share">
+    <span class="share-label">이 제도 공유하기</span>
+    <div class="share-btns">
+      <button type="button" class="share-btn" id="share-copy" aria-label="링크 복사">
+        <i class="ti ti-link" aria-hidden="true"></i> 링크 복사
+      </button>
+      <a class="share-btn" target="_blank" rel="noopener"
+         href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url | uri_escape }}"
+         aria-label="X(트위터)에 공유">
+        <i class="ti ti-brand-x" aria-hidden="true"></i> X
+      </a>
+      <a class="share-btn" target="_blank" rel="noopener"
+         href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | uri_escape }}"
+         aria-label="페이스북에 공유">
+        <i class="ti ti-brand-facebook" aria-hidden="true"></i> Facebook
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="{{ '/assets/js/program.js' | relative_url }}"></script>

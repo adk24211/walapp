@@ -1,0 +1,213 @@
+/* ============================================================
+   지원금 도감 — 제도 페이지 · 허브 · 카드
+   기존 main.css / components.css 의 CSS 변수와 .cn-* 컴포넌트를 그대로 쓴다.
+   여기에는 컨셉 전환으로 새로 필요해진 것만 담는다.
+   ============================================================ */
+
+/* ---- 분야별 컬러 ------------------------------------------ */
+:root {
+  --housing:       #0C447C;  --housing-bg:   #E6F1FB;  --housing-mid:   #378ADD;
+  --jobsc:         #712B13;  --jobsc-bg:     #FAECE7;  --jobsc-mid:     #D85A30;
+  --care:          #8A2B5E;  --care-bg:      #FBE9F2;  --care-mid:      #DB5A96;
+  --health:        #8C2B2B;  --health-bg:    #FBEAEA;  --health-mid:    #DC5B5B;
+  --education:     #5B3A8E;  --education-bg: #EFE9F8;  --education-mid: #8B5CF6;
+  --finance:       #085041;  --finance-bg:   #E1F5EE;  --finance-mid:   #1D9E75;
+  --living:        #7A5411;  --living-bg:    #FBF2DF;  --living-mid:    #C99A2E;
+}
+[data-theme="dark"] {
+  --housing:       #85B7EB;  --housing-bg:   #042C53;  --housing-mid:   #378ADD;
+  --jobsc:         #F0997B;  --jobsc-bg:     #4A1B0C;  --jobsc-mid:     #D85A30;
+  --care:          #F2A3C6;  --care-bg:      #45102B;  --care-mid:      #DB5A96;
+  --health:        #F0A3A3;  --health-bg:    #451212;  --health-mid:    #DC5B5B;
+  --education:     #C4B0F0;  --education-bg: #2A1F45;  --education-mid: #8B5CF6;
+  --finance:       #5DCAA5;  --finance-bg:   #04342C;  --finance-mid:   #1D9E75;
+  --living:        #E4C475;  --living-bg:    #3D2D08;  --living-mid:    #C99A2E;
+}
+
+.cn[data-cat="housing"]   { --c: var(--housing);   --c-bg: var(--housing-bg);   --c-mid: var(--housing-mid); }
+.cn[data-cat="jobs"]      { --c: var(--jobsc);     --c-bg: var(--jobsc-bg);     --c-mid: var(--jobsc-mid); }
+.cn[data-cat="care"]      { --c: var(--care);      --c-bg: var(--care-bg);      --c-mid: var(--care-mid); }
+.cn[data-cat="health"]    { --c: var(--health);    --c-bg: var(--health-bg);    --c-mid: var(--health-mid); }
+.cn[data-cat="education"] { --c: var(--education); --c-bg: var(--education-bg); --c-mid: var(--education-mid); }
+.cn[data-cat="finance"]   { --c: var(--finance);   --c-bg: var(--finance-bg);   --c-mid: var(--finance-mid); }
+.cn[data-cat="living"]    { --c: var(--living);    --c-bg: var(--living-bg);    --c-mid: var(--living-mid); }
+
+.sec-tag.housing   { background: var(--housing-bg);   color: var(--housing); }
+.sec-tag.jobs      { background: var(--jobsc-bg);     color: var(--jobsc); }
+.sec-tag.care      { background: var(--care-bg);      color: var(--care); }
+.sec-tag.health    { background: var(--health-bg);    color: var(--health); }
+.sec-tag.education { background: var(--education-bg); color: var(--education); }
+.sec-tag.finance   { background: var(--finance-bg);   color: var(--finance); }
+.sec-tag.living    { background: var(--living-bg);    color: var(--living); }
+.sec-tag.muted     { background: var(--surface2);     color: var(--ink3); }
+
+/* ---- 제도 페이지 히어로 ----------------------------------- */
+.program-hero {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  padding: 1.75rem 0 2rem;
+}
+.program-hero-inner { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+
+.crumbs { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: .82rem; color: var(--ink3); margin-bottom: 1rem; }
+.crumbs a { color: var(--ink3); }
+.crumbs a:hover { color: var(--c); text-decoration: underline; }
+
+.program-badges { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: .85rem; }
+.badge-cat, .badge-region, .badge-period {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px 11px; border-radius: 999px;
+  font-size: .78rem; font-weight: 700; letter-spacing: -.01em;
+}
+.badge-cat { background: var(--c-bg); color: var(--c); }
+.badge-region { background: var(--surface2); color: var(--ink2); }
+.badge-period { background: var(--surface2); color: var(--ink2); border: 1px solid var(--line2); }
+.badge-period.always { background: var(--brand-bg); color: var(--brand-dark); border-color: transparent; }
+
+.program-title {
+  font-size: 1.95rem; line-height: 1.28; letter-spacing: -.03em;
+  font-weight: 800; color: var(--ink); word-break: keep-all; margin-bottom: .6rem;
+}
+.program-summary { font-size: 1.02rem; line-height: 1.65; color: var(--ink2); word-break: keep-all; }
+
+.program-meta-row {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  margin-top: .9rem; font-size: .84rem; color: var(--ink3);
+}
+.program-meta-row i { font-size: 14px; margin-right: 2px; }
+
+/* 정부 사칭 오해를 막는 고지 — YMYL 필수 (REDESIGN.md §8.1) */
+.official-notice {
+  display: flex; gap: 10px; align-items: flex-start;
+  margin-top: 1.1rem; padding: 12px 14px;
+  background: var(--surface2); border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+.official-notice i { color: var(--ink3); font-size: 17px; margin-top: 1px; }
+.official-notice p { margin: 0; font-size: .85rem; line-height: 1.6; color: var(--ink2); word-break: keep-all; }
+
+.program-cta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 1.1rem; }
+.cta-primary, .cta-secondary {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 11px 18px; border-radius: 10px;
+  font-size: .92rem; font-weight: 700; transition: transform .12s, box-shadow .12s;
+}
+.cta-primary { background: var(--c); color: var(--surface); }
+.cta-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,.14); }
+.cta-secondary { background: var(--surface2); color: var(--ink); border: 1px solid var(--line2); }
+.cta-secondary:hover { border-color: var(--c); color: var(--c); }
+
+/* ---- 배너 ------------------------------------------------- */
+.mock-banner, .status-banner {
+  display: flex; gap: 11px; align-items: flex-start;
+  padding: 14px 16px; border-radius: var(--radius); margin-bottom: 1.1rem;
+}
+.mock-banner {
+  background: #FFF4E5; border: 1px solid #F0B357; color: #6B4405;
+}
+[data-theme="dark"] .mock-banner { background: #3A2A08; border-color: #8A6420; color: #F5D79A; }
+.mock-banner i { font-size: 20px; margin-top: 1px; }
+.mock-banner strong { display: block; margin-bottom: 3px; }
+.mock-banner div { font-size: .88rem; line-height: 1.6; word-break: keep-all; }
+
+.status-banner.closed { background: var(--surface2); border: 1px solid var(--line2); color: var(--ink2); }
+.status-banner i { font-size: 20px; margin-top: 1px; color: var(--ink3); }
+.status-banner strong { display: block; margin-bottom: 3px; color: var(--ink); }
+.status-banner div { font-size: .88rem; line-height: 1.6; word-break: keep-all; }
+
+/* ---- 허브 탐색 바 ----------------------------------------- */
+.hub-nav {
+  display: flex; flex-wrap: wrap; gap: 7px;
+  max-width: var(--container); margin: 0 auto 1.75rem; padding: 0 1.5rem;
+}
+.hub-chip {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 7px 14px; border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--line);
+  font-size: .85rem; font-weight: 600; color: var(--ink2);
+  transition: border-color .15s, color .15s, background .15s;
+}
+.hub-chip:hover { border-color: var(--brand); color: var(--brand-dark); }
+.hub-chip.active { background: var(--brand); border-color: var(--brand); color: #fff; }
+[data-theme="dark"] .hub-chip.active { color: #10231D; }
+
+/* ---- 카드 확장 -------------------------------------------- */
+.card-chips { display: flex; flex-wrap: wrap; gap: 5px; margin: .7rem 0 .2rem; }
+.chip {
+  display: inline-flex; align-items: center; gap: 3px;
+  padding: 3px 9px; border-radius: 999px;
+  font-size: .74rem; font-weight: 600;
+  background: var(--surface2); color: var(--ink2);
+}
+.chip-cat { background: var(--c-bg); color: var(--c); }
+.chip-always { background: var(--brand-bg); color: var(--brand-dark); }
+.chip-deadline { background: var(--surface2); color: var(--ink2); border: 1px solid var(--line2); }
+.chip-closed { background: transparent; color: var(--ink3); border: 1px dashed var(--line2); }
+
+.card-badge {
+  flex-shrink: 0; align-self: flex-start;
+  padding: 3px 9px; border-radius: 7px;
+  background: var(--c-bg); color: var(--c);
+  font-size: .75rem; font-weight: 800; white-space: nowrap;
+}
+.post-card.is-closed { opacity: .62; }
+.post-card.is-closed:hover { opacity: 1; }
+
+/* ---- 한눈에 보기 표 (라벨/값 2열) -------------------------- */
+/* .cn-table 은 다열 비교표용이라 넘치면 가로 스크롤한다.
+   제도 요약표는 값이 길어 스크롤보다 줄바꿈이 맞다. */
+.cn-spec { overflow-x: visible; }
+.cn-spec table { table-layout: fixed; width: 100%; }
+.cn-spec tbody th {
+  width: 104px; vertical-align: top; white-space: nowrap;
+}
+.cn-spec tbody td {
+  white-space: normal; word-break: keep-all; overflow-wrap: anywhere; line-height: 1.6;
+}
+
+@media (max-width: 520px) {
+  .cn-spec tbody th { width: 78px; font-size: .84rem; }
+}
+
+/* ---- 빈 상태 / 각주 --------------------------------------- */
+.empty-state {
+  max-width: var(--container); margin: 0 auto; padding: 3rem 1.5rem;
+  text-align: center; color: var(--ink3);
+}
+.empty-state i { font-size: 40px; display: block; margin-bottom: .8rem; opacity: .6; }
+.empty-state p { margin-bottom: 1.2rem; font-size: .95rem; }
+
+.hub-footnote {
+  display: flex; gap: 10px; align-items: flex-start;
+  max-width: var(--container); margin: 2rem auto 0; padding: 14px 1.5rem;
+  font-size: .85rem; color: var(--ink3); line-height: 1.6;
+}
+.hub-footnote i { font-size: 16px; margin-top: 2px; }
+.hub-footnote p { margin: 0; word-break: keep-all; }
+
+/* ---- 홈 ---------------------------------------------------- */
+.home-intro {
+  max-width: var(--container); margin: 0 auto; padding: 0 1.5rem 1.5rem;
+}
+.home-axis {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(148px, 1fr)); gap: 10px;
+  max-width: var(--container); margin: 0 auto 2.25rem; padding: 0 1.5rem;
+}
+.axis-card {
+  display: flex; flex-direction: column; gap: 3px;
+  padding: 15px 16px; border-radius: var(--radius);
+  background: var(--surface); border: 1px solid var(--line);
+  transition: border-color .15s, transform .12s;
+}
+.axis-card:hover { border-color: var(--brand); transform: translateY(-2px); }
+.axis-emoji { font-size: 1.3rem; }
+.axis-label { font-size: .95rem; font-weight: 700; color: var(--ink); }
+.axis-count { font-size: .78rem; color: var(--ink3); }
+
+@media (max-width: 600px) {
+  .program-title { font-size: 1.55rem; }
+  .program-summary { font-size: .96rem; }
+  .program-hero { padding: 1.25rem 0 1.5rem; }
+  .cta-primary, .cta-secondary { flex: 1 1 100%; justify-content: center; }
+  .home-axis { grid-template-columns: repeat(2, 1fr); }
+}

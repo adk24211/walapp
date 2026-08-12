@@ -1,0 +1,23 @@
+---
+layout: null
+title: 아카이브
+permalink: /archive/
+sitemap: false
+---
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>지난 브리핑으로 이동합니다</title>
+  {% comment %}
+    구 `/archive/` 는 `/brief/` 로 통합됐다. 색인된 URL 을 404 로 두지 않기 위해
+    canonical + 메타 리프레시로 넘긴다. (jekyll-redirect-from 미사용)
+  {% endcomment %}
+  <link rel="canonical" href="{{ '/brief/' | absolute_url }}">
+  <meta name="robots" content="noindex, follow">
+  <meta http-equiv="refresh" content="0; url={{ '/brief/' | relative_url }}">
+</head>
+<body>
+  <p><a href="{{ '/brief/' | relative_url }}">지난 브리핑 아카이브로 이동합니다.</a></p>
+</body>
+</html>

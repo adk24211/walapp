@@ -14,6 +14,7 @@ headline: "청년미래적금, 6월 출시 핵심 정리"
 source: "대한민국 정책브리핑(korea.kr)"
 source_url: "https://www.korea.kr/news/policyFocusView.do?newsId=148956357&pkgId=49500823"
 license: "공공누리 제1유형: 출처표시"
+archived: true
 ---
 
 <div class="cn" data-cat="youth">

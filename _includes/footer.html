@@ -1,20 +1,24 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-logo">
-      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Walapp" width="24" height="24" loading="lazy" decoding="async">
-      <span class="footer-logo-text">Walapp</span>
+      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="" width="24" height="24" loading="lazy" decoding="async">
+      <span class="footer-logo-text">지원금 도감</span>
     </div>
     <div class="footer-links">
-      <a href="{{ site.github_url | default: '#' }}" target="_blank" rel="noopener">GitHub</a>
+      <a href="{{ '/support/' | relative_url }}">전체 제도</a>
+      <a href="{{ '/deadline/' | relative_url }}">마감 임박</a>
+      <a href="{{ '/new/' | relative_url }}">새로 추가</a>
+      <a href="{{ '/region/national/' | relative_url }}">지역별</a>
+      <a href="{{ '/brief/' | relative_url }}">지난 브리핑</a>
       <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
       <a href="{{ '/about/' | relative_url }}">소개</a>
-      <a href="{{ '/guide/' | relative_url }}">정책 가이드</a>
-      <a href="{{ '/weekly/' | relative_url }}">주간 브리핑</a>
-      <a href="{{ '/archive/' | relative_url }}">아카이브</a>
       <a href="{{ '/disclaimer/' | relative_url }}">면책 조항</a>
       <a href="{{ '/privacy/' | relative_url }}">개인정보 처리방침</a>
       <a href="{{ '/terms/' | relative_url }}">이용약관</a>
     </div>
   </div>
-  <p class="footer-note">본 사이트의 콘텐츠는 AI와 자동 크롤링으로 생성된 정보성 자료이며, 정확성을 보장하지 않습니다. 단순 참고용으로만 활용해 주세요.</p>
+  <p class="footer-note">
+    본 사이트는 정부 공식 사이트가 아닙니다. 제도의 금액·자격·기간은 공공데이터 원문을 토대로 정리한 참고 자료이며,
+    지침 개정으로 달라질 수 있습니다. 신청과 최종 확인은 각 제도의 공식 창구를 이용해 주세요.
+  </p>
 </footer>
