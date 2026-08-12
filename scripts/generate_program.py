@@ -220,7 +220,13 @@ def generate_offline(record: ProgramRecord) -> dict:
     region = record.region.label
     summary = record.benefit_raw or record.target_raw
     if record.org:
-        summary = f"{record.org}이(가) {region} 대상으로 운영하는 제도입니다. {summary}"
+        # 조사 '이(가)' 를 쓰지 않는다. 기관명 받침에 따라 달라지는데 병기하면
+        # '성남시이(가)' 처럼 읽힌다. 받침과 무관한 '에서' 로 우회한다.
+        # 지자체 제도는 소관 기관과 지원 지역이 같은 말이라('경기도 성남시' × 2) 지역을 뺀다.
+        if region in record.org or record.org in region:
+            summary = f"{record.org}에서 운영하는 제도입니다. {summary}"
+        else:
+            summary = f"{record.org}에서 {region} 대상으로 운영하는 제도입니다. {summary}"
 
     eligibility: list[str] = []
     for chunk in _split_items(record.target_raw):
