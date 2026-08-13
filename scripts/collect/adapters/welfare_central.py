@@ -181,8 +181,10 @@ class Adapter(BaseAdapter):
         # 지원 금액이 들어 있지 않다. 빈 칸만 채우는 방식으로 두면 요약이 자리를 차지해
         # 정작 중요한 '매월 최대 OO만 원' 이 페이지에 못 들어간다.
         # 상세 조회가 실패하면 목록 요약이 그대로 남아 최소한의 발행은 가능하다.
+        # 섹션형 응답은 `parse_detail()` 이 이미 우리 필드명(target_raw 등)으로 담아 준다.
+        # 명명 필드형이면 원천 태그명으로 들어온다. 둘 다 받도록 정규 키를 앞에 둔다.
         def take(key: str, current: str) -> str:
-            value = clean_text(_pick(row, DETAIL_FIELD_ALIASES[key]))
+            value = clean_text(_pick(row, (key,) + DETAIL_FIELD_ALIASES[key]))
             return value or current
 
         record.target_raw = take("target_raw", record.target_raw)
@@ -190,15 +192,15 @@ class Adapter(BaseAdapter):
         record.criteria_raw = take("criteria_raw", record.criteria_raw)
         record.how_to_raw = take("how_to_raw", record.how_to_raw)
 
-        documents = split_documents(_pick(row, DETAIL_FIELD_ALIASES["documents"]))
+        documents = split_documents(_pick(row, ("documents",) + DETAIL_FIELD_ALIASES["documents"]))
         if documents:
             record.documents_raw = documents
 
-        apply_url = _pick(row, DETAIL_FIELD_ALIASES["apply_url"])
+        apply_url = _pick(row, ("apply_url",) + DETAIL_FIELD_ALIASES["apply_url"])
         if apply_url.startswith("http"):
             record.apply_url = apply_url
 
-        period = _pick(row, DETAIL_FIELD_ALIASES["period_raw"])
+        period = _pick(row, ("period_raw",) + DETAIL_FIELD_ALIASES["period_raw"])
         if period and not (record.apply_period.start or record.apply_period.end):
             record.apply_period.end = normalize_date(period)
 
@@ -223,8 +225,7 @@ class Adapter(BaseAdapter):
         self._detail_calls += 1
         if text is None:
             return None
-        rows = parse_rows(text, ID_FIELD)
-        return rows[0] if rows else None
+        return parse_detail(text)
 
     def _get(self, endpoint: str, params: dict) -> str | None:
         url = f"{endpoint}?{urllib.parse.urlencode(params)}"
@@ -315,3 +316,69 @@ def total_count(text: str) -> str:
 
     match = re.search(r"<totalCount>\s*(\d+)\s*</totalCount>", text)
     return match.group(1) if match else ""
+
+
+# 상세 응답의 섹션 이름 → 우리 필드.
+# 상세조회는 명명된 필드가 아니라 **이름/내용 쌍의 섹션 목록**으로 온다.
+#   servSeCode 070 · servSeDetailNm "신청기관연락처목록" · servSeDetailLink "거주지 읍/면/동…"
+# 섹션 이름이 기관마다 조금씩 흔들리므로(‘지원대상’ / ‘대상자’) 부분 일치로 본다.
+SECTION_NAME_PATTERNS: tuple[tuple[str, tuple[str, ...]], ...] = (
+    ("target_raw",   ("지원대상", "대상자", "지원 대상")),
+    ("criteria_raw", ("선정기준", "자격", "소득기준")),
+    ("benefit_raw",  ("지원내용", "급여", "서비스내용", "지원 내용")),
+    ("how_to_raw",   ("신청방법", "신청절차", "접수방법", "처리절차")),
+    ("documents",    ("구비서류", "제출서류", "서류")),
+    ("period_raw",   ("신청기한", "신청기간", "접수기간")),
+    ("contact",      ("연락처", "문의")),
+    ("law",          ("법령", "근거")),
+)
+
+
+def parse_detail(text: str) -> dict | None:
+    """상세 응답을 하나의 평평한 dict 로.
+
+    두 가지 형태를 모두 받는다. 어느 쪽인지 확정 전이라 양쪽을 다 흡수한다.
+      ① 최상위에 명명된 필드가 있는 형태  (tgtrDtlCn 등)
+      ② 이름/내용 쌍의 섹션 목록          (servSeDetailNm / servSeDetailLink)
+
+    ②의 경우 섹션 이름을 우리 필드명으로 바꿔 담으므로, 호출부는 두 형태를
+    구분할 필요가 없다.
+    """
+    try:
+        root = ET.fromstring(text)
+    except ET.ParseError as e:
+        log.error("상세 XML 파싱 실패: %s · 응답 앞부분: %s", e, text[:200].replace("\n", " "))
+        return None
+
+    # ① 최상위 스칼라
+    merged: dict[str, str] = {
+        child.tag: (child.text or "").strip()
+        for child in root if len(child) == 0 and (child.text or "").strip()
+    }
+
+    # ② 섹션 목록 — 이름과 내용을 가진 반복 요소를 찾는다
+    for el in root.iter():
+        if el is root or len(el) < 2:
+            continue
+        fields = {c.tag: (c.text or "").strip() for c in el if len(c) == 0}
+        name = _section_value(fields, ("Nm", "명", "Name"))
+        body = _section_value(fields, ("Link", "Cn", "내용", "Content", "Value"))
+        if not name or not body:
+            continue
+        for dest, needles in SECTION_NAME_PATTERNS:
+            if any(needle in name for needle in needles):
+                # 같은 필드에 해당하는 섹션이 여럿이면 이어 붙인다
+                merged[dest] = f"{merged[dest]}\n{body}" if merged.get(dest) else body
+                break
+
+    return merged or None
+
+
+def _section_value(fields: dict[str, str], suffixes: tuple[str, ...]) -> str:
+    """섹션 dict 에서 이름/내용에 해당할 법한 값을 고른다."""
+    for tag, value in fields.items():
+        if not value:
+            continue
+        if any(tag.endswith(suffix) or suffix in tag for suffix in suffixes):
+            return value
+    return ""

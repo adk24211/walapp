@@ -83,11 +83,12 @@ def fetch_json(target: str) -> dict:
     return json.loads(fetch_text(target))
 
 
-def parse_xml_rows(text: str) -> list[dict]:
-    """XML 응답에서 반복되는 레코드 요소를 dict 리스트로.
+def parse_xml_rows(text: str) -> tuple[dict, list[dict]]:
+    """XML 응답을 (최상위 스칼라 필드, 반복 레코드 목록) 으로 나눈다.
 
-    래퍼 태그명(wantedList, servList 등)이 API 마다 달라서 하드코딩하지 않는다.
-    '자식이 여럿이고 손자가 없는' 요소 중 가장 많이 반복되는 태그를 레코드로 본다.
+    상세조회 응답은 최상위에 본문 필드가 있고 그 아래 반복 섹션이 따로 달리는
+    형태가 흔하다. 반복 요소만 뽑으면 정작 필요한 본문 필드를 통째로 놓친다.
+    (실제로 복지로 상세조회에서 이 일이 났다)
     """
     import xml.etree.ElementTree as ET
     from collections import Counter
@@ -97,19 +98,25 @@ def parse_xml_rows(text: str) -> list[dict]:
     except ET.ParseError as e:
         raise ValueError(f"XML 파싱 실패: {e}") from e
 
+    # 최상위 스칼라 = 루트의 직계 자식 중 손자가 없는 것
+    scalars = {
+        child.tag: (child.text or "").strip()
+        for child in root if len(child) == 0
+    }
+
+    # 반복 레코드 = 자식이 여럿이고 손자가 없는 요소 중 가장 많이 반복되는 태그
     candidates = [
         el for el in root.iter()
-        if len(el) >= 2 and all(len(child) == 0 for child in el)
+        if el is not root and len(el) >= 2 and all(len(c) == 0 for c in el)
     ]
-    if not candidates:
-        return []
-    common = Counter(el.tag for el in candidates).most_common(1)[0][0]
-    rows = []
-    for el in candidates:
-        if el.tag != common:
-            continue
-        rows.append({child.tag: (child.text or "").strip() for child in el})
-    return rows
+    rows: list[dict] = []
+    if candidates:
+        common = Counter(el.tag for el in candidates).most_common(1)[0][0]
+        rows = [
+            {c.tag: (c.text or "").strip() for c in el}
+            for el in candidates if el.tag == common
+        ]
+    return scalars, rows
 
 
 # ─────────────────────────────────────────────────────────────
@@ -199,7 +206,8 @@ def inspect_docs(target: str) -> None:
 # ─────────────────────────────────────────────────────────────
 #  ② 실제 응답 프로브
 # ─────────────────────────────────────────────────────────────
-def inspect_probe(endpoint: str, api_key: str, per_page: int = 3, extra: str = "") -> None:
+def inspect_probe(endpoint: str, api_key: str, per_page: int = 3, extra: str = "",
+                  raw: bool = False) -> None:
     # odcloud 계열은 page/perPage, apis.data.go.kr 계열은 pageNo/numOfRows 를 쓴다.
     # 양쪽을 다 넣어도 서로 무시하므로 한 번에 보낸다.
     params = {
@@ -225,7 +233,7 @@ def inspect_probe(endpoint: str, api_key: str, per_page: int = 3, extra: str = "
     if stripped.startswith("<"):
         # 복지로 계열은 XML 로만 응답한다
         try:
-            rows = parse_xml_rows(text)
+            scalars, rows = parse_xml_rows(text)
         except ValueError as e:
             print(f"✗ {e}")
             print(text[:800])
@@ -235,10 +243,25 @@ def inspect_probe(endpoint: str, api_key: str, per_page: int = 3, extra: str = "
         m = _re.search(r"<totalCount>\s*(\d+)\s*</totalCount>", text)
         if m:
             total = m.group(1)
-        if not rows:
+
+        if scalars:
+            print(f"[최상위 필드] {len(scalars)}개 — 상세조회는 보통 여기 본문이 있습니다")
+            for key, value in scalars.items():
+                shown = value.replace("\n", " ")
+                print(f"  {key:<24} = {shown[:70]}{'…' if len(shown) > 70 else ''}")
+            print()
+        if rows:
+            print(f"[반복 섹션] <{'?'}> {len(rows)}개 — 이름/내용 쌍이면 섹션형 구조입니다")
+            for row in rows[:8]:
+                print("  " + " | ".join(f"{k}={str(v)[:40]}" for k, v in row.items()))
+            print()
+
+        if not rows and not scalars:
             print("✗ 응답에서 레코드를 찾지 못했습니다. 원문 앞부분:")
             print(text[:1200])
             sys.exit(1)
+        if not rows:
+            rows = [scalars]
     else:
         payload = json.loads(text)
         rows = payload.get("data") or payload.get("body") or payload.get("items") or []
@@ -249,6 +272,15 @@ def inspect_probe(endpoint: str, api_key: str, per_page: int = 3, extra: str = "
             print(json.dumps(payload, ensure_ascii=False, indent=2)[:1200])
             sys.exit(1)
         total = payload.get("totalCount", "?")
+
+    if raw:
+        print("━" * 62)
+        print("  응답 원문 (인증키는 응답에 포함되지 않습니다)")
+        print("━" * 62)
+        print(text[:6000])
+        if len(text) > 6000:
+            print(f"\n… (전체 {len(text)}자 중 앞 6000자)")
+        print()
 
     print(f"[응답 메타] 총 {total}건 · 이번 응답 {len(rows)}행\n")
 
@@ -359,6 +391,9 @@ def main() -> int:
     parser.add_argument("--rows", type=int, default=3, help="프로브로 받아 볼 행 수 (기본 3)")
     parser.add_argument("--extra", default="",
                         help="추가 쿼리스트링 (예: \"callTp=L&srchKeyCode=001\")")
+    parser.add_argument("--raw", action="store_true",
+                        help="응답 원문을 그대로 출력한다. 구조 추정이 어긋날 때 쓴다. "
+                             "응답 본문에는 인증키가 들어 있지 않다.")
     args = parser.parse_args()
 
     if args.docs:
@@ -367,7 +402,7 @@ def main() -> int:
         api_key = args.key or __import__("os").environ.get("DATA_GO_KR_API_KEY", "")
         if not api_key:
             parser.error("--probe 에는 --key 또는 DATA_GO_KR_API_KEY 환경변수가 필요합니다.")
-        inspect_probe(args.probe, api_key, args.rows, args.extra)
+        inspect_probe(args.probe, api_key, args.rows, args.extra, args.raw)
     return 0
 
 
