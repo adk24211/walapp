@@ -21,18 +21,28 @@ End Point: `https://apis.data.go.kr/B554287/NationalWelfareInformationsV001`
 발행·갱신할 레코드에 대해서만 `enrich()` 로 상세를 붙인다. 발행 상한이 하루 5건,
 갱신 10건이므로 15회면 충분하고 100회 한도에 한참 못 미친다.
 
-### ⚠️ 응답 필드명은 아직 확정이 아니다
+### 목록 응답 필드 — 실제 호출로 확정 (전체 461건)
 
-포털 화면에는 요청 파라미터만 나오고 응답 필드는 `활용가이드_중앙부처복지서비스(v2.2).doc`
-안에 있다. 아래 `LIST_FIELD_ALIASES` 는 후보 목록이며, 맞는 이름이 없으면 그 필드는
-**빈 값이 되고 레코드는 `_data/incomplete.json` 으로 격리된다.** 틀린 값이 페이지에
-실리는 일은 없지만, 확정 전에는 수집량이 적을 수 있다.
+    servId              WLF00000026             ← ID_FIELD
+    servNm              장애인자립자금대여
+    jurMnofNm           보건복지부               ← 소관부처
+    jurOrgNm            장애인자립기반과         ← 소관부서
+    servDgst            (한 줄 요약)
+    servDtlLink         https://www.bokjiro.go.kr/...   ← 상세 페이지 URL
+    srvPvsnNm           현금대여(융자)           ← 제공유형
+    sprtCycNm           1회성                    ← 지원주기
+    rprsCtadr           129                      ← 대표문의
+    onapPsbltYn         Y                        ← 온라인신청 가능여부
+    lifeArray           청년,중장년,노년          ← 생애주기
+    trgterIndvdlArray   장애인,저소득             ← 가구유형
+    intrsThemaArray     생활지원,일자리,서민금융  ← 관심주제
 
-확정 방법:
+**목록에는 지원대상·지원내용·선정기준·신청방법이 없다.** 요약(`servDgst`)뿐이라
+`deferred_detail=True` 로 두고 상세에서 채운다.
 
-    python3 scripts/inspect_api.py \\
-      --probe "https://apis.data.go.kr/B554287/NationalWelfareInformationsV001/NationalWelfarelistV001" \\
-      --key "발급키" --rows 5 --extra "callTp=L&srchKeyCode=001"
+원천 분류 3종(`intrsThemaArray`·`lifeArray`·`trgterIndvdlArray`)은 본문 키워드 추정보다
+정확하므로 `taxonomy.map_bokjiro()` 로 직접 매핑한다. 표에 없는 값이 오면 키워드 추정으로
+넘어간다.
 """
 from __future__ import annotations
 
@@ -64,31 +74,41 @@ DAILY_QUOTA = int(os.environ.get("WELFARE_CENTRAL_QUOTA", "100"))
 # 목록 수집에 쓸 최대 호출 수. 나머지는 상세 조회 몫으로 남겨 둔다.
 LIST_CALL_BUDGET = int(os.environ.get("WELFARE_CENTRAL_LIST_CALLS", "20"))
 
-ID_FIELD = "servId"      # 포털 상세조회 파라미터로 확정됨 (예: WLF00001138)
+ID_FIELD = "servId"      # 실제 응답으로 확정 (예: WLF00000026)
 
-# ⚠️ 후보 목록 — 활용가이드 .doc 로 확정할 것. 앞쪽이 우선.
+# 목록 응답 — 실제 호출로 확정된 필드명.
+#   servId servNm jurMnofNm jurOrgNm servDgst servDtlLink srvPvsnNm sprtCycNm
+#   rprsCtadr onapPsbltYn lifeArray trgterIndvdlArray intrsThemaArray
+#   inqNum svcfrstRegTs
+# 목록에는 지원대상·지원내용·선정기준·신청방법이 없다. 요약(servDgst)뿐이다.
 LIST_FIELD_ALIASES: dict[str, tuple[str, ...]] = {
-    "name":         ("servNm", "서비스명", "servNam"),
-    "org":          ("jurMnofNm", "소관부처명", "jurOrgNm", "소관기관명"),
-    "summary":      ("servDgst", "서비스요약", "servDtlLink"),
-    "how_to_raw":   ("aplyMtdNm", "신청방법", "aplyMtdCn"),
-    "cycle":        ("sprtCycNm", "지원주기"),
-    "provide_type": ("srvPvsnNm", "제공유형"),
-    "contact":      ("rprsCtadr", "대표문의"),
-    "online_yn":    ("onapPsbltYn", "온라인신청가능여부"),
-    "life":         ("lifeArray", "생애주기"),
-    "target_group": ("trgterIndvdlArray", "가구유형"),
-    "theme":        ("intrsThemaArray", "관심주제"),
+    "name":         ("servNm",),
+    "org":          ("jurMnofNm",),          # 소관부처
+    "dept":         ("jurOrgNm",),           # 소관부서
+    "summary":      ("servDgst",),           # 한 줄 요약
+    "official_url": ("servDtlLink",),        # 복지로 상세 페이지
+    "provide_type": ("srvPvsnNm",),          # 제공유형 (현금대여(융자) 등)
+    "cycle":        ("sprtCycNm",),          # 지원주기 (1회성/월 등)
+    "contact":      ("rprsCtadr",),          # 대표문의
+    "online_yn":    ("onapPsbltYn",),        # 온라인신청 가능여부
+    "life":         ("lifeArray",),          # 생애주기 (청년,중장년,노년)
+    "target_group": ("trgterIndvdlArray",),  # 가구유형 (장애인,저소득)
+    "theme":        ("intrsThemaArray",),    # 관심주제 (생활지원,일자리,서민금융)
 }
 
+# ⚠️ 상세 응답은 아직 후보다. 상세 프로브로 확정할 것:
+#   python3 scripts/inspect_api.py --rows 1 --key "키" \
+#     --probe ".../NationalWelfaredetailedV001" --extra "callTp=D&servId=WLF00000026"
+# 맞는 이름이 없으면 그 필드는 빈 값이 되고, 필수 필드가 비면 발행하지 않는다.
+# 틀린 값이 페이지에 실리는 일은 없다.
 DETAIL_FIELD_ALIASES: dict[str, tuple[str, ...]] = {
-    "target_raw":   ("tgtrDtlCn", "지원대상", "trgterDtlCn"),
+    "target_raw":   ("tgtrDtlCn", "trgterDtlCn", "지원대상"),
     "criteria_raw": ("slctCritCn", "선정기준"),
-    "benefit_raw":  ("alwServCn", "지원내용", "alwServCntt"),
-    "how_to_raw":   ("aplyMtdCn", "신청방법"),
-    "documents":    ("crtrYr", "구비서류", "aplyMtrCn"),
-    "apply_url":    ("onapPsbltYn", "온라인신청URL", "servDtlLink"),
-    "period_raw":   ("enfcBgngYmd", "신청기한", "aplyPeriod"),
+    "benefit_raw":  ("alwServCn", "alwServCntt", "지원내용"),
+    "how_to_raw":   ("aplyMtdCn", "aplyMtdNm", "신청방법"),
+    "documents":    ("aplyMtrCn", "구비서류"),
+    "apply_url":    ("onlinAplyUrl", "온라인신청URL"),
+    "period_raw":   ("aplyPeriod", "신청기한"),
     "law":          ("baslawNm", "법령"),
 }
 
@@ -174,6 +194,10 @@ class Adapter(BaseAdapter):
         if documents:
             record.documents_raw = documents
 
+        apply_url = _pick(row, DETAIL_FIELD_ALIASES["apply_url"])
+        if apply_url.startswith("http"):
+            record.apply_url = apply_url
+
         period = _pick(row, DETAIL_FIELD_ALIASES["period_raw"])
         if period and not (record.apply_period.start or record.apply_period.end):
             record.apply_period.end = normalize_date(period)
@@ -224,24 +248,32 @@ class Adapter(BaseAdapter):
         if not source_id or not name:
             return None
 
+        theme = _pick(row, LIST_FIELD_ALIASES["theme"])
+        life = _pick(row, LIST_FIELD_ALIASES["life"])
+        target_group = _pick(row, LIST_FIELD_ALIASES["target_group"])
+
+        # 원천이 직접 분류한 값을 우선한다. 본문 키워드 추정보다 정확하다.
+        # 표에 없는 값이면 category=None 이 되고, build() 가 키워드 추정으로 넘어간다.
+        category, audiences = taxonomy.map_bokjiro(theme, life, target_group)
+
         # 이 소스는 정의상 전부 중앙부처 사업이므로 지역 범위를 고정한다.
         # 덕분에 REGION_SCOPE=national 에서도 수집분이 그대로 발행 후보가 된다.
         return self.build(
             source_id,
             name,
             org=_pick(row, LIST_FIELD_ALIASES["org"]),
-            # 목록 단계에서는 요약만 온다. 지원대상·지원내용은 enrich() 가 채운다.
+            # 목록에는 요약뿐이다. 지원대상·지원내용·선정기준·신청방법은 enrich() 가 채운다.
             benefit_raw=_pick(row, LIST_FIELD_ALIASES["summary"]),
-            how_to_raw=_pick(row, LIST_FIELD_ALIASES["how_to_raw"]),
+            official_url=_pick(row, LIST_FIELD_ALIASES["official_url"]),
             always=True,   # 복지 사업은 대부분 상시. 상세에서 기한이 나오면 덮어쓴다.
             # 지원대상·선정기준이 상세조회에만 있다. 동기화 단계의 완결성 검사를
             # 유예하고 발행 직전 enrich() 뒤에 다시 검사한다.
             deferred_detail=True,
             region_scope=taxonomy.REGION_NATIONAL,
+            category=category,
+            audiences=audiences or None,   # 빈 리스트면 build() 가 키워드 추정
             source_category_raw=" ".join(filter(None, [
-                _pick(row, LIST_FIELD_ALIASES["theme"]),
-                _pick(row, LIST_FIELD_ALIASES["life"]),
-                _pick(row, LIST_FIELD_ALIASES["target_group"]),
+                theme, life, target_group,
                 _pick(row, LIST_FIELD_ALIASES["provide_type"]),
             ])),
         )

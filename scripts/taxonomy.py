@@ -227,6 +227,100 @@ def classify_audiences(*texts: str) -> list[str]:
 
 
 # ─────────────────────────────────────────────────────────────
+#  복지로 원천 분류 → 자체 분류 매핑
+# ─────────────────────────────────────────────────────────────
+# 중앙부처복지서비스(15090532)는 응답에 원천이 직접 분류한 값을 준다.
+#   intrsThemaArray   관심주제  예: "생활지원,일자리,서민금융"
+#   lifeArray         생애주기  예: "청년,중장년,노년"
+#   trgterIndvdlArray 가구유형  예: "장애인,저소득"
+# 본문 키워드로 추정하는 것보다 정확하므로 이쪽을 우선한다.
+# 표에 없는 값이 오면 기존 키워드 추정으로 넘어간다(안전한 실패).
+
+BOKJIRO_THEME_TO_CATEGORY: dict[str, str] = {
+    "신체건강": "health",
+    "정신건강": "health",
+    "생활지원": "living",
+    "주거": "housing",
+    "일자리": "jobs",
+    "문화·여가": "living",
+    "문화여가": "living",
+    "안전·위기": "living",
+    "안전위기": "living",
+    "임신·출산": "care",
+    "임신출산": "care",
+    "보육": "care",
+    "교육": "education",
+    "입양·위탁": "care",
+    "입양위탁": "care",
+    "보호·돌봄": "care",
+    "보호돌봄": "care",
+    "서민금융": "finance",
+    "법률": "living",
+}
+
+BOKJIRO_LIFE_TO_AUDIENCE: dict[str, str] = {
+    "영유아": "parent",
+    "아동": "parent",
+    "청년": "youth",
+    "노년": "senior",
+    # '청소년'·'중장년' 은 우리 대상 축에 대응하는 항목이 없어 매핑하지 않는다.
+    # 억지로 청년/어르신에 붙이면 대상별 허브가 부정확해진다.
+}
+
+BOKJIRO_TARGET_TO_AUDIENCE: dict[str, str] = {
+    "장애인": "disabled",
+    "저소득": "lowincome",
+    "다자녀": "parent",
+    "한부모·조손": "parent",
+    "한부모조손": "parent",
+    "임신·출산": "parent",
+    "임신출산": "parent",
+    "노인": "senior",
+    # '다문화·탈북민', '보훈대상자' 는 대응 항목이 없어 매핑하지 않는다.
+}
+
+
+def _split_codes(value: str) -> list[str]:
+    return [part.strip() for part in str(value or "").replace("|", ",").split(",") if part.strip()]
+
+
+# '생활지원' 은 어디에도 안 들어가는 것을 담는 포괄 분류다. 다른 주제가 함께 오면
+# 그쪽이 실제 성격을 더 잘 나타낸다.
+# 예: "생활지원,일자리,서민금융" 인 장애인자립자금대여를 '생활·문화' 로 보내면
+#     일자리 허브에서 사라진다.
+BOKJIRO_GENERIC_THEMES = frozenset({"생활지원"})
+
+
+def map_bokjiro(thema: str = "", life: str = "", target: str = "") -> tuple[str | None, list[str]]:
+    """복지로 원천 분류 → (분야, 대상 목록). 매핑 실패 시 분야는 None.
+
+    분야는 포괄 주제를 뺀 뒤 **원천 표기 순서에서 첫 번째**를 쓴다.
+    복수 주제가 오는 경우가 흔하고(예: "생활지원,일자리,서민금융"), 앞쪽이 대표 주제라고
+    보는 것이 원천 표기 순서와 맞다.
+    """
+    mapped = [BOKJIRO_THEME_TO_CATEGORY[code]
+              for code in _split_codes(thema)
+              if code in BOKJIRO_THEME_TO_CATEGORY]
+    specific = [BOKJIRO_THEME_TO_CATEGORY[code]
+                for code in _split_codes(thema)
+                if code in BOKJIRO_THEME_TO_CATEGORY and code not in BOKJIRO_GENERIC_THEMES]
+    ordered = specific or mapped
+    category = ordered[0] if ordered else None
+
+    audiences: list[str] = []
+    for code in _split_codes(life):
+        mapped = BOKJIRO_LIFE_TO_AUDIENCE.get(code)
+        if mapped and mapped not in audiences:
+            audiences.append(mapped)
+    for code in _split_codes(target):
+        mapped = BOKJIRO_TARGET_TO_AUDIENCE.get(code)
+        if mapped and mapped not in audiences:
+            audiences.append(mapped)
+
+    return category, audiences
+
+
+# ─────────────────────────────────────────────────────────────
 #  Jekyll 내보내기
 # ─────────────────────────────────────────────────────────────
 def export_for_jekyll() -> dict:

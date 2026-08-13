@@ -313,19 +313,58 @@ python3 scripts/inspect_api.py --probe "https://api.odcloud.kr/api/gov24/v3/serv
 요약이 자리를 차지해 정작 중요한 '매월 최대 34만 원' 이 페이지에 못 들어갑니다.
 상세가 값을 주면 덮어쓰고, 상세 조회가 실패하면 요약이 남아 최소한의 발행은 됩니다.
 
-#### ⚠️ 응답 필드명은 아직 후보입니다
+#### 목록 응답 필드 — 실제 호출로 확정 (전체 461건)
 
-포털 화면에는 요청 파라미터만 나오고 **응답 필드는 `활용가이드_중앙부처복지서비스(v2.2).doc`
-안에** 있습니다. 어댑터의 `LIST_FIELD_ALIASES` / `DETAIL_FIELD_ALIASES` 는 후보 목록이며,
-맞는 이름이 없으면 그 필드는 빈 값이 되고 레코드는 격리됩니다.
-**틀린 값이 페이지에 실리는 일은 없지만** 확정 전에는 수집량이 적을 수 있습니다.
+```
+servId              WLF00000026             ← ID_FIELD
+servNm              장애인자립자금대여
+jurMnofNm           보건복지부               ← 소관부처
+jurOrgNm            장애인자립기반과         ← 소관부서
+servDgst            (한 줄 요약)
+servDtlLink         https://www.bokjiro.go.kr/...   ← 상세 페이지 URL
+srvPvsnNm           현금대여(융자)           ← 제공유형
+sprtCycNm           1회성                    ← 지원주기
+rprsCtadr           129                      ← 대표문의
+onapPsbltYn         Y                        ← 온라인신청 가능여부
+lifeArray           청년,중장년,노년          ← 생애주기
+trgterIndvdlArray   장애인,저소득             ← 가구유형
+intrsThemaArray     생활지원,일자리,서민금융  ← 관심주제
+```
 
-확정 방법:
+**목록에는 지원대상·지원내용·선정기준·신청방법이 없습니다.** 요약(`servDgst`)뿐이라
+`deferred_detail=True` 설계가 필수임이 실제 응답으로 확인됐습니다.
+
+#### 원천 분류를 그대로 씁니다 — 키워드 추정보다 정확합니다
+
+응답에 원천이 직접 분류한 값 3종이 옵니다. `taxonomy.map_bokjiro()` 가 이를 자체 분류로
+직접 매핑하고, 표에 없는 값이 오면 기존 키워드 추정으로 넘어갑니다(안전한 실패).
+
+| 원천 필드 | 예시 값 | 매핑 대상 |
+|-----------|---------|-----------|
+| `intrsThemaArray` | 생활지원, 일자리, 서민금융, 주거, 보육, 교육, 신체건강… | 분야(category) |
+| `lifeArray` | 영유아, 아동, 청년, 노년 | 대상(audience) |
+| `trgterIndvdlArray` | 장애인, 저소득, 다자녀, 한부모·조손 | 대상(audience) |
+
+**`생활지원` 은 포괄 분류라 우선순위를 낮췄습니다.** 다른 주제가 함께 오면 그쪽을 씁니다.
+
+```
+생활지원,일자리,서민금융  → jobs      (생활·문화로 보내면 일자리 허브에서 사라짐)
+생활지원,주거            → housing
+생활지원 (단독)          → living
+보육,보호·돌봄           → care
+```
+
+`청소년`·`중장년`·`다문화·탈북민`·`보훈대상자` 는 우리 대상 축에 대응 항목이 없어
+**일부러 매핑하지 않았습니다.** 억지로 청년/어르신에 붙이면 대상별 허브가 부정확해집니다.
+
+#### ⚠️ 상세 응답 필드는 아직 후보입니다
+
+목록만 프로브했고 상세(`NationalWelfaredetailedV001`)는 아직입니다. 확정하려면:
 
 ```bash
-python3 scripts/inspect_api.py \
-  --probe "https://apis.data.go.kr/B554287/NationalWelfareInformationsV001/NationalWelfarelistV001" \
-  --key "발급키" --rows 5 --extra "callTp=L&srchKeyCode=003"
+python3 scripts/inspect_api.py --rows 1 --key "발급키" \
+  --probe "https://apis.data.go.kr/B554287/NationalWelfareInformationsV001/NationalWelfaredetailedV001" \
+  --extra "callTp=D&servId=WLF00000026"
 ```
 
 `inspect_api.py` 는 XML 응답도 파싱합니다. 래퍼 태그명(`wantedList`/`servList`)을
