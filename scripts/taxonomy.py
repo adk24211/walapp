@@ -31,14 +31,16 @@ CATEGORIES: dict[str, dict] = {
         "emoji": "👶",
         "icon": "ti-baby-carriage",
         "desc": "임신·출산부터 육아, 가족 돌봄까지 지원하는 제도입니다.",
-        "keywords": ["출산", "임신", "육아", "양육", "보육", "아동", "돌봄", "어린이집"],
+        "keywords": ["출산", "임신", "육아", "양육", "보육", "아동", "돌봄",
+                     "어린이집", "입양", "위탁", "보호"],
     },
     "health": {
         "label": "건강·의료",
         "emoji": "🩺",
         "icon": "ti-heartbeat",
         "desc": "의료비, 건강검진, 심리 상담 등 건강과 관련된 지원입니다.",
-        "keywords": ["의료", "건강", "치료", "진료", "검진", "심리", "정신건강", "약제비"],
+        "keywords": ["의료", "건강", "치료", "진료", "검진", "심리", "정신건강",
+                     "약제비", "신체건강", "재활", "간병"],
     },
     "education": {
         "label": "교육·역량",
@@ -52,14 +54,16 @@ CATEGORIES: dict[str, dict] = {
         "emoji": "💰",
         "icon": "ti-coin",
         "desc": "목돈 마련, 대출, 세금 환급 등 돈과 관련된 제도입니다.",
-        "keywords": ["금융", "적금", "저축", "대출", "자산", "이자", "세액공제", "환급", "장려금"],
+        "keywords": ["금융", "적금", "저축", "대출", "자산", "이자", "세액공제",
+                     "환급", "장려금", "서민금융", "연금", "수당", "급여", "보험료"],
     },
     "living": {
         "label": "생활·문화",
         "emoji": "🎫",
         "icon": "ti-ticket",
         "desc": "교통, 통신, 문화생활 등 일상의 부담을 덜어 주는 제도입니다.",
-        "keywords": ["문화", "여가", "교통", "통신", "요금", "바우처", "할인", "체육"],
+        "keywords": ["문화", "여가", "교통", "통신", "요금", "바우처", "할인",
+                     "체육", "생활지원", "생활안정", "안전", "위기", "법률"],
     },
 }
 
@@ -122,6 +126,52 @@ AUDIENCES: dict[str, dict] = {
 }
 
 AUDIENCE_KEYS = tuple(AUDIENCES.keys())
+
+# ── 격일 발행 그룹 ──────────────────────────────────────────
+# 테마 8개를 4개씩 두 조로 나눠 하루씩 번갈아 발행한다(조당 테마 1건 = 하루 4건).
+# 8개를 매일 채우는 것보다 건당 품질에 쓸 예산이 두 배가 된다. (사용자 확정 사항)
+#
+# 조 편성 기준은 '검색 수요를 두 조에 고르게 나누는 것'이다. 청년·양육가정처럼
+# 수요가 큰 테마를 한쪽에 몰면 그 조가 도는 날만 트래픽이 뛴다.
+AUDIENCE_GROUPS: tuple[tuple[str, ...], ...] = (
+    ("youth", "parent", "jobseeker", "senior"),
+    ("lowincome", "newlywed", "disabled", "business"),
+)
+
+
+def audience_group(day_index: int) -> tuple[str, ...]:
+    """그날 발행할 테마 조. `day_index` 는 date.toordinal() 을 넣는다.
+
+    날짜에서 바로 계산하므로 상태 파일이 필요 없다. 워크플로우가 하루 걸러
+    실패해도 다음 실행이 자기 차례를 스스로 안다.
+    """
+    return AUDIENCE_GROUPS[day_index % len(AUDIENCE_GROUPS)]
+
+
+def pick_primary_audience(
+    audiences: list[str], blob: str = "", from_source: bool = False
+) -> str:
+    """대표 테마 하나를 고른다.
+
+    한 제도가 청년·구직자 양쪽에 걸치는 일이 흔한데, 발행은 한 번뿐이므로
+    '어느 테마의 오늘 1건으로 셀지' 를 정해야 한다. 나머지 테마 허브에는
+    `audiences` 로 계속 노출되므로 사라지지 않는다.
+
+    원천이 직접 분류한 값이면 **표기 순서 첫 번째**를 쓴다 (사용자 확정 사항).
+    복지로의 lifeArray·trgterIndvdlArray 는 앞쪽이 대표 대상이다.
+    키워드 추정이면 본문에 실제로 몇 번 걸렸는지로 고른다 — AUDIENCES 딕셔너리
+    선언 순서를 그대로 쓰면 '청년' 이 항상 이겨 대표가 한쪽으로 쏠린다.
+    """
+    if not audiences:
+        return ""
+    if from_source:
+        return audiences[0]
+
+    def hits(key: str) -> int:
+        return sum(1 for kw in AUDIENCES.get(key, {}).get("keywords", []) if kw in blob)
+
+    # 동점이면 선언 순서가 앞선 쪽 — 결과가 실행마다 흔들리지 않게 결정적으로 만든다.
+    return max(audiences, key=lambda a: (hits(a), -AUDIENCE_KEYS.index(a)))
 
 
 # ─────────────────────────────────────────────────────────────
@@ -220,6 +270,100 @@ def classify_audiences(*texts: str) -> list[str]:
     blob = " ".join(t for t in texts if t)
     return [key for key, meta in AUDIENCES.items()
             if any(kw in blob for kw in meta["keywords"])]
+
+
+# ─────────────────────────────────────────────────────────────
+#  복지로 원천 분류 → 자체 분류 매핑
+# ─────────────────────────────────────────────────────────────
+# 중앙부처복지서비스(15090532)는 응답에 원천이 직접 분류한 값을 준다.
+#   intrsThemaArray   관심주제  예: "생활지원,일자리,서민금융"
+#   lifeArray         생애주기  예: "청년,중장년,노년"
+#   trgterIndvdlArray 가구유형  예: "장애인,저소득"
+# 본문 키워드로 추정하는 것보다 정확하므로 이쪽을 우선한다.
+# 표에 없는 값이 오면 기존 키워드 추정으로 넘어간다(안전한 실패).
+
+BOKJIRO_THEME_TO_CATEGORY: dict[str, str] = {
+    "신체건강": "health",
+    "정신건강": "health",
+    "생활지원": "living",
+    "주거": "housing",
+    "일자리": "jobs",
+    "문화·여가": "living",
+    "문화여가": "living",
+    "안전·위기": "living",
+    "안전위기": "living",
+    "임신·출산": "care",
+    "임신출산": "care",
+    "보육": "care",
+    "교육": "education",
+    "입양·위탁": "care",
+    "입양위탁": "care",
+    "보호·돌봄": "care",
+    "보호돌봄": "care",
+    "서민금융": "finance",
+    "법률": "living",
+}
+
+BOKJIRO_LIFE_TO_AUDIENCE: dict[str, str] = {
+    "영유아": "parent",
+    "아동": "parent",
+    "청년": "youth",
+    "노년": "senior",
+    # '청소년'·'중장년' 은 우리 대상 축에 대응하는 항목이 없어 매핑하지 않는다.
+    # 억지로 청년/어르신에 붙이면 대상별 허브가 부정확해진다.
+}
+
+BOKJIRO_TARGET_TO_AUDIENCE: dict[str, str] = {
+    "장애인": "disabled",
+    "저소득": "lowincome",
+    "다자녀": "parent",
+    "한부모·조손": "parent",
+    "한부모조손": "parent",
+    "임신·출산": "parent",
+    "임신출산": "parent",
+    "노인": "senior",
+    # '다문화·탈북민', '보훈대상자' 는 대응 항목이 없어 매핑하지 않는다.
+}
+
+
+def _split_codes(value: str) -> list[str]:
+    return [part.strip() for part in str(value or "").replace("|", ",").split(",") if part.strip()]
+
+
+# '생활지원' 은 어디에도 안 들어가는 것을 담는 포괄 분류다. 다른 주제가 함께 오면
+# 그쪽이 실제 성격을 더 잘 나타낸다.
+# 예: "생활지원,일자리,서민금융" 인 장애인자립자금대여를 '생활·문화' 로 보내면
+#     일자리 허브에서 사라진다.
+BOKJIRO_GENERIC_THEMES = frozenset({"생활지원"})
+
+
+def map_bokjiro(thema: str = "", life: str = "", target: str = "") -> tuple[str | None, list[str]]:
+    """복지로 원천 분류 → (분야, 대상 목록). 매핑 실패 시 분야는 None.
+
+    분야는 포괄 주제를 뺀 뒤 **원천 표기 순서에서 첫 번째**를 쓴다.
+    복수 주제가 오는 경우가 흔하고(예: "생활지원,일자리,서민금융"), 앞쪽이 대표 주제라고
+    보는 것이 원천 표기 순서와 맞다.
+    """
+    mapped = [BOKJIRO_THEME_TO_CATEGORY[code]
+              for code in _split_codes(thema)
+              if code in BOKJIRO_THEME_TO_CATEGORY]
+    specific = [BOKJIRO_THEME_TO_CATEGORY[code]
+                for code in _split_codes(thema)
+                if code in BOKJIRO_THEME_TO_CATEGORY and code not in BOKJIRO_GENERIC_THEMES]
+    ordered = specific or mapped
+    category = ordered[0] if ordered else None
+
+    audiences: list[str] = []
+    for code in _split_codes(life):
+        mapped = BOKJIRO_LIFE_TO_AUDIENCE.get(code)
+        if mapped and mapped not in audiences:
+            audiences.append(mapped)
+    for code in _split_codes(target):
+        mapped = BOKJIRO_TARGET_TO_AUDIENCE.get(code)
+        if mapped and mapped not in audiences:
+            audiences.append(mapped)
+
+    return category, audiences
 
 
 # ─────────────────────────────────────────────────────────────

@@ -17,8 +17,9 @@ from dataclasses import dataclass, field
 from datetime import date
 
 import registry
+import schema
 from collect import adapters
-from schema import STATUS_CLOSED, ProgramRecord
+from schema import STATUS_SUPERSEDED, ProgramRecord
 
 log = logging.getLogger(__name__)
 
@@ -33,6 +34,9 @@ DEFAULT_SCOPES = ("national",)
 class SyncResult:
     new: list[ProgramRecord] = field(default_factory=list)
     changed: list[ProgramRecord] = field(default_factory=list)
+    # 내용은 그대로인데 상태만 바뀐 것 (시행중 → 종료 / 예정 → 시행중).
+    # 해설을 다시 만들지 않고 저장분으로 페이지만 다시 찍는다.
+    restatused: list[ProgramRecord] = field(default_factory=list)
     unchanged: list[ProgramRecord] = field(default_factory=list)
     incomplete: list[dict] = field(default_factory=list)
     review_needed: list[dict] = field(default_factory=list)
@@ -40,11 +44,13 @@ class SyncResult:
 
     @property
     def total(self) -> int:
-        return (len(self.new) + len(self.changed) + len(self.unchanged)
-                + len(self.incomplete) + len(self.review_needed) + self.out_of_scope)
+        return (len(self.new) + len(self.changed) + len(self.restatused)
+                + len(self.unchanged) + len(self.incomplete)
+                + len(self.review_needed) + self.out_of_scope)
 
     def summary(self) -> str:
-        text = (f"신규 {len(self.new)} · 변경 {len(self.changed)} · 동일 {len(self.unchanged)} "
+        text = (f"신규 {len(self.new)} · 변경 {len(self.changed)} "
+                f"· 상태변경 {len(self.restatused)} · 동일 {len(self.unchanged)} "
                 f"· 필드누락 {len(self.incomplete)} · 유사검토 {len(self.review_needed)}")
         if self.out_of_scope:
             text += f" · 범위밖 {self.out_of_scope}"
@@ -84,10 +90,10 @@ def run(
                 continue
             seen_ids.add(record.id)
 
-            _apply_status(record, today)
-
             # ── 필수 필드 검사 ──
-            if not record.is_complete():
+            # deferred_detail 인 소스는 목록 응답에 지원대상이 없다. 여기서 걸러 내면
+            # 상세를 붙일 기회(publish 의 enrich)조차 오지 않는다. 발행 직전에 다시 본다.
+            if not record.is_complete() and not record.deferred_detail:
                 result.incomplete.append({
                     "id": record.id,
                     "name": record.name,
@@ -97,6 +103,13 @@ def run(
                 continue
 
             existing = reg.get(record.id)
+
+            # ── 상태 판정 ──
+            # 원장의 상태를 이어받지 않고 오늘 날짜로 매번 다시 계산한다.
+            # 사람이 붙인 superseded 만 물려받는다 (schema.resolve_status 참고).
+            if existing is not None and existing.status == STATUS_SUPERSEDED:
+                record.status = STATUS_SUPERSEDED
+            record.status = schema.resolve_status(record, today)
 
             # ── 운영 범위 검사 ──
             # 이미 발행된 제도는 범위와 무관하게 계속 추적한다. 범위를 좁혔다고
@@ -113,6 +126,13 @@ def run(
                 record.revision = existing.revision
                 if existing.content_hash != record.content_hash:
                     result.changed.append(record)
+                elif existing.status != record.status:
+                    # 내용은 그대로인데 날짜가 지나 상태만 바뀐 경우
+                    # (예: 어제까지 시행중 → 오늘부터 종료).
+                    # 페이지를 다시 찍지 않으면 마감된 제도가 계속 '시행중' 으로 보인다.
+                    # 해설은 저장해 둔 것을 재사용하므로 LLM 호출이 들어가지 않는다.
+                    record.last_updated = existing.last_updated
+                    result.restatused.append(record)
                 else:
                     record.last_updated = existing.last_updated
                     result.unchanged.append(record)
@@ -138,12 +158,6 @@ def run(
 
     log.info("동기화 결과 — %s", result.summary())
     return result
-
-
-def _apply_status(record: ProgramRecord, today: date) -> None:
-    """신청 기한이 지났으면 상태를 closed 로. 페이지는 지우지 않는다."""
-    if record.apply_period.is_closed(today):
-        record.status = STATUS_CLOSED
 
 
 def known_names_lookup(known: dict[str, str], program_id: str) -> str:

@@ -14,7 +14,13 @@ import html
 import re
 
 import taxonomy
-from schema import STATUS_ACTIVE, STATUS_CLOSED, ProgramRecord
+from schema import (
+    STATUS_ACTIVE,
+    STATUS_CLOSED,
+    STATUS_LABELS,
+    STATUS_UPCOMING,
+    ProgramRecord,
+)
 
 # 구 generate_post.py 와 동일한 정책 — 한자·일본어 가나 제거
 _FOREIGN_RE = re.compile(r"[㐀-䶿一-鿿぀-ゟ゠-ヺー-ヿ]")
@@ -35,6 +41,44 @@ def _esc(text) -> str:
 
 def _attr(text) -> str:
     return html.escape(str(text or ""), quote=True)
+
+
+def _esc_lines(text) -> str:
+    """짧은 다중값을 <br> 로 이어 붙인다 (예: '기타 온라인신청\\n방문신청')."""
+    lines = [_esc(line) for line in str(text or "").split("\n") if line.strip()]
+    return "<br>".join(lines)
+
+
+# 원문 불릿 마커 — 이 글자로 시작하는 줄은 목록 항목으로 본다.
+_BULLET_RE = re.compile(r"^\s*[○●◦□■▪·•\-*]\s*")
+
+
+def _render_lines(text) -> str:
+    """장문 원문을 줄 구조를 살려 HTML 로.
+
+    보조금24 원문은 '○ 큰 항목' 아래 '- 세부' 를 두는 형태가 많다. 마커를 그대로
+    출력하면 지저분하므로 목록으로 바꾸되, **문구 자체는 손대지 않는다.**
+    이 값들은 사실 원본이라 LLM 도 이 렌더러도 내용을 고쳐 쓰지 않는다.
+    """
+    out: list[str] = []
+    in_list = False
+    for raw_line in str(text or "").split("\n"):
+        line = raw_line.rstrip()
+        if not line.strip():
+            continue
+        if _BULLET_RE.match(line):
+            if not in_list:
+                out.append("<ul>")
+                in_list = True
+            out.append(f"  <li>{_esc(_BULLET_RE.sub('', line))}</li>")
+        else:
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            out.append(f"<p>{_esc(line)}</p>")
+    if in_list:
+        out.append("</ul>")
+    return "\n".join(out)
 
 
 def _yaml(text) -> str:
@@ -62,24 +106,39 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
         "",
     ]
 
-    # ── 2) 한눈에 보기 (전부 API 원본) ──
-    # cn-spec: 라벨/값 2열 표. 기존 cn-table 은 다열 비교표용이라 가로 스크롤을 쓰는데,
-    # 여기서는 값이 길므로 줄바꿈시켜야 한다.
+    # ── 2) 한눈에 보기 — 짧은 메타만 표로 ──
+    # 실제 보조금24 데이터의 지원대상·지원내용·선정기준은 '○'/'-' 불릿을 가진 장문이다
+    # (근로장려금 선정기준은 2천 자가 넘는다). 표 한 칸에 넣으면 읽을 수 없으므로
+    # 메타 정보만 표로 두고, 장문은 아래에서 줄 구조를 살려 따로 렌더한다.
     parts += ['<h2 class="cn-h">한눈에 보기</h2>', open_block("cn-table cn-spec"), "<table>"]
     parts += ["  <tbody>"]
-    rows = [
-        ("지원 대상", record.target_raw),
-        ("지원 내용", record.benefit_raw),
-        ("선정 기준", record.criteria_raw),
+    meta_rows = [
+        ("진행 상태", _status_text(record)),
         ("신청 기간", _period_text(record)),
         ("소관 기관", record.org),
         ("지원 지역", record.region.label),
+        ("접수 기관", record.receiver_raw),
+        ("문의처", record.contact_raw),
+        ("근거 법령", record.law_raw),
     ]
-    for label, value in rows:
+    for label, value in meta_rows:
         if not str(value).strip():
             continue
-        parts.append(f"    <tr><th>{_esc(label)}</th><td>{_esc(value)}</td></tr>")
+        parts.append(f"    <tr><th>{_esc(label)}</th><td>{_esc_lines(value)}</td></tr>")
     parts += ["  </tbody>", "</table>", "</div>", ""]
+
+    # ── 2-b) 사실 원본 장문 (LLM 미개입) ──
+    for heading, value in (
+        ("지원 대상", record.target_raw),
+        ("지원 내용", record.benefit_raw),
+        ("선정 기준", record.criteria_raw),
+    ):
+        if not str(value).strip():
+            continue
+        parts.append(f'<h2 class="cn-h">{_esc(heading)}</h2>')
+        parts.append(open_block("cn-raw"))
+        parts.append(_render_lines(value))
+        parts += ["</div>", ""]
 
     # ── 3) 나도 받을 수 있나요 — 체크리스트 ──
     eligibility = [c for c in (prose.get("eligibility") or []) if str(c).strip()]
@@ -108,9 +167,11 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
             ]
         parts += ["</div>", ""]
 
-    # ── 5) 필요한 서류 (API 원본) ──
+    # ── 5) 준비 서류·서식 (API 원본) ──
+    # 보조금24는 '구비서류', 복지로는 서식·안내 자료가 섞여 온다. 후자를 '필요한 서류'로
+    # 단정하면 제출 대상이 아닌 안내문까지 서류로 읽힌다. 둘을 포괄하는 제목을 쓴다.
     if record.documents_raw:
-        parts.append('<h2 class="cn-h">필요한 서류</h2>')
+        parts.append('<h2 class="cn-h">준비 서류·서식</h2>')
         parts.append(f'<ul class="cn cn-check" data-cat="{cat}">')
         for doc in record.documents_raw:
             parts.append(f"  <li>{_esc(doc)}</li>")
@@ -172,6 +233,23 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
     return "\n".join(parts)
 
 
+def _status_text(record: ProgramRecord) -> str:
+    """'시행중' / '예정 (2026-09-01 접수 시작)' / '종료 (2026-03-31 마감)'.
+
+    괄호 안의 날짜는 원천 신청기한 원문에서 파싱한 값이다. 원문에 날짜가 없으면
+    라벨만 남는다 — 없는 기간을 지어내지 않는다.
+    """
+    label = STATUS_LABELS.get(record.status, record.status)
+    period = record.apply_period
+    if record.status == STATUS_UPCOMING and period.start:
+        return f"{label} ({period.start} 접수 시작)"
+    if record.status == STATUS_CLOSED and period.end:
+        return f"{label} ({period.end} 마감)"
+    if record.status == STATUS_ACTIVE and period.always:
+        return f"{label} (상시 접수)"
+    return label
+
+
 def _period_text(record: ProgramRecord) -> str:
     period = record.apply_period
     if period.always:
@@ -191,9 +269,11 @@ def _timeline(record: ProgramRecord) -> list[tuple[str, str]]:
         return []
     out: list[tuple[str, str]] = []
     if period.start:
-        out.append((period.start, "신청 접수 시작"))
+        label = ("신청 접수 시작 (예정)" if record.status == STATUS_UPCOMING
+                 else "신청 접수 시작")
+        out.append((period.start, label))
     if period.end:
-        label = "신청 마감" if record.status != STATUS_CLOSED else "신청 마감 (종료됨)"
+        label = "신청 마감 (종료됨)" if record.status == STATUS_CLOSED else "신청 마감"
         out.append((period.end, label))
     return out
 
@@ -216,6 +296,11 @@ def to_markdown(record: ProgramRecord, prose: dict) -> str:
         front += [f"  - {a}" for a in record.audiences]
     else:
         front.append("audiences: []")
+    if record.primary_audience:
+        front.append(f"primary_audience: {record.primary_audience}")
+    # 조회수는 원천 인기도다. 홈 히어로·정렬에 쓰므로 front matter 로 내보낸다.
+    if record.view_count:
+        front.append(f"view_count: {record.view_count}")
 
     front += [
         f"region_scope: {record.region.scope}",
@@ -230,8 +315,16 @@ def to_markdown(record: ProgramRecord, prose: dict) -> str:
         f'org: "{_yaml(record.org)}"',
         f'summary: "{_yaml(prose.get("summary") or record.benefit_raw)[:160]}"',
         f"status: {record.status}",
+        f'status_label: "{STATUS_LABELS.get(record.status, record.status)}"',
         f"apply_always: {'true' if record.apply_period.always else 'false'}",
     ]
+
+    # 종료된 제도는 색인에서 뺀다. 마감된 금액·요건이 검색 결과에 남으면
+    # 지금 신청 가능한 제도로 오인된다 (YMYL). 페이지 자체는 그대로 둔다 —
+    # 이미 유입된 사람에게는 '끝난 제도' 라는 정보가 필요하다. (사용자 확정 사항)
+    if record.status == STATUS_CLOSED:
+        front.append("noindex: true")
+        front.append("sitemap: false")   # jekyll-sitemap 이 읽는 키
     if record.apply_period.start:
         front.append(f'apply_start: "{record.apply_period.start}"')
     if record.apply_period.end:

@@ -6,9 +6,11 @@
 {% assign pcat = p.category %}
 {% assign pcat_meta = site.data.taxonomy.categories[pcat] %}
 {% assign pclosed = false %}
+{% assign pupcoming = false %}
 {% if p.status == 'closed' %}{% assign pclosed = true %}{% endif %}
+{% if p.status == 'upcoming' %}{% assign pupcoming = true %}{% endif %}
 
-<a href="{{ p.url | relative_url }}" class="post-card cn{% if pclosed %} is-closed{% endif %}" data-cat="{{ pcat }}">
+<a href="{{ p.url | relative_url }}" class="post-card cn{% if pclosed %} is-closed{% endif %}{% if pupcoming %} is-upcoming{% endif %}" data-cat="{{ pcat }}">
   <div class="card-inner">
     <div class="card-accent"></div>
     <div class="card-body">
@@ -24,12 +26,17 @@
         <span class="chip chip-cat">{{ pcat_meta.emoji }} {{ pcat_meta.label | default: pcat }}</span>
         {% endunless %}
         <span class="chip">{{ p.region_label | default: '전국' }}</span>
+        {% comment %} 상태 칩은 항상 하나 붙는다 — 시행중인지 끝났는지가 카드에서 바로 보여야 한다 {% endcomment %}
         {% if pclosed %}
-          <span class="chip chip-closed">접수 종료</span>
+          <span class="chip chip-closed">종료{% if p.apply_end %} · {{ p.apply_end }}{% endif %}</span>
+        {% elsif pupcoming %}
+          <span class="chip chip-upcoming">예정{% if p.apply_start %} · {{ p.apply_start }} 시작{% endif %}</span>
         {% elsif p.apply_always %}
-          <span class="chip chip-always">상시 접수</span>
+          <span class="chip chip-always">시행중 · 상시</span>
         {% elsif p.apply_end %}
-          <span class="chip chip-deadline">~ {{ p.apply_end }}</span>
+          <span class="chip chip-deadline">시행중 · ~{{ p.apply_end }}</span>
+        {% else %}
+          <span class="chip chip-active">시행중</span>
         {% endif %}
       </div>
 

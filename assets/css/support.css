@@ -63,6 +63,28 @@
 .badge-region { background: var(--surface2); color: var(--ink2); }
 .badge-period { background: var(--surface2); color: var(--ink2); border: 1px solid var(--line2); }
 .badge-period.always { background: var(--brand-bg); color: var(--brand-dark); border-color: transparent; }
+.badge-period.upcoming { background: var(--st-up-bg); color: var(--st-up); border-color: transparent; }
+
+/* ---- 상태(시행중·예정·종료) ------------------------------- */
+/* 분야 색(--c)과 겹치지 않게 별도 축을 쓴다. 분야는 주제, 상태는 시간축이라
+   같은 색 계열을 쓰면 카드에서 둘이 섞여 읽힌다. */
+:root {
+  --st-up:      #1B5FA6;   /* 예정 — 파랑 */
+  --st-up-bg:   #DEECFB;
+}
+[data-theme="dark"] {
+  --st-up:      #9CC8F2;
+  --st-up-bg:   #10314F;
+}
+
+.badge-status {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px 11px; border-radius: 999px;
+  font-size: .78rem; font-weight: 700; letter-spacing: -.01em;
+}
+.badge-status.is-active   { background: var(--brand-bg); color: var(--brand-dark); }
+.badge-status.is-upcoming { background: var(--st-up-bg); color: var(--st-up); }
+.badge-status.is-closed   { background: transparent; color: var(--ink3); border: 1px dashed var(--line2); }
 
 .program-title {
   font-size: 1.95rem; line-height: 1.28; letter-spacing: -.03em;
@@ -111,6 +133,8 @@
 .mock-banner div { font-size: .88rem; line-height: 1.6; word-break: keep-all; }
 
 .status-banner.closed { background: var(--surface2); border: 1px solid var(--line2); color: var(--ink2); }
+.status-banner.upcoming { background: var(--st-up-bg); border: 1px solid transparent; color: var(--st-up); }
+.status-banner.upcoming i, .status-banner.upcoming strong { color: var(--st-up); }
 .status-banner i { font-size: 20px; margin-top: 1px; color: var(--ink3); }
 .status-banner strong { display: block; margin-bottom: 3px; color: var(--ink); }
 .status-banner div { font-size: .88rem; line-height: 1.6; word-break: keep-all; }
@@ -141,8 +165,10 @@
 }
 .chip-cat { background: var(--c-bg); color: var(--c); }
 .chip-always { background: var(--brand-bg); color: var(--brand-dark); }
+.chip-active { background: var(--brand-bg); color: var(--brand-dark); }
 .chip-deadline { background: var(--surface2); color: var(--ink2); border: 1px solid var(--line2); }
 .chip-closed { background: transparent; color: var(--ink3); border: 1px dashed var(--line2); }
+.chip-upcoming { background: var(--st-up-bg); color: var(--st-up); }
 
 .card-badge {
   flex-shrink: 0; align-self: flex-start;
@@ -169,6 +195,29 @@
   .cn-spec tbody th { width: 78px; font-size: .84rem; }
 }
 
+/* ---- 사실 원본 장문 블록 ---------------------------------- */
+/* 지원대상·지원내용·선정기준은 공공데이터 원문 그대로다. 손대지 않은 값임을
+   드러내려고 좌측 액센트 바를 두고, 원문의 줄 구조를 살려 보여 준다. */
+.cn-raw {
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--c-mid);
+  border-radius: var(--radius);
+}
+.cn-raw p { margin: 0 0 .7rem; font-size: .95rem; line-height: 1.72; color: var(--ink); word-break: keep-all; }
+.cn-raw p:last-child { margin-bottom: 0; }
+.cn-raw ul { list-style: none; margin: 0 0 .7rem; padding: 0; display: grid; gap: 8px; }
+.cn-raw ul:last-child { margin-bottom: 0; }
+.cn-raw li {
+  position: relative; padding-left: 15px;
+  font-size: .94rem; line-height: 1.68; color: var(--ink2); word-break: keep-all;
+}
+.cn-raw li::before {
+  content: ""; position: absolute; left: 0; top: .62em;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--c-mid);
+}
+
 /* ---- 빈 상태 / 각주 --------------------------------------- */
 .empty-state {
   max-width: var(--container); margin: 0 auto; padding: 3rem 1.5rem;
@@ -189,6 +238,42 @@
 .home-intro {
   max-width: var(--container); margin: 0 auto; padding: 0 1.5rem 1.5rem;
 }
+/* 메인 토픽 — 조회수 1위 한 건. 카드 그리드보다 확실히 커야 '오늘의 한 건'으로 읽힌다. */
+.home-hero {
+  display: flex; gap: 1.25rem; align-items: stretch;
+  max-width: var(--container); margin: 0 auto 1.75rem;
+  padding: 1.4rem 1.5rem;
+  border-radius: var(--radius);
+  background: var(--c-bg); border: 1px solid transparent;
+  transition: transform .12s, box-shadow .15s;
+}
+.home-hero:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(0,0,0,.09); }
+.hero-side {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  flex: 0 0 96px; padding-top: 2px;
+}
+.hero-eyebrow {
+  font-size: .72rem; font-weight: 800; line-height: 1.4;
+  color: var(--c); text-align: center; word-break: keep-all;
+}
+.hero-emoji { font-size: 2.4rem; line-height: 1; }
+.hero-body { flex: 1 1 auto; min-width: 0; }
+.hero-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: .6rem; }
+.hero-title {
+  font-size: 1.5rem; line-height: 1.3; letter-spacing: -.03em; font-weight: 800;
+  color: var(--ink); word-break: keep-all; margin: 0 0 .45rem;
+}
+.hero-desc {
+  font-size: .95rem; line-height: 1.65; color: var(--ink2);
+  word-break: keep-all; margin: 0 0 .7rem;
+}
+.hero-foot {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  font-size: .82rem; color: var(--ink3);
+}
+.hero-amount { font-weight: 800; color: var(--c); }
+.hero-cta { margin-left: auto; font-weight: 700; color: var(--c); white-space: nowrap; }
+
 .home-axis {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(148px, 1fr)); gap: 10px;
   max-width: var(--container); margin: 0 auto 2.25rem; padding: 0 1.5rem;
@@ -210,4 +295,10 @@
   .program-hero { padding: 1.25rem 0 1.5rem; }
   .cta-primary, .cta-secondary { flex: 1 1 100%; justify-content: center; }
   .home-axis { grid-template-columns: repeat(2, 1fr); }
+  /* 좁은 화면에서는 세로로 쌓는다. 옆 칸을 유지하면 제목이 두세 글자씩 끊긴다. */
+  .home-hero { flex-direction: column; gap: .8rem; padding: 1.15rem 1.25rem; }
+  .hero-side { flex-direction: row; align-items: center; gap: 10px; min-width: 0; }
+  .hero-emoji { font-size: 1.6rem; }
+  .hero-title { font-size: 1.25rem; }
+  .hero-cta { margin-left: 0; }
 }

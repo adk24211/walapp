@@ -3,19 +3,48 @@ name: Daily Program Sync
 # 구 "Daily Post Generator" 를 대체한다.
 # 차이: 매일 4개를 강제 발행하지 않는다. 큐가 비면 아무것도 쓰지 않고 넘어간다.
 # 억지 생성이 중복의 직접 원인이었다. (REDESIGN.md §1.2)
+#
+# 하루 작업량:
+#   · 시행중  오늘 조의 테마 4개마다 1건씩 = 4건 (테마 8개를 격일로 교대)
+#   · 예정    상위 1건. 후보가 없으면 0건 — 억지로 채우지 않는다.
+#   · 상태갱신 마감일이 지난 제도 전량. 저장해 둔 해설을 재사용하므로 LLM 을 쓰지 않는다.
+# 순서는 원천 조회수(보조금24 `조회수` / 복지로 `inqNum`)로 정한다.
 
 on:
-  schedule:
-    # 매일 KST 07:00 = UTC 22:00 (전날)
-    - cron: "0 22 * * *"
+  # ⏸️ 자동 실행 중지 — 단계 0(API 활용신청) 완료 전까지.
+  #
+  # DATA_GO_KR_API_KEY 가 없으면 아래 가드 스텝이 워크플로우를 중단시킨다.
+  # 목 데이터가 배포되는 것을 막기 위한 의도된 동작이지만, 그대로 두면 매일
+  # 실패 알림이 온다. 그래서 크론 자체를 꺼 둔다.
+  #
+  # 재개 방법: Secrets 에 DATA_GO_KR_API_KEY 를 등록한 뒤 아래 두 줄의
+  # 주석을 풀면 된다. (그전에 workflow_dispatch 로 수동 실행해 확인할 것)
+  #
+  # schedule:
+  #   # 매일 KST 07:00 = UTC 22:00 (전날)
+  #   - cron: "0 22 * * *"
   workflow_dispatch:
     inputs:
       post_date:
         description: "기준 날짜 (YYYY-MM-DD, 비워두면 오늘)"
         required: false
         default: ""
+      publish_mode:
+        description: "발행 방식 (theme: 테마 조별 / top: 상위 N건 일괄 — 초기 백필용)"
+        required: false
+        type: choice
+        options: ["theme", "top"]
+        default: "theme"
+      per_theme_limit:
+        description: "테마당 발행 건수 (theme 방식)"
+        required: false
+        default: "1"
+      upcoming_limit:
+        description: "시행 예정 발행 건수 (후보 없으면 0건)"
+        required: false
+        default: "1"
       publish_limit:
-        description: "신규 발행 상한"
+        description: "발행 상한 (top 방식에서만 사용)"
         required: false
         default: "5"
       refresh_limit:
@@ -72,6 +101,9 @@ jobs:
           DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY }}
           MOCK_DATA: "0"
           POST_DATE: ${{ github.event.inputs.post_date }}
+          PUBLISH_MODE: ${{ github.event.inputs.publish_mode || 'theme' }}
+          PER_THEME_LIMIT: ${{ github.event.inputs.per_theme_limit || '1' }}
+          UPCOMING_LIMIT: ${{ github.event.inputs.upcoming_limit || '1' }}
           PUBLISH_LIMIT: ${{ github.event.inputs.publish_limit || '5' }}
           REFRESH_LIMIT: ${{ github.event.inputs.refresh_limit || '10' }}
           # 중앙부처 우선 (REDESIGN.md §11 확정). 지자체로 넓힐 때 값을 바꾼다.

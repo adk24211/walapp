@@ -30,8 +30,12 @@ from schema import ProgramRecord
 
 log = logging.getLogger(__name__)
 
+# 상위 모델 고정. 하루 발행량이 4~5건이라 무료 한도 안에서 충분히 돌아간다.
+# 작은 모델로 자동 강등하면 같은 사이트 안에서 글마다 품질이 들쭉날쭉해진다.
 PRIMARY_MODEL = "llama-3.3-70b-versatile"
-FALLBACK_MODEL = "llama-3.1-8b-instant"
+
+# 429 재시도 간격(초). 한도는 분 단위로 회복되므로 두 번째는 넉넉히 기다린다.
+RETRY_DELAYS = (25, 65)
 
 SYSTEM_PROMPT = (
     "당신은 정부 지원 제도를 일반 국민이 이해할 수 있게 풀어 쓰는 한국어 편집자입니다. "
@@ -55,6 +59,13 @@ def build_prompt(record: ProgramRecord) -> str:
     else:
         period_text = "명시되지 않음"
 
+    # 실제 원문은 선정기준만 2천 자가 넘는 경우가 있다. 프롬프트에는 앞부분만 넣는다.
+    # 사후 검증(verify.py)은 **잘리지 않은 전체 원문**을 기준으로 하므로,
+    # 여기서 잘라도 검증이 느슨해지지 않는다(허용 숫자 집합은 그대로다).
+    def cap(text: str, limit: int = 1200) -> str:
+        text = str(text or "").strip()
+        return text if len(text) <= limit else text[:limit].rstrip() + " …(이하 생략)"
+
     facts = textwrap.dedent(f"""
         === 고정 사실 (원문 그대로. 이 밖의 수치·조건은 존재하지 않습니다) ===
         제도명: {record.name}
@@ -64,16 +75,16 @@ def build_prompt(record: ProgramRecord) -> str:
         주요 대상: {", ".join(audience_labels) or "명시되지 않음"}
 
         [지원 대상]
-        {record.target_raw or "(내용 없음)"}
+        {cap(record.target_raw) or "(내용 없음)"}
 
         [지원 내용]
-        {record.benefit_raw or "(내용 없음)"}
+        {cap(record.benefit_raw) or "(내용 없음)"}
 
         [선정 기준]
-        {record.criteria_raw or "(내용 없음)"}
+        {cap(record.criteria_raw) or "(내용 없음)"}
 
         [신청 방법]
-        {record.how_to_raw or "(내용 없음)"}
+        {cap(record.how_to_raw) or "(내용 없음)"}
 
         [구비 서류]
         {chr(10).join(f"- {d}" for d in record.documents_raw) or "(내용 없음)"}
@@ -154,27 +165,39 @@ def generate(record: ProgramRecord, client) -> dict:
             response_format={"type": "json_object"},
         )
 
-    try:
-        response = _call(PRIMARY_MODEL)
-    except Exception as e:
-        text = str(e).lower()
-        if "429" in text or "rate_limit" in text:
-            log.warning("%s 한도(429) → 25초 대기 후 재시도", PRIMARY_MODEL)
-            time.sleep(25)
-            try:
-                response = _call(PRIMARY_MODEL)
-            except Exception:
-                log.warning("재시도 실패 → 폴백(%s)", FALLBACK_MODEL)
-                response = _call(FALLBACK_MODEL, 1800)
-        elif "413" in text or "too large" in text:
-            response = _call(PRIMARY_MODEL, 1600)
-        else:
-            raise
+    response = _call_with_retry(_call, record)
 
     raw = response.choices[0].message.content.strip()
     raw = re.sub(r"^```json\s*", "", raw)
     raw = re.sub(r"\s*```$", "", raw)
     return _coerce(json.loads(raw))
+
+
+def _call_with_retry(call, record: ProgramRecord):
+    """한도(429)에 걸리면 기다렸다 같은 모델로 다시 부른다.
+
+    작은 모델로 내려가는 폴백은 두지 않는다 (사용자 확정 사항).
+    하루 발행량이 4~5건이라 무료 한도에 여유가 있고, 같은 사이트 안에서 글마다
+    문장 품질이 눈에 띄게 달라지는 것이 한 건 밀리는 것보다 나쁘다.
+    끝까지 실패하면 예외를 올려 그 제도만 반려한다 — 다음 실행에서 다시 잡힌다.
+    """
+    delays = RETRY_DELAYS
+    for attempt in range(len(delays) + 1):
+        try:
+            return call(PRIMARY_MODEL)
+        except Exception as e:
+            text = str(e).lower()
+            if "413" in text or "too large" in text:
+                # 프롬프트가 너무 길다 — 재시도해도 같으므로 출력만 줄여 한 번 더.
+                log.warning("프롬프트 초과 [%s] → 출력 길이를 줄여 재시도", record.id)
+                return call(PRIMARY_MODEL, 1600)
+            rate_limited = "429" in text or "rate_limit" in text
+            if not rate_limited or attempt >= len(delays):
+                raise
+            wait = delays[attempt]
+            log.warning("%s 한도(429) → %d초 대기 후 재시도 (%d/%d)",
+                        PRIMARY_MODEL, wait, attempt + 1, len(delays))
+            time.sleep(wait)
 
 
 def _coerce(data: dict) -> dict:
