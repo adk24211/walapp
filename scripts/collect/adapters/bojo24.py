@@ -36,9 +36,17 @@ LIST_ENDPOINT = f"{BASE_URL}/serviceList"
 DETAIL_ENDPOINT = f"{BASE_URL}/serviceDetail"
 CONDITIONS_ENDPOINT = f"{BASE_URL}/supportConditions"
 
-PER_PAGE = 100
+# 한 번에 요청할 건수. **실제 호출로 1000 이 허용됨을 확인했다** (currentCount: 1000).
+# 10,963건 기준 목록 호출이 110회 → 11회가 된다.
+#
+# 더 올리지 않는 이유: 응답 하나가 1000건 약 1MB 인데, 5000건이면 5MB 를 20초
+# (TIMEOUT) 안에 받아야 한다. 호출 8회를 더 줄이자고 타임아웃 위험을 지지 않는다.
+#
+# 상한이 바뀌더라도 `_fetch_all` 이 1페이지 응답에서 서버가 실제로 준 건수를 보고
+# 페이지 크기를 낮추므로, 이 값이 커도 조용히 잘리지 않는다.
+PER_PAGE = int(os.environ.get("BOJO24_PER_PAGE", "1000"))
 TIMEOUT = 20
-MAX_PAGES = 200          # 폭주 방지 (PER_PAGE 100 기준 2만 건)
+MAX_PAGES = 200          # 폭주 방지
 
 # ─────────────────────────────────────────────────────────────
 #  확정된 응답 필드 (활용가이드 기준)
@@ -77,6 +85,15 @@ DETAIL_FIELD_MAP = {
 # 신청기한 원문 중 '상시'로 볼 표현
 ALWAYS_TOKENS = ("상시", "연중", "수시", "제한없음", "제한 없음", "자격 취득", "해당시")
 
+
+def _as_int(value) -> int | None:
+    """응답의 건수 필드를 정수로. 숫자가 아니면 None (문자열로 오는 경우가 있다)."""
+    try:
+        number = int(str(value).strip())
+    except (TypeError, ValueError):
+        return None
+    return number if number >= 0 else None
+
 # ─────────────────────────────────────────────────────────────
 #  지원조건(supportConditions) — JA* 코드
 # ─────────────────────────────────────────────────────────────
@@ -100,6 +117,8 @@ class Adapter(BaseAdapter):
         self.api_key = api_key or os.environ.get("DATA_GO_KR_API_KEY", "")
         # 증분 동기화 — 이 날짜 이후 수정된 제도만 받는다 (YYYY-MM-DD)
         self.since = since or os.environ.get("SYNC_SINCE", "")
+        # 실제 HTTP 호출 수. 로그에 찍어 두면 다음에 줄일 여지를 눈으로 볼 수 있다.
+        self.calls = 0
 
     # ── 공개 API ──
     def fetch(self, limit: int | None = None) -> list:
@@ -123,16 +142,46 @@ class Adapter(BaseAdapter):
         if not rows:
             return []
 
-        # 상세는 서비스ID 로 합친다. 실패해도 목록만으로 발행할 수 있다.
-        details = self._fetch_details(rows, limit)
-
+        # 상세는 여기서 받지 않는다. 목록에 지원대상·지원내용·선정기준·신청방법이
+        # 다 들어 있어 완결성 검사를 통과하고, 상세가 더해 주는 건 구비서류와
+        # 온라인신청URL 뿐이다. 하루에 실제로 발행하는 4~5건에만 필요한 값을
+        # 1만 건어치 받을 이유가 없다 → `enrich()` 에서 건별로 조회한다.
         records = []
         for row in rows:
-            record = self._to_record(row, details.get(str(row.get(ID_FIELD) or "").strip()))
+            record = self._to_record(row, None)
             if record:
                 records.append(record)
-        log.info("보조금24 수집 완료: %d건", len(records))
+        log.info("보조금24 수집 완료: %d건 (HTTP %d회)", len(records), self.calls)
         return records
+
+    def enrich(self, record) -> None:
+        """발행 직전에 이 제도의 상세만 1건 조회한다.
+
+        ⚠️ `content_hash` 를 다시 계산하지 않는다. 해시는 목록 응답만으로 만들며,
+        여기서 채우는 구비서류·신청URL 을 해시에 넣으면 다음 날 전부 '변경됨' 으로
+        잡힌다. (collect/adapters/base.py 의 enrich 주석 참고)
+        """
+        payload = self._request(
+            DETAIL_ENDPOINT, 1, {f"cond[{ID_FIELD}::EQ]": record.source_id}, per_page=1
+        )
+        if payload is None:
+            return
+        rows = payload.get("data") or []
+        if not rows:
+            log.info("상세 없음 [%s] — 목록 정보만으로 발행합니다.", record.id)
+            return
+        detail = rows[0]
+
+        # 구비서류: 본 서류가 비면 본인확인/공무원확인 서류로 대체 (수집 때와 같은 순서)
+        for key in ("구비서류", "본인확인필요구비서류", "공무원확인구비서류"):
+            documents = split_documents(detail.get(key, ""))
+            if documents:
+                record.documents_raw = documents
+                break
+
+        apply_url = str(detail.get("온라인신청사이트URL") or "").strip()
+        if apply_url:
+            record.apply_url = apply_url
 
     # ── 내부 ──
     def _fetch_all(
@@ -142,45 +191,68 @@ class Adapter(BaseAdapter):
         conditions: dict | None = None,
         limit: int | None = None,
     ) -> list[dict]:
-        """페이지네이션을 끝까지 돌며 data 배열을 모은다."""
+        """페이지네이션을 끝까지 돌며 data 배열을 모은다.
+
+        종료 조건을 '받은 건수가 요청 건수보다 적으면 끝' 으로 두면 안 된다.
+        서버가 perPage 를 깎아서 주는 순간(1000 요청 → 100 응답) 첫 페이지에서
+        멈춰 10,963건 중 100건만 수집하고도 성공한 것처럼 보인다.
+        그래서 **응답이 알려 주는 대상 건수를 채울 때까지** 돈다.
+        """
         collected: list[dict] = []
+        page_size = PER_PAGE
+        target: int | None = None
+        page = 0
+
         for page in range(1, MAX_PAGES + 1):
-            payload = self._request(endpoint, page, conditions)
+            payload = self._request(endpoint, page, conditions, per_page=page_size)
             if payload is None:
                 break
             rows = payload.get("data") or []
             collected.extend(rows)
 
             if page == 1:
-                log.info("%s: 전체 %s건", label, payload.get("totalCount", "?"))
+                # 조건을 걸면 matchCount 가 실제 대상 건수다. totalCount 는 데이터셋 전체라
+                # 증분 동기화(cond[수정일시::GTE])에서 둘이 크게 벌어진다.
+                target = _as_int(payload.get("matchCount")) or _as_int(payload.get("totalCount"))
+                # 서버가 준 실제 페이지 크기. 응답의 perPage 에코는 요청값을 그대로
+                # 되돌려 주는 경우가 있어 믿지 않고, 받은 행 수로 판단한다.
+                if target and len(rows) and target > len(rows) and len(rows) < page_size:
+                    log.info("%s: perPage %d 요청 → 서버가 %d건으로 제한",
+                             label, page_size, len(rows))
+                    page_size = len(rows)
+                expected = -(-target // page_size) if target and page_size else None
+                log.info("%s: 대상 %s건 · 페이지당 %d건 · 예상 호출 %s회",
+                         label, target if target is not None else "?", page_size,
+                         expected if expected is not None else "?")
+
             if limit and len(collected) >= limit:
-                return collected[:limit]
-            if len(rows) < PER_PAGE:
+                collected = collected[:limit]
                 break
+            if not rows:
+                break
+            if target is not None:
+                if len(collected) >= target:
+                    break
+            elif len(rows) < page_size:
+                break   # 대상 건수를 모를 때의 안전장치
         else:
-            log.warning("%s: 최대 페이지(%d)에 도달해 중단했습니다.", label, MAX_PAGES)
+            log.warning("%s: 최대 페이지(%d)에 도달해 중단했습니다. "
+                        "수집이 잘렸을 수 있습니다.", label, MAX_PAGES)
+
+        if target is not None and len(collected) < target:
+            log.warning("%s: 대상 %d건 중 %d건만 받았습니다.", label, target, len(collected))
+        log.info("%s: %d건 수집 (HTTP %d회)", label, len(collected), page)
         return collected
 
-    def _fetch_details(self, rows: list[dict], limit: int | None) -> dict[str, dict]:
-        """상세를 통째로 받아 서비스ID → 상세 dict 로."""
-        try:
-            detail_rows = self._fetch_all(DETAIL_ENDPOINT, "상세", None, limit)
-        except Exception as e:
-            log.warning("상세 조회 실패, 목록만으로 진행합니다: %s", e)
-            return {}
-
-        details = {}
-        for row in detail_rows:
-            key = str(row.get(ID_FIELD) or "").strip()
-            if key:
-                details[key] = row
-        log.info("상세 매칭: 목록 %d건 중 %d건", len(rows), sum(
-            1 for r in rows if str(r.get(ID_FIELD) or "").strip() in details
-        ))
-        return details
-
-    def _request(self, endpoint: str, page: int, conditions: dict | None = None) -> dict | None:
-        params = {"page": page, "perPage": PER_PAGE, "serviceKey": self.api_key}
+    def _request(
+        self,
+        endpoint: str,
+        page: int,
+        conditions: dict | None = None,
+        per_page: int | None = None,
+    ) -> dict | None:
+        self.calls += 1
+        params = {"page": page, "perPage": per_page or PER_PAGE, "serviceKey": self.api_key}
         if conditions:
             params.update(conditions)
         url = f"{endpoint}?{urllib.parse.urlencode(params)}"
