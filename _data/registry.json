@@ -1,0 +1,57 @@
+{
+  "bojo24-138300000052": {
+    "content_hash": "sha256:0f1616af9c4f1b433c07bb27861fe24e",
+    "first_published": "2026-08-13",
+    "last_checked": "2026-08-13",
+    "last_updated": "2026-08-13",
+    "name": "청소년 미혼 한부모 자립지원 (우리원더패밀리)",
+    "path": "_programs/jobs/청소년-미혼-한부모-자립지원-우리원더패밀리.md",
+    "revision": 1,
+    "slug": "청소년-미혼-한부모-자립지원-우리원더패밀리",
+    "status": "upcoming"
+  },
+  "bojo24-149200000026": {
+    "content_hash": "sha256:21c5ae8e8ab8d53269ba48ac993d8b83",
+    "first_published": "2026-08-13",
+    "last_checked": "2026-08-13",
+    "last_updated": "2026-08-13",
+    "name": "국민내일배움카드",
+    "path": "_programs/jobs/국민내일배움카드.md",
+    "revision": 1,
+    "slug": "국민내일배움카드",
+    "status": "active"
+  },
+  "bojo24-149200005007": {
+    "content_hash": "sha256:0e44be37f5a89f976a2d7d8ccce4b99c",
+    "first_published": "2026-08-13",
+    "last_checked": "2026-08-13",
+    "last_updated": "2026-08-13",
+    "name": "국민취업지원제도",
+    "path": "_programs/jobs/국민취업지원제도.md",
+    "revision": 1,
+    "slug": "국민취업지원제도",
+    "status": "active"
+  },
+  "bojo24-B55140800003": {
+    "content_hash": "sha256:af09a0f3e52ed64e2b17ff79f225b739",
+    "first_published": "2026-08-13",
+    "last_checked": "2026-08-13",
+    "last_updated": "2026-08-13",
+    "name": "내집마련 디딤돌 대출",
+    "path": "_programs/housing/내집마련-디딤돌-대출.md",
+    "revision": 1,
+    "slug": "내집마련-디딤돌-대출",
+    "status": "active"
+  },
+  "bojo24-O00045000002": {
+    "content_hash": "sha256:9032092953c389b32d310259f63de5b3",
+    "first_published": "2026-08-13",
+    "last_checked": "2026-08-13",
+    "last_updated": "2026-08-13",
+    "name": "기획공연 및 전시 관람료 할인",
+    "path": "_programs/living/기획공연-및-전시-관람료-할인.md",
+    "revision": 1,
+    "slug": "기획공연-및-전시-관람료-할인",
+    "status": "active"
+  }
+}
