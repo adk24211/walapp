@@ -91,6 +91,10 @@ class ProgramRecord:
     how_to_raw: str = ""          # 신청 방법
     documents_raw: list[str] = field(default_factory=list)  # 구비 서류
 
+    contact_raw: str = ""         # 전화문의
+    receiver_raw: str = ""        # 접수기관
+    law_raw: str = ""             # 근거 법령 (YMYL 신뢰도 요소)
+
     apply_period: ApplyPeriod = field(default_factory=ApplyPeriod)
     apply_url: str = ""
     official_url: str = ""
@@ -148,7 +152,7 @@ class ProgramRecord:
 _HASHED_FIELDS = (
     "name", "org", "category", "audiences",
     "target_raw", "benefit_raw", "criteria_raw", "how_to_raw", "documents_raw",
-    "apply_url", "official_url",
+    "contact_raw", "receiver_raw", "law_raw", "apply_url", "official_url",
 )
 
 

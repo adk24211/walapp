@@ -96,20 +96,20 @@ LIST_FIELD_ALIASES: dict[str, tuple[str, ...]] = {
     "theme":        ("intrsThemaArray",),    # 관심주제 (생활지원,일자리,서민금융)
 }
 
-# ⚠️ 상세 응답은 아직 후보다. 상세 프로브로 확정할 것:
-#   python3 scripts/inspect_api.py --rows 1 --key "키" \
-#     --probe ".../NationalWelfaredetailedV001" --extra "callTp=D&servId=WLF00000026"
-# 맞는 이름이 없으면 그 필드는 빈 값이 되고, 필수 필드가 비면 발행하지 않는다.
-# 틀린 값이 페이지에 실리는 일은 없다.
+# 상세 응답 최상위 필드 — 실제 원문으로 확정.
+#   servId servNm jurMnofNm tgtrDtlCn slctCritCn alwServCn crtrYr rprsCtadr
+#   wlfareInfoOutlCn sprtCycNm srvPvsnNm lifeArray trgterIndvdlArray intrsThemaArray
+# ⚠️ crtrYr 은 기준연도(2026)다. 서류 후보에 넣으면 '2026' 이 구비서류로 렌더된다.
 DETAIL_FIELD_ALIASES: dict[str, tuple[str, ...]] = {
-    "target_raw":   ("tgtrDtlCn", "trgterDtlCn", "지원대상"),
-    "criteria_raw": ("slctCritCn", "선정기준"),
-    "benefit_raw":  ("alwServCn", "alwServCntt", "지원내용"),
-    "how_to_raw":   ("aplyMtdCn", "aplyMtdNm", "신청방법"),
-    "documents":    ("aplyMtrCn", "구비서류"),
-    "apply_url":    ("onlinAplyUrl", "온라인신청URL"),
-    "period_raw":   ("aplyPeriod", "신청기한"),
-    "law":          ("baslawNm", "법령"),
+    "target_raw":   ("tgtrDtlCn",),
+    "criteria_raw": ("slctCritCn",),
+    "benefit_raw":  ("alwServCn",),
+    "how_to_raw":   (),                # applmetList 섹션에서만 온다
+    "documents":    (),                # basfrmList 섹션에서만 온다
+    "contact_raw":  ("rprsCtadr",),    # inqplCtadrList 섹션이 우선
+    "law_raw":      (),                # baslawList 섹션에서만 온다
+    "apply_url":    (),                # 상세에 온라인신청 URL 은 없다
+    "period_raw":   (),                # 상세에 신청기한 필드는 없다
 }
 
 
@@ -192,17 +192,12 @@ class Adapter(BaseAdapter):
         record.criteria_raw = take("criteria_raw", record.criteria_raw)
         record.how_to_raw = take("how_to_raw", record.how_to_raw)
 
+        record.contact_raw = take("contact_raw", record.contact_raw)
+        record.law_raw = take("law_raw", record.law_raw)
+
         documents = split_documents(_pick(row, ("documents",) + DETAIL_FIELD_ALIASES["documents"]))
         if documents:
             record.documents_raw = documents
-
-        apply_url = _pick(row, ("apply_url",) + DETAIL_FIELD_ALIASES["apply_url"])
-        if apply_url.startswith("http"):
-            record.apply_url = apply_url
-
-        period = _pick(row, ("period_raw",) + DETAIL_FIELD_ALIASES["period_raw"])
-        if period and not (record.apply_period.start or record.apply_period.end):
-            record.apply_period.end = normalize_date(period)
 
     # ── HTTP ──
     def _request_list(self, page: int) -> tuple[list[dict] | None, str]:
@@ -318,31 +313,29 @@ def total_count(text: str) -> str:
     return match.group(1) if match else ""
 
 
-# 상세 응답의 섹션 이름 → 우리 필드.
-# 상세조회는 명명된 필드가 아니라 **이름/내용 쌍의 섹션 목록**으로 온다.
-#   servSeCode 070 · servSeDetailNm "신청기관연락처목록" · servSeDetailLink "거주지 읍/면/동…"
-# 섹션 이름이 기관마다 조금씩 흔들리므로(‘지원대상’ / ‘대상자’) 부분 일치로 본다.
-SECTION_NAME_PATTERNS: tuple[tuple[str, tuple[str, ...]], ...] = (
-    ("target_raw",   ("지원대상", "대상자", "지원 대상")),
-    ("criteria_raw", ("선정기준", "자격", "소득기준")),
-    ("benefit_raw",  ("지원내용", "급여", "서비스내용", "지원 내용")),
-    ("how_to_raw",   ("신청방법", "신청절차", "접수방법", "처리절차")),
-    ("documents",    ("구비서류", "제출서류", "서류")),
-    ("period_raw",   ("신청기한", "신청기간", "접수기간")),
-    ("contact",      ("연락처", "문의")),
-    ("law",          ("법령", "근거")),
-)
+# 상세 응답은 하이브리드다 — 실제 원문으로 확정:
+#   최상위 명명 필드   servId servNm jurMnofNm tgtrDtlCn slctCritCn alwServCn
+#                     crtrYr rprsCtadr wlfareInfoOutlCn sprtCycNm srvPvsnNm …
+#   반복 섹션 4종      각각 (servSeCode, servSeDetailNm, servSeDetailLink)
+#
+# 섹션 태그명 → 우리 필드. 확정됐으므로 휴리스틱 대신 명시적으로 매핑한다.
+DETAIL_SECTION_LISTS: dict[str, str] = {
+    "applmetList":    "how_to_raw",   # 신청·조사·결정·지급·사후관리 단계
+    "inqplCtadrList": "contact_raw",  # 문의처 (기관명 + 연락처)
+    "basfrmList":     "documents",    # 서식·안내 자료 (이름 + 다운로드 URL)
+    "baslawList":     "law_raw",      # 근거 법령 (이름만, Link 없음)
+}
+
+# 섹션 이름 꼬리표 정리 — '신청기관연락처목록' → '신청기관'
+_SECTION_NAME_TAIL = ("연락처목록", "기관목록", "목록")
 
 
 def parse_detail(text: str) -> dict | None:
     """상세 응답을 하나의 평평한 dict 로.
 
-    두 가지 형태를 모두 받는다. 어느 쪽인지 확정 전이라 양쪽을 다 흡수한다.
-      ① 최상위에 명명된 필드가 있는 형태  (tgtrDtlCn 등)
-      ② 이름/내용 쌍의 섹션 목록          (servSeDetailNm / servSeDetailLink)
-
-    ②의 경우 섹션 이름을 우리 필드명으로 바꿔 담으므로, 호출부는 두 형태를
-    구분할 필요가 없다.
+    최상위 명명 필드를 그대로 담고, 반복 섹션은 태그별로 묶어 우리 필드에 넣는다.
+    섹션은 `servSeDetailNm`(이름)과 `servSeDetailLink`(내용)의 쌍이며, 태그마다
+    의미가 다르다 — 신청 절차는 단계 설명이고, 서식은 파일명+URL 이다.
     """
     try:
         root = ET.fromstring(text)
@@ -350,35 +343,46 @@ def parse_detail(text: str) -> dict | None:
         log.error("상세 XML 파싱 실패: %s · 응답 앞부분: %s", e, text[:200].replace("\n", " "))
         return None
 
-    # ① 최상위 스칼라
+    # ── 최상위 명명 필드 ──
     merged: dict[str, str] = {
         child.tag: (child.text or "").strip()
         for child in root if len(child) == 0 and (child.text or "").strip()
     }
 
-    # ② 섹션 목록 — 이름과 내용을 가진 반복 요소를 찾는다
-    for el in root.iter():
-        if el is root or len(el) < 2:
+    # ── 반복 섹션 ──
+    buckets: dict[str, list[str]] = {}
+    for el in root:
+        dest = DETAIL_SECTION_LISTS.get(el.tag)
+        if not dest or len(el) == 0:
             continue
-        fields = {c.tag: (c.text or "").strip() for c in el if len(c) == 0}
-        name = _section_value(fields, ("Nm", "명", "Name"))
-        body = _section_value(fields, ("Link", "Cn", "내용", "Content", "Value"))
-        if not name or not body:
-            continue
-        for dest, needles in SECTION_NAME_PATTERNS:
-            if any(needle in name for needle in needles):
-                # 같은 필드에 해당하는 섹션이 여럿이면 이어 붙인다
-                merged[dest] = f"{merged[dest]}\n{body}" if merged.get(dest) else body
-                break
+        fields = {c.tag: (c.text or "").strip() for c in el}
+        name = fields.get("servSeDetailNm", "").strip()
+        body = fields.get("servSeDetailLink", "").strip()
+        line = _section_line(dest, name, body)
+        if line:
+            buckets.setdefault(dest, []).append(line)
+
+    for dest, lines in buckets.items():
+        # 같은 값이 반복되는 경우가 있어 순서를 지키며 중복만 제거한다
+        merged[dest] = "\n".join(dict.fromkeys(lines))
 
     return merged or None
 
 
-def _section_value(fields: dict[str, str], suffixes: tuple[str, ...]) -> str:
-    """섹션 dict 에서 이름/내용에 해당할 법한 값을 고른다."""
-    for tag, value in fields.items():
-        if not value:
-            continue
-        if any(tag.endswith(suffix) or suffix in tag for suffix in suffixes):
-            return value
-    return ""
+def _section_line(dest: str, name: str, body: str) -> str:
+    """섹션 한 줄을 사람이 읽을 형태로. 원문 문구 자체는 손대지 않는다."""
+    name = name.strip()
+    for tail in _SECTION_NAME_TAIL:
+        if name.endswith(tail) and len(name) > len(tail):
+            name = name[: -len(tail)].strip()
+            break
+
+    if dest == "documents":
+        # 서식은 이름이 곧 파일명이다. URL 은 페이지에 노출하지 않는다
+        # (다운로드 링크가 만료되는 경우가 있어 공식 창구로 유도하는 편이 안전하다).
+        return name or body
+    if not name:
+        return body
+    if not body or body == name:
+        return name
+    return f"{name} — {body}"

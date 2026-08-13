@@ -59,6 +59,8 @@ LIST_FIELD_MAP = {
     "신청기한":      "apply_period_raw",
     "상세조회URL":   "official_url",
     "서비스분야":    "source_category_raw",
+    "전화문의":      "contact_raw",
+    "접수기관":      "receiver_raw",
 }
 
 # serviceDetail 응답 필드 (목록에 없는 것만 취한다)
@@ -107,8 +109,15 @@ class Adapter(BaseAdapter):
 
         conditions = {}
         if self.since:
-            conditions["cond[수정일시::GTE]"] = self.since
-            log.info("증분 동기화: %s 이후 수정분만", self.since)
+            # 수정일시는 14자리 YYYYMMDDHHMMSS 다 (예: 20260129201825).
+            # SYNC_SINCE 를 YYYY-MM-DD 로 받아 그대로 비교하면 문자열 비교가 어긋난다.
+            since = self.since.replace("-", "").replace("/", "")[:8]
+            if len(since) == 8:
+                conditions["cond[수정일시::GTE]"] = since + "000000"
+                log.info("증분 동기화: %s 이후 수정분만", self.since)
+            else:
+                log.warning("SYNC_SINCE 형식이 YYYY-MM-DD 가 아닙니다(%s) — 전체 동기화합니다.",
+                            self.since)
 
         rows = self._fetch_all(LIST_ENDPOINT, "목록", conditions, limit)
         if not rows:
@@ -235,6 +244,8 @@ class Adapter(BaseAdapter):
             sigungu=sigungu,
             # 서비스분야(예: '보건의료', '주거·자치') + 지원유형(예: '현금', '이용권')을
             # 함께 넘겨 자체 분류 정확도를 높인다.
+            contact_raw=str(mapped.get("contact_raw") or ""),
+            receiver_raw=str(mapped.get("receiver_raw") or ""),
             source_category_raw=" ".join(filter(None, [
                 str(mapped.get("source_category_raw") or ""),
                 str(row.get("지원유형") or ""),

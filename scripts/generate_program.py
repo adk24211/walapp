@@ -55,6 +55,13 @@ def build_prompt(record: ProgramRecord) -> str:
     else:
         period_text = "명시되지 않음"
 
+    # 실제 원문은 선정기준만 2천 자가 넘는 경우가 있다. 프롬프트에는 앞부분만 넣는다.
+    # 사후 검증(verify.py)은 **잘리지 않은 전체 원문**을 기준으로 하므로,
+    # 여기서 잘라도 검증이 느슨해지지 않는다(허용 숫자 집합은 그대로다).
+    def cap(text: str, limit: int = 1200) -> str:
+        text = str(text or "").strip()
+        return text if len(text) <= limit else text[:limit].rstrip() + " …(이하 생략)"
+
     facts = textwrap.dedent(f"""
         === 고정 사실 (원문 그대로. 이 밖의 수치·조건은 존재하지 않습니다) ===
         제도명: {record.name}
@@ -64,16 +71,16 @@ def build_prompt(record: ProgramRecord) -> str:
         주요 대상: {", ".join(audience_labels) or "명시되지 않음"}
 
         [지원 대상]
-        {record.target_raw or "(내용 없음)"}
+        {cap(record.target_raw) or "(내용 없음)"}
 
         [지원 내용]
-        {record.benefit_raw or "(내용 없음)"}
+        {cap(record.benefit_raw) or "(내용 없음)"}
 
         [선정 기준]
-        {record.criteria_raw or "(내용 없음)"}
+        {cap(record.criteria_raw) or "(내용 없음)"}
 
         [신청 방법]
-        {record.how_to_raw or "(내용 없음)"}
+        {cap(record.how_to_raw) or "(내용 없음)"}
 
         [구비 서류]
         {chr(10).join(f"- {d}" for d in record.documents_raw) or "(내용 없음)"}

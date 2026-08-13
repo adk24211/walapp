@@ -169,6 +169,29 @@
   .cn-spec tbody th { width: 78px; font-size: .84rem; }
 }
 
+/* ---- 사실 원본 장문 블록 ---------------------------------- */
+/* 지원대상·지원내용·선정기준은 공공데이터 원문 그대로다. 손대지 않은 값임을
+   드러내려고 좌측 액센트 바를 두고, 원문의 줄 구조를 살려 보여 준다. */
+.cn-raw {
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--c-mid);
+  border-radius: var(--radius);
+}
+.cn-raw p { margin: 0 0 .7rem; font-size: .95rem; line-height: 1.72; color: var(--ink); word-break: keep-all; }
+.cn-raw p:last-child { margin-bottom: 0; }
+.cn-raw ul { list-style: none; margin: 0 0 .7rem; padding: 0; display: grid; gap: 8px; }
+.cn-raw ul:last-child { margin-bottom: 0; }
+.cn-raw li {
+  position: relative; padding-left: 15px;
+  font-size: .94rem; line-height: 1.68; color: var(--ink2); word-break: keep-all;
+}
+.cn-raw li::before {
+  content: ""; position: absolute; left: 0; top: .62em;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--c-mid);
+}
+
 /* ---- 빈 상태 / 각주 --------------------------------------- */
 .empty-state {
   max-width: var(--container); margin: 0 auto; padding: 3rem 1.5rem;

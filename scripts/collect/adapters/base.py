@@ -53,6 +53,9 @@ class BaseAdapter:
         always: bool = False,
         apply_url: str = "",
         official_url: str = "",
+        contact_raw: str = "",
+        receiver_raw: str = "",
+        law_raw: str = "",
         region_scope: str = taxonomy.REGION_NATIONAL,
         sido: str | None = None,
         sigungu: str | None = None,
@@ -89,6 +92,9 @@ class BaseAdapter:
             ),
             apply_url=apply_url.strip(),
             official_url=official_url.strip(),
+            contact_raw=clean_text(contact_raw),
+            receiver_raw=clean_text(receiver_raw),
+            law_raw=clean_text(law_raw),
             source_category_raw=clean_text(source_category_raw),
             is_mock=is_mock,
             deferred_detail=deferred_detail,
@@ -107,14 +113,25 @@ _FOREIGN_RE = re.compile(r"[㐀-䶿一-鿿぀-ゟ゠-ヺー-ヿ]")
 
 
 def clean_text(value) -> str:
-    """HTML 태그·과잉 공백·한자/가나 제거."""
+    """HTML 태그·과잉 공백·한자/가나 제거. **줄바꿈은 보존한다.**
+
+    보조금24의 지원내용·선정기준은 '○' 와 '-' 불릿을 줄바꿈으로 구분한 장문이다.
+    줄바꿈을 공백으로 뭉개면 읽을 수 없는 한 덩어리가 되므로 구조를 남긴다.
+    """
     if value is None:
         return ""
     text = _TAG_RE.sub(" ", str(value))
     text = text.replace("&nbsp;", " ").replace("&amp;", "&")
     text = text.replace("&lt;", "<").replace("&gt;", ">").replace("&quot;", '"')
     text = _FOREIGN_RE.sub("", text)
-    text = _WS_RE.sub(" ", text)
+    # '||' 는 보조금24의 다중값 구분자다 (예: "기타 온라인신청||방문신청").
+    # 그대로 두면 페이지에 파이프 두 개가 그대로 찍힌다.
+    text = text.replace("||", "\n")
+    # 복지로 원문은 줄바꿈을 &#13;(CR) 로 넣는다. XML 파서가 \r 로 디코드하므로
+    # 여기서 정규화하지 않으면 줄 구조가 통째로 사라진다.
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    text = _WS_RE.sub(" ", text)                   # 가로 공백만 압축
+    text = re.sub(r"[ \t]*\n[ \t]*", "\n", text)   # 줄 끝 공백 정리
     text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
 
