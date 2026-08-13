@@ -2,7 +2,7 @@
   "bojo24-138300000052": {
     "content_hash": "sha256:ceefbe1de65b2a581b85927363b3edec",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-13",
+    "last_checked": "2026-08-14",
     "last_updated": "2026-08-13",
     "name": "청소년 미혼 한부모 자립지원 (우리원더패밀리)",
     "path": "_programs/jobs/청소년-미혼-한부모-자립지원-우리원더패밀리.md",
@@ -13,7 +13,7 @@
   "bojo24-140000000176": {
     "content_hash": "sha256:7c9ec909965f46b6b0050c3f796443ec",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-13",
+    "last_checked": "2026-08-14",
     "last_updated": "2026-08-13",
     "name": "산림복지서비스이용권(바우처) 지급",
     "path": "_programs/living/산림복지서비스이용권-바우처-지급.md",
@@ -24,7 +24,7 @@
   "bojo24-142000000099": {
     "content_hash": "sha256:ac30ad48ef4aef60f0f5e7b829ae2e90",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-13",
+    "last_checked": "2026-08-14",
     "last_updated": "2026-08-13",
     "name": "청년전용창업자금",
     "path": "_programs/jobs/청년전용창업자금.md",
@@ -35,7 +35,7 @@
   "bojo24-149200000026": {
     "content_hash": "sha256:f9d4dc8872a2b56bc85a0d3eb8c8cb62",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-13",
+    "last_checked": "2026-08-14",
     "last_updated": "2026-08-13",
     "name": "국민내일배움카드",
     "path": "_programs/jobs/국민내일배움카드.md",
@@ -46,7 +46,7 @@
   "bojo24-149200005007": {
     "content_hash": "sha256:174abb80854303fab92770f94ac7363c",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-13",
+    "last_checked": "2026-08-14",
     "last_updated": "2026-08-13",
     "name": "국민취업지원제도",
     "path": "_programs/jobs/국민취업지원제도.md",
@@ -57,7 +57,7 @@
   "bojo24-161300000076": {
     "content_hash": "sha256:f547a9e21850c94028be36ea538030cc",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-13",
+    "last_checked": "2026-08-14",
     "last_updated": "2026-08-13",
     "name": "버팀목전세자금대출",
     "path": "_programs/housing/버팀목전세자금대출.md",
@@ -65,10 +65,21 @@
     "slug": "버팀목전세자금대출",
     "status": "active"
   },
+  "bojo24-161300000103": {
+    "content_hash": "sha256:5028ec6deefdc20992c61b7995dcc3ac",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "국토교통부 전세보증금반환보증 보증료 지원",
+    "path": "_programs/housing/국토교통부-전세보증금반환보증-보증료-지원.md",
+    "revision": 1,
+    "slug": "국토교통부-전세보증금반환보증-보증료-지원",
+    "status": "active"
+  },
   "bojo24-B55140800003": {
     "content_hash": "sha256:e2273d4a13f59ea7504d6da940f432ee",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-13",
+    "last_checked": "2026-08-14",
     "last_updated": "2026-08-13",
     "name": "내집마련 디딤돌 대출",
     "path": "_programs/housing/내집마련-디딤돌-대출.md",
@@ -76,10 +87,21 @@
     "slug": "내집마련-디딤돌-대출",
     "status": "active"
   },
+  "bojo24-B55252100003": {
+    "content_hash": "sha256:c7ec914cb41dbbd32059909a32be2b68",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "발전소 주변지역 장학금 지원(인천)",
+    "path": "_programs/education/발전소-주변지역-장학금-지원-인천.md",
+    "revision": 1,
+    "slug": "발전소-주변지역-장학금-지원-인천",
+    "status": "upcoming"
+  },
   "bojo24-B55252100005": {
     "content_hash": "sha256:26fb9bb7a89c0233a5e320fcfa4bf4fc",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-13",
+    "last_checked": "2026-08-14",
     "last_updated": "2026-08-13",
     "name": "발전소주변지역 장학금 지원(보령발전본부)",
     "path": "_programs/education/발전소주변지역-장학금-지원-보령발전본부.md",
@@ -90,7 +112,7 @@
   "bojo24-O00045000002": {
     "content_hash": "sha256:f3251375badc35d0b20f9149b59d71e3",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-13",
+    "last_checked": "2026-08-14",
     "last_updated": "2026-08-13",
     "name": "기획공연 및 전시 관람료 할인",
     "path": "_programs/living/기획공연-및-전시-관람료-할인.md",
@@ -98,15 +120,48 @@
     "slug": "기획공연-및-전시-관람료-할인",
     "status": "active"
   },
+  "bojo24-SD0000015536": {
+    "content_hash": "sha256:ad9977274fc18a334acaafe3f3899c39",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "구직급여",
+    "path": "_programs/jobs/구직급여.md",
+    "revision": 1,
+    "slug": "구직급여",
+    "status": "active"
+  },
   "bojo24-SD0000016138": {
     "content_hash": "sha256:35a4ded8d84ad89156c38b6f035e780a",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-13",
+    "last_checked": "2026-08-14",
     "last_updated": "2026-08-13",
     "name": "지역사회서비스",
     "path": "_programs/health/지역사회서비스.md",
     "revision": 1,
     "slug": "지역사회서비스",
+    "status": "active"
+  },
+  "bojo24-SSE000000100": {
+    "content_hash": "sha256:34cacf2eac793a734fbeb37c73bcc1cc",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "노인일자리 및 사회활동 지원",
+    "path": "_programs/jobs/노인일자리-및-사회활동-지원.md",
+    "revision": 1,
+    "slug": "노인일자리-및-사회활동-지원",
+    "status": "active"
+  },
+  "bojo24-SSI000000020": {
+    "content_hash": "sha256:84a44cf43ede65a5f91e04a5c1b68804",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "한부모가족 아동양육비 지원",
+    "path": "_programs/care/한부모가족-아동양육비-지원.md",
+    "revision": 1,
+    "slug": "한부모가족-아동양육비-지원",
     "status": "active"
   }
 }
