@@ -399,5 +399,17 @@ class Adapter(BaseAdapter):
 
     def fetch(self, limit: int | None = None) -> list:
         rows = _ROWS if limit is None else _ROWS[:limit]
-        return [self.build(source_id, name, is_mock=True, **kwargs)
+        return [self.build(source_id, name, is_mock=True,
+                           view_count=_mock_views(source_id), **kwargs)
                 for source_id, name, kwargs in rows]
+
+
+def _mock_views(source_id: str) -> int:
+    """가짜 조회수. 실 API 의 `조회수`/`inqNum` 자리를 메워 인기순 정렬 경로를 밟게 한다.
+
+    source_id 에서 결정적으로 만들어 실행마다 같은 값이 나오게 한다 — 순서가
+    흔들리면 목 데이터로 회귀 검증을 할 수 없다. 실제 분포처럼 상위 몇 건이
+    크게 튀도록 제곱을 섞는다.
+    """
+    seed = sum((index + 1) * ord(char) for index, char in enumerate(source_id))
+    return (seed % 97) ** 2 * 13 + seed

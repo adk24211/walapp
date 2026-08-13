@@ -14,7 +14,13 @@ import html
 import re
 
 import taxonomy
-from schema import STATUS_ACTIVE, STATUS_CLOSED, ProgramRecord
+from schema import (
+    STATUS_ACTIVE,
+    STATUS_CLOSED,
+    STATUS_LABELS,
+    STATUS_UPCOMING,
+    ProgramRecord,
+)
 
 # 구 generate_post.py 와 동일한 정책 — 한자·일본어 가나 제거
 _FOREIGN_RE = re.compile(r"[㐀-䶿一-鿿぀-ゟ゠-ヺー-ヿ]")
@@ -107,6 +113,7 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
     parts += ['<h2 class="cn-h">한눈에 보기</h2>', open_block("cn-table cn-spec"), "<table>"]
     parts += ["  <tbody>"]
     meta_rows = [
+        ("진행 상태", _status_text(record)),
         ("신청 기간", _period_text(record)),
         ("소관 기관", record.org),
         ("지원 지역", record.region.label),
@@ -226,6 +233,23 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
     return "\n".join(parts)
 
 
+def _status_text(record: ProgramRecord) -> str:
+    """'시행중' / '예정 (2026-09-01 접수 시작)' / '종료 (2026-03-31 마감)'.
+
+    괄호 안의 날짜는 원천 신청기한 원문에서 파싱한 값이다. 원문에 날짜가 없으면
+    라벨만 남는다 — 없는 기간을 지어내지 않는다.
+    """
+    label = STATUS_LABELS.get(record.status, record.status)
+    period = record.apply_period
+    if record.status == STATUS_UPCOMING and period.start:
+        return f"{label} ({period.start} 접수 시작)"
+    if record.status == STATUS_CLOSED and period.end:
+        return f"{label} ({period.end} 마감)"
+    if record.status == STATUS_ACTIVE and period.always:
+        return f"{label} (상시 접수)"
+    return label
+
+
 def _period_text(record: ProgramRecord) -> str:
     period = record.apply_period
     if period.always:
@@ -245,9 +269,11 @@ def _timeline(record: ProgramRecord) -> list[tuple[str, str]]:
         return []
     out: list[tuple[str, str]] = []
     if period.start:
-        out.append((period.start, "신청 접수 시작"))
+        label = ("신청 접수 시작 (예정)" if record.status == STATUS_UPCOMING
+                 else "신청 접수 시작")
+        out.append((period.start, label))
     if period.end:
-        label = "신청 마감" if record.status != STATUS_CLOSED else "신청 마감 (종료됨)"
+        label = "신청 마감 (종료됨)" if record.status == STATUS_CLOSED else "신청 마감"
         out.append((period.end, label))
     return out
 
@@ -270,6 +296,11 @@ def to_markdown(record: ProgramRecord, prose: dict) -> str:
         front += [f"  - {a}" for a in record.audiences]
     else:
         front.append("audiences: []")
+    if record.primary_audience:
+        front.append(f"primary_audience: {record.primary_audience}")
+    # 조회수는 원천 인기도다. 홈 히어로·정렬에 쓰므로 front matter 로 내보낸다.
+    if record.view_count:
+        front.append(f"view_count: {record.view_count}")
 
     front += [
         f"region_scope: {record.region.scope}",
@@ -284,8 +315,16 @@ def to_markdown(record: ProgramRecord, prose: dict) -> str:
         f'org: "{_yaml(record.org)}"',
         f'summary: "{_yaml(prose.get("summary") or record.benefit_raw)[:160]}"',
         f"status: {record.status}",
+        f'status_label: "{STATUS_LABELS.get(record.status, record.status)}"',
         f"apply_always: {'true' if record.apply_period.always else 'false'}",
     ]
+
+    # 종료된 제도는 색인에서 뺀다. 마감된 금액·요건이 검색 결과에 남으면
+    # 지금 신청 가능한 제도로 오인된다 (YMYL). 페이지 자체는 그대로 둔다 —
+    # 이미 유입된 사람에게는 '끝난 제도' 라는 정보가 필요하다. (사용자 확정 사항)
+    if record.status == STATUS_CLOSED:
+        front.append("noindex: true")
+        front.append("sitemap: false")   # jekyll-sitemap 이 읽는 키
     if record.apply_period.start:
         front.append(f'apply_start: "{record.apply_period.start}"')
     if record.apply_period.end:

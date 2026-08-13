@@ -24,9 +24,18 @@ import taxonomy
 # ─────────────────────────────────────────────────────────────
 #  상태
 # ─────────────────────────────────────────────────────────────
-STATUS_ACTIVE = "active"          # 신청 가능 / 상시
-STATUS_CLOSED = "closed"          # 접수 마감 (페이지는 유지, 배너 표기)
+STATUS_ACTIVE = "active"          # 시행중 — 신청 가능 / 상시
+STATUS_UPCOMING = "upcoming"      # 예정 — 접수 시작일이 아직 오지 않음
+STATUS_CLOSED = "closed"          # 종료 — 접수 마감 (페이지는 유지, noindex)
 STATUS_SUPERSEDED = "superseded"  # 다른 제도로 대체됨
+
+# 화면 표기. 파이썬과 Liquid 양쪽이 같은 문구를 쓰도록 여기서만 정의한다.
+STATUS_LABELS = {
+    STATUS_ACTIVE: "시행중",
+    STATUS_UPCOMING: "예정",
+    STATUS_CLOSED: "종료",
+    STATUS_SUPERSEDED: "대체됨",
+}
 
 # 필수 필드가 비면 발행하지 않고 격리한다 (REDESIGN.md §9 지자체 데이터 품질 편차)
 REQUIRED_RAW_FIELDS = ("target_raw", "benefit_raw")
@@ -45,6 +54,27 @@ class ApplyPeriod:
             return date.fromisoformat(self.end) < today
         except ValueError:
             return False
+
+    def is_upcoming(self, today: date) -> bool:
+        """접수 시작일이 아직 오지 않았는가.
+
+        ⚠️ 이건 '내년 신설 예정 정책' 이 아니다. 두 원천 API(보조금24·중앙부처
+        복지서비스)는 **현재 운영 중인 서비스 목록**만 준다. 여기서 잡히는 '예정'은
+        "이미 등록된 사업인데 올해 접수가 아직 시작되지 않음" 이다.
+        원천에 없는 신설 정책을 예정으로 만들어 내지 않는다. (사용자 확정 사항)
+        """
+        if self.always or not self.start:
+            return False
+        try:
+            return date.fromisoformat(self.start) > today
+        except ValueError:
+            return False
+
+    def days_until_open(self, today: date) -> int | None:
+        """접수 시작까지 남은 일수. 이미 시작했거나 미상이면 None."""
+        if not self.is_upcoming(today):
+            return None
+        return (date.fromisoformat(self.start) - today).days
 
     def days_left(self, today: date) -> int | None:
         """마감까지 남은 일수. 상시/미상이면 None."""
@@ -82,6 +112,10 @@ class ProgramRecord:
     org: str = ""                 # 소관 기관
     category: str = taxonomy.DEFAULT_CATEGORY
     audiences: list[str] = field(default_factory=list)
+    # 대표 테마 — 이 제도를 '어느 테마의 오늘 1건' 으로 셀지. 한 제도가 청년·구직자
+    # 양쪽에 걸쳐도 발행은 한 번뿐이므로 대표를 하나 정해 둔다. 나머지 테마 허브에는
+    # `audiences` 로 계속 노출된다. (taxonomy.pick_primary_audience)
+    primary_audience: str = ""
     region: Region = field(default_factory=Region)
 
     # ── 사실 원본 (LLM 접근 금지) ──
@@ -100,6 +134,12 @@ class ProgramRecord:
     official_url: str = ""
 
     source_category_raw: str = ""  # 원천 분류 원문 (재매핑 검증용 보관)
+
+    # ── 인기도 (발행 우선순위 전용) ──
+    # 보조금24 `조회수`, 중앙부처복지서비스 `inqNum`. 두 값은 스케일이 달라
+    # 직접 비교하지 않고 queueing 에서 소스별 백분위로 정규화한다.
+    view_count: int = 0
+    source_registered: str = ""    # 원천 최초 등록일 (복지로 svcfrstRegTs)
 
     # ── 이력 ──
     content_hash: str = ""
@@ -149,6 +189,11 @@ class ProgramRecord:
 # ─────────────────────────────────────────────────────────────
 # 해시 대상: '내용'에 해당하는 필드만. last_checked 같은 운영 메타는 제외해야
 # 매일 동기화할 때마다 전부 '변경됨'으로 잡히는 사고를 막는다.
+#
+# ⚠️ `view_count` 를 여기 넣지 말 것. 조회수는 원천에서 **매일 바뀐다.**
+#    해시에 들어가면 매 실행마다 1만 건 전체가 '변경됨' 으로 잡혀 갱신 큐가 터진다.
+#    같은 이유로 `source_registered`, `primary_audience`(audiences 에서 파생),
+#    `status`(날짜에서 파생) 도 제외한다.
 _HASHED_FIELDS = (
     "name", "org", "category", "audiences",
     "target_raw", "benefit_raw", "criteria_raw", "how_to_raw", "documents_raw",
@@ -200,3 +245,26 @@ def make_slug(name: str, source_id: str = "") -> str:
 
 def make_id(source: str, source_id: str) -> str:
     return f"{source}-{source_id}"
+
+
+# ─────────────────────────────────────────────────────────────
+#  상태 판정
+# ─────────────────────────────────────────────────────────────
+def resolve_status(record: "ProgramRecord", today: date) -> str:
+    """신청 기간과 오늘 날짜로 상태를 정한다.
+
+    매 실행마다 **다시 계산한다.** 저장된 값을 이어받지 않는 것이 중요하다.
+    매년 반복되는 사업은 작년 회차가 끝나 종료로 잡혔다가, 원천이 올해 기간으로
+    갱신되면 그날 자동으로 시행중/예정으로 돌아와야 한다. 상태를 원장에서 물려받으면
+    한 번 종료된 제도가 영원히 종료로 남는다.
+
+    `superseded` 만 예외다. 이건 날짜가 아니라 사람이 판단해 붙이는 값이므로 보존한다.
+    """
+    if record.status == STATUS_SUPERSEDED:
+        return STATUS_SUPERSEDED
+    period = record.apply_period
+    if period.is_upcoming(today):
+        return STATUS_UPCOMING
+    if period.is_closed(today):
+        return STATUS_CLOSED
+    return STATUS_ACTIVE

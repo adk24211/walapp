@@ -24,8 +24,12 @@ layout: default
     {% assign items = all_programs | where: "region_sido", key %}
   {% endif %}
 {% elsif axis == 'deadline' %}
+  {% comment %}
+    마감 임박은 '지금 신청할 수 있는데 곧 끝나는 것' 이다. 아직 접수가 시작되지
+    않은 예정 제도는 마감일이 있어도 여기 들어오면 안 된다.
+  {% endcomment %}
   {% assign dated = all_programs | where_exp: "p", "p.apply_always != true" %}
-  {% assign open_dated = dated | where_exp: "p", "p.status != 'closed'" %}
+  {% assign open_dated = dated | where: "status", "active" %}
   {% assign items = open_dated | where_exp: "p", "p.apply_end" | sort: "apply_end" %}
 {% elsif axis == 'new' %}
   {% assign items = all_programs | sort: "first_published" | reverse %}
@@ -89,12 +93,13 @@ layout: default
 {% else %}
 
 {% comment %}
-  분야·대상·지역 허브는 '신청 가능'과 '접수 종료'를 나눠 보여 준다.
-  종료된 제도를 지우지 않는 대신 아래로 내려, 홈 카드에 찍힌 '신청 가능 N건'과
+  분야·대상·지역 허브는 상태별로 세 묶음으로 나눈다: 시행중 → 예정 → 종료.
+  종료된 제도를 지우지 않는 대신 아래로 내려, 홈 카드에 찍힌 '시행중 N건'과
   첫 묶음의 건수가 일치하게 한다. 마감임박·신규 허브는 이미 정렬이 의미를 가지므로 나누지 않는다.
 {% endcomment %}
 {% if axis == 'category' or axis == 'audience' or axis == 'region' %}
-{% assign open_items = items | where_exp: "p", "p.status != 'closed'" %}
+{% assign open_items = items | where: "status", "active" %}
+{% assign upcoming_items = items | where: "status", "upcoming" %}
 {% assign closed_items = items | where: "status", "closed" %}
 {% comment %} 분야 허브 안에서는 모든 카드가 같은 분야라 분야 칩이 군더더기다. {% endcomment %}
 {% assign show_cat = true %}
@@ -104,12 +109,25 @@ layout: default
   {% if open_items.size > 0 %}
   <div class="section-group">
     <div class="section-label">
-      <span class="sec-tag {% if axis == 'category' %}{{ key }}{% endif %}">신청 가능</span>
+      <span class="sec-tag {% if axis == 'category' %}{{ key }}{% endif %}">시행중</span>
       <div class="sec-rule"></div>
       <span class="sec-count">{{ open_items | size }}건</span>
     </div>
     <div class="cards">
       {% for p in open_items %}{% include program-card.html program=p show_category=show_cat %}{% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if upcoming_items.size > 0 %}
+  <div class="section-group">
+    <div class="section-label">
+      <span class="sec-tag">시행 예정</span>
+      <div class="sec-rule"></div>
+      <span class="sec-count">{{ upcoming_items | size }}건</span>
+    </div>
+    <div class="cards">
+      {% for p in upcoming_items %}{% include program-card.html program=p show_category=show_cat %}{% endfor %}
     </div>
   </div>
   {% endif %}

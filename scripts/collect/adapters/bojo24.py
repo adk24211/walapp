@@ -246,6 +246,10 @@ class Adapter(BaseAdapter):
             # 함께 넘겨 자체 분류 정확도를 높인다.
             contact_raw=str(mapped.get("contact_raw") or ""),
             receiver_raw=str(mapped.get("receiver_raw") or ""),
+            # 정부24가 집계한 실제 조회수. '사람들이 가장 많이 찾는 순서' 의 근거다.
+            # 원천이 주는 값이므로 검색 트렌드 API 를 따로 붙일 필요가 없다.
+            view_count=row.get("조회수"),
+            source_registered=str(row.get("등록일시") or ""),
             source_category_raw=" ".join(filter(None, [
                 str(mapped.get("source_category_raw") or ""),
                 str(row.get("지원유형") or ""),

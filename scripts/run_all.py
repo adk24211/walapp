@@ -1,13 +1,14 @@
 """지원금 도감 파이프라인 진입점.
 
     ① 동기화   원천 API 목록 → 원장 대조 → 신규/변경/동일/격리 분류
-    ② 큐 산출   신규 후보에 우선순위 점수 부여
-    ③ 발행      큐 상위 N건을 해설 생성 → 검증 → 페이지 작성
-    ④ 갱신      내용이 바뀐 제도 상위 M건을 다시 렌더
+    ② 큐 산출   신규 후보에 우선순위 점수 부여 (원천 조회수 기준)
+    ③ 발행      오늘 조의 테마마다 1건 + 시행 예정 1건
+    ④ 갱신      내용이 바뀐 제도 상위 M건 · 상태만 바뀐 제도 전량
     ⑤ 인덱스    분류 데이터를 Jekyll 로 내보냄
 
 구 파이프라인(매일 4개 강제 발행)과의 차이:
   · 소재를 RSS 최신순이 아니라 큐에서 꺼낸다
+  · 순서를 정하는 건 추정이 아니라 원천이 주는 실제 조회수다
   · 큐가 비면 아무것도 발행하지 않는다 — 억지 생성이 중복의 직접 원인이었다
   · 같은 제도의 재등장은 새 글이 아니라 갱신으로 흡수된다
 
@@ -16,7 +17,10 @@
     DATA_GO_KR_API_KEY   공공데이터포털 키. 없으면 목 데이터로 동작한다.
     MOCK_DATA            "1" 강제 목 모드 / "0" 강제 실 API 모드
     POST_DATE            기준 날짜 override (YYYY-MM-DD)
-    PUBLISH_LIMIT        하루 신규 발행 상한 (기본 5)
+    PUBLISH_MODE         "theme" 테마 조 방식 (기본) / "top" 상위 N건 일괄
+    PER_THEME_LIMIT      theme 방식에서 테마당 발행 건수 (기본 1)
+    UPCOMING_LIMIT       시행 예정 발행 건수 (기본 1, 후보 없으면 0건)
+    PUBLISH_LIMIT        top 방식 발행 상한 (기본 5) — 초기 백필용
     REFRESH_LIMIT        하루 갱신 상한 (기본 10)
     REGION_SCOPE         발행 범위 (기본 "national" — 중앙부처 우선)
                          지자체까지 넓히려면 "national,sido,sigungu"
@@ -42,6 +46,12 @@ logging.basicConfig(
 )
 log = logging.getLogger("run_all")
 
+# 테마 조 방식: 그날 조의 테마마다 1건 + 시행 예정 1건 = 하루 최대 5건.
+# (테마 8개를 4개씩 격일로 돌리므로 시행중 발행은 하루 4건이다.)
+DEFAULT_PUBLISH_MODE = "theme"
+DEFAULT_PER_THEME_LIMIT = 1
+DEFAULT_UPCOMING_LIMIT = 1
+# PUBLISH_MODE=top 일 때만 쓰는 상한. 초기 백필용 탈출구다.
 DEFAULT_PUBLISH_LIMIT = 5
 DEFAULT_REFRESH_LIMIT = 10
 
@@ -93,6 +103,7 @@ def main() -> int:
     import queueing
     import registry
     import sync
+    import taxonomy
     from collect import adapters
 
     date_override = os.environ.get("POST_DATE")
@@ -102,7 +113,10 @@ def main() -> int:
         else datetime.now(ZoneInfo("Asia/Seoul")).date()
     )
     dry_run = os.environ.get("DRY_RUN") == "1"
+    publish_mode = os.environ.get("PUBLISH_MODE", DEFAULT_PUBLISH_MODE).strip().lower()
     publish_limit = int(os.environ.get("PUBLISH_LIMIT", DEFAULT_PUBLISH_LIMIT))
+    per_theme = int(os.environ.get("PER_THEME_LIMIT", DEFAULT_PER_THEME_LIMIT))
+    upcoming_limit = int(os.environ.get("UPCOMING_LIMIT", DEFAULT_UPCOMING_LIMIT))
     refresh_limit = int(os.environ.get("REFRESH_LIMIT", DEFAULT_REFRESH_LIMIT))
     scopes = tuple(
         s.strip() for s in
@@ -112,8 +126,12 @@ def main() -> int:
     mock = adapters.use_mock()
 
     log.info("━━━ 지원금 도감 파이프라인 ━━━")
-    log.info("날짜 %s · 데이터 %s · DRY_RUN %s · 발행상한 %d · 갱신상한 %d",
-             today, "목(mock)" if mock else "실 API", dry_run, publish_limit, refresh_limit)
+    log.info("날짜 %s · 데이터 %s · DRY_RUN %s · 갱신상한 %d",
+             today, "목(mock)" if mock else "실 API", dry_run, refresh_limit)
+    if publish_mode == "top":
+        log.info("발행 방식: top · 상한 %d건", publish_limit)
+    else:
+        log.info("발행 방식: theme · 테마당 %d건 + 예정 %d건", per_theme, upcoming_limit)
     log.info("발행 범위: %s", " + ".join(scopes))
     if mock:
         log.warning("목 데이터 모드입니다. 생성된 페이지는 noindex 처리되며 커밋되지 않습니다.")
@@ -139,10 +157,31 @@ def main() -> int:
         registry.save_queue(queue_payload)
 
     by_id = {r.id: r for r in result.new}
-    to_publish = queueing.take(queue_payload, by_id, publish_limit)
+
+    # ── 발행 대상 선정 ──
+    # 기본은 '테마 조' 방식이다. 테마 8개를 4개씩 두 조로 나눠 하루씩 번갈아,
+    # 그날 조의 테마마다 1건씩(총 4건) + 시행 예정 1건.
+    # 조 선택은 날짜에서 바로 계산하므로 상태 파일이 필요 없다.
+    if publish_mode == "top":
+        to_publish = queueing.take(queue_payload, by_id, publish_limit)
+        log.info("발행 방식: 상위 %d건 일괄 (테마 배분 없음)", publish_limit)
+    else:
+        themes = taxonomy.audience_group(today.toordinal())
+        labels = " · ".join(taxonomy.AUDIENCES[t]["label"] for t in themes)
+        log.info("오늘의 테마 조 (%d/%d): %s",
+                 today.toordinal() % len(taxonomy.AUDIENCE_GROUPS) + 1,
+                 len(taxonomy.AUDIENCE_GROUPS), labels)
+        to_publish = queueing.take_by_theme(queue_payload, by_id, themes, per_theme)
+        upcoming = queueing.take_upcoming(queue_payload, by_id, upcoming_limit)
+        if upcoming:
+            log.info("시행 예정 %d건 추가 발행", len(upcoming))
+        else:
+            log.info("시행 예정 후보 없음 — 오늘은 예정 발행을 건너뜁니다.")
+        to_publish += upcoming
+
     to_refresh = result.changed[:refresh_limit]
 
-    if not to_publish and not to_refresh:
+    if not to_publish and not to_refresh and not result.restatused:
         log.info("발행할 것도 갱신할 것도 없습니다. 오늘은 아무것도 쓰지 않습니다.")
         _export_taxonomy()
         if not dry_run:
@@ -151,14 +190,21 @@ def main() -> int:
 
     remaining = len(result.new) - len(to_publish)
     if remaining > 0:
-        log.info("큐에 %d건이 남았습니다 (상한 %d건 적용).", remaining, publish_limit)
+        log.info("큐에 %d건이 남았습니다 (오늘 %d건 발행).", remaining, len(to_publish))
     if len(result.changed) > refresh_limit:
         log.info("갱신 대기 %d건이 남았습니다 (상한 %d건 적용).",
                  len(result.changed) - refresh_limit, refresh_limit)
 
     # ── ③④ 발행·갱신 ──
+    # 상태 변경분은 상한을 두지 않는다. 마감된 제도가 '시행중' 으로 남아 있는 것은
+    # 그 자체로 잘못된 정보이므로 밀리면 안 된다. LLM 을 쓰지 않아 비용도 들지 않는다.
+    if result.restatused:
+        log.info("상태 변경 %d건 — 저장된 해설로 다시 찍습니다 (LLM 미사용).",
+                 len(result.restatused))
+
     client = _groq_client()
-    write_result = publish.run(to_publish, to_refresh, reg, today, client, dry_run)
+    write_result = publish.run(to_publish, to_refresh, reg, today, client, dry_run,
+                               restatused_records=result.restatused)
 
     # ── ⑤ 인덱스 ──
     _export_taxonomy()

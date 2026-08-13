@@ -4,14 +4,21 @@ layout: default
 {% assign cat = page.category %}
 {% assign cat_meta = site.data.taxonomy.categories[cat] %}
 {% assign is_closed = false %}
+{% assign is_upcoming = false %}
 {% if page.status == 'closed' %}{% assign is_closed = true %}{% endif %}
+{% if page.status == 'upcoming' %}{% assign is_upcoming = true %}{% endif %}
 
 {% comment %}
-  목 데이터로 만든 페이지는 검색엔진에 절대 노출되면 안 된다.
-  지원금 정보는 YMYL 영역이라 가짜 수치가 색인되면 실제 피해로 이어진다.
+  색인 제외가 필요한 두 경우:
+   · 목 데이터 — 가짜 수치가 색인되면 실제 피해로 이어진다 (YMYL).
+   · 종료된 제도 — 마감된 금액·요건이 검색 결과에 남으면 지금 받을 수 있는 것으로
+     오인된다. 페이지는 남기되(이미 유입된 사람에게 필요한 정보다) 색인만 뺀다.
+     follow 는 남겨 둔다 — 이 페이지의 내부 링크는 계속 타고 가도 된다.
 {% endcomment %}
 {% if page.is_mock %}
 <meta name="robots" content="noindex, nofollow">
+{% elsif page.noindex or is_closed %}
+<meta name="robots" content="noindex, follow">
 {% endif %}
 
 <script type="application/ld+json">
@@ -72,16 +79,31 @@ layout: default
       <i class="ti ti-clock-off" aria-hidden="true"></i>
       <div>
         <strong>접수가 종료된 제도입니다.</strong>
+        {% if page.apply_end %}{{ page.apply_end }}에 마감되었습니다.{% endif %}
         아래 내용은 마지막 접수 회차 기준이며, 다음 회차가 열리면 갱신됩니다.
+      </div>
+    </div>
+    {% elsif is_upcoming %}
+    <div class="status-banner upcoming" role="status">
+      <i class="ti ti-calendar-clock" aria-hidden="true"></i>
+      <div>
+        <strong>아직 접수가 시작되지 않은 제도입니다.</strong>
+        {% if page.apply_start %}{{ page.apply_start }}부터 신청할 수 있습니다.{% endif %}
+        시작일은 소관 기관 사정으로 바뀔 수 있으니 공식 창구에서 다시 확인해 주세요.
       </div>
     </div>
     {% endif %}
 
     <div class="program-badges">
       <span class="badge-cat {{ cat }}">{{ cat_meta.emoji }} {{ cat_meta.label | default: cat }}</span>
+      <span class="badge-status is-{{ page.status | default: 'active' }}">
+        {{ page.status_label | default: '시행중' }}
+      </span>
       <span class="badge-region">{{ page.region_label | default: '전국' }}</span>
       {% if page.apply_always %}
       <span class="badge-period always">상시 접수</span>
+      {% elsif is_upcoming and page.apply_start %}
+      <span class="badge-period upcoming">{{ page.apply_start }} 시작</span>
       {% elsif page.apply_end and is_closed == false %}
       <span class="badge-period">~ {{ page.apply_end }}</span>
       {% endif %}

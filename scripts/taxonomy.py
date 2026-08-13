@@ -127,6 +127,52 @@ AUDIENCES: dict[str, dict] = {
 
 AUDIENCE_KEYS = tuple(AUDIENCES.keys())
 
+# ── 격일 발행 그룹 ──────────────────────────────────────────
+# 테마 8개를 4개씩 두 조로 나눠 하루씩 번갈아 발행한다(조당 테마 1건 = 하루 4건).
+# 8개를 매일 채우는 것보다 건당 품질에 쓸 예산이 두 배가 된다. (사용자 확정 사항)
+#
+# 조 편성 기준은 '검색 수요를 두 조에 고르게 나누는 것'이다. 청년·양육가정처럼
+# 수요가 큰 테마를 한쪽에 몰면 그 조가 도는 날만 트래픽이 뛴다.
+AUDIENCE_GROUPS: tuple[tuple[str, ...], ...] = (
+    ("youth", "parent", "jobseeker", "senior"),
+    ("lowincome", "newlywed", "disabled", "business"),
+)
+
+
+def audience_group(day_index: int) -> tuple[str, ...]:
+    """그날 발행할 테마 조. `day_index` 는 date.toordinal() 을 넣는다.
+
+    날짜에서 바로 계산하므로 상태 파일이 필요 없다. 워크플로우가 하루 걸러
+    실패해도 다음 실행이 자기 차례를 스스로 안다.
+    """
+    return AUDIENCE_GROUPS[day_index % len(AUDIENCE_GROUPS)]
+
+
+def pick_primary_audience(
+    audiences: list[str], blob: str = "", from_source: bool = False
+) -> str:
+    """대표 테마 하나를 고른다.
+
+    한 제도가 청년·구직자 양쪽에 걸치는 일이 흔한데, 발행은 한 번뿐이므로
+    '어느 테마의 오늘 1건으로 셀지' 를 정해야 한다. 나머지 테마 허브에는
+    `audiences` 로 계속 노출되므로 사라지지 않는다.
+
+    원천이 직접 분류한 값이면 **표기 순서 첫 번째**를 쓴다 (사용자 확정 사항).
+    복지로의 lifeArray·trgterIndvdlArray 는 앞쪽이 대표 대상이다.
+    키워드 추정이면 본문에 실제로 몇 번 걸렸는지로 고른다 — AUDIENCES 딕셔너리
+    선언 순서를 그대로 쓰면 '청년' 이 항상 이겨 대표가 한쪽으로 쏠린다.
+    """
+    if not audiences:
+        return ""
+    if from_source:
+        return audiences[0]
+
+    def hits(key: str) -> int:
+        return sum(1 for kw in AUDIENCES.get(key, {}).get("keywords", []) if kw in blob)
+
+    # 동점이면 선언 순서가 앞선 쪽 — 결과가 실행마다 흔들리지 않게 결정적으로 만든다.
+    return max(audiences, key=lambda a: (hits(a), -AUDIENCE_KEYS.index(a)))
+
 
 # ─────────────────────────────────────────────────────────────
 #  지역 (17개 시도 + 전국)

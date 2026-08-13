@@ -154,8 +154,28 @@ class Registry:
 # ─────────────────────────────────────────────────────────────
 #  레코드 저장소 (_data/programs/{id}.json)
 # ─────────────────────────────────────────────────────────────
-def save_record(record: ProgramRecord) -> None:
-    _write_json(RECORDS_DIR / f"{record.id}.json", record.to_dict())
+def save_record(record: ProgramRecord, prose: dict | None = None) -> None:
+    """레코드 + 그때 생성된 해설을 함께 보관한다.
+
+    해설을 같이 저장하는 이유: 상태만 바뀌는 재렌더(시행중 → 종료)에 LLM 호출을
+    다시 쓰지 않기 위해서다. 마감일이 지난 것뿐인데 문장을 새로 뽑으면
+    같은 제도의 설명이 날마다 조금씩 달라지고, 무료 한도도 그만큼 태운다.
+    (템플릿을 고쳤을 때 전체 페이지를 다시 찍는 데도 쓸 수 있다.)
+
+    `_prose` 로 밑줄을 붙여 둔다. `ProgramRecord.from_dict` 는 모르는 키를
+    버리므로 레코드 역직렬화에는 영향이 없다.
+    """
+    payload = record.to_dict()
+    if prose is not None:
+        payload["_prose"] = prose
+    _write_json(RECORDS_DIR / f"{record.id}.json", payload)
+
+
+def load_prose(program_id: str) -> dict | None:
+    """저장해 둔 해설. 없으면 None (이 경우 재생성이 필요하다)."""
+    data = _read_json(RECORDS_DIR / f"{program_id}.json", None)
+    prose = (data or {}).get("_prose")
+    return prose if isinstance(prose, dict) and prose else None
 
 
 def load_record(program_id: str) -> ProgramRecord | None:

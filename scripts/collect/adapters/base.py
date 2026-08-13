@@ -62,6 +62,8 @@ class BaseAdapter:
         category: str | None = None,
         audiences: list[str] | None = None,
         source_category_raw: str = "",
+        view_count: int = 0,
+        source_registered: str = "",
         is_mock: bool = False,
         deferred_detail: bool = False,
     ) -> ProgramRecord:
@@ -69,6 +71,11 @@ class BaseAdapter:
         name = clean_text(name)
         blob = " ".join([name, target_raw, benefit_raw, criteria_raw,
                          source_category_raw, org])
+
+        # 대상 목록이 인자로 넘어왔으면 원천이 직접 분류한 값이다(복지로의
+        # lifeArray·trgterIndvdlArray). 키워드 추정보다 신뢰도가 높으므로
+        # 대표 테마를 고를 때 표기 순서를 그대로 존중한다.
+        audiences_from_source = audiences is not None and len(audiences) > 0
 
         record = ProgramRecord(
             id=schema.make_id(self.source, source_id),
@@ -96,9 +103,16 @@ class BaseAdapter:
             receiver_raw=clean_text(receiver_raw),
             law_raw=clean_text(law_raw),
             source_category_raw=clean_text(source_category_raw),
+            view_count=_to_int(view_count),
+            source_registered=normalize_date(source_registered),
             is_mock=is_mock,
             deferred_detail=deferred_detail,
         )
+        record.primary_audience = taxonomy.pick_primary_audience(
+            record.audiences, blob, from_source=audiences_from_source
+        )
+        # ⚠️ 해시는 여기서 딱 한 번 계산한다. view_count 는 해시 대상이 아니므로
+        #    조회수가 매일 올라가도 '변경됨' 으로 잡히지 않는다. (schema._HASHED_FIELDS)
         record.content_hash = schema.compute_hash(record)
         return record
 
@@ -140,6 +154,16 @@ _DATE_PATTERNS = (
     re.compile(r"(\d{4})[-./년\s]+(\d{1,2})[-./월\s]+(\d{1,2})"),
     re.compile(r"(\d{4})(\d{2})(\d{2})"),
 )
+
+
+def _to_int(value) -> int:
+    """조회수 원문 → 정수. '1,234' 같은 표기와 빈 값을 모두 받는다."""
+    if value is None or value == "":
+        return 0
+    if isinstance(value, int):
+        return max(value, 0)
+    digits = re.sub(r"[^\d]", "", str(value))
+    return int(digits) if digits else 0
 
 
 def normalize_date(value) -> str:

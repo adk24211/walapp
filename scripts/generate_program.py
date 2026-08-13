@@ -30,8 +30,12 @@ from schema import ProgramRecord
 
 log = logging.getLogger(__name__)
 
+# 상위 모델 고정. 하루 발행량이 4~5건이라 무료 한도 안에서 충분히 돌아간다.
+# 작은 모델로 자동 강등하면 같은 사이트 안에서 글마다 품질이 들쭉날쭉해진다.
 PRIMARY_MODEL = "llama-3.3-70b-versatile"
-FALLBACK_MODEL = "llama-3.1-8b-instant"
+
+# 429 재시도 간격(초). 한도는 분 단위로 회복되므로 두 번째는 넉넉히 기다린다.
+RETRY_DELAYS = (25, 65)
 
 SYSTEM_PROMPT = (
     "당신은 정부 지원 제도를 일반 국민이 이해할 수 있게 풀어 쓰는 한국어 편집자입니다. "
@@ -161,27 +165,39 @@ def generate(record: ProgramRecord, client) -> dict:
             response_format={"type": "json_object"},
         )
 
-    try:
-        response = _call(PRIMARY_MODEL)
-    except Exception as e:
-        text = str(e).lower()
-        if "429" in text or "rate_limit" in text:
-            log.warning("%s 한도(429) → 25초 대기 후 재시도", PRIMARY_MODEL)
-            time.sleep(25)
-            try:
-                response = _call(PRIMARY_MODEL)
-            except Exception:
-                log.warning("재시도 실패 → 폴백(%s)", FALLBACK_MODEL)
-                response = _call(FALLBACK_MODEL, 1800)
-        elif "413" in text or "too large" in text:
-            response = _call(PRIMARY_MODEL, 1600)
-        else:
-            raise
+    response = _call_with_retry(_call, record)
 
     raw = response.choices[0].message.content.strip()
     raw = re.sub(r"^```json\s*", "", raw)
     raw = re.sub(r"\s*```$", "", raw)
     return _coerce(json.loads(raw))
+
+
+def _call_with_retry(call, record: ProgramRecord):
+    """한도(429)에 걸리면 기다렸다 같은 모델로 다시 부른다.
+
+    작은 모델로 내려가는 폴백은 두지 않는다 (사용자 확정 사항).
+    하루 발행량이 4~5건이라 무료 한도에 여유가 있고, 같은 사이트 안에서 글마다
+    문장 품질이 눈에 띄게 달라지는 것이 한 건 밀리는 것보다 나쁘다.
+    끝까지 실패하면 예외를 올려 그 제도만 반려한다 — 다음 실행에서 다시 잡힌다.
+    """
+    delays = RETRY_DELAYS
+    for attempt in range(len(delays) + 1):
+        try:
+            return call(PRIMARY_MODEL)
+        except Exception as e:
+            text = str(e).lower()
+            if "413" in text or "too large" in text:
+                # 프롬프트가 너무 길다 — 재시도해도 같으므로 출력만 줄여 한 번 더.
+                log.warning("프롬프트 초과 [%s] → 출력 길이를 줄여 재시도", record.id)
+                return call(PRIMARY_MODEL, 1600)
+            rate_limited = "429" in text or "rate_limit" in text
+            if not rate_limited or attempt >= len(delays):
+                raise
+            wait = delays[attempt]
+            log.warning("%s 한도(429) → %d초 대기 후 재시도 (%d/%d)",
+                        PRIMARY_MODEL, wait, attempt + 1, len(delays))
+            time.sleep(wait)
 
 
 def _coerce(data: dict) -> dict:

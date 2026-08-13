@@ -94,6 +94,8 @@ LIST_FIELD_ALIASES: dict[str, tuple[str, ...]] = {
     "life":         ("lifeArray",),          # 생애주기 (청년,중장년,노년)
     "target_group": ("trgterIndvdlArray",),  # 가구유형 (장애인,저소득)
     "theme":        ("intrsThemaArray",),    # 관심주제 (생활지원,일자리,서민금융)
+    "views":        ("inqNum",),             # 조회수 — 발행 우선순위 산정에 쓴다
+    "registered":   ("svcfrstRegTs",),       # 서비스 최초등록일시
 }
 
 # 상세 응답 최상위 필드 — 실제 원문으로 확정.
@@ -268,6 +270,10 @@ class Adapter(BaseAdapter):
             region_scope=taxonomy.REGION_NATIONAL,
             category=category,
             audiences=audiences or None,   # 빈 리스트면 build() 가 키워드 추정
+            # 복지로가 집계한 조회수. 보조금24의 '조회수' 와는 스케일이 다르므로
+            # queueing 에서 소스별 백분위로 정규화한 뒤에야 비교한다.
+            view_count=_pick(row, LIST_FIELD_ALIASES["views"]),
+            source_registered=_pick(row, LIST_FIELD_ALIASES["registered"]),
             source_category_raw=" ".join(filter(None, [
                 theme, life, target_group,
                 _pick(row, LIST_FIELD_ALIASES["provide_type"]),
