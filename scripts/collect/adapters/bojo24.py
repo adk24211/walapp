@@ -36,9 +36,14 @@ LIST_ENDPOINT = f"{BASE_URL}/serviceList"
 DETAIL_ENDPOINT = f"{BASE_URL}/serviceDetail"
 CONDITIONS_ENDPOINT = f"{BASE_URL}/supportConditions"
 
-# 한 번에 요청할 건수. odcloud 의 상한을 문서로 확정하지 못했으므로 크게 요청해 두고,
-# 1페이지 응답에서 서버가 실제로 몇 건을 줬는지 보고 그 값으로 낮춘다(`_fetch_all`).
-# 상한이 100이면 예전과 동일하게 동작하고, 1000을 허용하면 호출이 1/10 로 준다.
+# 한 번에 요청할 건수. **실제 호출로 1000 이 허용됨을 확인했다** (currentCount: 1000).
+# 10,963건 기준 목록 호출이 110회 → 11회가 된다.
+#
+# 더 올리지 않는 이유: 응답 하나가 1000건 약 1MB 인데, 5000건이면 5MB 를 20초
+# (TIMEOUT) 안에 받아야 한다. 호출 8회를 더 줄이자고 타임아웃 위험을 지지 않는다.
+#
+# 상한이 바뀌더라도 `_fetch_all` 이 1페이지 응답에서 서버가 실제로 준 건수를 보고
+# 페이지 크기를 낮추므로, 이 값이 커도 조용히 잘리지 않는다.
 PER_PAGE = int(os.environ.get("BOJO24_PER_PAGE", "1000"))
 TIMEOUT = 20
 MAX_PAGES = 200          # 폭주 방지
