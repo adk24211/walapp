@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "보령시 오천면, 천북면, 주교면, 주포면, 웅천읍 성동리 2년 이상 거주한 주민입니다.",
+      "보령시 오천면, 천북면, 주교면, 주포면, 웅천읍 성동리 2년 이상 거주한 주민의 자녀입니다.",
+      "양육가정입니다."
+    ],
+    "faq": [
+      {
+        "a": "방문신청을 통해 지원을 받으실 수 있습니다.",
+        "q": "장학금을 받으려면 어디에 신청해야 하나요?"
+      }
+    ],
+    "note": "자세한 사항은 한국중부발전 홈페이지를 확인하시면 됩니다.",
+    "steps": [
+      {
+        "body": "방문신청을 통해 지원을 받으실 수 있습니다. 구비 서류는 한국중부발전 홈페이지 내 홍보자료 및 홍보 현수막을 참고하시면 됩니다. 2026-09-15 ~ 2026-09-29 기간 동안 신청하실 수 있습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "발전소 주변 지역에 거주하는 주민 또는 주민 자녀에게 장학금을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "2026-09-29",
+    "start": "2026-09-15"
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "보령시 오천면, 천북면, 주교면, 주포면, 웅천읍 성동리 2년 이상 거주한 주민 또는 주민 자녀 장학금 지원",
+  "category": "education",
+  "contact_raw": "지역협력부/070-7511-2177",
+  "content_hash": "sha256:26fb9bb7a89c0233a5e320fcfa4bf4fc",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "한국중부발전 홈페이지 내 홍보자료 및 홍보 현수막 참고"
+  ],
+  "first_published": "2026-08-13",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-B55252100005",
+  "is_mock": false,
+  "last_checked": "2026-08-13",
+  "last_updated": "2026-08-13",
+  "law_raw": "",
+  "name": "발전소주변지역 장학금 지원(보령발전본부)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252100005",
+  "org": "한국중부발전(주)",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "발전소주변지역-장학금-지원-보령발전본부",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "B55252100005",
+  "source_registered": "2022-07-15",
+  "status": "upcoming",
+  "target_raw": "보령시 오천면, 천북면, 주교면, 주포면, 웅천읍 성동리 2년 이상 거주한 주민 또는 주민 자녀",
+  "view_count": 1033
+}

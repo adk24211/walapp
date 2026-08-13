@@ -1,57 +1,112 @@
 {
   "bojo24-138300000052": {
-    "content_hash": "sha256:0f1616af9c4f1b433c07bb27861fe24e",
+    "content_hash": "sha256:ceefbe1de65b2a581b85927363b3edec",
     "first_published": "2026-08-13",
     "last_checked": "2026-08-13",
     "last_updated": "2026-08-13",
     "name": "청소년 미혼 한부모 자립지원 (우리원더패밀리)",
     "path": "_programs/jobs/청소년-미혼-한부모-자립지원-우리원더패밀리.md",
-    "revision": 1,
+    "revision": 2,
     "slug": "청소년-미혼-한부모-자립지원-우리원더패밀리",
     "status": "upcoming"
   },
+  "bojo24-140000000176": {
+    "content_hash": "sha256:7c9ec909965f46b6b0050c3f796443ec",
+    "first_published": "2026-08-13",
+    "last_checked": "2026-08-13",
+    "last_updated": "2026-08-13",
+    "name": "산림복지서비스이용권(바우처) 지급",
+    "path": "_programs/living/산림복지서비스이용권-바우처-지급.md",
+    "revision": 1,
+    "slug": "산림복지서비스이용권-바우처-지급",
+    "status": "active"
+  },
+  "bojo24-142000000099": {
+    "content_hash": "sha256:ac30ad48ef4aef60f0f5e7b829ae2e90",
+    "first_published": "2026-08-13",
+    "last_checked": "2026-08-13",
+    "last_updated": "2026-08-13",
+    "name": "청년전용창업자금",
+    "path": "_programs/jobs/청년전용창업자금.md",
+    "revision": 1,
+    "slug": "청년전용창업자금",
+    "status": "active"
+  },
   "bojo24-149200000026": {
-    "content_hash": "sha256:21c5ae8e8ab8d53269ba48ac993d8b83",
+    "content_hash": "sha256:f9d4dc8872a2b56bc85a0d3eb8c8cb62",
     "first_published": "2026-08-13",
     "last_checked": "2026-08-13",
     "last_updated": "2026-08-13",
     "name": "국민내일배움카드",
     "path": "_programs/jobs/국민내일배움카드.md",
-    "revision": 1,
+    "revision": 2,
     "slug": "국민내일배움카드",
     "status": "active"
   },
   "bojo24-149200005007": {
-    "content_hash": "sha256:0e44be37f5a89f976a2d7d8ccce4b99c",
+    "content_hash": "sha256:174abb80854303fab92770f94ac7363c",
     "first_published": "2026-08-13",
     "last_checked": "2026-08-13",
     "last_updated": "2026-08-13",
     "name": "국민취업지원제도",
     "path": "_programs/jobs/국민취업지원제도.md",
-    "revision": 1,
+    "revision": 2,
     "slug": "국민취업지원제도",
     "status": "active"
   },
+  "bojo24-161300000076": {
+    "content_hash": "sha256:f547a9e21850c94028be36ea538030cc",
+    "first_published": "2026-08-13",
+    "last_checked": "2026-08-13",
+    "last_updated": "2026-08-13",
+    "name": "버팀목전세자금대출",
+    "path": "_programs/housing/버팀목전세자금대출.md",
+    "revision": 1,
+    "slug": "버팀목전세자금대출",
+    "status": "active"
+  },
   "bojo24-B55140800003": {
-    "content_hash": "sha256:af09a0f3e52ed64e2b17ff79f225b739",
+    "content_hash": "sha256:e2273d4a13f59ea7504d6da940f432ee",
     "first_published": "2026-08-13",
     "last_checked": "2026-08-13",
     "last_updated": "2026-08-13",
     "name": "내집마련 디딤돌 대출",
     "path": "_programs/housing/내집마련-디딤돌-대출.md",
-    "revision": 1,
+    "revision": 2,
     "slug": "내집마련-디딤돌-대출",
     "status": "active"
   },
+  "bojo24-B55252100005": {
+    "content_hash": "sha256:26fb9bb7a89c0233a5e320fcfa4bf4fc",
+    "first_published": "2026-08-13",
+    "last_checked": "2026-08-13",
+    "last_updated": "2026-08-13",
+    "name": "발전소주변지역 장학금 지원(보령발전본부)",
+    "path": "_programs/education/발전소주변지역-장학금-지원-보령발전본부.md",
+    "revision": 1,
+    "slug": "발전소주변지역-장학금-지원-보령발전본부",
+    "status": "upcoming"
+  },
   "bojo24-O00045000002": {
-    "content_hash": "sha256:9032092953c389b32d310259f63de5b3",
+    "content_hash": "sha256:f3251375badc35d0b20f9149b59d71e3",
     "first_published": "2026-08-13",
     "last_checked": "2026-08-13",
     "last_updated": "2026-08-13",
     "name": "기획공연 및 전시 관람료 할인",
     "path": "_programs/living/기획공연-및-전시-관람료-할인.md",
-    "revision": 1,
+    "revision": 2,
     "slug": "기획공연-및-전시-관람료-할인",
+    "status": "active"
+  },
+  "bojo24-SD0000016138": {
+    "content_hash": "sha256:35a4ded8d84ad89156c38b6f035e780a",
+    "first_published": "2026-08-13",
+    "last_checked": "2026-08-13",
+    "last_updated": "2026-08-13",
+    "name": "지역사회서비스",
+    "path": "_programs/health/지역사회서비스.md",
+    "revision": 1,
+    "slug": "지역사회서비스",
     "status": "active"
   }
 }
