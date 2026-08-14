@@ -1,0 +1,73 @@
+{
+  "_prose": {
+    "eligibility": [
+      "세종발전본부 반경 5km 이내 중고등학교에 재학중인 학생입니다.",
+      "세종시 실거주 1년 이상인 자의 자녀 또는 본인입니다.",
+      "취약계층 또는 모범학생입니다."
+    ],
+    "faq": [
+      {
+        "a": "양육가정입니다.",
+        "q": "발전소 주변지역 장학금 지원의 주요 대상은 누구인가요?"
+      }
+    ],
+    "note": "자세한 사항은 한국중부발전(주)에 확인하시면 됩니다.",
+    "steps": [
+      {
+        "body": "발전소 주변지역 장학금 지원을 받으려면 직접입력을 통해 신청해야 합니다. 구비 서류로는 추천자명단, 학교장 추천서, 장학금 지급신청서, 개인정보 수집 및 이용에 대한 동의서, 서약서, 세종시 거주 해당자(학생 본인 혹은 부모)의 주민등록초본, 통장사본이 필요합니다. 신청 기간은 2026-10-01 ~ 2026-12-31입니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "발전소 주변지역 장학금 지원은 세종발전본부 반경 5km 이내 중고등학교에 재학중인 학생들을 지원합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "2026-12-31",
+    "start": "2026-10-01"
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "발전소주변지역 중고등학생 중 취약계층 장학금 지원",
+  "category": "education",
+  "contact_raw": "경영기획부/070-7511-6614",
+  "content_hash": "sha256:f36f7a1a46b511cf758c0c3ad8d71485",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "추천자명단",
+    "학교장 추천서",
+    "장학금 지급신청서",
+    "개인정보 수집 및 이용에 대한 동의서",
+    "서약서",
+    "세종시 거주 해당자(학생 본인 혹은 부모)의 주민등록초본(최근 1년간 주소변동사항 포함)",
+    "통장사본"
+  ],
+  "first_published": "2026-08-14",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-B55252100009",
+  "is_mock": false,
+  "last_checked": "2026-08-14",
+  "last_updated": "2026-08-14",
+  "law_raw": "",
+  "name": "발전소 주변지역 장학금 지원(세종)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252100009",
+  "org": "한국중부발전(주)",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "발전소-주변지역-장학금-지원-세종",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "B55252100009",
+  "source_registered": "2022-07-15",
+  "status": "upcoming",
+  "target_raw": "세종발전본부 반경 5km 이내 중고등학교에 재학중인 세종시 실거주 1년 이상인 자의 자녀 및 본인으로 취약계층 및 모범학생",
+  "view_count": 751
+}

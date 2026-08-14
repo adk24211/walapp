@@ -1,4 +1,15 @@
 {
+  "bojo24-135200000002": {
+    "content_hash": "sha256:c3ec263eb3f2a8eb62489cd6ec97ab73",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "의료급여 틀니·치과임플란트 지원",
+    "path": "_programs/health/의료급여-틀니-치과임플란트-지원.md",
+    "revision": 1,
+    "slug": "의료급여-틀니-치과임플란트-지원",
+    "status": "active"
+  },
   "bojo24-135200000115": {
     "content_hash": "sha256:adae0445bdbe636d45d8dbcb236f1c73",
     "first_published": "2026-08-14",
@@ -65,6 +76,17 @@
     "slug": "국민내일배움카드",
     "status": "active"
   },
+  "bojo24-149200000041": {
+    "content_hash": "sha256:f771be9306b45f0f7ed78f5d5e277e7a",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "중장년내일센터",
+    "path": "_programs/jobs/중장년내일센터.md",
+    "revision": 1,
+    "slug": "중장년내일센터",
+    "status": "active"
+  },
   "bojo24-149200000092": {
     "content_hash": "sha256:61947c581fc9137c7176ae2ccf009a15",
     "first_published": "2026-08-14",
@@ -109,6 +131,17 @@
     "slug": "청년주택드림-청약통장",
     "status": "active"
   },
+  "bojo24-161300000099": {
+    "content_hash": "sha256:5a7dd8a53682173fe213434f7a815b03",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "청년월세 지원",
+    "path": "_programs/housing/청년월세-지원.md",
+    "revision": 1,
+    "slug": "청년월세-지원",
+    "status": "active"
+  },
   "bojo24-161300000103": {
     "content_hash": "sha256:5028ec6deefdc20992c61b7995dcc3ac",
     "first_published": "2026-08-14",
@@ -118,6 +151,17 @@
     "path": "_programs/housing/국토교통부-전세보증금반환보증-보증료-지원.md",
     "revision": 1,
     "slug": "국토교통부-전세보증금반환보증-보증료-지원",
+    "status": "active"
+  },
+  "bojo24-999000000008": {
+    "content_hash": "sha256:59b8b0ad06d71812b194c34bc793e84b",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "육아휴직급여",
+    "path": "_programs/care/육아휴직급여.md",
+    "revision": 1,
+    "slug": "육아휴직급여",
     "status": "active"
   },
   "bojo24-B55140800003": {
@@ -162,6 +206,17 @@
     "path": "_programs/education/발전소주변지역-장학금-지원-보령발전본부.md",
     "revision": 1,
     "slug": "발전소주변지역-장학금-지원-보령발전본부",
+    "status": "upcoming"
+  },
+  "bojo24-B55252100009": {
+    "content_hash": "sha256:f36f7a1a46b511cf758c0c3ad8d71485",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "발전소 주변지역 장학금 지원(세종)",
+    "path": "_programs/education/발전소-주변지역-장학금-지원-세종.md",
+    "revision": 1,
+    "slug": "발전소-주변지역-장학금-지원-세종",
     "status": "upcoming"
   },
   "bojo24-O00045000002": {
