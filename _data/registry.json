@@ -1,4 +1,26 @@
 {
+  "bojo24-135200000115": {
+    "content_hash": "sha256:adae0445bdbe636d45d8dbcb236f1c73",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "인플루엔자 국가예방접종 지원",
+    "path": "_programs/care/인플루엔자-국가예방접종-지원.md",
+    "revision": 1,
+    "slug": "인플루엔자-국가예방접종-지원",
+    "status": "active"
+  },
+  "bojo24-137100000033": {
+    "content_hash": "sha256:3dd84d55390c10fcc6803cfebafa6be6",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "지역맞춤형 생활체육 활성화(어르신 스포츠강좌 프로그램 지원)",
+    "path": "_programs/living/지역맞춤형-생활체육-활성화-어르신-스포츠강좌-프로그램-지원.md",
+    "revision": 1,
+    "slug": "지역맞춤형-생활체육-활성화-어르신-스포츠강좌-프로그램-지원",
+    "status": "active"
+  },
   "bojo24-138300000052": {
     "content_hash": "sha256:ceefbe1de65b2a581b85927363b3edec",
     "first_published": "2026-08-13",
@@ -41,6 +63,17 @@
     "path": "_programs/jobs/국민내일배움카드.md",
     "revision": 2,
     "slug": "국민내일배움카드",
+    "status": "active"
+  },
+  "bojo24-149200000092": {
+    "content_hash": "sha256:61947c581fc9137c7176ae2ccf009a15",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "구직자 취업지원 서비스 제공",
+    "path": "_programs/jobs/구직자-취업지원-서비스-제공.md",
+    "revision": 1,
+    "slug": "구직자-취업지원-서비스-제공",
     "status": "active"
   },
   "bojo24-149200005007": {
@@ -142,6 +175,17 @@
     "slug": "기획공연-및-전시-관람료-할인",
     "status": "active"
   },
+  "bojo24-O00096800004": {
+    "content_hash": "sha256:c95e571384211f41f87274da1497e803",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "학업성취도 향상 고등학생 장학금",
+    "path": "_programs/education/학업성취도-향상-고등학생-장학금.md",
+    "revision": 1,
+    "slug": "학업성취도-향상-고등학생-장학금",
+    "status": "upcoming"
+  },
   "bojo24-O00096800006": {
     "content_hash": "sha256:17e826e3c1acf702619e8ce23b2d609f",
     "first_published": "2026-08-14",
@@ -152,6 +196,17 @@
     "revision": 1,
     "slug": "고교-진학-후-성적우수-학생-장학금",
     "status": "upcoming"
+  },
+  "bojo24-SD0000011848": {
+    "content_hash": "sha256:f6c0aff2e40c67e05abe266c1100f997",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "청년내일채움공제",
+    "path": "_programs/jobs/청년내일채움공제.md",
+    "revision": 1,
+    "slug": "청년내일채움공제",
+    "status": "active"
   },
   "bojo24-SD0000015536": {
     "content_hash": "sha256:ad9977274fc18a334acaafe3f3899c39",

@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "관내 고등학생 중 성적 상위 50%이하인 학생입니다.",
+      "직전학기 성적대비 20%이상 향상된 학생입니다.",
+      "양육가정의 학생입니다."
+    ],
+    "faq": [
+      {
+        "a": "1인당 500천원을 지급합니다.",
+        "q": "장학금의 금액은 얼마인가요?"
+      }
+    ],
+    "note": "자세한 사항은 재단법인목포인재육성재단에 확인하시기 바랍니다.",
+    "steps": [
+      {
+        "body": "신청이 불필요합니다. 2026-09-01 ~ 2026-09-30 기간에 자동으로 선정됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "학업성취도 향상 고등학생 장학금은 양육가정의 고등학생에게 장학금을 지급하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "2026-09-30",
+    "start": "2026-09-01"
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "○ 수혜자에게 일시적으로 제공하는 현금성 장학금\n- 성적 상위 50%이하 고등학생 중 직전학기 대비 성적이 20%이상 향상된 학생에게 1인당 500천원 장학금 지급",
+  "category": "education",
+  "contact_raw": "목포인재육성재단/061-274-9888",
+  "content_hash": "sha256:c95e571384211f41f87274da1497e803",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-14",
+  "how_to_raw": "신청불필요",
+  "id": "bojo24-O00096800004",
+  "is_mock": false,
+  "last_checked": "2026-08-14",
+  "last_updated": "2026-08-14",
+  "law_raw": "",
+  "name": "학업성취도 향상 고등학생 장학금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00096800004",
+  "org": "재단법인목포인재육성재단",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "학업성취도-향상-고등학생-장학금",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "O00096800004",
+  "source_registered": "2022-07-15",
+  "status": "upcoming",
+  "target_raw": "관내 고등학생 중 성적 상위 50%이하인 학생 중 직전학기 성적대비 20%이상 향상자",
+  "view_count": 570
+}
