@@ -513,25 +513,51 @@
 .is-program .cn-fold-body ul { margin: 0 0 .55rem; padding-left: 1.15rem; }
 .is-program .cn-fold-body > :last-child { margin-bottom: 0; }
 
-/* ② 목차 — 데스크톱은 본문 왼쪽에 붙여 두고, 모바일은 접는다.
-   기존에는 본문 시작 전에 9줄(319px)을 통째로 밀고 지나가야 했다. */
-@media (min-width: 1100px) {
+/* ② 목차 — 데스크톱은 본문 오른쪽 여백에 세워 두고, 좁은 화면은 접는다.
+   기존에는 본문 시작 전에 9줄(319px)을 통째로 밀고 지나가야 했다.
+
+   ── 왜 3열인가 ──
+   전에는 `200px + 본문` 2열이라 목차가 본문을 오른쪽으로 200px 밀어냈다.
+   그 결과 한 페이지에 축이 셋이었다 (1920px 기준):
+
+     헤더        360 ─ 1560   (1200px)
+     히어로 본문  604 ─ 1316   ( 712px)
+     본문 카드    714 ─ 1446   ( 732px)   ← 목차에 밀려 오른쪽으로 치우침
+
+   지금은 `1fr · 본문 · 1fr` 3열이다. 바깥 상자는 헤더와 같은 1200px 이고,
+   본문은 그 한가운데(604 ─ 1316)에 놓여 히어로와 정확히 같은 선에 선다.
+   목차는 오른쪽 여백(3열)에 들어가므로 본문 위치에 영향을 주지 않는다.
+   왼쪽 여백은 비워 둔다 — 대칭이 깨지면 '가운데'가 아니게 된다. */
+@media (min-width: 1200px) {
   .post-content-wrap.is-program {
-    max-width: calc(var(--container) + 260px);
-    display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 2.5rem;
+    max-width: var(--container-wide);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) calc(var(--container) - 3rem) minmax(0, 1fr);
+    column-gap: 1.5rem;
     align-items: start;
   }
+  /* ⚠️ margin-inline: 0 이 핵심이다.
+     .post-tags / .related-section / .post-share 는 `max-width: 760px; margin: … auto`
+     로 잡혀 있는데, 그리드 아이템의 좌우 auto 마진은 justify-self: stretch 를
+     이기고 내용 크기로 줄여 버린다. 그래서 '함께 보면 좋은 제도' 가 224px,
+     '이 제도 공유하기' 가 341px 로 쪼그라든 채 가운데 떠 있었다. */
+  .post-content-wrap.is-program > * {
+    grid-column: 2;
+    margin-left: 0; margin-right: 0;
+    max-width: none;
+  }
+  .post-content-wrap.is-program > .post-content { grid-row: 1; }
+
   .is-program .post-toc {
-    position: sticky; top: 72px; margin: 0; padding: 0 0 0 .1rem;
-    background: transparent; border: 0; border-left: 0; max-height: calc(100vh - 100px);
-    overflow-y: auto;
+    grid-column: 3; grid-row: 1;
+    position: sticky; top: 72px; margin: 0; padding: 0;
+    background: transparent; border: 0; border-left: 0;
+    max-height: calc(100vh - 100px); overflow-y: auto;
   }
   .is-program .post-toc .post-toc-title { font-size: .72rem; letter-spacing: .08em; }
   .is-program .post-toc li { font-size: .82rem; }
-  /* 본문·아래 블록은 오른쪽 열에 */
-  .post-content-wrap.is-program > :not(.post-toc) { grid-column: 2; }
 }
-@media (max-width: 1099px) {
+@media (max-width: 1199px) {
   /* 모바일·태블릿 — 제목만 보이고 눌러야 펼쳐진다 */
   .is-program .post-toc { padding: 0; }
   .is-program .post-toc .post-toc-title {
