@@ -550,3 +550,49 @@
   .related-card { padding: .8rem .9rem; }
   .related-title { font-size: .86rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   H안 확장 ④ — 상세 히어로 재구성
+   블록 8개(브레드크럼·상태배너·배지4·제목·요약·메타·정부고지·버튼2) 를
+   5개로 줄이고, 그 자리에 사람들이 실제로 보러 오는 값 넷을 큰 글씨로 놓는다.
+   ═══════════════════════════════════════════════════════════ */
+.program-state { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem .7rem; margin-bottom: .9rem; }
+.program-state .state-note { font-size: .82rem; color: var(--ink3); word-break: keep-all; }
+
+.program-title { font-weight: 700; letter-spacing: -.035em; }
+.program-summary { max-width: 62ch; }
+
+/* 핵심 4값 — 예전에는 '한눈에 보기' 표까지 스크롤해야 금액이 나왔다 */
+.program-facts {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1px; background: var(--line);
+  border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
+  margin: 1.4rem 0 1.3rem;
+}
+.program-facts > div { background: var(--surface); padding: .9rem 1.05rem; }
+.program-facts dt {
+  font-size: .7rem; font-weight: 700; letter-spacing: .04em;
+  color: var(--ink3); margin-bottom: .3rem;
+}
+.program-facts dd {
+  font-size: .95rem; font-weight: 700; letter-spacing: -.025em;
+  color: var(--ink); word-break: keep-all; line-height: 1.4;
+  font-variant-numeric: tabular-nums;
+}
+.program-facts dd.is-amount { font-size: 1.15rem; letter-spacing: -.035em; }
+
+/* 버튼 아래 한 줄 — 없앤 정부 고지를 여기로 압축했다 */
+.program-caption {
+  margin-top: .8rem; font-size: .76rem; color: var(--ink3);
+  display: flex; flex-wrap: wrap; gap: .2rem .45rem; word-break: keep-all;
+}
+
+@media (max-width: 900px) {
+  .program-facts { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .program-facts { grid-template-columns: 1fr; }
+  .program-facts > div { display: flex; align-items: baseline; justify-content: space-between; gap: .8rem; }
+  .program-facts dt { margin-bottom: 0; flex: 0 0 auto; }
+  .program-facts dd { text-align: right; }
+}

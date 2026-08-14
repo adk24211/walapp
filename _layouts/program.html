@@ -54,7 +54,23 @@ layout: default
 
 <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
 
-<div class="program-hero cn" data-cat="{{ cat }}">
+{% comment %}
+  ── 히어로 ──
+  예전에는 블록이 여덟이었다: 브레드크럼 · 상태 배너 · 배지 4개 · 제목 · 요약 ·
+  메타 줄 · 정부 고지 · 버튼 2개. 첫 화면이 안내문으로 가득 차 정작 금액이
+  보이지 않았다.
+
+  지금은 다섯이다: 브레드크럼 · 상태 · 제목+요약 · 핵심 4값 · 신청 버튼.
+  뺀 것 —
+    · 분야/지역/기간 배지 → 아래 핵심 4값 표에 이미 있다
+    · 정부 고지(official-notice) → 전역 푸터와 같은 말이라 한 화면에 두 번이었다.
+      버튼 바로 아래 한 줄 캡션으로 남긴다.
+    · '소관 기관 안내 보기' 버튼 → 본문 맨 아래 '공식 창구' 섹션에 같은 링크가 있다.
+  더한 것 —
+    · 핵심 4값(지원 규모·신청 기간·소관 기관·지원 지역). 예전에는 '한눈에 보기'
+      표까지 스크롤해야 금액이 나왔다.
+{% endcomment %}
+<div class="program-hero" data-cat="{{ cat }}">
   <div class="program-hero-inner">
     <nav class="crumbs" aria-label="현재 위치">
       <a href="{{ '/' | relative_url }}">홈</a>
@@ -74,71 +90,59 @@ layout: default
     </div>
     {% endif %}
 
-    {% if is_closed %}
-    <div class="status-banner closed" role="status">
-      <i class="ti ti-clock-off" aria-hidden="true"></i>
-      <div>
-        <strong>접수가 종료된 제도입니다.</strong>
-        {% if page.apply_end %}{{ page.apply_end }}에 마감되었습니다.{% endif %}
-        아래 내용은 마지막 접수 회차 기준이며, 다음 회차가 열리면 갱신됩니다.
-      </div>
-    </div>
-    {% elsif is_upcoming %}
-    <div class="status-banner upcoming" role="status">
-      <i class="ti ti-calendar-clock" aria-hidden="true"></i>
-      <div>
-        <strong>아직 접수가 시작되지 않은 제도입니다.</strong>
-        {% if page.apply_start %}{{ page.apply_start }}부터 신청할 수 있습니다.{% endif %}
-        시작일은 소관 기관 사정으로 바뀔 수 있으니 공식 창구에서 다시 확인해 주세요.
-      </div>
-    </div>
-    {% endif %}
-
-    <div class="program-badges">
-      <span class="badge-cat {{ cat }}">{{ cat_meta.label | default: cat }}</span>
-      <span class="badge-status is-{{ page.status | default: 'active' }}">
-        {{ page.status_label | default: '시행중' }}
-      </span>
-      <span class="badge-region">{{ page.region_label | default: '전국' }}</span>
-      {% if page.apply_always %}
-      <span class="badge-period always">상시 접수</span>
-      {% elsif is_upcoming and page.apply_start %}
-      <span class="badge-period upcoming">{{ page.apply_start }} 시작</span>
-      {% elsif page.apply_end and is_closed == false %}
-      <span class="badge-period">~ {{ page.apply_end }}</span>
+    {% comment %} 상태 — 배지 하나로. 설명이 필요한 종료·예정만 한 줄 덧붙인다 {% endcomment %}
+    <p class="program-state">
+      <span class="badge-status is-{{ page.status | default: 'active' }}">{{ page.status_label | default: '시행중' }}</span>
+      {% if is_closed %}
+        <span class="state-note">{% if page.apply_end %}{{ page.apply_end }}에 마감되었습니다. {% endif %}다음 회차가 열리면 갱신됩니다.</span>
+      {% elsif is_upcoming %}
+        <span class="state-note">{% if page.apply_start %}{{ page.apply_start }}부터 신청할 수 있습니다. {% endif %}시작일은 바뀔 수 있습니다.</span>
       {% endif %}
-    </div>
+    </p>
 
     <h1 class="program-title">{{ page.title }}</h1>
     {% if page.summary %}<p class="program-summary">{{ page.summary }}</p>{% endif %}
 
-    <div class="program-meta-row">
-      {% if page.org %}<span><i class="ti ti-building-bank" aria-hidden="true"></i> {{ page.org }}</span>{% endif %}
-      {% if page.last_checked %}
-      <span class="meta-dot"></span>
-      <span><i class="ti ti-refresh" aria-hidden="true"></i> 최종 확인 {{ page.last_checked }}</span>
-      {% endif %}
-    </div>
+    {% comment %} 핵심 4값 — 이걸 보려고 오는 사람이 대부분이다 {% endcomment %}
+    <dl class="program-facts">
+      <div>
+        <dt>지원 규모</dt>
+        <dd class="is-amount">{{ page.highlight | default: '원문 참고' }}</dd>
+      </div>
+      <div>
+        <dt>신청 기간</dt>
+        <dd>{% if page.apply_always %}상시 접수
+            {%- elsif page.apply_start and page.apply_end %}{{ page.apply_start }} ~ {{ page.apply_end }}
+            {%- elsif page.apply_end %}~ {{ page.apply_end }}
+            {%- else %}원문 참고{% endif %}</dd>
+      </div>
+      <div>
+        <dt>소관 기관</dt>
+        <dd>{{ page.org | default: '원문 참고' }}</dd>
+      </div>
+      <div>
+        <dt>지원 지역</dt>
+        <dd>{{ page.region_label | default: '전국' }}</dd>
+      </div>
+    </dl>
 
-    <aside class="official-notice" role="note">
-      <i class="ti ti-info-circle" aria-hidden="true"></i>
-      <p>본 사이트는 정부 공식 사이트가 아닙니다. 신청과 최종 확인은 반드시 아래 공식 창구를 이용하세요.</p>
-    </aside>
-
-    {% if page.apply_url or page.official_url %}
+    {% if page.apply_url %}
     <div class="program-cta">
-      {% if page.apply_url %}
       <a class="cta-primary" href="{{ page.apply_url }}" target="_blank" rel="noopener nofollow">
         <i class="ti ti-external-link" aria-hidden="true"></i> 공식 창구에서 신청하기
       </a>
-      {% endif %}
-      {% if page.official_url %}
-      <a class="cta-secondary" href="{{ page.official_url }}" target="_blank" rel="noopener nofollow">
-        소관 기관 안내 보기
-      </a>
-      {% endif %}
     </div>
     {% endif %}
+
+    {% comment %}
+      전역 푸터가 '정부 공식 사이트가 아닙니다' 를 이미 말한다. 여기서 되풀이하면
+      한 화면에 같은 경고가 두 번이라 둘 다 안 읽힌다.
+      버튼 옆에는 '어디로 가는지' 만 알려 준다.
+    {% endcomment %}
+    <p class="program-caption">
+      소관 기관이 운영하는 외부 창구로 이동합니다 · 공공데이터 원문 기준
+      {% if page.last_checked %}· 최종 확인 {{ page.last_checked }}{% endif %}
+    </p>
   </div>
 </div>
 
@@ -184,7 +188,6 @@ layout: default
       {{ page.org | default: '소관 기관' }} · 공공누리 제1유형.
       제도의 금액·요건·기간은 공공데이터 원문을 그대로 옮긴 것이며, 설명 문장만 본 사이트가 쉬운 말로 다시 썼습니다.
       {% if page.last_checked %}최종 확인일은 {{ page.last_checked }}이며, 이후 변경되었을 수 있습니다.{% endif %}
-      예산 사정이나 지침 개정으로 수시로 바뀌니 신청 전 공식 창구에서 확인해 주세요.
       <a href="{{ '/disclaimer/' | relative_url }}">면책 조항</a>
     </p>
   </div>
