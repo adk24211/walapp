@@ -26,47 +26,39 @@ title: 정부·지자체 지원금과 복지 제도 총정리
 {% assign upcoming_rest = upcoming_programs | where_exp: "p", "p.url != hero.url" %}
 {% assign live_rest = live_programs | where_exp: "p", "p.url != hero.url" %}
 
-<div class="page-header">
+<div class="page-header is-wide">
   <div class="ph-top">
     <span class="ph-issue">Walapp</span>
     <span class="ph-date">시행중 {{ open_programs | size }}건 · 전체 {{ programs | size }}건</span>
   </div>
   <h1 class="ph-title">받을 수 있는 지원금, 하나씩 정리했습니다</h1>
-  <p class="ph-sub">
-    정부와 지방자치단체가 운영하는 지원 제도를 제도 하나당 한 페이지로 정리합니다.
-    금액과 자격 요건은 공공데이터 원문을 그대로 옮기고, 설명만 쉬운 말로 다시 씁니다.
-  </p>
+  {% comment %}
+    두 번째 문장(원문 인용 원칙)은 푸터 고지와 겹쳐 뺐다. 첫 화면은 한 문장이면 된다.
+  {% endcomment %}
+  <p class="ph-sub">정부와 지방자치단체가 운영하는 지원 제도를 제도 하나당 한 페이지로 정리합니다.</p>
 </div>
 
+{% comment %}
+  메인 토픽. 이모지·색 배경·액센트 바 없이, 카드 하나를 크게 두는 것으로만 강조한다.
+{% endcomment %}
 {% if hero %}
 {% assign hero_cat = site.data.taxonomy.categories[hero.category] %}
-<a class="home-hero cn" data-cat="{{ hero.category }}" href="{{ hero.url | relative_url }}">
-  <div class="hero-side">
-    <span class="hero-emoji" aria-hidden="true">{{ hero_cat.emoji }}</span>
-    <span class="hero-eyebrow">{% if hero.status == 'upcoming' %}가장 기다려지는 제도{% else %}가장 많이 찾는 제도{% endif %}</span>
-  </div>
-  <div class="hero-body">
-    <div class="hero-chips">
-      <span class="chip chip-cat">{{ hero_cat.label | default: hero.category }}</span>
-      {% if hero.status == 'upcoming' %}
-        <span class="chip chip-upcoming">예정{% if hero.apply_start %} · {{ hero.apply_start }} 시작{% endif %}</span>
-      {% elsif hero.apply_always %}
-        <span class="chip chip-active">시행중 · 상시</span>
-      {% elsif hero.apply_end %}
-        <span class="chip chip-deadline">시행중 · ~{{ hero.apply_end }}</span>
-      {% else %}
-        <span class="chip chip-active">시행중</span>
-      {% endif %}
-      <span class="chip">{{ hero.region_label | default: '전국' }}</span>
-    </div>
-    <h2 class="hero-title">{{ hero.title }}</h2>
-    {% if hero.summary %}<p class="hero-desc">{{ hero.summary | strip_html | truncate: 150 }}</p>{% endif %}
-    <div class="hero-foot">
-      {% if hero.org %}<span>{{ hero.org }}</span>{% endif %}
-      {% if hero.highlight %}<span class="hero-amount">{{ hero.highlight }}</span>{% endif %}
-      <span class="hero-cta">자세히 보기 <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
-    </div>
-  </div>
+<a class="home-hero" href="{{ hero.url | relative_url }}">
+  <p class="hero-eyebrow">{% if hero.status == 'upcoming' %}가장 기다려지는 제도{% else %}가장 많이 찾는 제도{% endif %}</p>
+  <h2 class="hero-title">{{ hero.title }}</h2>
+  {% if hero.highlight %}<p class="hero-amount">{{ hero.highlight }}</p>{% endif %}
+  {% if hero.summary %}<p class="hero-desc">{{ hero.summary | strip_html | truncate: 150 }}</p>{% endif %}
+  <p class="hero-foot">
+    {% if hero.org %}<span>{{ hero.org }}</span>{% endif %}
+    <span>{{ hero_cat.label | default: hero.category }}</span>
+    {% if hero.status == 'upcoming' %}
+      <span>{{ hero.apply_start }} 시작 예정</span>
+    {% elsif hero.apply_always %}
+      <span>상시 접수</span>
+    {% elsif hero.apply_end %}
+      <span>~ {{ hero.apply_end }}</span>
+    {% endif %}
+  </p>
 </a>
 {% endif %}
 
@@ -75,10 +67,9 @@ title: 정부·지자체 지원금과 복지 제도 총정리
   {% for a in site.data.taxonomy.audience_order %}
   {% assign am = site.data.taxonomy.audiences[a] %}
   {% assign acount = open_programs | where_exp: "p", "p.audiences contains a" | size %}
-  <a class="axis-card" href="{{ '/who/' | append: a | append: '/' | relative_url }}">
-    <span class="axis-emoji">{{ am.emoji }}</span>
+  <a class="axis-card{% if acount == 0 %} is-empty{% endif %}" href="{{ '/who/' | append: a | append: '/' | relative_url }}">
+    <span class="axis-count">{{ acount }}</span>
     <span class="axis-label">{{ am.label }}</span>
-    <span class="axis-count">{{ acount }}건</span>
   </a>
   {% endfor %}
 </div>
@@ -91,7 +82,7 @@ title: 정부·지자체 지원금과 복지 제도 총정리
   {% if closing.size > 0 %}
   <div class="section-group">
     <div class="section-label">
-      <span class="sec-tag">⏰ 마감 임박</span>
+      <span class="sec-tag">마감 임박</span>
       <div class="sec-rule"></div>
       <a class="sec-more" href="{{ '/deadline/' | relative_url }}">더보기 →</a>
     </div>
@@ -106,7 +97,7 @@ title: 정부·지자체 지원금과 복지 제도 총정리
   {% assign upcoming_sorted = upcoming_rest | sort: "apply_start" %}
   <div class="section-group">
     <div class="section-label">
-      <span class="sec-tag">📅 시행 예정</span>
+      <span class="sec-tag">시행 예정</span>
       <div class="sec-rule"></div>
       <span class="sec-count">{{ upcoming_programs | size }}건</span>
     </div>
@@ -121,7 +112,7 @@ title: 정부·지자체 지원금과 복지 제도 총정리
   {% if recent.size > 0 %}
   <div class="section-group">
     <div class="section-label">
-      <span class="sec-tag">✨ 새로 추가</span>
+      <span class="sec-tag">새로 추가</span>
       <div class="sec-rule"></div>
       <a class="sec-more" href="{{ '/new/' | relative_url }}">더보기 →</a>
     </div>
@@ -138,7 +129,7 @@ title: 정부·지자체 지원금과 복지 제도 총정리
     {% if citems.size > 0 %}
     <div class="section-group" data-cat="{{ c }}">
       <div class="section-label">
-        <span class="sec-tag {{ c }}">{{ cm.emoji }} {{ cm.label }}</span>
+        <span class="sec-tag {{ c }}">{{ cm.label }}</span>
         <div class="sec-rule"></div>
         <a class="sec-more" href="{{ '/support/' | append: c | append: '/' | relative_url }}">더보기 →</a>
       </div>

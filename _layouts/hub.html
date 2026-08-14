@@ -37,7 +37,7 @@ layout: default
   {% assign items = all_programs %}
 {% endif %}
 
-<div class="page-header">
+<div class="page-header is-wide">
   <div class="ph-top">
     <span class="ph-issue">{{ page.eyebrow | default: '지원 제도' }}</span>
     <span class="ph-date">총 {{ items | size }}건</span>
@@ -53,7 +53,7 @@ layout: default
   {% for c in site.data.taxonomy.category_order %}
   {% assign cm = site.data.taxonomy.categories[c] %}
   <a class="hub-chip{% if key == c %} active{% endif %}" href="{{ '/support/' | append: c | append: '/' | relative_url }}">
-    {{ cm.emoji }} {{ cm.label }}
+    {{ cm.label }}
   </a>
   {% endfor %}
 </nav>
@@ -62,7 +62,7 @@ layout: default
   {% for a in site.data.taxonomy.audience_order %}
   {% assign am = site.data.taxonomy.audiences[a] %}
   <a class="hub-chip{% if key == a %} active{% endif %}" href="{{ '/who/' | append: a | append: '/' | relative_url }}">
-    {{ am.emoji }} {{ am.label }}
+    {{ am.label }}
   </a>
   {% endfor %}
 </nav>

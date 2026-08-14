@@ -1,6 +1,14 @@
 {% comment %}
   제도 카드 한 장. 홈·허브·검색 결과가 모두 이걸 쓴다.
   파라미터: program (필수), show_category (선택, 기본 true)
+
+  H안 — 카드에 남기는 것은 넷뿐이다: 상태 · 제도명 · 금액 · 기관.
+  뺀 것: 좌측 액센트 바, 분야 이모지, 요약 문장, '자세히 보기' 문구.
+  요약을 뺀 이유는 제도명 아래 두 줄이 카드마다 길이가 달라 그리드가 들쭉날쭉해지고,
+  정작 사람이 고를 때 보는 값(금액·기관·기간)이 그만큼 아래로 밀리기 때문이다.
+
+  `.pcard` 는 구 브리핑 카드(archive.html·category-page.html)와 스타일을 분리하는 표식이다.
+  둘 다 `.post-card cn` 을 쓰므로 이 클래스가 없으면 브리핑 카드까지 같이 바뀐다.
 {% endcomment %}
 {% assign p = include.program %}
 {% assign pcat = p.category %}
@@ -10,42 +18,37 @@
 {% if p.status == 'closed' %}{% assign pclosed = true %}{% endif %}
 {% if p.status == 'upcoming' %}{% assign pupcoming = true %}{% endif %}
 
-<a href="{{ p.url | relative_url }}" class="post-card cn{% if pclosed %} is-closed{% endif %}{% if pupcoming %} is-upcoming{% endif %}" data-cat="{{ pcat }}">
-  <div class="card-inner">
-    <div class="card-accent"></div>
-    <div class="card-body">
-      <div class="card-top">
-        <h2 class="card-title">{{ p.title }}</h2>
-        {% if p.highlight %}<span class="card-badge">{{ p.highlight }}</span>{% endif %}
-      </div>
+<a href="{{ p.url | relative_url }}" class="post-card cn pcard{% if pclosed %} is-closed{% endif %}{% if pupcoming %} is-upcoming{% endif %}" data-cat="{{ pcat }}">
+  <div class="pcard-body">
+    {% comment %} ① 상태 — 지금 신청할 수 있는지가 제일 먼저 보여야 한다 {% endcomment %}
+    <p class="pcard-status">
+      {% if pclosed %}
+        <span class="is-closed">접수 종료{% if p.apply_end %} · {{ p.apply_end }}{% endif %}</span>
+      {% elsif pupcoming %}
+        <span class="is-upcoming">{% if p.apply_start %}{{ p.apply_start }} 시작{% else %}시작 예정{% endif %}</span>
+      {% else %}
+        <span class="is-active">시행중</span>
+      {% endif %}
+    </p>
 
-      {% if p.summary %}<p class="card-desc">{{ p.summary | strip_html | truncate: 110 }}</p>{% endif %}
+    {% comment %} ② 제도명 {% endcomment %}
+    <h2 class="pcard-title">{{ p.title }}</h2>
 
-      <div class="card-chips">
-        {% unless include.show_category == false %}
-        <span class="chip chip-cat">{{ pcat_meta.emoji }} {{ pcat_meta.label | default: pcat }}</span>
-        {% endunless %}
-        <span class="chip">{{ p.region_label | default: '전국' }}</span>
-        {% comment %} 상태 칩은 항상 하나 붙는다 — 시행중인지 끝났는지가 카드에서 바로 보여야 한다 {% endcomment %}
-        {% if pclosed %}
-          <span class="chip chip-closed">종료{% if p.apply_end %} · {{ p.apply_end }}{% endif %}</span>
-        {% elsif pupcoming %}
-          <span class="chip chip-upcoming">예정{% if p.apply_start %} · {{ p.apply_start }} 시작{% endif %}</span>
-        {% elsif p.apply_always %}
-          <span class="chip chip-always">시행중 · 상시</span>
-        {% elsif p.apply_end %}
-          <span class="chip chip-deadline">시행중 · ~{{ p.apply_end }}</span>
-        {% else %}
-          <span class="chip chip-active">시행중</span>
-        {% endif %}
-      </div>
+    {% comment %} ③ 금액 — highlight 는 render.py 가 지원내용 원문에서 뽑은 대표 금액이다 {% endcomment %}
+    {% if p.highlight %}
+    <p class="pcard-amount">{{ p.highlight }}</p>
+    {% endif %}
 
-      <div class="card-footer">
-        <div class="card-meta">
-          {% if p.org %}<span>{{ p.org }}</span>{% endif %}
-        </div>
-        <span class="card-cta">자세히 보기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>
-      </div>
-    </div>
+    {% comment %} ④ 기관 · 기간 · 분야 {% endcomment %}
+    <p class="pcard-meta">
+      {% if p.org %}<span>{{ p.org }}</span>{% endif %}
+      {% if p.apply_always %}<span>상시 접수</span>
+      {% elsif pupcoming and p.apply_start %}<span>{{ p.apply_start }} ~ {{ p.apply_end }}</span>
+      {% elsif p.apply_end %}<span>~ {{ p.apply_end }}</span>{% endif %}
+      {% unless include.show_category == false %}
+      <span>{{ pcat_meta.label | default: pcat }}</span>
+      {% endunless %}
+      {% if p.region_label and p.region_label != '전국' %}<span>{{ p.region_label }}</span>{% endif %}
+    </p>
   </div>
 </a>
