@@ -61,6 +61,39 @@
   window.addEventListener('resize', onScroll);
   onScroll();
 
+  // 하단 고정 신청 바 — 좁은 화면에서만 뜬다.
+  // 레일의 신청 버튼이 화면에 보이는 동안에는 내려 둔다. 같은 버튼이 한 화면에
+  // 둘이면 어느 쪽을 눌러야 하는지가 오히려 헷갈린다.
+  var dock = document.getElementById('apply-dock');
+  var inlineBtn = document.getElementById('apply-inline');
+  if (dock) {
+    var narrow = window.matchMedia('(max-width: 1199px)');
+    var tuck = function (on) { dock.classList.toggle('is-tucked', on); };
+
+    var observer = null;
+    if (window.IntersectionObserver && inlineBtn) {
+      observer = new IntersectionObserver(function (entries) {
+        tuck(entries[0].isIntersecting);
+      }, { threshold: 0 });
+    }
+
+    var apply = function () {
+      if (narrow.matches) {
+        dock.hidden = false;
+        if (observer) observer.observe(inlineBtn);
+        // 관찰이 시작되기 전 첫 프레임에는 인라인 버튼이 대개 화면 안이다
+        else tuck(false);
+      } else {
+        dock.hidden = true;
+        if (observer) observer.disconnect();
+      }
+    };
+    apply();
+    // addListener 는 구형 사파리용 폴백
+    if (narrow.addEventListener) narrow.addEventListener('change', apply);
+    else if (narrow.addListener) narrow.addListener(apply);
+  }
+
   // 링크 복사
   var copyBtn = document.getElementById('share-copy');
   if (copyBtn) {
