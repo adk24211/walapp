@@ -552,14 +552,29 @@
   }
   .post-content-wrap.is-program > .post-content { grid-row: 1; }
 
-  .is-program .post-toc {
+  /* 오른쪽 칸 — 신청 카드 + 목차가 함께 붙어 따라온다.
+     둘을 한 상자(.side-rail)에 넣은 이유: 따로 두면 각자 sticky 가 되어
+     스크롤 중에 둘 사이 간격이 벌어졌다 좁아졌다 한다. */
+  .post-content-wrap.is-program > .side-rail {
     grid-column: 3; grid-row: 1;
-    position: sticky; top: 72px; margin: 0; padding: 0;
+    position: sticky; top: 72px;
+    max-height: calc(100vh - 96px); overflow-y: auto;
+    display: flex; flex-direction: column; gap: 1.1rem;
+    /* 스크롤바가 붙어도 카드 테두리가 잘리지 않게 */
+    scrollbar-width: thin;
+  }
+  .is-program .post-toc {
+    margin: 0; padding: 0;
     background: transparent; border: 0; border-left: 0;
-    max-height: calc(100vh - 100px); overflow-y: auto;
   }
   .is-program .post-toc .post-toc-title { font-size: .72rem; letter-spacing: .08em; }
   .is-program .post-toc li { font-size: .82rem; }
+  .apply-rail { padding: 1rem 1rem .9rem; }
+  .apply-rail .program-facts dd.is-amount { font-size: 1.15rem; }
+  /* 196px 칸에서 '공식 창구에서 신청하기' 가 세 줄로 접혔다.
+     아이콘을 빼고 글자를 줄여 한 줄에 넣는다 — 버튼은 한 줄이어야 버튼으로 읽힌다. */
+  .apply-rail .cta-primary { font-size: .82rem; padding: .7rem .6rem; gap: 0; }
+  .apply-rail .cta-primary i { display: none; }
 }
 @media (max-width: 1199px) {
   /* 모바일·태블릿 — 제목만 보이고 눌러야 펼쳐진다 */
@@ -592,14 +607,9 @@
 .program-title { font-weight: 700; letter-spacing: -.035em; }
 .program-summary { max-width: 62ch; }
 
-/* 핵심 4값 — 예전에는 '한눈에 보기' 표까지 스크롤해야 금액이 나왔다 */
-.program-facts {
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  gap: 1px; background: var(--line);
-  border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
-  margin: 1.4rem 0 1.3rem;
-}
-.program-facts > div { background: var(--surface); padding: .9rem 1.05rem; }
+/* 핵심 값의 글자 크기만 여기서 정한다.
+   배치(격자·간격·테두리)는 이제 `.apply-rail` 이 정한다 — 이 요소는 J안 이후
+   신청 레일 안에서만 쓰이므로, 여기에 격자를 또 두면 두 곳에서 같은 걸 정하게 된다. */
 .program-facts dt {
   font-size: .7rem; font-weight: 700; letter-spacing: .04em;
   color: var(--ink3); margin-bottom: .3rem;
@@ -609,22 +619,12 @@
   color: var(--ink); word-break: keep-all; line-height: 1.4;
   font-variant-numeric: tabular-nums;
 }
-.program-facts dd.is-amount { font-size: 1.15rem; letter-spacing: -.035em; }
+.program-facts dd.is-amount { letter-spacing: -.035em; }
 
 /* 버튼 아래 한 줄 — 없앤 정부 고지를 여기로 압축했다 */
 .program-caption {
   margin-top: .8rem; font-size: .76rem; color: var(--ink3);
   display: flex; flex-wrap: wrap; gap: .2rem .45rem; word-break: keep-all;
-}
-
-@media (max-width: 900px) {
-  .program-facts { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 480px) {
-  .program-facts { grid-template-columns: 1fr; }
-  .program-facts > div { display: flex; align-items: baseline; justify-content: space-between; gap: .8rem; }
-  .program-facts dt { margin-bottom: 0; flex: 0 0 auto; }
-  .program-facts dd { text-align: right; }
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -701,35 +701,70 @@
 /* 주의 안내는 카드가 아니다 — 카드 사이에 낀 알림 한 줄 */
 .is-program .post-content > .cn-note { margin: 0; }
 
-/* ── 히어로 액션 줄 ──
-   4칸 격자(두 줄) + 버튼(한 줄) = 세 줄이 첫 화면의 절반이었다. 한 줄로 합친다. */
-.program-bar {
-  display: flex; align-items: flex-end; justify-content: space-between;
-  flex-wrap: wrap; gap: 1rem 2rem;
-  margin: 1.25rem 0 0; padding-top: 1.05rem; border-top: 1px solid var(--line);
+/* ── 신청 레일 (J안) ──
+   버튼이 히어로에만 있어 스크롤 412px 지점에서 사라졌다. 전체 스크롤의 13% 다.
+   나머지 87% 구간에는 이 페이지에 온 이유를 눌러서 할 방법이 화면에 없었다.
+   넓은 화면은 오른쪽 레일에 붙여 따라오게 하고, 좁은 화면은 아래 고정 바가 맡는다. */
+.apply-rail {
+  background: var(--surface); border: 1px solid var(--line2); border-radius: 12px;
+  padding: 1.1rem 1.15rem 1rem;
 }
-.program-facts {
-  display: flex; flex-wrap: wrap; gap: .85rem 2rem;
+.apply-rail .program-facts {
+  display: grid; gap: .7rem;
   background: none; border: 0; border-radius: 0; overflow: visible; margin: 0;
 }
-.program-facts > div { background: none; padding: 0; }
-.program-facts dd.is-amount { font-size: 1.2rem; }
-.program-bar .program-cta { margin: 0; flex: 0 0 auto; }
+.apply-rail .program-facts > div { background: none; padding: 0; }
+.apply-rail .program-facts dd.is-amount { font-size: 1.25rem; }
+.apply-rail .program-cta { display: block; margin-top: .95rem; }
+.apply-rail .cta-primary { width: 100%; justify-content: center; }
+.apply-rail .program-caption { margin-top: .6rem; font-size: .72rem; line-height: 1.5; }
 
-@media (max-width: 900px) {
-  .program-facts { gap: .8rem 1.5rem; }
+/* 좁은 화면 — 히어로 바로 아래 한 덩어리. 값 둘을 옆으로 눕히고 버튼을 전폭으로. */
+@media (max-width: 1199px) {
+  .apply-rail { margin-bottom: 1rem; }
+  .apply-rail .program-facts { grid-template-columns: repeat(2, 1fr); gap: .5rem 1.5rem; }
 }
-@media (max-width: 700px) {
-  /* 버튼을 아래 줄 전체 폭으로 — 손가락으로 누르는 화면에서 제일 큰 표적이어야 한다 */
-  .program-bar { align-items: stretch; gap: 1rem; }
-  .program-bar .program-cta { flex: 1 1 100%; }
-  .program-bar .cta-primary { width: 100%; justify-content: center; }
+
+/* ── 하단 고정 신청 바 ── */
+.apply-dock {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+  background: var(--surface); border-top: 1px solid var(--line2);
+  padding: .6rem 1rem calc(.6rem + env(safe-area-inset-bottom));
+  transform: translateY(0); transition: transform .18s ease;
 }
+.apply-dock[hidden] { display: none; }
+/* 레일의 버튼이 화면에 보이는 동안에는 내려 둔다 (program.js 가 토글) */
+.apply-dock.is-tucked { transform: translateY(110%); }
+.apply-dock-inner {
+  display: flex; align-items: center; gap: .9rem;
+  max-width: var(--container); margin: 0 auto;
+}
+.apply-dock-amount { flex: 1 1 auto; min-width: 0; margin: 0; }
+.apply-dock-amount span {
+  display: block; font-size: .68rem; font-weight: 700; letter-spacing: .04em; color: var(--ink3);
+}
+.apply-dock-amount strong {
+  display: block; font-size: 1.05rem; font-weight: 800; letter-spacing: -.035em;
+  color: var(--ink); font-variant-numeric: tabular-nums;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.apply-dock-btn {
+  flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center;
+  background: var(--ink); color: var(--surface);
+  font-size: .88rem; font-weight: 700; letter-spacing: -.01em;
+  padding: .7rem 1.1rem; border-radius: 10px;
+}
+.apply-dock-btn:hover { background: var(--ink2); }
+/* 고정 바가 푸터 마지막 줄을 가린다. 바가 있는 페이지에서만 자리를 비워 준다. */
+body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .apply-dock { transition: none; }
+}
+
 @media (max-width: 480px) {
-  .program-facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: .8rem 1rem; }
-  .program-facts > div { display: block; }
-  .program-facts dt { margin-bottom: .15rem; }
-  .program-facts dd { text-align: left; }
+  .apply-rail .program-facts { grid-template-columns: 1fr; }
   .is-program .cn-sec-head { padding: .65rem 1.05rem; }
   .is-program .cn-sec-body { padding: 1rem 1.05rem 1.1rem; }
+  .apply-dock-btn { padding: .7rem .9rem; font-size: .84rem; }
 }
