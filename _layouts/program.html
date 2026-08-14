@@ -168,20 +168,26 @@ layout: default
   </div>
   {% endif %}
 
-  {% comment %} ── 출처 ── {% endcomment %}
+  {% comment %}
+    ── 출처 · 면책 ──
+    예전에는 이 아래에 `.post-disclaimer` 가 따로 있었는데, 같은 말을 하는 블록이
+    한 페이지에 넷이었다: 히어로 고지 · 이 출처 블록 · 면책 문구 · 전역 푸터 문구.
+    면책 문구를 이 블록에 흡수했다. 고유했던 것은 면책 조항 링크뿐이라 그것만 옮겼다.
+
+    남긴 둘은 역할이 다르다 —
+      히어로 고지: 신청 버튼 바로 위, 누르기 직전에 읽히는 자리
+      전역 푸터 : 사이트 전체에 걸리는 고지
+  {% endcomment %}
   <div class="cn cn-source" data-cat="{{ cat }}">
     <span class="cn-source-tag">출처표시</span>
     <p>
       {{ page.org | default: '소관 기관' }} · 공공누리 제1유형.
       제도의 금액·요건·기간은 공공데이터 원문을 그대로 옮긴 것이며, 설명 문장만 본 사이트가 쉬운 말로 다시 썼습니다.
       {% if page.last_checked %}최종 확인일은 {{ page.last_checked }}이며, 이후 변경되었을 수 있습니다.{% endif %}
+      예산 사정이나 지침 개정으로 수시로 바뀌니 신청 전 공식 창구에서 확인해 주세요.
+      <a href="{{ '/disclaimer/' | relative_url }}">면책 조항</a>
     </p>
   </div>
-
-  <aside class="post-disclaimer" role="note">
-    <i class="ti ti-info-circle" aria-hidden="true"></i>
-    <p>지원 금액과 자격 요건은 예산 사정이나 지침 개정으로 수시로 바뀝니다. 신청 전 반드시 공식 창구에서 최신 내용을 확인해 주세요. 자세한 내용은 <a href="{{ '/disclaimer/' | relative_url }}">면책 조항</a>을 확인해 주세요.</p>
-  </aside>
 
   {% comment %} ── 함께 보면 좋은 제도 — 같은 분야 → 같은 대상 순 ── {% endcomment %}
   {% assign same_cat = site.programs | where: "category", cat %}

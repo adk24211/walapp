@@ -96,15 +96,10 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
     def open_block(cls: str) -> str:
         return f'<div class="cn {cls}" data-cat="{cat}">'
 
-    # ── 1) 한 줄 요약 ──
-    summary = prose.get("summary") or record.benefit_raw
-    parts += [
-        open_block("cn-lead"),
-        f'  <span class="cn-lead-icon"><i class="ti {taxonomy.CATEGORIES[cat]["icon"]}"></i></span>',
-        f"  <p>{_esc(summary)}</p>",
-        "</div>",
-        "",
-    ]
+    # ── 1) 한 줄 요약은 렌더하지 않는다 ──
+    # 같은 문장이 이미 페이지 상단 히어로(`program-summary`)에 있다. 본문 첫 블록에
+    # 한 번 더 찍으면 글자까지 똑같은 문단이 두 번 나온다.
+    # front matter 의 `summary` 로만 넘기고(히어로·카드·검색이 그걸 쓴다) 여기선 생략.
 
     # ── 2) 한눈에 보기 — 짧은 메타만 표로 ──
     # 실제 보조금24 데이터의 지원대상·지원내용·선정기준은 '○'/'-' 불릿을 가진 장문이다
@@ -128,17 +123,32 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
     parts += ["  </tbody>", "</table>", "</div>", ""]
 
     # ── 2-b) 사실 원본 장문 (LLM 미개입) ──
-    for heading, value in (
-        ("지원 대상", record.target_raw),
-        ("지원 내용", record.benefit_raw),
-        ("선정 기준", record.criteria_raw),
+    # 원문은 그대로 싣되, 아래 체크리스트·단계가 같은 내용을 쉬운 말로 다시 쓴다.
+    # 둘을 다 펼쳐 두면 페이지가 두 배가 되므로 재서술이 있는 것만 접는다.
+    #
+    # ⚠️ '지원 내용'은 접지 않는다. 금액이 적힌 곳이 이 원문뿐이라 접으면 페이지에서
+    #    금액이 사라진다. 지원금 사이트에서 그건 있을 수 없다. (한눈에 보기 표에는
+    #    기간·기관만 있고 금액 칸이 없다.)
+    for heading, value, fold in (
+        ("지원 대상", record.target_raw, True),
+        ("지원 내용", record.benefit_raw, False),
+        ("선정 기준", record.criteria_raw, True),
     ):
         if not str(value).strip():
             continue
+        # 제목은 <details> 밖에 둔다. 접힌 상태에서도 목차가 이 위치로 이동할 수 있어야 한다.
         parts.append(f'<h2 class="cn-h">{_esc(heading)}</h2>')
-        parts.append(open_block("cn-raw"))
-        parts.append(_render_lines(value))
-        parts += ["</div>", ""]
+        if fold:
+            parts.append(f'<details class="cn cn-fold" data-cat="{cat}">')
+            parts.append(f'  <summary>{_esc(heading)} 원문 펼치기'
+                         f'<span class="cn-fold-hint">공공데이터 원문</span></summary>')
+            parts.append('  <div class="cn-fold-body">')
+            parts.append(_render_lines(value))
+            parts += ["  </div>", "</details>", ""]
+        else:
+            parts.append(open_block("cn-raw"))
+            parts.append(_render_lines(value))
+            parts += ["</div>", ""]
 
     # ── 3) 나도 받을 수 있나요 — 체크리스트 ──
     eligibility = [c for c in (prose.get("eligibility") or []) if str(c).strip()]
