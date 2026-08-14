@@ -1,0 +1,66 @@
+{
+  "_prose": {
+    "eligibility": [
+      "양육가정의 고등학생입니다.",
+      "관내 고등학교 재학생 중 상위 3% 이내 성적우수자입니다."
+    ],
+    "faq": [
+      {
+        "a": "1인당 1,000천원이 지급됩니다.",
+        "q": "장학금의 금액은 얼마인가요?"
+      }
+    ],
+    "note": "자세한 내용은 재단법인목포인재육성재단에 확인하세요.",
+    "steps": [
+      {
+        "body": "신청이 필요하지 않습니다. 대상자에게 일시적으로 현금성 장학금이 제공됩니다. 2026-09-01 ~ 2026-09-30 기간에 지급됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "고교 진학 후 성적우수 학생 장학금은 양육가정의 고등학생에게 장학금을 제공합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "2026-09-30",
+    "start": "2026-09-01"
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "○ 수혜자에게 일시적으로 제공하는 현금성 장학금\n-관내 고교 재학생 중 성적이 상위 3% 이내 고등학생에게 1인당 1,000천원 장학금 지급",
+  "category": "education",
+  "contact_raw": "목포인재육성재단/061-274-9888",
+  "content_hash": "sha256:17e826e3c1acf702619e8ce23b2d609f",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-14",
+  "how_to_raw": "신청불필요",
+  "id": "bojo24-O00096800006",
+  "is_mock": false,
+  "last_checked": "2026-08-14",
+  "last_updated": "2026-08-14",
+  "law_raw": "",
+  "name": "고교 진학 후 성적우수 학생 장학금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00096800006",
+  "org": "재단법인목포인재육성재단",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "고교-진학-후-성적우수-학생-장학금",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "O00096800006",
+  "source_registered": "2022-07-15",
+  "status": "upcoming",
+  "target_raw": "관내 고등학교 재학생 중 상위 3% 이내 성적우수자 학생",
+  "view_count": 607
+}

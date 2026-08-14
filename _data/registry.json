@@ -65,6 +65,17 @@
     "slug": "버팀목전세자금대출",
     "status": "active"
   },
+  "bojo24-161300000088": {
+    "content_hash": "sha256:c689c80c5b0fd5462d294f7f855d6782",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "청년주택드림 청약통장",
+    "path": "_programs/housing/청년주택드림-청약통장.md",
+    "revision": 1,
+    "slug": "청년주택드림-청약통장",
+    "status": "active"
+  },
   "bojo24-161300000103": {
     "content_hash": "sha256:5028ec6deefdc20992c61b7995dcc3ac",
     "first_published": "2026-08-14",
@@ -85,6 +96,17 @@
     "path": "_programs/housing/내집마련-디딤돌-대출.md",
     "revision": 2,
     "slug": "내집마련-디딤돌-대출",
+    "status": "active"
+  },
+  "bojo24-B55201500004": {
+    "content_hash": "sha256:a7554c83180014aa083eadc718e8170d",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "실업크레딧 지원",
+    "path": "_programs/jobs/실업크레딧-지원.md",
+    "revision": 1,
+    "slug": "실업크레딧-지원",
     "status": "active"
   },
   "bojo24-B55252100003": {
@@ -120,6 +142,17 @@
     "slug": "기획공연-및-전시-관람료-할인",
     "status": "active"
   },
+  "bojo24-O00096800006": {
+    "content_hash": "sha256:17e826e3c1acf702619e8ce23b2d609f",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "고교 진학 후 성적우수 학생 장학금",
+    "path": "_programs/education/고교-진학-후-성적우수-학생-장학금.md",
+    "revision": 1,
+    "slug": "고교-진학-후-성적우수-학생-장학금",
+    "status": "upcoming"
+  },
   "bojo24-SD0000015536": {
     "content_hash": "sha256:ad9977274fc18a334acaafe3f3899c39",
     "first_published": "2026-08-14",
@@ -153,6 +186,17 @@
     "slug": "노인일자리-및-사회활동-지원",
     "status": "active"
   },
+  "bojo24-SSE000000170": {
+    "content_hash": "sha256:f4524a1ddfe09ead9b18d8109ee31989",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "기초연금",
+    "path": "_programs/finance/기초연금.md",
+    "revision": 1,
+    "slug": "기초연금",
+    "status": "active"
+  },
   "bojo24-SSI000000020": {
     "content_hash": "sha256:84a44cf43ede65a5f91e04a5c1b68804",
     "first_published": "2026-08-14",
@@ -162,6 +206,17 @@
     "path": "_programs/care/한부모가족-아동양육비-지원.md",
     "revision": 1,
     "slug": "한부모가족-아동양육비-지원",
+    "status": "active"
+  },
+  "bojo24-WII000000310": {
+    "content_hash": "sha256:e15f2991af9f6fbe6d6bcaaa12c96d06",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "노후준비서비스제공",
+    "path": "_programs/care/노후준비서비스제공.md",
+    "revision": 1,
+    "slug": "노후준비서비스제공",
     "status": "active"
   }
 }

@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "전 국민이 지원 대상입니다.",
+      "특정한 선정 기준은 없습니다.",
+      "양육가정의 노후준비를 지원하는 것을 목표로 합니다."
+    ],
+    "faq": [
+      {
+        "a": "노후준비에 필요한 재무, 건강, 여가, 대인관계 등의 분야에 대한 종합적인 노후준비 진단, 상담, 교육, 관계기관 연계, 사후관리 서비스를 제공합니다.",
+        "q": "노후준비서비스제공의 주요 내용은 무엇입니까?"
+      }
+    ],
+    "note": "상세 내용은 보건복지부에서 확인하실 수 있습니다.",
+    "steps": [
+      {
+        "body": "온라인신청, 방문신청, 직접입력을 통해 신청할 수 있습니다. 구비 서류는 없습니다. 상시 접수를 받습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "노후준비서비스제공은 양육가정의 노후준비를 지원하는 제도입니다. 이 제도는 전국에서 시행됩니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "start": ""
+  },
+  "apply_url": "https://csa.nps.or.kr",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "○ 노후준비에 필요한 재무,건강,여가,대인관계 등의 분야에 대한 종합적인 노후준비 진단, 상담, 교육, 관계기관 연계, 사후관리 서비스 제공",
+  "category": "care",
+  "contact_raw": "국민연금공단/1355",
+  "content_hash": "sha256:e15f2991af9f6fbe6d6bcaaa12c96d06",
+  "criteria_raw": "○ 전 국민",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-14",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-WII000000310",
+  "is_mock": false,
+  "last_checked": "2026-08-14",
+  "last_updated": "2026-08-14",
+  "law_raw": "",
+  "name": "노후준비서비스제공",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000310",
+  "org": "보건복지부",
+  "primary_audience": "parent",
+  "receiver_raw": "국민연금공단 거점지사 또는 지자체 노후준비지원센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "노후준비서비스제공",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 개인",
+  "source_id": "WII000000310",
+  "source_registered": "2020-12-17",
+  "status": "active",
+  "target_raw": "○ 전 국민",
+  "view_count": 547637
+}
