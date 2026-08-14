@@ -160,17 +160,12 @@ layout: default
     {{ content }}
   </article>
 
-  {% comment %} ── 대상 태그 ── {% endcomment %}
-  {% if page.audiences.size > 0 %}
-  <div class="post-tags">
-    {% for aud in page.audiences %}
-    {% assign aud_meta = site.data.taxonomy.audiences[aud] %}
-    <a class="post-tag" href="{{ '/who/' | append: aud | append: '/' | relative_url }}">
-      {{ aud_meta.label | default: aud }}
-    </a>
-    {% endfor %}
-  </div>
-  {% endif %}
+  {% comment %}
+    대상 태그(.post-tags)는 뺐다. 배지 한두 개가 본문과 출처 사이에서 한 줄을
+    통째로 차지하는데, 같은 대상 허브로 가는 길은 상단 브레드크럼과 아래
+    '함께 보면 좋은 제도'가 이미 열어 준다.
+    (/brief/ 아카이브는 계속 .post-tags 를 쓴다 — 여기서만 뺀 것이다.)
+  {% endcomment %}
 
   {% comment %}
     ── 출처 · 면책 ──
