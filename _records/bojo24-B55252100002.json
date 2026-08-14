@@ -1,0 +1,65 @@
+{
+  "_prose": {
+    "eligibility": [
+      "충남 서천군 서면 주민 또는 주민의 자녀입니다.",
+      "취약계층 또는 성적우수학생입니다.",
+      "양육가정의 자녀입니다."
+    ],
+    "faq": [
+      {
+        "a": "발전소 주변지역 장학금 지원의 신청 기간은 2026-11-23 ~ 2026-12-11입니다.",
+        "q": "발전소 주변지역 장학금 지원의 신청 기간은 언제인가요?"
+      }
+    ],
+    "note": "발전소 주변지역 장학금 지원의 세부 사항은 한국중부발전(주)에서 확인할 수 있습니다.",
+    "steps": [
+      {
+        "body": "발전소 주변지역 장학금 지원은 방문신청으로 진행합니다. 지원을 희망하는 대상자는 방문신청을 통해 지원할 수 있습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "발전소 주변지역 장학금 지원은 양육가정의 자녀를 대상으로 장학금을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "2026-12-11",
+    "start": "2026-11-23"
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "○ 발전소주변지역 지역주민 또는 지역주민 자녀 대상 장학금 지원",
+  "category": "education",
+  "contact_raw": "경영기획부/070-7511-6109",
+  "content_hash": "sha256:741a50c74f08deb48788ae58e1355d40",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [],
+  "first_published": "2026-08-14",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-B55252100002",
+  "is_mock": false,
+  "last_checked": "2026-08-14",
+  "last_updated": "2026-08-14",
+  "law_raw": "",
+  "name": "발전소 주변지역 장학금 지원(신서천)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252100002",
+  "org": "한국중부발전(주)",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "발전소-주변지역-장학금-지원-신서천",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "B55252100002",
+  "source_registered": "2022-07-15",
+  "status": "upcoming",
+  "target_raw": "충남 서천군 서면 주민 또는 주민의 자녀 대상 취약계층 및 성적우수학생",
+  "view_count": 598
+}

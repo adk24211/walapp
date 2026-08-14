@@ -186,6 +186,17 @@
     "slug": "실업크레딧-지원",
     "status": "active"
   },
+  "bojo24-B55252100002": {
+    "content_hash": "sha256:741a50c74f08deb48788ae58e1355d40",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "발전소 주변지역 장학금 지원(신서천)",
+    "path": "_programs/education/발전소-주변지역-장학금-지원-신서천.md",
+    "revision": 1,
+    "slug": "발전소-주변지역-장학금-지원-신서천",
+    "status": "upcoming"
+  },
   "bojo24-B55252100003": {
     "content_hash": "sha256:c7ec914cb41dbbd32059909a32be2b68",
     "first_published": "2026-08-14",
