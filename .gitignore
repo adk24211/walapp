@@ -24,6 +24,11 @@ venv/
 .claude/
 Gemfile.lock
 
+# 레이아웃 점검 도구(scripts/check_layout.mjs)가 쓰는 것들.
+# playwright 는 로컬에서만 필요하고 사이트 산출물과 무관하다.
+node_modules/
+.layout-shots/
+
 # ── 파이프라인 산출물 ────────────────────────────────────────
 # 실 API 전환 완료. 아래 셋은 **반드시 커밋된다** (더 이상 무시하지 않는다):
 #

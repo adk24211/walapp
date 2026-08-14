@@ -101,26 +101,25 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
     # 한 번 더 찍으면 글자까지 똑같은 문단이 두 번 나온다.
     # front matter 의 `summary` 로만 넘기고(히어로·카드·검색이 그걸 쓴다) 여기선 생략.
 
-    # ── 2) 한눈에 보기 — 짧은 메타만 표로 ──
-    # 실제 보조금24 데이터의 지원대상·지원내용·선정기준은 '○'/'-' 불릿을 가진 장문이다
-    # (근로장려금 선정기준은 2천 자가 넘는다). 표 한 칸에 넣으면 읽을 수 없으므로
-    # 메타 정보만 표로 두고, 장문은 아래에서 줄 구조를 살려 따로 렌더한다.
-    parts += ['<h2 class="cn-h">한눈에 보기</h2>', open_block("cn-table cn-spec"), "<table>"]
-    parts += ["  <tbody>"]
+    # ── 2) 신청 창구 — 짧은 메타만 표로 ──
+    # 진행 상태·신청 기간·소관 기관·지원 지역은 페이지 상단 히어로의 '핵심 4값'에
+    # 이미 큰 글씨로 나온다. 여기서 또 찍으면 같은 값을 두 번 읽게 되므로,
+    # 이 표에는 히어로에 없는 것만 남긴다.
+    #
+    # 장문(지원대상·지원내용·선정기준)은 표 한 칸에 넣으면 읽을 수 없다
+    # (근로장려금 선정기준은 2천 자가 넘는다). 아래에서 줄 구조를 살려 따로 렌더한다.
     meta_rows = [
-        ("진행 상태", _status_text(record)),
-        ("신청 기간", _period_text(record)),
-        ("소관 기관", record.org),
-        ("지원 지역", record.region.label),
         ("접수 기관", record.receiver_raw),
         ("문의처", record.contact_raw),
         ("근거 법령", record.law_raw),
     ]
-    for label, value in meta_rows:
-        if not str(value).strip():
-            continue
-        parts.append(f"    <tr><th>{_esc(label)}</th><td>{_esc_lines(value)}</td></tr>")
-    parts += ["  </tbody>", "</table>", "</div>", ""]
+    rows = [(label, value) for label, value in meta_rows if str(value).strip()]
+    if rows:
+        parts += ['<h2 class="cn-h">신청 창구</h2>', open_block("cn-table cn-spec"), "<table>"]
+        parts += ["  <tbody>"]
+        for label, value in rows:
+            parts.append(f"    <tr><th>{_esc(label)}</th><td>{_esc_lines(value)}</td></tr>")
+        parts += ["  </tbody>", "</table>", "</div>", ""]
 
     # ── 2-b) 사실 원본 장문 (LLM 미개입) ──
     # 원문은 그대로 싣되, 아래 체크리스트·단계가 같은 내용을 쉬운 말로 다시 쓴다.
