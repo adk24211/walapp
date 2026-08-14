@@ -1,4 +1,15 @@
 {
+  "bojo24-134200000045": {
+    "content_hash": "sha256:3dcf4cd48ce4c41f906bada8e5e3a69b",
+    "first_published": "2026-08-15",
+    "last_checked": "2026-08-15",
+    "last_updated": "2026-08-15",
+    "name": "평생교육이용권 지원",
+    "path": "_programs/finance/평생교육이용권-지원.md",
+    "revision": 1,
+    "slug": "평생교육이용권-지원",
+    "status": "active"
+  },
   "bojo24-135200000002": {
     "content_hash": "sha256:c3ec263eb3f2a8eb62489cd6ec97ab73",
     "first_published": "2026-08-14",
@@ -285,6 +296,17 @@
     "slug": "예체능-우수-학생-장학금",
     "status": "upcoming"
   },
+  "bojo24-SD0000003485": {
+    "content_hash": "sha256:32a0aeb9312c51765f367510dd440ab2",
+    "first_published": "2026-08-15",
+    "last_checked": "2026-08-15",
+    "last_updated": "2026-08-15",
+    "name": "농업종합자금 지원 (원예, 축산, 가공사업 등)",
+    "path": "_programs/finance/농업종합자금-지원-원예-축산-가공사업-등.md",
+    "revision": 1,
+    "slug": "농업종합자금-지원-원예-축산-가공사업-등",
+    "status": "active"
+  },
   "bojo24-SD0000011848": {
     "content_hash": "sha256:f6c0aff2e40c67e05abe266c1100f997",
     "first_published": "2026-08-14",
@@ -316,6 +338,17 @@
     "path": "_programs/health/지역사회서비스.md",
     "revision": 1,
     "slug": "지역사회서비스",
+    "status": "active"
+  },
+  "bojo24-SPE000000060": {
+    "content_hash": "sha256:c1b764493fc5559e7ba4df3864068fe3",
+    "first_published": "2026-08-15",
+    "last_checked": "2026-08-15",
+    "last_updated": "2026-08-15",
+    "name": "보험급여 (건강보험 장애인보조기기)",
+    "path": "_programs/health/보험급여-건강보험-장애인보조기기.md",
+    "revision": 1,
+    "slug": "보험급여-건강보험-장애인보조기기",
     "status": "active"
   },
   "bojo24-SSE000000100": {
@@ -360,6 +393,17 @@
     "path": "_programs/care/노후준비서비스제공.md",
     "revision": 1,
     "slug": "노후준비서비스제공",
+    "status": "active"
+  },
+  "bojo24-WII000001470": {
+    "content_hash": "sha256:3eaf8d6a749840faeee195860773ed88",
+    "first_published": "2026-08-15",
+    "last_checked": "2026-08-15",
+    "last_updated": "2026-08-15",
+    "name": "공공분양 주택공급",
+    "path": "_programs/housing/공공분양-주택공급.md",
+    "revision": 1,
+    "slug": "공공분양-주택공급",
     "status": "active"
   }
 }

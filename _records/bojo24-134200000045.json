@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "19세 이상 성인 중 기초생활보장 수급자, 차상위계층, 지역특화 대상자 등이 지원 대상입니다.",
+      "장애인복지법 상 장애수당 수급자도 지원 대상입니다.",
+      "한부모가족 지원 대상자도 지원 대상입니다.",
+      "그밖에 광역지자체가 정하는 지역특화 대상자도 지원 대상입니다."
+    ],
+    "faq": [
+      {
+        "a": "1인당 연간 35만원 평생교육강좌 수강료 및 해당 강좌의 교재비에 사용 가능한 이용권을 지원합니다.",
+        "q": "지원 내용은 무엇인가요?"
+      }
+    ],
+    "note": "자세한 사항은 교육부에 확인하시기 바랍니다.",
+    "steps": [
+      {
+        "body": "온라인으로 신청하실 수 있습니다. 평생교육이용권 신청서, 이용자 준수사항 안내 확인 동의서, 학업계획서(선택)를 준비하시면 됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "평생교육이용권 지원 제도는 양육가정, 장애인, 저소득 가구 등에게 평생교육강좌 수강료 및 교재비를 지원합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "start": ""
+  },
+  "apply_url": "http://www.lllcard.kr",
+  "audiences": [
+    "parent",
+    "disabled",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 1인당 연간 35만원 평생교육강좌 수강료 및 해당 강좌의 교재비에 사용가능한 이용권 지원",
+  "category": "finance",
+  "contact_raw": "평생교육이용권 중앙상담센터/1600-3005",
+  "content_hash": "sha256:3dcf4cd48ce4c41f906bada8e5e3a69b",
+  "criteria_raw": "○ ｢국민기초생활 보장법｣ 제2조 제2호에 따른 수급자 및 같은 법 제10호에 따른 차상위계층\n- ｢장애인복지법｣ 상 장애수당 수급자는 같은 법 시행령에 따라 국민기초생활 보장법상 수급자 또는 차상위계층에 포함\n\n○ ｢장애인연금법｣ 제2조 제4호에 따른 연금수급자\n- 이때에는 국민기초생활 보장법상 수급자 또는 차상위계층에 해당하는 경우에 한해 신청 가능\n\n○ ｢한부모가족지원법｣ 제5조에 따른 한부모가족 지원 대상자\n\n○ 그밖에 광역지자체가 정하는 지역특화 대상자",
+  "deferred_detail": false,
+  "documents_raw": [
+    "○ 평생교육이용권 신청서",
+    "○ 이용자 준수사항 안내 확인 동의서",
+    "○ 학업계획서(선택)"
+  ],
+  "first_published": "2026-08-15",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-134200000045",
+  "is_mock": false,
+  "last_checked": "2026-08-15",
+  "last_updated": "2026-08-15",
+  "law_raw": "",
+  "name": "평생교육이용권 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/134200000045",
+  "org": "교육부",
+  "primary_audience": "lowincome",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "평생교육이용권-지원",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 이용권 개인",
+  "source_id": "134200000045",
+  "source_registered": "2020-12-17",
+  "status": "active",
+  "target_raw": "○ 19세 이상 성인 중 기초생활보장 수급자, 차상위계층, 지역특화 대상자 등",
+  "view_count": 215357
+}
