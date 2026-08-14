@@ -480,3 +480,73 @@
 /* 목차 번호·호버 — 분야 색을 잉크로. 목차는 구조를 보여 주는 장치라 색이 필요 없다. */
 .is-program .post-toc li::before { color: var(--ink3); }
 .is-program .post-toc a:hover { color: var(--ink); }
+
+/* ═══════════════════════════════════════════════════════════
+   H안 확장 ③ — 스크롤 줄이기
+   상세 페이지가 데스크톱 5.1화면, 모바일 6.1화면이었다.
+   본문이 62%를 차지했고 그 안에서 원문과 LLM 재서술이 같은 내용을 두 번 실었다.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ① 원문 접기 — 재서술이 있는 '지원 대상·선정 기준'만 접는다.
+   '지원 내용'은 금액이 적힌 유일한 곳이라 접지 않는다 (render.py 주석 참고). */
+.is-program .cn-fold {
+  border: 1px solid var(--line); border-radius: 10px;
+  background: var(--surface); margin: 0 0 1.4rem;
+}
+.is-program .cn-fold > summary {
+  display: flex; align-items: center; justify-content: space-between; gap: .75rem;
+  padding: .85rem 1.1rem; cursor: pointer; list-style: none;
+  font-size: .9rem; font-weight: 600; color: var(--ink2);
+  border-radius: 10px; transition: background .12s;
+}
+.is-program .cn-fold > summary::-webkit-details-marker { display: none; }
+.is-program .cn-fold > summary:hover { background: var(--surface2); }
+.is-program .cn-fold-hint { font-size: .75rem; font-weight: 500; color: var(--ink3); }
+/* 열림 상태를 화살표로 알린다 */
+.is-program .cn-fold > summary::after {
+  content: "▾"; color: var(--ink3); font-size: .8rem; flex: 0 0 auto; transition: transform .15s;
+}
+.is-program .cn-fold[open] > summary::after { transform: rotate(180deg); }
+.is-program .cn-fold[open] > summary { border-bottom: 1px solid var(--line); border-radius: 10px 10px 0 0; }
+.is-program .cn-fold-body { padding: 1.1rem 1.25rem 1.2rem; }
+.is-program .cn-fold-body p { margin: 0 0 .55rem; }
+.is-program .cn-fold-body ul { margin: 0 0 .55rem; padding-left: 1.15rem; }
+.is-program .cn-fold-body > :last-child { margin-bottom: 0; }
+
+/* ② 목차 — 데스크톱은 본문 왼쪽에 붙여 두고, 모바일은 접는다.
+   기존에는 본문 시작 전에 9줄(319px)을 통째로 밀고 지나가야 했다. */
+@media (min-width: 1100px) {
+  .post-content-wrap.is-program {
+    max-width: calc(var(--container) + 260px);
+    display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 2.5rem;
+    align-items: start;
+  }
+  .is-program .post-toc {
+    position: sticky; top: 72px; margin: 0; padding: 0 0 0 .1rem;
+    background: transparent; border: 0; border-left: 0; max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
+  .is-program .post-toc .post-toc-title { font-size: .72rem; letter-spacing: .08em; }
+  .is-program .post-toc li { font-size: .82rem; }
+  /* 본문·아래 블록은 오른쪽 열에 */
+  .post-content-wrap.is-program > :not(.post-toc) { grid-column: 2; }
+}
+@media (max-width: 1099px) {
+  /* 모바일·태블릿 — 제목만 보이고 눌러야 펼쳐진다 */
+  .is-program .post-toc { padding: 0; }
+  .is-program .post-toc .post-toc-title {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: .85rem 1.1rem; margin: 0; cursor: pointer;
+  }
+  .is-program .post-toc .post-toc-title::after { content: "▾"; color: var(--ink3); font-size: .8rem; }
+  .is-program .post-toc.is-open .post-toc-title::after { content: "▴"; }
+  .is-program .post-toc ol { display: none; padding: 0 1.1rem 1rem; }
+  .is-program .post-toc.is-open ol { display: block; }
+}
+
+/* ④ 관련 제도 — 모바일에서 4개가 세로로 483px(9%)를 먹었다 */
+@media (max-width: 620px) {
+  .is-program .related-grid, .related-grid { grid-template-columns: repeat(2, 1fr); gap: .6rem; }
+  .related-card { padding: .8rem .9rem; }
+  .related-title { font-size: .86rem; }
+}

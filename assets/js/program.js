@@ -23,6 +23,29 @@
       tocList.appendChild(li);
     });
     if (tocList.children.length >= 2) toc.hidden = false;
+
+    // 좁은 화면에서는 목차를 접는다. 항상 펼쳐 두면 9줄(319px)을 밀고 지나가야
+    // 본문이 시작된다 — 모바일에서 그건 화면의 3분의 1이다.
+    // 넓은 화면은 CSS 가 왼쪽 sticky 로 빼므로 토글이 필요 없다.
+    var tocTitle = toc.querySelector('.post-toc-title');
+    if (tocTitle) {
+      tocTitle.setAttribute('role', 'button');
+      tocTitle.setAttribute('tabindex', '0');
+      tocTitle.setAttribute('aria-expanded', 'false');
+      tocTitle.setAttribute('aria-controls', 'post-toc-list');
+      var toggle = function () {
+        var open = toc.classList.toggle('is-open');
+        tocTitle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      };
+      tocTitle.addEventListener('click', toggle);
+      tocTitle.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+      // 목차 항목을 누르면 접어 준다 — 펼쳐진 채로 이동하면 목적지가 가려진다
+      tocList.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A' && toc.classList.contains('is-open')) toggle();
+      });
+    }
   }
 
   // 읽기 진행바
