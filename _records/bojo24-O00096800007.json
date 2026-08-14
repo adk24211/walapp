@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "중·고등학생이어야 합니다.",
+      "예·체능 분야 입상 경력이 있어야 합니다.",
+      "대회 규모, 주체지, 입상 순위, 입상 횟수에 따라 배점이 결정됩니다."
+    ],
+    "faq": [
+      {
+        "a": "예·체능 분야 수상경력이 있는 중·고생에게 1인당 1,000천원 장학금이 지급됩니다.",
+        "q": "장학금의 금액은 얼마인가요?"
+      }
+    ],
+    "note": "자세한 사항은 재단법인목포인재육성재단에 확인하시면 됩니다.",
+    "steps": [
+      {
+        "body": "신청은 방문신청으로 진행합니다. 구비 서류는 공고 확인이 필요합니다. 2026년 11월 1일부터 2026년 11월 30일까지 신청할 수 있습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "예체능 우수 학생 장학금은 양육가정의 중·고등학생을 지원합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "2026-11-30",
+    "start": "2026-11-01"
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "○ 수혜자에게 일시적으로 제공하는 현금성 장학금\n- 예·체능 분야 수상경력이 있는 중·고생에게 1인당 1,000천원 장학금 지급",
+  "category": "education",
+  "contact_raw": "목포인재육성재단/061-274-9888",
+  "content_hash": "sha256:79eb4197285121880d771bf4fe1354dc",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "공고 확인"
+  ],
+  "first_published": "2026-08-14",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-O00096800007",
+  "is_mock": false,
+  "last_checked": "2026-08-14",
+  "last_updated": "2026-08-14",
+  "law_raw": "",
+  "name": "예체능 우수 학생 장학금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00096800007",
+  "org": "재단법인목포인재육성재단",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "예체능-우수-학생-장학금",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "O00096800007",
+  "source_registered": "2022-07-15",
+  "status": "upcoming",
+  "target_raw": "관내 중·고등학생 중 예·체능 분야 입상자\n- 대회 규모, 주체지, 입상 순위, 입상 횟수에 따라 배점",
+  "view_count": 749
+}

@@ -274,6 +274,17 @@
     "slug": "고교-진학-후-성적우수-학생-장학금",
     "status": "upcoming"
   },
+  "bojo24-O00096800007": {
+    "content_hash": "sha256:79eb4197285121880d771bf4fe1354dc",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "예체능 우수 학생 장학금",
+    "path": "_programs/education/예체능-우수-학생-장학금.md",
+    "revision": 1,
+    "slug": "예체능-우수-학생-장학금",
+    "status": "upcoming"
+  },
   "bojo24-SD0000011848": {
     "content_hash": "sha256:f6c0aff2e40c67e05abe266c1100f997",
     "first_published": "2026-08-14",
