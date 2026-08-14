@@ -96,6 +96,38 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
     def open_block(cls: str) -> str:
         return f'<div class="cn {cls}" data-cat="{cat}">'
 
+    # ── 섹션 카드 (K안) ──
+    # 예전에는 본문 전체가 흰 카드 하나였고 그 안에 h2 와 블록이 평평하게 늘어섰다.
+    # 3,500px 를 스크롤하는 동안 경계가 없어 지금 어느 항목을 읽는지 목차를 봐야 알았다.
+    # 이제 항목마다 카드 하나를 주고 머리줄에 번호를 붙인다.
+    #
+    # 번호는 목차 번호와 같은 순서다 — h2 를 세는 program.js 의 목차와 여기 seq 가
+    # 같은 순서로 증가하므로, 목차의 04 와 본문 카드의 04 가 항상 같은 항목을 가리킨다.
+    # (본문에 h3 를 쓰기 시작하면 이 대응이 깨진다. 지금은 h4 만 쓴다.)
+    seq = 0
+
+    def sec(heading: str, blocks: list[str], *, key: bool = False) -> list[str]:
+        """제목 한 줄 + 본문 블록을 카드 하나로 묶는다.
+
+        `key=True` 는 '지원 내용' 전용이다. 금액이 적힌 곳이 거기뿐이라
+        테두리와 머리줄을 다르게 줘서 눈이 먼저 가게 한다.
+        """
+        nonlocal seq
+        seq += 1
+        out = [
+            f'<section class="cn-sec{" is-key" if key else ""}" data-cat="{cat}">',
+            '  <div class="cn-sec-head">',
+            f'    <span class="cn-sec-no">{seq:02d}</span>',
+            f'    <h2 class="cn-h">{_esc(heading)}</h2>',
+        ]
+        if key:
+            out.append('    <span class="cn-sec-tag">금액이 적힌 항목</span>')
+        out.append('  </div>')
+        out.append('  <div class="cn-sec-body">')
+        out += blocks
+        out += ["  </div>", "</section>", ""]
+        return out
+
     # ── 1) 한 줄 요약은 렌더하지 않는다 ──
     # 같은 문장이 이미 페이지 상단 히어로(`program-summary`)에 있다. 본문 첫 블록에
     # 한 번 더 찍으면 글자까지 똑같은 문단이 두 번 나온다.
@@ -115,11 +147,11 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
     ]
     rows = [(label, value) for label, value in meta_rows if str(value).strip()]
     if rows:
-        parts += ['<h2 class="cn-h">신청 창구</h2>', open_block("cn-table cn-spec"), "<table>"]
-        parts += ["  <tbody>"]
+        block = [open_block("cn-table cn-spec"), "<table>", "  <tbody>"]
         for label, value in rows:
-            parts.append(f"    <tr><th>{_esc(label)}</th><td>{_esc_lines(value)}</td></tr>")
-        parts += ["  </tbody>", "</table>", "</div>", ""]
+            block.append(f"    <tr><th>{_esc(label)}</th><td>{_esc_lines(value)}</td></tr>")
+        block += ["  </tbody>", "</table>", "</div>"]
+        parts += sec("신청 창구", block)
 
     # ── 2-b) 사실 원본 장문 (LLM 미개입) ──
     # 원문은 그대로 싣되, 아래 체크리스트·단계가 같은 내용을 쉬운 말로 다시 쓴다.
@@ -128,44 +160,45 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
     # ⚠️ '지원 내용'은 접지 않는다. 금액이 적힌 곳이 이 원문뿐이라 접으면 페이지에서
     #    금액이 사라진다. 지원금 사이트에서 그건 있을 수 없다. (한눈에 보기 표에는
     #    기간·기관만 있고 금액 칸이 없다.)
-    for heading, value, fold in (
-        ("지원 대상", record.target_raw, True),
-        ("지원 내용", record.benefit_raw, False),
-        ("선정 기준", record.criteria_raw, True),
+    for heading, value, fold, key in (
+        ("지원 대상", record.target_raw, True, False),
+        ("지원 내용", record.benefit_raw, False, True),
+        ("선정 기준", record.criteria_raw, True, False),
     ):
         if not str(value).strip():
             continue
-        # 제목은 <details> 밖에 둔다. 접힌 상태에서도 목차가 이 위치로 이동할 수 있어야 한다.
-        parts.append(f'<h2 class="cn-h">{_esc(heading)}</h2>')
+        # 제목은 카드 머리줄에 있고 <details> 밖이다. 접힌 상태에서도 목차가 이 위치로
+        # 이동할 수 있어야 한다.
         if fold:
-            parts.append(f'<details class="cn cn-fold" data-cat="{cat}">')
-            parts.append(f'  <summary>{_esc(heading)} 원문 펼치기'
-                         f'<span class="cn-fold-hint">공공데이터 원문</span></summary>')
-            parts.append('  <div class="cn-fold-body">')
-            parts.append(_render_lines(value))
-            parts += ["  </div>", "</details>", ""]
+            block = [
+                f'<details class="cn cn-fold" data-cat="{cat}">',
+                f'  <summary>{_esc(heading)} 원문 펼치기'
+                f'<span class="cn-fold-hint">공공데이터 원문</span></summary>',
+                '  <div class="cn-fold-body">',
+                _render_lines(value),
+                "  </div>",
+                "</details>",
+            ]
         else:
-            parts.append(open_block("cn-raw"))
-            parts.append(_render_lines(value))
-            parts += ["</div>", ""]
+            block = [open_block("cn-raw"), _render_lines(value), "</div>"]
+        parts += sec(heading, block, key=key)
 
     # ── 3) 나도 받을 수 있나요 — 체크리스트 ──
     eligibility = [c for c in (prose.get("eligibility") or []) if str(c).strip()]
     if eligibility:
-        parts.append('<h2 class="cn-h">나도 받을 수 있나요?</h2>')
-        parts.append(f'<ul class="cn cn-check" data-cat="{cat}">')
+        block = [f'<ul class="cn cn-check" data-cat="{cat}">']
         for item in eligibility:
-            parts.append(f"  <li>{_esc(item)}</li>")
-        parts += ["</ul>", ""]
+            block.append(f"  <li>{_esc(item)}</li>")
+        block.append("</ul>")
+        parts += sec("나도 받을 수 있나요?", block)
 
     # ── 4) 신청 방법 ──
     steps = [s for s in (prose.get("steps") or []) if s.get("body")]
     if steps:
-        parts.append('<h2 class="cn-h">어떻게 신청하나요?</h2>')
-        parts.append(f'<div class="cn cn-steps" data-cat="{cat}">')
+        block = [f'<div class="cn cn-steps" data-cat="{cat}">']
         for index, step in enumerate(steps, 1):
             title = re.sub(r"^\s*\d+\s*[.)]\s*", "", str(step.get("title", "")))
-            parts += [
+            block += [
                 '  <div class="cn-step">',
                 f'    <span class="cn-step-no">{index}</span>',
                 '    <div class="cn-step-body">',
@@ -174,45 +207,48 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
                 "    </div>",
                 "  </div>",
             ]
-        parts += ["</div>", ""]
+        block.append("</div>")
+        parts += sec("어떻게 신청하나요?", block)
 
     # ── 5) 준비 서류·서식 (API 원본) ──
     # 보조금24는 '구비서류', 복지로는 서식·안내 자료가 섞여 온다. 후자를 '필요한 서류'로
     # 단정하면 제출 대상이 아닌 안내문까지 서류로 읽힌다. 둘을 포괄하는 제목을 쓴다.
     if record.documents_raw:
-        parts.append('<h2 class="cn-h">준비 서류·서식</h2>')
-        parts.append(f'<ul class="cn cn-check" data-cat="{cat}">')
+        block = [f'<ul class="cn cn-check" data-cat="{cat}">']
         for doc in record.documents_raw:
-            parts.append(f"  <li>{_esc(doc)}</li>")
-        parts += ["</ul>", ""]
+            block.append(f"  <li>{_esc(doc)}</li>")
+        block.append("</ul>")
+        parts += sec("준비 서류·서식", block)
 
     # ── 6) 신청 기간 타임라인 (API 원본) ──
     timeline = _timeline(record)
     if timeline:
-        parts.append('<h2 class="cn-h">신청 일정</h2>')
-        parts.append(f'<ul class="cn cn-timeline" data-cat="{cat}">')
+        block = [f'<ul class="cn cn-timeline" data-cat="{cat}">']
         for when, what in timeline:
-            parts.append(
+            block.append(
                 f'  <li><span class="cn-tl-when">{_esc(when)}</span>'
                 f'<span class="cn-tl-what">{_esc(what)}</span></li>'
             )
-        parts += ["</ul>", ""]
+        block.append("</ul>")
+        parts += sec("신청 일정", block)
 
     # ── 7) FAQ ──
     faq = [f for f in (prose.get("faq") or []) if f.get("q") and f.get("a")]
     if faq:
-        parts.append('<h2 class="cn-h">자주 묻는 질문</h2>')
-        parts.append(f'<div class="cn cn-faq" data-cat="{cat}">')
+        block = [f'<div class="cn cn-faq" data-cat="{cat}">']
         for item in faq:
-            parts += [
+            block += [
                 "  <details>",
                 f'    <summary>{_esc(item["q"])}</summary>',
                 f'    <div class="cn-faq-body">{_esc(item["a"])}</div>',
                 "  </details>",
             ]
-        parts += ["</div>", ""]
+        block.append("</div>")
+        parts += sec("자주 묻는 질문", block)
 
     # ── 8) 주의 안내 ──
+    # 이건 섹션 카드로 만들지 않는다. 제목이 없는 경고 한 줄이라 번호를 붙이면
+    # 목차에 없는 항목이 본문에만 생겨 번호가 어긋난다. 카드 사이에 낀 알림으로 둔다.
     note = prose.get("note")
     if note:
         parts += [
@@ -229,15 +265,15 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
         (record.official_url, "소관 기관에서 자세히 보기"),
     ) if url]
     if links:
-        parts.append('<h2 class="cn-h">공식 창구</h2>')
-        parts.append(f'<div class="cn cn-links" data-cat="{cat}">')
+        block = [f'<div class="cn cn-links" data-cat="{cat}">']
         for url, label in links:
-            parts.append(
+            block.append(
                 f'  <a href="{_attr(url)}" target="_blank" rel="noopener nofollow">'
                 f'<i class="ti ti-external-link"></i> {_esc(label)}'
                 f' <span class="cn-link-ext">↗</span></a>'
             )
-        parts += ["</div>", ""]
+        block.append("</div>")
+        parts += sec("공식 창구", block)
 
     return "\n".join(parts)
 

@@ -103,36 +103,43 @@ layout: default
     <h1 class="program-title">{{ page.title }}</h1>
     {% if page.summary %}<p class="program-summary">{{ page.summary }}</p>{% endif %}
 
-    {% comment %} 핵심 4값 — 이걸 보려고 오는 사람이 대부분이다 {% endcomment %}
-    <dl class="program-facts">
-      <div>
-        <dt>지원 규모</dt>
-        <dd class="is-amount">{{ page.highlight | default: '원문 참고' }}</dd>
-      </div>
-      <div>
-        <dt>신청 기간</dt>
-        <dd>{% if page.apply_always %}상시 접수
-            {%- elsif page.apply_start and page.apply_end %}{{ page.apply_start }} ~ {{ page.apply_end }}
-            {%- elsif page.apply_end %}~ {{ page.apply_end }}
-            {%- else %}원문 참고{% endif %}</dd>
-      </div>
-      <div>
-        <dt>소관 기관</dt>
-        <dd>{{ page.org | default: '원문 참고' }}</dd>
-      </div>
-      <div>
-        <dt>지원 지역</dt>
-        <dd>{{ page.region_label | default: '전국' }}</dd>
-      </div>
-    </dl>
+    {% comment %}
+      핵심 4값 + 신청 버튼을 한 줄에 눕힌다 (K안).
+      전에는 4칸 격자가 두 줄을 먹고 그 아래 버튼이 또 한 줄이라, 첫 화면의 절반이
+      이 두 덩어리였다. 한 줄로 합치면 제목 바로 아래에서 '얼마·언제·어디서·누가' 와
+      신청 버튼이 한눈에 들어온다.
+    {% endcomment %}
+    <div class="program-bar">
+      <dl class="program-facts">
+        <div>
+          <dt>지원 규모</dt>
+          <dd class="is-amount">{{ page.highlight | default: '원문 참고' }}</dd>
+        </div>
+        <div>
+          <dt>신청 기간</dt>
+          <dd>{% if page.apply_always %}상시 접수
+              {%- elsif page.apply_start and page.apply_end %}{{ page.apply_start }} ~ {{ page.apply_end }}
+              {%- elsif page.apply_end %}~ {{ page.apply_end }}
+              {%- else %}원문 참고{% endif %}</dd>
+        </div>
+        <div>
+          <dt>소관 기관</dt>
+          <dd>{{ page.org | default: '원문 참고' }}</dd>
+        </div>
+        <div>
+          <dt>지원 지역</dt>
+          <dd>{{ page.region_label | default: '전국' }}</dd>
+        </div>
+      </dl>
 
-    {% if page.apply_url %}
-    <div class="program-cta">
-      <a class="cta-primary" href="{{ page.apply_url }}" target="_blank" rel="noopener nofollow">
-        <i class="ti ti-external-link" aria-hidden="true"></i> 공식 창구에서 신청하기
-      </a>
+      {% if page.apply_url %}
+      <div class="program-cta">
+        <a class="cta-primary" href="{{ page.apply_url }}" target="_blank" rel="noopener nofollow">
+          <i class="ti ti-external-link" aria-hidden="true"></i> 공식 창구에서 신청하기
+        </a>
+      </div>
+      {% endif %}
     </div>
-    {% endif %}
 
     {% comment %}
       전역 푸터가 '정부 공식 사이트가 아닙니다' 를 이미 말한다. 여기서 되풀이하면
