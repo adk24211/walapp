@@ -241,6 +241,17 @@
     "slug": "기획공연-및-전시-관람료-할인",
     "status": "active"
   },
+  "bojo24-O00096800001": {
+    "content_hash": "sha256:9390fbc01e406d3f8bbf4e104f786808",
+    "first_published": "2026-08-14",
+    "last_checked": "2026-08-14",
+    "last_updated": "2026-08-14",
+    "name": "우리지역 성적우수 대학생 장학금",
+    "path": "_programs/education/우리지역-성적우수-대학생-장학금.md",
+    "revision": 1,
+    "slug": "우리지역-성적우수-대학생-장학금",
+    "status": "upcoming"
+  },
   "bojo24-O00096800004": {
     "content_hash": "sha256:c95e571384211f41f87274da1497e803",
     "first_published": "2026-08-14",
