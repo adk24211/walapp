@@ -95,7 +95,7 @@ layout: default
     {% endif %}
 
     <div class="program-badges">
-      <span class="badge-cat {{ cat }}">{{ cat_meta.emoji }} {{ cat_meta.label | default: cat }}</span>
+      <span class="badge-cat {{ cat }}">{{ cat_meta.label | default: cat }}</span>
       <span class="badge-status is-{{ page.status | default: 'active' }}">
         {{ page.status_label | default: '시행중' }}
       </span>
@@ -158,7 +158,7 @@ layout: default
     {% for aud in page.audiences %}
     {% assign aud_meta = site.data.taxonomy.audiences[aud] %}
     <a class="post-tag" href="{{ '/who/' | append: aud | append: '/' | relative_url }}">
-      {{ aud_meta.emoji }} {{ aud_meta.label | default: aud }}
+      {{ aud_meta.label | default: aud }}
     </a>
     {% endfor %}
   </div>
