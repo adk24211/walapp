@@ -142,7 +142,11 @@ layout: default
   </div>
 </div>
 
-<div class="post-content-wrap">
+{% comment %}
+  `is-program` 은 H안(절제) 스타일의 적용 범위 표식이다. 본문 컴포넌트(.cn-*)는
+  구 브리핑 포스트도 함께 쓰므로, 이 클래스가 없으면 /brief/ 글까지 같이 바뀐다.
+{% endcomment %}
+<div class="post-content-wrap is-program">
   <nav class="post-toc cn" id="post-toc" data-cat="{{ cat }}" hidden>
     <div class="post-toc-title"><i class="ti ti-list" aria-hidden="true"></i> 목차</div>
     <ol id="post-toc-list"></ol>
