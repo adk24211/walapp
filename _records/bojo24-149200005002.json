@@ -1,0 +1,64 @@
+{
+  "_prose": {
+    "eligibility": [
+      "직업안정기관의 소개에 따라 거주지에서 25km 떨어진 곳에서 구직활동을 한 사람",
+      "구직활동을 한 날에 소요된 교통비와 숙박료를 지원받을 수 있습니다",
+      "지원 대상과 동일한 기준으로 선정합니다"
+    ],
+    "faq": [],
+    "note": "구체적인 신청 기간은 명시되지 않으므로 소관 기관에 확인하시는 것이 좋습니다.",
+    "steps": [
+      {
+        "body": "온라인신청이나 방문신청을 통해 지원을 받을 수 있습니다. 광역구직활동비 청구서와 운임 및 숙박료 증빙자료를 준비해야 합니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "광역구직활동비는 구직활동을 하는 사람에게 교통비와 숙박료를 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "start": ""
+  },
+  "apply_url": "http://www.work24.go.kr/",
+  "audiences": [
+    "jobseeker",
+    "business"
+  ],
+  "benefit_raw": "○ 구직활동을 한 날에 소요된 교통비와 숙박료 지급",
+  "category": "jobs",
+  "contact_raw": "고용노동부 고객상담센터/1350",
+  "content_hash": "sha256:e4387133e0e779c8900843b8d635bd27",
+  "criteria_raw": "지원대상과 동일",
+  "deferred_detail": false,
+  "documents_raw": [
+    "광역구직활동비 청구서",
+    "운임 및 숙박료 증빙자료"
+  ],
+  "first_published": "2026-08-16",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-149200005002",
+  "is_mock": false,
+  "last_checked": "2026-08-16",
+  "last_updated": "2026-08-16",
+  "law_raw": "",
+  "name": "광역구직활동비",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005002",
+  "org": "고용노동부",
+  "primary_audience": "jobseeker",
+  "receiver_raw": "고용노동부 각 지역 관할 고용센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "광역구직활동비",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 개인",
+  "source_id": "149200005002",
+  "source_registered": "2020-12-17",
+  "status": "active",
+  "target_raw": "○ 직업안정기관의 소개에 따라 거주지에서 25km 떨어진 곳에서 구직활동을 한 사람",
+  "view_count": 84576
+}
