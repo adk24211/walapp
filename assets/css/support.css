@@ -768,3 +768,52 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
   .is-program .cn-sec-body { padding: 1rem 1.05rem 1.1rem; }
   .apply-dock-btn { padding: .7rem .9rem; font-size: .84rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   출처표시 · 공유
+   ═══════════════════════════════════════════════════════════ */
+
+/* 출처표시 — 한 문단이던 것을 항목별 줄로. 이 사이트에서 가장 중요한 구분은
+   '어디까지가 공공데이터 원문이고 어디부터가 우리가 쓴 문장인가' 인데,
+   그게 문단 안에 섞여 있으면 읽히지 않는다. 줄을 나눠 눈으로 구분되게 한다. */
+.source-rows { display: grid; gap: .4rem; margin: .1rem 0 0; }
+.source-rows > div { display: flex; gap: .75rem; align-items: baseline; }
+.source-rows dt {
+  flex: 0 0 108px; font-size: .76rem; font-weight: 700; color: var(--ink3);
+  letter-spacing: -.01em;
+}
+.source-rows dd {
+  margin: 0; flex: 1 1 auto; min-width: 0;
+  font-size: .82rem; line-height: 1.6; color: var(--ink2); word-break: keep-all;
+}
+.cn-source-foot { margin: 1rem 0 0; font-size: .8rem; }
+.is-program .cn-source-foot a { color: var(--ink2); text-decoration: underline; }
+.is-program .cn-source-foot a:hover { color: var(--ink); }
+
+@media (max-width: 520px) {
+  .source-rows > div { display: block; }
+  .source-rows dt { margin-bottom: .1rem; }
+}
+
+/* 공유 — 제목 한 줄, 버튼 한 줄의 2행 배치 */
+.is-program .post-share {
+  display: block;
+  padding: 1.1rem 0 1.2rem;
+}
+.is-program .post-share .share-label {
+  display: block; margin-bottom: .6rem;
+  font-size: .86rem; font-weight: 700; color: var(--ink); letter-spacing: -.02em;
+}
+.is-program .post-share .share-btns { gap: .5rem; }
+.is-program .share-btn { font-size: .84rem; padding: .5rem .85rem; }
+.is-program .share-btn i { font-size: 15px; }
+
+/* 공유 결과 안내 — 카카오톡·인스타그램은 눌렀을 때 무슨 일이 일어났는지
+   말해 주지 않으면 '눌러도 아무 일 없는 버튼' 이 된다. */
+.share-toast {
+  margin: 0; max-height: 0; overflow: hidden; opacity: 0;
+  font-size: .8rem; line-height: 1.6; color: var(--ink2); word-break: keep-all;
+  transition: max-height .18s ease, opacity .18s ease, margin .18s ease;
+}
+.share-toast.is-on { max-height: 5rem; opacity: 1; margin-top: .6rem; }
+@media (prefers-reduced-motion: reduce) { .share-toast { transition: none; } }
