@@ -94,26 +94,105 @@
     else if (narrow.addListener) narrow.addListener(apply);
   }
 
-  // 링크 복사
+  // ── 공유 ──
+  // 카카오톡·인스타그램은 트위터/페이스북 같은 '주소만 붙이면 되는' 공유 URL 이 없다.
+  //   · 카카오톡  — JavaScript SDK + 앱 키가 있어야 공유창이 뜬다.
+  //   · 인스타그램 — 웹에서 글·스토리를 미리 채우는 공개 API 가 아예 없다.
+  // 그래서 순서대로 내려간다: 전용 SDK → OS 공유 시트 → 링크 복사.
+  // 눌러도 아무 일이 없는 버튼은 두지 않는다.
+  var toastEl = document.getElementById('share-toast');
+  var toastTimer = null;
+  function toast(msg) {
+    if (!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-on');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toastEl.classList.remove('is-on'); }, 3200);
+  }
+
+  var pageUrl = window.location.href;
+  var pageTitle = document.title;
+
+  function copyLink(then) {
+    var done = function (ok) { if (then) then(ok); };
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(pageUrl)
+        .then(function () { done(true); })
+        .catch(function () { done(false); });
+      return;
+    }
+    var t = document.createElement('textarea');
+    t.value = pageUrl;
+    t.setAttribute('readonly', '');
+    t.style.position = 'fixed';
+    t.style.opacity = '0';
+    document.body.appendChild(t);
+    t.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(t);
+    done(ok);
+  }
+
+  // navigator.share 가 있으면 OS 공유 시트를 띄운다. 거기에 카카오톡·인스타그램이
+  // 앱으로 잡혀 있으면 사용자가 직접 고를 수 있다.
+  function nativeShare() {
+    if (!navigator.share) return false;
+    navigator.share({ title: pageTitle, url: pageUrl }).catch(function () {});
+    return true;
+  }
+
+  function fallbackCopy(msg) {
+    copyLink(function (ok) {
+      toast(ok ? msg : '링크 복사에 실패했습니다. 주소창의 주소를 직접 복사해 주세요.');
+    });
+  }
+
+  var kakaoReady = false;
+  if (window.Kakao && window.KAKAO_JS_KEY) {
+    try {
+      if (!window.Kakao.isInitialized()) window.Kakao.init(window.KAKAO_JS_KEY);
+      kakaoReady = window.Kakao.isInitialized();
+    } catch (e) { kakaoReady = false; }
+  }
+
   var copyBtn = document.getElementById('share-copy');
   if (copyBtn) {
     copyBtn.addEventListener('click', function () {
-      var done = function () {
+      copyLink(function (ok) {
+        if (!ok) return toast('링크 복사에 실패했습니다. 주소창의 주소를 직접 복사해 주세요.');
         var orig = copyBtn.innerHTML;
         copyBtn.innerHTML = '<i class="ti ti-check"></i> 복사됨';
         setTimeout(function () { copyBtn.innerHTML = orig; }, 1500);
-      };
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(window.location.href).then(done).catch(done);
-      } else {
-        var t = document.createElement('textarea');
-        t.value = window.location.href;
-        document.body.appendChild(t);
-        t.select();
-        try { document.execCommand('copy'); } catch (e) {}
-        document.body.removeChild(t);
-        done();
+        toast('링크를 복사했습니다.');
+      });
+    });
+  }
+
+  var kakaoBtn = document.getElementById('share-kakao');
+  if (kakaoBtn) {
+    kakaoBtn.addEventListener('click', function () {
+      if (kakaoReady) {
+        try {
+          window.Kakao.Share.sendDefault({
+            objectType: 'text',
+            text: pageTitle,
+            link: { mobileWebUrl: pageUrl, webUrl: pageUrl }
+          });
+          return;
+        } catch (e) { /* 아래 대체 경로로 */ }
       }
+      if (nativeShare()) return;
+      fallbackCopy('링크를 복사했습니다. 카카오톡 대화창에 붙여넣어 주세요.');
+    });
+  }
+
+  var instaBtn = document.getElementById('share-instagram');
+  if (instaBtn) {
+    instaBtn.addEventListener('click', function () {
+      // 인스타그램에는 링크 공유 endpoint 가 없다. 앱 공유 시트가 유일한 정식 경로다.
+      if (nativeShare()) return;
+      fallbackCopy('인스타그램은 웹에서 바로 공유하는 기능을 제공하지 않습니다. 링크를 복사했으니 스토리·프로필·DM에 붙여넣어 주세요.');
     });
   }
 })();

@@ -173,23 +173,43 @@ layout: default
   {% endcomment %}
 
   {% comment %}
-    ── 출처 · 면책 ──
-    예전에는 이 아래에 `.post-disclaimer` 가 따로 있었는데, 같은 말을 하는 블록이
-    한 페이지에 넷이었다: 히어로 고지 · 이 출처 블록 · 면책 문구 · 전역 푸터 문구.
-    면책 문구를 이 블록에 흡수했다. 고유했던 것은 면책 조항 링크뿐이라 그것만 옮겼다.
+    ── 출처표시 ──
+    예전 문구는 뉴스 브리핑 시절('대한민국 정책브리핑 · 공공누리 제1유형') 을 그대로
+    물려받은 것이었다. 지금 이 페이지의 출처는 뉴스가 아니라 공공데이터포털의
+    데이터셋이고, 공공누리 유형은 데이터셋마다 다르므로 확인하지 않은 값을 적을 수 없다.
+    적을 수 있는 것만 적는다 — 어느 데이터셋에서 왔고, 어디까지가 원문이고, 어디부터가
+    본 사이트가 쓴 문장이며, 언제 확인했는가.
 
-    남긴 둘은 역할이 다르다 —
-      히어로 고지: 신청 버튼 바로 위, 누르기 직전에 읽히는 자리
-      전역 푸터 : 사이트 전체에 걸리는 고지
+    '지침 개정으로 달라질 수 있다' 는 전역 푸터가 이미 말하므로 여기서 되풀이하지
+    않는다. 이 페이지에서 그 취지의 문장은 푸터 한 곳뿐이어야 한다.
   {% endcomment %}
+  {% assign src_label = '공공데이터포털' %}
+  {% if page.source == 'bojo24' %}{% assign src_label = '공공데이터포털 · 보조금24' %}
+  {% elsif page.source == 'welfare-central' %}{% assign src_label = '공공데이터포털 · 중앙부처 복지서비스' %}
+  {% endif %}
   <div class="cn cn-source" data-cat="{{ cat }}">
     <span class="cn-source-tag">출처표시</span>
-    <p>
-      {{ page.org | default: '소관 기관' }} · 공공누리 제1유형.
-      제도의 금액·요건·기간은 공공데이터 원문을 그대로 옮긴 것이며, 설명 문장만 본 사이트가 쉬운 말로 다시 썼습니다.
-      {% if page.last_checked %}최종 확인일은 {{ page.last_checked }}이며, 이후 변경되었을 수 있습니다.{% endif %}
-      <a href="{{ '/disclaimer/' | relative_url }}">면책 조항</a>
-    </p>
+    <dl class="source-rows">
+      <div>
+        <dt>원문 출처</dt>
+        <dd>{{ src_label }}{% if page.org %} · {{ page.org }} 제공{% endif %}</dd>
+      </div>
+      <div>
+        <dt>원문 그대로</dt>
+        <dd>금액 · 지원 대상 · 선정 기준 · 신청 기간 · 접수 기관 · 문의처 · 준비 서류</dd>
+      </div>
+      <div>
+        <dt>본 사이트가 쓴 문장</dt>
+        <dd>맨 위 한 줄 요약과 ‘나도 받을 수 있나요’ · ‘어떻게 신청하나요’ · ‘자주 묻는 질문’</dd>
+      </div>
+      {% if page.last_checked %}
+      <div>
+        <dt>확인일</dt>
+        <dd>{{ page.last_checked }}</dd>
+      </div>
+      {% endif %}
+    </dl>
+    <p class="cn-source-foot"><a href="{{ '/disclaimer/' | relative_url }}">면책 조항</a></p>
   </div>
 
   {% comment %} ── 함께 보면 좋은 제도 — 같은 분야 → 같은 대상 순 ── {% endcomment %}
@@ -214,23 +234,30 @@ layout: default
   </section>
   {% endif %}
 
+  {% comment %}
+    ── 공유 ──
+    2행 배치: 첫 줄에 제목, 둘째 줄에 버튼들.
+    카카오톡·인스타그램은 트위터·페이스북 같은 '주소만 붙이면 되는' 공유 URL 이 없다.
+      · 카카오톡 — 자바스크립트 SDK + 앱 키가 있어야 한다. _config.yml 의
+        `kakao_js_key` 가 채워지면 program.js 가 진짜 카카오 공유창을 띄운다.
+      · 인스타그램 — 웹에서 글/스토리를 미리 채우는 공개 API 가 아예 없다.
+    둘 다 키/API 가 없을 때는 OS 공유 시트(navigator.share)를 띄우고, 그것도 없으면
+    링크를 복사해 준다. 눌러도 아무 일이 없는 버튼을 두지는 않는다.
+  {% endcomment %}
   <div class="post-share">
     <span class="share-label">이 제도 공유하기</span>
     <div class="share-btns">
-      <button type="button" class="share-btn" id="share-copy" aria-label="링크 복사">
+      <button type="button" class="share-btn" id="share-copy">
         <i class="ti ti-link" aria-hidden="true"></i> 링크 복사
       </button>
-      <a class="share-btn" target="_blank" rel="noopener"
-         href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url | uri_escape }}"
-         aria-label="X(트위터)에 공유">
-        <i class="ti ti-brand-x" aria-hidden="true"></i> X
-      </a>
-      <a class="share-btn" target="_blank" rel="noopener"
-         href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | uri_escape }}"
-         aria-label="페이스북에 공유">
-        <i class="ti ti-brand-facebook" aria-hidden="true"></i> Facebook
-      </a>
+      <button type="button" class="share-btn" id="share-kakao">
+        <i class="ti ti-message-circle-2" aria-hidden="true"></i> 카카오톡
+      </button>
+      <button type="button" class="share-btn" id="share-instagram">
+        <i class="ti ti-brand-instagram" aria-hidden="true"></i> 인스타그램
+      </button>
     </div>
+    <p class="share-toast" id="share-toast" role="status" aria-live="polite"></p>
   </div>
 </div>
 
@@ -255,4 +282,21 @@ layout: default
 </div>
 {% endif %}
 
+{% comment %}
+  카카오 공유는 앱 키가 있어야 동작한다. _config.yml 에 `kakao_js_key` 를 넣으면
+  이 스크립트가 붙고 program.js 가 진짜 공유창을 띄운다. 키가 없으면 스크립트를
+  아예 불러오지 않는다 — 쓰지도 않을 외부 스크립트를 33개 페이지에 달 이유가 없다.
+  (카카오 개발자센터에서 JavaScript 키 발급 + 플랫폼에 adk24211.github.io 등록 필요)
+{% endcomment %}
+{% if site.kakao_js_key %}
+{% comment %}
+  ⚠️ integrity(SRI) 는 일부러 비워 두었다. 이 개발 환경에서는 프록시가
+  t1.kakaocdn.net 을 막아 해시를 직접 계산해 검증할 수 없었고, 확인하지 않은
+  해시를 적으면 SRI 가 어긋나 스크립트가 조용히 로드되지 않는다.
+  키를 넣을 때 카카오 개발자 문서(JavaScript SDK 설치)에 적힌 버전의 integrity
+  값을 함께 붙일 것.
+{% endcomment %}
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" crossorigin="anonymous"></script>
+<script>window.KAKAO_JS_KEY = {{ site.kakao_js_key | jsonify }};</script>
+{% endif %}
 <script src="{{ '/assets/js/program.js' | relative_url }}"></script>
