@@ -13,14 +13,7 @@ from __future__ import annotations
 import html
 import re
 
-import taxonomy
-from schema import (
-    STATUS_ACTIVE,
-    STATUS_CLOSED,
-    STATUS_LABELS,
-    STATUS_UPCOMING,
-    ProgramRecord,
-)
+from schema import STATUS_CLOSED, STATUS_LABELS, ProgramRecord
 
 # 구 generate_post.py 와 동일한 정책 — 한자·일본어 가나 제거
 _FOREIGN_RE = re.compile(r"[㐀-䶿一-鿿぀-ゟ゠-ヺー-ヿ]")
@@ -106,11 +99,17 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
     # (본문에 h3 를 쓰기 시작하면 이 대응이 깨진다. 지금은 h4 만 쓴다.)
     seq = 0
 
-    def sec(heading: str, blocks: list[str], *, key: bool = False) -> list[str]:
+    def sec(heading: str, blocks: list[str], *, key: bool = False,
+            prose_written: bool = False) -> list[str]:
         """제목 한 줄 + 본문 블록을 카드 하나로 묶는다.
 
         `key=True` 는 '지원 내용' 전용이다. 금액이 적힌 곳이 거기뿐이라
         테두리와 머리줄을 다르게 줘서 눈이 먼저 가게 한다.
+
+        `prose_written=True` 는 원문이 아니라 이 사이트가 쓴 문장이라는 표시다.
+        재구성으로 해설 카드가 원문 카드보다 **위로** 올라왔다. 그 사실이 페이지
+        맨 아래 출처표시에만 적혀 있으면 스크롤 끝까지 가야 안다. 지원금은 틀린
+        정보가 곧 실제 피해라, 카드 단위로 구분되어야 한다.
         """
         nonlocal seq
         seq += 1
@@ -122,25 +121,105 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
         ]
         if key:
             out.append('    <span class="cn-sec-tag">금액이 적힌 항목</span>')
+        elif prose_written:
+            out.append('    <span class="cn-sec-tag is-prose">본 사이트가 쓴 문장</span>')
         out.append('  </div>')
         out.append('  <div class="cn-sec-body">')
         out += blocks
         out += ["  </div>", "</section>", ""]
         return out
 
-    # ── 1) 한 줄 요약은 렌더하지 않는다 ──
-    # 같은 문장이 이미 페이지 상단 히어로(`program-summary`)에 있다. 본문 첫 블록에
-    # 한 번 더 찍으면 글자까지 똑같은 문단이 두 번 나온다.
-    # front matter 의 `summary` 로만 넘기고(히어로·카드·검색이 그걸 쓴다) 여기선 생략.
+    def fold(heading: str, value) -> list[str]:
+        """공공데이터 원문을 접기 블록으로. 문구는 손대지 않는다."""
+        return [
+            f'<details class="cn cn-fold" data-cat="{cat}">',
+            f'  <summary>{_esc(heading)} 원문 펼치기'
+            f'<span class="cn-fold-hint">공공데이터 원문</span></summary>',
+            '  <div class="cn-fold-body">',
+            _render_lines(value),
+            "  </div>",
+            "</details>",
+        ]
 
-    # ── 2) 신청 창구 — 짧은 메타만 표로 ──
-    # 오른쪽 신청 레일(J안)에는 '얼마 · 언제까지 · 신청 버튼' 만 둔다. 스크롤을
-    # 따라다니는 자리라 행동에 필요한 값만 있어야 한다.
-    # 소관 기관·지원 지역은 '누가 운영하나' 쪽 정보라 접수 기관·문의처와 같은 표에
-    # 모은다. 진행 상태는 히어로 배지에 있으므로 여기 넣지 않는다.
+    # ── 항목 순서 ──
+    # 예전 순서는 공공데이터 항목이 오는 순서였다(신청 창구 → 지원 대상 → 지원 내용 → …).
+    # 사람이 묻는 순서는 다르다: 얼마 → 나도 되나 → 어떻게 → (확인용) 원문 → 창구.
+    # 37건을 재보니 '나도 받을 수 있나요?' 가 다섯째라 금액을 본 뒤 자격을 보려면
+    # 카드 셋을 지나야 했다.
+
+    # ── 1) 지원 내용 — 금액이 적힌 유일한 곳 ──
+    # ⚠️ 접지 않는다. 접으면 페이지에서 금액이 사라진다.
+    if str(record.benefit_raw).strip():
+        parts += sec("지원 내용",
+                     [open_block("cn-raw"), _render_lines(record.benefit_raw), "</div>"],
+                     key=True)
+
+    # ── 2) 나도 받을 수 있나요 ──
+    eligibility = [c for c in (prose.get("eligibility") or []) if str(c).strip()]
+    if eligibility:
+        block = [f'<ul class="cn cn-check" data-cat="{cat}">']
+        for item in eligibility:
+            block.append(f"  <li>{_esc(item)}</li>")
+        block.append("</ul>")
+        parts += sec("나도 받을 수 있나요?", block, prose_written=True)
+
+    # ── 3) 어떻게 신청하나요 — 준비 서류를 여기 흡수한다 ──
+    # 서류는 신청 절차의 일부다. 따로 카드를 두니 세로 지분 1위(18.2%)를 먹으면서
+    # 37건 중 10건은 "해당없음" 한 단어짜리 빈 카드였다.
+    steps = [s for s in (prose.get("steps") or []) if s.get("body")]
+    docs = _real_documents(record.documents_raw)
+    if steps or docs:
+        block: list[str] = []
+        if steps:
+            block.append(f'<div class="cn cn-steps" data-cat="{cat}">')
+            for index, step in enumerate(steps, 1):
+                title = re.sub(r"^\s*\d+\s*[.)]\s*", "", str(step.get("title", "")))
+                block += [
+                    '  <div class="cn-step">',
+                    f'    <span class="cn-step-no">{index}</span>',
+                    '    <div class="cn-step-body">',
+                    f"      <h4>{_esc(title)}</h4>",
+                    f'      <p>{_esc(step.get("body", ""))}</p>',
+                    "    </div>",
+                    "  </div>",
+                ]
+            block.append("</div>")
+        if docs:
+            # h4 를 쓰는 이유: 목차는 h2 만 센다. 여기에 h3 를 쓰면 목차 번호와
+            # 카드 번호의 대응이 깨진다.
+            block.append('<h4 class="cn-sub">준비 서류·서식</h4>')
+            block.append(f'<ul class="cn cn-check" data-cat="{cat}">')
+            for doc in docs:
+                block.append(f"  <li>{_esc(doc)}</li>")
+            block.append("</ul>")
+        parts += sec("어떻게 신청하나요?", block, prose_written=bool(steps))
+
+    # ── 4) 지원 대상·선정 기준 — 원문 한 카드에 ──
+    # 둘은 원문 기준으로 겹칠 때가 있다(최대 유사도 0.94). 한쪽이 다른 쪽에 통째로
+    # 들어 있으면 하나만 싣는다. 애매하게 비슷한 정도로는 지우지 않는다 —
+    # 지원금 정보에서 '비슷해 보여서 뺐다' 는 위험한 판단이다.
+    target = str(record.target_raw or "").strip()
+    criteria = str(record.criteria_raw or "").strip()
+    if criteria and target and _contains(target, criteria):
+        criteria = ""
+    blocks: list[str] = []
+    names: list[str] = []
+    if target:
+        blocks += fold("지원 대상", target)
+        names.append("지원 대상")
+    if criteria:
+        blocks += fold("선정 기준", criteria)
+        names.append("선정 기준")
+    if blocks:
+        parts += sec("·".join(names), blocks)
+
+    # ── 5) 신청 창구 ──
+    # 오른쪽 신청 레일에는 '얼마 · 언제까지 · 신청 버튼' 만 둔다. 스크롤을 따라다니는
+    # 자리라 행동에 필요한 값만 있어야 한다.
+    # 소관 기관·지원 지역은 '누가 운영하나' 쪽 정보라 접수 기관·문의처와 한 표에 모은다.
     #
-    # 장문(지원대상·지원내용·선정기준)은 표 한 칸에 넣으면 읽을 수 없다
-    # (근로장려금 선정기준은 2천 자가 넘는다). 아래에서 줄 구조를 살려 따로 렌더한다.
+    # 예전에 따로 있던 '공식 창구' 카드는 없앴다. 링크 둘 중 '온라인으로 신청하기' 는
+    # 레일 버튼과 주소까지 같았고, 남는 건 기관 안내 링크 하나뿐이라 이 표 아래로 옮겼다.
     meta_rows = [
         ("소관 기관", record.org),
         ("지원 지역", record.region.label),
@@ -149,93 +228,24 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
         ("근거 법령", record.law_raw),
     ]
     rows = [(label, value) for label, value in meta_rows if str(value).strip()]
-    if rows:
-        block = [open_block("cn-table cn-spec"), "<table>", "  <tbody>"]
-        for label, value in rows:
-            block.append(f"    <tr><th>{_esc(label)}</th><td>{_esc_lines(value)}</td></tr>")
-        block += ["  </tbody>", "</table>", "</div>"]
+    if rows or record.official_url:
+        block = []
+        if rows:
+            block += [open_block("cn-table cn-spec"), "<table>", "  <tbody>"]
+            for label, value in rows:
+                block.append(f"    <tr><th>{_esc(label)}</th><td>{_esc_lines(value)}</td></tr>")
+            block += ["  </tbody>", "</table>", "</div>"]
+        if record.official_url:
+            block += [
+                f'<div class="cn cn-links" data-cat="{cat}">',
+                f'  <a href="{_attr(record.official_url)}" target="_blank" rel="noopener nofollow">'
+                f'<i class="ti ti-external-link"></i> 소관 기관에서 자세히 보기'
+                f' <span class="cn-link-ext">↗</span></a>',
+                "</div>",
+            ]
         parts += sec("신청 창구", block)
 
-    # ── 2-b) 사실 원본 장문 (LLM 미개입) ──
-    # 원문은 그대로 싣되, 아래 체크리스트·단계가 같은 내용을 쉬운 말로 다시 쓴다.
-    # 둘을 다 펼쳐 두면 페이지가 두 배가 되므로 재서술이 있는 것만 접는다.
-    #
-    # ⚠️ '지원 내용'은 접지 않는다. 금액이 적힌 곳이 이 원문뿐이라 접으면 페이지에서
-    #    금액이 사라진다. 지원금 사이트에서 그건 있을 수 없다. (한눈에 보기 표에는
-    #    기간·기관만 있고 금액 칸이 없다.)
-    for heading, value, fold, key in (
-        ("지원 대상", record.target_raw, True, False),
-        ("지원 내용", record.benefit_raw, False, True),
-        ("선정 기준", record.criteria_raw, True, False),
-    ):
-        if not str(value).strip():
-            continue
-        # 제목은 카드 머리줄에 있고 <details> 밖이다. 접힌 상태에서도 목차가 이 위치로
-        # 이동할 수 있어야 한다.
-        if fold:
-            block = [
-                f'<details class="cn cn-fold" data-cat="{cat}">',
-                f'  <summary>{_esc(heading)} 원문 펼치기'
-                f'<span class="cn-fold-hint">공공데이터 원문</span></summary>',
-                '  <div class="cn-fold-body">',
-                _render_lines(value),
-                "  </div>",
-                "</details>",
-            ]
-        else:
-            block = [open_block("cn-raw"), _render_lines(value), "</div>"]
-        parts += sec(heading, block, key=key)
-
-    # ── 3) 나도 받을 수 있나요 — 체크리스트 ──
-    eligibility = [c for c in (prose.get("eligibility") or []) if str(c).strip()]
-    if eligibility:
-        block = [f'<ul class="cn cn-check" data-cat="{cat}">']
-        for item in eligibility:
-            block.append(f"  <li>{_esc(item)}</li>")
-        block.append("</ul>")
-        parts += sec("나도 받을 수 있나요?", block)
-
-    # ── 4) 신청 방법 ──
-    steps = [s for s in (prose.get("steps") or []) if s.get("body")]
-    if steps:
-        block = [f'<div class="cn cn-steps" data-cat="{cat}">']
-        for index, step in enumerate(steps, 1):
-            title = re.sub(r"^\s*\d+\s*[.)]\s*", "", str(step.get("title", "")))
-            block += [
-                '  <div class="cn-step">',
-                f'    <span class="cn-step-no">{index}</span>',
-                '    <div class="cn-step-body">',
-                f"      <h4>{_esc(title)}</h4>",
-                f'      <p>{_esc(step.get("body", ""))}</p>',
-                "    </div>",
-                "  </div>",
-            ]
-        block.append("</div>")
-        parts += sec("어떻게 신청하나요?", block)
-
-    # ── 5) 준비 서류·서식 (API 원본) ──
-    # 보조금24는 '구비서류', 복지로는 서식·안내 자료가 섞여 온다. 후자를 '필요한 서류'로
-    # 단정하면 제출 대상이 아닌 안내문까지 서류로 읽힌다. 둘을 포괄하는 제목을 쓴다.
-    if record.documents_raw:
-        block = [f'<ul class="cn cn-check" data-cat="{cat}">']
-        for doc in record.documents_raw:
-            block.append(f"  <li>{_esc(doc)}</li>")
-        block.append("</ul>")
-        parts += sec("준비 서류·서식", block)
-
-    # ── 6) 신청 기간 타임라인 (API 원본) ──
-    timeline = _timeline(record)
-    if timeline:
-        block = [f'<ul class="cn cn-timeline" data-cat="{cat}">']
-        for when, what in timeline:
-            block.append(
-                f'  <li><span class="cn-tl-when">{_esc(when)}</span>'
-                f'<span class="cn-tl-what">{_esc(what)}</span></li>'
-            )
-        block.append("</ul>")
-        parts += sec("신청 일정", block)
-
-    # ── 7) FAQ ──
+    # ── 6) FAQ ──
     faq = [f for f in (prose.get("faq") or []) if f.get("q") and f.get("a")]
     if faq:
         block = [f'<div class="cn cn-faq" data-cat="{cat}">']
@@ -247,11 +257,11 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
                 "  </details>",
             ]
         block.append("</div>")
-        parts += sec("자주 묻는 질문", block)
+        parts += sec("자주 묻는 질문", block, prose_written=True)
 
-    # ── 8) 주의 안내 ──
-    # 이건 섹션 카드로 만들지 않는다. 제목이 없는 경고 한 줄이라 번호를 붙이면
-    # 목차에 없는 항목이 본문에만 생겨 번호가 어긋난다. 카드 사이에 낀 알림으로 둔다.
+    # ── 주의 안내 ──
+    # 카드로 만들지 않는다. 제목이 없는 경고 한 줄이라 번호를 붙이면 목차에 없는
+    # 항목이 본문에만 생겨 번호가 어긋난다. 카드 사이에 낀 알림으로 둔다.
     note = prose.get("note")
     if note:
         parts += [
@@ -262,68 +272,37 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
             "",
         ]
 
-    # ── 9) 공식 창구 (LLM 이 만든 URL 은 절대 쓰지 않는다) ──
-    links = [(url, label) for url, label in (
-        (record.apply_url, "온라인으로 신청하기"),
-        (record.official_url, "소관 기관에서 자세히 보기"),
-    ) if url]
-    if links:
-        block = [f'<div class="cn cn-links" data-cat="{cat}">']
-        for url, label in links:
-            block.append(
-                f'  <a href="{_attr(url)}" target="_blank" rel="noopener nofollow">'
-                f'<i class="ti ti-external-link"></i> {_esc(label)}'
-                f' <span class="cn-link-ext">↗</span></a>'
-            )
-        block.append("</div>")
-        parts += sec("공식 창구", block)
+    # ── 신청 일정 항목은 없앴다 ──
+    # 있던 9건 전부가 오른쪽 레일의 '신청 기간' 과 같은 날짜였다. 같은 값을
+    # 241px 짜리 카드로 다시 쓸 이유가 없다. 종료·예정 안내는 히어로 배지 옆 문장이 한다.
 
     return "\n".join(parts)
 
 
-def _status_text(record: ProgramRecord) -> str:
-    """'시행중' / '예정 (2026-09-01 접수 시작)' / '종료 (2026-03-31 마감)'.
+_NO_DOC_RE = re.compile(r"^(해당\s*없음|없음|불필요|미해당|-|없다)$")
 
-    괄호 안의 날짜는 원천 신청기한 원문에서 파싱한 값이다. 원문에 날짜가 없으면
-    라벨만 남는다 — 없는 기간을 지어내지 않는다.
+
+def _real_documents(documents) -> list[str]:
+    """'해당없음' 뿐인 서류 목록은 빈 목록으로 본다.
+
+    원문에 서류 정보가 없다는 뜻인데, 그 한 단어 때문에 다른 항목과 같은 크기의
+    카드가 화면에 섰다. 37건 중 7건이 정확히 이 경우였다.
+    '공고 확인' 같은 값은 지우지 않는다 — 그건 안내이지 부재가 아니다.
     """
-    label = STATUS_LABELS.get(record.status, record.status)
-    period = record.apply_period
-    if record.status == STATUS_UPCOMING and period.start:
-        return f"{label} ({period.start} 접수 시작)"
-    if record.status == STATUS_CLOSED and period.end:
-        return f"{label} ({period.end} 마감)"
-    if record.status == STATUS_ACTIVE and period.always:
-        return f"{label} (상시 접수)"
-    return label
-
-
-def _period_text(record: ProgramRecord) -> str:
-    period = record.apply_period
-    if period.always:
-        return "상시 접수"
-    if period.start and period.end:
-        return f"{period.start} ~ {period.end}"
-    if period.end:
-        return f"{period.end}까지"
-    if period.start:
-        return f"{period.start}부터"
-    return ""
-
-
-def _timeline(record: ProgramRecord) -> list[tuple[str, str]]:
-    period = record.apply_period
-    if period.always:
+    items = [str(d).strip() for d in (documents or []) if str(d).strip()]
+    if not items:
         return []
-    out: list[tuple[str, str]] = []
-    if period.start:
-        label = ("신청 접수 시작 (예정)" if record.status == STATUS_UPCOMING
-                 else "신청 접수 시작")
-        out.append((period.start, label))
-    if period.end:
-        label = "신청 마감 (종료됨)" if record.status == STATUS_CLOSED else "신청 마감"
-        out.append((period.end, label))
-    return out
+    if all(_NO_DOC_RE.match(re.sub(r"[\s·•○●\-]+", " ", i).strip()) for i in items):
+        return []
+    return items
+
+
+def _contains(outer: str, inner: str) -> bool:
+    """공백·구두점을 지운 뒤 한쪽이 다른 쪽을 통째로 품고 있는지."""
+    def norm(t: str) -> str:
+        return re.sub(r"[\s·,.()\[\]○●◦□■▪•\-*]+", "", t)
+    a, b = norm(outer), norm(inner)
+    return bool(b) and b in a
 
 
 # ─────────────────────────────────────────────────────────────
