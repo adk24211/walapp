@@ -246,7 +246,12 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
         parts += sec("신청 창구", block)
 
     # ── 6) FAQ ──
+    # 생성된 질문의 76%(55개 중 42개)가 바로 위 카드에 답이 있는 것이었다.
+    # "…금액은 얼마인가요?" 의 답은 '지원 내용' 원문에 그대로 있다.
+    # 되묻는 질문을 걸러내고, 남는 게 없으면 항목 자체를 렌더하지 않는다.
     faq = [f for f in (prose.get("faq") or []) if f.get("q") and f.get("a")]
+    faq = _useful_faq(faq, record, eligibility=bool(eligibility), steps=bool(steps),
+                      docs=bool(docs))
     if faq:
         block = [f'<div class="cn cn-faq" data-cat="{cat}">']
         for item in faq:
@@ -295,6 +300,50 @@ def _real_documents(documents) -> list[str]:
     if all(_NO_DOC_RE.match(re.sub(r"[\s·•○●\-]+", " ", i).strip()) for i in items):
         return []
     return items
+
+
+# 질문이 어느 항목의 영역인지 알아보는 어구. 값이 아니라 '주제' 만 본다.
+_FAQ_TOPICS = (
+    ("benefit",     r"금액|얼마|지원금|지원 ?규모|얼마나 받|지원 ?내용|주요 ?내용|주요 ?서비스"),
+    ("eligibility", r"대상|자격|누가|받을 수 있|해당되|신청할 수 있는"),
+    ("steps",       r"어떻게 신청|신청 ?방법|어디서 신청|어디에 신청|신청하려면|어떻게 받"),
+    ("docs",        r"서류|구비|준비물"),
+    ("period",      r"언제까지|신청 ?기간|마감|접수 ?기간|언제 신청"),
+    ("contact",     r"문의|어디에 물어|연락"),
+)
+
+
+def _useful_faq(faq: list[dict], record: ProgramRecord, *, eligibility: bool,
+                steps: bool, docs: bool) -> list[dict]:
+    """페이지 다른 곳에 이미 답이 있는 질문을 뺀다.
+
+    37건을 재보니 생성된 질문 55개 중 42개가 되묻기였다. "…금액은 얼마인가요?"
+    18개의 답은 바로 위 '지원 내용' 원문에 그대로 있다. FAQ 가 154px 를 쓰면서
+    새로 알려 주는 것이 없었다.
+
+    ⚠️ 주제어가 겹친다고 무조건 빼지 않는다. **그 답을 담은 항목이 이 페이지에
+       실제로 있을 때만** 뺀다. 서류 항목이 없는 제도에서 '서류' 질문은 유일한
+       정보원이므로 남긴다.
+
+    이 판정은 렌더 단계에서 한다. 저장된 해설(`_prose`)은 그대로 두므로,
+    규칙을 고치면 Groq 재호출 없이 rerender.py 만으로 다시 반영된다.
+    """
+    period = record.apply_period
+    covered = {
+        "benefit": bool(str(record.benefit_raw or "").strip()),
+        "eligibility": eligibility,
+        "steps": steps,
+        "docs": docs,
+        "period": bool(period.always or period.start or period.end),
+        "contact": bool(str(record.contact_raw or "").strip()),
+    }
+    out = []
+    for item in faq:
+        question = str(item.get("q", ""))
+        if any(covered[key] and re.search(pat, question) for key, pat in _FAQ_TOPICS):
+            continue
+        out.append(item)
+    return out
 
 
 def _contains(outer: str, inner: str) -> bool:
