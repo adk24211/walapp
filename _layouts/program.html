@@ -285,10 +285,17 @@ layout: default
 {% comment %}
   카카오 공유는 앱 키가 있어야 동작한다. _config.yml 에 `kakao_js_key` 를 넣으면
   이 스크립트가 붙고 program.js 가 진짜 공유창을 띄운다. 키가 없으면 스크립트를
-  아예 불러오지 않는다 — 쓰지도 않을 외부 스크립트를 33개 페이지에 달 이유가 없다.
+  아예 불러오지 않는다 — 쓰지도 않을 외부 스크립트를 모든 제도 페이지에 달 이유가 없다.
   (카카오 개발자센터에서 JavaScript 키 발급 + 플랫폼에 adk24211.github.io 등록 필요)
+
+  ⚠️ 조건을 값의 참/거짓으로 쓰면 안 된다. Liquid 에서 빈 문자열은 **참**이라
+  키가 `""` 인 상태에서도 통과해 SDK 가 전 페이지에 실린다 (한 번 그렇게 배포됐다).
+  `!= blank` 도 통하지 않았다 — 왼쪽이 String 이면 Ruby 의 String#== 이 불려
+  `"" == blank` 가 false 로 떨어진다. 빈 문자열과 직접 비교하는 것만 확실하다.
+  strip 을 거치면 키가 아예 없을 때(nil)도 "" 가 되어 한 갈래로 처리된다.
 {% endcomment %}
-{% if site.kakao_js_key %}
+{% assign kakao_key = site.kakao_js_key | strip %}
+{% if kakao_key != "" %}
 {% comment %}
   ⚠️ integrity(SRI) 는 일부러 비워 두었다. 이 개발 환경에서는 프록시가
   t1.kakaocdn.net 을 막아 해시를 직접 계산해 검증할 수 없었고, 확인하지 않은
@@ -297,6 +304,6 @@ layout: default
   값을 함께 붙일 것.
 {% endcomment %}
 <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" crossorigin="anonymous"></script>
-<script>window.KAKAO_JS_KEY = {{ site.kakao_js_key | jsonify }};</script>
+<script>window.KAKAO_JS_KEY = {{ kakao_key | jsonify }};</script>
 {% endif %}
 <script src="{{ '/assets/js/program.js' | relative_url }}"></script>
