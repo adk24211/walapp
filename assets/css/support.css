@@ -951,10 +951,9 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
 .pcard.is-closed:hover { border-color: var(--line2); }
 
 /* ── 상세 페이지 ── */
-/* 상세는 분야가 하나뿐이라 색이 '구분' 이 아니라 '표식' 이다. 한 군데만 쓴다:
-   히어로 위쪽 띠와 빵부스러기의 분야 이름. 본문 카드 아홉 개를 다 물들이면
-   그건 구분이 아니라 그냥 페이지 전체를 칠하는 것이다. */
-.program-hero { border-top: 3px solid var(--c, var(--line2)); }
+/* 상세는 분야가 하나뿐이라 색이 '구분' 이 아니라 '표식' 이다.
+   히어로 위쪽에도 3px 색 띠를 뒀다가 걷어냈다 — 목록 카드에서 촌스럽다고 뺀
+   장치를 상세에만 남길 이유가 없다. 빵부스러기의 분야 이름 한 곳으로 충분하다. */
 .crumbs a:last-of-type { color: var(--c); font-weight: 600; }
 
 /* ── 허브 ── */
