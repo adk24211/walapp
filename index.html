@@ -115,7 +115,7 @@ title: 정부·지자체 지원금과 복지 제도 총정리
   {% if cards_closing != "" %}
   <div class="section-group">
     <div class="section-label">
-      <span class="sec-tag">마감 임박</span>
+      <span class="sec-tag is-deadline">마감 임박</span>
       <div class="sec-rule"></div>
       <a class="sec-more" href="{{ '/deadline/' | relative_url }}">더보기 →</a>
     </div>
@@ -137,7 +137,7 @@ title: 정부·지자체 지원금과 복지 제도 총정리
   {% if cards_upcoming != "" %}
   <div class="section-group">
     <div class="section-label">
-      <span class="sec-tag">시행 예정</span>
+      <span class="sec-tag is-upcoming">시행 예정</span>
       <div class="sec-rule"></div>
       <span class="sec-count">{{ upcoming_programs | size }}건</span>
     </div>
@@ -159,7 +159,7 @@ title: 정부·지자체 지원금과 복지 제도 총정리
   {% if cards_recent != "" %}
   <div class="section-group">
     <div class="section-label">
-      <span class="sec-tag">새로 추가</span>
+      <span class="sec-tag is-new">새로 추가</span>
       <div class="sec-rule"></div>
       <a class="sec-more" href="{{ '/new/' | relative_url }}">더보기 →</a>
     </div>
