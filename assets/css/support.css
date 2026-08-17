@@ -937,14 +937,18 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
 /* 제목 오른쪽 선도 그 색을 옅게 이어받는다 — 어디까지가 한 섹션인지 눈으로 잡힌다 */
 .section-group .sec-rule { background: color-mix(in srgb, var(--c, var(--ink3)) 22%, transparent); }
 
-/* ── 카드 ── */
-/* 위쪽 3px 띠 하나. 4열로 늘어놓으면 이 띠만으로 분야가 구분된다.
-   H안이 걷어낸 건 '좌측 4px 굵은 바' 였는데, 그건 카드마다 세로로 서서
-   목록 왼쪽에 색 기둥이 생겼다. 위쪽 가는 띠는 그 문제가 없다. */
-.pcard { border-top: 3px solid var(--c, var(--line2)); }
-/* 분야 이름은 회색 메타에 섞여 있었다. 색을 줘 메타 줄에서 먼저 읽히게 한다. */
-.pcard-cat { color: var(--c); font-weight: 600; }
-.pcard.is-closed { border-top-color: var(--line2); }
+/* ── 카드 (허브·검색에서만 쓴다. 홈은 아래 색인으로 대체) ── */
+/* 위쪽 3px 색 띠를 썼다가 뺐다 — 카드마다 색 도막이 얹혀 촌스러웠다.
+   대신 분야 색은 ① 메타 줄의 분야 이름 글자, ② 이름 앞의 작은 점,
+   ③ 마우스를 올렸을 때의 테두리, 세 군데로 흩어 놓는다.
+   면이 아니라 점과 선이라 색이 있어도 조용하다. */
+.pcard-cat { color: var(--c); font-weight: 600; display: inline-flex; align-items: center; gap: .3rem; }
+.pcard-cat::before {
+  content: ""; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--c); flex: 0 0 auto;
+}
+.pcard:hover { border-color: var(--c); }
+.pcard.is-closed:hover { border-color: var(--line2); }
 
 /* ── 상세 페이지 ── */
 /* 상세는 분야가 하나뿐이라 색이 '구분' 이 아니라 '표식' 이다. 한 군데만 쓴다:
@@ -955,3 +959,93 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
 
 /* ── 허브 ── */
 .hub-nav a[data-cat].is-on { border-color: var(--c); color: var(--c); }
+
+/* ═══════════════════════════════════════════════════════════
+   분야 색인 — 홈의 카드 그리드를 대신한다
+   ───────────────────────────────────────────────────────────
+   카드가 30장이던 화면을 아홉 줄로 줄였다. 주제마다 최근 한 건씩만 낸다.
+
+   카드가 아니라 '줄' 인 이유: 카드는 테두리·여백으로 한 장씩 자리를 주장해서
+   아홉 개만 놓아도 화면이 다시 빽빽해진다. 줄은 가로선 하나로 나뉘고 왼쪽에
+   분야 이름이 큰 글씨로 서 있어 눈이 세로로 미끄러진다. 목차를 넘기는 감각이다.
+
+   분야 색은 이름 글자가 갖는다. 카드 위쪽 색 띠를 없앤 자리다.
+   ═══════════════════════════════════════════════════════════ */
+.topic-index {
+  max-width: var(--container-wide);
+  margin: 0 auto 3.5rem;
+  padding: 0 1.5rem;
+}
+.tx-row {
+  display: grid;
+  grid-template-columns: 168px minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 0 1.75rem;
+  padding: 1.15rem .9rem;
+  border-top: 1px solid var(--line);
+  border-radius: 8px;
+  transition: background .14s;
+}
+.tx-row:first-child { border-top: 0; }
+/* 줄 하나가 통째로 옅게 물든다. 면을 칠하는 게 아니라 '지금 이 줄' 이라는 표시다. */
+.tx-row:hover { background: color-mix(in srgb, var(--c, var(--ink)) 6%, transparent); }
+
+.tx-topic { display: flex; flex-direction: column; gap: .1rem; min-width: 0; }
+.tx-name {
+  font-size: 1.4rem; font-weight: 800; letter-spacing: -.045em;
+  color: var(--c, var(--ink)); word-break: keep-all; line-height: 1.2;
+}
+.tx-name:hover { text-decoration: underline; text-underline-offset: 4px; }
+.tx-count {
+  font-size: .74rem; color: var(--ink3); font-variant-numeric: tabular-nums;
+  letter-spacing: .02em;
+}
+
+.tx-item { display: flex; flex-direction: column; gap: .18rem; min-width: 0; }
+.tx-title {
+  font-size: 1.02rem; font-weight: 600; letter-spacing: -.025em;
+  color: var(--ink); line-height: 1.4; word-break: keep-all;
+}
+.tx-row:hover .tx-title { text-decoration: underline; text-underline-offset: 3px; }
+.tx-meta { font-size: .78rem; color: var(--ink3); word-break: keep-all; }
+.tx-sep { margin: 0 .3rem; opacity: .6; }
+
+/* 오른쪽 열 — 금액(있으면) 위, 기간 아래. 두 줄이라 열이 늘 채워진다. */
+.tx-right { display: flex; flex-direction: column; align-items: flex-end; gap: .1rem; min-width: 0; }
+.tx-amount {
+  margin: 0; white-space: nowrap;
+  font-size: 1.05rem; font-weight: 700; letter-spacing: -.035em;
+  font-variant-numeric: tabular-nums; color: var(--ink);
+}
+.tx-when {
+  font-size: .76rem; color: var(--ink3); white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 시간 축 두 줄 — 분야 줄과 같은 생김새를 쓰되 색만 다르다 */
+.tx-row.is-deadline { --c: var(--urgent); }
+.tx-row.is-upcoming { --c: var(--st-up); }
+
+@media (max-width: 900px) {
+  .tx-row { grid-template-columns: 130px minmax(0, 1fr); gap: 0 1.1rem; padding: 1rem .7rem; }
+  .tx-name { font-size: 1.15rem; }
+  /* 금액·기간은 제도명 아래로 내려 붙인다 — 오른쪽 끝에 두면 제목이 눌린다 */
+  .tx-right { grid-column: 2; align-items: flex-start; flex-direction: row; gap: .55rem;
+              margin-top: .3rem; align-items: baseline; }
+  .tx-amount { font-size: 1rem; }
+}
+@media (max-width: 560px) {
+  .topic-index { padding-left: 1rem; padding-right: 1rem; }
+  .tx-row { grid-template-columns: minmax(0, 1fr); gap: .35rem; padding: .95rem .6rem; }
+  .tx-topic { flex-direction: row; align-items: baseline; gap: .45rem; }
+  .tx-name { font-size: 1.02rem; }
+  .tx-right { grid-column: 1; margin-top: .15rem; }
+}
+
+/* 예정 표식 — 색인 줄에서 '지금은 신청할 수 없다' 를 한 눈에 */
+.tx-flag {
+  display: inline-block; margin-left: .4rem; vertical-align: middle;
+  font-size: .68rem; font-weight: 700; letter-spacing: -.01em;
+  padding: .1rem .4rem; border-radius: 4px;
+  background: var(--st-up-bg); color: var(--st-up);
+}
