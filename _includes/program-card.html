@@ -45,8 +45,9 @@
       {% if p.apply_always %}<span>상시 접수</span>
       {% elsif pupcoming and p.apply_start %}<span>{{ p.apply_start }} ~ {{ p.apply_end }}</span>
       {% elsif p.apply_end %}<span>~ {{ p.apply_end }}</span>{% endif %}
+      {% comment %} 분야 이름만 색을 준다 — 회색 메타 줄에서 이것만 먼저 읽히면 된다 {% endcomment %}
       {% unless include.show_category == false %}
-      <span>{{ pcat_meta.label | default: pcat }}</span>
+      <span class="pcard-cat">{{ pcat_meta.label | default: pcat }}</span>
       {% endunless %}
       {% if p.region_label and p.region_label != '전국' %}<span>{{ p.region_label }}</span>{% endif %}
     </p>
