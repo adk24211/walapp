@@ -834,3 +834,72 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
   .is-program .cn-sec-tag { display: none; }
   .is-program .cn-sec.is-key .cn-sec-tag { display: inline; font-size: .68rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   홈·허브 밀도
+   ───────────────────────────────────────────────────────────
+   재보니 데스크톱 1440x900 첫 화면에 카드가 4장뿐이었다. 본문이 시작되기 전에
+   머리말 191 + 히어로 289 + 대상별 184 = 664px 를 지나야 했고, 카드 한 장이
+   118px 였다. 훑는 화면인데 한 번에 훑을 수 있는 양이 적었다.
+
+   여기서 바꾸는 건 배치와 여백뿐이다. 카드에 담기는 값(상태·제도명·금액·기관)은
+   그대로다 — 밀도를 올리려고 정보를 빼면 목록이 아니라 그냥 링크 더미가 된다.
+   `.pcard` / `:has(.pcard)` 로 좁혀 /brief/ 아카이브 카드는 건드리지 않는다.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── 카드 ── */
+.pcard .pcard-body { gap: .28rem; padding: .95rem 1.1rem; }
+.pcard-title { font-size: 1rem; line-height: 1.35; }
+.pcard-amount { font-size: 1.05rem; margin-top: 0; }
+.pcard-meta { padding-top: .6rem; gap: .15rem .6rem; font-size: .76rem; }
+
+/* ── 그리드 — 3열에서 4열로 ──
+   섹션당 4장이라 4열이면 정확히 한 줄이 된다. 3열에서는 3+1 로 끊겨
+   마지막 줄에 빈 칸 둘이 남았다. */
+.cards:has(.pcard) { gap: .625rem; }
+@media (min-width: 1200px) { .cards:has(.pcard) { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 1199px) and (min-width: 1000px) { .cards:has(.pcard) { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 999px)  and (min-width: 700px)  { .cards:has(.pcard) { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 699px) { .cards:has(.pcard) { grid-template-columns: 1fr; } }
+
+/* ── 섹션 간격 ── */
+.feed:has(.pcard) { padding-top: 1rem; padding-bottom: 3rem; }
+.feed:has(.pcard) .section-group { margin-bottom: 1.6rem; }
+.feed:has(.pcard) .section-label { margin-bottom: .7rem; margin-top: 0; }
+
+/* ── 머리말 ── */
+.page-header.is-wide { padding-top: 1.6rem; padding-bottom: 1.1rem; }
+.page-header.is-wide .ph-top { margin-bottom: .8rem; }
+.page-header.is-wide .ph-title { margin-bottom: .4rem; }
+
+/* ── 메인 토픽 — 세로로 쌓던 것을 가로로 눕힌다 ── */
+.home-hero { padding: 1.15rem 1.4rem; margin-bottom: 1.1rem; }
+.home-hero .hero-eyebrow { margin-bottom: .3rem; }
+.hero-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: .6rem 1.5rem; flex-wrap: wrap;
+}
+.home-hero .hero-title { font-size: 1.4rem; margin: 0; flex: 1 1 auto; min-width: 0; }
+.home-hero .hero-amount { font-size: 1.3rem; margin: 0; flex: 0 0 auto; }
+/* 요약은 한 줄만. 두 줄째부터는 카드 제목이 이미 말한 것을 되풀이한다. */
+.home-hero .hero-desc {
+  margin: .35rem 0 0; font-size: .88rem; line-height: 1.55; max-width: none;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+.home-hero .hero-foot { margin-top: .55rem; padding-top: .55rem; font-size: .76rem; }
+
+/* ── 대상별 8칸 — 두 줄에서 한 줄로 ── */
+.home-axis { gap: 6px; margin-bottom: 1.4rem; }
+.axis-card { padding: 10px 12px; border-radius: 8px; }
+.axis-count { font-size: 1.25rem; }
+/* keep-all 이 없으면 '신혼·예비부부' 가 '신혼·예비부 / 부' 로 잘린다 */
+.axis-label { font-size: .8rem; word-break: keep-all; }
+@media (min-width: 1100px) { .home-axis { grid-template-columns: repeat(8, 1fr); } }
+@media (max-width: 1099px) and (min-width: 700px) { .home-axis { grid-template-columns: repeat(4, 1fr); } }
+/* 모바일도 4열. 2열이면 이 블록 하나가 378px 를 먹어 첫 화면을 다 쓴다. */
+@media (max-width: 699px) {
+  .home-axis { grid-template-columns: repeat(4, 1fr); gap: 5px; padding-left: 1rem; padding-right: 1rem; }
+  .axis-card { padding: 8px 8px; }
+  .axis-count { font-size: 1.05rem; }
+  .axis-label { font-size: .68rem; letter-spacing: -.04em; line-height: 1.3; }
+}
