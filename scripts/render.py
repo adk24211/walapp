@@ -220,7 +220,9 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
     # ── 3) 어떻게 신청하나요 — 준비 서류를 여기 흡수한다 ──
     # 서류는 신청 절차의 일부다. 따로 카드를 두니 세로 지분 1위(18.2%)를 먹으면서
     # 37건 중 10건은 "해당없음" 한 단어짜리 빈 카드였다.
-    steps = [s for s in (prose.get("steps") or []) if s.get("body")]
+    steps = [{**s, "body": _drop_period_restatement(s.get("body"))}
+             for s in (prose.get("steps") or [])]
+    steps = [s for s in steps if s.get("body")]
     docs = _real_documents(record.documents_raw)
     if steps or docs:
         block: list[str] = []
@@ -368,6 +370,42 @@ _FAQ_TOPICS = (
     ("period",      r"언제까지|신청 ?기간|마감|접수 ?기간|언제 신청"),
     ("contact",     r"문의|어디에 물어|연락"),
 )
+
+
+# 본문이 신청 기간을 다시 적는 문장을 걷어낸다.
+#
+# 오른쪽 신청 레일에 '신청 기간' 이 이미 있는데 본문이 같은 날짜를 또 적는
+# 경우가 있었다(4건). 그중 둘은 날짜 말고는 아무 말도 하지 않았다.
+#
+#   "신청 기간은 2026-10-01 ~ 2026-12-31입니다."
+#   "2026-09-15 ~ 2026-09-29 기간 동안 신청하실 수 있습니다."
+#
+# 나머지 둘은 지급·선정 시점을 알려 주므로 남긴다 — 날짜가 겹친다고 문장이
+# 쓸모없는 게 아니다.
+#
+#   "2026-09-01 ~ 2026-09-30 기간에 자동으로 선정됩니다."
+#   "2026-09-01 ~ 2026-09-30 기간에 지급됩니다."
+#
+# 그래서 날짜가 있는 문장만 후보로 두고, 날짜와 '언제 신청하나' 를 말하는 데
+# 쓰이는 말을 걷어냈을 때 남는 것이 없을 때만 버린다.
+_DATE_RE = re.compile(r"20\d\d[-.]\d\d[-.]\d\d")
+_PERIOD_WORDS_RE = re.compile(
+    r"신청(하실|할|하는|해야|됩니다|합니다)?|접수|기간|동안|까지|부터"
+    r"|은|는|이|가|입니다|있습니다|수|에|의|로|과|와|및|~|\.|,|\s")
+
+
+def _drop_period_restatement(body: str) -> str:
+    """신청 기간만 되풀이하는 문장을 뺀다. 날짜가 없는 문장은 건드리지 않는다."""
+    kept = []
+    for sentence in (x.strip() for x in re.split(r"(?<=다\.)\s*|(?<=요\.)\s*", str(body or ""))):
+        if not sentence:
+            continue
+        if _DATE_RE.search(sentence):
+            residue = _PERIOD_WORDS_RE.sub("", _DATE_RE.sub("", sentence))
+            if not residue:
+                continue
+        kept.append(sentence)
+    return " ".join(kept).strip()
 
 
 # 주의 안내에서 '이 제도에만 해당하는 말' 을 가려내는 표현들.

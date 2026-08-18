@@ -104,7 +104,10 @@
      '신청 방법' 이 '신 / 청 방법' 으로 잘린다. */
   word-break: keep-all;
 }
-.cta-primary { background: var(--c); color: var(--surface); }
+/* --c 는 .cn[data-cat=…] 안에서만 정의된다. 제도 상세는 .program-cta 규칙이
+   배경을 따로 주므로 멀쩡했지만, 그 덮어쓰기가 없는 404 에서는 배경이 통째로
+   비어(rgba(0,0,0,0)) 버튼이 그냥 글자로 보였다. 기본값을 준다. */
+.cta-primary { background: var(--c, var(--ink)); color: var(--surface); }
 .cta-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,.14); }
 .cta-secondary { background: var(--surface2); color: var(--ink); border: 1px solid var(--line2); }
 .cta-secondary:hover { border-color: var(--c); color: var(--c); }

@@ -345,7 +345,9 @@ img { max-width: 100%; display: block; }
 .legal-page p, .legal-page li { font-size: 15px; line-height: 1.8; color: var(--ink2); }
 .legal-page ul { padding-left: 1.2rem; margin: .5rem 0; }
 .legal-page li { margin-bottom: .35rem; }
-.legal-page a { color: var(--brand-dark); text-decoration: underline; }
+/* 버튼은 빼고 본문 링크에만. .legal-page a 가 .cta-primary 보다 구체적이라,
+   빼 두지 않으면 404 의 버튼이 잉크색 배경에 초록 밑줄 글자가 된다. */
+.legal-page a:not(.cta-primary):not(.cta-secondary) { color: var(--brand-dark); text-decoration: underline; }
 .legal-page strong { color: var(--ink); }
 
 /* ---- 푸터 고지 문구 ---- */
