@@ -92,11 +92,11 @@
 <div class="feed">
   <div class="search-box">
     <i class="ti ti-search" aria-hidden="true"></i>
-    <input type="search" id="search-input" placeholder="검색어를 입력하세요 (예: 청년 월세, AI, 채용)"
+    <input type="search" id="search-input" placeholder="제도명·기관·키워드 (예: 청년 월세, 장학금, 고용노동부)"
            autocomplete="off" autofocus aria-label="검색어 입력">
   </div>
 
-  <p class="search-status" id="search-status">검색어를 입력해 주세요.</p>
+  <p class="search-status" id="search-status">검색어를 입력하면 결과가 표시됩니다.</p>
 
   <div class="cards" id="search-results"></div>
 </div>
@@ -169,7 +169,7 @@
 
   function run(query) {
     var q = query.trim();
-    if (!q) { results.innerHTML = ''; status.textContent = '검색어를 입력해 주세요.'; return; }
+    if (!q) { results.innerHTML = ''; status.textContent = '검색어를 입력하면 결과가 표시됩니다.'; return; }
     if (!ready) { status.textContent = '검색 인덱스를 불러오는 중…'; return; }
 
     var terms = q.toLowerCase().split(/\s+/).filter(Boolean);
@@ -243,7 +243,7 @@
   
   <p class="footer-note">
     본 사이트는 정부 공식 사이트가 아닙니다. 제도의 금액·자격·기간은 공공데이터 원문을 토대로 정리한 참고 자료이며,
-    지침 개정으로 달라질 수 있습니다. 신청과 최종 확인은 각 제도의 공식 창구를 이용해 주세요.
+    지침 개정으로 달라질 수 있습니다. 신청과 최종 확인은 각 제도의 공식 창구를 이용하셔야 합니다.
   </p>
 </footer>
 
