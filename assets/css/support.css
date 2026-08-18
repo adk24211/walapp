@@ -58,18 +58,6 @@
 .crumbs a { color: var(--ink3); }
 .crumbs a:hover { color: var(--c); text-decoration: underline; }
 
-.program-badges { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: .85rem; }
-.badge-cat, .badge-region, .badge-period {
-  display: inline-flex; align-items: center; gap: 4px;
-  padding: 4px 11px; border-radius: 999px;
-  font-size: .78rem; font-weight: 700; letter-spacing: -.01em;
-}
-.badge-cat { background: var(--c-bg); color: var(--c); }
-.badge-region { background: var(--surface2); color: var(--ink2); }
-.badge-period { background: var(--surface2); color: var(--ink2); border: 1px solid var(--line2); }
-.badge-period.always { background: var(--brand-bg); color: var(--brand-dark); border-color: transparent; }
-.badge-period.upcoming { background: var(--st-up-bg); color: var(--st-up); border-color: transparent; }
-
 /* ---- 상태(시행중·예정·종료) ------------------------------- */
 /* 분야 색(--c)과 겹치지 않게 별도 축을 쓴다. 분야는 주제, 상태는 시간축이라
    같은 색 계열을 쓰면 카드에서 둘이 섞여 읽힌다. */
@@ -97,12 +85,6 @@
 }
 .program-summary { font-size: 1.02rem; line-height: 1.65; color: var(--ink2); word-break: keep-all; }
 
-.program-meta-row {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
-  margin-top: .9rem; font-size: .84rem; color: var(--ink3);
-}
-.program-meta-row i { font-size: 14px; margin-right: 2px; }
-
 /* 정부 사칭 오해를 막는 고지 — YMYL 필수 (REDESIGN.md §8.1) */
 .official-notice {
   display: flex; gap: 10px; align-items: flex-start;
@@ -125,7 +107,7 @@
 .cta-secondary:hover { border-color: var(--c); color: var(--c); }
 
 /* ---- 배너 ------------------------------------------------- */
-.mock-banner, .status-banner {
+.mock-banner{
   display: flex; gap: 11px; align-items: flex-start;
   padding: 14px 16px; border-radius: var(--radius); margin-bottom: 1.1rem;
 }
@@ -136,13 +118,6 @@
 .mock-banner i { font-size: 20px; margin-top: 1px; }
 .mock-banner strong { display: block; margin-bottom: 3px; }
 .mock-banner div { font-size: .88rem; line-height: 1.6; word-break: keep-all; }
-
-.status-banner.closed { background: var(--surface2); border: 1px solid var(--line2); color: var(--ink2); }
-.status-banner.upcoming { background: var(--st-up-bg); border: 1px solid transparent; color: var(--st-up); }
-.status-banner.upcoming i, .status-banner.upcoming strong { color: var(--st-up); }
-.status-banner i { font-size: 20px; margin-top: 1px; color: var(--ink3); }
-.status-banner strong { display: block; margin-bottom: 3px; color: var(--ink); }
-.status-banner div { font-size: .88rem; line-height: 1.6; word-break: keep-all; }
 
 /* ---- 허브 탐색 바 ----------------------------------------- */
 .hub-nav {
@@ -169,18 +144,6 @@
   background: var(--surface2); color: var(--ink2);
 }
 .chip-cat { background: var(--c-bg); color: var(--c); }
-.chip-always { background: var(--brand-bg); color: var(--brand-dark); }
-.chip-active { background: var(--brand-bg); color: var(--brand-dark); }
-.chip-deadline { background: var(--surface2); color: var(--ink2); border: 1px solid var(--line2); }
-.chip-closed { background: transparent; color: var(--ink3); border: 1px dashed var(--line2); }
-.chip-upcoming { background: var(--st-up-bg); color: var(--st-up); }
-
-.card-badge {
-  flex-shrink: 0; align-self: flex-start;
-  padding: 3px 9px; border-radius: 7px;
-  background: var(--c-bg); color: var(--c);
-  font-size: .75rem; font-weight: 800; white-space: nowrap;
-}
 .post-card.is-closed { opacity: .62; }
 .post-card.is-closed:hover { opacity: 1; }
 
@@ -300,7 +263,7 @@
 /* 홈·허브는 목록을 훑는 곳이라 폭이 필요하다. 글 본문(--container)은 그대로 둔다. */
 /* 훑는 화면(홈·허브)만 넓힌다. 구 브리핑 아카이브와 검색은 본문 폭(760px)을 그대로 쓴다 —
    그쪽 카드는 요약 문장이 길어 넓히면 한 줄이 너무 길어진다. */
-.feed:has(.pcard), .home-axis, .home-hero, .hub-nav, .page-header.is-wide, .hub-footnote {
+.feed:has(.pcard), .home-hero, .hub-nav, .page-header.is-wide, .hub-footnote {
   max-width: var(--container-wide);
 }
 /* 헤더와 첫 카드 사이 숨 쉴 틈. 기존 값은 아래 패딩이 0이라 히어로와 붙었다. */
@@ -314,8 +277,10 @@
    사이트 자체가 위험해 보인다. */
 .site-notice {
   margin: 1rem 0 0;
-  padding: .6rem .8rem;
-  max-width: 780px;
+  padding: .55rem .75rem;
+  /* 폭을 제한하지 않는다 — 이 줄은 한 줄로 읽혀야 하고, 780px 로 묶으면
+     넓은 화면에서도 두세 줄로 접힌다. 좁은 화면에서 접히는 것은 어쩔 수 없다. */
+  max-width: none;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
@@ -332,15 +297,18 @@
 }
 .site-notice a:hover { color: var(--ink); }
 
-/* ---- 홈 ---------------------------------------------------- */
-.home-intro {
-  max-width: var(--container); margin: 0 auto; padding: 0 1.5rem 1.5rem;
-}
 /* 메인 토픽 — 조회수 1위 한 건.
    H안: 색 배경·이모지·그림자·들림을 빼고, '카드 하나를 크게 두는 것'으로만 강조한다. */
+/* 히어로는 카드 자체가 블록이라, 다른 블록처럼 1.5rem 안쪽 여백을 '패딩' 으로
+   줄 자리가 없다 (그 패딩은 카드 안쪽 여백이 된다). 그래서 폭을 그만큼 줄여
+   테두리가 아래 색인 줄·헤더 제목과 같은 선에서 시작하게 한다.
+   width 와 max-width 를 함께 두는 이유: max-width 만으로는 1200px 미만 화면에서
+   폭이 화면 끝까지 차 좌우 여백이 사라진다. */
 .home-hero {
   display: block;
-  max-width: var(--container-wide); margin: 0 auto 1.75rem;
+  width: calc(100% - 3rem);
+  max-width: calc(var(--container-wide) - 3rem);
+  margin: 0 auto 1.75rem;
   padding: 2rem 2.25rem;
   border-radius: 10px;
   background: var(--surface); border: 1px solid var(--line);
@@ -369,39 +337,11 @@
   font-size: .8rem; color: var(--ink3);
 }
 
-/* 대상별 8칸 — 이모지를 빼고 건수를 크게. 고를 때 실제로 보는 값은 건수다. */
-.home-axis {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
-  max-width: var(--container-wide); margin: 0 auto 2.25rem; padding: 0 1.5rem;
-}
-.axis-card {
-  display: flex; flex-direction: column; gap: 2px;
-  padding: 16px 18px; border-radius: 10px;
-  background: var(--surface); border: 1px solid var(--line);
-  transition: border-color .15s;
-}
-.axis-card:hover { border-color: var(--line2); }
-.axis-count {
-  font-size: 1.5rem; font-weight: 700; letter-spacing: -.04em;
-  font-variant-numeric: tabular-nums; line-height: 1.15; color: var(--ink);
-}
-.axis-label { font-size: .86rem; font-weight: 600; color: var(--ink2); }
-.axis-card.is-empty .axis-count, .axis-card.is-empty .axis-label { color: var(--ink3); }
-
-@media (max-width: 900px) {
-  .home-axis { grid-template-columns: repeat(4, 1fr); }
-}
-
-@media (max-width: 700px) {
-  .home-axis { grid-template-columns: repeat(2, 1fr); }
-}
-
 @media (max-width: 600px) {
   .program-title { font-size: 1.55rem; }
   .program-summary { font-size: .96rem; }
   .program-hero { padding: 1.25rem 0 1.5rem; }
   .cta-primary, .cta-secondary { flex: 1 1 100%; justify-content: center; }
-  .home-axis { grid-template-columns: repeat(2, 1fr); }
   .home-hero { padding: 1.35rem 1.35rem; }
   .hero-title { font-size: 1.3rem; }
   .hero-amount { font-size: 1.1rem; }
@@ -451,14 +391,6 @@
    `.is-program` 으로 좁혀 구 브리핑 포스트의 .cn-* 는 건드리지 않는다.
    ═══════════════════════════════════════════════════════════ */
 
-/* 히어로 — 배지에서 색 배경을 걷어낸다. 색이 남는 것은 상태 배지 하나뿐. */
-.program-hero .badge-cat {
-  background: transparent; color: var(--ink2); border: 1px solid var(--line2);
-}
-.program-hero .badge-region,
-.program-hero .badge-period { background: transparent; border: 1px solid var(--line2); }
-.program-hero .badge-period.always { background: transparent; color: var(--ink2); border-color: var(--line2); }
-
 /* CTA — 분야 색 버튼을 잉크색으로. 들림·그림자도 뺀다. */
 .program-cta .cta-primary {
   background: var(--ink); color: var(--surface); border: 1px solid var(--ink);
@@ -475,15 +407,6 @@
   box-shadow: none; border: 0; background: transparent; padding: 0;
   display: flex; flex-direction: column; gap: .875rem;
 }
-
-/* 리드 — 색 배경과 색 아이콘 상자를 빼고 굵은 문장 하나로 */
-.is-program .cn-lead {
-  background: transparent; border: 0; border-left: 2px solid var(--line2);
-  border-radius: 0; padding: .2rem 0 .2rem 1.1rem; gap: 0;
-}
-.is-program .cn-lead-icon { display: none; }
-.is-program .cn-lead p { font-size: 1.05rem; font-weight: 600; color: var(--ink); }
-.is-program .cn-lead strong { color: var(--ink); }
 
 /* 섹션 제목 — 앞의 4px 색 막대 제거 */
 .is-program .cn-h::before { display: none; }
@@ -502,9 +425,6 @@
 .is-program .cn-step-no { background: var(--ink); }
 .is-program .cn-step .cn-step-body strong { color: var(--ink); }
 
-/* 타임라인·FAQ·링크 — 점과 아이콘의 색만 잉크로 낮춘다 */
-.is-program .cn-timeline li::before { background: var(--ink2); box-shadow: 0 0 0 3px var(--surface2); }
-.is-program .cn-timeline .cn-tl-when { color: var(--ink2); }
 .is-program .cn-faq summary::after { color: var(--ink3); }
 .is-program .cn-links a:hover { border-color: var(--ink2); transform: none; }
 .is-program .cn-links a i { color: var(--ink2); }
@@ -724,7 +644,6 @@
   border-top: 1px solid var(--line); background: transparent; padding: .6rem 0;
 }
 .is-program .cn-sec-body .cn-spec tbody tr:nth-child(even) { background: transparent; }
-.is-program .cn-sec-body .cn-timeline { padding-top: 0; }
 .is-program .cn-sec-body > :last-child { margin-bottom: 0; }
 
 /* 주의 안내는 카드가 아니다 — 카드 사이에 낀 알림 한 줄 */
@@ -917,22 +836,6 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
 }
 .home-hero .hero-foot { margin-top: .55rem; padding-top: .55rem; font-size: .76rem; }
 
-/* ── 대상별 8칸 — 두 줄에서 한 줄로 ── */
-.home-axis { gap: 6px; margin-bottom: 1.4rem; }
-.axis-card { padding: 10px 12px; border-radius: 8px; }
-.axis-count { font-size: 1.25rem; }
-/* keep-all 이 없으면 '신혼·예비부부' 가 '신혼·예비부 / 부' 로 잘린다 */
-.axis-label { font-size: .8rem; word-break: keep-all; }
-@media (min-width: 1100px) { .home-axis { grid-template-columns: repeat(8, 1fr); } }
-@media (max-width: 1099px) and (min-width: 700px) { .home-axis { grid-template-columns: repeat(4, 1fr); } }
-/* 모바일도 4열. 2열이면 이 블록 하나가 378px 를 먹어 첫 화면을 다 쓴다. */
-@media (max-width: 699px) {
-  .home-axis { grid-template-columns: repeat(4, 1fr); gap: 5px; padding-left: 1rem; padding-right: 1rem; }
-  .axis-card { padding: 8px 8px; }
-  .axis-count { font-size: 1.05rem; }
-  .axis-label { font-size: .68rem; letter-spacing: -.04em; line-height: 1.3; }
-}
-
 /* ═══════════════════════════════════════════════════════════
    색 되살리기 — 두 축만
    ───────────────────────────────────────────────────────────
@@ -957,7 +860,6 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
 .section-label .sec-tag { font-weight: 700; letter-spacing: .02em; text-transform: none; }
 .sec-tag.is-deadline { background: var(--urgent-bg); color: var(--urgent); }
 .sec-tag.is-upcoming { background: var(--st-up-bg);  color: var(--st-up); }
-.sec-tag.is-new      { background: var(--brand-bg);  color: var(--brand-dark); }
 /* 제목 오른쪽 선도 그 색을 옅게 이어받는다 — 어디까지가 한 섹션인지 눈으로 잡힌다 */
 .section-group .sec-rule { background: color-mix(in srgb, var(--c, var(--ink3)) 22%, transparent); }
 
@@ -1098,7 +1000,6 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
 }
 /* 좁아지면 세 칸을 옆으로 못 놓는다. 주제 이름을 위로 올리고 세 건을 아래에 편다. */
 @media (max-width: 720px) {
-  .topic-index { padding-left: 1rem; padding-right: 1rem; }
   .tx-row { grid-template-columns: minmax(0, 1fr); gap: .6rem; padding: 1rem .6rem; }
   .tx-topic { flex-direction: row; align-items: baseline; gap: .45rem; flex-wrap: wrap; }
   .tx-name { font-size: 1.02rem; }

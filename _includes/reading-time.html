@@ -1,3 +1,0 @@
-{%- assign chars = include.content | strip_html | strip_newlines | size -%}
-{%- assign mins = chars | divided_by: 500 -%}
-{%- if mins < 1 -%}약 1분 읽기{%- else -%}약 {{ mins | plus: 1 }}분 읽기{%- endif -%}

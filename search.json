@@ -3,8 +3,7 @@ layout: null
 permalink: /search.json
 ---
 {% comment %}
-  검색 인덱스. 제도(site.programs)를 먼저 싣고, 구 브리핑(site.posts)은 뒤에 붙인다.
-  목 데이터로 만든 페이지는 색인에서 뺀다 — 가짜 수치가 검색으로 노출되면 안 된다.
+  검색 인덱스. 목 데이터로 만든 페이지는 뺀다 — 가짜 수치가 검색으로 노출되면 안 된다.
 {% endcomment %}
 [
   {% assign indexable = site.programs | where_exp: "p", "p.is_mock != true" %}
@@ -20,21 +19,6 @@ permalink: /search.json
     "summary": {{ p.summary | default: "" | jsonify }},
     "tags": {{ p.audiences | default: empty | jsonify }},
     "content": {{ p.content | strip_html | strip_newlines | truncate: 1200 | jsonify }}
-  }{% unless forloop.last %},{% endunless %}
-  {% endfor %}
-  {% if indexable.size > 0 and site.posts.size > 0 %},{% endif %}
-  {% for post in site.posts %}
-  {
-    "type": "brief",
-    "title": {{ post.title | jsonify }},
-    "url": {{ post.url | relative_url | jsonify }},
-    "category": {{ post.categories | first | jsonify }},
-    "region": "",
-    "org": "",
-    "date": {{ post.date | date: "%Y.%m.%d" | jsonify }},
-    "summary": {{ post.summary | default: "" | jsonify }},
-    "tags": {{ post.tags | jsonify }},
-    "content": {{ post.content | strip_html | strip_newlines | truncate: 800 | jsonify }}
   }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
