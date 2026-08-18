@@ -1,0 +1,26 @@
+{% comment %}
+  분야 색인의 항목 한 줄. 홈의 색인이 줄마다 세 건씩 내므로 같은 마크업이
+  아홉 줄 × 세 건 = 스물일곱 번 반복된다. 여기 한 곳에서만 고치도록 뺐다.
+
+  파라미터: program (필수)
+
+  오른쪽에 금액 + 기간 두 값을 둔다. 금액은 대표 금액이 뽑힌 제도에만 있고,
+  기간은 원문에 없으면 지원 지역으로 대신한다. '원문 참고' 는 여러 줄에 똑같이
+  찍히면서 아무것도 알려 주지 않아 쓰지 않는다.
+{% endcomment %}
+{% assign it = include.program %}
+<a class="tx-item" href="{{ it.url | relative_url }}">
+  <span class="tx-main">
+    <span class="tx-title">{{ it.title }}{% if it.status == 'upcoming' %}<span class="tx-flag">예정</span>{% endif %}</span>
+    {% if it.org %}<span class="tx-meta">{{ it.org }}</span>{% endif %}
+  </span>
+  <span class="tx-right">
+    {% if it.highlight %}<span class="tx-amount">{{ it.highlight }}</span>{% endif %}
+    <span class="tx-when">
+      {%- if it.status == 'upcoming' and it.apply_start %}{{ it.apply_start }} 시작
+      {%- elsif it.apply_always %}상시 접수
+      {%- elsif it.apply_end %}{{ it.apply_end }}까지
+      {%- else %}{{ it.region_label | default: '전국' }}{% endif -%}
+    </span>
+  </span>
+</a>
