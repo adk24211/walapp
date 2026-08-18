@@ -40,7 +40,7 @@ RETRY_DELAYS = (25, 65)
 SYSTEM_PROMPT = (
     "당신은 정부 지원 제도를 일반 국민이 이해할 수 있게 풀어 쓰는 한국어 편집자입니다. "
     "맞춤법과 문법이 정확하고, 주어진 사실 밖으로 절대 나가지 않으며, "
-    "정중한 존댓말('~합니다', '~하세요')로 일관되게 씁니다."
+    "정중한 존댓말('~합니다', '~입니다')로 일관되게 씁니다."
 )
 
 
@@ -111,8 +111,11 @@ def build_prompt(record: ProgramRecord) -> str:
         - 한자와 일본어 가나를 쓰지 않습니다. 한글과 영문·숫자만 씁니다.
 
         ★ 문체
-        - 모든 문장을 '~합니다 / ~입니다 / ~하세요' 로 끝맺습니다.
+        - 모든 문장을 '~합니다 / ~입니다' 로 끝맺습니다.
         - 기사체('~한다')와 구어체('~해요')를 쓰지 않습니다.
+        - **지시하는 어미('~하세요', '~하십시오', '~해 주세요')를 쓰지 않습니다.**
+          신청 여부는 읽는 사람이 정합니다. 안내가 필요하면 '~하시기 바랍니다',
+          '~하시면 됩니다', '~해야 합니다' 로 씁니다.
         - 같은 뜻의 문장을 반복하지 않습니다. 내용이 적으면 짧게 끝냅니다.
 
         === 출력 형식 (JSON만, 다른 텍스트 금지) ===
@@ -271,7 +274,7 @@ def generate_offline(record: ProgramRecord) -> dict:
 
     eligibility: list[str] = []
     for chunk in _split_items(record.target_raw):
-        eligibility.append(chunk if chunk.endswith(("다", "요", ".")) else f"{chunk}에 해당하는지 확인하세요")
+        eligibility.append(chunk if chunk.endswith(("다", "요", ".")) else f"{chunk}에 해당하는지 확인이 필요합니다")
     for chunk in _split_items(record.criteria_raw):
         eligibility.append(chunk)
     eligibility = [e for e in dict.fromkeys(eligibility) if e][:6]
@@ -297,7 +300,7 @@ def generate_offline(record: ProgramRecord) -> dict:
         "eligibility": eligibility,
         "steps": steps,
         "faq": faq,
-        "note": "지원 금액과 자격 요건은 지침 개정으로 바뀔 수 있으니 신청 전 공식 창구에서 확인하세요.",
+        "note": "지원 금액과 자격 요건은 지침 개정으로 바뀔 수 있으므로 신청 전 공식 창구에서 확인하셔야 합니다.",
     }
 
 

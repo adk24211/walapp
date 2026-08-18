@@ -284,7 +284,9 @@
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
-  font-size: 13px;
+  /* 12px 인 이유는 한 줄 제약이다. 13px 이면 제도 상세의 본문 칼럼(712px)에서
+     이 문장이 737px 라 접힌다. 문구를 줄이는 대신 한 급 낮췄다. */
+  font-size: 12px;
   line-height: 1.6;
   color: var(--ink2);
 }
