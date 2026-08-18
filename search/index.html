@@ -30,7 +30,7 @@
 {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Walapp"},"description":"정부·지자체 지원금과 복지 제도를 받을 수 있는지부터 신청 방법까지 하나씩 정리합니다. 공공데이터 원문을 토대로 쉬운 말로 풀어 씁니다.","headline":"검색","image":"https://adk24211.github.io/walapp/assets/images/logo-full.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://adk24211.github.io/walapp/assets/images/logo.png"},"name":"Walapp"},"url":"https://adk24211.github.io/walapp/search/"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link type="application/atom+xml" rel="alternate" href="https://adk24211.github.io/walapp/feed.xml" title="Walapp" />
+  <link rel="alternate" type="application/atom+xml" title="Walapp" href="https://adk24211.github.io/walapp/feed.xml">
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NS58PGSBFP"></script>
   <script>
@@ -108,7 +108,6 @@
   var status  = document.getElementById('search-status');
   var results = document.getElementById('search-results');
   // 분야 라벨은 _data/taxonomy.json 에서 그대로 가져온다 (템플릿에 한글 라벨 하드코딩 금지).
-  // 구 브리핑 카테고리는 아카이브 검색 결과 표시용으로만 남겨 둔다.
   var CAT_LABEL = {
     
     "housing": "주거",
@@ -123,9 +122,8 @@
     
     "finance": "금융·자산",
     
-    "living": "생활·문화",
+    "living": "생활·문화"
     
-    'policy': '국내 정책', 'youth': '청년 정책', 'data': '통계·생활정보', 'curious': '흥미로운 발견'
   };
   var docs = [];
   var ready = false;
@@ -190,7 +188,6 @@
     results.innerHTML = matched.map(function (d) {
       var chips = '<span class="chip chip-cat">' + escapeHtml(CAT_LABEL[d.category] || d.category) + '</span>';
       if (d.region) chips += '<span class="chip">' + escapeHtml(d.region) + '</span>';
-      if (d.type === 'brief') chips += '<span class="chip chip-closed">지난 브리핑</span>';
       return '' +
         '<a href="' + d.url + '" class="post-card cn" data-cat="' + escapeHtml(d.category) + '">' +
           '<div class="card-inner">' +
@@ -234,7 +231,6 @@
       <a href="/walapp/deadline/">마감 임박</a>
       <a href="/walapp/new/">새로 추가</a>
       <a href="/walapp/region/national/">지역별</a>
-      <a href="/walapp/brief/">지난 브리핑</a>
       <a href="/walapp/feed.xml">RSS</a>
       <a href="/walapp/about/">소개</a>
       <a href="/walapp/disclaimer/">면책 조항</a>

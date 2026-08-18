@@ -18,33 +18,6 @@
 .post-content .cn-h + .cn { margin-top: .9rem; }
 .post-content .cn + .cn { margin-top: 1.1rem; }
 
-/* ---------- 1) 핵심 요약 배너 ---------- */
-.cn-lead {
-  display: flex; gap: 16px; align-items: flex-start;
-  padding: 18px 20px; border-radius: var(--radius);
-  background: var(--c-bg); border: 1px solid color-mix(in srgb, var(--c) 25%, transparent);
-}
-.cn-lead .cn-lead-icon {
-  flex: 0 0 auto; width: 40px; height: 40px; border-radius: 11px; margin-top: 0.2rem;
-  display: grid; place-items: center; background: var(--c); color: #fff; font-size: 21px;
-}
-.cn-lead p { margin: 0; font-size: 1.02rem; line-height: 1.7; color: var(--ink); word-break: keep-all; }
-.cn-lead strong { color: var(--c); font-weight: 700; }
-
-/* ---------- 2) 핵심 수치 스탯 그리드 ---------- */
-.cn-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(132px, 1fr)); gap: 12px; }
-.cn-stat {
-  padding: 18px 14px; border-radius: var(--radius);
-  background: var(--surface); border: 1px solid var(--line);
-  display: flex; flex-direction: column; justify-content: center; align-items: center;
-  text-align: center; min-height: 92px;
-}
-.cn-stat .cn-stat-num {
-  font-size: 1.65rem; font-weight: 800; line-height: 1.15;
-  color: var(--c); letter-spacing: -.02em; word-break: keep-all;
-}
-.cn-stat .cn-stat-label { margin-top: 6px; font-size: .82rem; font-weight: 500; color: var(--ink2); }
-
 /* ---------- 3) 비교 표 (일반형 vs 우대형 등) ---------- */
 .cn-table { overflow-x: auto; }
 .cn-table table { width: 100%; border-collapse: collapse; font-size: .92rem; }
@@ -123,20 +96,6 @@
   content: ""; width: 4px; height: 1.05em; border-radius: 3px; background: var(--c);
 }
 
-/* ---------- 8) 타임라인 (일정·절차) ---------- */
-.cn-timeline { list-style: none; margin: 0; padding: 4px 0 4px 6px; }
-.cn-timeline li {
-  position: relative; padding: 0 0 18px 26px; border-left: 2px solid var(--line2);
-}
-.cn-timeline li:last-child { border-left-color: transparent; padding-bottom: 2px; }
-.cn-timeline li::before {
-  content: ""; position: absolute; left: -7px; top: 0.25rem;
-  width: 12px; height: 12px; border-radius: 50%;
-  background: var(--c); box-shadow: 0 0 0 3px var(--c-bg);
-}
-.cn-timeline .cn-tl-when { display: block; font-size: .8rem; font-weight: 700; color: var(--c); margin-bottom: 3px; }
-.cn-timeline .cn-tl-what { font-size: .95rem; color: var(--ink); line-height: 1.55; word-break: keep-all; }
-
 /* ---------- 9) FAQ 아코디언 ---------- */
 .cn-faq { display: grid; gap: 10px; }
 .cn-faq details {
@@ -157,18 +116,6 @@
 .cn-faq details[open] summary::after { transform: rotate(45deg); }
 .cn-faq .cn-faq-body { padding: 0 16px 15px; font-size: .93rem; color: var(--ink2); line-height: 1.7; word-break: keep-all; }
 
-/* ---------- 10) 인용/강조 박스 ---------- */
-.cn-quote {
-  position: relative; padding: 20px 22px 20px 56px; border-radius: var(--radius);
-  background: var(--c-bg); color: var(--ink); font-size: 1.05rem; line-height: 1.7;
-  word-break: keep-all;
-}
-.cn-quote::before {
-  content: "\201C"; position: absolute; left: 16px; top: 12px;
-  font-size: 2.6rem; line-height: 1; color: var(--c); font-family: Georgia, serif;
-}
-.cn-quote cite { display: block; margin-top: 8px; font-size: .82rem; font-style: normal; color: var(--c); font-weight: 700; }
-
 /* ---------- 11) 관련 링크 ---------- */
 .cn-links { display: grid; gap: 8px; }
 .cn-links a {
@@ -185,13 +132,6 @@
 /* ---------- 반응형 ---------- */
 @media (max-width: 520px) {
   .post-content .cn { margin: 1.25rem 0; }
-  .cn-lead { padding: 16px 17px; gap: 13px; }
-  .cn-lead p { font-size: .97rem; }
-  .cn-lead .cn-lead-icon { width: 36px; height: 36px; font-size: 19px; }
-  .cn-stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .cn-stat { min-height: 84px; padding: 14px 10px; }
-  .cn-stat .cn-stat-num { font-size: 1.4rem; }
-  .cn-stat .cn-stat-label { font-size: .78rem; }
   .cn-step { grid-template-columns: 32px 1fr; gap: 11px; padding: 14px; }
   .cn-step .cn-step-no { width: 30px; height: 30px; }
   .cn-step .cn-step-body h4 { font-size: 1rem; }
@@ -201,5 +141,4 @@
   .post-content .cn-h { font-size: 1.12rem; margin: 1.6rem 0 .75rem; }
   .cn-table table { font-size: .86rem; }
   .cn-table thead th, .cn-table tbody th, .cn-table tbody td { padding: 9px 11px; }
-  .cn-quote { font-size: .98rem; padding: 18px 18px 18px 48px; }
 }
