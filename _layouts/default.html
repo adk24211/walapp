@@ -33,7 +33,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/components.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/support.css' | relative_url }}">
@@ -45,6 +44,7 @@
   </script>
 </head>
 <body>
+  {% include icon-sprite.html %}
   <a href="#main" class="skip-link">본문 바로가기</a>
   {% include header.html %}
   <main id="main">{{ content }}</main>

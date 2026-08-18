@@ -74,6 +74,19 @@ def _attr(text) -> str:
     return html.escape(str(text or ""), quote=True)
 
 
+def _icon(name: str) -> str:
+    """본문에 넣는 아이콘 한 개.
+
+    예전에는 <i class="ti ti-…"> 로 Tabler 웹폰트를 썼다. 웹폰트는 CDN 에서
+    @latest 로 받아왔고, v3 에서 아이콘이 사라지면서 조용히 빈칸이 된 적이
+    있다. 지금은 _includes/icon-sprite.html 의 <symbol> 을 가리킨다.
+
+    ⚠️ 여기서 쓰는 이름은 스프라이트에 <symbol id="i-이름"> 이 있어야 한다.
+       없으면 또 조용한 빈칸이 된다 — 웹폰트 때와 같은 실패다.
+    """
+    return f'<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-{name}"></use></svg>'
+
+
 def _esc_lines(text) -> str:
     """짧은 다중값을 <br> 로 이어 붙인다 (예: '기타 온라인신청\\n방문신청')."""
     lines = [_esc(line) for line in str(text or "").split("\n") if line.strip()]
@@ -278,7 +291,7 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
             block += [
                 f'<div class="cn cn-links" data-cat="{cat}">',
                 f'  <a href="{_attr(record.official_url)}" target="_blank" rel="noopener nofollow">'
-                f'<i class="ti ti-external-link"></i> 소관 기관에서 자세히 보기'
+                f'{_icon("external-link")} 소관 기관에서 자세히 보기'
                 f' <span class="cn-link-ext">↗</span></a>',
                 "</div>",
             ]
@@ -310,7 +323,7 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
     if note:
         parts += [
             open_block("cn-note"),
-            '  <i class="ti ti-alert-triangle"></i>',
+            f'  {_icon("alert-triangle")}',
             f"  <p>{_esc(note)}</p>",
             "</div>",
             "",

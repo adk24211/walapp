@@ -7,9 +7,11 @@ let dark = localStorage.getItem('walapp-theme') === 'dark';
 function applyTheme() {
   root.setAttribute('data-theme', dark ? 'dark' : '');
   if (themeBtn) {
+    // 아이콘은 _includes/icon-sprite.html 의 <symbol> 을 가리킨다.
+    // 스프라이트는 <body> 첫 줄이라 이 시점에 이미 문서에 있다.
     themeBtn.innerHTML = dark
-      ? '<i class="ti ti-sun" aria-hidden="true"></i>'
-      : '<i class="ti ti-moon" aria-hidden="true"></i>';
+      ? '<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sun"></use></svg>'
+      : '<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-moon"></use></svg>';
     themeBtn.setAttribute('aria-label', dark ? '라이트모드로 전환' : '다크모드로 전환');
   }
 }
