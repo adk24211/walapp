@@ -324,7 +324,7 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
     # ── 주의 안내 ──
     # 카드로 만들지 않는다. 제목이 없는 경고 한 줄이라 번호를 붙이면 목차에 없는
     # 항목이 본문에만 생겨 번호가 어긋난다. 카드 사이에 낀 알림으로 둔다.
-    note = prose.get("note")
+    note = _useful_note(prose.get("note"))
     if note:
         parts += [
             open_block("cn-note"),
@@ -368,6 +368,54 @@ _FAQ_TOPICS = (
     ("period",      r"언제까지|신청 ?기간|마감|접수 ?기간|언제 신청"),
     ("contact",     r"문의|어디에 물어|연락"),
 )
+
+
+# 주의 안내에서 '이 제도에만 해당하는 말' 을 가려내는 표현들.
+#
+# 45건을 재보니 안내가 45건 전부에 있었는데, 그중 40건이 두 가지만 말했다.
+#   · "자세한 사항은 ○○에 확인하세요"  — 문의처는 바로 아래 '신청 창구' 표에 있다.
+#   · "변경될 수 있습니다"             — 푸터가 이미 '지침 개정으로 달라질 수
+#                                      있습니다' 라고 말한다.
+# 경고 아이콘이 붙은 상자가 모든 페이지에 뜨면 아무도 그걸 경고로 읽지 않는다.
+# 진짜 주의사항(예산 소진 조기 마감, 지자체 조례에 따라 연령 변동)이 같은
+# 생김새로 묻힌다.
+_NOTE_REFERRAL_RE = re.compile(
+    r"(확인|문의|참고)\s*(하세요|하시기 바랍니다|하시면 됩니다|하실 수 있습니다"
+    r"|할 수 있습니다|바랍니다|하는 것이 좋습니다|하시고)")
+_NOTE_GENERIC_RE = re.compile(r"변경\s*(될|가능성)|운영하는 제도입니다|제공하는 제도이")
+# 신청 기간은 오른쪽 레일에 있다. 본문에 날짜를 또 적으면 원천이 바뀔 때
+# 레일만 갱신되고 이 문장은 낡은 채로 남는다.
+_NOTE_PERIOD_RE = re.compile(r"상시\s*접수|신청 기간은|접수 기간은|언제든지 신청")
+# ⚠️ 이 말이 하나라도 있으면 이 제도에만 해당하는 조건이므로 버리지 않는다.
+#    위 세 표현과 겹쳐도 이쪽이 이긴다 — "매년 변경될 수 있으니" 처럼
+#    일반론의 탈을 쓴 개별 조건이 있기 때문이다.
+_NOTE_SPECIFIC_RE = re.compile(
+    r"예산|소진|조기\s*마감|선착순|지자체별|조례|매년|고시|중복|한도"
+    r"|우선|제외|연령이 변동|소급|재신청")
+
+
+def _useful_note(note: str) -> str:
+    """주의 안내에서 이 제도에만 해당하는 문장만 남긴다.
+
+    남는 게 없으면 빈 문자열 — 안내 자체를 렌더하지 않는다.
+
+    이 판정은 렌더 단계에서 한다. 저장된 해설(`_prose`)은 그대로 두므로,
+    규칙을 고치면 Groq 재호출 없이 rerender.py 만으로 다시 반영된다.
+    (`_useful_faq` 와 같은 이유다.)
+    """
+    kept = []
+    for sentence in (x.strip() for x in re.split(r"(?<=다\.)\s*|(?<=요\.)\s*", str(note or ""))):
+        if not sentence:
+            continue
+        if _NOTE_SPECIFIC_RE.search(sentence):
+            kept.append(sentence)
+            continue
+        if (_NOTE_REFERRAL_RE.search(sentence)
+                or _NOTE_GENERIC_RE.search(sentence)
+                or _NOTE_PERIOD_RE.search(sentence)):
+            continue
+        kept.append(sentence)
+    return " ".join(kept).strip()
 
 
 def _useful_faq(faq: list[dict], record: ProgramRecord, *, eligibility: bool,
