@@ -1011,34 +1011,47 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
   border-color: var(--c, var(--ink3));
 }
 
-/* ── 오른쪽: 최신 세 건 ── */
-.tx-list { display: flex; flex-direction: column; min-width: 0; }
+/* ── 오른쪽: 최신 세 건을 한 줄에 나란히 ── */
+/* 세 건을 세로로 쌓으면 주제 하나가 세 줄이 되어, 여덟 주제면 스물넷 줄이다.
+   가로로 놓으면 주제 하나가 정말 한 줄이 되고 눈이 왼쪽 주제 이름만 따라
+   세로로 내려가면 된다. 색인이 원래 하려던 일이 그거다. */
+.tx-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  min-width: 0;
+}
 .tx-item {
-  display: grid; grid-template-columns: minmax(0, 1fr) auto;
-  gap: .2rem 1.25rem; align-items: baseline;
-  padding: .5rem .6rem; margin: 0 -.6rem;
+  display: flex; flex-direction: column; gap: .18rem;
+  min-width: 0; padding: .15rem 1rem;
   border-radius: 7px; transition: background .14s;
 }
-/* 건과 건 사이는 아주 옅은 선. 줄(row)의 선보다 약해야 위계가 산다. */
-.tx-item + .tx-item { border-top: 1px solid color-mix(in srgb, var(--line) 60%, transparent); }
+/* 건과 건 사이는 세로 실선. 주제와 주제를 나누는 가로선보다 옅어야 위계가 산다. */
+.tx-item + .tx-item { border-left: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
+.tx-item:first-child { padding-left: 0; }
+.tx-item:last-child { padding-right: 0; }
 .tx-item:hover { background: color-mix(in srgb, var(--c, var(--ink)) 6%, transparent); }
 
-.tx-main { display: flex; flex-direction: column; gap: .12rem; min-width: 0; }
+.tx-main { display: flex; flex-direction: column; gap: .1rem; min-width: 0; }
 .tx-title {
-  font-size: 1rem; font-weight: 600; letter-spacing: -.025em;
+  font-size: .94rem; font-weight: 600; letter-spacing: -.025em;
   color: var(--ink); line-height: 1.4; word-break: keep-all;
 }
 .tx-item:hover .tx-title { text-decoration: underline; text-underline-offset: 3px; }
-.tx-meta { font-size: .76rem; color: var(--ink3); word-break: keep-all; }
+.tx-meta { font-size: .74rem; color: var(--ink3); word-break: keep-all; }
 
-.tx-right { display: flex; flex-direction: column; align-items: flex-end; gap: .05rem; min-width: 0; }
+/* 금액과 기간은 제도명 아래 한 줄로. 세로 칸이 좁아 오른쪽 정렬은 못 쓴다. */
+.tx-right {
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: .1rem .5rem;
+  margin-top: .3rem; min-width: 0;
+}
 .tx-amount {
   white-space: nowrap;
-  font-size: 1rem; font-weight: 700; letter-spacing: -.035em;
+  font-size: .95rem; font-weight: 700; letter-spacing: -.035em;
   font-variant-numeric: tabular-nums; color: var(--ink);
 }
 .tx-when {
-  font-size: .74rem; color: var(--ink3); white-space: nowrap;
+  font-size: .73rem; color: var(--ink3); white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
 
@@ -1046,21 +1059,27 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
 .tx-row.is-deadline { --c: var(--urgent); }
 .tx-row.is-upcoming { --c: var(--st-up); }
 
-@media (max-width: 900px) {
-  .tx-row { grid-template-columns: 128px minmax(0, 1fr); gap: 0 1.1rem; padding: 1.1rem .7rem; }
-  .tx-name { font-size: 1.12rem; }
+@media (max-width: 1000px) {
+  .tx-row { grid-template-columns: 118px minmax(0, 1fr); gap: 0 1.1rem; padding: 1.05rem .7rem; }
+  .tx-name { font-size: 1.08rem; }
   .tx-more { font-size: .7rem; padding: .18rem .5rem; }
-  /* 금액·기간을 제도명 아래로 내린다 — 오른쪽 끝에 두면 제목이 눌린다 */
-  .tx-item { grid-template-columns: minmax(0, 1fr); }
-  .tx-right { flex-direction: row; align-items: baseline; gap: .5rem; margin-top: .15rem; }
-  .tx-amount { font-size: .95rem; }
+  .tx-item { padding: .15rem .7rem; }
+  .tx-title { font-size: .88rem; }
 }
-@media (max-width: 560px) {
+/* 좁아지면 세 칸을 옆으로 못 놓는다. 주제 이름을 위로 올리고 세 건을 아래에 편다. */
+@media (max-width: 720px) {
   .topic-index { padding-left: 1rem; padding-right: 1rem; }
-  .tx-row { grid-template-columns: minmax(0, 1fr); gap: .55rem; padding: 1rem .6rem; }
+  .tx-row { grid-template-columns: minmax(0, 1fr); gap: .6rem; padding: 1rem .6rem; }
   .tx-topic { flex-direction: row; align-items: baseline; gap: .45rem; flex-wrap: wrap; }
   .tx-name { font-size: 1.02rem; }
   .tx-more { margin-top: 0; margin-left: auto; }
+  .tx-list { grid-template-columns: minmax(0, 1fr); }
+  .tx-item { padding: .5rem 0; }
+  .tx-item + .tx-item {
+    border-left: 0;
+    border-top: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+  }
+  .tx-right { margin-top: .2rem; }
 }
 
 /* 예정 표식 — 색인 줄에서 '지금은 신청할 수 없다' 를 한 눈에 */
