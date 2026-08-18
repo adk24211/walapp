@@ -13,7 +13,9 @@ from __future__ import annotations
 import html
 import re
 
-from schema import STATUS_CLOSED, STATUS_LABELS, ProgramRecord
+from schema import (STATUS_CLOSED, STATUS_LABELS, ProgramRecord,
+                    apply_methods as _apply_methods,
+                    apply_not_needed as _apply_not_needed)
 
 # 구 generate_post.py 와 동일한 정책 — 한자·일본어 가나 제거
 _FOREIGN_RE = re.compile(r"[㐀-䶿一-鿿぀-ゟ゠-ヺー-ヿ]")
@@ -72,49 +74,6 @@ def _politen(value):
 
 def _attr(text) -> str:
     return html.escape(str(text or ""), quote=True)
-
-
-# ── 신청 방법 ──
-# how_to_raw 는 원천(bojo24)이 고정 어휘로 주는 값이다. 지금까지 본 값은 다섯:
-#   방문신청 29 · 기타 온라인신청 26 · 직접입력 7 · 신청불필요 4 · 정부24온라인신청 1
-#
-# '직접입력' 은 게시 기관이 자유 입력란을 골랐다는 뜻이라 방법을 알려 주지 않는다.
-# 화면에 '직접입력' 이라고 쓰면 읽는 사람에게 아무 뜻도 없으므로 버린다.
-# 모르는 값은 버리지 않고 그대로 싣는다 — 원천이 어휘를 늘렸을 때 조용히
-# 사라지는 것보다 낯선 말이라도 보이는 편이 낫다.
-APPLY_METHOD_LABELS = {
-    "방문신청": "방문 신청",
-    "기타 온라인신청": "온라인 신청",
-    "정부24온라인신청": "정부24 온라인 신청",
-    "신청불필요": "별도 신청 불필요",
-}
-APPLY_METHOD_DROP = {"직접입력"}
-APPLY_METHOD_NONE = "신청불필요"
-
-
-def _apply_methods(how_to_raw: str) -> list[str]:
-    """how_to_raw 를 사람이 읽을 말 목록으로."""
-    out: list[str] = []
-    for line in str(how_to_raw or "").split("\n"):
-        v = line.strip()
-        if not v or v in APPLY_METHOD_DROP:
-            continue
-        label = APPLY_METHOD_LABELS.get(v, v)
-        if label not in out:
-            out.append(label)
-    return out
-
-
-def _apply_not_needed(how_to_raw: str) -> bool:
-    """신청 자체가 필요 없는 제도인가.
-
-    이 제도들에 '신청하기' 버튼을 띄우면 틀린 안내다. 다른 방법이 함께
-    적혀 있으면(예: 신청불필요 + 방문신청) 어느 쪽인지 원문만으로는 알 수
-    없으므로 단정하지 않는다.
-    """
-    lines = [v.strip() for v in str(how_to_raw or "").split("\n") if v.strip()]
-    lines = [v for v in lines if v not in APPLY_METHOD_DROP]
-    return lines == [APPLY_METHOD_NONE]
 
 
 def _icon(name: str) -> str:

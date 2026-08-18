@@ -25,6 +25,7 @@ import re
 import textwrap
 import time
 
+import schema
 import taxonomy
 from schema import ProgramRecord
 
@@ -40,7 +41,12 @@ RETRY_DELAYS = (25, 65)
 SYSTEM_PROMPT = (
     "당신은 정부 지원 제도를 일반 국민이 이해할 수 있게 풀어 쓰는 한국어 편집자입니다. "
     "맞춤법과 문법이 정확하고, 주어진 사실 밖으로 절대 나가지 않으며, "
-    "정중한 존댓말('~합니다', '~입니다')로 일관되게 씁니다."
+    "정중한 존댓말('~합니다', '~입니다')로 일관되게 씁니다. "
+    # 실제로 새어 나온 적이 있다. '방문申请', '最近 5년 이내' 처럼 중국어가 섞여
+    # 그대로 발행됐다(6건). 모델이 한국어와 중국어를 함께 배운 탓이라 한 줄로
+    # 못을 박아 둔다. 사후 검증도 verify.py 가 따로 한다.
+    "한글과 숫자, 그리고 원문에 있는 한자 표기만 씁니다. "
+    "중국어 간체나 일본어 문자는 한 글자도 쓰지 않습니다."
 )
 
 
@@ -84,7 +90,7 @@ def build_prompt(record: ProgramRecord) -> str:
         {cap(record.criteria_raw) or "(내용 없음)"}
 
         [신청 방법]
-        {cap(record.how_to_raw) or "(내용 없음)"}
+        {" · ".join(schema.apply_methods(record.how_to_raw)) or "(내용 없음)"}
 
         [구비 서류]
         {chr(10).join(f"- {d}" for d in record.documents_raw) or "(내용 없음)"}
@@ -280,11 +286,13 @@ def generate_offline(record: ProgramRecord) -> dict:
     eligibility = [e for e in dict.fromkeys(eligibility) if e][:6]
 
     steps: list[dict] = []
-    how_to_items = _split_items(record.how_to_raw)
+    how_to_items = _split_items("\n".join(schema.apply_methods(record.how_to_raw)))
     for index, chunk in enumerate(how_to_items[:4], 1):
         steps.append({"title": f"{index}단계", "body": chunk})
-    if not steps and record.how_to_raw:
-        steps = [{"title": "신청 방법", "body": record.how_to_raw}]
+    if not steps:
+        methods = schema.apply_methods(record.how_to_raw)
+        if methods:
+            steps = [{"title": "신청 방법", "body": " · ".join(methods) + "으로 신청합니다."}]
 
     faq: list[dict] = []
     if record.documents_raw:

@@ -22,6 +22,7 @@ import logging
 import re
 from dataclasses import dataclass, field
 
+import schema
 from schema import ProgramRecord
 
 log = logging.getLogger(__name__)
@@ -44,12 +45,13 @@ _SENTENCE_SPLIT_RE = re.compile(r"(?<=[.!?])\s+|(?<=다\.)\s*|(?<=요\.)\s*")
 @dataclass
 class VerifyReport:
     violations: list[str] = field(default_factory=list)   # 원본에 없던 숫자
+    language: list[str] = field(default_factory=list)     # 한국어가 아니거나 코드값
     dropped: list[str] = field(default_factory=list)      # 버려진 문장
     emptied: list[str] = field(default_factory=list)      # 내용이 다 날아간 필드
 
     @property
     def ok(self) -> bool:
-        return not self.violations
+        return not self.violations and not self.language
 
     @property
     def fatal(self) -> bool:
@@ -59,8 +61,61 @@ class VerifyReport:
     def summary_line(self) -> str:
         if self.ok:
             return "검증 통과"
-        return (f"위반 수치 {len(self.violations)}건({', '.join(self.violations[:5])}) "
-                f"· 문장 {len(self.dropped)}개 폐기")
+        bits = []
+        if self.violations:
+            bits.append(f"위반 수치 {len(self.violations)}건({', '.join(self.violations[:5])})")
+        if self.language:
+            bits.append(f"언어 {len(self.language)}건({', '.join(self.language[:3])})")
+        bits.append(f"문장 {len(self.dropped)}개 폐기")
+        return " · ".join(bits)
+
+
+# ─────────────────────────────────────────────────────────────
+#  언어 검사 — 한국어가 아닌 것, 그리고 원천 코드값
+# ─────────────────────────────────────────────────────────────
+# 숫자 검증만으로는 못 잡는 두 가지가 실제로 발행됐다.
+#
+#  · 중국어 혼입 6건. "온라인이나 방문申请 방법을 통해", "最近 5년 이내",
+#    "海外" 가 "外海" 로 뒤집힌 것까지. 모델이 한국어와 중국어를 함께 배운
+#    탓이다. 프롬프트에도 못을 박았지만(generate_program.SYSTEM_PROMPT)
+#    지시만으로는 새어 나올 수 있으니 여기서 한 번 더 막는다.
+#
+#  · 원천 코드값 '직접입력' 7건. 게시 기관이 자유 입력란을 골랐다는 뜻인데
+#    LLM 이 신청 방법으로 착각해 "직접입력을 통해 신청할 수 있습니다" 라고
+#    썼다. 읽는 사람에게 아무 뜻이 없는 문장이다. 지금은 프롬프트에 아예
+#    넘기지 않지만(schema.apply_methods), 다른 코드값이 늘어날 수 있다.
+#
+# 아는 오타는 먼저 고치고, 그러고도 남으면 그 문장을 버린다. 한 글자 때문에
+# 멀쩡한 문장을 버리는 게 아깝지만, 한국어 지원금 안내에 중국어가 남아 있는
+# 것보다는 낫다. 버린 것은 전부 보고된다.
+_CJK_REPAIR = {
+    "申请": "신청",
+    "最近": "최근",
+    "外海": "해외",   # '해외' 가 뒤집혀 나온 것
+    "海外": "해외",
+}
+# 가나 + 한자. prose 는 우리가 생성한 한국어 문장이라 한자가 낄 자리가 없다
+# (원문 그대로인 *_raw 필드는 이 검사를 거치지 않는다).
+_NON_KOREAN_RE = re.compile(r"[\u3040-\u30ff\u4e00-\u9fff]")
+
+
+def repair_language(text: str) -> str:
+    """아는 혼입 글자를 한국어로 되돌린다."""
+    for bad, good in _CJK_REPAIR.items():
+        text = text.replace(bad, good)
+    return text
+
+
+def language_violations(sentence: str, code_values: set[str]) -> list[str]:
+    """이 문장을 버려야 하는 이유들. 비어 있으면 통과."""
+    reasons = []
+    found = _NON_KOREAN_RE.findall(sentence)
+    if found:
+        reasons.append("비한국어 문자 " + "".join(sorted(set(found))))
+    for code in code_values:
+        if code and code in sentence:
+            reasons.append(f"원천 코드값 '{code}'")
+    return reasons
 
 
 def _numbers(text: str) -> set[str]:
@@ -97,13 +152,19 @@ def _split_sentences(text: str) -> list[str]:
     return parts or ([text.strip()] if str(text or "").strip() else [])
 
 
-def scrub_text(text: str, allowed: set[str], report: VerifyReport) -> str:
-    """원본에 없는 수치가 든 문장을 제거한다."""
+def scrub_text(text: str, allowed: set[str], report: VerifyReport,
+               code_values: set[str] | None = None) -> str:
+    """원본에 없는 수치가 든 문장, 한국어가 아닌 문장을 제거한다."""
     kept: list[str] = []
-    for sentence in _split_sentences(text):
+    for sentence in _split_sentences(repair_language(text)):
         bad = [t for t in fact_tokens(sentence) if t not in allowed]
         if bad:
             report.violations.extend(bad)
+            report.dropped.append(sentence)
+            continue
+        reasons = language_violations(sentence, code_values or set())
+        if reasons:
+            report.language.extend(reasons)
             report.dropped.append(sentence)
             continue
         kept.append(sentence)
@@ -116,20 +177,23 @@ def scrub(prose: dict, record: ProgramRecord) -> tuple[dict, VerifyReport]:
     반환한 prose 는 그대로 렌더에 넣어도 안전하다.
     """
     allowed = allowed_numbers(record)
+    # 이 제도의 원문에 실제로 들어 있던 코드값만 검사한다. 원문에 없던 말이면
+    # LLM 이 지어낸 것이고, 그건 숫자 검증이 아니라 다른 문제다.
+    codes = {c for c in schema.APPLY_METHOD_DROP if c in str(record.how_to_raw or "")}
     report = VerifyReport()
     cleaned = dict(prose)
 
     # ── 단문 필드 ──
     for key in ("summary", "note"):
         if cleaned.get(key):
-            value = scrub_text(str(cleaned[key]), allowed, report)
+            value = scrub_text(str(cleaned[key]), allowed, report, codes)
             cleaned[key] = value
             if not value:
                 report.emptied.append(key)
 
     # ── 리스트 필드 ──
     if cleaned.get("eligibility"):
-        items = [scrub_text(str(c), allowed, report) for c in cleaned["eligibility"]]
+        items = [scrub_text(str(c), allowed, report, codes) for c in cleaned["eligibility"]]
         cleaned["eligibility"] = [c for c in items if c]
         if not cleaned["eligibility"]:
             report.emptied.append("eligibility")
@@ -138,7 +202,7 @@ def scrub(prose: dict, record: ProgramRecord) -> tuple[dict, VerifyReport]:
     if cleaned.get("steps"):
         steps = []
         for step in cleaned["steps"]:
-            body = scrub_text(str(step.get("body", "")), allowed, report)
+            body = scrub_text(str(step.get("body", "")), allowed, report, codes)
             if body:
                 steps.append({"title": step.get("title", ""), "body": body})
         cleaned["steps"] = steps
@@ -149,8 +213,8 @@ def scrub(prose: dict, record: ProgramRecord) -> tuple[dict, VerifyReport]:
     if cleaned.get("faq"):
         faq = []
         for item in cleaned["faq"]:
-            question = scrub_text(str(item.get("q", "")), allowed, report)
-            answer = scrub_text(str(item.get("a", "")), allowed, report)
+            question = scrub_text(str(item.get("q", "")), allowed, report, codes)
+            answer = scrub_text(str(item.get("a", "")), allowed, report, codes)
             if question and answer:
                 faq.append({"q": question, "a": answer})
         cleaned["faq"] = faq

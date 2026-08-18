@@ -192,6 +192,55 @@ class ProgramRecord:
 
 
 # ─────────────────────────────────────────────────────────────
+#  신청 방법 (how_to_raw) 정규화
+# ─────────────────────────────────────────────────────────────
+# 원천(bojo24)이 고정 어휘로 주는 값이다. 지금까지 본 값은 다섯:
+#   방문신청 29 · 기타 온라인신청 26 · 직접입력 7 · 신청불필요 4 · 정부24온라인신청 1
+#
+# '직접입력' 은 게시 기관이 자유 입력란을 골랐다는 뜻이라 방법을 알려 주지 않는다.
+# 화면에 '직접입력' 이라고 쓰면 읽는 사람에게 아무 뜻도 없으므로 버린다.
+#
+# ⚠️ 이 값을 그대로 해설 생성 프롬프트에 넘기면 LLM 이 신청 방법으로 착각해
+#    "직접입력을 통해 신청할 수 있습니다" 같은 문장을 쓴다. 실제로 7건이 그렇게
+#    나갔다. 화면·프롬프트 어느 쪽이든 이 함수를 거쳐서 쓸 것.
+#
+# 모르는 값은 버리지 않고 그대로 싣는다 — 원천이 어휘를 늘렸을 때 조용히
+# 사라지는 것보다 낯선 말이라도 보이는 편이 낫다.
+APPLY_METHOD_LABELS = {
+    "방문신청": "방문 신청",
+    "기타 온라인신청": "온라인 신청",
+    "정부24온라인신청": "정부24 온라인 신청",
+    "신청불필요": "별도 신청 불필요",
+}
+APPLY_METHOD_DROP = {"직접입력"}
+APPLY_METHOD_NONE = "신청불필요"
+
+
+def apply_methods(how_to_raw: str) -> list[str]:
+    """how_to_raw 를 사람이 읽을 말 목록으로."""
+    out: list[str] = []
+    for line in str(how_to_raw or "").split("\n"):
+        v = line.strip()
+        if not v or v in APPLY_METHOD_DROP:
+            continue
+        label = APPLY_METHOD_LABELS.get(v, v)
+        if label not in out:
+            out.append(label)
+    return out
+
+
+def apply_not_needed(how_to_raw: str) -> bool:
+    """신청 자체가 필요 없는 제도인가.
+
+    다른 방법이 함께 적혀 있으면(예: 신청불필요 + 방문신청) 어느 쪽인지
+    원문만으로는 알 수 없으므로 단정하지 않는다.
+    """
+    lines = [v.strip() for v in str(how_to_raw or "").split("\n") if v.strip()]
+    lines = [v for v in lines if v not in APPLY_METHOD_DROP]
+    return lines == [APPLY_METHOD_NONE]
+
+
+# ─────────────────────────────────────────────────────────────
 #  콘텐츠 해시 — 변경 감지 전용
 # ─────────────────────────────────────────────────────────────
 # 해시 대상: '내용'에 해당하는 필드만. last_checked 같은 운영 메타는 제외해야
