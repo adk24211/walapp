@@ -85,21 +85,19 @@ title: 정부·지자체 지원금과 복지 제도 총정리
 
 {% comment %}
   ══════════════════════════════════════════════════════════════
-   분야 색인 — 카드 그리드를 걷어내고 한 줄짜리 색인으로
+   분야 색인 — 줄마다 세 건씩
   ──────────────────────────────────────────────────────────────
-  카드가 30장이었다. 훑기 좋으라고 만든 화면인데 훑을 것이 너무 많았다.
-  주제마다 가장 최근에 들어온 한 건씩만 내고, 나머지는 분야 허브로 보낸다.
+  카드 그리드였을 때는 30장이었다. 줄로 바꾸면서 주제당 한 건까지 줄였더니
+  이번에는 홈에서 닿는 제도가 여덟 건뿐이었다. 세 건씩으로 올린다.
 
-  카드가 아니라 '줄' 인 이유: 카드는 테두리·여백·그림자로 한 장씩 자리를 주장해서
-  아홉 개만 놓아도 화면이 다시 빽빽해진다. 줄은 가로선 하나로 나뉘고,
-  왼쪽에 분야 이름이 큰 글씨로 서 있어 눈이 세로로 미끄러진다.
-  책 앞의 목차를 넘기는 감각에 가깝다 — '도감' 이라는 이름과도 맞는다.
+  카드가 아니라 '줄' 인 이유는 그대로다: 카드는 테두리·여백으로 한 장씩 자리를
+  주장해 몇 개만 놓아도 화면이 빽빽해진다. 줄은 가로선 하나로 나뉘고 왼쪽에
+  분야 이름이 큰 글씨로 서 있어 눈이 세로로 미끄러진다.
 
-  분야 색은 이름 글자 자체가 갖는다. 카드 위쪽 색 띠를 없앤 자리다.
-  줄 위에 마우스를 올리면 그 줄만 분야 색으로 아주 옅게 물든다.
+  왼쪽 칸: 분야 이름(분야색) · 건수 · 전체보기
+  오른쪽 칸: 최신 세 건. 각 건은 제도명+기관 / 금액+기간.
 
-  맨 위 두 줄은 시간 축(마감 임박·곧 시작)이다. 분야 줄과 같은 생김새라
-  장치가 하나로 유지된다. 해당하는 제도가 없으면 그 줄은 아예 없다.
+  분야 색은 이름 글자와 전체보기 버튼 테두리가 갖는다. 색 띠는 쓰지 않는다.
   ══════════════════════════════════════════════════════════════
 {% endcomment %}
 
@@ -108,45 +106,50 @@ title: 정부·지자체 지원금과 복지 제도 총정리
   {% comment %} ── 마감 임박 ── {% endcomment %}
   {% assign dated = open_rest | where_exp: "p", "p.apply_always != true" %}
   {% assign closing = dated | where_exp: "p", "p.apply_end" | sort: "apply_end" %}
-  {% assign tx = closing | first %}
-  {% if tx %}{% capture tx_shown %}{{ tx_shown }}{{ tx.url }}|{% endcapture %}
+  {% capture tx_deadline %}
+    {% assign n = 0 %}
+    {% for it in closing %}{% unless tx_shown contains it.url %}{% if n < 3 %}
+      {% include tx-item.html program=it %}
+      {% capture tx_shown %}{{ tx_shown }}{{ it.url }}|{% endcapture %}
+      {% assign n = n | plus: 1 %}
+    {% endif %}{% endunless %}{% endfor %}
+  {% endcapture %}
+  {% assign tx_deadline = tx_deadline | strip %}
+  {% if tx_deadline != "" %}
   <div class="tx-row is-deadline">
     <div class="tx-topic">
       <a class="tx-name" href="{{ '/deadline/' | relative_url }}">마감 임박</a>
       <span class="tx-count">{{ closing | size }}건</span>
+      <a class="tx-more" href="{{ '/deadline/' | relative_url }}">전체보기 <span aria-hidden="true">→</span></a>
     </div>
-    <a class="tx-item" href="{{ tx.url | relative_url }}">
-      <span class="tx-title">{{ tx.title }}</span>
-      <span class="tx-meta">{{ tx.org }}</span>
-    </a>
-    <div class="tx-right">
-      {% if tx.highlight %}<span class="tx-amount">{{ tx.highlight }}</span>{% endif %}
-      <span class="tx-when">{{ tx.apply_end }}까지</span>
-    </div>
+    <div class="tx-list">{{ tx_deadline }}</div>
   </div>
   {% endif %}
 
   {% comment %} ── 곧 시작 ── {% endcomment %}
-  {% assign soon = upcoming_rest | sort: "apply_start" | first %}
-  {% if soon %}{% capture tx_shown %}{{ tx_shown }}{{ soon.url }}|{% endcapture %}
+  {% assign upcoming_sorted = upcoming_rest | sort: "apply_start" %}
+  {% capture tx_soon %}
+    {% assign n = 0 %}
+    {% for it in upcoming_sorted %}{% unless tx_shown contains it.url %}{% if n < 3 %}
+      {% include tx-item.html program=it %}
+      {% capture tx_shown %}{{ tx_shown }}{{ it.url }}|{% endcapture %}
+      {% assign n = n | plus: 1 %}
+    {% endif %}{% endunless %}{% endfor %}
+  {% endcapture %}
+  {% assign tx_soon = tx_soon | strip %}
+  {% if tx_soon != "" %}
   <div class="tx-row is-upcoming">
     <div class="tx-topic">
       <a class="tx-name" href="{{ '/support/' | relative_url }}">곧 시작</a>
       <span class="tx-count">{{ upcoming_programs | size }}건</span>
+      <a class="tx-more" href="{{ '/support/' | relative_url }}">전체보기 <span aria-hidden="true">→</span></a>
     </div>
-    <a class="tx-item" href="{{ soon.url | relative_url }}">
-      <span class="tx-title">{{ soon.title }}</span>
-      <span class="tx-meta">{{ soon.org }}</span>
-    </a>
-    <div class="tx-right">
-      {% if soon.highlight %}<span class="tx-amount">{{ soon.highlight }}</span>{% endif %}
-      <span class="tx-when">{% if soon.apply_start %}{{ soon.apply_start }} 시작{% else %}시작 예정{% endif %}</span>
-    </div>
+    <div class="tx-list">{{ tx_soon }}</div>
   </div>
   {% endif %}
 
   {% comment %}
-    ── 분야별 최신 한 건 ──
+    ── 분야별 최신 세 건 ──
     '최신' 은 first_published 기준이다. 조회수로 뽑으면 한 번 오른 제도가 계속
     같은 자리를 지켜 색인이 굳는다. 메인 토픽(히어로)이 이미 조회수 축을 맡는다.
 
@@ -158,39 +161,23 @@ title: 정부·지자체 지원금과 복지 제도 총정리
     {% assign cm = site.data.taxonomy.categories[c] %}
     {% assign citems = live_rest | where: "category", c %}
     {% assign sorted = citems | sort: "first_published" | reverse %}
-    {% assign latest = nil %}
-    {% for cand in sorted %}
-      {% unless tx_shown contains cand.url %}{% if latest == nil %}{% assign latest = cand %}{% endif %}{% endunless %}
-    {% endfor %}
-    {% if latest %}
+    {% capture tx_cat %}
+      {% assign n = 0 %}
+      {% for it in sorted %}{% unless tx_shown contains it.url %}{% if n < 3 %}
+        {% include tx-item.html program=it %}
+        {% capture tx_shown %}{{ tx_shown }}{{ it.url }}|{% endcapture %}
+        {% assign n = n | plus: 1 %}
+      {% endif %}{% endunless %}{% endfor %}
+    {% endcapture %}
+    {% assign tx_cat = tx_cat | strip %}
+    {% if tx_cat != "" %}
     <div class="tx-row" data-cat="{{ c }}">
       <div class="tx-topic">
         <a class="tx-name" href="{{ '/support/' | append: c | append: '/' | relative_url }}">{{ cm.label }}</a>
         <span class="tx-count">{{ citems | size }}건</span>
+        <a class="tx-more" href="{{ '/support/' | append: c | append: '/' | relative_url }}">전체보기 <span aria-hidden="true">→</span></a>
       </div>
-      <a class="tx-item" href="{{ latest.url | relative_url }}">
-        <span class="tx-title">
-          {{ latest.title }}
-          {% if latest.status == 'upcoming' %}<span class="tx-flag">예정</span>{% endif %}
-        </span>
-        <span class="tx-meta">{{ latest.org }}</span>
-      </a>
-      {% comment %}
-        오른쪽 열은 금액 + 기간 두 줄이다. 금액만 두면 여덟 줄 중 여섯 줄의
-        오른쪽이 비었다 — 대표 금액이 뽑히는 제도가 그만큼 적다.
-        원문에 신청 기간이 없으면 '원문 참고' 대신 지원 지역을 적는다.
-        '원문 참고' 는 네 줄에 똑같이 찍히면서 아무것도 알려 주지 않았다.
-        기간을 메타 줄에서 뺀 이유: 같은 값이 한 줄에 두 번 나오게 된다.
-      {% endcomment %}
-      <div class="tx-right">
-        {% if latest.highlight %}<span class="tx-amount">{{ latest.highlight }}</span>{% endif %}
-        <span class="tx-when">
-          {%- if latest.status == 'upcoming' and latest.apply_start %}{{ latest.apply_start }} 시작
-          {%- elsif latest.apply_always %}상시 접수
-          {%- elsif latest.apply_end %}{{ latest.apply_end }}까지
-          {%- else %}{{ latest.region_label | default: '전국' }}{% endif -%}
-        </span>
-      </div>
+      <div class="tx-list">{{ tx_cat }}</div>
     </div>
     {% endif %}
   {% endfor %}

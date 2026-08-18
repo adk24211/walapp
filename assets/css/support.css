@@ -962,13 +962,13 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
 /* ═══════════════════════════════════════════════════════════
    분야 색인 — 홈의 카드 그리드를 대신한다
    ───────────────────────────────────────────────────────────
-   카드가 30장이던 화면을 아홉 줄로 줄였다. 주제마다 최근 한 건씩만 낸다.
+   카드 30장을 줄로 바꿨다. 줄마다 왼쪽에 주제, 오른쪽에 최신 세 건이 선다.
 
    카드가 아니라 '줄' 인 이유: 카드는 테두리·여백으로 한 장씩 자리를 주장해서
-   아홉 개만 놓아도 화면이 다시 빽빽해진다. 줄은 가로선 하나로 나뉘고 왼쪽에
+   몇 개만 놓아도 화면이 다시 빽빽해진다. 줄은 가로선 하나로 나뉘고 왼쪽에
    분야 이름이 큰 글씨로 서 있어 눈이 세로로 미끄러진다. 목차를 넘기는 감각이다.
 
-   분야 색은 이름 글자가 갖는다. 카드 위쪽 색 띠를 없앤 자리다.
+   분야 색은 이름 글자와 전체보기 버튼이 갖는다. 색 띠는 쓰지 않는다.
    ═══════════════════════════════════════════════════════════ */
 .topic-index {
   max-width: var(--container-wide);
@@ -977,19 +977,15 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
 }
 .tx-row {
   display: grid;
-  grid-template-columns: 168px minmax(0, 1fr) auto;
-  align-items: baseline;
+  grid-template-columns: 168px minmax(0, 1fr);
   gap: 0 1.75rem;
-  padding: 1.15rem .9rem;
+  padding: 1.25rem .9rem;
   border-top: 1px solid var(--line);
-  border-radius: 8px;
-  transition: background .14s;
 }
 .tx-row:first-child { border-top: 0; }
-/* 줄 하나가 통째로 옅게 물든다. 면을 칠하는 게 아니라 '지금 이 줄' 이라는 표시다. */
-.tx-row:hover { background: color-mix(in srgb, var(--c, var(--ink)) 6%, transparent); }
 
-.tx-topic { display: flex; flex-direction: column; gap: .1rem; min-width: 0; }
+/* ── 왼쪽: 주제 ── */
+.tx-topic { display: flex; flex-direction: column; align-items: flex-start; gap: .12rem; min-width: 0; }
 .tx-name {
   font-size: 1.4rem; font-weight: 800; letter-spacing: -.045em;
   color: var(--c, var(--ink)); word-break: keep-all; line-height: 1.2;
@@ -999,25 +995,50 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
   font-size: .74rem; color: var(--ink3); font-variant-numeric: tabular-nums;
   letter-spacing: .02em;
 }
+/* 전체보기 — 분야 색을 테두리와 글자에만 얹는다. 채우면 그 줄에서 버튼이
+   제도명보다 먼저 읽힌다. 목록에서 제일 중요한 건 제도명이다. */
+.tx-more {
+  margin-top: .5rem;
+  display: inline-flex; align-items: center; gap: .25rem;
+  font-size: .74rem; font-weight: 700; letter-spacing: -.01em;
+  color: var(--c, var(--ink2));
+  border: 1px solid color-mix(in srgb, var(--c, var(--ink3)) 40%, transparent);
+  border-radius: 999px; padding: .22rem .6rem;
+  transition: background .14s, border-color .14s;
+}
+.tx-more:hover {
+  background: color-mix(in srgb, var(--c, var(--ink)) 10%, transparent);
+  border-color: var(--c, var(--ink3));
+}
 
-.tx-item { display: flex; flex-direction: column; gap: .18rem; min-width: 0; }
+/* ── 오른쪽: 최신 세 건 ── */
+.tx-list { display: flex; flex-direction: column; min-width: 0; }
+.tx-item {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  gap: .2rem 1.25rem; align-items: baseline;
+  padding: .5rem .6rem; margin: 0 -.6rem;
+  border-radius: 7px; transition: background .14s;
+}
+/* 건과 건 사이는 아주 옅은 선. 줄(row)의 선보다 약해야 위계가 산다. */
+.tx-item + .tx-item { border-top: 1px solid color-mix(in srgb, var(--line) 60%, transparent); }
+.tx-item:hover { background: color-mix(in srgb, var(--c, var(--ink)) 6%, transparent); }
+
+.tx-main { display: flex; flex-direction: column; gap: .12rem; min-width: 0; }
 .tx-title {
-  font-size: 1.02rem; font-weight: 600; letter-spacing: -.025em;
+  font-size: 1rem; font-weight: 600; letter-spacing: -.025em;
   color: var(--ink); line-height: 1.4; word-break: keep-all;
 }
-.tx-row:hover .tx-title { text-decoration: underline; text-underline-offset: 3px; }
-.tx-meta { font-size: .78rem; color: var(--ink3); word-break: keep-all; }
-.tx-sep { margin: 0 .3rem; opacity: .6; }
+.tx-item:hover .tx-title { text-decoration: underline; text-underline-offset: 3px; }
+.tx-meta { font-size: .76rem; color: var(--ink3); word-break: keep-all; }
 
-/* 오른쪽 열 — 금액(있으면) 위, 기간 아래. 두 줄이라 열이 늘 채워진다. */
-.tx-right { display: flex; flex-direction: column; align-items: flex-end; gap: .1rem; min-width: 0; }
+.tx-right { display: flex; flex-direction: column; align-items: flex-end; gap: .05rem; min-width: 0; }
 .tx-amount {
-  margin: 0; white-space: nowrap;
-  font-size: 1.05rem; font-weight: 700; letter-spacing: -.035em;
+  white-space: nowrap;
+  font-size: 1rem; font-weight: 700; letter-spacing: -.035em;
   font-variant-numeric: tabular-nums; color: var(--ink);
 }
 .tx-when {
-  font-size: .76rem; color: var(--ink3); white-space: nowrap;
+  font-size: .74rem; color: var(--ink3); white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
 
@@ -1026,19 +1047,20 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
 .tx-row.is-upcoming { --c: var(--st-up); }
 
 @media (max-width: 900px) {
-  .tx-row { grid-template-columns: 130px minmax(0, 1fr); gap: 0 1.1rem; padding: 1rem .7rem; }
-  .tx-name { font-size: 1.15rem; }
-  /* 금액·기간은 제도명 아래로 내려 붙인다 — 오른쪽 끝에 두면 제목이 눌린다 */
-  .tx-right { grid-column: 2; align-items: flex-start; flex-direction: row; gap: .55rem;
-              margin-top: .3rem; align-items: baseline; }
-  .tx-amount { font-size: 1rem; }
+  .tx-row { grid-template-columns: 128px minmax(0, 1fr); gap: 0 1.1rem; padding: 1.1rem .7rem; }
+  .tx-name { font-size: 1.12rem; }
+  .tx-more { font-size: .7rem; padding: .18rem .5rem; }
+  /* 금액·기간을 제도명 아래로 내린다 — 오른쪽 끝에 두면 제목이 눌린다 */
+  .tx-item { grid-template-columns: minmax(0, 1fr); }
+  .tx-right { flex-direction: row; align-items: baseline; gap: .5rem; margin-top: .15rem; }
+  .tx-amount { font-size: .95rem; }
 }
 @media (max-width: 560px) {
   .topic-index { padding-left: 1rem; padding-right: 1rem; }
-  .tx-row { grid-template-columns: minmax(0, 1fr); gap: .35rem; padding: .95rem .6rem; }
-  .tx-topic { flex-direction: row; align-items: baseline; gap: .45rem; }
+  .tx-row { grid-template-columns: minmax(0, 1fr); gap: .55rem; padding: 1rem .6rem; }
+  .tx-topic { flex-direction: row; align-items: baseline; gap: .45rem; flex-wrap: wrap; }
   .tx-name { font-size: 1.02rem; }
-  .tx-right { grid-column: 1; margin-top: .15rem; }
+  .tx-more { margin-top: 0; margin-left: auto; }
 }
 
 /* 예정 표식 — 색인 줄에서 '지금은 신청할 수 없다' 를 한 눈에 */
