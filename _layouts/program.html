@@ -196,7 +196,10 @@ layout: default
   {% elsif page.source == 'welfare-central' %}{% assign src_label = '공공데이터포털 · 중앙부처 복지서비스' %}
   {% endif %}
   <div class="cn cn-source" data-cat="{{ cat }}">
-    <span class="cn-source-tag">출처표시</span>
+    <div class="cn-source-head">
+      <span class="cn-source-tag">출처표시</span>
+      <a class="cn-source-link" href="{{ '/disclaimer/' | relative_url }}">면책 조항</a>
+    </div>
     <dl class="source-rows">
       <div>
         <dt>원문 출처</dt>
@@ -217,7 +220,6 @@ layout: default
       </div>
       {% endif %}
     </dl>
-    <p class="cn-source-foot"><a href="{{ '/disclaimer/' | relative_url }}">면책 조항</a></p>
   </div>
 
   {% comment %} ── 함께 보면 좋은 제도 — 같은 분야 → 같은 대상 순 ── {% endcomment %}
