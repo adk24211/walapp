@@ -46,6 +46,13 @@ class ApplyPeriod:
     start: str = ""          # YYYY-MM-DD, 미상이면 ""
     end: str = ""            # YYYY-MM-DD, 미상이면 ""
     always: bool = False     # 상시 접수 여부
+    # 파싱 전 원문 ('접수기관별 상이', '예산 소진 시까지' 등). 파서가 날짜를 못 뽑는
+    # 비율이 절반이라, 무엇을 못 읽었는지 보려면 원문이 레코드에 남아 있어야 한다.
+    #
+    # ⚠️ 이 값은 **해시 대상이 아니다** (compute_hash 가 start/end/always 만 넣는다).
+    #    넣으면 원문 표기만 바뀌어도 전체가 '변경됨' 으로 잡혀 재생성 비용이 든다.
+    #    파싱 결과가 실제로 달라졌다면 start/end 쪽에서 이미 잡힌다.
+    raw: str = ""
 
     def is_closed(self, today: date) -> bool:
         if self.always or not self.end:
