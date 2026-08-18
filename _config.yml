@@ -75,7 +75,6 @@ exclude:
   - Gemfile.lock
   - README.md
   - .github/
-  - HANDOFF.md
   - REDESIGN.md
   - docs/
 
