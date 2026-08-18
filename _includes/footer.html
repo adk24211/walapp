@@ -17,8 +17,13 @@
       <a href="{{ '/terms/' | relative_url }}">이용약관</a>
     </div>
   </div>
+  {% comment %}
+    page.top_notice 가 켜진 화면(홈·허브)은 첫 화면에 같은 고지를 이미 띄웠다.
+    여기서 되풀이하면 한 페이지에 같은 문장이 두 번이라 둘 다 안 읽힌다.
+    (scripts/check_layout.mjs 가 중복 문구를 잡아 준다.)
+  {% endcomment %}
   <p class="footer-note">
-    본 사이트는 정부 공식 사이트가 아닙니다. 제도의 금액·자격·기간은 공공데이터 원문을 토대로 정리한 참고 자료이며,
+    {% unless page.top_notice %}본 사이트는 정부 공식 사이트가 아닙니다. {% endunless %}제도의 금액·자격·기간은 공공데이터 원문을 토대로 정리한 참고 자료이며,
     지침 개정으로 달라질 수 있습니다. 신청과 최종 확인은 각 제도의 공식 창구를 이용해 주세요.
   </p>
 </footer>

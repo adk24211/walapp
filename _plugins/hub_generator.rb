@@ -13,7 +13,9 @@ module Walapp
   class HubPage < Jekyll::PageWithoutAFile
     def initialize(site, url, attrs)
       super(site, site.source, "", "index.html")
-      self.data = attrs.merge("layout" => "hub", "permalink" => url)
+      # top_notice: 비공식 사이트 고지를 첫 화면에 둔다(_includes/site-notice.html).
+      # 켜 두면 푸터의 같은 문장은 자동으로 빠진다 — 한 화면에 두 번은 둘 다 안 읽힌다.
+      self.data = attrs.merge("layout" => "hub", "top_notice" => true, "permalink" => url)
       self.content = ""
     end
   end

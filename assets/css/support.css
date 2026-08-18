@@ -308,6 +308,30 @@
 /* ch 는 '0' 글자 폭 기준이라 한글에서는 체감 폭이 절반이다. px 로 잡는다. */
 .page-header.is-wide .ph-sub { max-width: 780px; font-size: 15px; }
 
+/* ---- 비공식 사이트 고지 (_includes/site-notice.html) ------- */
+/* 눈에 띄되 화면을 잡아먹지 않는 선. 경고색을 쓰지 않는 이유: 이건 위험
+   경고가 아니라 '누가 만든 사이트인지' 를 밝히는 줄이다. 붉은 배너를 깔면
+   사이트 자체가 위험해 보인다. */
+.site-notice {
+  margin: 1rem 0 0;
+  padding: .6rem .8rem;
+  max-width: 780px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink2);
+}
+.site-notice strong { color: var(--ink); font-weight: 700; }
+.site-notice a {
+  color: var(--ink2);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+.site-notice a:hover { color: var(--ink); }
+
 /* ---- 홈 ---------------------------------------------------- */
 .home-intro {
   max-width: var(--container); margin: 0 auto; padding: 0 1.5rem 1.5rem;

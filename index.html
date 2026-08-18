@@ -1,6 +1,8 @@
 ---
 layout: default
 title: 정부·지자체 지원금과 복지 제도 총정리
+# 비공식 사이트 고지를 첫 화면에 둔다. 켜면 푸터의 같은 문장은 자동으로 빠진다.
+top_notice: true
 ---
 
 {% assign programs = site.programs %}
@@ -36,6 +38,7 @@ title: 정부·지자체 지원금과 복지 제도 총정리
     두 번째 문장(원문 인용 원칙)은 푸터 고지와 겹쳐 뺐다. 첫 화면은 한 문장이면 된다.
   {% endcomment %}
   <p class="ph-sub">정부와 지방자치단체가 운영하는 지원 제도를 제도 하나당 한 페이지로 정리합니다.</p>
+  {% if page.top_notice %}{% include site-notice.html %}{% endif %}
 </div>
 
 {% comment %}

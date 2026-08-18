@@ -44,6 +44,7 @@ layout: default
   </div>
   <h1 class="ph-title">{{ page.heading | default: page.title }}</h1>
   {% if page.blurb %}<p class="ph-sub">{{ page.blurb }}</p>{% endif %}
+  {% if page.top_notice %}{% include site-notice.html %}{% endif %}
 </div>
 
 {% comment %} ── 축별 가로 탐색 바 ── {% endcomment %}
