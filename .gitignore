@@ -50,6 +50,7 @@ node_modules/
 _data/queue.json
 _data/review_needed.json
 _data/incomplete.json
+_data/period_formats.json
 
 # _data/taxonomy.json 은 커밋한다 — 산출물이 아니라 scripts/taxonomy.py 에서
 # 파생된 값이고, _plugins/hub_generator.rb 가 빌드 시점에 이 파일을 읽는다.

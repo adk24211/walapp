@@ -96,6 +96,23 @@ def _export_taxonomy() -> None:
     log.info("분류 데이터 내보내기: %s", path.name)
 
 
+def _log_period_stats(stats) -> None:
+    """신청기한 표기 분포를 로그에 남긴다.
+
+    JSON(_data/period_formats.json)은 커밋하지 않는 진단물이라(.gitignore),
+    실행 로그가 유일한 추적 수단이다. 못 읽은 표기 상위 10종이 곧 다음
+    파서 작업 목록이다.
+    """
+    if not stats.total:
+        return
+    log.info("신청기한 표기 — 전량 %d건 · 상시 %d · 구간 %d · 시작만 %d "
+             "· 마감만 %d · 원문없음 %d · 못읽음 %d",
+             stats.total, stats.always, stats.both, stats.start_only,
+             stats.end_only, stats.no_raw, sum(stats.unparsed.values()))
+    for raw, count in stats.unparsed.most_common(10):
+        log.info("  못읽음 %5d회 · %s", count, raw)
+
+
 def main() -> int:
     _load_dotenv()
 
@@ -150,6 +167,8 @@ def main() -> int:
 
     registry.save_incomplete(result.incomplete)
     registry.save_review_needed(result.review_needed)
+    registry.save_period_report(result.period_stats.to_dict())
+    _log_period_stats(result.period_stats)
 
     # ── ② 큐 산출 ──
     queue_payload = queueing.build(result.new, today)

@@ -26,6 +26,8 @@ REGISTRY_FILE = DATA_DIR / "registry.json"
 QUEUE_FILE = DATA_DIR / "queue.json"
 REVIEW_FILE = DATA_DIR / "review_needed.json"
 INCOMPLETE_FILE = DATA_DIR / "incomplete.json"
+# 신청기한 표기 분포 (scripts/sync.py PeriodStats). 사이트에 나가지 않는 진단용이다.
+PERIOD_FILE = DATA_DIR / "period_formats.json"
 
 # 제도 원본 레코드. REDESIGN.md 는 `_data/programs/` 로 적었으나 `_records/` 로 옮겼다.
 # Jekyll 은 `_data` 하위를 전부 읽어 site.data 에 올리는데, 레코드가 수천 건이 되면
@@ -212,6 +214,11 @@ def save_review_needed(items: list[dict]) -> None:
 
 def save_incomplete(items: list[dict]) -> None:
     _write_json(INCOMPLETE_FILE, {"count": len(items), "items": items})
+
+
+def save_period_report(data: dict) -> None:
+    """신청기한 표기 분포를 남긴다. 못 읽은 표기가 다음 파서 작업 목록이 된다."""
+    _write_json(PERIOD_FILE, data)
 
 
 # ─────────────────────────────────────────────────────────────
