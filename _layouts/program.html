@@ -104,6 +104,14 @@ layout: default
     {% if page.summary %}<p class="program-summary">{{ page.summary }}</p>{% endif %}
 
     {% comment %}
+      제도 상세는 '보건복지부 · 250만원 · 공식 창구에서 신청' 이 한 화면에 모여
+      가장 정부 페이지처럼 읽힌다. 유입도 여기가 제일 많다. 그래서 출처표시(맨 아래)
+      와 별개로, 누가 만든 사이트인지는 첫 화면에서 밝힌다.
+      푸터의 같은 문장은 자동으로 빠진다 (_includes/footer.html).
+    {% endcomment %}
+    {% include site-notice.html %}
+
+    {% comment %}
       핵심 값과 신청 버튼은 히어로에 두지 않는다 (J안).
       아래 `.apply-rail` 로 내려가 넓은 화면에서는 오른쪽 레일에 붙어 스크롤을
       따라오고, 좁은 화면에서는 히어로 바로 아래 한 덩어리로 놓인다.

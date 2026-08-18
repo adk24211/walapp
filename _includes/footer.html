@@ -18,12 +18,17 @@
     </div>
   </div>
   {% comment %}
-    page.top_notice 가 켜진 화면(홈·허브)은 첫 화면에 같은 고지를 이미 띄웠다.
-    여기서 되풀이하면 한 페이지에 같은 문장이 두 번이라 둘 다 안 읽힌다.
-    (scripts/check_layout.mjs 가 중복 문구를 잡아 준다.)
+    첫 화면에 이미 고지를 띄운 페이지에서는 푸터의 같은 문장을 뺀다. 한 페이지에
+    같은 문장이 두 번 나오면 둘 다 안 읽힌다 (check_layout.mjs 가 중복을 잡는다).
+
+    두 갈래인 이유 — 홈·허브는 front matter 플래그(hub_generator.rb 가 켠다)로
+    켜고 끄지만, 제도 상세는 레이아웃이 무조건 넣으므로 플래그를 둘 자리가 없다
+    (front matter 를 render.py 가 쓰는 터라 45건 재렌더가 필요해진다).
   {% endcomment %}
+  {% assign top_notice_shown = false %}
+  {% if page.top_notice or page.layout == 'program' %}{% assign top_notice_shown = true %}{% endif %}
   <p class="footer-note">
-    {% unless page.top_notice %}본 사이트는 정부 공식 사이트가 아닙니다. {% endunless %}제도의 금액·자격·기간은 공공데이터 원문을 토대로 정리한 참고 자료이며,
+    {% unless top_notice_shown %}본 사이트는 정부 공식 사이트가 아닙니다. {% endunless %}제도의 금액·자격·기간은 공공데이터 원문을 토대로 정리한 참고 자료이며,
     지침 개정으로 달라질 수 있습니다. 신청과 최종 확인은 각 제도의 공식 창구를 이용해 주세요.
   </p>
 </footer>

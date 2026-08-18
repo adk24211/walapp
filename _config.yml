@@ -49,6 +49,17 @@ google_analytics: "G-NS58PGSBFP"
 # 값을 넣으면 자동 광고(Auto ads) 스크립트와 ads.txt 가 자동 적용된다.
 google_adsense: "ca-pub-4499851283666675"
 
+# 자동 광고 on/off. **false 면 게시자 ID 가 있어도 광고 스크립트를 넣지 않는다.**
+#
+# 지금 false 인 이유: 크롬이 목록 화면에 '위험한 사이트'(소셜 엔지니어링)
+# 인터스티셜을 띄웠다. 구글의 소셜 엔지니어링 정책은 '제3자 광고가 사이트
+# 콘텐츠인 것처럼 보이는 경우' 를 명시적으로 위반으로 본다 — 자동 광고의
+# 앵커·전면(vignette) 포맷이 모바일에서 딱 그렇게 보인다. 원인이 광고가
+# 아니더라도, 광고를 켠 채로는 재심사에서 불리하다.
+#
+# 세이프 브라우징 차단이 풀리면 true 로 되돌린다. ID 는 지우지 않았다.
+ads_enabled: false
+
 markdown: kramdown
 highlighter: rouge
 
