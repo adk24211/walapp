@@ -975,14 +975,18 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
   margin: 0 auto 3.5rem;
   padding: 0 1.5rem;
 }
+/* 주제 하나가 옅은 분야색 블록이다. 가로선으로만 나눴더니 여덟 줄이 한 덩어리로
+   보였다. 5% 는 색이 있다고 알아채는 정도지 읽는 데 방해되지 않는 선이다. */
 .tx-row {
   display: grid;
   grid-template-columns: 168px minmax(0, 1fr);
-  gap: 0 1.75rem;
-  padding: 1.25rem .9rem;
-  border-top: 1px solid var(--line);
+  gap: 0 1.5rem;
+  padding: 1.15rem 1.25rem;
+  margin-bottom: .5rem;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--c, var(--ink)) 5%, transparent);
 }
-.tx-row:first-child { border-top: 0; }
+.tx-row:last-child { margin-bottom: 0; }
 
 /* ── 왼쪽: 주제 ── */
 .tx-topic { display: flex; flex-direction: column; align-items: flex-start; gap: .12rem; min-width: 0; }
@@ -1018,19 +1022,21 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
 .tx-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0;
+  gap: 0 .4rem;
   min-width: 0;
 }
+/* 여백을 늘린 이유: 전에는 위아래 .15rem 이라 마우스를 올리면 글자에 딱 붙은
+   띠가 생겼다. 누를 수 있는 영역이 곧 시각적 영역이어야 답답하지 않다. */
 .tx-item {
-  display: flex; flex-direction: column; gap: .18rem;
-  min-width: 0; padding: .15rem 1rem;
-  border-radius: 7px; transition: background .14s;
+  display: flex; flex-direction: column; gap: .2rem;
+  min-width: 0; padding: .7rem .85rem;
+  border-radius: 9px; transition: background .14s;
 }
-/* 건과 건 사이는 세로 실선. 주제와 주제를 나누는 가로선보다 옅어야 위계가 산다. */
-.tx-item + .tx-item { border-left: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
-.tx-item:first-child { padding-left: 0; }
-.tx-item:last-child { padding-right: 0; }
-.tx-item:hover { background: color-mix(in srgb, var(--c, var(--ink)) 6%, transparent); }
+/* 건과 건 사이는 분야색을 아주 옅게 탄 세로 실선 */
+.tx-item + .tx-item { border-left: 1px solid color-mix(in srgb, var(--c, var(--ink3)) 16%, transparent); }
+/* 행이 이미 색을 깔고 있으니, 올린 칸은 흰 칩으로 띄운다. 같은 색을 더 진하게
+   하면 어느 칸에 있는지가 색 농도로만 구분돼 잘 안 보인다. */
+.tx-item:hover { background: var(--surface); }
 
 .tx-main { display: flex; flex-direction: column; gap: .1rem; min-width: 0; }
 .tx-title {
@@ -1060,10 +1066,10 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
 .tx-row.is-upcoming { --c: var(--st-up); }
 
 @media (max-width: 1000px) {
-  .tx-row { grid-template-columns: 118px minmax(0, 1fr); gap: 0 1.1rem; padding: 1.05rem .7rem; }
+  .tx-row { grid-template-columns: 118px minmax(0, 1fr); gap: 0 1rem; padding: 1rem 1rem; }
   .tx-name { font-size: 1.08rem; }
   .tx-more { font-size: .7rem; padding: .18rem .5rem; }
-  .tx-item { padding: .15rem .7rem; }
+  .tx-item { padding: .6rem .65rem; }
   .tx-title { font-size: .88rem; }
 }
 /* 좁아지면 세 칸을 옆으로 못 놓는다. 주제 이름을 위로 올리고 세 건을 아래에 편다. */
@@ -1073,8 +1079,8 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
   .tx-topic { flex-direction: row; align-items: baseline; gap: .45rem; flex-wrap: wrap; }
   .tx-name { font-size: 1.02rem; }
   .tx-more { margin-top: 0; margin-left: auto; }
-  .tx-list { grid-template-columns: minmax(0, 1fr); }
-  .tx-item { padding: .5rem 0; }
+  .tx-list { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .tx-item { padding: .65rem .55rem; }
   .tx-item + .tx-item {
     border-left: 0;
     border-top: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
