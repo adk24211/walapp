@@ -21,11 +21,12 @@ from __future__ import annotations
 import json
 import logging
 import os
+import re
 import urllib.parse
 import urllib.request
 
 import taxonomy
-from .base import BaseAdapter, normalize_date, split_documents
+from .base import BaseAdapter, find_dates, split_documents
 
 log = logging.getLogger(__name__)
 
@@ -309,6 +310,7 @@ class Adapter(BaseAdapter):
             apply_start=start,
             apply_end=end,
             always=always,
+            apply_period_raw=period_raw,
             apply_url=str(mapped.get("apply_url") or ""),
             official_url=str(mapped.get("official_url") or ""),
             region_scope=scope,
@@ -333,21 +335,54 @@ class Adapter(BaseAdapter):
 # ─────────────────────────────────────────────────────────────
 #  파싱 헬퍼 (테스트하기 쉽도록 모듈 함수로 뺀다)
 # ─────────────────────────────────────────────────────────────
+# 날짜 하나만 있을 때 그것이 시작인지 마감인지 가려 주는 단서.
+# 날짜 바로 뒤에 붙는 조사(2026-03-02'부터')가 가장 확실하므로 먼저 본다.
+_TAIL_START_RE = re.compile(r"^\s*일?\s*[)\]]?\s*(?:부터|이후|시작|개시|~|-)")
+_TAIL_END_RE = re.compile(r"^\s*일?\s*[)\]]?\s*(?:까지|마감|종료|이전|이내)")
+# 날짜 앞에 놓인 머리말('신청기한 : 2026-03-02'). 조사보다 약한 단서다.
+_HEAD_START_RE = re.compile(r"(?:시작|개시|접수개시|부터)\s*[:\-]?\s*$")
+_HEAD_END_RE = re.compile(r"(?:마감|종료|기한|까지)\s*[:\-]?\s*$")
+
+
 def parse_period(text: str) -> tuple[str, str]:
     """신청기한 원문에서 시작·종료를 뽑는다.
 
     실제 값이 '2026-03-02 ~ 2027-02-26' 처럼 깔끔한 경우도 있지만
     '접수기관별 상이', '예산 소진 시까지' 같은 자유 서술도 섞여 온다.
     날짜를 못 찾으면 빈 문자열을 돌려주고, 상시 여부는 호출부가 따로 판정한다.
+
+    ⚠️ 단서 없는 날짜 하나는 **아무 쪽에도 넣지 않는다.**
+    예전에는 마감일로 넣었는데, 그러면 '2026년 3월 2일부터 …' 처럼 시작일만
+    적힌 제도가 그 날짜로 마감된 것이 되어 시행중인 제도가 종료로 표시되고
+    noindex 까지 붙었다. 틀린 마감일을 적느니 기간을 비워 두는 편이 낫다.
     """
     if not text:
         return "", ""
     normalized = text.replace("〜", "~").replace("～", "~").replace("∼", "~")
-    parts = [p for p in normalized.split("~") if p.strip()]
-    if len(parts) >= 2:
-        return normalize_date(parts[0]), normalize_date(parts[1])
-    # 구분자가 없으면 단일 날짜를 마감일로 본다
-    return "", normalize_date(normalized)
+    # 앞뒤가 공백인 하이픈·대시는 구간 구분자다. '2026-03-02' 안의 하이픈은
+    # 공백이 없으므로 건드리지 않는다.
+    normalized = re.sub(r"\s[-–—]\s", " ~ ", normalized)
+
+    dates = find_dates(normalized)
+    if len(dates) >= 2:
+        # 셋 이상이면 가운데는 부연(예: 1차·2차 회차)이라 보고 바깥 두 개를 쓴다.
+        return dates[0][2], dates[-1][2]
+    if not dates:
+        return "", ""
+
+    start_pos, end_pos, iso = dates[0]
+    head, tail = normalized[:start_pos], normalized[end_pos:]
+    if _TAIL_END_RE.match(tail):
+        return "", iso
+    if _TAIL_START_RE.match(tail):
+        return iso, ""
+    if _HEAD_END_RE.search(head):
+        return "", iso
+    if _HEAD_START_RE.search(head):
+        return iso, ""
+    if "~" in head:            # '~ 2026-03-02'
+        return "", iso
+    return "", ""
 
 
 # 소관기관유형 값에 따른 지역 범위 판정.

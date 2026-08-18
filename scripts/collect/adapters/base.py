@@ -51,6 +51,7 @@ class BaseAdapter:
         apply_start: str = "",
         apply_end: str = "",
         always: bool = False,
+        apply_period_raw: str = "",
         apply_url: str = "",
         official_url: str = "",
         contact_raw: str = "",
@@ -96,6 +97,9 @@ class BaseAdapter:
                 start=normalize_date(apply_start),
                 end=normalize_date(apply_end),
                 always=always,
+                # 파싱에 실패한 표기를 나중에 세어 보려고 원문을 함께 남긴다.
+                # 해시에는 들어가지 않는다 (schema.compute_hash).
+                raw=clean_text(apply_period_raw),
             ),
             apply_url=apply_url.strip(),
             official_url=official_url.strip(),
@@ -152,7 +156,8 @@ def clean_text(value) -> str:
 
 _DATE_PATTERNS = (
     re.compile(r"(\d{4})[-./년\s]+(\d{1,2})[-./월\s]+(\d{1,2})"),
-    re.compile(r"(\d{4})(\d{2})(\d{2})"),
+    # 앞뒤 숫자 배제 — '0212345678' 같은 번호에서 8자리를 잘라 날짜로 읽지 않는다.
+    re.compile(r"(?<!\d)(\d{4})(\d{2})(\d{2})(?!\d)"),
 )
 
 
@@ -166,21 +171,37 @@ def _to_int(value) -> int:
     return int(digits) if digits else 0
 
 
+def find_dates(value) -> list[tuple[int, int, str]]:
+    """텍스트 안의 **모든** 날짜를 (시작위치, 끝위치, YYYY-MM-DD) 로 돌려준다.
+
+    normalize_date 는 첫 하나만 보면 되지만, 기간 파싱은 몇 개가 들어 있는지를
+    알아야 한다. '3월 2일부터 2월 26일까지' 에서 앞 날짜만 집어 마감일로
+    읽어 버리는 사고가 여기서 갈린다. (bojo24.parse_period)
+
+    12월 32일처럼 날짜가 아닌 숫자 뭉치는 건너뛰고 다음 후보를 본다.
+    """
+    if not value:
+        return []
+    text = str(value)
+    found: list[tuple[int, int, str]] = []
+    for pattern in _DATE_PATTERNS:
+        for m in pattern.finditer(text):
+            # 앞 패턴이 이미 잡은 자리면 중복이다 (같은 날짜가 두 번 세어진다)
+            if any(m.start() < end and start < m.end() for start, end, _ in found):
+                continue
+            year, month, day = (int(g) for g in m.groups())
+            try:
+                found.append((m.start(), m.end(), date(year, month, day).isoformat()))
+            except ValueError:
+                continue
+    found.sort(key=lambda item: item[0])
+    return found
+
+
 def normalize_date(value) -> str:
     """다양한 날짜 표기를 YYYY-MM-DD 로. 실패하면 빈 문자열."""
-    if not value:
-        return ""
-    text = str(value).strip()
-    for pattern in _DATE_PATTERNS:
-        m = pattern.search(text)
-        if not m:
-            continue
-        year, month, day = (int(g) for g in m.groups())
-        try:
-            return date(year, month, day).isoformat()
-        except ValueError:
-            return ""
-    return ""
+    dates = find_dates(value)
+    return dates[0][2] if dates else ""
 
 
 def split_documents(value) -> list[str]:
