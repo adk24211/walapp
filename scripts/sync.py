@@ -13,6 +13,7 @@
 from __future__ import annotations
 
 import logging
+from collections import Counter
 from dataclasses import dataclass, field
 from datetime import date
 
@@ -31,6 +32,58 @@ DEFAULT_SCOPES = ("national",)
 
 
 @dataclass
+class PeriodStats:
+    """신청기한 표기 분포 — 파서를 어디까지 넓힐지 정하는 근거.
+
+    레코드 파일은 내용이 바뀐 것만 다시 쓰므로, 저장된 원문(ApplyPeriod.raw)만
+    봐서는 이미 발행된 몇십 건밖에 알 수 없다. 반면 동기화는 매번 원천 전량을
+    훑는다. 그 자리에서 세어 두면 만 건 규모의 실제 분포가 남는다.
+    """
+
+    total: int = 0
+    always: int = 0        # 상시 접수 — 날짜가 없는 게 정상
+    both: int = 0          # 시작·마감 둘 다
+    start_only: int = 0
+    end_only: int = 0
+    no_raw: int = 0        # 원문 자체가 비어 있음
+    unparsed: Counter = field(default_factory=Counter)   # 원문은 있는데 날짜를 못 뽑음
+    sources: Counter = field(default_factory=Counter)
+
+    def add(self, record) -> None:
+        period = record.apply_period
+        self.total += 1
+        self.sources[record.source] += 1
+        if period.always:
+            self.always += 1
+        elif period.start and period.end:
+            self.both += 1
+        elif period.start:
+            self.start_only += 1
+        elif period.end:
+            self.end_only += 1
+        elif not period.raw:
+            self.no_raw += 1
+        else:
+            # 이 표기들이 곧 다음 파서 작업 목록이다
+            self.unparsed[period.raw[:80]] += 1
+
+    def to_dict(self, top: int = 40) -> dict:
+        return {
+            "total": self.total,
+            "always": self.always,
+            "both": self.both,
+            "start_only": self.start_only,
+            "end_only": self.end_only,
+            "no_raw": self.no_raw,
+            "unparsed": sum(self.unparsed.values()),
+            "sources": dict(self.sources),
+            # 빈도 상위 표기. 파서를 넓힐 때 여기 위쪽부터 본다.
+            "unparsed_top": [{"raw": raw, "count": n}
+                             for raw, n in self.unparsed.most_common(top)],
+        }
+
+
+@dataclass
 class SyncResult:
     new: list[ProgramRecord] = field(default_factory=list)
     changed: list[ProgramRecord] = field(default_factory=list)
@@ -41,6 +94,8 @@ class SyncResult:
     incomplete: list[dict] = field(default_factory=list)
     review_needed: list[dict] = field(default_factory=list)
     out_of_scope: int = 0
+    # 발행 여부와 무관하게 이번 실행이 훑은 전량의 신청기한 표기 분포
+    period_stats: PeriodStats = field(default_factory=PeriodStats)
 
     @property
     def total(self) -> int:
@@ -89,6 +144,9 @@ def run(
             if record.id in seen_ids:
                 continue
             seen_ids.add(record.id)
+
+            # 발행 여부를 가리기 전에 센다 — 파서 진단은 전량이 대상이다
+            result.period_stats.add(record)
 
             # ── 필수 필드 검사 ──
             # deferred_detail 인 소스는 목록 응답에 지원대상이 없다. 여기서 걸러 내면
