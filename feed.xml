@@ -1,0 +1,39 @@
+---
+layout: null
+permalink: /feed.xml
+sitemap: false
+---
+{%- comment -%}
+  jekyll-feed 를 쓰지 않고 직접 쓴다.
+
+  이 플러그인의 기본 피드는 _posts 전용이라, 뉴스 브리핑을 걷어낸 뒤로는 빈
+  피드가 된다. `feed.collections` 로 제도 컬렉션을 넣을 수는 있지만 그건 별도
+  경로(/feed/programs.xml)로 나가고, /feed.xml 을 지정하면 기본 피드와 경로가
+  부딪혀 빌드가 경고를 뱉는다. 구독 주소를 그대로 살리려면 이쪽이 낫다.
+
+  목 데이터는 싣지 않는다 — 가짜 수치가 구독자에게 나가면 안 된다.
+{%- endcomment -%}
+{%- assign items = site.programs | where_exp: "p", "p.is_mock != true" | sort: "first_published" | reverse -%}
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">{{ site.title | xml_escape }}</title>
+  <subtitle>{{ site.description | xml_escape }}</subtitle>
+  <link href="{{ '/feed.xml' | absolute_url }}" rel="self" type="application/atom+xml"/>
+  <link href="{{ '/' | absolute_url }}" rel="alternate" type="text/html"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ '/' | absolute_url | xml_escape }}</id>
+  {%- for p in items limit: 30 %}
+  <entry>
+    <title type="text">{{ p.title | xml_escape }}</title>
+    <link href="{{ p.url | absolute_url }}" rel="alternate" type="text/html"/>
+    <id>{{ p.url | absolute_url | xml_escape }}</id>
+    {%- if p.first_published %}
+    <published>{{ p.first_published | date: "%Y-%m-%dT00:00:00+09:00" }}</published>
+    {%- endif %}
+    <updated>{{ p.last_updated | default: p.first_published | date: "%Y-%m-%dT00:00:00+09:00" }}</updated>
+    {%- if p.org %}<author><name>{{ p.org | xml_escape }}</name></author>{%- endif %}
+    {%- if p.category %}<category term="{{ p.category | xml_escape }}"/>{%- endif %}
+    <summary type="text">{{ p.summary | default: p.title | xml_escape }}</summary>
+  </entry>
+  {%- endfor %}
+</feed>

@@ -71,18 +71,6 @@ top_notice: true
 </a>
 {% endif %}
 
-{% comment %} ── 대상별 진입 — 검색 의도에 가장 가까운 축이라 맨 위에 둔다 ── {% endcomment %}
-<div class="home-axis">
-  {% for a in site.data.taxonomy.audience_order %}
-  {% assign am = site.data.taxonomy.audiences[a] %}
-  {% assign acount = open_programs | where_exp: "p", "p.audiences contains a" | size %}
-  <a class="axis-card{% if acount == 0 %} is-empty{% endif %}" href="{{ '/who/' | append: a | append: '/' | relative_url }}">
-    <span class="axis-count">{{ acount }}</span>
-    <span class="axis-label">{{ am.label }}</span>
-  </a>
-  {% endfor %}
-</div>
-
 {% comment %} 색인에 이미 나간 제도를 담아 둔다 — 같은 제도가 두 줄에 뜨면 색인이 아니다 {% endcomment %}
 {% capture tx_shown %}|{{ hero.url }}|{% endcapture %}
 

@@ -63,21 +63,9 @@ ads_enabled: false
 markdown: kramdown
 highlighter: rouge
 
-# 구 뉴스 브리핑은 `/brief/` 로 격리한다. 삭제하지 않는 이유는 REDESIGN.md §7.2 참고.
-# 이 경로 변경으로 구 URL 은 404 가 되므로, 404.html 이 /brief/ 로 안내한다.
-permalink: /brief/:categories/:year/:month/:day/:title/
-
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-paginate
-
-categories_label:
-  policy: "국내 정책"
-  youth: "청년 정책"
-  data: "통계·생활정보"
-  curious: "흥미로운 발견"
 
 exclude:
   - scripts/
@@ -91,11 +79,7 @@ exclude:
   - REDESIGN.md
   - docs/
 
-paginate: 10
-paginate_path: "/page/:num/"
-
-feed:
-  posts_limit: 20
+# RSS 는 feed.xml 을 직접 쓴다 (이유는 그 파일 주석 참고). jekyll-feed 는 끈다.
 
 # 카카오톡 공유용 JavaScript 키.
 # 비워 두면 제도 페이지의 '카카오톡' 버튼은 OS 공유 시트를 띄우고,

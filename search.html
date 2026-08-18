@@ -31,12 +31,10 @@ permalink: /search/
   var status  = document.getElementById('search-status');
   var results = document.getElementById('search-results');
   // 분야 라벨은 _data/taxonomy.json 에서 그대로 가져온다 (템플릿에 한글 라벨 하드코딩 금지).
-  // 구 브리핑 카테고리는 아카이브 검색 결과 표시용으로만 남겨 둔다.
   var CAT_LABEL = {
     {% for c in site.data.taxonomy.category_order %}
-    {{ c | jsonify }}: {{ site.data.taxonomy.categories[c].label | jsonify }},
+    {{ c | jsonify }}: {{ site.data.taxonomy.categories[c].label | jsonify }}{% unless forloop.last %},{% endunless %}
     {% endfor %}
-    'policy': '국내 정책', 'youth': '청년 정책', 'data': '통계·생활정보', 'curious': '흥미로운 발견'
   };
   var docs = [];
   var ready = false;
@@ -101,7 +99,6 @@ permalink: /search/
     results.innerHTML = matched.map(function (d) {
       var chips = '<span class="chip chip-cat">' + escapeHtml(CAT_LABEL[d.category] || d.category) + '</span>';
       if (d.region) chips += '<span class="chip">' + escapeHtml(d.region) + '</span>';
-      if (d.type === 'brief') chips += '<span class="chip chip-closed">지난 브리핑</span>';
       return '' +
         '<a href="' + d.url + '" class="post-card cn" data-cat="' + escapeHtml(d.category) + '">' +
           '<div class="card-inner">' +

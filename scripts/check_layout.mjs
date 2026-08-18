@@ -49,7 +49,6 @@ function pages() {
     ['대상 허브', '/who/youth/'],
     ['마감 임박', '/deadline/'],
     ['검색', '/search/'],
-    ['구 브리핑', '/brief/'],
   ];
   const detail = firstDetail();
   if (detail) list.push(['제도 상세', detail]);
