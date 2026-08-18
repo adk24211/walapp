@@ -32,6 +32,44 @@ def _esc(text) -> str:
     return html.escape(_strip_foreign(text), quote=False)
 
 
+# ── 문체: 명령형을 정중체로 ──────────────────────────────────
+# "방문신청을 하세요" 처럼 지시하는 어미는 지원금 안내에 맞지 않는다. 읽는 사람은
+# 이 사이트의 이용자가 아니라 제도를 알아보러 온 사람이고, 신청 여부는 그 사람이
+# 정한다. 어간은 그대로 두고 어미만 바꾸므로 뜻이 달라지지 않는다.
+#
+# ⚠️ **해설(prose)에만 적용한다.** 원문(`*_raw`)은 공공데이터를 그대로 옮긴 것이라
+#    한 글자도 고치지 않는다 — 원문에 '문의 바랍니다' 가 있으면 그대로 나간다.
+#    그래서 이 치환을 `_esc()` 안에 넣지 않았다. `_esc` 는 원문도 지나간다.
+#
+# 두 번 적용해도 결과가 같다(치환 결과에는 패턴이 없다). 렌더는 여러 번 돈다.
+_POLITE_RULES = (
+    (re.compile(r"해\s*주세요(?=[.!?)\]\s]|$)"), "해 주시기 바랍니다"),
+    (re.compile(r"하세요(?=[.!?)\]\s]|$)"), "하시기 바랍니다"),
+    (re.compile(r"하십시오(?=[.!?)\]\s]|$)"), "하시기 바랍니다"),
+    (re.compile(r"마세요(?=[.!?)\]\s]|$)"), "마시기 바랍니다"),
+    (re.compile(r"주세요(?=[.!?)\]\s]|$)"), "주시기 바랍니다"),
+)
+
+
+def _polite(text):
+    if not isinstance(text, str):
+        return text
+    for pattern, replacement in _POLITE_RULES:
+        text = pattern.sub(replacement, text)
+    return text
+
+
+def _politen(value):
+    """해설 구조(dict/list/str)를 그대로 훑으며 문자열만 정중체로 바꾼다."""
+    if isinstance(value, str):
+        return _polite(value)
+    if isinstance(value, list):
+        return [_politen(v) for v in value]
+    if isinstance(value, dict):
+        return {k: _politen(v) for k, v in value.items()}
+    return value
+
+
 def _attr(text) -> str:
     return html.escape(str(text or ""), quote=True)
 
@@ -83,6 +121,7 @@ def _yaml(text) -> str:
 #  본문 컴포넌트
 # ─────────────────────────────────────────────────────────────
 def render_body(record: ProgramRecord, prose: dict) -> str:
+    prose = _politen(prose or {})
     cat = record.category
     parts: list[str] = []
 
@@ -389,7 +428,7 @@ def to_markdown(record: ProgramRecord, prose: dict) -> str:
 
     front += [
         f'org: "{_yaml(record.org)}"',
-        f'summary: "{_yaml(prose.get("summary") or record.benefit_raw)[:160]}"',
+        f'summary: "{_yaml(_polite(prose.get("summary")) or record.benefit_raw)[:160]}"',
         f"status: {record.status}",
         f'status_label: "{STATUS_LABELS.get(record.status, record.status)}"',
         f"apply_always: {'true' if record.apply_period.always else 'false'}",
