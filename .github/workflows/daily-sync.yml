@@ -110,6 +110,18 @@ jobs:
           TZ: Asia/Seoul
         run: python scripts/run_all.py
 
+      # 이미 저장돼 있던 http:// 신청 링크를 https 로 올린다.
+      # 새로 들어오는 레코드는 수집 단계가 알아서 올리므로(collect/url_https.py)
+      # 이 단계는 그 전에 쌓인 것들을 위한 것이다. 올릴 게 없으면 즉시 끝난다.
+      # 실패해도 동기화를 세우지 않는다 — 링크가 http 로 남을 뿐이고,
+      # 그것 때문에 그날 발행을 통째로 버릴 이유는 없다.
+      - name: Upgrade stored http links to https
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        continue-on-error: true
+        env:
+          TZ: Asia/Seoul
+        run: python scripts/upgrade_urls.py
+
       - name: Commit new and updated programs
         if: ${{ github.event.inputs.dry_run != 'true' }}
         env:

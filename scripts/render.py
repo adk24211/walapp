@@ -74,6 +74,49 @@ def _attr(text) -> str:
     return html.escape(str(text or ""), quote=True)
 
 
+# ── 신청 방법 ──
+# how_to_raw 는 원천(bojo24)이 고정 어휘로 주는 값이다. 지금까지 본 값은 다섯:
+#   방문신청 29 · 기타 온라인신청 26 · 직접입력 7 · 신청불필요 4 · 정부24온라인신청 1
+#
+# '직접입력' 은 게시 기관이 자유 입력란을 골랐다는 뜻이라 방법을 알려 주지 않는다.
+# 화면에 '직접입력' 이라고 쓰면 읽는 사람에게 아무 뜻도 없으므로 버린다.
+# 모르는 값은 버리지 않고 그대로 싣는다 — 원천이 어휘를 늘렸을 때 조용히
+# 사라지는 것보다 낯선 말이라도 보이는 편이 낫다.
+APPLY_METHOD_LABELS = {
+    "방문신청": "방문 신청",
+    "기타 온라인신청": "온라인 신청",
+    "정부24온라인신청": "정부24 온라인 신청",
+    "신청불필요": "별도 신청 불필요",
+}
+APPLY_METHOD_DROP = {"직접입력"}
+APPLY_METHOD_NONE = "신청불필요"
+
+
+def _apply_methods(how_to_raw: str) -> list[str]:
+    """how_to_raw 를 사람이 읽을 말 목록으로."""
+    out: list[str] = []
+    for line in str(how_to_raw or "").split("\n"):
+        v = line.strip()
+        if not v or v in APPLY_METHOD_DROP:
+            continue
+        label = APPLY_METHOD_LABELS.get(v, v)
+        if label not in out:
+            out.append(label)
+    return out
+
+
+def _apply_not_needed(how_to_raw: str) -> bool:
+    """신청 자체가 필요 없는 제도인가.
+
+    이 제도들에 '신청하기' 버튼을 띄우면 틀린 안내다. 다른 방법이 함께
+    적혀 있으면(예: 신청불필요 + 방문신청) 어느 쪽인지 원문만으로는 알 수
+    없으므로 단정하지 않는다.
+    """
+    lines = [v.strip() for v in str(how_to_raw or "").split("\n") if v.strip()]
+    lines = [v for v in lines if v not in APPLY_METHOD_DROP]
+    return lines == [APPLY_METHOD_NONE]
+
+
 def _icon(name: str) -> str:
     """본문에 넣는 아이콘 한 개.
 
@@ -272,9 +315,12 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
     #
     # 예전에 따로 있던 '공식 창구' 카드는 없앴다. 링크 둘 중 '온라인으로 신청하기' 는
     # 레일 버튼과 주소까지 같았고, 남는 건 기관 안내 링크 하나뿐이라 이 표 아래로 옮겼다.
+    # 신청 방법은 원문에 있었는데 그동안 화면에 내보내지 않고 있었다.
+    # 온라인 주소가 없는 제도(45건 중 19건)에서는 이게 유일한 안내다.
     meta_rows = [
         ("소관 기관", record.org),
         ("지원 지역", record.region.label),
+        ("신청 방법", " · ".join(_apply_methods(record.how_to_raw))),
         ("접수 기관", record.receiver_raw),
         ("문의처", record.contact_raw),
         ("근거 법령", record.law_raw),
@@ -457,6 +503,12 @@ def to_markdown(record: ProgramRecord, prose: dict) -> str:
         front.append(f'apply_start: "{record.apply_period.start}"')
     if record.apply_period.end:
         front.append(f'apply_end: "{record.apply_period.end}"')
+    # 오른쪽 레일이 어떤 버튼을 낼지 고르는 값. 자세한 이유는 _layouts/program.html.
+    methods = _apply_methods(record.how_to_raw)
+    if methods:
+        front.append("apply_methods: [" + ", ".join(f'"{_yaml(m)}"' for m in methods) + "]")
+    if _apply_not_needed(record.how_to_raw):
+        front.append("apply_not_needed: true")
     if record.apply_url:
         front.append(f'apply_url: "{_yaml(record.apply_url)}"')
     if record.official_url:

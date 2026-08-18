@@ -100,6 +100,9 @@
   display: inline-flex; align-items: center; gap: 6px;
   padding: 11px 18px; border-radius: 10px;
   font-size: .92rem; font-weight: 700; transition: transform .12s, box-shadow .12s;
+  /* 한국어는 어절 단위로 끊어야 읽힌다. 기본값이면 좁은 레일에서
+     '신청 방법' 이 '신 / 청 방법' 으로 잘린다. */
+  word-break: keep-all;
 }
 .cta-primary { background: var(--c); color: var(--surface); }
 .cta-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,.14); }
