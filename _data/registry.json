@@ -10,6 +10,17 @@
     "slug": "유아학비-누리과정-지원",
     "status": "active"
   },
+  "bojo24-105100000001": {
+    "content_hash": "sha256:85a42f3a79bec70c4392f737db8e33f9",
+    "first_published": "2026-08-19",
+    "last_checked": "2026-08-19",
+    "last_updated": "2026-08-19",
+    "name": "근로·자녀장려금",
+    "path": "_programs/finance/근로-자녀장려금.md",
+    "revision": 1,
+    "slug": "근로-자녀장려금",
+    "status": "active"
+  },
   "bojo24-134200000045": {
     "content_hash": "sha256:3dcf4cd48ce4c41f906bada8e5e3a69b",
     "first_published": "2026-08-15",
@@ -107,6 +118,17 @@
     "path": "_programs/jobs/국민내일배움카드.md",
     "revision": 2,
     "slug": "국민내일배움카드",
+    "status": "active"
+  },
+  "bojo24-149200000037": {
+    "content_hash": "sha256:27e67addabf882df3fb0abe66135016c",
+    "first_published": "2026-08-19",
+    "last_checked": "2026-08-19",
+    "last_updated": "2026-08-19",
+    "name": "직업훈련 생계비대부사업",
+    "path": "_programs/jobs/직업훈련-생계비대부사업.md",
+    "revision": 1,
+    "slug": "직업훈련-생계비대부사업",
     "status": "active"
   },
   "bojo24-149200000041": {
@@ -208,6 +230,17 @@
     "slug": "국토교통부-전세보증금반환보증-보증료-지원",
     "status": "active"
   },
+  "bojo24-171000000008": {
+    "content_hash": "sha256:2a892e33be730928119859162dc0062e",
+    "first_published": "2026-08-19",
+    "last_checked": "2026-08-19",
+    "last_updated": "2026-08-19",
+    "name": "다문화가정 EMS 요금 할인 지원",
+    "path": "_programs/living/다문화가정-ems-요금-할인-지원.md",
+    "revision": 1,
+    "slug": "다문화가정-ems-요금-할인-지원",
+    "status": "active"
+  },
   "bojo24-999000000008": {
     "content_hash": "sha256:59b8b0ad06d71812b194c34bc793e84b",
     "first_published": "2026-08-14",
@@ -217,6 +250,17 @@
     "path": "_programs/care/육아휴직급여.md",
     "revision": 1,
     "slug": "육아휴직급여",
+    "status": "active"
+  },
+  "bojo24-999000000023": {
+    "content_hash": "sha256:e7d2f917157a1bfe4e73d0dd3366b1ba",
+    "first_published": "2026-08-19",
+    "last_checked": "2026-08-19",
+    "last_updated": "2026-08-19",
+    "name": "영구임대주택공급",
+    "path": "_programs/housing/영구임대주택공급.md",
+    "revision": 1,
+    "slug": "영구임대주택공급",
     "status": "active"
   },
   "bojo24-999000000044": {
