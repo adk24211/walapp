@@ -30,6 +30,17 @@ def fake(mapping):
         return Resp(r)
     return _open
 
+# HEAD 는 전송 단계에서 끊기고 GET 은 되는 서버 — .go.kr WAF 에서 실제로 본 모양이다.
+def head_dies_get_works(url_ok="https://g.go.kr/"):
+    def _open(req, timeout=None):
+        if req.get_method() == "HEAD":
+            raise OSError("connection reset by peer")
+        return Resp(url_ok)
+    return _open
+
+def both_die(req, timeout=None):
+    raise TimeoutError()
+
 CASES = [
     ("https 정상",           {"a.go.kr": "https://a.go.kr/"},                     "http://a.go.kr/x", "https://a.go.kr/x"),
     ("HEAD 막힘(405)",       {"b.go.kr": urllib.error.HTTPError("https://b.go.kr/", 405, "no", None, None)}, "http://b.go.kr/y", "https://b.go.kr/y"),
@@ -51,6 +62,33 @@ for name, mapping, src, want in CASES:
     mark = "O" if got == want else "X"
     if got != want: ok = False
     print(f"  {mark} {name:<22} {src}  →  {got}")
+
+# ── HEAD 실패 → GET 폴백 ──
+U.reset_cache()
+_o = U.urllib.request.urlopen
+U.urllib.request.urlopen = head_dies_get_works()
+try:
+    got = U.upgrade("http://g.go.kr/x")
+finally:
+    U.urllib.request.urlopen = _o
+mark = "O" if got == "https://g.go.kr/x" else "X"
+if got != "https://g.go.kr/x": ok = False
+print(f"  {mark} HEAD 끊김 → GET 으로 확인{'':<6} {got}")
+print(f"      이유 기록: {U._reasons['g.go.kr']}")
+
+# ── 둘 다 실패하면 그대로 ──
+U.reset_cache()
+_o = U.urllib.request.urlopen
+U.urllib.request.urlopen = both_die
+try:
+    got = U.upgrade("http://h.go.kr/")
+finally:
+    U.urllib.request.urlopen = _o
+mark = "O" if got == "http://h.go.kr/" else "X"
+if got != "http://h.go.kr/": ok = False
+print(f"  {mark} HEAD·GET 모두 실패 → 유지{'':<3} {got}")
+print(f"      이유 기록: {U._reasons['h.go.kr']}")
+print(f"      summary(): {U.summary().splitlines()[-1].strip()}")
 
 # 건드리면 안 되는 것들
 U.reset_cache()
