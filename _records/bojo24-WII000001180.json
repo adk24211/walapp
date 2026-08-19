@@ -1,0 +1,74 @@
+{
+  "_prose": {
+    "eligibility": [
+      "장애인복지법 시행령 제2조제1항에 해당하는 장애를 가진 장애인",
+      "대통령령으로 정하는 정보격차해소교육이 필요하다고 인정되는 사람",
+      "장애인 복지카드 등 장애인 등록 관련 서류를 보유한 사람",
+      "양육가정"
+    ],
+    "faq": [],
+    "note": "대통령령으로 정하는 대상자는 별도 확인이 필요합니다.",
+    "steps": [
+      {
+        "body": "지원 홈페이지에서 온라인 신청서를 작성합니다. 신청 시 신분증 등 필수 서류를 첨부해야 합니다. 제출 서류가 확인되면 선정 기준에 따라 교육기관이 지정됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "장애인 및 양육가정을 대상으로 복지관 등 민간 교육기관에서 모바일 활용교육과 ICT 신기술 시범교육을 제공하는 전국적 정보화 교육 지원 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "4월~12월(교육기관 상황에 따라 변동될 수 있음)",
+    "start": ""
+  },
+  "apply_url": "https://www.디지털배움터.kr",
+  "audiences": [
+    "parent",
+    "disabled"
+  ],
+  "benefit_raw": "복지관 등 민간 교육기관을 선정하여 모바일 활용교육 및 ICT신기술 시범교육 등 수준별·맞춤형 정보화 교육",
+  "category": "care",
+  "contact_raw": "한국지능정보사회진흥원/1588-2670",
+  "content_hash": "sha256:58f9e5a9673c551a1bc77a70dee34fae",
+  "criteria_raw": "장애인 복지카드 등 장애인 등록 관련 서류",
+  "deferred_detail": false,
+  "documents_raw": [
+    "ㅇ 필수 : 신분증",
+    "ㅇ 신청인 제출 서류",
+    "대리인인 경우 위임장(해당자)",
+    "ㅇ 공무원 확인 가능 서류(신청인 미제출 서류)",
+    "주민등록등본",
+    "기본증명서(상세)",
+    "가족관계증명서",
+    "장애인등록증",
+    "외국인등록사실증명서",
+    "※ 행정정보공동이용 사전 동의 필요"
+  ],
+  "first_published": "2026-08-19",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-WII000001180",
+  "is_mock": false,
+  "last_checked": "2026-08-19",
+  "last_updated": "2026-08-19",
+  "law_raw": "",
+  "name": "장애인 집합 정보화교육",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000001180",
+  "org": "과학기술정보통신부",
+  "primary_audience": "disabled",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "장애인-집합-정보화교육",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 개인",
+  "source_id": "WII000001180",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "- 장애인복지법 시행령 제2조제1항에 해당하는 장애를 가진 장애인\n- 그 밖에 국가의 부담으로 정보격차해소교육을 할 필요가 있다고 대통령령으로 정하는 사람",
+  "view_count": 23093
+}

@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "예비창업자이어야 합니다.",
+      "양육가정에 해당해야 합니다.",
+      "소상공인이어야 합니다."
+    ],
+    "faq": [
+      {
+        "a": "사업화자금은 예비창업자의 사업화 단계에 필요한 비용으로 지원됩니다. 구체적인 사용 범위는 사업 진행 상황에 따라 결정됩니다.",
+        "q": "사업화자금은 어떤 용도로 지원되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청 페이지에 접속하여 신청서를 작성합니다. 구비 서류가 없으므로 바로 제출하시면 됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "모두의창업(로컬트랙)은 양육가정 및 소상공인 예비창업자를 대상으로 보육공간과 창업프로그램, 후속연계지원 및 사업화자금을 제공하는 지원 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "상세 공고는 소상공인24(http://www.sbiz24.kr) 참조",
+    "start": ""
+  },
+  "apply_url": "https://www.sbiz24.kr",
+  "audiences": [
+    "parent",
+    "business"
+  ],
+  "benefit_raw": "예비창업자의 성공적인 창업을 위한 보육공간 및 창업프로그램, 후속연계지원, 사업화자금 등 패키지 지원",
+  "category": "jobs",
+  "contact_raw": "로컬창업육성실 모두의창업TF/042-363-7738",
+  "content_hash": "sha256:e65f14c063066645c11f3403b9cff3b4",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-19",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55307700009",
+  "is_mock": false,
+  "last_checked": "2026-08-19",
+  "last_updated": "2026-08-19",
+  "law_raw": "",
+  "name": "모두의창업(로컬트랙)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55307700009",
+  "org": "소상공인시장진흥공단",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "모두의창업-로컬트랙",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타(교육) 소상공인",
+  "source_id": "B55307700009",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "예비창업자",
+  "view_count": 13461
+}

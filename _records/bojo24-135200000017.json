@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "보조기기 서비스가 필요한 장애인",
+      "보조기기 서비스가 필요한 노인",
+      "장애인복지법에 따른 장애인",
+      "노인장기요양보험법에 따른 노인",
+      "국가유공자 등 예우 및 지원에 관한 법률에 따른 국가유공자 등"
+    ],
+    "faq": [],
+    "note": "본 서비스는 현금·현물 지원이 없으니 물품 제공을 기대하지 않으시기 바랍니다.",
+    "steps": [
+      {
+        "body": "관할 지역 보조기기센터를 직접 방문하여 신청합니다. 필요 시 장애인등록증·주민등록증·의사소견서를 제시할 수 있습니다. 상담을 통해 보조기기 정보와 체험 지원을 받을 수 있습니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "장애인·노인 보조기기 맞춤형 서비스는 전국의 지역 보조기기센터에서 장애인·노인에게 보조기기 상담·정보·체험을 제공하는 제도이며, 현금·현물 지원은 없습니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "senior",
+    "disabled"
+  ],
+  "benefit_raw": "* 본 서비스는 현금, 현물을 제공하지 않으며, 상담 등 서비스를 제공합니다.\n\n○ 보조기기 전화 상담(전국 콜센터 1670-5529)\n○ 보조기기 상담 및 정보제공 등\n○ 보조기기 체험 지원\n\n○ 보조기기 정보검색\n- 홈페이지 : https://knat.go.kr/knw/home/knat_DB/main.html\n- 앱 : 앱스토어, 플레이스토어에서 \"보조기기 종합정보 알리미\" 검색 후 다운로드\n\n○ 지역센터 현황보기 http://knat.go.kr/knw/home/knat/knat_map.php",
+  "category": "health",
+  "contact_raw": "전국보조기기센터/1670-5529",
+  "content_hash": "sha256:7bb797ad08cdd6420d639ecd7bf64d59",
+  "criteria_raw": "○ 장애인복지법에 따른 장애인\n○ 노인장기요양보험법에 따른 노인등\n○ 국가유공자 등 예우 및 지원에 관한 법률에 따른 국가유공자 등",
+  "deferred_detail": false,
+  "documents_raw": [
+    "없음",
+    "[ 장애인등록증(장애 여부 확인을 위함)",
+    "주민등록증(노인 여부 확인을 위함)",
+    "의사소견서(필요시 장애 여부 확인) 등의 제시 요구할 수 있음 ]"
+  ],
+  "first_published": "2026-08-19",
+  "how_to_raw": "방문신청\n직접입력",
+  "id": "bojo24-135200000017",
+  "is_mock": false,
+  "last_checked": "2026-08-19",
+  "last_updated": "2026-08-19",
+  "law_raw": "",
+  "name": "장애인·노인 보조기기 맞춤형 서비스 (지역 보조기기센터)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000017",
+  "org": "보건복지부",
+  "primary_audience": "disabled",
+  "receiver_raw": "중앙 및 지역보조기기센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "장애인-노인-보조기기-맞춤형-서비스-지역-보조기기센터",
+  "source": "bojo24",
+  "source_category_raw": "보건·의료 기타(상담)\n상담/법률지원 개인",
+  "source_id": "135200000017",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 보조기기 서비스가 필요한 장애인, 노인 등",
+  "view_count": 137029
+}
