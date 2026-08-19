@@ -20,7 +20,8 @@
   {% endif %}
   {% comment %}
     ads_enabled 가 꺼져 있으면 게시자 ID 가 있어도 넣지 않는다.
-    (_config.yml 의 ads_enabled 주석 참고 — 세이프 브라우징 재심사 때문에 꺼 뒀다.)
+    한 번 세이프 브라우징에 걸렸을 때 이 스위치로 광고를 내렸다.
+    (왜 그랬는지와 다시 켤 때 함께 할 일은 _config.yml 의 ads_enabled 주석 참고)
   {% endcomment %}
   {% if site.ads_enabled and site.google_adsense and site.google_adsense != "" %}
   <!-- Google AdSense (자동 광고) -->
