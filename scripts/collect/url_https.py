@@ -16,6 +16,9 @@
   · 4xx 응답은 '열린다' 로 본다. 404 든 403 든 https 로 **응답은 했다** 는 뜻이라
     연결 자체는 되는 것이다. 우리가 확인하려는 건 페이지의 존재가 아니라
     https 를 받아 주는지다.
+  · HEAD 가 전송 단계에서 끊기면 GET 으로, 그것도 안 되면 TLS 악수만 따로
+    확인한다. 응답이 느려 읽기가 시간 초과되는 서버라도 악수가 됐다면 그
+    호스트는 https 를 받아 주는 것이다.
   · 호스트 단위로 캐시한다. work24.go.kr 처럼 여러 제도가 같은 창구를 쓴다.
 
 네트워크가 없는 곳(오프라인 검증, 목 모드)에서는 호스트마다 타임아웃만큼
@@ -26,6 +29,8 @@ from __future__ import annotations
 
 import logging
 import os
+import socket
+import ssl
 import urllib.error
 import urllib.request
 from urllib.parse import urlsplit, urlunsplit
@@ -85,6 +90,32 @@ def _attempt(netloc: str, method: str, timeout: float) -> tuple[bool | None, str
         return None, f"{method} 실패({type(exc).__name__}: {exc})"
 
 
+def _tls_ok(netloc: str, timeout: float) -> tuple[bool, str]:
+    """이 호스트와 https 로 악수가 되는가.
+
+    HEAD·GET 이 둘 다 '읽기 시간 초과' 로 떨어지는 서버가 있다(work24.go.kr).
+    그런데 읽기가 시간 초과됐다는 건 **연결과 TLS 협상은 이미 끝났다**는 뜻이다.
+    응답이 늦을 뿐 https 를 받아 주지 않는 게 아니다. 그래서 마지막으로 악수만
+    따로 해 본다.
+
+    인증서 검증까지 하는 기본 컨텍스트를 쓴다. 악수가 통과했다면 그 호스트는
+    올바른 인증서로 https 를 서빙하고 있다는 뜻이고, 우리가 알고 싶은 것은
+    딱 거기까지다 — 스킴만 바꿀 뿐 호스트와 경로는 그대로 두기 때문이다.
+
+    ⚠️ 검증을 끄지 말 것. 인증서가 틀린 곳으로 사람을 보내면 http 로 보내는
+       것보다 나쁘다.
+    """
+    host = netloc.split(":")[0]
+    port = int(netloc.split(":")[1]) if ":" in netloc else 443
+    ctx = ssl.create_default_context()
+    try:
+        with socket.create_connection((host, port), timeout=timeout) as sock:
+            with ctx.wrap_socket(sock, server_hostname=host) as tls:
+                return True, f"TLS 악수 성공({tls.version()})"
+    except Exception as exc:  # noqa: BLE001
+        return False, f"TLS 악수 실패({type(exc).__name__}: {exc})"
+
+
 def probe(netloc: str, *, timeout: float | None = None) -> bool:
     """이 호스트가 https 를 받아 주는가.
 
@@ -99,12 +130,20 @@ def probe(netloc: str, *, timeout: float | None = None) -> bool:
     limit = timeout or TIMEOUT
     reasons: list[str] = []
     ok = False
+    settled = False
     for method in ("HEAD", "GET"):
         verdict, why = _attempt(netloc, method, limit)
         reasons.append(why)
         if verdict is not None:
             ok = verdict
+            settled = True
             break
+
+    # HTTP 로는 판단이 안 났다 — 연결·TLS·타임아웃 단계에서 막힌 것이다.
+    # 악수만 따로 확인한다. 자세한 이유는 _tls_ok.
+    if not settled:
+        ok, why = _tls_ok(netloc, limit)
+        reasons.append(why)
 
     _probed[netloc] = ok
     _reasons[netloc] = " · ".join(reasons)

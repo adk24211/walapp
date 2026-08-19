@@ -90,6 +90,47 @@ print(f"  {mark} HEAD·GET 모두 실패 → 유지{'':<3} {got}")
 print(f"      이유 기록: {U._reasons['h.go.kr']}")
 print(f"      summary(): {U.summary().splitlines()[-1].strip()}")
 
+# ── HTTP 는 시간 초과인데 TLS 악수는 되는 서버 (work24.go.kr 에서 실제로 본 모양) ──
+U.reset_cache()
+_o, _t = U.urllib.request.urlopen, U._tls_ok
+U.urllib.request.urlopen = both_die
+U._tls_ok = lambda netloc, timeout: (True, "TLS 악수 성공(TLSv1.3)")
+try:
+    got = U.upgrade("http://slow.go.kr/apply")
+finally:
+    U.urllib.request.urlopen, U._tls_ok = _o, _t
+mark = "O" if got == "https://slow.go.kr/apply" else "X"
+if got != "https://slow.go.kr/apply": ok = False
+print(f"  {mark} 읽기 시간 초과 + 악수 성공 → 올림  {got}")
+print(f"      이유 기록: {U._reasons['slow.go.kr']}")
+
+# ── HTTP 도 TLS 도 안 되는 서버 → 유지 ──
+U.reset_cache()
+_o, _t = U.urllib.request.urlopen, U._tls_ok
+U.urllib.request.urlopen = both_die
+U._tls_ok = lambda netloc, timeout: (False, "TLS 악수 실패(TimeoutError: )")
+try:
+    got = U.upgrade("http://dead.go.kr/")
+finally:
+    U.urllib.request.urlopen, U._tls_ok = _o, _t
+mark = "O" if got == "http://dead.go.kr/" else "X"
+if got != "http://dead.go.kr/": ok = False
+print(f"  {mark} HTTP·TLS 모두 실패 → 유지{'':<5} {got}")
+
+# ── 인증서 검증을 끄지 않았는가 ──
+# 실제 서버로 확인하려 했더니 개발 컨테이너의 프록시가 TLS 를 가로채 자기
+# 인증서를 내밀어서, 만료된 인증서도 통과해 버렸다. 네트워크에 기대는 검사는
+# 환경에 따라 답이 달라져 쓸모가 없다. 코드가 검증을 켜 두는지를 직접 본다.
+import ssl as _ssl, inspect  # noqa: E402
+_src = inspect.getsource(U._tls_ok)
+_ctx = _ssl.create_default_context()
+_verifies = _ctx.verify_mode == _ssl.CERT_REQUIRED and _ctx.check_hostname
+_no_bypass = ("CERT_NONE" not in _src and "check_hostname = False" not in _src
+              and "_create_unverified" not in _src)
+mark = "O" if (_verifies and _no_bypass) else "X"
+if not (_verifies and _no_bypass): ok = False
+print(f"  {mark} 인증서 검증 켜져 있음{'':<9} 기본 컨텍스트 검증={_verifies} · 우회 코드 없음={_no_bypass}")
+
 # 건드리면 안 되는 것들
 U.reset_cache()
 for src in ("https://a.go.kr/", "", "mailto:x@y.kr", "tel:1588-0000"):
