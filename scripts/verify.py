@@ -99,11 +99,22 @@ _CJK_REPAIR = {
 _NON_KOREAN_RE = re.compile(r"[\u3040-\u30ff\u4e00-\u9fff]")
 
 
+# 프롬프트의 뼈대를 그대로 옮겨 적는 경우가 있다. '고정 사실' 은 우리가
+# 원문 블록에 붙인 이름이지 읽는 사람에게는 아무 뜻이 없는 말이다.
+# 실제로 gpt-oss-120b 첫 발행분 FAQ 에 "고정 사실에 따르면 …" 이 나왔다.
+# 프롬프트에도 쓰지 말라고 적었지만, 지시만으로는 새어 나온다.
+#
+# 문장을 버리지 않고 그 어구만 덜어 낸다 — 뒤에 붙은 내용은 멀쩡한 답이다.
+#   "고정 사실에 따르면 대상은 내국인입니다." → "대상은 내국인입니다."
+_SCAFFOLD_RE = re.compile(
+    r"(제공된\s*|주어진\s*)?고정\s*사실(에 따르면|에 근거하면|을 보면|에서는|에는|상)?[,]?\s*")
+
+
 def repair_language(text: str) -> str:
-    """아는 혼입 글자를 한국어로 되돌린다."""
+    """아는 혼입 글자를 한국어로 되돌리고, 프롬프트 뼈대 표현을 걷어낸다."""
     for bad, good in _CJK_REPAIR.items():
         text = text.replace(bad, good)
-    return text
+    return _SCAFFOLD_RE.sub("", text)
 
 
 def language_violations(sentence: str, code_values: set[str]) -> list[str]:
