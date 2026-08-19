@@ -18,9 +18,10 @@
   "apply_period": {
     "always": false,
     "end": "",
+    "raw": "",
     "start": ""
   },
-  "apply_url": "http://www.work24.go.kr/",
+  "apply_url": "https://www.work24.go.kr/",
   "audiences": [
     "jobseeker",
     "business"
@@ -28,7 +29,7 @@
   "benefit_raw": "○ 구직활동을 한 날에 소요된 교통비와 숙박료 지급",
   "category": "jobs",
   "contact_raw": "고용노동부 고객상담센터/1350",
-  "content_hash": "sha256:e4387133e0e779c8900843b8d635bd27",
+  "content_hash": "sha256:bbed3a01cc7ee1480c20b76826e4abea",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [

@@ -28,9 +28,10 @@
   "apply_period": {
     "always": false,
     "end": "",
+    "raw": "",
     "start": ""
   },
-  "apply_url": "http://www.work24.go.kr/",
+  "apply_url": "https://www.work24.go.kr/",
   "audiences": [
     "jobseeker",
     "lowincome",
@@ -39,7 +40,7 @@
   "benefit_raw": "○ 구직급여 : 이직일의 다음 날부터 12개월(수급기간) 내에서, 피보험기간과 연령에 따라 120일-270일간 이직 전 3개월간 평균임금의 60%*를 구직급여 지급\n* 예술인, 노무제공자는 이직 전 12개월간 평균보수의 60%\n\n○ 개별연장급여 : 구직급여의 70%를 60일간 연장하여 지원\n\n○ 훈련연장급여 : 구직급여의 100%를 최대 2년간 연장하여 지원\n\n○ 특별연장급여 : 구직급여의 70%를 60일간 연장하여 지원",
   "category": "jobs",
   "contact_raw": "고용노동부 고객상담센터/1350",
-  "content_hash": "sha256:ad9977274fc18a334acaafe3f3899c39",
+  "content_hash": "sha256:75130435a512268972df5a891ffc3271",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [
