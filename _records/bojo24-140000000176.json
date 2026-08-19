@@ -30,9 +30,10 @@
   "apply_period": {
     "always": false,
     "end": "",
+    "raw": "",
     "start": ""
   },
-  "apply_url": "http://www.forestcard.or.kr",
+  "apply_url": "https://www.forestcard.or.kr",
   "audiences": [
     "parent",
     "disabled",
@@ -41,7 +42,7 @@
   "benefit_raw": "○ 산림복지서비스제공자로 등록된 아래 시설 또는 산림복지전문업에게서 프로그램 등 산림복지 서비스를 이용할 수 있음\n- 산림복지단지\n- 자연휴양림\n- 산림욕장\n- 치유의 숲\n- 유아숲체험원\n- 산림교육센터\n- 수목원\n- 정원\n- 숲속야영장\n- 산림레포츠단지\n- 산림복지전문업",
   "category": "living",
   "contact_raw": "산림복지서비스이용권 전용 고객지원센터/1544-3228\n한국산림복지진흥원/1544-3228",
-  "content_hash": "sha256:7c9ec909965f46b6b0050c3f796443ec",
+  "content_hash": "sha256:1d6ca981bbf939a0844ceb654d45aad9",
   "criteria_raw": "○ 신청인 비례 및 사회적 약자 우선 배려하여 선정\n- 사회적 약자 우선 선정(1~2순위 자격 중 2가지 이상 해당자)",
   "deferred_detail": false,
   "documents_raw": [

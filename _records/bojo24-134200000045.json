@@ -24,9 +24,10 @@
   "apply_period": {
     "always": false,
     "end": "",
+    "raw": "",
     "start": ""
   },
-  "apply_url": "http://www.lllcard.kr",
+  "apply_url": "https://www.lllcard.kr",
   "audiences": [
     "parent",
     "disabled",
@@ -35,7 +36,7 @@
   "benefit_raw": "○ 1인당 연간 35만원 평생교육강좌 수강료 및 해당 강좌의 교재비에 사용가능한 이용권 지원",
   "category": "finance",
   "contact_raw": "평생교육이용권 중앙상담센터/1600-3005",
-  "content_hash": "sha256:3dcf4cd48ce4c41f906bada8e5e3a69b",
+  "content_hash": "sha256:71cf523d523010302c6b80ae3ea0a7d5",
   "criteria_raw": "○ ｢국민기초생활 보장법｣ 제2조 제2호에 따른 수급자 및 같은 법 제10호에 따른 차상위계층\n- ｢장애인복지법｣ 상 장애수당 수급자는 같은 법 시행령에 따라 국민기초생활 보장법상 수급자 또는 차상위계층에 포함\n\n○ ｢장애인연금법｣ 제2조 제4호에 따른 연금수급자\n- 이때에는 국민기초생활 보장법상 수급자 또는 차상위계층에 해당하는 경우에 한해 신청 가능\n\n○ ｢한부모가족지원법｣ 제5조에 따른 한부모가족 지원 대상자\n\n○ 그밖에 광역지자체가 정하는 지역특화 대상자",
   "deferred_detail": false,
   "documents_raw": [
