@@ -39,7 +39,16 @@ log = logging.getLogger(__name__)
 #    제공처에서 사라져 404 가 났는데, 하드코딩이라 코드를 고쳐 배포할 때까지
 #    발행이 멈췄다. 모델 이름은 우리가 통제하지 못하는 값이다.
 #    WALAPP_LLM_MODEL 로 덮어쓸 수 있게 두면 시크릿·환경변수만 바꿔 복구된다.
-PRIMARY_MODEL = os.environ.get("WALAPP_LLM_MODEL", "").strip() or "llama-3.3-70b-versatile"
+#
+# 2026-08-16 llama-3.3-70b-versatile 종료. 제공처가 권한 대체는 둘이었다:
+#   openai/gpt-oss-120b   또는   qwen/qwen3.6-27b
+#
+# gpt-oss-120b 를 고른 이유는 이 사이트가 겪은 일 때문이다. Llama 로 생성한
+# 해설에 중국어가 6건 섞여 나갔다("방문申请", "最近 5년 이내", "海外" 가
+# "外海" 로 뒤집힌 것까지 — verify.py 주석 참고). Qwen 은 중국어 비중이 큰
+# 모델군이라 같은 사고를 더 겪을 이유가 없다. 크기도 이쪽이 커서 '상위 모델
+# 고정' 이라는 원래 방침에 맞는다.
+PRIMARY_MODEL = os.environ.get("WALAPP_LLM_MODEL", "").strip() or "openai/gpt-oss-120b"
 
 
 class ModelUnavailable(RuntimeError):
