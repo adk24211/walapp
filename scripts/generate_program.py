@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 import re
 import textwrap
 import time
@@ -33,7 +34,23 @@ log = logging.getLogger(__name__)
 
 # 상위 모델 고정. 하루 발행량이 4~5건이라 무료 한도 안에서 충분히 돌아간다.
 # 작은 모델로 자동 강등하면 같은 사이트 안에서 글마다 품질이 들쭉날쭉해진다.
-PRIMARY_MODEL = "llama-3.3-70b-versatile"
+#
+# ⚠️ 값을 코드에 박아 두지 말 것. 2026-08-19 에 llama-3.3-70b-versatile 이
+#    제공처에서 사라져 404 가 났는데, 하드코딩이라 코드를 고쳐 배포할 때까지
+#    발행이 멈췄다. 모델 이름은 우리가 통제하지 못하는 값이다.
+#    WALAPP_LLM_MODEL 로 덮어쓸 수 있게 두면 시크릿·환경변수만 바꿔 복구된다.
+PRIMARY_MODEL = os.environ.get("WALAPP_LLM_MODEL", "").strip() or "llama-3.3-70b-versatile"
+
+
+class ModelUnavailable(RuntimeError):
+    """설정한 모델을 부를 수 없다.
+
+    제도 하나가 실패한 것과는 성격이 다르다. 이건 설정이 깨진 것이고, 그대로
+    두면 **모든** 제도가 조용히 반려된다. 실제로 그렇게 하루를 날렸다 —
+    로그에는 '반려 4건' 만 남아서 나쁜 데이터 몇 건처럼 보였다.
+
+    그래서 이 예외는 제도별 반려로 삼키지 않고 위로 올려 실행을 세운다.
+    """
 
 # 429 재시도 간격(초). 한도는 분 단위로 회복되므로 두 번째는 넉넉히 기다린다.
 RETRY_DELAYS = (25, 65)
@@ -232,6 +249,14 @@ def _call_with_retry(call, record: ProgramRecord):
             return call(PRIMARY_MODEL)
         except Exception as e:
             text = str(e).lower()
+            # 모델이 없어졌거나 권한이 없다 — 재시도해도 같고, 다음 제도도 같다.
+            if ("does not exist" in text or "do not have access" in text
+                    or "model_not_found" in text):
+                raise ModelUnavailable(
+                    f"모델 '{PRIMARY_MODEL}' 을 부를 수 없습니다: {e}\n"
+                    f"    제공처에서 모델이 내려갔거나 키에 권한이 없습니다.\n"
+                    f"    WALAPP_LLM_MODEL 환경변수에 현재 쓸 수 있는 모델 이름을 넣으세요."
+                ) from e
             if "413" in text or "too large" in text:
                 # 프롬프트가 너무 길다 — 재시도해도 같으므로 출력만 줄여 한 번 더.
                 log.warning("프롬프트 초과 [%s] → 출력 길이를 줄여 재시도", record.id)

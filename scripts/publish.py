@@ -76,6 +76,10 @@ def _write_one(
     # ── 해설 생성 ──
     try:
         prose = generate_program.generate(record, client)
+    except generate_program.ModelUnavailable:
+        # 설정이 깨진 것이라 제도별 반려로 삼키면 안 된다. 그대로 두면 오늘 치
+        # 후보 전부가 조용히 반려되고, 로그에는 '나쁜 데이터 몇 건' 처럼 보인다.
+        raise
     except Exception as e:
         log.error("해설 생성 실패 [%s]: %s", record.id, e)
         result.rejected.append({"id": record.id, "name": record.name, "reason": f"생성 실패: {e}"})

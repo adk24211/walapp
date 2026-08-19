@@ -96,6 +96,10 @@ jobs:
       - name: Run pipeline
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          # 해설 생성 모델. 제공처가 모델을 내리면 여기만 바꿔 복구한다.
+          # 비워 두면 generate_program.PRIMARY_MODEL 의 기본값을 쓴다.
+          # (변수는 저장소 Settings > Secrets and variables > Variables 에 둔다)
+          WALAPP_LLM_MODEL: ${{ vars.WALAPP_LLM_MODEL }}
           DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY }}
           MOCK_DATA: "0"
           POST_DATE: ${{ github.event.inputs.post_date }}

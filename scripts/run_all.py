@@ -32,6 +32,7 @@ import json
 import logging
 import os
 import sys
+import generate_program
 from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -222,8 +223,18 @@ def main() -> int:
                  len(result.restatused))
 
     client = _groq_client()
-    write_result = publish.run(to_publish, to_refresh, reg, today, client, dry_run,
-                               restatused_records=result.restatused)
+    try:
+        write_result = publish.run(to_publish, to_refresh, reg, today, client, dry_run,
+                                   restatused_records=result.restatused)
+    except generate_program.ModelUnavailable as e:
+        # 제도 하나의 문제가 아니라 설정이 깨진 것이다. 조용히 넘어가면 오늘
+        # 후보 전부가 반려로만 남고, 아무도 모르는 채 며칠이 지난다.
+        # 실제로 그렇게 하루를 날렸다 — 그래서 여기서 실행을 세운다.
+        log.error("━━━ 발행을 진행할 수 없습니다 ━━━")
+        for line in str(e).splitlines():
+            log.error("  %s", line)
+        log.error("  이번 실행에서 발행·갱신된 제도는 없습니다.")
+        return 2
 
     # ── ⑤ 인덱스 ──
     _export_taxonomy()
