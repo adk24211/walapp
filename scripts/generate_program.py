@@ -256,6 +256,22 @@ def generate(record: ProgramRecord, client) -> dict:
 
     response = _call_with_retry(_call, record)
 
+    # 실제로 몇 토큰을 썼는지 남긴다.
+    #
+    # 무료 한도가 분 단위로 걸린다. 한 실행에서 4건을 만드는 데 429 가 14번
+    # 났다 — 성공 1건당 3~4번 튕긴 셈이고, 재시도가 25초·65초씩 기다려 그
+    # 단계만 3분 17초가 걸렸다. 발행량을 올리려면 한 건이 실제로 얼마를
+    # 먹는지부터 알아야 하는데, 그 숫자가 어디에도 남지 않고 있었다.
+    #
+    # max_tokens 는 상한이지 사용량이 아니다. 8000 을 요청해도 실제로 2000 만
+    # 쓴다면 상한을 낮춰 분당 처리량을 늘릴 여지가 있다 — 추측하지 말고 재자.
+    usage = getattr(response, "usage", None)
+    if usage is not None:
+        log.info("  └ 토큰: 입력 %s · 출력 %s · 합계 %s (출력 상한 %d)",
+                 getattr(usage, "prompt_tokens", "?"),
+                 getattr(usage, "completion_tokens", "?"),
+                 getattr(usage, "total_tokens", "?"), MAX_TOKENS)
+
     raw = response.choices[0].message.content.strip()
     raw = re.sub(r"^```json\s*", "", raw)
     raw = re.sub(r"\s*```$", "", raw)
