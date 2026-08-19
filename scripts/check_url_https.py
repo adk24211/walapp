@@ -11,7 +11,7 @@
 
     python3 scripts/check_url_https.py
 """
-import sys, types, urllib.error, contextlib
+import sys, types, urllib.error, contextlib, pathlib
 sys.path.insert(0, 'scripts')
 from collect import url_https as U
 
@@ -116,6 +116,50 @@ finally:
 mark = "O" if got == "http://dead.go.kr/" else "X"
 if got != "http://dead.go.kr/": ok = False
 print(f"  {mark} HTTP·TLS 모두 실패 → 유지{'':<5} {got}")
+
+# ── 손으로 확인한 호스트는 프로브 없이 올린다 ──
+U.reset_cache()
+calls = []
+_o = U.urllib.request.urlopen
+U.urllib.request.urlopen = lambda req, timeout=None: (calls.append(req.full_url), Resp("https://x/"))[1]
+try:
+    got = U.upgrade("http://www.work24.go.kr/")
+finally:
+    U.urllib.request.urlopen = _o
+hit = got == "https://www.work24.go.kr/" and len(calls) == 0
+if not hit: ok = False
+print(f"  {'O' if hit else 'X'} 예외 목록 → 프로브 없이 올림{'':<2} {got} (네트워크 호출 {len(calls)}회)")
+
+# ── 목록에 없는 호스트는 여전히 프로브를 거친다 ──
+U.reset_cache()
+calls = []
+_o = U.urllib.request.urlopen
+U.urllib.request.urlopen = lambda req, timeout=None: (calls.append(req.full_url), Resp("https://other.go.kr/"))[1]
+try:
+    got = U.upgrade("http://other.go.kr/")
+finally:
+    U.urllib.request.urlopen = _o
+hit = got == "https://other.go.kr/" and len(calls) == 1
+if not hit: ok = False
+print(f"  {'O' if hit else 'X'} 목록 밖 → 프로브 거침{'':<7} {got} (네트워크 호출 {len(calls)}회)")
+
+# ── 프로브를 끄면 예외 목록도 쓰지 않는다 (목 파이프라인 보호) ──
+import os as _os
+U.reset_cache(); _os.environ["WALAPP_SKIP_HTTPS_PROBE"] = "1"
+got = U.upgrade("http://www.work24.go.kr/")
+del _os.environ["WALAPP_SKIP_HTTPS_PROBE"]
+hit = got == "http://www.work24.go.kr/"
+if not hit: ok = False
+print(f"  {'O' if hit else 'X'} 프로브 끄면 예외도 무시{'':<4} {got}")
+
+# ── 예외 목록에 근거 주석이 달려 있는가 ──
+_srcfile = pathlib.Path("scripts/collect/url_https.py").read_text(encoding="utf-8")
+_block = _srcfile.split("VERIFIED_BY_HAND = {")[1].split("}")[0]
+_entries = [l for l in _block.splitlines() if l.strip().startswith('"')]
+_comments = [l for l in _block.splitlines() if l.strip().startswith("#")]
+hit = len(_entries) > 0 and len(_comments) >= len(_entries)
+if not hit: ok = False
+print(f"  {'O' if hit else 'X'} 예외마다 근거 주석 있음{'':<5} 항목 {len(_entries)} · 주석 {len(_comments)}줄")
 
 # ── 인증서 검증을 끄지 않았는가 ──
 # 실제 서버로 확인하려 했더니 개발 컨테이너의 프록시가 TLS 를 가로채 자기

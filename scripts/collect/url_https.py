@@ -21,9 +21,14 @@
     호스트는 https 를 받아 주는 것이다.
   · 호스트 단위로 캐시한다. work24.go.kr 처럼 여러 제도가 같은 창구를 쓴다.
 
+확인이 원리적으로 불가능한 호스트가 하나 있다(work24.go.kr). 러너가 해외
+데이터센터 IP 라서 그 서버가 우리를 안 받아 준다. 그런 곳만 VERIFIED_BY_HAND
+에 손으로 적어 두고 프로브를 건너뛴다. 그 목록의 규칙은 아래 주석 참고.
+
 네트워크가 없는 곳(오프라인 검증, 목 모드)에서는 호스트마다 타임아웃만큼
 기다리게 되므로 WALAPP_SKIP_HTTPS_PROBE=1 로 통째로 끌 수 있다. 껐을 때는
-아무것도 바꾸지 않는다 — 확인 못 한 것을 올리지는 않는다.
+아무것도 바꾸지 않는다 — 확인 못 한 것을 올리지 않고, 손으로 적어 둔 목록도
+쓰지 않는다. 목 파이프라인이 주소를 건드리면 안 되기 때문이다.
 """
 from __future__ import annotations
 
@@ -47,6 +52,26 @@ HEADERS = {
     "User-Agent": UA,
     "Accept": "text/html,application/xhtml+xml,*/*;q=0.8",
     "Accept-Language": "ko-KR,ko;q=0.9",
+}
+
+# ── 사람이 직접 확인한 호스트 ──
+# 프로브가 닿지 못하는 호스트를 위한 예외다.
+#
+# GitHub Actions 러너는 해외 데이터센터 IP 라서, 국내 포털 중에 이걸 막거나
+# 무시하는 곳이 있다. work24.go.kr 이 그랬다 — 같은 .go.kr 인 bokjiro.go.kr 은
+# HEAD 200 으로 즉시 통과하는데 work24 는 HEAD·GET·TLS 악수까지 전부 시간
+# 초과였다. 정부 도메인을 일괄 차단하는 게 아니라 그 호스트만 우리를 안
+# 받아 준다. 사이트가 https 를 안 하는 게 아니라 우리가 확인할 수 없는 것이다.
+#
+# ⚠️ 여기 넣는 것은 '확인했다' 가 아니라 '확인한 사람이 있다' 는 뜻이다.
+#    브라우저로 직접 열어 보고, 누가 언제 무엇을 봤는지 함께 적을 것.
+#    추측으로 채우면 이 목록이 있는 이유가 사라지고, 죽은 링크를 만드는
+#    지름길이 된다.
+VERIFIED_BY_HAND = {
+    # 2026-08-19 adk24211 — 브라우저에서 https://www.work24.go.kr/ 가
+    # https://www.work24.go.kr/cm/main.do 로 정상 리다이렉트되는 것을 확인.
+    # 러너에서는 HEAD·GET·TLS 악수가 모두 시간 초과된다.
+    "www.work24.go.kr",
 }
 
 # 호스트 → https 가 열리는가. 없으면 아직 안 봤다는 뜻.
@@ -127,6 +152,12 @@ def probe(netloc: str, *, timeout: float | None = None) -> bool:
     if netloc in _probed:
         return _probed[netloc]
 
+    if netloc in VERIFIED_BY_HAND:
+        _probed[netloc] = True
+        _reasons[netloc] = "사람이 직접 확인한 호스트 — 프로브 건너뜀"
+        log.info("https %s: 가능 (%s)", netloc, _reasons[netloc])
+        return True
+
     limit = timeout or TIMEOUT
     reasons: list[str] = []
     ok = False
@@ -177,6 +208,10 @@ def summary() -> str:
     lines = [f"https 확인 {len(_probed)}개 호스트 · 올림 {len(up)} · 유지 {len(keep)}"]
     # 유지된 호스트는 이유까지 남긴다. 이게 없으면 왜 안 올라갔는지 알 길이 없어
     # 다음에 또 추측만 하게 된다.
+    by_hand = sorted(h for h in up if h in VERIFIED_BY_HAND)
+    if by_hand:
+        # 손으로 넣은 예외는 눈에 띄게 남긴다. 조용히 늘어나면 안 되는 목록이다.
+        lines.append("  손으로 확인한 호스트: " + ", ".join(by_hand))
     for host in keep:
         lines.append(f"  유지 {host}: {_reasons.get(host, '이유 기록 없음')}")
     return "\n".join(lines)
