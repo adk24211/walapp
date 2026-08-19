@@ -64,6 +64,18 @@ class ModelUnavailable(RuntimeError):
 # 429 재시도 간격(초). 한도는 분 단위로 회복되므로 두 번째는 넉넉히 기다린다.
 RETRY_DELAYS = (25, 65)
 
+# 출력 토큰 상한.
+#
+# 2400 으로 오래 잘 돌았는데, gpt-oss-120b 로 바꾼 첫 실행에서 4건 중 3건이
+# 400 "Failed to validate JSON" 으로 떨어졌다. gpt-oss 는 추론형이라 답을
+# 내기 전에 추론 토큰을 먼저 쓰고, 그게 이 상한을 함께 먹는다. 한도에 걸려
+# JSON 이 중간에 잘리면 그대로 검증 실패다 — 통과한 1건이 가장 짧은 글이었던
+# 것도 이 설명과 맞는다.
+#
+# 넉넉히 준다. 실제로 쓰는 만큼만 과금되므로 상한을 올리는 것 자체는 비용이
+# 아니다. 모델을 또 바꿀 때를 위해 환경변수로도 열어 둔다.
+MAX_TOKENS = int(os.environ.get("WALAPP_LLM_MAX_TOKENS", "8000"))
+
 SYSTEM_PROMPT = (
     "당신은 정부 지원 제도를 일반 국민이 이해할 수 있게 풀어 쓰는 한국어 편집자입니다. "
     "맞춤법과 문법이 정확하고, 주어진 사실 밖으로 절대 나가지 않으며, "
@@ -230,7 +242,7 @@ def generate(record: ProgramRecord, client) -> dict:
     prompt = build_prompt(record)
     log.info("해설 생성: %s", record.name)
 
-    def _call(model: str, max_tokens: int = 2400):
+    def _call(model: str, max_tokens: int = MAX_TOKENS):
         return client.chat.completions.create(
             model=model,
             messages=[
@@ -275,7 +287,7 @@ def _call_with_retry(call, record: ProgramRecord):
             if "413" in text or "too large" in text:
                 # 프롬프트가 너무 길다 — 재시도해도 같으므로 출력만 줄여 한 번 더.
                 log.warning("프롬프트 초과 [%s] → 출력 길이를 줄여 재시도", record.id)
-                return call(PRIMARY_MODEL, 1600)
+                return call(PRIMARY_MODEL, max(1600, MAX_TOKENS // 2))
             rate_limited = "429" in text or "rate_limit" in text
             if not rate_limited or attempt >= len(delays):
                 raise
