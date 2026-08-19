@@ -87,7 +87,7 @@ layout: default
 
 {% if items.size == 0 %}
 <div class="empty-state">
-  <i class="ti ti-search-off" aria-hidden="true"></i>
+  {% include icon.html name="search-off" %}
   <p>아직 정리된 제도가 없습니다. 매일 새 제도가 추가되고 있습니다.</p>
   <a class="cta-secondary" href="{{ '/support/' | relative_url }}">전체 제도 보기</a>
 </div>
@@ -159,7 +159,7 @@ layout: default
 
 {% if page.footnote %}
 <aside class="hub-footnote" role="note">
-  <i class="ti ti-info-circle" aria-hidden="true"></i>
+  {% include icon.html name="info-circle" %}
   <p>{{ page.footnote }}</p>
 </aside>
 {% endif %}

@@ -1,0 +1,13 @@
+{%- comment -%}
+  ── 아이콘 한 개 ──
+  {% include icon.html name="search" %}
+  {% include icon.html name="check" class="is-ok" %}
+
+  이름은 icon-sprite.html 의 <symbol id="i-이름"> 과 짝이다. 없는 이름을 쓰면
+  조용히 빈칸이 되니(웹폰트 시절과 똑같은 실패다) 스프라이트에 먼저 추가할 것.
+
+  aria-hidden 고정: 이 사이트의 아이콘은 전부 옆에 글자가 있는 장식이다.
+  글자 없이 아이콘만 두는 자리가 생기면 그때는 이 include 말고 직접 쓰면서
+  <title> 을 넣을 것.
+{%- endcomment -%}
+<svg class="icon{% if include.class %} {{ include.class }}{% endif %}" aria-hidden="true" focusable="false"><use href="#i-{{ include.name }}"></use></svg>

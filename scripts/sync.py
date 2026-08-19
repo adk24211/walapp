@@ -31,6 +31,35 @@ log = logging.getLogger(__name__)
 DEFAULT_SCOPES = ("national",)
 
 
+def _keep_verified_https(record: ProgramRecord, existing: ProgramRecord) -> None:
+    """확인해 둔 https 주소를 http 로 되돌리지 않는다.
+
+    수집 단계는 http 주소를 https 가 열릴 때만 올린다(collect/url_https.py).
+    그런데 그 확인은 매 실행마다 네트워크를 탄다. 어느 날 그 서버가 잠깐
+    느리거나 러너가 막히면 확인이 실패하고, 원천의 http 가 그대로 올라온다.
+
+    그걸 그대로 받으면 두 가지가 한꺼번에 나빠진다.
+      · 신청 링크가 평문으로 되돌아간다.
+      · 해시가 달라져 '내용이 바뀐 제도' 로 잡힌다 → revision 이 오르고
+        last_updated 가 오늘이 된다. 제도는 그대로인데 페이지가 '오늘
+        갱신됨' 이라고 말하게 된다.
+
+    확인 실패는 새 정보가 아니라 오늘 확인을 못 했다는 뜻이다. 그러니 가리키는
+    곳이 같을 때만(스킴만 다를 때만) 이미 확인해 둔 https 를 그대로 쓴다.
+    원천이 주소 자체를 바꿨다면 그건 진짜 변경이므로 건드리지 않는다.
+    """
+    restored = False
+    for field_name in ("apply_url", "official_url"):
+        new = str(getattr(record, field_name, "") or "")
+        old = str(getattr(existing, field_name, "") or "")
+        if (new.startswith("http://") and old.startswith("https://")
+                and new[len("http://"):] == old[len("https://"):]):
+            setattr(record, field_name, old)
+            restored = True
+    if restored:
+        record.content_hash = schema.compute_hash(record)
+
+
 @dataclass
 class PeriodStats:
     """신청기한 표기 분포 — 파서를 어디까지 넓힐지 정하는 근거.
@@ -182,6 +211,7 @@ def run(
             if existing is not None:
                 record.first_published = existing.first_published
                 record.revision = existing.revision
+                _keep_verified_https(record, existing)
                 if existing.content_hash != record.content_hash:
                     result.changed.append(record)
                 elif existing.status != record.status:

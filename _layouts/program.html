@@ -82,7 +82,7 @@ layout: default
 
     {% if page.is_mock %}
     <div class="mock-banner" role="alert">
-      <i class="ti ti-flask" aria-hidden="true"></i>
+      {% include icon.html name="flask" %}
       <div>
         <strong>개발용 샘플 데이터입니다.</strong>
         이 페이지의 금액·요건·기간은 실제 제도 정보가 아닙니다. 파이프라인 검증용으로 생성된 가짜 값이므로 신청 판단에 사용하지 마세요.
@@ -150,23 +150,48 @@ layout: default
         </div>
       </dl>
 
-      {% if page.apply_url %}
-      <div class="program-cta">
-        <a class="cta-primary" id="apply-inline" href="{{ page.apply_url }}" target="_blank" rel="noopener nofollow">
-          <i class="ti ti-external-link" aria-hidden="true"></i> 공식 창구에서 신청
-        </a>
-      </div>
-      {% endif %}
-
       {% comment %}
+        ── 신청 경로 ──
+        예전에는 apply_url 이 있을 때만 버튼을 냈다. 그런데 그 아래 '외부 창구로
+        이동합니다' 캡션은 if 밖에 있어서, 주소가 없는 19건은 가리킬 버튼도 없이
+        캡션만 떠 있었다.
+
+        그렇다고 없는 19건을 정부24 안내로 일괄해 보내면 안 된다. 그중 넷은 애초에
+        신청이 필요 없는 제도이고(장학금 추천 방식 등), 아홉은 주민센터·보건소를
+        직접 찾아가야 하는 제도다. '신청하기' 를 누르러 온 사람에게 둘 다 틀린
+        안내가 된다. 그래서 원문의 신청 방법(how_to_raw)으로 갈래를 나눈다.
+
         전역 푸터가 '정부 공식 사이트가 아닙니다' 를 이미 말한다. 여기서 되풀이하면
         같은 경고가 두 번이라 둘 다 안 읽힌다. 버튼 옆에는 '어디로 가는지' 만.
       {% endcomment %}
+      {% if page.apply_url %}
+      <div class="program-cta">
+        <a class="cta-primary" id="apply-inline" href="{{ page.apply_url }}" target="_blank" rel="noopener nofollow">
+          {% include icon.html name="external-link" %} 공식 창구에서 신청
+        </a>
+      </div>
       <p class="program-caption">소관 기관이 운영하는 외부 창구로 이동합니다.</p>
+
+      {% elsif page.apply_not_needed %}
+      <p class="program-caption">
+        따로 신청하지 않아도 되는 제도입니다.
+        아래 <strong>신청 창구</strong> 항목을 확인해 주세요.
+      </p>
+
+      {% elsif page.official_url %}
+      <div class="program-cta">
+        <a class="cta-secondary" id="apply-inline" href="{{ page.official_url }}" target="_blank" rel="noopener nofollow">
+          {% include icon.html name="external-link" %} 정부24 안내
+        </a>
+      </div>
+      <p class="program-caption">
+        {% if page.apply_methods %}{{ page.apply_methods | join: ' · ' }}으로 접수하는 제도입니다. {% endif %}원문에 온라인 신청 주소가 없어 정부24 안내로 이동합니다.
+      </p>
+      {% endif %}
     </aside>
 
     <nav class="post-toc cn" id="post-toc" data-cat="{{ cat }}" hidden>
-      <div class="post-toc-title"><i class="ti ti-list" aria-hidden="true"></i> 목차</div>
+      <div class="post-toc-title">{% include icon.html name="list" %} 목차</div>
       <ol id="post-toc-list"></ol>
     </nav>
   </div>
@@ -258,13 +283,13 @@ layout: default
     <span class="share-label">이 제도 공유하기</span>
     <div class="share-btns">
       <button type="button" class="share-btn" id="share-copy">
-        <i class="ti ti-link" aria-hidden="true"></i> 링크 복사
+        {% include icon.html name="link" %} 링크 복사
       </button>
       <button type="button" class="share-btn" id="share-kakao">
-        <i class="ti ti-message-circle-2" aria-hidden="true"></i> 카카오톡
+        {% include icon.html name="message-circle-2" %} 카카오톡
       </button>
       <button type="button" class="share-btn" id="share-instagram">
-        <i class="ti ti-brand-instagram" aria-hidden="true"></i> 인스타그램
+        {% include icon.html name="brand-instagram" %} 인스타그램
       </button>
     </div>
     <p class="share-toast" id="share-toast" role="status" aria-live="polite"></p>

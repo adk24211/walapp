@@ -13,7 +13,9 @@ from __future__ import annotations
 import html
 import re
 
-from schema import STATUS_CLOSED, STATUS_LABELS, ProgramRecord
+from schema import (STATUS_CLOSED, STATUS_LABELS, ProgramRecord,
+                    apply_methods as _apply_methods,
+                    apply_not_needed as _apply_not_needed)
 
 # 구 generate_post.py 와 동일한 정책 — 한자·일본어 가나 제거
 _FOREIGN_RE = re.compile(r"[㐀-䶿一-鿿぀-ゟ゠-ヺー-ヿ]")
@@ -72,6 +74,19 @@ def _politen(value):
 
 def _attr(text) -> str:
     return html.escape(str(text or ""), quote=True)
+
+
+def _icon(name: str) -> str:
+    """본문에 넣는 아이콘 한 개.
+
+    예전에는 <i class="ti ti-…"> 로 Tabler 웹폰트를 썼다. 웹폰트는 CDN 에서
+    @latest 로 받아왔고, v3 에서 아이콘이 사라지면서 조용히 빈칸이 된 적이
+    있다. 지금은 _includes/icon-sprite.html 의 <symbol> 을 가리킨다.
+
+    ⚠️ 여기서 쓰는 이름은 스프라이트에 <symbol id="i-이름"> 이 있어야 한다.
+       없으면 또 조용한 빈칸이 된다 — 웹폰트 때와 같은 실패다.
+    """
+    return f'<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-{name}"></use></svg>'
 
 
 def _esc_lines(text) -> str:
@@ -205,7 +220,9 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
     # ── 3) 어떻게 신청하나요 — 준비 서류를 여기 흡수한다 ──
     # 서류는 신청 절차의 일부다. 따로 카드를 두니 세로 지분 1위(18.2%)를 먹으면서
     # 37건 중 10건은 "해당없음" 한 단어짜리 빈 카드였다.
-    steps = [s for s in (prose.get("steps") or []) if s.get("body")]
+    steps = [{**s, "body": _drop_period_restatement(s.get("body"))}
+             for s in (prose.get("steps") or [])]
+    steps = [s for s in steps if s.get("body")]
     docs = _real_documents(record.documents_raw)
     if steps or docs:
         block: list[str] = []
@@ -259,9 +276,12 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
     #
     # 예전에 따로 있던 '공식 창구' 카드는 없앴다. 링크 둘 중 '온라인으로 신청하기' 는
     # 레일 버튼과 주소까지 같았고, 남는 건 기관 안내 링크 하나뿐이라 이 표 아래로 옮겼다.
+    # 신청 방법은 원문에 있었는데 그동안 화면에 내보내지 않고 있었다.
+    # 온라인 주소가 없는 제도(45건 중 19건)에서는 이게 유일한 안내다.
     meta_rows = [
         ("소관 기관", record.org),
         ("지원 지역", record.region.label),
+        ("신청 방법", " · ".join(_apply_methods(record.how_to_raw))),
         ("접수 기관", record.receiver_raw),
         ("문의처", record.contact_raw),
         ("근거 법령", record.law_raw),
@@ -278,7 +298,7 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
             block += [
                 f'<div class="cn cn-links" data-cat="{cat}">',
                 f'  <a href="{_attr(record.official_url)}" target="_blank" rel="noopener nofollow">'
-                f'<i class="ti ti-external-link"></i> 소관 기관에서 자세히 보기'
+                f'{_icon("external-link")} 소관 기관에서 자세히 보기'
                 f' <span class="cn-link-ext">↗</span></a>',
                 "</div>",
             ]
@@ -306,11 +326,11 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
     # ── 주의 안내 ──
     # 카드로 만들지 않는다. 제목이 없는 경고 한 줄이라 번호를 붙이면 목차에 없는
     # 항목이 본문에만 생겨 번호가 어긋난다. 카드 사이에 낀 알림으로 둔다.
-    note = prose.get("note")
+    note = _useful_note(prose.get("note"))
     if note:
         parts += [
             open_block("cn-note"),
-            '  <i class="ti ti-alert-triangle"></i>',
+            f'  {_icon("alert-triangle")}',
             f"  <p>{_esc(note)}</p>",
             "</div>",
             "",
@@ -350,6 +370,90 @@ _FAQ_TOPICS = (
     ("period",      r"언제까지|신청 ?기간|마감|접수 ?기간|언제 신청"),
     ("contact",     r"문의|어디에 물어|연락"),
 )
+
+
+# 본문이 신청 기간을 다시 적는 문장을 걷어낸다.
+#
+# 오른쪽 신청 레일에 '신청 기간' 이 이미 있는데 본문이 같은 날짜를 또 적는
+# 경우가 있었다(4건). 그중 둘은 날짜 말고는 아무 말도 하지 않았다.
+#
+#   "신청 기간은 2026-10-01 ~ 2026-12-31입니다."
+#   "2026-09-15 ~ 2026-09-29 기간 동안 신청하실 수 있습니다."
+#
+# 나머지 둘은 지급·선정 시점을 알려 주므로 남긴다 — 날짜가 겹친다고 문장이
+# 쓸모없는 게 아니다.
+#
+#   "2026-09-01 ~ 2026-09-30 기간에 자동으로 선정됩니다."
+#   "2026-09-01 ~ 2026-09-30 기간에 지급됩니다."
+#
+# 그래서 날짜가 있는 문장만 후보로 두고, 날짜와 '언제 신청하나' 를 말하는 데
+# 쓰이는 말을 걷어냈을 때 남는 것이 없을 때만 버린다.
+_DATE_RE = re.compile(r"20\d\d[-.]\d\d[-.]\d\d")
+_PERIOD_WORDS_RE = re.compile(
+    r"신청(하실|할|하는|해야|됩니다|합니다)?|접수|기간|동안|까지|부터"
+    r"|은|는|이|가|입니다|있습니다|수|에|의|로|과|와|및|~|\.|,|\s")
+
+
+def _drop_period_restatement(body: str) -> str:
+    """신청 기간만 되풀이하는 문장을 뺀다. 날짜가 없는 문장은 건드리지 않는다."""
+    kept = []
+    for sentence in (x.strip() for x in re.split(r"(?<=다\.)\s*|(?<=요\.)\s*", str(body or ""))):
+        if not sentence:
+            continue
+        if _DATE_RE.search(sentence):
+            residue = _PERIOD_WORDS_RE.sub("", _DATE_RE.sub("", sentence))
+            if not residue:
+                continue
+        kept.append(sentence)
+    return " ".join(kept).strip()
+
+
+# 주의 안내에서 '이 제도에만 해당하는 말' 을 가려내는 표현들.
+#
+# 45건을 재보니 안내가 45건 전부에 있었는데, 그중 40건이 두 가지만 말했다.
+#   · "자세한 사항은 ○○에 확인하세요"  — 문의처는 바로 아래 '신청 창구' 표에 있다.
+#   · "변경될 수 있습니다"             — 푸터가 이미 '지침 개정으로 달라질 수
+#                                      있습니다' 라고 말한다.
+# 경고 아이콘이 붙은 상자가 모든 페이지에 뜨면 아무도 그걸 경고로 읽지 않는다.
+# 진짜 주의사항(예산 소진 조기 마감, 지자체 조례에 따라 연령 변동)이 같은
+# 생김새로 묻힌다.
+_NOTE_REFERRAL_RE = re.compile(
+    r"(확인|문의|참고)\s*(하세요|하시기 바랍니다|하시면 됩니다|하실 수 있습니다"
+    r"|할 수 있습니다|바랍니다|하는 것이 좋습니다|하시고)")
+_NOTE_GENERIC_RE = re.compile(r"변경\s*(될|가능성)|운영하는 제도입니다|제공하는 제도이")
+# 신청 기간은 오른쪽 레일에 있다. 본문에 날짜를 또 적으면 원천이 바뀔 때
+# 레일만 갱신되고 이 문장은 낡은 채로 남는다.
+_NOTE_PERIOD_RE = re.compile(r"상시\s*접수|신청 기간은|접수 기간은|언제든지 신청")
+# ⚠️ 이 말이 하나라도 있으면 이 제도에만 해당하는 조건이므로 버리지 않는다.
+#    위 세 표현과 겹쳐도 이쪽이 이긴다 — "매년 변경될 수 있으니" 처럼
+#    일반론의 탈을 쓴 개별 조건이 있기 때문이다.
+_NOTE_SPECIFIC_RE = re.compile(
+    r"예산|소진|조기\s*마감|선착순|지자체별|조례|매년|고시|중복|한도"
+    r"|우선|제외|연령이 변동|소급|재신청")
+
+
+def _useful_note(note: str) -> str:
+    """주의 안내에서 이 제도에만 해당하는 문장만 남긴다.
+
+    남는 게 없으면 빈 문자열 — 안내 자체를 렌더하지 않는다.
+
+    이 판정은 렌더 단계에서 한다. 저장된 해설(`_prose`)은 그대로 두므로,
+    규칙을 고치면 Groq 재호출 없이 rerender.py 만으로 다시 반영된다.
+    (`_useful_faq` 와 같은 이유다.)
+    """
+    kept = []
+    for sentence in (x.strip() for x in re.split(r"(?<=다\.)\s*|(?<=요\.)\s*", str(note or ""))):
+        if not sentence:
+            continue
+        if _NOTE_SPECIFIC_RE.search(sentence):
+            kept.append(sentence)
+            continue
+        if (_NOTE_REFERRAL_RE.search(sentence)
+                or _NOTE_GENERIC_RE.search(sentence)
+                or _NOTE_PERIOD_RE.search(sentence)):
+            continue
+        kept.append(sentence)
+    return " ".join(kept).strip()
 
 
 def _useful_faq(faq: list[dict], record: ProgramRecord, *, eligibility: bool,
@@ -444,6 +548,12 @@ def to_markdown(record: ProgramRecord, prose: dict) -> str:
         front.append(f'apply_start: "{record.apply_period.start}"')
     if record.apply_period.end:
         front.append(f'apply_end: "{record.apply_period.end}"')
+    # 오른쪽 레일이 어떤 버튼을 낼지 고르는 값. 자세한 이유는 _layouts/program.html.
+    methods = _apply_methods(record.how_to_raw)
+    if methods:
+        front.append("apply_methods: [" + ", ".join(f'"{_yaml(m)}"' for m in methods) + "]")
+    if _apply_not_needed(record.how_to_raw):
+        front.append("apply_not_needed: true")
     if record.apply_url:
         front.append(f'apply_url: "{_yaml(record.apply_url)}"')
     if record.official_url:

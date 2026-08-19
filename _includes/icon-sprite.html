@@ -1,0 +1,31 @@
+{% comment %}
+  ── 아이콘 스프라이트 ──
+  예전에는 Tabler 아이콘 웹폰트를 jsDelivr 에서 통째로 받았다. 실제로 쓰는
+  아이콘은 13개인데 수천 자짜리 폰트를 통으로 받았고, 무엇보다 URL 이
+  @latest 였다 — 제3자가 언제든 내용을 바꿀 수 있는 상태였고, 실제로
+  바뀌었다. v3 에서 message-circle-2 가 없어지면서 제도 상세의 카카오톡
+  버튼 아이콘이 조용히 빈칸이 돼 있었다.
+
+  그래서 쓰는 것만 뽑아 여기 심볼로 박았다(약 1.5KB). 외부 요청이 없으니
+  남이 바꿀 수도, CDN 이 죽어서 깨질 수도 없다.
+
+  ⚠️ 새 아이콘을 쓰려면 여기에 <symbol id="i-이름"> 을 추가할 것.
+     출처: @tabler/icons v3.46.0 outline (MIT)
+  ⚠️ 선 굵기·끝모양은 .icon 규칙(assets/css/main.css)이 한 번에 준다.
+     심볼 안에 stroke 를 직접 쓰지 말 것.
+{% endcomment %}
+<svg xmlns="http://www.w3.org/2000/svg" class="icon-sprite" aria-hidden="true">
+  <symbol id="i-search" viewBox="0 0 24 24"><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /> <path d="M21 21l-6 -6" /></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008" /></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><path d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /> <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></symbol>
+  <symbol id="i-search-off" viewBox="0 0 24 24"><path d="M5.039 5.062a7 7 0 0 0 9.91 9.89m1.584 -2.434a7 7 0 0 0 -9.038 -9.057" /> <path d="M3 3l18 18" /></symbol>
+  <symbol id="i-message-circle-2" viewBox="0 0 24 24"><path d="M3 20l1.3 -3.9c-2.324 -3.437 -1.426 -7.872 2.1 -10.374c3.526 -2.501 8.59 -2.296 11.845 .48c3.255 2.777 3.695 7.266 1.029 10.501c-2.666 3.235 -7.615 4.215 -11.574 2.293l-4.7 1" /></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6l11 0" /> <path d="M9 12l11 0" /> <path d="M9 18l11 0" /> <path d="M5 6l0 .01" /> <path d="M5 12l0 .01" /> <path d="M5 18l0 .01" /></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M9 15l6 -6" /> <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /> <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" /></symbol>
+  <symbol id="i-info-circle" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /> <path d="M12 9h.01" /> <path d="M11 12h1v4h1" /></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3l6 0" /> <path d="M10 9l4 0" /> <path d="M10 3v6l-4 11a.7 .7 0 0 0 .5 1h11a.7 .7 0 0 0 .5 -1l-4 -11v-6" /></symbol>
+  <symbol id="i-external-link" viewBox="0 0 24 24"><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /> <path d="M11 13l9 -9" /> <path d="M15 4h5v5" /></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5l10 -10" /></symbol>
+  <symbol id="i-brand-instagram" viewBox="0 0 24 24"><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4l0 -8" /> <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /> <path d="M16.5 7.5v.01" /></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12l14 0" /> <path d="M13 18l6 -6" /> <path d="M13 6l6 6" /></symbol>  <symbol id="i-alert-triangle" viewBox="0 0 24 24"><path d="M12 9v4" /> <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0" /> <path d="M12 16h.01" /></symbol>
+</svg>

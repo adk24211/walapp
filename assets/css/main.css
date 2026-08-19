@@ -1,5 +1,7 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+/* 폰트는 _layouts/default.html 의 <link> 가 받는다.
+   여기 @import 로도 같은 두 URL 을 받고 있었는데, @import 는 main.css 를
+   먼저 받아야 시작되므로 요청이 한 줄로 늘어서 첫 렌더가 늦어진다.
+   <link> 는 HTML 파싱 중에 바로 나가므로 그쪽만 남긴다. */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -77,6 +79,25 @@ body {
 }
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
+
+/* ---- 아이콘 ----
+   Tabler 웹폰트를 걷어내고 _includes/icon-sprite.html 의 <symbol> 을 쓴다.
+   글자와 나란히 서는 장식이라 크기·색을 글자에 맞춘다: 1em 정사각형에
+   stroke 는 currentColor. 그래서 부모의 font-size·color 만 바꾸면 따라온다.
+   vertical-align 은 글자 베이스라인에 맞추는 값으로, 웹폰트 시절 눈높이를 그대로 맞춘 것이다. */
+.icon {
+  width: 1em; height: 1em;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: -.125em;
+}
+/* 스프라이트 원본은 화면에 나오면 안 된다 (<symbol> 은 원래 안 그려지지만
+   <svg> 껍데기가 자리를 차지한다) */
+.icon-sprite { display: none; }
 
 /* ---- 헤더 ---- */
 .site-header {
@@ -324,7 +345,9 @@ img { max-width: 100%; display: block; }
 .legal-page p, .legal-page li { font-size: 15px; line-height: 1.8; color: var(--ink2); }
 .legal-page ul { padding-left: 1.2rem; margin: .5rem 0; }
 .legal-page li { margin-bottom: .35rem; }
-.legal-page a { color: var(--brand-dark); text-decoration: underline; }
+/* 버튼은 빼고 본문 링크에만. .legal-page a 가 .cta-primary 보다 구체적이라,
+   빼 두지 않으면 404 의 버튼이 잉크색 배경에 초록 밑줄 글자가 된다. */
+.legal-page a:not(.cta-primary):not(.cta-secondary) { color: var(--brand-dark); text-decoration: underline; }
 .legal-page strong { color: var(--ink); }
 
 /* ---- 푸터 고지 문구 ---- */

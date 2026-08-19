@@ -25,6 +25,7 @@ import re
 import textwrap
 import time
 
+import schema
 import taxonomy
 from schema import ProgramRecord
 
@@ -40,7 +41,12 @@ RETRY_DELAYS = (25, 65)
 SYSTEM_PROMPT = (
     "당신은 정부 지원 제도를 일반 국민이 이해할 수 있게 풀어 쓰는 한국어 편집자입니다. "
     "맞춤법과 문법이 정확하고, 주어진 사실 밖으로 절대 나가지 않으며, "
-    "정중한 존댓말('~합니다', '~입니다')로 일관되게 씁니다."
+    "정중한 존댓말('~합니다', '~입니다')로 일관되게 씁니다. "
+    # 실제로 새어 나온 적이 있다. '방문申请', '最近 5년 이내' 처럼 중국어가 섞여
+    # 그대로 발행됐다(6건). 모델이 한국어와 중국어를 함께 배운 탓이라 한 줄로
+    # 못을 박아 둔다. 사후 검증도 verify.py 가 따로 한다.
+    "한글과 숫자, 그리고 원문에 있는 한자 표기만 씁니다. "
+    "중국어 간체나 일본어 문자는 한 글자도 쓰지 않습니다."
 )
 
 
@@ -84,7 +90,7 @@ def build_prompt(record: ProgramRecord) -> str:
         {cap(record.criteria_raw) or "(내용 없음)"}
 
         [신청 방법]
-        {cap(record.how_to_raw) or "(내용 없음)"}
+        {" · ".join(schema.apply_methods(record.how_to_raw)) or "(내용 없음)"}
 
         [구비 서류]
         {chr(10).join(f"- {d}" for d in record.documents_raw) or "(내용 없음)"}
@@ -126,16 +132,19 @@ def build_prompt(record: ProgramRecord) -> str:
             "'고정 사실'의 지원 대상·선정 기준을 항목으로 나눠 쓰세요."
           ],
           "steps": [
-            {"title": "단계 제목", "body": "신청 절차를 2~4문장으로 설명. 존댓말."}
+            {"title": "단계 제목", "body": "신청 절차를 2~4문장으로 설명. 존댓말. 날짜는 적지 않습니다."}
           ],
           "faq": [
             {"q": "페이지 어디에도 답이 없는 질문", "a": "고정 사실로 답할 수 있는 내용만 2~3문장."}
           ],
-          "note": "변경 가능성·확인 방법 안내 1~2문장."
+          "note": "이 제도에만 해당하는 주의사항 1문장. 없으면 빈 문자열."
         }
 
         === 필드 가이드 ===
         - summary: 필수.
+        - steps: 신청 기간(날짜)은 적지 마세요. 오른쪽 신청 레일에 이미 있습니다.
+          "신청 기간은 ○○ ~ ○○입니다" 같은 문장은 자리만 먹습니다.
+          다만 지급·선정 시점처럼 신청 기간과 뜻이 다른 날짜는 적어도 됩니다.
         - eligibility: 3~6개. 고정 사실로 판단할 수 없는 조건은 넣지 않습니다.
         - steps: 2~4개. '신청 방법'에 근거가 있는 만큼만 만듭니다. 근거가 한 줄뿐이면 1개만 만드세요.
         - faq: 0~3개. 고정 사실로 답할 수 없는 질문은 만들지 않습니다. 없으면 빈 배열.
@@ -157,7 +166,22 @@ def build_prompt(record: ProgramRecord) -> str:
 
           그런 질문이 하나도 없으면 **빈 배열로 두세요.** 억지로 채우지 마세요.
           빈 배열이면 이 항목은 화면에 아예 나오지 않습니다.
-        - note: 선택.
+        - note: 선택. **이 제도에만 해당하는** 주의사항이 있을 때만 씁니다.
+
+          쓸 것: 예산 소진 시 조기 마감, 지자체 조례에 따라 대상 연령이 다름,
+                 매년 대상이 바뀜, 다른 지원과 중복 수급 불가 같은 개별 조건.
+
+          쓰지 말 것:
+            · "자세한 사항은 ○○에 확인/문의하세요"
+              → 문의처는 이 페이지의 '신청 창구' 표에 이미 있습니다.
+            · "변경될 수 있습니다", "정책에 따라 달라질 수 있습니다"
+              → 모든 제도가 그렇습니다. 푸터가 이미 말하고 있습니다.
+            · "상시 접수입니다", "신청 기간은 ○○입니다"
+              → 신청 기간은 오른쪽 신청 레일에 이미 있습니다. 날짜를 여기 적으면
+                원천이 바뀔 때 레일만 갱신되고 이 문장은 낡은 채로 남습니다.
+
+          해당하는 것이 없으면 **빈 문자열로 두세요.** 이 안내는 경고 아이콘이
+          붙은 상자로 나갑니다. 모든 페이지에 뜨면 아무도 경고로 읽지 않습니다.
     """).strip()
 
     return f"{facts}\n\n{rules}"
@@ -280,11 +304,13 @@ def generate_offline(record: ProgramRecord) -> dict:
     eligibility = [e for e in dict.fromkeys(eligibility) if e][:6]
 
     steps: list[dict] = []
-    how_to_items = _split_items(record.how_to_raw)
+    how_to_items = _split_items("\n".join(schema.apply_methods(record.how_to_raw)))
     for index, chunk in enumerate(how_to_items[:4], 1):
         steps.append({"title": f"{index}단계", "body": chunk})
-    if not steps and record.how_to_raw:
-        steps = [{"title": "신청 방법", "body": record.how_to_raw}]
+    if not steps:
+        methods = schema.apply_methods(record.how_to_raw)
+        if methods:
+            steps = [{"title": "신청 방법", "body": " · ".join(methods) + "으로 신청합니다."}]
 
     faq: list[dict] = []
     if record.documents_raw:
@@ -300,7 +326,9 @@ def generate_offline(record: ProgramRecord) -> dict:
         "eligibility": eligibility,
         "steps": steps,
         "faq": faq,
-        "note": "지원 금액과 자격 요건은 지침 개정으로 바뀔 수 있으므로 신청 전 공식 창구에서 확인하셔야 합니다.",
+        # 주의 안내는 비운다. 원문만 보고는 이 제도에만 해당하는 조건을 가려낼
+        # 수 없고, 아무 제도에나 맞는 말은 푸터가 이미 하고 있다.
+        "note": "",
     }
 
 

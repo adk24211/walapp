@@ -11,6 +11,7 @@ from datetime import date
 import schema
 import taxonomy
 from schema import ApplyPeriod, ProgramRecord, Region
+from .. import url_https
 
 
 class BaseAdapter:
@@ -101,8 +102,10 @@ class BaseAdapter:
                 # 해시에는 들어가지 않는다 (schema.compute_hash).
                 raw=clean_text(apply_period_raw),
             ),
-            apply_url=apply_url.strip(),
-            official_url=official_url.strip(),
+            # 원천에 http 로 적힌 주소는 https 가 열릴 때만 올린다.
+            # 확인 못 하면 원래 값을 쓴다 — 자세한 이유는 collect/url_https.py.
+            apply_url=url_https.upgrade(apply_url.strip()),
+            official_url=url_https.upgrade(official_url.strip()),
             contact_raw=clean_text(contact_raw),
             receiver_raw=clean_text(receiver_raw),
             law_raw=clean_text(law_raw),

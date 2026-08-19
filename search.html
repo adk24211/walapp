@@ -2,6 +2,10 @@
 layout: default
 title: 검색
 permalink: /search/
+# 검색 결과는 '기관 · 금액 · 상시 접수' 가 늘어선 훑는 화면이다. 홈·허브와
+# 같은 이유로 고지를 첫 화면에 둔다 (_includes/site-notice.html 주석 참고).
+# 검색 페이지는 링크를 타고 곧장 들어오는 자리라 더 그렇다.
+top_notice: true
 ---
 
 <div class="page-header">
@@ -10,11 +14,12 @@ permalink: /search/
   </div>
   <h1 class="ph-title">검색</h1>
   <p class="ph-sub">제목·요약·본문·태그에서 키워드를 찾습니다.</p>
+  {% if page.top_notice %}{% include site-notice.html %}{% endif %}
 </div>
 
 <div class="feed">
   <div class="search-box">
-    <i class="ti ti-search" aria-hidden="true"></i>
+    {% include icon.html name="search" %}
     <input type="search" id="search-input" placeholder="제도명·기관·키워드 (예: 청년 월세, 장학금, 고용노동부)"
            autocomplete="off" autofocus aria-label="검색어 입력">
   </div>
@@ -111,7 +116,7 @@ permalink: /search/
               '<div class="card-chips">' + chips + '</div>' +
               '<div class="card-footer">' +
                 '<div class="card-meta"><span>' + escapeHtml(d.org || d.date || '') + '</span></div>' +
-                '<span class="card-cta">자세히 보기 <i class="ti ti-arrow-right" style="font-size:12px"></i></span>' +
+                '<span class="card-cta">자세히 보기 {% include icon.html name="arrow-right" %}</span>' +
               '</div>' +
             '</div>' +
           '</div>' +
