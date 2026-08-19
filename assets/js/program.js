@@ -162,7 +162,7 @@
       copyLink(function (ok) {
         if (!ok) return toast('링크 복사에 실패했습니다. 주소창의 주소를 직접 복사해 주세요.');
         var orig = copyBtn.innerHTML;
-        copyBtn.innerHTML = '<i class="ti ti-check"></i> 복사됨';
+        copyBtn.innerHTML = '<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> 복사됨';
         setTimeout(function () { copyBtn.innerHTML = orig; }, 1500);
         toast('링크를 복사했습니다.');
       });
