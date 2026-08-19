@@ -74,7 +74,36 @@ RETRY_DELAYS = (25, 65)
 #
 # 넉넉히 준다. 실제로 쓰는 만큼만 과금되므로 상한을 올리는 것 자체는 비용이
 # 아니다. 모델을 또 바꿀 때를 위해 환경변수로도 열어 둔다.
-MAX_TOKENS = int(os.environ.get("WALAPP_LLM_MAX_TOKENS", "8000"))
+# 8000 으로 올려 JSON 잘림은 잡혔고, 그 뒤 실제 사용량을 재 봤다.
+#   출력 1600 · 2305 · 3119 · 1310  (평균 2083 · 최대 3119)
+# 최대의 2.5배를 잡고 있던 셈이라 6000 으로 내린다 — 최대 관측치의 1.9배다.
+# 분당 한도를 max_tokens 예약분으로 계산하는 제공처라면 처리량이 늘고,
+# 실제 사용량 기준이라면 그대로다. 어느 쪽이든 손해가 없다.
+MAX_TOKENS = int(os.environ.get("WALAPP_LLM_MAX_TOKENS", "6000"))
+
+# ── 호출 간격 ──
+# 분당 한도에 반응이 아니라 선제로 맞춘다.
+#
+# 예전에는 4건을 몰아 던져 429 를 14번 맞고, 재시도가 25초·65초씩 기다려
+# 넘겼다. 튕긴 요청도 왕복 비용이고 대기도 그대로 시간이라, 같은 처리량을
+# 훨씬 비싸게 산 셈이다. 처음부터 간격을 두면 튕길 일이 줄어든다.
+#
+# 0 을 주면 간격 없이 던진다(목 모드·오프라인에는 애초에 호출이 없다).
+MIN_CALL_INTERVAL = float(os.environ.get("WALAPP_LLM_MIN_INTERVAL", "22"))
+_last_call_at = 0.0
+
+
+def _pace() -> None:
+    """직전 호출로부터 MIN_CALL_INTERVAL 초가 지나도록 기다린다."""
+    global _last_call_at
+    if MIN_CALL_INTERVAL <= 0:
+        return
+    if _last_call_at:
+        wait = MIN_CALL_INTERVAL - (time.monotonic() - _last_call_at)
+        if wait > 0:
+            log.info("  └ 분당 한도 회피: %.0f초 대기", wait)
+            time.sleep(wait)
+    _last_call_at = time.monotonic()
 
 SYSTEM_PROMPT = (
     "당신은 정부 지원 제도를 일반 국민이 이해할 수 있게 풀어 쓰는 한국어 편집자입니다. "
@@ -243,6 +272,7 @@ def generate(record: ProgramRecord, client) -> dict:
     log.info("해설 생성: %s", record.name)
 
     def _call(model: str, max_tokens: int = MAX_TOKENS):
+        _pace()
         return client.chat.completions.create(
             model=model,
             messages=[
