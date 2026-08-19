@@ -175,6 +175,17 @@
     "slug": "국민취업지원제도",
     "status": "active"
   },
+  "bojo24-149200005008": {
+    "content_hash": "sha256:080ac8f8e58ce2918eb518200a3da70b",
+    "first_published": "2026-08-19",
+    "last_checked": "2026-08-19",
+    "last_updated": "2026-08-19",
+    "name": "자영업자 실업급여",
+    "path": "_programs/jobs/자영업자-실업급여.md",
+    "revision": 1,
+    "slug": "자영업자-실업급여",
+    "status": "active"
+  },
   "bojo24-155000000017": {
     "content_hash": "sha256:48644bb3d088b7b11c4f6f77515d4dd0",
     "first_published": "2026-08-19",
@@ -272,6 +283,17 @@
     "path": "_programs/care/지역사회서비스-청년사업단.md",
     "revision": 1,
     "slug": "지역사회서비스-청년사업단",
+    "status": "active"
+  },
+  "bojo24-B41000200003": {
+    "content_hash": "sha256:b311b93e3806721abb58f459c505ec2a",
+    "first_published": "2026-08-19",
+    "last_checked": "2026-08-19",
+    "last_updated": "2026-08-19",
+    "name": "전기 요금 복지할인",
+    "path": "_programs/living/전기-요금-복지할인.md",
+    "revision": 1,
+    "slug": "전기-요금-복지할인",
     "status": "active"
   },
   "bojo24-B55140800003": {
@@ -450,6 +472,17 @@
     "slug": "농업종합자금-지원-원예-축산-가공사업-등",
     "status": "active"
   },
+  "bojo24-SD0000006941": {
+    "content_hash": "sha256:1f32dd1e7f083d058f25868222724200",
+    "first_published": "2026-08-19",
+    "last_checked": "2026-08-19",
+    "last_updated": "2026-08-19",
+    "name": "외국인근로자 등 의료지원",
+    "path": "_programs/health/외국인근로자-등-의료지원.md",
+    "revision": 1,
+    "slug": "외국인근로자-등-의료지원",
+    "status": "active"
+  },
   "bojo24-SD0000011848": {
     "content_hash": "sha256:f6c0aff2e40c67e05abe266c1100f997",
     "first_published": "2026-08-14",
@@ -525,6 +558,17 @@
     "path": "_programs/care/한부모가족-아동양육비-지원.md",
     "revision": 1,
     "slug": "한부모가족-아동양육비-지원",
+    "status": "active"
+  },
+  "bojo24-VOU000000040": {
+    "content_hash": "sha256:627fba575fc3d4c930f5625a9f0666f7",
+    "first_published": "2026-08-19",
+    "last_checked": "2026-08-19",
+    "last_updated": "2026-08-19",
+    "name": "가사·간병 방문 지원",
+    "path": "_programs/health/가사-간병-방문-지원.md",
+    "revision": 1,
+    "slug": "가사-간병-방문-지원",
     "status": "active"
   },
   "bojo24-WII000000310": {
