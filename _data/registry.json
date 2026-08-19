@@ -153,6 +153,17 @@
     "slug": "국민취업지원제도",
     "status": "active"
   },
+  "bojo24-155000000017": {
+    "content_hash": "sha256:48644bb3d088b7b11c4f6f77515d4dd0",
+    "first_published": "2026-08-19",
+    "last_checked": "2026-08-19",
+    "last_updated": "2026-08-19",
+    "name": "국가·지방자치단체 관리 지정문화유산 및 천연기념물 등의 관람료 감면",
+    "path": "_programs/living/국가-지방자치단체-관리-지정문화유산-및-천연기념물-등의-관람료-감면.md",
+    "revision": 1,
+    "slug": "국가-지방자치단체-관리-지정문화유산-및-천연기념물-등의-관람료-감면",
+    "status": "active"
+  },
   "bojo24-161300000076": {
     "content_hash": "sha256:f547a9e21850c94028be36ea538030cc",
     "first_published": "2026-08-13",
