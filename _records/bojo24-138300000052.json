@@ -23,9 +23,10 @@
   "apply_period": {
     "always": false,
     "end": "2026-10-31",
+    "raw": "",
     "start": "2026-10-01"
   },
-  "apply_url": "http://forlife.catholic.or.kr",
+  "apply_url": "https://forlife.catholic.or.kr",
   "audiences": [
     "parent",
     "lowincome"
@@ -33,7 +34,7 @@
   "benefit_raw": "(필수)청소년 미혼 한부모(미혼모, 미혼부)에게 매월 생활비 50만원 지원\n(선택) 긴급 의료비, 교육/취업 축하 · 격려금",
   "category": "jobs",
   "contact_raw": "성평등가족부 가족지원과/02-2100-6349",
-  "content_hash": "sha256:ceefbe1de65b2a581b85927363b3edec",
+  "content_hash": "sha256:ddc88ef1998f9e5c6cfa046000fba06d",
   "criteria_raw": "대한민국 국적의 24세 이하 미혼 한부모 및 임산부\n- (1순위) 19세 이하 청소년 미혼 한부모(소득 무관, 전원 지원)\n- (2순위) 20세 이상 24세 이하 청소년 미혼 한부모(중위소득 50%이하)",
   "deferred_detail": false,
   "documents_raw": [
