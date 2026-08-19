@@ -4,8 +4,16 @@
   <subtitle>정부·지자체 지원금과 복지 제도를 받을 수 있는지부터 신청 방법까지 하나씩 정리합니다. 공공데이터 원문을 토대로 쉬운 말로 풀어 씁니다.</subtitle>
   <link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html"/>
-  <updated>2026-08-19T15:26:16+09:00</updated>
+  <updated>2026-08-19T16:08:42+09:00</updated>
   <id>https://adk24211.github.io/walapp/</id>
+  <entry>
+    <title type="text">국가·지방자치단체 관리 지정문화유산 및 천연기념물 등의 관람료 감면</title>
+    <link href="https://adk24211.github.io/walapp/support/living/%EA%B5%AD%EA%B0%80-%EC%A7%80%EB%B0%A9%EC%9E%90%EC%B9%98%EB%8B%A8%EC%B2%B4-%EA%B4%80%EB%A6%AC-%EC%A7%80%EC%A0%95%EB%AC%B8%ED%99%94%EC%9C%A0%EC%82%B0-%EB%B0%8F-%EC%B2%9C%EC%97%B0%EA%B8%B0%EB%85%90%EB%AC%BC-%EB%93%B1%EC%9D%98-%EA%B4%80%EB%9E%8C%EB%A3%8C-%EA%B0%90%EB%A9%B4/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/%EA%B5%AD%EA%B0%80-%EC%A7%80%EB%B0%A9%EC%9E%90%EC%B9%98%EB%8B%A8%EC%B2%B4-%EA%B4%80%EB%A6%AC-%EC%A7%80%EC%A0%95%EB%AC%B8%ED%99%94%EC%9C%A0%EC%82%B0-%EB%B0%8F-%EC%B2%9C%EC%97%B0%EA%B8%B0%EB%85%90%EB%AC%BC-%EB%93%B1%EC%9D%98-%EA%B4%80%EB%9E%8C%EB%A3%8C-%EA%B0%90%EB%A9%B4/</id>
+    <published>2026-08-19T00:00:00+09:00</published>
+    <updated>2026-08-19T00:00:00+09:00</updated><author><name>국가유산청</name></author><category term="living"/>
+    <summary type="text">국가·지방자치단체가 관리하는 지정문화유산·천연기념물 등을 관람할 때, 만 24세 이하·만 65세 이상 내국인, 장애인, 국가유공자, 다자녀 가정 등에게 관람료를 감면해 주는 제도입니다.</summary>
+  </entry>
   <entry>
     <title type="text">정보통신 보조기기 보급</title>
     <link href="https://adk24211.github.io/walapp/support/living/%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0-%EB%B3%B4%EC%A1%B0%EA%B8%B0%EA%B8%B0-%EB%B3%B4%EA%B8%89/" rel="alternate" type="text/html"/>
@@ -237,13 +245,5 @@
     <published>2026-08-14T00:00:00+09:00</published>
     <updated>2026-08-14T00:00:00+09:00</updated><author><name>한국중부발전(주)</name></author><category term="education"/>
     <summary type="text">발전소 주변지역 장학금 지원은 양육가정의 자녀를 대상으로 장학금을 지원하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">발전소 주변지역 장학금 지원(세종)</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%EB%B0%9C%EC%A0%84%EC%86%8C-%EC%A3%BC%EB%B3%80%EC%A7%80%EC%97%AD-%EC%9E%A5%ED%95%99%EA%B8%88-%EC%A7%80%EC%9B%90-%EC%84%B8%EC%A2%85/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%EB%B0%9C%EC%A0%84%EC%86%8C-%EC%A3%BC%EB%B3%80%EC%A7%80%EC%97%AD-%EC%9E%A5%ED%95%99%EA%B8%88-%EC%A7%80%EC%9B%90-%EC%84%B8%EC%A2%85/</id>
-    <published>2026-08-14T00:00:00+09:00</published>
-    <updated>2026-08-14T00:00:00+09:00</updated><author><name>한국중부발전(주)</name></author><category term="education"/>
-    <summary type="text">발전소 주변지역 장학금 지원은 세종발전본부 반경 5km 이내 중고등학교에 재학중인 학생들을 지원합니다.</summary>
   </entry>
 </feed>
