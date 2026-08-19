@@ -2,7 +2,7 @@
   "bojo24-000000465790": {
     "content_hash": "sha256:38e29e498d758ec913ac12e5c884a0a3",
     "first_published": "2026-08-16",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-16",
     "name": "유아학비 (누리과정) 지원",
     "path": "_programs/care/유아학비-누리과정-지원.md",
@@ -13,7 +13,7 @@
   "bojo24-105100000001": {
     "content_hash": "sha256:85a42f3a79bec70c4392f737db8e33f9",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "근로·자녀장려금",
     "path": "_programs/finance/근로-자녀장려금.md",
@@ -24,7 +24,7 @@
   "bojo24-134200000045": {
     "content_hash": "sha256:3dcf4cd48ce4c41f906bada8e5e3a69b",
     "first_published": "2026-08-15",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-15",
     "name": "평생교육이용권 지원",
     "path": "_programs/finance/평생교육이용권-지원.md",
@@ -35,7 +35,7 @@
   "bojo24-135200000002": {
     "content_hash": "sha256:c3ec263eb3f2a8eb62489cd6ec97ab73",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "의료급여 틀니·치과임플란트 지원",
     "path": "_programs/health/의료급여-틀니-치과임플란트-지원.md",
@@ -46,7 +46,7 @@
   "bojo24-135200000017": {
     "content_hash": "sha256:7bb797ad08cdd6420d639ecd7bf64d59",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "장애인·노인 보조기기 맞춤형 서비스 (지역 보조기기센터)",
     "path": "_programs/health/장애인-노인-보조기기-맞춤형-서비스-지역-보조기기센터.md",
@@ -57,7 +57,7 @@
   "bojo24-135200000115": {
     "content_hash": "sha256:adae0445bdbe636d45d8dbcb236f1c73",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "인플루엔자 국가예방접종 지원",
     "path": "_programs/care/인플루엔자-국가예방접종-지원.md",
@@ -68,7 +68,7 @@
   "bojo24-137100000033": {
     "content_hash": "sha256:3dd84d55390c10fcc6803cfebafa6be6",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "지역맞춤형 생활체육 활성화(어르신 스포츠강좌 프로그램 지원)",
     "path": "_programs/living/지역맞춤형-생활체육-활성화-어르신-스포츠강좌-프로그램-지원.md",
@@ -79,7 +79,7 @@
   "bojo24-138300000052": {
     "content_hash": "sha256:ceefbe1de65b2a581b85927363b3edec",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-13",
     "name": "청소년 미혼 한부모 자립지원 (우리원더패밀리)",
     "path": "_programs/jobs/청소년-미혼-한부모-자립지원-우리원더패밀리.md",
@@ -90,7 +90,7 @@
   "bojo24-140000000176": {
     "content_hash": "sha256:7c9ec909965f46b6b0050c3f796443ec",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-13",
     "name": "산림복지서비스이용권(바우처) 지급",
     "path": "_programs/living/산림복지서비스이용권-바우처-지급.md",
@@ -101,7 +101,7 @@
   "bojo24-142000000099": {
     "content_hash": "sha256:ac30ad48ef4aef60f0f5e7b829ae2e90",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-13",
     "name": "청년전용창업자금",
     "path": "_programs/jobs/청년전용창업자금.md",
@@ -112,7 +112,7 @@
   "bojo24-149200000009": {
     "content_hash": "sha256:985d5f716239e13e717171461d9c2b95",
     "first_published": "2026-08-17",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-17",
     "name": "생활안정자금(융자)",
     "path": "_programs/jobs/생활안정자금-융자.md",
@@ -123,7 +123,7 @@
   "bojo24-149200000026": {
     "content_hash": "sha256:f9d4dc8872a2b56bc85a0d3eb8c8cb62",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-13",
     "name": "국민내일배움카드",
     "path": "_programs/jobs/국민내일배움카드.md",
@@ -134,7 +134,7 @@
   "bojo24-149200000037": {
     "content_hash": "sha256:27e67addabf882df3fb0abe66135016c",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "직업훈련 생계비대부사업",
     "path": "_programs/jobs/직업훈련-생계비대부사업.md",
@@ -145,7 +145,7 @@
   "bojo24-149200000041": {
     "content_hash": "sha256:f771be9306b45f0f7ed78f5d5e277e7a",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "중장년내일센터",
     "path": "_programs/jobs/중장년내일센터.md",
@@ -153,10 +153,21 @@
     "slug": "중장년내일센터",
     "status": "active"
   },
+  "bojo24-149200000063": {
+    "content_hash": "sha256:699f487c778773bd643e5f48a3c270ba",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "조기재취업수당",
+    "path": "_programs/jobs/조기재취업수당.md",
+    "revision": 1,
+    "slug": "조기재취업수당",
+    "status": "active"
+  },
   "bojo24-149200000092": {
     "content_hash": "sha256:61947c581fc9137c7176ae2ccf009a15",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "구직자 취업지원 서비스 제공",
     "path": "_programs/jobs/구직자-취업지원-서비스-제공.md",
@@ -167,7 +178,7 @@
   "bojo24-149200005002": {
     "content_hash": "sha256:e4387133e0e779c8900843b8d635bd27",
     "first_published": "2026-08-16",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-16",
     "name": "광역구직활동비",
     "path": "_programs/jobs/광역구직활동비.md",
@@ -178,7 +189,7 @@
   "bojo24-149200005007": {
     "content_hash": "sha256:174abb80854303fab92770f94ac7363c",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-13",
     "name": "국민취업지원제도",
     "path": "_programs/jobs/국민취업지원제도.md",
@@ -189,7 +200,7 @@
   "bojo24-149200005008": {
     "content_hash": "sha256:080ac8f8e58ce2918eb518200a3da70b",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "자영업자 실업급여",
     "path": "_programs/jobs/자영업자-실업급여.md",
@@ -200,7 +211,7 @@
   "bojo24-149200005027": {
     "content_hash": "sha256:6799caa57e71342f8355981ca673dd17",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "생활안정자금(융자)(이차보전)",
     "path": "_programs/jobs/생활안정자금-융자-이차보전.md",
@@ -211,7 +222,7 @@
   "bojo24-155000000017": {
     "content_hash": "sha256:48644bb3d088b7b11c4f6f77515d4dd0",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "국가·지방자치단체 관리 지정문화유산 및 천연기념물 등의 관람료 감면",
     "path": "_programs/living/국가-지방자치단체-관리-지정문화유산-및-천연기념물-등의-관람료-감면.md",
@@ -222,7 +233,7 @@
   "bojo24-161300000076": {
     "content_hash": "sha256:f547a9e21850c94028be36ea538030cc",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-13",
     "name": "버팀목전세자금대출",
     "path": "_programs/housing/버팀목전세자금대출.md",
@@ -233,7 +244,7 @@
   "bojo24-161300000088": {
     "content_hash": "sha256:c689c80c5b0fd5462d294f7f855d6782",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "청년주택드림 청약통장",
     "path": "_programs/housing/청년주택드림-청약통장.md",
@@ -244,7 +255,7 @@
   "bojo24-161300000099": {
     "content_hash": "sha256:5a7dd8a53682173fe213434f7a815b03",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "청년월세 지원",
     "path": "_programs/housing/청년월세-지원.md",
@@ -252,10 +263,21 @@
     "slug": "청년월세-지원",
     "status": "active"
   },
+  "bojo24-161300000101": {
+    "content_hash": "sha256:70015444ef4ad7c9420bf11d3f8d0fcc",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "통합공공임대주택 공급",
+    "path": "_programs/housing/통합공공임대주택-공급.md",
+    "revision": 1,
+    "slug": "통합공공임대주택-공급",
+    "status": "active"
+  },
   "bojo24-161300000103": {
     "content_hash": "sha256:5028ec6deefdc20992c61b7995dcc3ac",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "국토교통부 전세보증금반환보증 보증료 지원",
     "path": "_programs/housing/국토교통부-전세보증금반환보증-보증료-지원.md",
@@ -266,7 +288,7 @@
   "bojo24-171000000008": {
     "content_hash": "sha256:2a892e33be730928119859162dc0062e",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "다문화가정 EMS 요금 할인 지원",
     "path": "_programs/living/다문화가정-ems-요금-할인-지원.md",
@@ -277,7 +299,7 @@
   "bojo24-172100000012": {
     "content_hash": "sha256:fa1d3ed2ae23e0a79895c85d05e21d3e",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "취약계층 통신요금감면",
     "path": "_programs/living/취약계층-통신요금감면.md",
@@ -285,10 +307,21 @@
     "slug": "취약계층-통신요금감면",
     "status": "active"
   },
+  "bojo24-999000000005": {
+    "content_hash": "sha256:35314d1b91d65bc9601788bf91141938",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "상병급여",
+    "path": "_programs/jobs/상병급여.md",
+    "revision": 1,
+    "slug": "상병급여",
+    "status": "active"
+  },
   "bojo24-999000000008": {
     "content_hash": "sha256:59b8b0ad06d71812b194c34bc793e84b",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "육아휴직급여",
     "path": "_programs/care/육아휴직급여.md",
@@ -296,10 +329,21 @@
     "slug": "육아휴직급여",
     "status": "active"
   },
+  "bojo24-999000000022": {
+    "content_hash": "sha256:1c8fbb8b7981fbb7ff8762eb9b0ae5df",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "기존주택 전세임대주택 지원사업",
+    "path": "_programs/housing/기존주택-전세임대주택-지원사업.md",
+    "revision": 1,
+    "slug": "기존주택-전세임대주택-지원사업",
+    "status": "active"
+  },
   "bojo24-999000000023": {
     "content_hash": "sha256:e7d2f917157a1bfe4e73d0dd3366b1ba",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "영구임대주택공급",
     "path": "_programs/housing/영구임대주택공급.md",
@@ -310,7 +354,7 @@
   "bojo24-999000000044": {
     "content_hash": "sha256:5788c2724c16946288034044857f1e30",
     "first_published": "2026-08-16",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-16",
     "name": "지역사회서비스 청년사업단",
     "path": "_programs/care/지역사회서비스-청년사업단.md",
@@ -318,10 +362,21 @@
     "slug": "지역사회서비스-청년사업단",
     "status": "active"
   },
+  "bojo24-999000000089": {
+    "content_hash": "sha256:db6cdc81c71ff4c6d866a08bb3d65c85",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "노인장기요양보험(장기요양인정)",
+    "path": "_programs/health/노인장기요양보험-장기요양인정.md",
+    "revision": 1,
+    "slug": "노인장기요양보험-장기요양인정",
+    "status": "active"
+  },
   "bojo24-999000000092": {
     "content_hash": "sha256:61ff741d6954c8dbd37fe7865f3e75fe",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "양곡할인",
     "path": "_programs/finance/양곡할인.md",
@@ -332,7 +387,7 @@
   "bojo24-B41000200003": {
     "content_hash": "sha256:b311b93e3806721abb58f459c505ec2a",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "전기 요금 복지할인",
     "path": "_programs/living/전기-요금-복지할인.md",
@@ -343,7 +398,7 @@
   "bojo24-B55140800003": {
     "content_hash": "sha256:e2273d4a13f59ea7504d6da940f432ee",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-13",
     "name": "내집마련 디딤돌 대출",
     "path": "_programs/housing/내집마련-디딤돌-대출.md",
@@ -351,10 +406,21 @@
     "slug": "내집마련-디딤돌-대출",
     "status": "active"
   },
+  "bojo24-B55190400005": {
+    "content_hash": "sha256:f55f971e527c429e2aea2b99d0cc8dac",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "실업급여(구직급여) 수급자격 온라인 교육 서비스",
+    "path": "_programs/jobs/실업급여-구직급여-수급자격-온라인-교육-서비스.md",
+    "revision": 1,
+    "slug": "실업급여-구직급여-수급자격-온라인-교육-서비스",
+    "status": "active"
+  },
   "bojo24-B55201500004": {
     "content_hash": "sha256:a7554c83180014aa083eadc718e8170d",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "실업크레딧 지원",
     "path": "_programs/jobs/실업크레딧-지원.md",
@@ -365,7 +431,7 @@
   "bojo24-B55252100002": {
     "content_hash": "sha256:741a50c74f08deb48788ae58e1355d40",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "발전소 주변지역 장학금 지원(신서천)",
     "path": "_programs/education/발전소-주변지역-장학금-지원-신서천.md",
@@ -376,7 +442,7 @@
   "bojo24-B55252100003": {
     "content_hash": "sha256:c7ec914cb41dbbd32059909a32be2b68",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "발전소 주변지역 장학금 지원(인천)",
     "path": "_programs/education/발전소-주변지역-장학금-지원-인천.md",
@@ -387,7 +453,7 @@
   "bojo24-B55252100005": {
     "content_hash": "sha256:26fb9bb7a89c0233a5e320fcfa4bf4fc",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-13",
     "name": "발전소주변지역 장학금 지원(보령발전본부)",
     "path": "_programs/education/발전소주변지역-장학금-지원-보령발전본부.md",
@@ -398,7 +464,7 @@
   "bojo24-B55252100009": {
     "content_hash": "sha256:f36f7a1a46b511cf758c0c3ad8d71485",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "발전소 주변지역 장학금 지원(세종)",
     "path": "_programs/education/발전소-주변지역-장학금-지원-세종.md",
@@ -409,7 +475,7 @@
   "bojo24-B55271100001": {
     "content_hash": "sha256:1312f837e0e5b955902542280424205b",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "건설노동자 결혼식 지원",
     "path": "_programs/living/건설노동자-결혼식-지원.md",
@@ -420,7 +486,7 @@
   "bojo24-B55271100008": {
     "content_hash": "sha256:1596e211eadc3b4a2d2c5b155f65d37a",
     "first_published": "2026-08-16",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-16",
     "name": "건설근로자 퇴직공제금 지급",
     "path": "_programs/finance/건설근로자-퇴직공제금-지급.md",
@@ -431,7 +497,7 @@
   "bojo24-B55307700009": {
     "content_hash": "sha256:adae99ab711f4065d3cc32ef526cda4c",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "모두의창업(로컬트랙)",
     "path": "_programs/jobs/모두의창업-로컬트랙.md",
@@ -442,7 +508,7 @@
   "bojo24-B55307700011": {
     "content_hash": "sha256:b22d29ea766257dd62ad9360871c9d21",
     "first_published": "2026-08-17",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-17",
     "name": "청년고용연계자금",
     "path": "_programs/jobs/청년고용연계자금.md",
@@ -450,10 +516,32 @@
     "slug": "청년고용연계자금",
     "status": "active"
   },
+  "bojo24-B55370100033": {
+    "content_hash": "sha256:d438fe73f09e0b04bd1d7b088b9015c5",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "서민금융진흥원 금융교육",
+    "path": "_programs/finance/서민금융진흥원-금융교육.md",
+    "revision": 1,
+    "slug": "서민금융진흥원-금융교육",
+    "status": "active"
+  },
+  "bojo24-GES000000110": {
+    "content_hash": "sha256:f95e87c089899daaaa55ac654aa68d8c",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "취업 후 상환 학자금대출",
+    "path": "_programs/education/취업-후-상환-학자금대출.md",
+    "revision": 1,
+    "slug": "취업-후-상환-학자금대출",
+    "status": "active"
+  },
   "bojo24-GMO000000010": {
     "content_hash": "sha256:2a06fea1343c2e0aeb9545a33b4d66fa",
     "first_published": "2026-08-17",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-17",
     "name": "정보통신 보조기기 보급",
     "path": "_programs/living/정보통신-보조기기-보급.md",
@@ -461,10 +549,21 @@
     "slug": "정보통신-보조기기-보급",
     "status": "active"
   },
+  "bojo24-GMW000000210": {
+    "content_hash": "sha256:3fd67c064f65516d6bf46d4081065e59",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "고혈압·당뇨병 등록관리서비스",
+    "path": "_programs/health/고혈압-당뇨병-등록관리서비스.md",
+    "revision": 1,
+    "slug": "고혈압-당뇨병-등록관리서비스",
+    "status": "active"
+  },
   "bojo24-O00045000002": {
     "content_hash": "sha256:f3251375badc35d0b20f9149b59d71e3",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-13",
     "name": "기획공연 및 전시 관람료 할인",
     "path": "_programs/living/기획공연-및-전시-관람료-할인.md",
@@ -475,7 +574,7 @@
   "bojo24-O00096800001": {
     "content_hash": "sha256:9390fbc01e406d3f8bbf4e104f786808",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "우리지역 성적우수 대학생 장학금",
     "path": "_programs/education/우리지역-성적우수-대학생-장학금.md",
@@ -486,7 +585,7 @@
   "bojo24-O00096800004": {
     "content_hash": "sha256:c95e571384211f41f87274da1497e803",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "학업성취도 향상 고등학생 장학금",
     "path": "_programs/education/학업성취도-향상-고등학생-장학금.md",
@@ -497,7 +596,7 @@
   "bojo24-O00096800006": {
     "content_hash": "sha256:17e826e3c1acf702619e8ce23b2d609f",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "고교 진학 후 성적우수 학생 장학금",
     "path": "_programs/education/고교-진학-후-성적우수-학생-장학금.md",
@@ -508,7 +607,7 @@
   "bojo24-O00096800007": {
     "content_hash": "sha256:79eb4197285121880d771bf4fe1354dc",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "예체능 우수 학생 장학금",
     "path": "_programs/education/예체능-우수-학생-장학금.md",
@@ -519,7 +618,7 @@
   "bojo24-PTR000051706": {
     "content_hash": "sha256:92f1678fc25c8a8bab25460d74751f8d",
     "first_published": "2026-08-17",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-17",
     "name": "오피스텔구입 자금융자",
     "path": "_programs/finance/오피스텔구입-자금융자.md",
@@ -530,7 +629,7 @@
   "bojo24-SD0000003276": {
     "content_hash": "sha256:79a43182fc60f18a3381770c3af88753",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "고용창출장려금(일자리 함께하기, 국내복귀기업 지원, 신중년 적합직무 지원)",
     "path": "_programs/jobs/고용창출장려금-일자리-함께하기-국내복귀기업-지원-신중년-적합직무-지원.md",
@@ -541,7 +640,7 @@
   "bojo24-SD0000003485": {
     "content_hash": "sha256:32a0aeb9312c51765f367510dd440ab2",
     "first_published": "2026-08-15",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-15",
     "name": "농업종합자금 지원 (원예, 축산, 가공사업 등)",
     "path": "_programs/finance/농업종합자금-지원-원예-축산-가공사업-등.md",
@@ -552,7 +651,7 @@
   "bojo24-SD0000006941": {
     "content_hash": "sha256:1f32dd1e7f083d058f25868222724200",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "외국인근로자 등 의료지원",
     "path": "_programs/health/외국인근로자-등-의료지원.md",
@@ -563,7 +662,7 @@
   "bojo24-SD0000011848": {
     "content_hash": "sha256:f6c0aff2e40c67e05abe266c1100f997",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "청년내일채움공제",
     "path": "_programs/jobs/청년내일채움공제.md",
@@ -574,7 +673,7 @@
   "bojo24-SD0000015536": {
     "content_hash": "sha256:ad9977274fc18a334acaafe3f3899c39",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "구직급여",
     "path": "_programs/jobs/구직급여.md",
@@ -585,7 +684,7 @@
   "bojo24-SD0000016138": {
     "content_hash": "sha256:35a4ded8d84ad89156c38b6f035e780a",
     "first_published": "2026-08-13",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-13",
     "name": "지역사회서비스",
     "path": "_programs/health/지역사회서비스.md",
@@ -596,7 +695,7 @@
   "bojo24-SD0000018904": {
     "content_hash": "sha256:1adfc20e6f6919bb4af4d5094d3f1c63",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "소기업·소상공인 신용보증 지원",
     "path": "_programs/jobs/소기업-소상공인-신용보증-지원.md",
@@ -607,7 +706,7 @@
   "bojo24-SPE000000060": {
     "content_hash": "sha256:c1b764493fc5559e7ba4df3864068fe3",
     "first_published": "2026-08-15",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-15",
     "name": "보험급여 (건강보험 장애인보조기기)",
     "path": "_programs/health/보험급여-건강보험-장애인보조기기.md",
@@ -618,7 +717,7 @@
   "bojo24-SSE000000100": {
     "content_hash": "sha256:34cacf2eac793a734fbeb37c73bcc1cc",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "노인일자리 및 사회활동 지원",
     "path": "_programs/jobs/노인일자리-및-사회활동-지원.md",
@@ -629,7 +728,7 @@
   "bojo24-SSE000000170": {
     "content_hash": "sha256:f4524a1ddfe09ead9b18d8109ee31989",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "기초연금",
     "path": "_programs/finance/기초연금.md",
@@ -640,7 +739,7 @@
   "bojo24-SSI000000020": {
     "content_hash": "sha256:84a44cf43ede65a5f91e04a5c1b68804",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "한부모가족 아동양육비 지원",
     "path": "_programs/care/한부모가족-아동양육비-지원.md",
@@ -651,7 +750,7 @@
   "bojo24-VOU000000020": {
     "content_hash": "sha256:1c1a74177d3ee14b1b76ccad7b2e588d",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "장애인 활동지원",
     "path": "_programs/care/장애인-활동지원.md",
@@ -662,7 +761,7 @@
   "bojo24-VOU000000040": {
     "content_hash": "sha256:627fba575fc3d4c930f5625a9f0666f7",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "가사·간병 방문 지원",
     "path": "_programs/health/가사-간병-방문-지원.md",
@@ -673,7 +772,7 @@
   "bojo24-WII000000310": {
     "content_hash": "sha256:e15f2991af9f6fbe6d6bcaaa12c96d06",
     "first_published": "2026-08-14",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-14",
     "name": "노후준비서비스제공",
     "path": "_programs/care/노후준비서비스제공.md",
@@ -684,7 +783,7 @@
   "bojo24-WII000001180": {
     "content_hash": "sha256:1fbf6a9df942067ca8c5c02840d60d8a",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "장애인 집합 정보화교육",
     "path": "_programs/care/장애인-집합-정보화교육.md",
@@ -695,7 +794,7 @@
   "bojo24-WII000001240": {
     "content_hash": "sha256:6c9de1af53e222f6250149a775cd2079",
     "first_published": "2026-08-19",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-19",
     "name": "결혼이민자 통번역서비스",
     "path": "_programs/living/결혼이민자-통번역서비스.md",
@@ -703,10 +802,21 @@
     "slug": "결혼이민자-통번역서비스",
     "status": "active"
   },
+  "bojo24-WII000001460": {
+    "content_hash": "sha256:6ac39c3530120f818b4c0f9424f39bb7",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "출산전후(유산ㆍ사산)휴가 급여",
+    "path": "_programs/care/출산전후-유산-사산-휴가-급여.md",
+    "revision": 1,
+    "slug": "출산전후-유산-사산-휴가-급여",
+    "status": "active"
+  },
   "bojo24-WII000001470": {
     "content_hash": "sha256:3eaf8d6a749840faeee195860773ed88",
     "first_published": "2026-08-15",
-    "last_checked": "2026-08-19",
+    "last_checked": "2026-08-20",
     "last_updated": "2026-08-15",
     "name": "공공분양 주택공급",
     "path": "_programs/housing/공공분양-주택공급.md",
