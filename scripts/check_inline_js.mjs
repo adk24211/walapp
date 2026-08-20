@@ -9,21 +9,34 @@
  * 빌드는 통과하고 눈으로도 안 보이는 부류라, 기계가 봐야 한다.
  * 실행하지 않고 컴파일만 해 보므로 브라우저가 필요 없다(CI 에서 몇 초).
  *
- *   node scripts/check_inline_js.mjs
+ *   node scripts/check_inline_js.mjs              # _site_check 또는 _site
+ *   node scripts/check_inline_js.mjs _site_check  # 위치를 직접 지정
  */
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 
 const ROOT = path.join(import.meta.dirname, '..');
-const SITE = path.join(ROOT, '_site');
 
-if (!fs.existsSync(SITE)) {
-  console.error('_site 가 없습니다. 먼저 jekyll build 를 실행하세요.');
+// 빌드 위치는 부르는 쪽이 정한다.
+//
+// 처음엔 '_site' 를 박아 뒀는데, CI 는 배포 전 검사용으로 '_site_check' 에
+// 빌드한다. 그래서 이 검사가 "_site 가 없습니다" 로 떨어졌고 — 문법 오류가
+// 하나도 없는데 — 바로 뒤의 배포 단계가 통째로 건너뛰어졌다. 검사기가
+// 막을 것은 깨진 스크립트지 자기 자신의 경로 가정이 아니다.
+//
+// 인자로 받고, 없으면 흔한 두 곳을 순서대로 찾는다.
+const CANDIDATES = process.argv[2] ? [process.argv[2]] : ['_site_check', '_site'];
+const SITE = CANDIDATES
+  .map((c) => (path.isAbsolute(c) ? c : path.join(ROOT, c)))
+  .find((c) => fs.existsSync(c));
+
+if (!SITE) {
+  console.error(`빌드 결과를 찾지 못했습니다(${CANDIDATES.join(', ')}). 먼저 jekyll build 를 실행하세요.`);
   process.exit(1);
 }
 
-/** _site 안의 모든 .html */
+/** 빌드 결과 안의 모든 .html */
 function htmlFiles(dir) {
   const out = [];
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -60,7 +73,7 @@ for (const file of htmlFiles(SITE)) {
   }
 }
 
-console.log(`인라인 스크립트 ${checked}개 검사 (HTML ${htmlFiles(SITE).length}개)`);
+console.log(`인라인 스크립트 ${checked}개 검사 (${path.relative(ROOT, SITE) || SITE} · HTML ${htmlFiles(SITE).length}개)`);
 if (problems.length === 0) {
   console.log('문법 오류 없음 ✓');
   process.exit(0);
