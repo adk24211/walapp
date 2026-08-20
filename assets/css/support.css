@@ -112,6 +112,14 @@
 .cta-secondary { background: var(--surface2); color: var(--ink); border: 1px solid var(--line2); }
 .cta-secondary:hover { border-color: var(--c); color: var(--c); }
 
+/* 허브에 실을 것이 없을 때. 빈 화면을 그냥 두면 고장으로 읽힌다 —
+   왜 비었는지와 어디로 가면 되는지를 함께 준다. */
+.hub-empty {
+  padding: 2rem 0 3rem;
+  color: var(--ink2); font-size: .95rem; line-height: 1.7;
+}
+.hub-empty a { color: var(--brand-dark); text-decoration: underline; }
+
 /* ---- 배너 ------------------------------------------------- */
 .mock-banner{
   display: flex; gap: 11px; align-items: flex-start;
@@ -865,14 +873,14 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
    색을 다시 넣되 두 축으로만 쓴다. 색이 뜻을 담지 않으면 그건 장식이고,
    장식이 늘면 정작 뜻을 담은 색(상태·금액)이 안 보인다.
 
-     시간 축  마감 임박(급함) · 시행 예정(아직) · 새로 추가(방금)
+     시간 축  마감 예정(급함) · 시행 예정(아직) · 새로 추가(방금)
      분야 축  주거 · 일자리 · 양육 · 건강 · 교육 · 금융 · 생활  (7색, 이미 있던 토큰)
 
    대상별 8칸에는 색을 주지 않는다. 여덟 개에 색을 주면 무지개가 되고,
    그 순간 위 두 축이 묻힌다.
    ═══════════════════════════════════════════════════════════ */
 
-/* 마감 임박 전용 — 상태 축에 '급함' 이 없어서 새로 만든다 */
+/* 마감 예정 전용 — 상태 축에 '급함' 이 없어서 새로 만든다 */
 :root      { --urgent: #A33A25; --urgent-bg: #FBE7E1; }
 [data-theme="dark"] { --urgent: #F0A08B; --urgent-bg: #43170F; }
 

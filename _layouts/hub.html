@@ -25,12 +25,18 @@ layout: default
   {% endif %}
 {% elsif axis == 'deadline' %}
   {% comment %}
-    마감 임박은 '지금 신청할 수 있는데 곧 끝나는 것' 이다. 아직 접수가 시작되지
-    않은 예정 제도는 마감일이 있어도 여기 들어오면 안 된다.
+    '지금 신청할 수 있는데 곧 끝나는 것' 과 '아직 시작 전인데 마감일이 잡힌 것' 은
+    서로 다른 일이다. 섞어 한 줄로 세우면 아직 열지도 않은 제도를 마감 임박으로
+    읽게 되므로 갈래를 나눠 각각 제목을 붙인다.
+
+    한동안 접수 중인 것만 실었는데, 마감일이 있는 10건 중 9건이 아직 시작 전이라
+    화면에 1건만 남았다. 사람들이 '장학금 접수가 9월에 끝난다' 는 걸 알아야 하는데
+    그 정보가 어디에도 안 보이던 것이다. 아래 갈래로 함께 싣되 섞지는 않는다.
   {% endcomment %}
   {% assign dated = all_programs | where_exp: "p", "p.apply_always != true" %}
-  {% assign open_dated = dated | where: "status", "active" %}
-  {% assign items = open_dated | where_exp: "p", "p.apply_end" | sort: "apply_end" %}
+  {% assign deadline_open = dated | where: "status", "active" | where_exp: "p", "p.apply_end" | sort: "apply_end" %}
+  {% assign deadline_soon = dated | where: "status", "upcoming" | where_exp: "p", "p.apply_end" | sort: "apply_end" %}
+  {% assign items = deadline_open | concat: deadline_soon %}
 {% elsif axis == 'new' %}
   {% assign items = all_programs | sort: "first_published" | reverse %}
 {% else %}
@@ -144,6 +150,39 @@ layout: default
       {% for p in closed_items %}{% include program-card.html program=p show_category=show_cat %}{% endfor %}
     </div>
   </div>
+  {% endif %}
+</div>
+
+{% elsif axis == 'deadline' %}
+<div class="feed">
+  {% if deadline_open.size > 0 %}
+  <div class="section-group">
+    <div class="section-label">
+      <span class="sec-tag">지금 신청할 수 있습니다</span>
+      <div class="sec-rule"></div>
+      <span class="sec-count">{{ deadline_open | size }}건</span>
+    </div>
+    <div class="cards">
+      {% for p in deadline_open %}{% include program-card.html program=p %}{% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if deadline_soon.size > 0 %}
+  <div class="section-group">
+    <div class="section-label">
+      <span class="sec-tag">접수 전 · 마감일이 정해진 제도</span>
+      <div class="sec-rule"></div>
+      <span class="sec-count">{{ deadline_soon | size }}건</span>
+    </div>
+    <div class="cards">
+      {% for p in deadline_soon %}{% include program-card.html program=p %}{% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if items.size == 0 %}
+  <p class="hub-empty">마감일이 정해진 제도가 아직 없습니다. 상시 접수 제도는 <a href="{{ '/support/' | relative_url }}">전체 지원 제도</a>에서 보실 수 있습니다.</p>
   {% endif %}
 </div>
 

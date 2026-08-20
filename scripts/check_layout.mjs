@@ -47,7 +47,7 @@ function pages() {
     ['홈', '/'],
     ['전체 제도', '/support/'],
     ['대상 허브', '/who/youth/'],
-    ['마감 임박', '/deadline/'],
+    ['마감 예정', '/deadline/'],
     ['검색', '/search/'],
   ];
   const detail = firstDetail();
