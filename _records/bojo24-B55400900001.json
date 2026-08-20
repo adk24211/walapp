@@ -1,0 +1,74 @@
+{
+  "_prose": {
+    "eligibility": [
+      "대·중견기업 협력사와 협력 관계가 있는 기업",
+      "만 34세 이하의 청년 구직자",
+      "전국에 거주하는 청년 구직자"
+    ],
+    "faq": [
+      {
+        "a": "교육과정 개발 및 운영비는 프로그램에서 지원하며, 교육생에게는 주당 10만원의 훈련수당이 지급됩니다.",
+        "q": "교육비는 어떻게 지원받나요?"
+      },
+      {
+        "a": "대기업이 보유한 교육 인프라를 활용하여 진행됩니다.",
+        "q": "교육은 어디에서 진행되나요?"
+      }
+    ],
+    "note": "선정 기준이 별도로 없으므로 신청자 전원에게 동일한 기회가 제공됩니다.",
+    "steps": [
+      {
+        "body": "온라인 신청 페이지에 접속하여 신청서를 작성합니다. 구비 서류가 없으므로 입력 내용만 제출하면 됩니다. 신청은 상시 접수되며, 제출 후 별도의 심사 절차 없이 교육 참여가 가능합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "대‧중소기업 상생일자리 프로그램은 대·중견기업 협력사의 청년 구직자를 대상으로, 대기업 교육 인프라를 활용한 직무교육과 주당 10만원 훈련수당을 제공하는 전국적 일자리 지원 사업입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "job.kosmes.or.kr",
+  "audiences": [
+    "youth",
+    "jobseeker",
+    "business"
+  ],
+  "benefit_raw": "○ 대기업 교육 인프라를 활용하여 청년 구직자에게 직무교육을 실시하고, 대기업(중견기업) 협력사에 취업연계\n- 교육과정 개발 및 운영비, 교육생 훈련수당(주당 10만원)",
+  "category": "jobs",
+  "contact_raw": "인력지원처/055-751-9881",
+  "content_hash": "sha256:34ddc7cb98d1df51976140e67e744506",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-20",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55400900001",
+  "is_mock": false,
+  "last_checked": "2026-08-20",
+  "last_updated": "2026-08-20",
+  "law_raw": "",
+  "name": "대‧중소기업 상생일자리 프로그램",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55400900001",
+  "org": "중소벤처기업진흥공단",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "대-중소기업-상생일자리-프로그램",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 서비스(일자리) 개인",
+  "source_id": "B55400900001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "대·중견기업 협력사, 만 34세 이하 청년 구직자",
+  "view_count": 15249
+}

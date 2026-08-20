@@ -1,0 +1,75 @@
+{
+  "_prose": {
+    "eligibility": [
+      "전국에 소재한 대학(원) 재학생",
+      "휴학 중인 대학(원) 학생도 지원 가능합니다",
+      "청년 및 양육가정에 해당하는 경우 우대 대상에 포함됩니다"
+    ],
+    "faq": [
+      {
+        "a": "지원 지역이 전국이므로 전국 어디서든 참여가 가능합니다.",
+        "q": "멘토링은 어느 지역에서 진행되나요?"
+      }
+    ],
+    "note": "제출 서류 중 선택 항목은 해당되는 경우에만 제출하면 됩니다.",
+    "steps": [
+      {
+        "body": "지원은 한국장학재단 홈페이지에서 온라인으로 진행합니다. 신청 시 재학(휴학) 증명서와 합격 통지서 등 재적 증빙 서류를 첨부해야 합니다. 선택 서류는 해당되는 경우에만 제출하면 됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "사회리더 대학생 멘토링은 전국 대학(원) 재학생 및 휴학생을 대상으로 사회 각 분야 리더와의 멘토링 및 역량개발 프로그램을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "매년 2~3월 중 멘티(대학생) 신청 접수 * 매년 신청 기간이 다르므로 세부 일정은 멘토링 운영사무국(02-2259-2640~2643)으로 문의",
+    "start": ""
+  },
+  "apply_url": "https://www.kosaf.go.kr",
+  "audiences": [
+    "youth",
+    "parent"
+  ],
+  "benefit_raw": "사회 각 분야 리더(멘토)와 대학생(멘티)의 멘토링 지원, 역량개발 프로그램 운영 등",
+  "category": "education",
+  "contact_raw": "멘토링 운영사무국/02-2259-2640\n멘토링 운영사무국/02-2259-2641\n멘토링 운영사무국/02-2259-2642\n멘토링 운영사무국/02-2259-2643",
+  "content_hash": "sha256:a0ffa9831c7bfbcb6b8becca6b222869",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "ㅇ 멘티 필수 제출 서류",
+    "재학(휴학) 증명서",
+    "합격 통지서 등 재적 증빙 가능 서류",
+    "ㅇ 멘티 선택 제출 서류",
+    "다문화ㆍ북한이탈주민",
+    "장애",
+    "봉사활동 증명서 등"
+  ],
+  "first_published": "2026-08-20",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55252900204",
+  "is_mock": false,
+  "last_checked": "2026-08-20",
+  "last_updated": "2026-08-20",
+  "law_raw": "",
+  "name": "사회리더 대학생 멘토링",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252900204",
+  "org": "한국장학재단",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "사회리더-대학생-멘토링",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 개인",
+  "source_id": "B55252900204",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "전국 대학(원) 재학생 및 휴학생",
+  "view_count": 12446
+}

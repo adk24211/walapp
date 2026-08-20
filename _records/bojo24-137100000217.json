@@ -1,0 +1,65 @@
+{
+  "_prose": {
+    "eligibility": [
+      "청년이면 지원 대상에 포함됩니다.",
+      "대학생이면 지원 대상에 포함됩니다.",
+      "취업준비생이면 지원 대상에 포함됩니다.",
+      "재직자이면 지원 대상에 포함됩니다.",
+      "선정 기준은 모집공고문을 확인하는 것입니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "먼저 모집공고문을 확인합니다. 공고에 안내된 신청 방법에 따라 신청서를 작성합니다. 작성한 신청서는 구비 서류와 함께 제출합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "글로벌 광고인재 육성은 문화체육관광부가 전국 청년을 대상으로 진행하는 교육 지원 사업으로, 대학생·취업준비생·재직자를 위한 정규·특별 교육과정을 제공합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "모집공고 시 제공",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "youth"
+  ],
+  "benefit_raw": "○ 교육과정 : 정규교육과정, 특별교육과정(국제광고제 출품반, 카피라이터 육성반 등)",
+  "category": "living",
+  "contact_raw": "문화체육관광부 미디어정책과/044-203-3217",
+  "content_hash": "sha256:65ba4725d33464c4a48990946d7a43bc",
+  "criteria_raw": "○ 모집공고문 확인",
+  "deferred_detail": false,
+  "documents_raw": [
+    "모집공고문 확인"
+  ],
+  "first_published": "2026-08-20",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-137100000217",
+  "is_mock": false,
+  "last_checked": "2026-08-20",
+  "last_updated": "2026-08-20",
+  "law_raw": "",
+  "name": "글로벌 광고인재 육성",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/137100000217",
+  "org": "문화체육관광부",
+  "primary_audience": "youth",
+  "receiver_raw": "문화체육관광부",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "글로벌-광고인재-육성",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 기타(교육) 개인",
+  "source_id": "137100000217",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 대학생, 취업준비생, 재직자 등",
+  "view_count": 14196
+}

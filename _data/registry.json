@@ -76,6 +76,17 @@
     "slug": "장애인-노인-보조기기-맞춤형-서비스-지역-보조기기센터",
     "status": "active"
   },
+  "bojo24-135200000082": {
+    "content_hash": "sha256:8a20494c435ae3bb8fcfecf6fa31c629",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "보건소 방문건강관리 서비스",
+    "path": "_programs/health/보건소-방문건강관리-서비스.md",
+    "revision": 1,
+    "slug": "보건소-방문건강관리-서비스",
+    "status": "active"
+  },
   "bojo24-135200000115": {
     "content_hash": "sha256:adae0445bdbe636d45d8dbcb236f1c73",
     "first_published": "2026-08-14",
@@ -98,6 +109,17 @@
     "slug": "아동수당",
     "status": "active"
   },
+  "bojo24-135200005015": {
+    "content_hash": "sha256:ab69ad6c42b1923c76290f2807ef3219",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "첫만남이용권 지원",
+    "path": "_programs/care/첫만남이용권-지원.md",
+    "revision": 1,
+    "slug": "첫만남이용권-지원",
+    "status": "active"
+  },
   "bojo24-135200005030": {
     "content_hash": "sha256:9230d0819885d61c963bca5d239ba99b",
     "first_published": "2026-08-20",
@@ -118,6 +140,28 @@
     "path": "_programs/living/지역맞춤형-생활체육-활성화-어르신-스포츠강좌-프로그램-지원.md",
     "revision": 1,
     "slug": "지역맞춤형-생활체육-활성화-어르신-스포츠강좌-프로그램-지원",
+    "status": "active"
+  },
+  "bojo24-137100000217": {
+    "content_hash": "sha256:65ba4725d33464c4a48990946d7a43bc",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "글로벌 광고인재 육성",
+    "path": "_programs/living/글로벌-광고인재-육성.md",
+    "revision": 1,
+    "slug": "글로벌-광고인재-육성",
+    "status": "active"
+  },
+  "bojo24-138300000017": {
+    "content_hash": "sha256:0699e0dd4832f83b2537001fd4d115ba",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "한부모가족 임대주택 특별공급",
+    "path": "_programs/housing/한부모가족-임대주택-특별공급.md",
+    "revision": 1,
+    "slug": "한부모가족-임대주택-특별공급",
     "status": "active"
   },
   "bojo24-138300000052": {
@@ -395,6 +439,17 @@
     "slug": "출산-관련-서비스-통합처리-신청-행복출산",
     "status": "active"
   },
+  "bojo24-423000000362": {
+    "content_hash": "sha256:757a347cc172aa5f8a9eeafbd217b2d6",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "아이돌봄 서비스",
+    "path": "_programs/care/아이돌봄-서비스.md",
+    "revision": 1,
+    "slug": "아이돌봄-서비스",
+    "status": "active"
+  },
   "bojo24-999000000002": {
     "content_hash": "sha256:aa940fec3809355d6360333c98d386d4",
     "first_published": "2026-08-20",
@@ -406,6 +461,17 @@
     "slug": "개별연장급여",
     "status": "active"
   },
+  "bojo24-999000000004": {
+    "content_hash": "sha256:9586f701e582a5ec51fe5093d8a79058",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "배우자 출산휴가 급여",
+    "path": "_programs/care/배우자-출산휴가-급여.md",
+    "revision": 1,
+    "slug": "배우자-출산휴가-급여",
+    "status": "active"
+  },
   "bojo24-999000000005": {
     "content_hash": "sha256:35314d1b91d65bc9601788bf91141938",
     "first_published": "2026-08-20",
@@ -415,6 +481,17 @@
     "path": "_programs/jobs/상병급여.md",
     "revision": 1,
     "slug": "상병급여",
+    "status": "active"
+  },
+  "bojo24-999000000007": {
+    "content_hash": "sha256:51bc9c339b70715b0e7e64eba9dcc0de",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "육아기 근로시간 단축 급여",
+    "path": "_programs/care/육아기-근로시간-단축-급여.md",
+    "revision": 1,
+    "slug": "육아기-근로시간-단축-급여",
     "status": "active"
   },
   "bojo24-999000000008": {
@@ -549,6 +626,17 @@
     "slug": "내집마련-디딤돌-대출",
     "status": "active"
   },
+  "bojo24-B55190400003": {
+    "content_hash": "sha256:1dcdc98eadb6c03e04855440c2f38827",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "직업심리검사 서비스",
+    "path": "_programs/jobs/직업심리검사-서비스.md",
+    "revision": 1,
+    "slug": "직업심리검사-서비스",
+    "status": "active"
+  },
   "bojo24-B55190400005": {
     "content_hash": "sha256:f55f971e527c429e2aea2b99d0cc8dac",
     "first_published": "2026-08-20",
@@ -637,6 +725,39 @@
     "slug": "발전소-주변지역-장학금-지원-세종",
     "status": "upcoming"
   },
+  "bojo24-B55252900204": {
+    "content_hash": "sha256:d8a9d6ef8934d98f78a9c570f286665e",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "사회리더 대학생 멘토링",
+    "path": "_programs/education/사회리더-대학생-멘토링.md",
+    "revision": 1,
+    "slug": "사회리더-대학생-멘토링",
+    "status": "active"
+  },
+  "bojo24-B55252900213": {
+    "content_hash": "sha256:552ad1b51f71ed491852959fdbbbccdb",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "대학생 기숙사 지원 (대학생 연합생활관)",
+    "path": "_programs/housing/대학생-기숙사-지원-대학생-연합생활관.md",
+    "revision": 1,
+    "slug": "대학생-기숙사-지원-대학생-연합생활관",
+    "status": "active"
+  },
+  "bojo24-B55252900220": {
+    "content_hash": "sha256:8fbe0eaba9506a98a9da839fc1d7739e",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "지자체 학자금대출 이자지원",
+    "path": "_programs/education/지자체-학자금대출-이자지원.md",
+    "revision": 1,
+    "slug": "지자체-학자금대출-이자지원",
+    "status": "active"
+  },
   "bojo24-B55271100001": {
     "content_hash": "sha256:1312f837e0e5b955902542280424205b",
     "first_published": "2026-08-19",
@@ -723,6 +844,17 @@
     "path": "_programs/finance/청년미래적금.md",
     "revision": 1,
     "slug": "청년미래적금",
+    "status": "active"
+  },
+  "bojo24-B55400900001": {
+    "content_hash": "sha256:34ddc7cb98d1df51976140e67e744506",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "대‧중소기업 상생일자리 프로그램",
+    "path": "_programs/jobs/대-중소기업-상생일자리-프로그램.md",
+    "revision": 1,
+    "slug": "대-중소기업-상생일자리-프로그램",
     "status": "active"
   },
   "bojo24-GEF000000070": {
@@ -954,6 +1086,17 @@
     "path": "_programs/jobs/소기업-소상공인-신용보증-지원.md",
     "revision": 1,
     "slug": "소기업-소상공인-신용보증-지원",
+    "status": "active"
+  },
+  "bojo24-SME000000100": {
+    "content_hash": "sha256:e8544f24379eda47a800f979729e2576",
+    "first_published": "2026-08-20",
+    "last_checked": "2026-08-20",
+    "last_updated": "2026-08-20",
+    "name": "난임부부 시술비 지원",
+    "path": "_programs/care/난임부부-시술비-지원.md",
+    "revision": 1,
+    "slug": "난임부부-시술비-지원",
     "status": "active"
   },
   "bojo24-SPE000000060": {

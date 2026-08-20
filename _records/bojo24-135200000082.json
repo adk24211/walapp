@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "사회·문화·경제적 건강취약계층",
+      "거동불편 65세 이상 독거노인",
+      "어르신"
+    ],
+    "faq": [
+      {
+        "a": "간호사, 물리치료사, 영양사, 운동전문가 등이 방문하여 건강관리 서비스를 제공합니다.",
+        "q": "전문인력은 어떤 분야의 전문가가 제공하나요?"
+      }
+    ],
+    "note": "선정 기준이 없으므로 신청자는 모두 동일하게 서비스를 받을 수 있습니다.",
+    "steps": [
+      {
+        "body": "보건소를 직접 방문하여 신청합니다. 방문 시 담당 직원에게 방문 신청 의사를 밝히시면 됩니다. 신청서 작성은 필요하지 않습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "보건복지부에서 전국의 어르신을 대상으로 보건소 전문인력이 가정 등을 방문해 건강문제 평가와 운동·영양 상담 등 맞춤형 관리 서비스를 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "보건소마다 상이하므로 신청 시 보건소에 사전 문의 필요",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "senior"
+  ],
+  "benefit_raw": "○ 간호사, 물리치료사, 영양사, 운동전문가 등 전문인력이 가정 등을 방문하여 개별 건강문제를 평가하고 운동·영양 상담 등 건강관리서비스 제공",
+  "category": "health",
+  "contact_raw": "보건복지상담센터/129",
+  "content_hash": "sha256:8a20494c435ae3bb8fcfecf6fa31c629",
+  "criteria_raw": "별도없음",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-20",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-135200000082",
+  "is_mock": false,
+  "last_checked": "2026-08-20",
+  "last_updated": "2026-08-20",
+  "law_raw": "",
+  "name": "보건소 방문건강관리 서비스",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000082",
+  "org": "보건복지부",
+  "primary_audience": "senior",
+  "receiver_raw": "보건소",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "보건소-방문건강관리-서비스",
+  "source": "bojo24",
+  "source_category_raw": "보건·의료 서비스(의료) 개인",
+  "source_id": "135200000082",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "사회·문화·경제적 건강취약계층\n- (예) 거동불편 65세 이상 독거노인",
+  "view_count": 14642
+}
