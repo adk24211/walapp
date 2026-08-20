@@ -1,0 +1,74 @@
+{
+  "_prose": {
+    "eligibility": [
+      "법정 인력 및 시설을 갖춘 비영리법인·단체이며 시도 추천을 받아 성평등가족부·고용노동부 장관이 지정한 여성새로일하기센터",
+      "재취업을 희망하는 경력단절여성 등",
+      "구직자",
+      "소상공인"
+    ],
+    "faq": [
+      {
+        "a": "성평등가족부가 주관하고 고용노동부와 협력하여 운영합니다.",
+        "q": "지원은 어느 기관에서 관리하나요?"
+      },
+      {
+        "a": "지원 지역은 전국이며, 지정된 여성새로일하기센터를 통해 서비스를 받을 수 있습니다.",
+        "q": "지원 지역은 어디까지인가요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "관할 여성새로일하기센터를 직접 방문하여 신청서를 제출합니다. 구비 서류인 방문신청서와 온라인 신청서를 함께 제출하시기 바랍니다. 상담 후 적합한 취업 지원 서비스가 연계됩니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "성평등가족부가 운영하는 여성새로일하기센터는 전국의 구직자와 소상공인에게 1:1 상담 후 취업 지원 서비스를 연계해 주는 지원사업입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "jobseeker",
+    "business"
+  ],
+  "benefit_raw": "○ 여성새로일하기센터에서 구직자 1:1 상담 후 적합한 취업 지원 서비스 연계",
+  "category": "jobs",
+  "contact_raw": "전국 여성새로일하기센터/1544-1199",
+  "content_hash": "sha256:e72b87e56fa4dc508ca0cff712482014",
+  "criteria_raw": "사업 지원 대상: 법정 인력 및 시설을 갖춘 비영리법인 또는 단체로써 시도의 추천을 통해 성평등가족부 ·고용노동부 장관이 지정한 여성새로일하기센터\n최종 사업 수혜자: 재취업을 희망하는 경력단절여성 등",
+  "deferred_detail": false,
+  "documents_raw": [
+    "방문신청 및 온라인 신청"
+  ],
+  "first_published": "2026-08-20",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-GEF000000070",
+  "is_mock": false,
+  "last_checked": "2026-08-20",
+  "last_updated": "2026-08-20",
+  "law_raw": "",
+  "name": "여성새로일하기센터 운영지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GEF000000070",
+  "org": "성평등가족부",
+  "primary_audience": "jobseeker",
+  "receiver_raw": "전국 여성새로일하기센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "여성새로일하기센터-운영지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 상담/법률지원\n서비스(일자리) 개인",
+  "source_id": "GEF000000070",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "사업 지원 대상: 법정 인력 및 시설을 갖춘 비영리법인 또는 단체로써 시도의 추천을 통해 성평등가족부 ·고용노동부 장관이 지정한 여성새로일하기센터\n최종 사업 수혜자: 재취업을 희망하는 경력단절여성 등",
+  "view_count": 6313
+}

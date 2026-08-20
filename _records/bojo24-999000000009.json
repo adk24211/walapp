@@ -1,0 +1,73 @@
+{
+  "_prose": {
+    "eligibility": [
+      "우선지원대상기업, 중견기업 및 사회적기업이어야 합니다.",
+      "60세 이상 피보험자 비율이 30%를 초과하지 않아야 합니다.",
+      "정년퇴직자 계속고용제도를 도입한 사업주여야 합니다.",
+      "정년도래자를 계속 고용하고 있어야 합니다."
+    ],
+    "faq": [
+      {
+        "a": "고용노동부가 담당합니다.",
+        "q": "이 제도를 담당하는 부서는 어디인가요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "고용노동부 홈페이지 또는 직접 방문하여 신청합니다. 신청 시 계속고용된 근로자의 근로계약서 사본, 월별 임금대장 및 임금지급 증명서류, 정년 운영 및 계속고용제도 도입 사실을 증명하는 서류를 제출하셔야 합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "고령자 계속고용장려금은 고용노동부가 전국에서 시행하는 제도로, 정년퇴직자를 계속 고용하는 사업주에게 3년간 분기당 90만원(비수도권은 120만원)을 지원합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "분기별",
+    "start": ""
+  },
+  "apply_url": "https://www.work24.go.kr",
+  "audiences": [
+    "senior",
+    "business"
+  ],
+  "benefit_raw": "○ 정년도래자를 계속고용하는 사업주에게 계속고용 근로자 1인당 분기 90만원씩 3년간 지원(비수도권 사업주의 경우, '26.1분기 지원대상부터 근로자 1인당 분기 120만원씩 3년간 지원)",
+  "category": "jobs",
+  "contact_raw": "고용노동부 고객상담센터/1350",
+  "content_hash": "sha256:81ca36e4fa23d9ae88953e397eb3f6d2",
+  "criteria_raw": "○ 정년퇴직자 계속고용제도(정년연장, 폐지, 재고용) 도입 후 정년도래를 계속고용하는 사업주",
+  "deferred_detail": false,
+  "documents_raw": [
+    "○ 계속고용된 근로자의 근로계약서 사본",
+    "○ 계속고용된 근로자의 월별 임금대장 및 임금지급 증명서류",
+    "○ 정년 운영 및 계속고용제도 도입 사실을 증명할 수 있는 서류(취업규칙",
+    "단체협약 등)"
+  ],
+  "first_published": "2026-08-20",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-999000000009",
+  "is_mock": false,
+  "last_checked": "2026-08-20",
+  "last_updated": "2026-08-20",
+  "law_raw": "",
+  "name": "고령자 계속고용장려금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000009",
+  "org": "고용노동부",
+  "primary_audience": "senior",
+  "receiver_raw": "고용센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "고령자-계속고용장려금",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 법인/시설/단체",
+  "source_id": "999000000009",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 우선지원대상기업, 중견기업 및 사회적기업\n\n* 60세이상 피보험자 수가 30%초과 기업 제외",
+  "view_count": 21695
+}

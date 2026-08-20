@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "65세 이상 개인 한정 또는 부부 특약 자동차 운전보험 가입자",
+      "인지 지각검사에 합격한 자",
+      "3년 이내 이수한 교육 수료증을 제출한 자"
+    ],
+    "faq": [
+      {
+        "a": "교통안전교육을 이수하고 수료증을 제출하면, 이후 2년간 자동차 보험료가 5% 할인됩니다.",
+        "q": "보험료 할인은 언제부터 적용되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청 페이지에서 수강 신청서를 작성하고, 인지 지각검사 합격 증명서와 교육 수료증을 첨부하여 제출하시면 됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "고령 운전자를 대상으로 65세 이상이 인지 지각검사와 교통안전교육을 이수하면 2년간 자동차 보험료를 5% 할인받고, 야광지팡이 등 맞춤형 안전용품을 제공받는 서비스입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "https://www.safedriving.or.kr/eduSeOldWebEdu/eduSeOldWebEduOperGuide.do?menuCode=MN-PO-1322",
+  "audiences": [
+    "parent",
+    "senior"
+  ],
+  "benefit_raw": "○ 고령 운전자 대상으로 ‘노인 특별 교통안전 교육’ 활성화 65세 이상 노인이 도로교통공단에서 실시하는 교통안전교육을 받으면(인지 지각검사 1시간, 교통안전교육 2시간) 2년간 5% 보험료 할인\n\n○ 노인 보행자에 대한 시인성 제고를 위한 야광지팡이 등 맞춤형 안전용품 제작 배포",
+  "category": "living",
+  "contact_raw": "도로교통공단 안전운전 통합민원/1577-1120",
+  "content_hash": "sha256:e55eb21a0bafaf2c070c1aed46894b68",
+  "criteria_raw": "○ 지원 대상\n- 개인 한정 또는 부부 특약 자동차 운전보험 가입자\n\n○ 연령 기준\n- 65세 이상\n\n○ 기타 기준\n- 인지 지각검사에 합격하고 3년 이내 이수한 교육 수료증 제출",
+  "deferred_detail": false,
+  "documents_raw": [
+    "수강 신청서(교육장 비치)"
+  ],
+  "first_published": "2026-08-20",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-SD0000015528",
+  "is_mock": false,
+  "last_checked": "2026-08-20",
+  "last_updated": "2026-08-20",
+  "law_raw": "",
+  "name": "고령운전자 교통안전교육 서비스 제공",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000015528",
+  "org": "경찰청",
+  "primary_audience": "senior",
+  "receiver_raw": "도로교통공단콜센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "고령운전자-교통안전교육-서비스-제공",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 이용권\n현금(감면) 개인",
+  "source_id": "SD0000015528",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 65세 이상의 개인 한정 또는 부부 특약 자동차 운전보험 가입자로서 인지 지각검사에 합격하고 3년 이내 이수한 교육 수료증 제출한 자",
+  "view_count": 8805
+}

@@ -1,0 +1,71 @@
+{
+  "_prose": {
+    "eligibility": [
+      "실직으로 인한 불안·우울을 호소하는 취업 취약계층",
+      "국민취업지원제도 참여자",
+      "실업급여 수급자",
+      "장기실직자 등"
+    ],
+    "faq": [
+      {
+        "a": "1회기에서 초기 스트레스 측정을 하고, 이후 최대 6회기까지 심층 상담과 추가 스트레스 측정 및 만족도 조사를 제공합니다.",
+        "q": "지원은 몇 회까지 진행되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "관할 고용노동부 사무소를 직접 방문하여 신청합니다. 구비 서류는 필요하지 않으며, 신청 시 지원 대상 여부를 확인합니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "심리안정지원 프로그램은 실직으로 인한 불안·우울을 겪는 취업 취약계층에게 스트레스 측정·관리와 심층 상담을 제공하는 지원 사업이며, 고용노동부가 전국에서 주관하고 구직자·저소득 가구·소상공인도 대상에 포함됩니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "jobseeker",
+    "lowincome",
+    "business"
+  ],
+  "benefit_raw": "ㅇ 1회기 : 1차 스트레스 측정 및 스트레스 관리기법 전수, 개인별 주 호소문제 확인\nㅇ 6회기까지 : 개인별 고충 문제에 따른 후속 심층 상담, 추가 스트레스 측정 및 만족도 조사 실시\nㅇ 필요시 정신건강복지센터, 전국민마음투자지원사업 등 정신건강서비스 연계 지원",
+  "category": "jobs",
+  "contact_raw": "고용노동부 고객상담센터/1350",
+  "content_hash": "sha256:13748549628e9fbee0612e02fe619b24",
+  "criteria_raw": "○ 국민취업지원제도 참여자, 실업급여 수급자, 장기실직자 등",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-20",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-149200000146",
+  "is_mock": false,
+  "last_checked": "2026-08-20",
+  "last_updated": "2026-08-20",
+  "law_raw": "",
+  "name": "심리안정지원 프로그램",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000146",
+  "org": "고용노동부",
+  "primary_audience": "jobseeker",
+  "receiver_raw": "고용센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "심리안정지원-프로그램",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타(상담)\n상담/법률지원\n서비스(일자리) 개인",
+  "source_id": "149200000146",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 실직으로 인한 불안, 우울 등을 호소하는 취업 취약계층",
+  "view_count": 6433
+}

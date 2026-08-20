@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "구직자이거나 소상공인이어야 합니다.",
+      "최근 1년간 직업능력개발훈련을 받은 사실이 없어야 합니다.",
+      "고용센터의 직업소개·집단·심층상담에 3회 이상 참여했으나 취업하지 못한 경우입니다.",
+      "해당 직업에 대한 노동시장 수요가 급격히 감소했어야 합니다.",
+      "국가기술자격증 보유 여부와 관계없이 해당 기술의 수요 감소가 인정되어야 합니다.",
+      "훈련을 받으면 재취업이 쉬울 것으로 인정되는 경우입니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "고용노동부 산하 고용센터를 직접 방문하여 실업인정신청서와 수강증명서를 제출합니다. 서류 검토 후 훈련 기간 중 실업 인정일에 대해 구직급여를 지급받게 됩니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "훈련연장급여는 구직자와 소상공인이 직업능력개발훈련을 받는 동안 실업 인정일에 구직급여를 전액 지급받을 수 있는 제도이며, 최근 1년간 훈련을 받지 않았고 고용센터 상담에 3회 이상 참여했으며 해당 직업의 시장 수요가 급감한 경우에 지원됩니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "해당 실업인정일",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "jobseeker",
+    "business"
+  ],
+  "benefit_raw": "○ 훈련을 받는 기간 중 실업의 인정을 받은 날에 대해 구직급여의 100%를 최대 2년간 지급",
+  "category": "jobs",
+  "contact_raw": "고용노동부 고객상담센터/1350",
+  "content_hash": "sha256:79a823dbc868b48e3cb1cf4e7ddd4a3e",
+  "criteria_raw": "지원대상과 동일",
+  "deferred_detail": false,
+  "documents_raw": [
+    "실업인정신청서",
+    "수강증명서"
+  ],
+  "first_published": "2026-08-20",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-999000000012",
+  "is_mock": false,
+  "last_checked": "2026-08-20",
+  "last_updated": "2026-08-20",
+  "law_raw": "",
+  "name": "훈련연장급여",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000012",
+  "org": "고용노동부",
+  "primary_audience": "jobseeker",
+  "receiver_raw": "고용노동부 구직급여 수급중인 관할 고용센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "훈련연장급여",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 개인",
+  "source_id": "999000000012",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 다음의 요건을 모두 갖춘 경우에 훈련을 받도록 지시할 수 있고, 지시 받은 훈련을 받는 사람\n- 직업능력개발훈련을 받으면 재취업이 쉽다고 인정될 것\n- 국가기술자격증이 없거나 있는 경우에도 그 기술에 대한 노동시장의 수요가 급격히 감소하였을 것\n- 최근 1년간 직업능력개발훈련을 받은 사실이 없어야 함\n- 고용센터의 직업소개 또는 집단, 심층상담에 3회 이상 응하였으나 취업하지 못한 경우",
+  "view_count": 6466
+}
