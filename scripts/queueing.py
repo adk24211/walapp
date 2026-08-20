@@ -97,7 +97,7 @@ def score(record: ProgramRecord, today: date, percentile: float) -> tuple[float,
     else:
         audience_factor = 0.4
 
-    # ④ 마감 임박도
+    # ④ 마감 예정도
     days_left = record.apply_period.days_left(today)
     if days_left is None:
         deadline_factor = 0.5           # 상시 접수 — 급하지 않지만 꾸준히 검색된다

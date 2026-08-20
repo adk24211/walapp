@@ -7,23 +7,53 @@ permalink: /404.html
 top_notice: true
 ---
 
-<div class="legal-page" style="text-align:center;">
-  <h1 style="font-size:64px; border:none;">404</h1>
-  <p style="font-size:18px; margin-bottom:1rem;">요청하신 페이지를 찾을 수 없습니다.</p>
-  <p style="color:var(--ink3); font-size:.92rem; margin-bottom:2rem;">
-    주소가 바뀌었거나, 정리가 끝나 내린 페이지일 수 있습니다.
-    찾으시는 제도가 있다면 검색이나 전체 목록에서 확인하실 수 있습니다.
-  </p>
-  {% comment %} 고지는 목록으로 넘어가는 버튼보다 위에 둔다 {% endcomment %}
-  <div style="text-align:left; margin-bottom:2rem;">
-    {% if page.top_notice %}{% include site-notice.html %}{% endif %}
+{% comment %}
+  ── 404 ──
+  막다른 길에 세워 두지 않는 것이 이 화면의 전부다. 예전에는 '검색하기' 버튼만
+  줬는데, 찾던 것이 있어서 여기까지 온 사람에게 한 번 더 누르라고 하는 셈이었다.
+  그래서 검색창을 바로 두고, 많이 찾는 제도도 몇 개 깔아 둔다.
+{% endcomment %}
+
+<div class="page-header">
+  <div class="ph-top">
+    <span class="ph-issue">404</span>
   </div>
-  <p>
-    <a href="{{ '/support/' | relative_url }}" class="cta-primary">전체 지원 제도 보기</a>
+  <h1 class="ph-title">찾으시는 페이지가 없습니다</h1>
+  <p class="ph-sub">
+    주소가 바뀌었거나, 정리가 끝나 내린 페이지일 수 있습니다.
+    아래에서 제도를 바로 찾아보실 수 있습니다.
   </p>
-  <p style="margin-top:1rem;">
-    <a href="{{ '/search/' | relative_url }}" class="header-link" style="border:1px solid var(--line2);">검색하기</a>
-    &nbsp;
-    <a href="{{ '/' | relative_url }}" class="header-link" style="border:1px solid var(--line2);">홈으로</a>
+  {% if page.top_notice %}{% include site-notice.html %}{% endif %}
+</div>
+
+<div class="feed">
+  {% comment %}
+    검색 페이지의 입력창과 같은 생김새를 쓴다. 여기서 입력하면 /search/ 로
+    넘어가면서 검색어를 함께 넘긴다 (assets/js/main.js 가 처리).
+  {% endcomment %}
+  <form class="search-box" action="{{ '/search/' | relative_url }}" method="get" role="search">
+    {% include icon.html name="search" %}
+    <input type="search" name="q" placeholder="제도명·기관·키워드 (예: 청년 월세, 장학금)"
+           autocomplete="off" aria-label="제도 검색">
+  </form>
+
+  {% comment %} 많이 찾는 제도 — 조회수 순으로 여섯. 나갈 길을 실제로 준다. {% endcomment %}
+  {% assign popular = site.programs | where: "status", "active" | sort: "view_count" | reverse %}
+  {% if popular.size > 0 %}
+  <div class="section-group">
+    <div class="section-label">
+      <span class="sec-tag">많이 찾는 제도</span>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="cards">
+      {% for p in popular limit: 6 %}{% include program-card.html program=p show_category=true %}{% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <p class="hub-empty">
+    <a href="{{ '/support/' | relative_url }}">전체 지원 제도</a> ·
+    <a href="{{ '/deadline/' | relative_url }}">마감 예정</a> ·
+    <a href="{{ '/' | relative_url }}">홈으로</a>
   </p>
 </div>

@@ -308,6 +308,25 @@ def generate(record: ProgramRecord, client) -> dict:
     return _coerce(json.loads(raw))
 
 
+def _failed_generation(err: Exception, limit: int = 600) -> str:
+    """오류 응답에서 모델이 실제로 뱉은 것을 꺼낸다.
+
+    제공처가 failed_generation 필드에 원문을 넣어 준다. SDK 예외 모양이
+    버전마다 달라 여러 자리를 뒤진 뒤, 그래도 없으면 예외 문자열에서 찾는다.
+    """
+    for attr in ("body", "response"):
+        obj = getattr(err, attr, None)
+        if isinstance(obj, dict):
+            found = obj.get("error", {}).get("failed_generation")
+            if found:
+                return str(found)[:limit]
+    text = str(err)
+    m = re.search(r"'failed_generation':\s*(['\"])(.*?)\1", text, re.S)
+    if m:
+        return m.group(2)[:limit]
+    return ""
+
+
 def _call_with_retry(call, record: ProgramRecord):
     """한도(429)에 걸리면 기다렸다 같은 모델로 다시 부른다.
 
@@ -330,6 +349,15 @@ def _call_with_retry(call, record: ProgramRecord):
                     f"    제공처에서 모델이 내려갔거나 키에 권한이 없습니다.\n"
                     f"    WALAPP_LLM_MODEL 환경변수에 현재 쓸 수 있는 모델 이름을 넣으세요."
                 ) from e
+            # JSON 생성·검증 실패는 그 제도만 반려된다. 그런데 로그에는
+            # "실패했다" 만 남고 모델이 실제로 뭘 뱉었는지가 없어서, 프롬프트를
+            # 고쳐야 할지 모델 문제인지 판단할 수가 없었다(24건 중 3건).
+            # 오류 응답에 failed_generation 이 들어 있으니 앞부분을 남긴다.
+            if "failed to generate json" in text or "failed to validate json" in text:
+                snippet = _failed_generation(e)
+                if snippet:
+                    log.warning("JSON 실패 [%s] 모델 출력 앞부분: %s", record.id, snippet)
+                raise
             if "413" in text or "too large" in text:
                 # 프롬프트가 너무 길다 — 재시도해도 같으므로 출력만 줄여 한 번 더.
                 log.warning("프롬프트 초과 [%s] → 출력 길이를 줄여 재시도", record.id)

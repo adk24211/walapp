@@ -36,7 +36,7 @@ on:
       per_theme_limit:
         description: "테마당 발행 건수 (theme 방식)"
         required: false
-        default: "3"
+        default: "6"
       upcoming_limit:
         description: "시행 예정 발행 건수 (후보 없으면 0건)"
         required: false
@@ -104,7 +104,7 @@ jobs:
           MOCK_DATA: "0"
           POST_DATE: ${{ github.event.inputs.post_date }}
           PUBLISH_MODE: ${{ github.event.inputs.publish_mode || 'theme' }}
-          PER_THEME_LIMIT: ${{ github.event.inputs.per_theme_limit || '3' }}
+          PER_THEME_LIMIT: ${{ github.event.inputs.per_theme_limit || '6' }}
           UPCOMING_LIMIT: ${{ github.event.inputs.upcoming_limit || '1' }}
           PUBLISH_LIMIT: ${{ github.event.inputs.publish_limit || '5' }}
           REFRESH_LIMIT: ${{ github.event.inputs.refresh_limit || '10' }}
@@ -154,6 +154,12 @@ jobs:
         env:
           JEKYLL_ENV: production
           TZ: Asia/Seoul
+
+      # 빌드는 통과하는데 인라인 <script> 가 죽어 있을 수 있다. 실제로 검색
+      # 페이지가 그렇게 배포된 적이 있다 — 화면은 멀쩡하고 검색만 안 됐다.
+      # 실행하지 않고 컴파일만 하므로 브라우저가 필요 없고 몇 초면 끝난다.
+      - name: Check inline scripts
+        run: node scripts/check_inline_js.mjs
 
       - name: Deploy to GitHub Pages
         if: ${{ github.event.inputs.dry_run != 'true' }}

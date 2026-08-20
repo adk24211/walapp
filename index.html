@@ -94,7 +94,7 @@ top_notice: true
 
 <div class="topic-index">
 
-  {% comment %} ── 마감 임박 ── {% endcomment %}
+  {% comment %} ── 마감 예정 ── {% endcomment %}
   {% assign dated = open_rest | where_exp: "p", "p.apply_always != true" %}
   {% assign closing = dated | where_exp: "p", "p.apply_end" | sort: "apply_end" %}
   {% capture tx_deadline %}
@@ -109,7 +109,7 @@ top_notice: true
   {% if tx_deadline != "" %}
   <div class="tx-row is-deadline">
     <div class="tx-topic">
-      <a class="tx-name" href="{{ '/deadline/' | relative_url }}">마감 임박</a>
+      <a class="tx-name" href="{{ '/deadline/' | relative_url }}">마감 예정</a>
       <span class="tx-count">{{ closing | size }}건</span>
       <a class="tx-more" href="{{ '/deadline/' | relative_url }}">전체보기 <span aria-hidden="true">→</span></a>
     </div>
