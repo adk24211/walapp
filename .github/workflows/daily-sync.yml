@@ -159,7 +159,7 @@ jobs:
       # 페이지가 그렇게 배포된 적이 있다 — 화면은 멀쩡하고 검색만 안 됐다.
       # 실행하지 않고 컴파일만 하므로 브라우저가 필요 없고 몇 초면 끝난다.
       - name: Check inline scripts
-        run: node scripts/check_inline_js.mjs
+        run: node scripts/check_inline_js.mjs _site_check
 
       - name: Deploy to GitHub Pages
         if: ${{ github.event.inputs.dry_run != 'true' }}
