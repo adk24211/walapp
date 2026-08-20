@@ -89,7 +89,7 @@
     </a>
     <div class="header-right">
       <a href="/walapp/support/" class="header-link">전체 제도</a>
-      <a href="/walapp/deadline/" class="header-link">마감 임박</a>
+      <a href="/walapp/deadline/" class="header-link">마감 예정</a>
       <button class="theme-btn" id="theme-btn" aria-label="다크모드로 전환" hidden style="display:none">
         <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-moon"></use></svg>
 
@@ -228,9 +228,7 @@
               '<p class="card-desc">' + highlight(snippet(d.content, terms), terms) + '</p>' +
               '<div class="card-chips">' + chips + '</div>' +
               '<div class="card-footer">' +
-                '<div class="card-meta"><span>' + escapeHtml(d.org || d.date || '') + '</span></div>' +
-                '<span class="card-cta">자세히 보기 <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
-</span>' +
+                '<div class="card-meta"><span>' + escapeHtml(d.org || d.date || '') + '</span></div>' +'<span class="card-cta">자세히 보기 <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></span>' +
               '</div>' +
             '</div>' +
           '</div>' +
@@ -245,8 +243,16 @@
   });
 
   // ?q= 쿼리스트링 지원
+  //
+  // 값만 채우고 run() 을 부르지 않아서, 링크를 타고 온 사람은 검색어가 입력창에
+  // 적혀 있는데 결과가 비어 있는 화면을 봤다. 한 글자 더 쳐야 결과가 나왔다.
+  // 404 화면의 검색 폼이 여기로 넘기므로 반드시 바로 실행해야 한다.
   var params = new URLSearchParams(window.location.search);
-  if (params.get('q')) { input.value = params.get('q'); }
+  var initial = params.get('q');
+  if (initial) {
+    input.value = initial;
+    run(initial);
+  }
 })();
 </script>
 </main>
@@ -258,7 +264,7 @@
     </div>
     <div class="footer-links">
       <a href="/walapp/support/">전체 제도</a>
-      <a href="/walapp/deadline/">마감 임박</a>
+      <a href="/walapp/deadline/">마감 예정</a>
       <a href="/walapp/new/">새로 추가</a>
       <a href="/walapp/region/national/">지역별</a>
       <a href="/walapp/feed.xml">RSS</a>
