@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "만 20세 이상 65세 이하 대한민국 국민이어야 합니다.",
+      "청년, 장애인, 저소득 가구, 소상공인 등을 주요 대상으로 합니다.",
+      "취약계층(저소득층, 장애인, 여성가장, 북한이탈주민, 국가유공자, 보호종결청년, 경력단절여성)은 가점이 부여됩니다."
+    ],
+    "faq": [
+      {
+        "a": "지원 대상자는 푸드트럭 운영에 필요한 휴게시설 임대료와 수수료율을 감면받을 수 있습니다. 구체적인 감면 비율은 별도 안내됩니다.",
+        "q": "임대료 및 수수료율 감면은 어떤 형태로 제공되나요?"
+      }
+    ],
+    "note": "임대료·수수료 감면은 지원 대상자에 한해 적용됩니다.",
+    "steps": [
+      {
+        "body": "관할 기관인 한국도로공사 사무실을 직접 방문합니다. 공모 지원서와 사업계획서, 기타 증빙서류를 제출합니다. 제출 후 담당자가 서류를 검토합니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "고속도로 졸음쉼터 푸드트럭 창업 지원은 청년·장애인·저소득 가구·소상공인 등 만 20세~65세 대한민국 국민을 대상으로 임대료와 수수료를 감면해 창업을 돕는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "youth",
+    "disabled",
+    "lowincome",
+    "business"
+  ],
+  "benefit_raw": "○ 취업취약 계층이 휴게시설을 활용한 창업을 통해 자립할 수 있도록 지원\n- 임대료 및 수수료율 감면",
+  "category": "jobs",
+  "contact_raw": "휴게시설처/054-811-2337\n휴게시설처/054-811-2336",
+  "content_hash": "sha256:783d5a59f97dfabf386451d947d864b9",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "1.공모 지원서 및 사업계획서",
+    "2. 기타 증빙서류 홈페이지 공고문 참고"
+  ],
+  "first_published": "2026-08-21",
+  "how_to_raw": "방문신청\n직접입력",
+  "id": "bojo24-B50000400011",
+  "is_mock": false,
+  "last_checked": "2026-08-21",
+  "last_updated": "2026-08-21",
+  "law_raw": "",
+  "name": "고속도로 졸음쉼터 푸드트럭 창업 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B50000400011",
+  "org": "한국도로공사",
+  "primary_audience": "disabled",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "고속도로-졸음쉼터-푸드트럭-창업-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 서비스(일자리)\n시설이용\n현금(감면) 개인",
+  "source_id": "B50000400011",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 만 20세~65세 대한민국 국민\n- 취약계층 가점부여(저소득층, 장애인, 여성가장, 북한이탈주민, 국가유공자, 보호종결청년, 경력단절여성)",
+  "view_count": 11561
+}

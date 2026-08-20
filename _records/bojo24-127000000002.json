@@ -1,0 +1,75 @@
+{
+  "_prose": {
+    "eligibility": [
+      "기초생활수급자",
+      "장애인",
+      "범죄피해자"
+    ],
+    "faq": [
+      {
+        "a": "서비스는 전국 모든 지역에서 이용할 수 있습니다. 지방자치단체와 사회복지협의회 등에 배치된 변호사가 현장을 찾아갑니다.",
+        "q": "서비스는 어느 지역에서 이용할 수 있나요?"
+      },
+      {
+        "a": "법률홈닥터는 변호사 자격을 보유한 인력으로, 법무부가 채용하여 배치합니다. 이들은 취약계층을 대상으로 무료 법률상담을 제공합니다.",
+        "q": "법률홈닥터 변호사는 어떤 자격을 가지고 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청 페이지에서 신청서를 작성합니다. 신청 시 수급자 증명서·장애인 등록증·취약계층 확인서 등 증빙 서류를 첨부해야 합니다. 제출 후 관계기관에서 서류를 검토하여 신청이 접수됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "법무부가 변호사 자격자를 법률홈닥터로 채용해 전국의 기초생활수급자·장애인·범죄피해자 등 취약계층에게 출장·방문 상담 등 무료 법률서비스를 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "http://lawhomedoctor.moj.go.kr",
+  "audiences": [
+    "disabled",
+    "lowincome"
+  ],
+  "benefit_raw": "○법무부가 변호사 자격자를 법률홈닥터로 채용, 지방자치단체․사회복지협의회 등에 배치하여 기초생활수급자, 장애인, 범죄피해자 등 취약계층을 대상으로 출장, 방문 상담 등 ‘찾아가는 법률서비스’ 제공\n○기존 법률구조제도의 사각지대에 놓인 취약계층을 대상으로 수요자 중심의 맞춤형 법률상담, 법률문서 작성 조력, 유관기관 연계, 법교육 등 1차 무료 법률서비스 제공",
+  "category": "living",
+  "contact_raw": "법무부 인권국 인권구조과/02-2110-3824",
+  "content_hash": "sha256:1003690c605b1c0be9bfbaaacddc2fca",
+  "criteria_raw": "기초생활수급자, 장애인, 범죄피해자 등 사회적, 경제적 취약계층",
+  "deferred_detail": false,
+  "documents_raw": [
+    "수급자 증명서",
+    "장애인 등록증",
+    "취약계층별 확인서 등 지원 대상 취약계층에 해당함을 증명할 수 있는 서류"
+  ],
+  "first_published": "2026-08-21",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-127000000002",
+  "is_mock": false,
+  "last_checked": "2026-08-21",
+  "last_updated": "2026-08-21",
+  "law_raw": "",
+  "name": "취약계층 무료 법률서비스 제공(법률홈닥터 변호사)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/127000000002",
+  "org": "법무부",
+  "primary_audience": "disabled",
+  "receiver_raw": "법무부",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "취약계층-무료-법률서비스-제공-법률홈닥터-변호사",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타(상담) 개인",
+  "source_id": "127000000002",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "기초생활수급자, 장애인, 범죄피해자 등 사회적, 경제적 취약계층",
+  "view_count": 36080
+}

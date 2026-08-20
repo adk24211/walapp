@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "소상공인 기본법에 따른 소상공인이어야 합니다.",
+      "소상공인 정책자금 융자공고에 명시된 융자제외업종은 지원받을 수 없습니다.",
+      "사업자등록증 등 사업자증명 서류를 제출해야 합니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청하거나 직접 방문하여 신청합니다. 신청은 언제든지 가능하며, 별도의 신청 기간 제한은 없습니다.",
+        "title": "신청 방법"
+      },
+      {
+        "body": "신청서와 사업자등록증 등 필요한 서류를 준비합니다. 제출된 서류는 담당 부서에서 검토됩니다.",
+        "title": "구비 서류 제출"
+      },
+      {
+        "body": "매출·사업성 등을 종합적으로 평가하여 지원 대상자를 선정합니다. 선정 결과는 추후 통보됩니다.",
+        "title": "심사 및 선정"
+      }
+    ],
+    "summary": "소상공인 정책자금 융자 지원은 소상공인을 대상으로 일반경영안정자금·특별경영안정자금·성장기반자금 등을 제공하는 제도로, 중소벤처기업부가 전국에 걸쳐 운영합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "자금별 상이",
+    "start": ""
+  },
+  "apply_url": "https://ols.semas.or.kr",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ 정책목적에 따라 일반경영안정자금, 특별경영안정자금, 성장기반자금 등 지원",
+  "category": "jobs",
+  "contact_raw": "소상공인시장진흥공단 금융지원실/042-363-7203",
+  "content_hash": "sha256:942be23b7ee6e02208ae0069e27ffa8b",
+  "criteria_raw": "매출, 사업성 등을 고려하여 종합적으로 평가",
+  "deferred_detail": false,
+  "documents_raw": [
+    "신청서",
+    "사업자등록증 등"
+  ],
+  "first_published": "2026-08-21",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-SD0000007429",
+  "is_mock": false,
+  "last_checked": "2026-08-21",
+  "last_updated": "2026-08-21",
+  "law_raw": "",
+  "name": "소상공인 정책자금 융자 지원(일반경영안정자금, 특별경영안정자금, 성장기반자금 등)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000007429",
+  "org": "중소벤처기업부",
+  "primary_audience": "business",
+  "receiver_raw": "금융지원실",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "소상공인-정책자금-융자-지원-일반경영안정자금-특별경영안정자금-성장기반자금",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 소상공인",
+  "source_id": "SD0000007429",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 「소상공인 기본법」에 따른 소상공인\n※ 단, 소상공인 정책자금 융자공고에 따른 융자제외업종은 지원 불가",
+  "view_count": 72197
+}
