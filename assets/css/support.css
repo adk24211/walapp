@@ -1023,17 +1023,24 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
   .tx-row { grid-template-columns: 118px minmax(0, 1fr); gap: 0 1rem; padding: 1rem 1rem; }
   .tx-name { font-size: 1.08rem; }
   .tx-more { font-size: .7rem; padding: .18rem .5rem; }
-  .tx-item { padding: .6rem .65rem; }
+  .tx-item { padding: .7rem .75rem; }
   .tx-title { font-size: .88rem; }
 }
 /* 좁아지면 세 칸을 옆으로 못 놓는다. 주제 이름을 위로 올리고 세 건을 아래에 편다. */
 @media (max-width: 720px) {
-  .tx-row { grid-template-columns: minmax(0, 1fr); gap: .6rem; padding: 1rem .6rem; }
+  /* 좌우 .6rem 은 너무 얕았다. 주제 이름이 블록 모서리에 붙어 서 있고,
+     항목은 제 패딩만큼 더 들어가 있어서 제목이 본문 왼쪽으로 삐져나온
+     꼴로 읽혔다. 두 축이 서로 다른 자리에서 시작하면 그건 색인이 아니다. */
+  .tx-row { grid-template-columns: minmax(0, 1fr); gap: .6rem; padding: 1.15rem 1.1rem; }
   .tx-topic { flex-direction: row; align-items: baseline; gap: .45rem; flex-wrap: wrap; }
   .tx-name { font-size: 1.02rem; }
   .tx-more { margin-top: 0; margin-left: auto; }
-  .tx-list { grid-template-columns: minmax(0, 1fr); gap: 0; }
-  .tx-item { padding: .65rem .55rem; }
+  /* 항목의 좌우 패딩만큼 목록을 바깥으로 당긴다. 그래야 항목의 **글자**가
+     주제 이름과 같은 x 에서 시작한다. 패딩은 호버 칩의 크기지 들여쓰기가
+     아니다 — 당기지 않으면 여백을 늘릴수록 본문이 오른쪽으로 밀려난다.
+     당긴 뒤에도 칩은 행 안쪽(.4rem)에 머문다. */
+  .tx-list { grid-template-columns: minmax(0, 1fr); gap: 0; margin-inline: -.7rem; }
+  .tx-item { padding: .8rem .7rem; }
   .tx-item + .tx-item {
     border-left: 0;
     border-top: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
