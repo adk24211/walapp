@@ -115,14 +115,11 @@ def main() -> int:
         rec.content_hash = schema.compute_hash(rec)
         registry.save_record(rec, prose)
 
-        # registry 쪽 해시도 맞춘다. 위 주석 참고 — 이걸 빼면 다음 동기화가
+        # 원장 쪽 해시도 맞춘다. 위 주석 참고 — 이걸 빼면 다음 동기화가
         # 전부 '변경됨' 으로 잡는다. revision·last_updated 는 손대지 않는다.
-        entry = reg.get(pid)
-        if entry is not None:
-            entry.content_hash = rec.content_hash
-        else:
+        if not reg.sync_hash(rec):
             stale += 1
-            log.warning("registry 에 항목 없음 [%s] — 아직 발행되지 않은 레코드", pid)
+            log.warning("원장에 항목 없음 [%s] — 아직 발행되지 않은 레코드", pid)
 
         if prose is None:
             log.warning("해설 없음 [%s] — 레코드만 고치고 페이지는 건너뜁니다.", pid)
@@ -138,7 +135,7 @@ def main() -> int:
 
     log.info("완료 — 레코드 %d개 · 페이지 %d건 다시 씀%s", len(changed), written,
              f" · {skipped}건 건너뜀" if skipped else "")
-    log.info("registry 해시 %d건 갱신%s", len(changed) - stale,
+    log.info("원장 해시 %d건 갱신%s", len(changed) - stale,
              f" · {stale}건은 미발행이라 건너뜀" if stale else "")
     log.info("revision·last_updated 는 그대로입니다. 다음 동기화에서 '동일'로 잡힙니다.")
     return 0
