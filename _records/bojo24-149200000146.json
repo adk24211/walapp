@@ -30,13 +30,12 @@
   "apply_url": "",
   "audiences": [
     "jobseeker",
-    "lowincome",
     "business"
   ],
   "benefit_raw": "ㅇ 1회기 : 1차 스트레스 측정 및 스트레스 관리기법 전수, 개인별 주 호소문제 확인\nㅇ 6회기까지 : 개인별 고충 문제에 따른 후속 심층 상담, 추가 스트레스 측정 및 만족도 조사 실시\nㅇ 필요시 정신건강복지센터, 전국민마음투자지원사업 등 정신건강서비스 연계 지원",
   "category": "jobs",
   "contact_raw": "고용노동부 고객상담센터/1350",
-  "content_hash": "sha256:13748549628e9fbee0612e02fe619b24",
+  "content_hash": "sha256:930ed4a39b898439581411c93c714d15",
   "criteria_raw": "○ 국민취업지원제도 참여자, 실업급여 수급자, 장기실직자 등",
   "deferred_detail": false,
   "documents_raw": [
