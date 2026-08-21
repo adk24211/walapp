@@ -28,13 +28,12 @@
   },
   "apply_url": "https://www.sbiz24.kr",
   "audiences": [
-    "parent",
     "business"
   ],
   "benefit_raw": "예비창업자의 성공적인 창업을 위한 보육공간 및 창업프로그램, 후속연계지원, 사업화자금 등 패키지 지원",
   "category": "jobs",
   "contact_raw": "로컬창업육성실 모두의창업TF/042-363-7738",
-  "content_hash": "sha256:e65f14c063066645c11f3403b9cff3b4",
+  "content_hash": "sha256:daae0033401ba93b0015698930172256",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

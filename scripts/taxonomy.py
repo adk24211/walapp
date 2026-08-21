@@ -265,11 +265,83 @@ def classify_category(*texts: str) -> str:
     return best
 
 
+# ── 대상 추정에서 걸러내는 문맥 ──
+#
+# 키워드가 본문에 있다고 그 사람이 신청 대상인 것은 아니다. 발행된 126건을
+# 전수로 훑어 보니 태그 294개 중에 이런 것들이 섞여 있었다:
+#
+#   · 전기 요금 복지할인 → 어르신
+#     "노인복지주택 … 감액대상에서 **제외합니다**"  — 제외 목록이다
+#   · 모두의창업(로컬트랙) → 양육가정
+#     "예비창업자를 위한 **보육**공간"  — 창업 인큐베이팅이지 아이 보육이 아니다
+#   · 자영업자 실업급여 → 어르신
+#     "**노인**장기요양기관을 운영하는 사람"  — 기관 이름이다
+#   · 노인장기요양보험 → 저소득
+#     "장기요양 **수급자**로 결정될 경우"  — 그 급여를 받는 사람이지 저소득이 아니다
+#
+# 반대로 놓치면 안 되는 것들이 훨씬 많다. '다자녀 가구 금리우대', '장애인 가구
+# 우대', '구직급여 수급자격' 처럼 본문 깊숙이 적힌 자격 경로가 진짜인 경우가
+# 절반이 넘는다. **받을 수 있는 사람이 제도를 못 찾는 쪽이 더 나쁘므로**,
+# 애매하면 남긴다. 여기 넣는 것은 '이건 신청 대상이 아니다' 가 분명한 것만이다.
+
+# ① 이 문구 안의 키워드는 세지 않는다. 그 대상을 볼 때만 blob 에서 지운다.
+#
+# ⚠️ **대상별로 나눠 둔 것이 핵심이다.** 처음엔 하나의 공용 목록으로 두고
+#    blob 에서 통째로 지웠는데, 한 문구에 서로 다른 대상의 키워드가 함께 들어
+#    있는 경우가 많아 멀쩡한 태그까지 날아갔다. "실업급여 수급자" 를 지우면
+#    '수급자'(저소득 오분류)만 사라지는 게 아니라 '실업'(구직자 — 이건 맞는
+#    태그다)까지 사라진다. 실제로 그렇게 행복주택·심리안정지원의 구직자
+#    태그가 잘못 제거됐다.
+NOT_AUDIENCE_PHRASES: dict[str, tuple[str, ...]] = {
+    # '보육' 이 창업 인큐베이팅을 뜻하는 자리
+    "parent": ("보육공간", "창업보육", "보육센터"),
+    # 결혼이민자는 신혼부부가 아니다
+    "newlywed": ("결혼이민",),
+    # '사업자' 가 소상공인을 뜻하지 않는 자리
+    "business": ("공공사업자", "사업자등록 없"),
+    # 법령·기관 이름 안의 '노인'
+    "senior": ("노인복지법", "노인복지주택", "노인장기요양기관", "노인복지시설"),
+    "disabled": ("장애인복지법",),
+    # 다른 급여를 받는 사람이라는 뜻의 '수급자' — 소득 기준이 아니다.
+    # (같은 문구의 '실업'·'구직' 은 구직자 태그로 살아 있어야 하므로 여기에만 둔다)
+    "lowincome": ("장기요양 수급자", "실업급여 수급자", "실업급여수급자",
+                  "구직급여 수급자", "수급자에게", "가족요양비"),
+}
+
+# ② 이 말이 키워드 가까이에 있으면 그 자리는 세지 않는다(제외·부정 문맥).
+#    키워드가 나오는 자리마다 확인해서, 전부 부정 문맥이면 태그를 주지 않는다.
+NEGATION_MARKERS = ("제외", "미지급", "지급하지", "해당하지", "아니한", "아닌 ", "불가")
+NEGATION_WINDOW = 30   # 앞뒤 글자 수
+
+
+def _counts_as_audience(blob: str, keyword: str) -> bool:
+    """이 키워드가 '신청 대상' 을 가리키는 자리에 한 번이라도 나오는가."""
+    start = 0
+    while True:
+        i = blob.find(keyword, start)
+        if i < 0:
+            return False
+        window = blob[max(0, i - NEGATION_WINDOW): i + len(keyword) + NEGATION_WINDOW]
+        if not any(m in window for m in NEGATION_MARKERS):
+            return True          # 부정 문맥이 아닌 자리가 하나라도 있으면 인정
+        start = i + 1
+
+
 def classify_audiences(*texts: str) -> list[str]:
-    """텍스트에서 대상을 추정. 복수 매칭 가능하며, 매칭이 없으면 빈 리스트."""
+    """텍스트에서 대상을 추정. 복수 매칭 가능하며, 매칭이 없으면 빈 리스트.
+
+    단순 부분일치가 아니다 — 위 NOT_AUDIENCE_PHRASES·NEGATION_MARKERS 참고.
+    규칙을 바꾸면 scripts/check_audience.py 를 먼저 돌린다.
+    """
     blob = " ".join(t for t in texts if t)
-    return [key for key, meta in AUDIENCES.items()
-            if any(kw in blob for kw in meta["keywords"])]
+    found = []
+    for key, meta in AUDIENCES.items():
+        scoped = blob
+        for phrase in NOT_AUDIENCE_PHRASES.get(key, ()):
+            scoped = scoped.replace(phrase, " ")
+        if any(_counts_as_audience(scoped, kw) for kw in meta["keywords"]):
+            found.append(key)
+    return found
 
 
 # ─────────────────────────────────────────────────────────────

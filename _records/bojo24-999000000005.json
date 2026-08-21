@@ -28,15 +28,13 @@
   },
   "apply_url": "https://www.work24.go.kr/",
   "audiences": [
-    "parent",
     "jobseeker",
-    "lowincome",
     "business"
   ],
   "benefit_raw": "○ 구직급여 수급 중 발생한 질병, 부상, 출산으로 취업이 불가능하여 실업인정을 받지 못한 날에 지급",
   "category": "jobs",
   "contact_raw": "고용노동부 고객상담센터/1350",
-  "content_hash": "sha256:2cf7a454e965bbdb4587a5fa21be97f0",
+  "content_hash": "sha256:e3839060375b6b91d22b2330c2e86861",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [
