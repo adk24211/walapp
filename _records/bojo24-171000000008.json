@@ -33,12 +33,13 @@
   },
   "apply_url": "",
   "audiences": [
-    "newlywed"
+    "newlywed",
+    "multicultural"
   ],
   "benefit_raw": "○ 다문화 가족(결혼이민자, 배우자 등)이 발송하는 국제 특급(EMS) 우편물에 대해 요금 감액(2025년 현재 10%)",
   "category": "living",
   "contact_raw": "우정사업본부 국제사업과/044-200-8290",
-  "content_hash": "sha256:2a892e33be730928119859162dc0062e",
+  "content_hash": "sha256:84382295f67346525a86b94599abfe55",
   "criteria_raw": "○ 외국인 등록증에 체류자격 F-6-1, F-6-2, F-6-3으로 명시된 자\n\n○ 다문화 가족지원법 제2조 제2호에 의한 결혼이민자, 귀화 허가를 받은 자임을 증빙할 수 있는 자\n\n○ 국적 취득자의 경우 주민등록증 및 가족관계증명서 등으로 확인 가능한 자",
   "deferred_detail": false,
   "documents_raw": [
@@ -54,7 +55,7 @@
   "name": "다문화가정 EMS 요금 할인 지원",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/171000000008",
   "org": "과학기술정보통신부",
-  "primary_audience": "newlywed",
+  "primary_audience": "multicultural",
   "receiver_raw": "국제사업과",
   "region": {
     "scope": "national",

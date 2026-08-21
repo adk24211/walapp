@@ -92,6 +92,11 @@
       "label": "소상공인",
       "emoji": "🏪",
       "desc": "소상공인·자영업자를 위한 지원 제도입니다."
+    },
+    "multicultural": {
+      "label": "다문화가족",
+      "emoji": "🌏",
+      "desc": "결혼이민자와 그 가족, 이주배경을 가진 분을 위한 제도입니다."
     }
   },
   "audience_order": [
@@ -102,7 +107,8 @@
     "disabled",
     "jobseeker",
     "lowincome",
-    "business"
+    "business",
+    "multicultural"
   ],
   "sido": {
     "seoul": "서울특별시",

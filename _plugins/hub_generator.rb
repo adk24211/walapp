@@ -85,6 +85,25 @@ module Walapp
       end
     end
 
+    # 한글 조사 — 앞 글자에 받침이 있으면 '을', 없으면 '를'.
+    #
+    # 여태 '을(를)' 로 적어 두고 있었다. 대상 허브 아홉 곳의 제목에 그대로
+    # 나가는 자리라(예: "다문화가족을(를) 위한 제도") 읽는 사람에게는 그냥
+    # 덜 다듬어진 문장으로 보인다.
+    #
+    # 한글 음절은 유니코드에서 가나다순으로 촘촘히 배열돼 있어, 시작점(가,
+    # 0xAC00)에서의 거리를 28로 나눈 나머지가 곧 받침 번호다. 0이면 받침이 없다.
+    # 한글이 아닌 글자로 끝나면(숫자·영문) 판단하지 않고 '를' 로 둔다.
+    def eul_reul(word)
+      last = word.to_s.strip[-1]
+      return "를" if last.nil?
+
+      code = last.ord
+      return "를" unless code.between?(0xAC00, 0xD7A3)
+
+      (code - 0xAC00) % 28 != 0 ? "을" : "를"
+    end
+
     def add_audience_hubs(site, taxonomy)
       # 대상별 색인. 개별 허브 8개는 오래 있었는데 그 축으로 들어가는 문이
       # 없었다 — 홈은 분야 축만 쓰고, /who/ 자체는 404 였다. 그래서 제도
@@ -105,7 +124,7 @@ module Walapp
         label = meta["label"] || key
         push(site, "/who/#{key}/",
              "title"    => "#{label} 지원금 총정리",
-             "heading"  => "#{meta['emoji']} #{label}을(를) 위한 제도",
+             "heading"  => "#{meta['emoji']} #{label}#{eul_reul(label)} 위한 제도",
              "eyebrow"  => "대상별",
              "blurb"    => meta["desc"],
              "hub_axis" => "audience",

@@ -6,7 +6,8 @@ source: "bojo24"
 category: living
 audiences:
   - newlywed
-primary_audience: newlywed
+  - multicultural
+primary_audience: multicultural
 view_count: 16781
 region_scope: national
 region_label: "전국"
