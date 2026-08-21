@@ -30,7 +30,7 @@
     "raw": "접수기관 별 상이",
     "start": ""
   },
-  "apply_url": "http://lawhomedoctor.moj.go.kr",
+  "apply_url": "https://lawhomedoctor.moj.go.kr",
   "audiences": [
     "disabled",
     "lowincome"
@@ -38,7 +38,7 @@
   "benefit_raw": "○법무부가 변호사 자격자를 법률홈닥터로 채용, 지방자치단체․사회복지협의회 등에 배치하여 기초생활수급자, 장애인, 범죄피해자 등 취약계층을 대상으로 출장, 방문 상담 등 ‘찾아가는 법률서비스’ 제공\n○기존 법률구조제도의 사각지대에 놓인 취약계층을 대상으로 수요자 중심의 맞춤형 법률상담, 법률문서 작성 조력, 유관기관 연계, 법교육 등 1차 무료 법률서비스 제공",
   "category": "living",
   "contact_raw": "법무부 인권국 인권구조과/02-2110-3824",
-  "content_hash": "sha256:1003690c605b1c0be9bfbaaacddc2fca",
+  "content_hash": "sha256:6416b52f937f81a6f27ef1d6d07816a5",
   "criteria_raw": "기초생활수급자, 장애인, 범죄피해자 등 사회적, 경제적 취약계층",
   "deferred_detail": false,
   "documents_raw": [

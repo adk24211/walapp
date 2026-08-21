@@ -26,7 +26,7 @@
     "raw": "상시신청",
     "start": ""
   },
-  "apply_url": "http://www.bokjiro.go.kr",
+  "apply_url": "https://www.bokjiro.go.kr",
   "audiences": [
     "disabled",
     "lowincome"
@@ -34,7 +34,7 @@
   "benefit_raw": "○ 장애수당\n- 국민기초생활 보장 생계 또는 의료급여수급자 : 60,000원/월\n- 보장시설 수급자(생계, 의료) : 30,000원/월\n- 국민기초생활 보장 주거 또는 교육급여수급자(단, 생계 또는 의료급여수급자 제외), 차상위계층 : 60,000원/월",
   "category": "finance",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:927657303205417181f8b265bbc282e1",
+  "content_hash": "sha256:bb598923ee13c548851948eda187cfe3",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [
