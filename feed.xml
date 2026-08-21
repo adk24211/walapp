@@ -4,8 +4,200 @@
   <subtitle>정부·지자체 지원금과 복지 제도를 받을 수 있는지부터 신청 방법까지 하나씩 정리합니다. 공공데이터 원문을 토대로 쉬운 말로 풀어 씁니다.</subtitle>
   <link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html"/>
-  <updated>2026-08-21T21:02:35+09:00</updated>
+  <updated>2026-08-22T07:52:40+09:00</updated>
   <id>https://adk24211.github.io/walapp/</id>
+  <entry>
+    <title type="text">철도 공공할인 서비스(경로)</title>
+    <link href="https://adk24211.github.io/walapp/support/living/%EC%B2%A0%EB%8F%84-%EA%B3%B5%EA%B3%B5%ED%95%A0%EC%9D%B8-%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B2%BD%EB%A1%9C/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/%EC%B2%A0%EB%8F%84-%EA%B3%B5%EA%B3%B5%ED%95%A0%EC%9D%B8-%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B2%BD%EB%A1%9C/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>한국철도공사</name></author><category term="living"/>
+    <summary type="text">철도 공공할인 서비스(경로)는 만 65세 이상 어르신을 대상으로 전국의 KTX·새마을호·무궁화호 열차 요금을 각각 30% 할인해 주는 제도이며, 온라인으로 상시 신청할 수 있습니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">해외취업정착지원금</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%ED%95%B4%EC%99%B8%EC%B7%A8%EC%97%85%EC%A0%95%EC%B0%A9%EC%A7%80%EC%9B%90%EA%B8%88/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%ED%95%B4%EC%99%B8%EC%B7%A8%EC%97%85%EC%A0%95%EC%B0%A9%EC%A7%80%EC%9B%90%EA%B8%88/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
+    <summary type="text">해외취업정착지원금은 만 34세 이하 청년이 해외취업 후 연봉 1,700만원 이상 조건을 충족하고 월드잡플러스에 사전구직등록을 하면, 최대 500만원을 3회에 걸쳐 지원받을 수 있는 제도이며, 지원 인원은 3,900명으로 제한됩니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">한국폴리텍대학 훈련생 훈련장려금등 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%ED%95%9C%EA%B5%AD%ED%8F%B4%EB%A6%AC%ED%85%8D%EB%8C%80%ED%95%99-%ED%9B%88%EB%A0%A8%EC%83%9D-%ED%9B%88%EB%A0%A8%EC%9E%A5%EB%A0%A4%EA%B8%88%EB%93%B1-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%ED%95%9C%EA%B5%AD%ED%8F%B4%EB%A6%AC%ED%85%8D%EB%8C%80%ED%95%99-%ED%9B%88%EB%A0%A8%EC%83%9D-%ED%9B%88%EB%A0%A8%EC%9E%A5%EB%A0%A4%EA%B8%88%EB%93%B1-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
+    <summary type="text">고용노동부가 관할하고 전국에서 시행되는 한국폴리텍대학 훈련생 훈련장려금등 지원은, 15세 이상 미취업자로 폴리텍 직업훈련과정을 수강하며 매월 출석률 80% 이상인 훈련생에게 교통비와 훈련장려금을 제공하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">청년 일경험 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%B2%AD%EB%85%84-%EC%9D%BC%EA%B2%BD%ED%97%98-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%B2%AD%EB%85%84-%EC%9D%BC%EA%B2%BD%ED%97%98-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
+    <summary type="text">청년 일경험 지원은 15세 이상 34세 이하의 미취업 청년을 대상으로, 인턴형·프로젝트형·ESG지원형·사회적가치형 등 다양한 형태의 일경험을 제공하는 고용노동부 주관 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">제대군인 전직지원금</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%A0%9C%EB%8C%80%EA%B5%B0%EC%9D%B8-%EC%A0%84%EC%A7%81%EC%A7%80%EC%9B%90%EA%B8%88/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%A0%9C%EB%8C%80%EA%B5%B0%EC%9D%B8-%EC%A0%84%EC%A7%81%EC%A7%80%EC%9B%90%EA%B8%88/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>국가보훈부</name></author><category term="jobs"/>
+    <summary type="text">제대군인 전직지원금은 복무 기간이 5년 이상 19년 6개월 미만인 장기복무 제대군인이 전역 후 6개월 이내에 신청하면, 실업 상태에서 6개월간 월별 지원금을 받는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">전역예정군인 재취업 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%A0%84%EC%97%AD%EC%98%88%EC%A0%95%EA%B5%B0%EC%9D%B8-%EC%9E%AC%EC%B7%A8%EC%97%85-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%A0%84%EC%97%AD%EC%98%88%EC%A0%95%EA%B5%B0%EC%9D%B8-%EC%9E%AC%EC%B7%A8%EC%97%85-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>국방부</name></author><category term="jobs"/>
+    <summary type="text">전역예정장병을 대상으로 전직지원교육, 전직상담(경력상담 포함) 및 그 외 취업지원을 제공하는 전역예정군인 재취업 지원 제도이며, 국방부가 전국을 대상으로 온라인 신청을 받습니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">전남 구직자 자격증 취득지원</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%A0%84%EB%82%A8-%EA%B5%AC%EC%A7%81%EC%9E%90-%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%B7%A8%EB%93%9D%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%A0%84%EB%82%A8-%EA%B5%AC%EC%A7%81%EC%9E%90-%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%B7%A8%EB%93%9D%EC%A7%80%EC%9B%90/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>재단법인전남광주통합특별시중소기업일자리경제진흥원</name></author><category term="jobs"/>
+    <summary type="text">전남 구직자 자격증 취득지원은 전라남도에 거주하고 만 18세 이상인 미취업 구직자를 대상으로 국가기술·전문자격 시험 응시 비용을 1인당 최대 2회, 5만원 이내 실비로 지원하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">스타트업 AI 기술인력 양성</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85-ai-%EA%B8%B0%EC%88%A0%EC%9D%B8%EB%A0%A5-%EC%96%91%EC%84%B1/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85-ai-%EA%B8%B0%EC%88%A0%EC%9D%B8%EB%A0%A5-%EC%96%91%EC%84%B1/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>중소벤처기업진흥공단</name></author><category term="jobs"/>
+    <summary type="text">스타트업 AI 기술인력 양성은 중소벤처기업진흥공단이 전국 청년에게 인공지능 특화 교육을 무료로 제공하고, 취·창업 연계를 지원하는 제도이며, 교육 인프라와 프로젝트 경험도 제공합니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">사업주 직업능력개발 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%82%AC%EC%97%85%EC%A3%BC-%EC%A7%81%EC%97%85%EB%8A%A5%EB%A0%A5%EA%B0%9C%EB%B0%9C-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%82%AC%EC%97%85%EC%A3%BC-%EC%A7%81%EC%97%85%EB%8A%A5%EB%A0%A5%EA%B0%9C%EB%B0%9C-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
+    <summary type="text">고용보험에 가입한 사업주가 자체 또는 위탁으로 직업능력개발훈련을 실시하고, 수료 기준을 충족한 근로자·채용예정자·구직자에게 훈련비·인건비·수당·숙식비 등을 한도 내에서 지원하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">농식품분야 해외인턴십 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EB%86%8D%EC%8B%9D%ED%92%88%EB%B6%84%EC%95%BC-%ED%95%B4%EC%99%B8%EC%9D%B8%ED%84%B4%EC%8B%AD-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EB%86%8D%EC%8B%9D%ED%92%88%EB%B6%84%EC%95%BC-%ED%95%B4%EC%99%B8%EC%9D%B8%ED%84%B4%EC%8B%AD-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>농림축산식품부</name></author><category term="jobs"/>
+    <summary type="text">농림축산식품부가 전국 청년·소상공인을 대상으로 국제기구·해외기업 인턴십을 선발·파견하고 체재비를 지원하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">청년농업인 영농정착지원</title>
+    <link href="https://adk24211.github.io/walapp/support/housing/%EC%B2%AD%EB%85%84%EB%86%8D%EC%97%85%EC%9D%B8-%EC%98%81%EB%86%8D%EC%A0%95%EC%B0%A9%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/housing/%EC%B2%AD%EB%85%84%EB%86%8D%EC%97%85%EC%9D%B8-%EC%98%81%EB%86%8D%EC%A0%95%EC%B0%A9%EC%A7%80%EC%9B%90/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>농림축산식품부</name></author><category term="housing"/>
+    <summary type="text">청년농업인 영농정착지원은 전국의 만 18세 이상 만 40세 미만 청년 농업인을 대상으로 월 최대 110만원의 정착지원금과 농신보 우대보증, 농지임대 우선지원, 영농기술 교육 등을 제공하는 지원 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">농업인 경영부담 완화를 위한 농기계 임대료 감면</title>
+    <link href="https://adk24211.github.io/walapp/support/housing/%EB%86%8D%EC%97%85%EC%9D%B8-%EA%B2%BD%EC%98%81%EB%B6%80%EB%8B%B4-%EC%99%84%ED%99%94%EB%A5%BC-%EC%9C%84%ED%95%9C-%EB%86%8D%EA%B8%B0%EA%B3%84-%EC%9E%84%EB%8C%80%EB%A3%8C-%EA%B0%90%EB%A9%B4/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/housing/%EB%86%8D%EC%97%85%EC%9D%B8-%EA%B2%BD%EC%98%81%EB%B6%80%EB%8B%B4-%EC%99%84%ED%99%94%EB%A5%BC-%EC%9C%84%ED%95%9C-%EB%86%8D%EA%B8%B0%EA%B3%84-%EC%9E%84%EB%8C%80%EB%A3%8C-%EA%B0%90%EB%A9%B4/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>농림축산식품부</name></author><category term="housing"/>
+    <summary type="text">농업인의 경영 부담을 줄이기 위해 농기계임대사업소에서 임대료를 최대 50%까지 감면해 주는 제도이며, 전국의 농업인 및 여성·고령·GAP 인증 등 다양한 농업인에게 적용됩니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">의료급여 (요양비)</title>
+    <link href="https://adk24211.github.io/walapp/support/health/%EC%9D%98%EB%A3%8C%EA%B8%89%EC%97%AC-%EC%9A%94%EC%96%91%EB%B9%84/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/health/%EC%9D%98%EB%A3%8C%EA%B8%89%EC%97%AC-%EC%9A%94%EC%96%91%EB%B9%84/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="health"/>
+    <summary type="text">의료급여 수급권자가 긴급 상황이나 부득이한 사유로 의료급여기관 외에서 질병·부상·출산 치료를 받을 경우, 요양비 및 관련 의료재료 비용을 지원하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">노인복지용구제공</title>
+    <link href="https://adk24211.github.io/walapp/support/health/%EB%85%B8%EC%9D%B8%EB%B3%B5%EC%A7%80%EC%9A%A9%EA%B5%AC%EC%A0%9C%EA%B3%B5/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/health/%EB%85%B8%EC%9D%B8%EB%B3%B5%EC%A7%80%EC%9A%A9%EA%B5%AC%EC%A0%9C%EA%B3%B5/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="health"/>
+    <summary type="text">보건복지부가 전국의 어르신과 저소득 가구를 대상으로 연간 160만 원 상당의 일상생활·신체활동 지원 용구를 제공하는 노인복지용구제공 제도이며, 노인장기요양 등급판정을 받은 재가급여 이용 수급자를 우선 선정합니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">고위험 임산부 의료비 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/health/%EA%B3%A0%EC%9C%84%ED%97%98-%EC%9E%84%EC%82%B0%EB%B6%80-%EC%9D%98%EB%A3%8C%EB%B9%84-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/health/%EA%B3%A0%EC%9C%84%ED%97%98-%EC%9E%84%EC%82%B0%EB%B6%80-%EC%9D%98%EB%A3%8C%EB%B9%84-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="health"/>
+    <summary type="text">보건복지부가 전국의 고위험 임산부에게 입원치료 시 본인부담금 및 비급여 진료비 중 90%를 지원하는 의료비 지원 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">귀어 창업 및 주택구입 지원(융자)</title>
+    <link href="https://adk24211.github.io/walapp/support/finance/%EA%B7%80%EC%96%B4-%EC%B0%BD%EC%97%85-%EB%B0%8F-%EC%A3%BC%ED%83%9D%EA%B5%AC%EC%9E%85-%EC%A7%80%EC%9B%90-%EC%9C%B5%EC%9E%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/finance/%EA%B7%80%EC%96%B4-%EC%B0%BD%EC%97%85-%EB%B0%8F-%EC%A3%BC%ED%83%9D%EA%B5%AC%EC%9E%85-%EC%A7%80%EC%9B%90-%EC%9C%B5%EC%9E%90/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>해양수산부</name></author><category term="finance"/>
+    <summary type="text">귀어 창업 및 주택구입 지원(융자)은 해양수산부가 전국의 귀어업인·재촌비어업인(만 65세 이하)을 대상으로, 수협은행 융자 시 기준금리와 대출금리 차액 중 1.5%를 이자로 지원하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">화성시민 평생장학금</title>
+    <link href="https://adk24211.github.io/walapp/support/education/%ED%99%94%EC%84%B1%EC%8B%9C%EB%AF%BC-%ED%8F%89%EC%83%9D%EC%9E%A5%ED%95%99%EA%B8%88/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/education/%ED%99%94%EC%84%B1%EC%8B%9C%EB%AF%BC-%ED%8F%89%EC%83%9D%EC%9E%A5%ED%95%99%EA%B8%88/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>화성시인재육성재단</name></author><category term="education"/>
+    <summary type="text">화성시민 평생장학금은 화성시에 1년 이상 거주하고 만 19세 이상인 시민에게 평생학습 수강료 30만원을 지원하여 교육 기회를 균등하게 제공하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">학자금 대출이자 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/education/%ED%95%99%EC%9E%90%EA%B8%88-%EB%8C%80%EC%B6%9C%EC%9D%B4%EC%9E%90-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/education/%ED%95%99%EC%9E%90%EA%B8%88-%EB%8C%80%EC%B6%9C%EC%9D%B4%EC%9E%90-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>재단법인세종특별자치시인재육성평생교육진흥원</name></author><category term="education"/>
+    <summary type="text">학자금 대출이자 지원은 세종시에 1년 이상 거주하는 재학·휴학 중인 대학생·대학원생 또는 졸업 후 2년 이내 미취업 구직자를 대상으로 한국장학재단 대출 이자를 대신 상환해 주는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">시설급여</title>
+    <link href="https://adk24211.github.io/walapp/support/education/%EC%8B%9C%EC%84%A4%EA%B8%89%EC%97%AC/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/education/%EC%8B%9C%EC%84%A4%EA%B8%89%EC%97%AC/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="education"/>
+    <summary type="text">시설급여는 보건복지부가 전국에서 운영하는 장기 요양급여로, 어르신 및 저소득 가구 중 장기요양 1~2등급 수급자와 필요성을 인정받은 3~5등급 수급자에게 노인의료복지시설 등에서 장기간 입소해 신체활동 및 교육훈련을 제공하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">출산육아기 고용안정장려금</title>
+    <link href="https://adk24211.github.io/walapp/support/care/%EC%B6%9C%EC%82%B0%EC%9C%A1%EC%95%84%EA%B8%B0-%EA%B3%A0%EC%9A%A9%EC%95%88%EC%A0%95%EC%9E%A5%EB%A0%A4%EA%B8%88/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/%EC%B6%9C%EC%82%B0%EC%9C%A1%EC%95%84%EA%B8%B0-%EA%B3%A0%EC%9A%A9%EC%95%88%EC%A0%95%EC%9E%A5%EB%A0%A4%EA%B8%88/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="care"/>
+    <summary type="text">출산육아기 고용안정장려금은 양육가정을 대상으로 육아휴직·근로시간 단축·대체인력·업무분담 등에 대해 월 30만원부터 최대 140만원까지 금전 지원을 제공하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">재가급여</title>
+    <link href="https://adk24211.github.io/walapp/support/care/%EC%9E%AC%EA%B0%80%EA%B8%89%EC%97%AC/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/%EC%9E%AC%EA%B0%80%EA%B8%89%EC%97%AC/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="care"/>
+    <summary type="text">재가급여는 보건복지부가 전국에 걸쳐 제공하는 장기요양 서비스로, 65세 이상 노인 및 노인성 질병을 가진 65세 미만 국민에게 방문 요양·목욕·간호와 교육훈련을 지원합니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">임산부 및 영유아 영양플러스</title>
+    <link href="https://adk24211.github.io/walapp/support/care/%EC%9E%84%EC%82%B0%EB%B6%80-%EB%B0%8F-%EC%98%81%EC%9C%A0%EC%95%84-%EC%98%81%EC%96%91%ED%94%8C%EB%9F%AC%EC%8A%A4/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/%EC%9E%84%EC%82%B0%EB%B6%80-%EB%B0%8F-%EC%98%81%EC%9C%A0%EC%95%84-%EC%98%81%EC%96%91%ED%94%8C%EB%9F%AC%EC%8A%A4/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="care"/>
+    <summary type="text">임산부 및 영유아 영양플러스는 저소득 가구 중 영양위험요인을 가진 임산부·영아·유아에게 정기 영양교육과 맞춤 보충 식품패키지를 제공하는 보건복지부 주관 전국 지원 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">아동발달지원계좌(디딤씨앗통장) 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/care/%EC%95%84%EB%8F%99%EB%B0%9C%EB%8B%AC%EC%A7%80%EC%9B%90%EA%B3%84%EC%A2%8C-%EB%94%94%EB%94%A4%EC%94%A8%EC%95%97%ED%86%B5%EC%9E%A5-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/%EC%95%84%EB%8F%99%EB%B0%9C%EB%8B%AC%EC%A7%80%EC%9B%90%EA%B3%84%EC%A2%8C-%EB%94%94%EB%94%A4%EC%94%A8%EC%95%97%ED%86%B5%EC%9E%A5-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="care"/>
+    <summary type="text">아동발달지원계좌(디딤씨앗통장) 지원은 만 18세 미만 아동을 대상으로 보호대상·기초수급·차상위·한부모 가정 아동에게 월 10만 원까지 1:2 매칭펀드와 추가 적립을 제공하는 양육·돌봄 지원 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">맘편한 코레일</title>
+    <link href="https://adk24211.github.io/walapp/support/care/%EB%A7%98%ED%8E%B8%ED%95%9C-%EC%BD%94%EB%A0%88%EC%9D%BC/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/%EB%A7%98%ED%8E%B8%ED%95%9C-%EC%BD%94%EB%A0%88%EC%9D%BC/</id>
+    <published>2026-08-22T00:00:00+09:00</published>
+    <updated>2026-08-22T00:00:00+09:00</updated><author><name>한국철도공사</name></author><category term="care"/>
+    <summary type="text">코레일멤버십에 가입하고 임산부 등록을 완료한 양육가정을 대상으로 출산예정일 기준 1년까지 KTX·일반열차 요금을 할인해 주는 전국 대상 서비스입니다.</summary>
+  </entry>
   <entry>
     <title type="text">취약계층 무료 법률서비스 제공(법률홈닥터 변호사)</title>
     <link href="https://adk24211.github.io/walapp/support/living/%EC%B7%A8%EC%95%BD%EA%B3%84%EC%B8%B5-%EB%AC%B4%EB%A3%8C-%EB%B2%95%EB%A5%A0%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%A0%9C%EA%B3%B5-%EB%B2%95%EB%A5%A0%ED%99%88%EB%8B%A5%ED%84%B0-%EB%B3%80%ED%98%B8%EC%82%AC/" rel="alternate" type="text/html"/>
@@ -53,197 +245,5 @@
     <published>2026-08-21T00:00:00+09:00</published>
     <updated>2026-08-21T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
     <summary type="text">고용촉진장려금은 고용노동부가 전국의 사업주에게 장애인·구직자·소상공인 등 취업지원프로그램 이수자 또는 중증장애인·여성가장을 고용할 경우 일정 금액을 지원하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">고속도로 졸음쉼터 푸드트럭 창업 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EA%B3%A0%EC%86%8D%EB%8F%84%EB%A1%9C-%EC%A1%B8%EC%9D%8C%EC%89%BC%ED%84%B0-%ED%91%B8%EB%93%9C%ED%8A%B8%EB%9F%AD-%EC%B0%BD%EC%97%85-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EA%B3%A0%EC%86%8D%EB%8F%84%EB%A1%9C-%EC%A1%B8%EC%9D%8C%EC%89%BC%ED%84%B0-%ED%91%B8%EB%93%9C%ED%8A%B8%EB%9F%AD-%EC%B0%BD%EC%97%85-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-08-21T00:00:00+09:00</published>
-    <updated>2026-08-21T00:00:00+09:00</updated><author><name>한국도로공사</name></author><category term="jobs"/>
-    <summary type="text">고속도로 졸음쉼터 푸드트럭 창업 지원은 청년·장애인·저소득 가구·소상공인 등 만 20세~65세 대한민국 국민을 대상으로 임대료와 수수료를 감면해 창업을 돕는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">희귀질환자 의료비 지원사업</title>
-    <link href="https://adk24211.github.io/walapp/support/health/%ED%9D%AC%EA%B7%80%EC%A7%88%ED%99%98%EC%9E%90-%EC%9D%98%EB%A3%8C%EB%B9%84-%EC%A7%80%EC%9B%90%EC%82%AC%EC%97%85/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/health/%ED%9D%AC%EA%B7%80%EC%A7%88%ED%99%98%EC%9E%90-%EC%9D%98%EB%A3%8C%EB%B9%84-%EC%A7%80%EC%9B%90%EC%82%AC%EC%97%85/</id>
-    <published>2026-08-21T00:00:00+09:00</published>
-    <updated>2026-08-21T00:00:00+09:00</updated><author><name>질병관리청</name></author><category term="health"/>
-    <summary type="text">희귀질환자 의료비 지원사업은 질병관리청이 전국에서 운영하는 제도로, 산정특례에 등록된 희귀질환자와 저소득·장애인 가구에게 요양급여 본인부담금 및 간병·특수식이 비용을 지원합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">장애인구강진료센터를 설치 운영하여 장애인에 대한 치과 의료서비스 제공</title>
-    <link href="https://adk24211.github.io/walapp/support/health/%EC%9E%A5%EC%95%A0%EC%9D%B8%EA%B5%AC%EA%B0%95%EC%A7%84%EB%A3%8C%EC%84%BC%ED%84%B0%EB%A5%BC-%EC%84%A4%EC%B9%98-%EC%9A%B4%EC%98%81%ED%95%98%EC%97%AC-%EC%9E%A5%EC%95%A0%EC%9D%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%B9%98%EA%B3%BC-%EC%9D%98%EB%A3%8C%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%A0%9C%EA%B3%B5/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/health/%EC%9E%A5%EC%95%A0%EC%9D%B8%EA%B5%AC%EA%B0%95%EC%A7%84%EB%A3%8C%EC%84%BC%ED%84%B0%EB%A5%BC-%EC%84%A4%EC%B9%98-%EC%9A%B4%EC%98%81%ED%95%98%EC%97%AC-%EC%9E%A5%EC%95%A0%EC%9D%B8%EC%97%90-%EB%8C%80%ED%95%9C-%EC%B9%98%EA%B3%BC-%EC%9D%98%EB%A3%8C%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%A0%9C%EA%B3%B5/</id>
-    <published>2026-08-21T00:00:00+09:00</published>
-    <updated>2026-08-21T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="health"/>
-    <summary type="text">보건복지부가 전국에 장애인구강진료센터를 설치·운영하여 장애인에게 치과 비급여 진료비를 일부 지원하는 제도이며, 기초생활수급자와 치과영역 중증장애인에게 차등 지원 비율이 적용됩니다. 저소득 가구의 장애인도 지원 대상에 포함됩니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">노인실명예방사업</title>
-    <link href="https://adk24211.github.io/walapp/support/health/%EB%85%B8%EC%9D%B8%EC%8B%A4%EB%AA%85%EC%98%88%EB%B0%A9%EC%82%AC%EC%97%85/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/health/%EB%85%B8%EC%9D%B8%EC%8B%A4%EB%AA%85%EC%98%88%EB%B0%A9%EC%82%AC%EC%97%85/</id>
-    <published>2026-08-21T00:00:00+09:00</published>
-    <updated>2026-08-21T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="health"/>
-    <summary type="text">노인실명예방사업은 보건복지부가 전국에서 시행하는 사업으로, 만 60세 이상 저소득 노인에게 안 검진·눈 수술비 전액 지원과 저시력 예방교육을 제공하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">장애수당</title>
-    <link href="https://adk24211.github.io/walapp/support/finance/%EC%9E%A5%EC%95%A0%EC%88%98%EB%8B%B9/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/finance/%EC%9E%A5%EC%95%A0%EC%88%98%EB%8B%B9/</id>
-    <published>2026-08-21T00:00:00+09:00</published>
-    <updated>2026-08-21T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="finance"/>
-    <summary type="text">장애수당은 보건복지부가 전국에서 제공하는 제도로, 18세 이상 등록 장애인 중 중증이 아니며 국민기초생활보장수급자·차상위계층 등에게 매월 일정 금액을 지원합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">소상공인·자영업자 새출발기금 채무조정 프로그램</title>
-    <link href="https://adk24211.github.io/walapp/support/finance/%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8-%EC%9E%90%EC%98%81%EC%97%85%EC%9E%90-%EC%83%88%EC%B6%9C%EB%B0%9C%EA%B8%B0%EA%B8%88-%EC%B1%84%EB%AC%B4%EC%A1%B0%EC%A0%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/finance/%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8-%EC%9E%90%EC%98%81%EC%97%85%EC%9E%90-%EC%83%88%EC%B6%9C%EB%B0%9C%EA%B8%B0%EA%B8%88-%EC%B1%84%EB%AC%B4%EC%A1%B0%EC%A0%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/</id>
-    <published>2026-08-21T00:00:00+09:00</published>
-    <updated>2026-08-21T00:00:00+09:00</updated><author><name>한국자산관리공사</name></author><category term="finance"/>
-    <summary type="text">소상공인·자영업자를 위한 새출발기금 채무조정 프로그램은 코로나 기간 중 사업을 영위한 부실 차주에게 최대 15억원까지 담보·무담보 대출을 조정해 주는 지원 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">교육급여</title>
-    <link href="https://adk24211.github.io/walapp/support/finance/%EA%B5%90%EC%9C%A1%EA%B8%89%EC%97%AC/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/finance/%EA%B5%90%EC%9C%A1%EA%B8%89%EC%97%AC/</id>
-    <published>2026-08-21T00:00:00+09:00</published>
-    <updated>2026-08-21T00:00:00+09:00</updated><author><name>교육부</name></author><category term="finance"/>
-    <summary type="text">교육급여는 양육가정·저소득 가구 중 소득 인정액이 중위소득의 50% 이하인 학생에게 초·중·고등학교 및 평생교육 시설 재학 시 교육활동지원비와 교과서·입학금·수업료를 전액 지원하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">스포츠 강좌 이용권 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/care/%EC%8A%A4%ED%8F%AC%EC%B8%A0-%EA%B0%95%EC%A2%8C-%EC%9D%B4%EC%9A%A9%EA%B6%8C-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/care/%EC%8A%A4%ED%8F%AC%EC%B8%A0-%EA%B0%95%EC%A2%8C-%EC%9D%B4%EC%9A%A9%EA%B6%8C-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-08-21T00:00:00+09:00</published>
-    <updated>2026-08-21T00:00:00+09:00</updated><author><name>문화체육관광부</name></author><category term="care"/>
-    <summary type="text">스포츠 강좌 이용권 지원은 양육가정·장애인·저소득 가구의 만 5세~18세 청소년에게 월 10.5만 원 이내의 스포츠 강좌 수강료를 지원하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">글로벌 광고인재 육성</title>
-    <link href="https://adk24211.github.io/walapp/support/living/%EA%B8%80%EB%A1%9C%EB%B2%8C-%EA%B4%91%EA%B3%A0%EC%9D%B8%EC%9E%AC-%EC%9C%A1%EC%84%B1/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/living/%EA%B8%80%EB%A1%9C%EB%B2%8C-%EA%B4%91%EA%B3%A0%EC%9D%B8%EC%9E%AC-%EC%9C%A1%EC%84%B1/</id>
-    <published>2026-08-20T00:00:00+09:00</published>
-    <updated>2026-08-20T00:00:00+09:00</updated><author><name>문화체육관광부</name></author><category term="living"/>
-    <summary type="text">글로벌 광고인재 육성은 문화체육관광부가 전국 청년을 대상으로 진행하는 교육 지원 사업으로, 대학생·취업준비생·재직자를 위한 정규·특별 교육과정을 제공합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">고령운전자 교통안전교육 서비스 제공</title>
-    <link href="https://adk24211.github.io/walapp/support/living/%EA%B3%A0%EB%A0%B9%EC%9A%B4%EC%A0%84%EC%9E%90-%EA%B5%90%ED%86%B5%EC%95%88%EC%A0%84%EA%B5%90%EC%9C%A1-%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%A0%9C%EA%B3%B5/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/living/%EA%B3%A0%EB%A0%B9%EC%9A%B4%EC%A0%84%EC%9E%90-%EA%B5%90%ED%86%B5%EC%95%88%EC%A0%84%EA%B5%90%EC%9C%A1-%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%A0%9C%EA%B3%B5/</id>
-    <published>2026-08-20T00:00:00+09:00</published>
-    <updated>2026-08-20T00:00:00+09:00</updated><author><name>경찰청</name></author><category term="living"/>
-    <summary type="text">고령 운전자를 대상으로 65세 이상이 인지 지각검사와 교통안전교육을 이수하면 2년간 자동차 보험료를 5% 할인받고, 야광지팡이 등 맞춤형 안전용품을 제공받는 서비스입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">훈련연장급여</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%ED%9B%88%EB%A0%A8%EC%97%B0%EC%9E%A5%EA%B8%89%EC%97%AC/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%ED%9B%88%EB%A0%A8%EC%97%B0%EC%9E%A5%EA%B8%89%EC%97%AC/</id>
-    <published>2026-08-20T00:00:00+09:00</published>
-    <updated>2026-08-20T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
-    <summary type="text">훈련연장급여는 구직자와 소상공인이 직업능력개발훈련을 받는 동안 실업 인정일에 구직급여를 전액 지급받을 수 있는 제도이며, 최근 1년간 훈련을 받지 않았고 고용센터 상담에 3회 이상 참여했으며 해당 직업의 시장 수요가 급감한 경우에 지원됩니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">직업심리검사 서비스</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%A7%81%EC%97%85%EC%8B%AC%EB%A6%AC%EA%B2%80%EC%82%AC-%EC%84%9C%EB%B9%84%EC%8A%A4/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EC%A7%81%EC%97%85%EC%8B%AC%EB%A6%AC%EA%B2%80%EC%82%AC-%EC%84%9C%EB%B9%84%EC%8A%A4/</id>
-    <published>2026-08-20T00:00:00+09:00</published>
-    <updated>2026-08-20T00:00:00+09:00</updated><author><name>한국고용정보원</name></author><category term="jobs"/>
-    <summary type="text">직업심리검사 서비스는 한국고용정보원이 전국 청년·구직자·소상공인 등을 대상으로 개인의 능력·흥미·성격 등 심리 특성을 객관적으로 측정해 적합한 진로 선택을 돕는 온라인 기반 지원 프로그램입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">중장년 생애경력설계서비스</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%A4%91%EC%9E%A5%EB%85%84-%EC%83%9D%EC%95%A0%EA%B2%BD%EB%A0%A5%EC%84%A4%EA%B3%84%EC%84%9C%EB%B9%84%EC%8A%A4/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EC%A4%91%EC%9E%A5%EB%85%84-%EC%83%9D%EC%95%A0%EA%B2%BD%EB%A0%A5%EC%84%A4%EA%B3%84%EC%84%9C%EB%B9%84%EC%8A%A4/</id>
-    <published>2026-08-20T00:00:00+09:00</published>
-    <updated>2026-08-20T00:00:00+09:00</updated><author><name>노사발전재단</name></author><category term="jobs"/>
-    <summary type="text">중장년 생애경력설계서비스는 40세 이상 재직자와 구직자를 대상으로 생애경력 설계와 취·창업을 지원하는 종합 고용지원 프로그램입니다. 재직자는 생애조망·직업역량 도출·경력대안 개발·평생경력계획 수립 등을 지원받으며, 구직자는 제2의 인생 설계와 실행 과정을 지원받습니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">조기재취업수당</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%A1%B0%EA%B8%B0%EC%9E%AC%EC%B7%A8%EC%97%85%EC%88%98%EB%8B%B9/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EC%A1%B0%EA%B8%B0%EC%9E%AC%EC%B7%A8%EC%97%85%EC%88%98%EB%8B%B9/</id>
-    <published>2026-08-20T00:00:00+09:00</published>
-    <updated>2026-08-20T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
-    <summary type="text">조기재취업수당은 실업 신고 후 일정 기간이 지난 뒤 재취업하여 일정 기간 이상 고용 유지 시, 남은 실업급여 일수의 절반을 지원하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">여성새로일하기센터 운영지원</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%97%AC%EC%84%B1%EC%83%88%EB%A1%9C%EC%9D%BC%ED%95%98%EA%B8%B0%EC%84%BC%ED%84%B0-%EC%9A%B4%EC%98%81%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EC%97%AC%EC%84%B1%EC%83%88%EB%A1%9C%EC%9D%BC%ED%95%98%EA%B8%B0%EC%84%BC%ED%84%B0-%EC%9A%B4%EC%98%81%EC%A7%80%EC%9B%90/</id>
-    <published>2026-08-20T00:00:00+09:00</published>
-    <updated>2026-08-20T00:00:00+09:00</updated><author><name>성평등가족부</name></author><category term="jobs"/>
-    <summary type="text">성평등가족부가 운영하는 여성새로일하기센터는 전국의 구직자와 소상공인에게 1:1 상담 후 취업 지원 서비스를 연계해 주는 지원사업입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">심리안정지원 프로그램</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%8B%AC%EB%A6%AC%EC%95%88%EC%A0%95%EC%A7%80%EC%9B%90-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EC%8B%AC%EB%A6%AC%EC%95%88%EC%A0%95%EC%A7%80%EC%9B%90-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/</id>
-    <published>2026-08-20T00:00:00+09:00</published>
-    <updated>2026-08-20T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
-    <summary type="text">심리안정지원 프로그램은 실직으로 인한 불안·우울을 겪는 취업 취약계층에게 스트레스 측정·관리와 심층 상담을 제공하는 지원 사업이며, 고용노동부가 전국에서 주관하고 구직자·저소득 가구·소상공인도 대상에 포함됩니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">실업급여(구직급여) 수급자격 온라인 교육 서비스</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%8B%A4%EC%97%85%EA%B8%89%EC%97%AC-%EA%B5%AC%EC%A7%81%EA%B8%89%EC%97%AC-%EC%88%98%EA%B8%89%EC%9E%90%EA%B2%A9-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EA%B5%90%EC%9C%A1-%EC%84%9C%EB%B9%84%EC%8A%A4/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EC%8B%A4%EC%97%85%EA%B8%89%EC%97%AC-%EA%B5%AC%EC%A7%81%EA%B8%89%EC%97%AC-%EC%88%98%EA%B8%89%EC%9E%90%EA%B2%A9-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EA%B5%90%EC%9C%A1-%EC%84%9C%EB%B9%84%EC%8A%A4/</id>
-    <published>2026-08-20T00:00:00+09:00</published>
-    <updated>2026-08-20T00:00:00+09:00</updated><author><name>한국고용정보원</name></author><category term="jobs"/>
-    <summary type="text">실업급여(구직급여) 수급자격을 확인하고 온라인 교육을 받을 수 있는 서비스로, 고용보험 가입 실직자가 신청하며 전국에서 이용 가능합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">상병급여</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%83%81%EB%B3%91%EA%B8%89%EC%97%AC/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EC%83%81%EB%B3%91%EA%B8%89%EC%97%AC/</id>
-    <published>2026-08-20T00:00:00+09:00</published>
-    <updated>2026-08-20T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
-    <summary type="text">상병급여는 실업신고 후 질병·부상·출산으로 취업이 어려워 실업인정을 받지 못한 구직급여 수급자를 대상으로, 해당 기간에 급여를 추가로 지급하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">대‧중소기업 상생일자리 프로그램</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EB%8C%80-%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85-%EC%83%81%EC%83%9D%EC%9D%BC%EC%9E%90%EB%A6%AC-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EB%8C%80-%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85-%EC%83%81%EC%83%9D%EC%9D%BC%EC%9E%90%EB%A6%AC-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/</id>
-    <published>2026-08-20T00:00:00+09:00</published>
-    <updated>2026-08-20T00:00:00+09:00</updated><author><name>중소벤처기업진흥공단</name></author><category term="jobs"/>
-    <summary type="text">대‧중소기업 상생일자리 프로그램은 대·중견기업 협력사의 청년 구직자를 대상으로, 대기업 교육 인프라를 활용한 직무교육과 주당 10만원 훈련수당을 제공하는 전국적 일자리 지원 사업입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">구직자 취업역량강화 프로그램</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EA%B5%AC%EC%A7%81%EC%9E%90-%EC%B7%A8%EC%97%85%EC%97%AD%EB%9F%89%EA%B0%95%ED%99%94-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EA%B5%AC%EC%A7%81%EC%9E%90-%EC%B7%A8%EC%97%85%EC%97%AD%EB%9F%89%EA%B0%95%ED%99%94-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/</id>
-    <published>2026-08-20T00:00:00+09:00</published>
-    <updated>2026-08-20T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
-    <summary type="text">구직자 취업역량강화 프로그램은 직업 선택에 고민이 있거나 취업 의욕·구직 기술 향상이 필요한 구직자를 대상으로, 집단상담·취업특강 등 다양한 취업역량 강화 프로그램을 제공하는 지원 사업입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">구직자 직업훈련(취업지원) 및 훈련장려금 지급(한국폴리텍대학)</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EA%B5%AC%EC%A7%81%EC%9E%90-%EC%A7%81%EC%97%85%ED%9B%88%EB%A0%A8-%EC%B7%A8%EC%97%85%EC%A7%80%EC%9B%90-%EB%B0%8F-%ED%9B%88%EB%A0%A8%EC%9E%A5%EB%A0%A4%EA%B8%88-%EC%A7%80%EA%B8%89-%ED%95%9C%EA%B5%AD%ED%8F%B4%EB%A6%AC%ED%85%8D%EB%8C%80%ED%95%99/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EA%B5%AC%EC%A7%81%EC%9E%90-%EC%A7%81%EC%97%85%ED%9B%88%EB%A0%A8-%EC%B7%A8%EC%97%85%EC%A7%80%EC%9B%90-%EB%B0%8F-%ED%9B%88%EB%A0%A8%EC%9E%A5%EB%A0%A4%EA%B8%88-%EC%A7%80%EA%B8%89-%ED%95%9C%EA%B5%AD%ED%8F%B4%EB%A6%AC%ED%85%8D%EB%8C%80%ED%95%99/</id>
-    <published>2026-08-20T00:00:00+09:00</published>
-    <updated>2026-08-20T00:00:00+09:00</updated><author><name>학교법인한국폴리텍</name></author><category term="jobs"/>
-    <summary type="text">구직자 직업훈련(취업지원) 및 훈련장려금 지급은 전국의 만 15세 이상 구직자를 대상으로 산업 현장 맞춤형 기술교육을 제공하고, 교육비 전액 지원과 출석률 80% 이상 시 훈련장려금을 지급하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">고령자고용지원금</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EA%B3%A0%EB%A0%B9%EC%9E%90%EA%B3%A0%EC%9A%A9%EC%A7%80%EC%9B%90%EA%B8%88/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EA%B3%A0%EB%A0%B9%EC%9E%90%EA%B3%A0%EC%9A%A9%EC%A7%80%EC%9B%90%EA%B8%88/</id>
-    <published>2026-08-20T00:00:00+09:00</published>
-    <updated>2026-08-20T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
-    <summary type="text">고령자고용지원금은 60세 이상 1년 초과 근로한 고령자를 고용한 우선지원대상기업·중견기업·사회적기업에 대해, 고용보험성립일 기준 최초 신청 전 1년 이상 운영되고 신청 분기 월평균 고령자 수가 직전 3년 평균보다 증가한 경우에 분기당 30만원을 2년간 지원하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">고령자 계속고용장려금</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EA%B3%A0%EB%A0%B9%EC%9E%90-%EA%B3%84%EC%86%8D%EA%B3%A0%EC%9A%A9%EC%9E%A5%EB%A0%A4%EA%B8%88/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EA%B3%A0%EB%A0%B9%EC%9E%90-%EA%B3%84%EC%86%8D%EA%B3%A0%EC%9A%A9%EC%9E%A5%EB%A0%A4%EA%B8%88/</id>
-    <published>2026-08-20T00:00:00+09:00</published>
-    <updated>2026-08-20T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
-    <summary type="text">고령자 계속고용장려금은 고용노동부가 전국에서 시행하는 제도로, 정년퇴직자를 계속 고용하는 사업주에게 3년간 분기당 90만원(비수도권은 120만원)을 지원합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">개별연장급여</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EA%B0%9C%EB%B3%84%EC%97%B0%EC%9E%A5%EA%B8%89%EC%97%AC/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EA%B0%9C%EB%B3%84%EC%97%B0%EC%9E%A5%EA%B8%89%EC%97%AC/</id>
-    <published>2026-08-20T00:00:00+09:00</published>
-    <updated>2026-08-20T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
-    <summary type="text">고용노동부에서 제공하는 개별연장급여는 취업이 어려운 구직자·저소득 가구·소상공인에게 구직급여 일액의 70%를 최대 60일간 연장해 지급하는 지원제도이며, 전국에서 온라인 또는 방문으로 신청할 수 있고 신청 서류를 구비해야 합니다.</summary>
   </entry>
 </feed>
