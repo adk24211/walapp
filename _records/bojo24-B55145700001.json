@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "노인복지법에 정한 만 65세 이상",
+      "어르신",
+      "전국에 거주하는"
+    ],
+    "faq": [],
+    "note": "KTX와 새마을호는 토·일·공휴일에 할인 적용되지 않습니다.",
+    "steps": [
+      {
+        "body": "인터넷을 통해 신청서를 작성하시면 됩니다. 별도의 구비 서류는 필요하지 않으며, 신청은 언제든지 가능합니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "철도 공공할인 서비스(경로)는 만 65세 이상 어르신을 대상으로 전국의 KTX·새마을호·무궁화호 열차 요금을 각각 30% 할인해 주는 제도이며, 온라인으로 상시 신청할 수 있습니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://www.korail.com/ticket/discountSystem/discount",
+  "audiences": [
+    "senior"
+  ],
+  "benefit_raw": "○ 철도운임 할인\n- KTX : 30% 할인(토, 일, 공휴일은 제외)\n- 새마을호(ITX-새마을/마음) : 30% 할인(토, 일, 공휴일은 제외)\n- 무궁화호(누리로) : 30% 할인",
+  "category": "living",
+  "contact_raw": "한국철도공사/1588-7788",
+  "content_hash": "sha256:f86e6c9bc1b242c0e7d02621fd61d4cb",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-22",
+  "how_to_raw": "기타 온라인신청\n직접입력",
+  "id": "bojo24-B55145700001",
+  "is_mock": false,
+  "last_checked": "2026-08-22",
+  "last_updated": "2026-08-22",
+  "law_raw": "",
+  "name": "철도 공공할인 서비스(경로)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55145700001",
+  "org": "한국철도공사",
+  "primary_audience": "senior",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "철도-공공할인-서비스-경로",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금(감면) 개인",
+  "source_id": "B55145700001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "노인복지법에 정한 만 65세 이상 노인",
+  "view_count": 13857
+}

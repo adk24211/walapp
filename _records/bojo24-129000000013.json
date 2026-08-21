@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "전역예정장병",
+      "전역예정장병이면 제한 없이 지원 가능합니다",
+      "전역예정장병이 아닌 경우 지원 대상이 아닙니다"
+    ],
+    "faq": [
+      {
+        "a": "본 제도는 국방부가 담당합니다.",
+        "q": "지원은 어느 부처에서 관리하나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "국방부 홈페이지 또는 지정된 온라인 플랫폼에서 신청서를 작성하여 제출합니다. 구비 서류는 사업별로 다르므로 안내에 따라 준비하시기 바랍니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "전역예정장병을 대상으로 전직지원교육, 전직상담(경력상담 포함) 및 그 외 취업지원을 제공하는 전역예정군인 재취업 지원 제도이며, 국방부가 전국을 대상으로 온라인 신청을 받습니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "사업별 상이",
+    "start": ""
+  },
+  "apply_url": "https://moti.or.kr",
+  "audiences": [
+    "jobseeker",
+    "business"
+  ],
+  "benefit_raw": "○ 전직지원교육\n\n○ 전직상담(경력상담 포함)\n\n○ 그 외 취업지원",
+  "category": "jobs",
+  "contact_raw": "국방전직교육원 일자리지원부/031-760-9343",
+  "content_hash": "sha256:4818b5ff7f412a135d9f451b3c19d741",
+  "criteria_raw": "○ 전역예정장병 누구나 지원 가능",
+  "deferred_detail": false,
+  "documents_raw": [
+    "사업별 상이"
+  ],
+  "first_published": "2026-08-22",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-129000000013",
+  "is_mock": false,
+  "last_checked": "2026-08-22",
+  "last_updated": "2026-08-22",
+  "law_raw": "",
+  "name": "전역예정군인 재취업 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/129000000013",
+  "org": "국방부",
+  "primary_audience": "jobseeker",
+  "receiver_raw": "국방전직교육원 각 사업부서",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "전역예정군인-재취업-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 상담/법률지원\n서비스(일자리) 개인",
+  "source_id": "129000000013",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 전역예정장병",
+  "view_count": 3033
+}

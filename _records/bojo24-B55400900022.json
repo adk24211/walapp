@@ -1,0 +1,75 @@
+{
+  "_prose": {
+    "eligibility": [
+      "만 39세 이하의 청년",
+      "학력·전공 무관",
+      "재학생·휴학생·직장인 등은 지원 불가",
+      "주민등록증 및 통장 사본 등 필수 서류 제출"
+    ],
+    "faq": [
+      {
+        "a": "지원 대상은 만 39세 이하의 청년으로 제한됩니다.",
+        "q": "지원 대상에 양육가정이 포함되나요?"
+      },
+      {
+        "a": "선정 기준은 별도로 제시되지 않았습니다.",
+        "q": "선정 기준이 있습니까?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청서를 작성하고, 주민등록증 및 통장 사본 등 필수 서류를 첨부하여 제출하시면 됩니다. 제출 후 별도의 심사 절차 없이 교육이 시작됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "스타트업 AI 기술인력 양성은 중소벤처기업진흥공단이 전국 청년에게 인공지능 특화 교육을 무료로 제공하고, 취·창업 연계를 지원하는 제도이며, 교육 인프라와 프로젝트 경험도 제공합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "매년 1월 중 K-Startup 홈페이지를 통해 모집공고 게시",
+    "start": ""
+  },
+  "apply_url": "www.kosmes.or.kr",
+  "audiences": [
+    "youth",
+    "parent",
+    "business"
+  ],
+  "benefit_raw": "○ 교육비: 무료\n\n○ 교육 인프라: 전용 교육장 및 장비(오프라인 교육생에 한함)\n\n○ 인공지능 특화교육 및 프로젝트\n- 인공지능 관련 대학 학과의 전공과정을 이수할 수 있는 특화 커리큘럼(기본과정, 심화과정)\n- 산업특화 연계 프로젝트를 통한 실무 경험 제공\n\n○ 취·창업 연계\n- 취창업프로그램을 통한 교육생과 스타트업간 맞춤 취업 연계\n- 창업 교육, 멘토링, 데모데이 등 창업Track 지원",
+  "category": "jobs",
+  "contact_raw": "청년창업사관학교/02-2130-1464\n청년창업사관학교/02-2130-1469",
+  "content_hash": "sha256:e458ff290773812cc1b40697f028a4b8",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "교육 운영에 필요한 필수 서류(주민등록증 및 통장 사본 등)"
+  ],
+  "first_published": "2026-08-22",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55400900022",
+  "is_mock": false,
+  "last_checked": "2026-08-22",
+  "last_updated": "2026-08-22",
+  "law_raw": "",
+  "name": "스타트업 AI 기술인력 양성",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55400900022",
+  "org": "중소벤처기업진흥공단",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "스타트업-ai-기술인력-양성",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 서비스(일자리) 개인",
+  "source_id": "B55400900022",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "만 39세 이하의 청년(기본과정은 학력, 전공 무관)\n(교육 기간 및 수료 이후 즉시 취업이 불가능한 재학생 및 휴학생, 직장인 등 지원 불가)",
+  "view_count": 10415
+}

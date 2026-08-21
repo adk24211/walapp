@@ -1,0 +1,65 @@
+{
+  "_prose": {
+    "eligibility": [
+      "관내 농업인 또는 인접 시·군에서 경작하는 농업인",
+      "여성 농업인",
+      "고령 농업인",
+      "GAP 인증을 받은 농업인",
+      "농업경영체에 등록된 농업인"
+    ],
+    "faq": [],
+    "note": "감면율은 지자체 여건에 따라 차이가 있을 수 있습니다.",
+    "steps": [
+      {
+        "body": "관할 시·군의 농기계임대사업소를 직접 방문하여 신청합니다. 별도의 서류는 필요하지 않으며, 담당 직원에게 신청 의사를 전달하면 됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "농업인의 경영 부담을 줄이기 위해 농기계임대사업소에서 임대료를 최대 50%까지 감면해 주는 제도이며, 전국의 농업인 및 여성·고령·GAP 인증 등 다양한 농업인에게 적용됩니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "senior"
+  ],
+  "benefit_raw": "○ 농기계임대사업소 농기계 임대료 감면\n- (감면율) 50% 이내\n* 지자체 여건에 따라 지자체별 차이가 있을 수 있음\n- (감면기간) '26.1.1.~'26.12.31.",
+  "category": "housing",
+  "contact_raw": "시군구 농기계임대사업소/0",
+  "content_hash": "sha256:90fedc63cc2671dbd922842e1cc2133a",
+  "criteria_raw": "○ 농업인\n- 관내 농업인뿐만 아니라 해당 시.군의 농경지를 타 지역에서 출입 경작하는 농업인, 인접시군 농업인\n- 여성 및 고령농업인, GAP 인증 농업인 및 농업경영체 등록 농업인 등",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-22",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-174100000017",
+  "is_mock": false,
+  "last_checked": "2026-08-22",
+  "last_updated": "2026-08-22",
+  "law_raw": "",
+  "name": "농업인 경영부담 완화를 위한 농기계 임대료 감면",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/174100000017",
+  "org": "농림축산식품부",
+  "primary_audience": "senior",
+  "receiver_raw": "각 시군 농기계임대사업소",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "농업인-경영부담-완화를-위한-농기계-임대료-감면",
+  "source": "bojo24",
+  "source_category_raw": "농림축산어업 현금(감면) 개인",
+  "source_id": "174100000017",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 농업인\n- 관내 농업인뿐만 아니라 해당 시.군의 농경지를 타 지역에서 출입 경작하는 농업인, 인접시군 농업인\n- 여성 및 고령농업인, GAP 인증 농업인 및 농업경영체 등록 농업인 등",
+  "view_count": 9333
+}

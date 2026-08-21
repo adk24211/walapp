@@ -1,0 +1,73 @@
+{
+  "_prose": {
+    "eligibility": [
+      "화성시에 1년 이상 거주한 시민이어야 합니다.",
+      "만 19세 이상이어야 합니다.",
+      "화성시민으로 등록된 사람이어야 합니다.",
+      "지원 대상 인원은 2,100명으로 제한됩니다."
+    ],
+    "faq": [
+      {
+        "a": "지원 대상은 화성시 1년 이상 거주한 만 19세 이상 시민 중 2,100명으로 정해져 있습니다.",
+        "q": "지원 대상 인원은 몇 명인가요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "화성시인재육성재단 홈페이지에서 온라인 신청서를 작성합니다. 주민등록초본·통장사본·수강 강좌 결제 영수증·이체확인증 등을 첨부하여 제출하면 됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "화성시민 평생장학금은 화성시에 1년 이상 거주하고 만 19세 이상인 시민에게 평생학습 수강료 30만원을 지원하여 교육 기회를 균등하게 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "매년 2월 ~3월",
+    "start": ""
+  },
+  "apply_url": "https://www.lls-hstree.org",
+  "audiences": [
+    "youth",
+    "parent"
+  ],
+  "benefit_raw": "○ 화성시민 평생장학금\n- 화성시 1년이상 거주한 만 19세 이상 화성시민에게 평생학습 수강료 30만원 지급\n- 화성시민에게 균등한 교육기회를 제공하고 보편적 학습권을 보장\n- 화성시민의 평생학습 활성화에 기여\n- 화성시인재육성재단과 업무협약된 교육가맹점 내에서 평생직업교육 강좌 수강",
+  "category": "education",
+  "contact_raw": "장학사업팀/031-898-6252",
+  "content_hash": "sha256:fe9f5b051675f2e817ba2f0f781cdec1",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "주민등록초본",
+    "통장사본",
+    "수강 강좌 결제 영수증(카드영수증",
+    "이체확인증 등)"
+  ],
+  "first_published": "2026-08-22",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-O00058400002",
+  "is_mock": false,
+  "last_checked": "2026-08-22",
+  "last_updated": "2026-08-22",
+  "law_raw": "",
+  "name": "화성시민 평생장학금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00058400002",
+  "org": "화성시인재육성재단",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "화성시민-평생장학금",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "O00058400002",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "화성시 1년 이상 거주한 만 19세 이상 화성시민 2,100명",
+  "view_count": 10974
+}

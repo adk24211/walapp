@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "15세 이상인 미취업자",
+      "한국폴리텍대학 직업훈련과정을 수강 중인 훈련생",
+      "매월 전체 출석 일수의 80% 이상 출석한 경우",
+      "구직자·소상공인"
+    ],
+    "faq": [],
+    "note": "기숙사에 거주하는 훈련생은 교통비 지원을 받지 못합니다.",
+    "steps": [
+      {
+        "body": "지원은 온라인으로만 접수합니다. 지원서와 개인정보 제공동의서, 우선선발 대상 증빙서류를 함께 업로드해야 합니다. 기숙사생은 교통비 지원에서 제외됩니다. 훈련수당은 별도 신청 없이 한국폴리텍에서 출석통계표를 근거로 산정됩니다.",
+        "title": "온라인 신청 및 서류 제출"
+      }
+    ],
+    "summary": "고용노동부가 관할하고 전국에서 시행되는 한국폴리텍대학 훈련생 훈련장려금등 지원은, 15세 이상 미취업자로 폴리텍 직업훈련과정을 수강하며 매월 출석률 80% 이상인 훈련생에게 교통비와 훈련장려금을 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "https://www.kopo.ac.kr",
+  "audiences": [
+    "jobseeker",
+    "business"
+  ],
+  "benefit_raw": "○ 교통비 및 훈련장려금 지급\n- 교통비: 출석 일수 * 2,500원(월 5만원 한도), 기숙사생 제외\n- 훈련장려금: 출석 일수 * 3,300원(월 6만 6천원 한도)",
+  "category": "jobs",
+  "contact_raw": "한국폴리텍대학/032-650-6645",
+  "content_hash": "sha256:70e14d955d6c5c171debf2b0569c0b2b",
+  "criteria_raw": "○ 매월 80%이상 출석한 자",
+  "deferred_detail": false,
+  "documents_raw": [
+    "훈련신청: 지원서",
+    "개인정보 제공동의서",
+    "우선선발 대상(증빙서류)",
+    "훈련수당 신청: 없음(한국폴리텍에서 출석통계표를 근거로 훈련수당 산정)"
+  ],
+  "first_published": "2026-08-22",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-149200000135",
+  "is_mock": false,
+  "last_checked": "2026-08-22",
+  "last_updated": "2026-08-22",
+  "law_raw": "",
+  "name": "한국폴리텍대학 훈련생 훈련장려금등 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000135",
+  "org": "고용노동부",
+  "primary_audience": "jobseeker",
+  "receiver_raw": "한국폴리텍대학",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "한국폴리텍대학-훈련생-훈련장려금등-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 개인",
+  "source_id": "149200000135",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 15세 이상 미취업자로 폴리텍대학 직업훈련과정을 수강 중인 훈련생으로 매월 80% 이상 출석한 자",
+  "view_count": 5253
+}

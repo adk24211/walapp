@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "노인장기요양 등급판정(1~5등급, 인지지원등급)을 받은 경우",
+      "재가급여를 이용하고 있는 수급자",
+      "장기 요양 인정서에 재가급여 또는 가족요양비 지급 대상자로 표시된 경우"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "관할 보건복지부 또는 지정된 복지기관을 직접 방문하셔야 합니다. 방문 시 장기 요양 인정서 등 구비 서류를 제출하시면 신청이 완료됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "보건복지부가 전국의 어르신과 저소득 가구를 대상으로 연간 160만 원 상당의 일상생활·신체활동 지원 용구를 제공하는 노인복지용구제공 제도이며, 노인장기요양 등급판정을 받은 재가급여 이용 수급자를 우선 선정합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "senior",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 일상생활, 신체활동 지원에 필요한 용구를 제공(연간 160만 원)\n-18개 품목(구입 10, 대여 7, 구입 또는 대여 2)",
+  "category": "health",
+  "contact_raw": "국민건강보험공단 고객센터/1577-1000",
+  "content_hash": "sha256:ac5e0db25abcaf3d3523cc71ccf4b6ec",
+  "criteria_raw": "○ 장기 요양 인정서상 재가급여 또는 가족요양비 지급 대상자로 표시된 수급자",
+  "deferred_detail": false,
+  "documents_raw": [
+    "장기 요양 인정서",
+    "복지용구 급여 확인서(의료급여 수급권자는 장기요양기관 입소 이용 의뢰서",
+    "재가서비스 이용 내역서",
+    "장기 요양 인정서 및 표준장기 요양 이용 계획서)"
+  ],
+  "first_published": "2026-08-22",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-GMW000000110",
+  "is_mock": false,
+  "last_checked": "2026-08-22",
+  "last_updated": "2026-08-22",
+  "law_raw": "",
+  "name": "노인복지용구제공",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GMW000000110",
+  "org": "보건복지부",
+  "primary_audience": "senior",
+  "receiver_raw": "노인장기요양보험 고객센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "노인복지용구제공",
+  "source": "bojo24",
+  "source_category_raw": "보건·의료 현물 개인",
+  "source_id": "GMW000000110",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 노인장기요양 등급판정(1~5등급, 인지지원등급)을 받은 재가급여이용 수급자",
+  "view_count": 6175
+}

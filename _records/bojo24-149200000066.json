@@ -1,0 +1,73 @@
+{
+  "_prose": {
+    "eligibility": [
+      "고용보험에 가입한 사업주가 신청 대상입니다.",
+      "사업주가 훈련 비용을 전적으로 부담하고 훈련을 실시해야 합니다.",
+      "훈련 대상자는 소속 근로자, 채용예정자, 구직자이며 정해진 수료 기준을 충족해야 합니다.",
+      "훈련은 자체 진행 또는 위탁 진행 모두 가능합니다."
+    ],
+    "faq": [
+      {
+        "a": "지원은 훈련비, 유급휴가 훈련 인건비, 훈련수당, 숙식비 등 정해진 항목만 한도 내에서 제공됩니다. 다른 비용은 지원 대상에 포함되지 않습니다.",
+        "q": "지원 대상 외에 다른 비용도 지원받을 수 있나요?"
+      }
+    ],
+    "note": "지원 금액은 정해진 한도 내에서만 제공됩니다.",
+    "steps": [
+      {
+        "body": "HRD‑net에 접속하여 전산 신청을 진행합니다. 훈련실시계획서, 훈련실시신고서, 훈련수료자보고서, 훈련비용 지원신청서 등을 입력하고 첨부하면 신청이 완료됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "고용보험에 가입한 사업주가 자체 또는 위탁으로 직업능력개발훈련을 실시하고, 수료 기준을 충족한 근로자·채용예정자·구직자에게 훈련비·인건비·수당·숙식비 등을 한도 내에서 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "https://hrd.go.kr",
+  "audiences": [
+    "jobseeker",
+    "business"
+  ],
+  "benefit_raw": "○ 훈련비, 유급휴가 훈련 인건비, 훈련수당, 숙식비를 정해진 한도 내에서 지원",
+  "category": "jobs",
+  "contact_raw": "한국산업인력공단/052-714-8277",
+  "content_hash": "sha256:c060be55ccde1979b7f30f603c8e14bb",
+  "criteria_raw": "○ 사업주가 비용을 전적으로 부담하여 소속 근로자, 채용예정자, 구직자 등을 대상으로 직업능력개발훈련을 실시(자체 또는 위탁)했을 때 정해준 수료기준을 충족한 근로자에게 소요된 비용에 한해서 지원",
+  "deferred_detail": false,
+  "documents_raw": [
+    "HRD-net 상 전산신청(1. 훈련실시계획서",
+    "훈련실시신고서",
+    "훈련수료자보고서",
+    "훈련비용 지원신청서 등 전산 입력 및 첨부)"
+  ],
+  "first_published": "2026-08-22",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-149200000066",
+  "is_mock": false,
+  "last_checked": "2026-08-22",
+  "last_updated": "2026-08-22",
+  "law_raw": "",
+  "name": "사업주 직업능력개발 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000066",
+  "org": "고용노동부",
+  "primary_audience": "jobseeker",
+  "receiver_raw": "한국산업인력공단",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "사업주-직업능력개발-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타(상담)\n현금 법인/시설/단체",
+  "source_id": "149200000066",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 고용보험가입 사업주",
+  "view_count": 3040
+}
