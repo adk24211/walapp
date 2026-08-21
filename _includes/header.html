@@ -5,8 +5,15 @@
       <span class="logo-text">Walapp</span>
     </a>
     <div class="header-right">
-      <a href="{{ '/support/' | relative_url }}" class="header-link">전체 제도</a>
-      <a href="{{ '/deadline/' | relative_url }}" class="header-link">마감 예정</a>
+      {%- comment -%}
+        탐색 링크는 뺐다. 지금 상단바에 남은 것은 로고(홈)·테마·검색뿐이다.
+
+        /support/ 는 제도 상세의 빵부스러기(홈 › 지원 제도 › 분야)가 받고 있어
+        여전히 133개 페이지에서 걸린다. 이건 안 끊긴다.
+
+        ⚠️ 끊기는 건 /deadline/ 이다 — 152개에서 2개(홈·404)로 떨어진다.
+           무엇을 다시 넣을지 정하기 전까지의 과도 상태다.
+      {%- endcomment -%}
       <button class="theme-btn" id="theme-btn" aria-label="다크모드로 전환" hidden style="display:none">
         {% include icon.html name="moon" %}
       </button>
