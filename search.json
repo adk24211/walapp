@@ -16,6 +16,17 @@ permalink: /search.json
     "region": {{ p.region_label | default: "전국" | jsonify }},
     "org": {{ p.org | default: "" | jsonify }},
     "date": {{ p.last_updated | default: "" | jsonify }},
+    {%- comment -%}
+      아래 다섯은 검색 결과 카드가 사이트의 다른 카드와 같은 값을 보여 주기
+      위해 싣는다. 예전 검색 결과는 요약문 한 토막만 내는 옛 카드를 쓰고 있어서,
+      같은 제도가 홈에서는 '시행중 · 250만원' 으로, 검색에서는 본문 발췌로
+      보였다. 고를 때 필요한 값(상태·금액·기간)이 검색에만 없었다.
+    {%- endcomment -%}
+    "status": {{ p.status | default: "active" | jsonify }},
+    "highlight": {{ p.highlight | default: "" | jsonify }},
+    "apply_always": {{ p.apply_always | default: false | jsonify }},
+    "apply_start": {{ p.apply_start | default: "" | jsonify }},
+    "apply_end": {{ p.apply_end | default: "" | jsonify }},
     "summary": {{ p.summary | default: "" | jsonify }},
     "tags": {{ p.audiences | default: empty | jsonify }},
     "content": {{ p.content | strip_html | strip_newlines | truncate: 1200 | jsonify }}

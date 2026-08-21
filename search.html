@@ -8,16 +8,23 @@ permalink: /search/
 top_notice: true
 ---
 
-<div class="page-header">
+{%- comment -%}
+  머리말은 허브와 같은 형태를 쓴다(is-wide + 눈썹 + 총 건수). 검색 결과가
+  제도 카드를 쓰게 되면서 이 화면도 허브와 같은 '훑는 화면' 이 됐다.
+  눈썹이 'Search' 였던 것도 함께 고친다 — 사이트에서 유일한 영어 라벨이었다.
+{%- endcomment -%}
+{%- assign indexed = site.programs | where_exp: "p", "p.is_mock != true" -%}
+<div class="page-header is-wide">
   <div class="ph-top">
-    <span class="ph-issue">Search</span>
+    <span class="ph-issue">검색</span>
+    <span class="ph-date">제도 {{ indexed | size }}건에서 찾습니다</span>
   </div>
-  <h1 class="ph-title">검색</h1>
-  <p class="ph-sub">제목·요약·본문·태그에서 키워드를 찾습니다.</p>
+  <h1 class="ph-title">제도 검색</h1>
+  <p class="ph-sub">제도명·기관·본문·대상에서 키워드를 찾습니다.</p>
   {% if page.top_notice %}{% include site-notice.html %}{% endif %}
 </div>
 
-<div class="feed">
+<div class="feed is-wide">
   <div class="search-box">
     {% include icon.html name="search" %}
     <input type="search" id="search-input" placeholder="제도명·기관·키워드 (예: 청년 월세, 장학금, 고용노동부)"
@@ -71,18 +78,6 @@ top_notice: true
     return out;
   }
 
-  function snippet(content, terms) {
-    var lower = content.toLowerCase();
-    var pos = -1;
-    for (var i = 0; i < terms.length; i++) {
-      var p = lower.indexOf(terms[i].toLowerCase());
-      if (p !== -1) { pos = p; break; }
-    }
-    if (pos === -1) return content.slice(0, 120);
-    var start = Math.max(0, pos - 40);
-    return (start > 0 ? '…' : '') + content.slice(start, start + 140);
-  }
-
   function run(query) {
     var q = query.trim();
     if (!q) { results.innerHTML = ''; status.textContent = '검색어를 입력하면 결과가 표시됩니다.'; return; }
@@ -101,34 +96,51 @@ top_notice: true
     }
 
     status.textContent = '"' + q + '" 검색 결과 ' + matched.length + '건';
-    results.innerHTML = matched.map(function (d) {
-      var chips = '<span class="chip chip-cat">' + escapeHtml(CAT_LABEL[d.category] || d.category) + '</span>';
-      if (d.region) chips += '<span class="chip">' + escapeHtml(d.region) + '</span>';
-      return '' +
-        '<a href="' + d.url + '" class="post-card cn" data-cat="' + escapeHtml(d.category) + '">' +
-          '<div class="card-inner">' +
-            '<div class="card-accent"></div>' +
-            '<div class="card-body">' +
-              '<div class="card-top">' +
-                '<h2 class="card-title">' + highlight(d.title, terms) + '</h2>' +
-              '</div>' +
-              '<p class="card-desc">' + highlight(snippet(d.content, terms), terms) + '</p>' +
-              '<div class="card-chips">' + chips + '</div>' +
-              '<div class="card-footer">' +
-                '<div class="card-meta"><span>' + escapeHtml(d.org || d.date || '') + '</span></div>' +
-                {%- comment -%}
-                  여기는 JS 문자열 안이라 {% include icon.html %} 를 쓰면 안 된다.
-                  include 는 끝에 줄바꿈을 붙이는데, 홑따옴표 문자열 안에서 그건
-                  문자열을 끊어 "Invalid or unexpected token" 이 된다. 그러면 이
-                  스크립트 전체가 죽어 검색이 통째로 멈춘다 — 실제로 그랬다.
-                  assets/js/*.js 가 그러듯 마크업을 직접 적는다.
-                {%- endcomment -%}
-                '<span class="card-cta">자세히 보기 <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></span>' +
-              '</div>' +
-            '</div>' +
-          '</div>' +
-        '</a>';
-    }).join('');
+    results.innerHTML = matched.map(function (d) { return card(d, terms); }).join('');
+  }
+
+  // 결과 카드 — _includes/program-card.html 과 같은 마크업을 만든다.
+  //
+  // 예전에는 여기만 옛 카드(.card-inner/.card-accent/'자세히 보기')를 쓰고
+  // 있었다. 그 장치들은 사이트 다른 곳에서 이미 걷어낸 것이라, 같은 제도가
+  // 홈에서는 '시행중 · 250만원 · 고용노동부' 로, 검색에서는 본문 발췌로
+  // 보였다. 고를 때 필요한 값이 검색에만 없었던 셈이다.
+  //
+  // ⚠️ 이 함수를 고칠 때는 program-card.html 도 함께 본다. 한쪽만 바꾸면
+  //    같은 카드가 두 모양이 된다. 값은 search.json 이 실어 준다.
+  function card(d, terms) {
+    var cls = 'post-card cn pcard';
+    if (d.status === 'closed') cls += ' is-closed';
+    if (d.status === 'upcoming') cls += ' is-upcoming';
+
+    // ① 상태
+    var state;
+    if (d.status === 'closed') {
+      state = '<span class="is-closed">접수 종료' + (d.apply_end ? ' · ' + escapeHtml(d.apply_end) : '') + '</span>';
+    } else if (d.status === 'upcoming') {
+      state = '<span class="is-upcoming">' + (d.apply_start ? escapeHtml(d.apply_start) + ' 시작' : '시작 예정') + '</span>';
+    } else {
+      state = '<span class="is-active">시행중</span>';
+    }
+
+    // ④ 기관 · 기간 · 분야 · 지역
+    var meta = '';
+    if (d.org) meta += '<span>' + highlight(d.org, terms) + '</span>';
+    if (d.apply_always) meta += '<span>상시 접수</span>';
+    else if (d.status === 'upcoming' && d.apply_start) meta += '<span>' + escapeHtml(d.apply_start) + ' ~ ' + escapeHtml(d.apply_end || '') + '</span>';
+    else if (d.apply_end) meta += '<span>~ ' + escapeHtml(d.apply_end) + '</span>';
+    meta += '<span class="pcard-cat">' + escapeHtml(CAT_LABEL[d.category] || d.category) + '</span>';
+    if (d.region && d.region !== '전국') meta += '<span>' + escapeHtml(d.region) + '</span>';
+
+    return '' +
+      '<a href="' + d.url + '" class="' + cls + '" data-cat="' + escapeHtml(d.category) + '">' +
+        '<div class="pcard-body">' +
+          '<p class="pcard-status">' + state + '</p>' +
+          '<h2 class="pcard-title">' + highlight(d.title, terms) + '</h2>' +
+          (d.highlight ? '<p class="pcard-amount">' + escapeHtml(d.highlight) + '</p>' : '') +
+          '<p class="pcard-meta">' + meta + '</p>' +
+        '</div>' +
+      '</a>';
   }
 
   var timer;
