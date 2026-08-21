@@ -80,6 +80,13 @@ def _write_one(
         # 설정이 깨진 것이라 제도별 반려로 삼키면 안 된다. 그대로 두면 오늘 치
         # 후보 전부가 조용히 반려되고, 로그에는 '나쁜 데이터 몇 건' 처럼 보인다.
         raise
+    except generate_program.DailyQuotaExhausted as e:
+        # 오늘 토큰을 다 썼다. 이 건은 반려로 남기되, 남은 후보를 계속 도는 것은
+        # 무의미하다 — 전부 같은 이유로 실패한다. 위(run)에서 루프를 끊는다.
+        result.rejected.append({
+            "id": record.id, "name": record.name, "reason": f"일일 한도 소진: {e}",
+        })
+        raise
     except Exception as e:
         log.error("해설 생성 실패 [%s]: %s", record.id, e)
         result.rejected.append({"id": record.id, "name": record.name, "reason": f"생성 실패: {e}"})
@@ -174,16 +181,39 @@ def run(
 ) -> WriteResult:
     result = WriteResult()
 
-    for record in new_records:
-        _write_one(record, reg, today, client, False, dry_run, result)
-    for record in changed_records:
-        _write_one(record, reg, today, client, True, dry_run, result)
+    # 일일 한도가 소진되면 남은 후보는 전부 같은 이유로 실패한다. 그때는 루프를
+    # 끊되 **이미 발행한 것은 그대로 둔다** — 예외를 위로 올리면 run_all 이
+    # 실행을 실패로 처리해 그날 나간 것까지 배포되지 않는다. 여기서 받는다.
+    #
+    # 상태 갱신(_restatus_one)은 저장된 해설을 다시 찍는 것이라 LLM 을 쓰지
+    # 않는다. 한도와 무관하므로 소진 뒤에도 계속 돈다.
+    quota_note: str | None = None
+    try:
+        for record in new_records:
+            _write_one(record, reg, today, client, False, dry_run, result)
+        for record in changed_records:
+            _write_one(record, reg, today, client, True, dry_run, result)
+    except generate_program.DailyQuotaExhausted as e:
+        quota_note = str(e)
 
     # 상태만 바뀐 것들 — 해설 재사용. 저장분이 없으면 일반 갱신으로 떨어뜨린다.
     for record in restatused_records or []:
         if not _restatus_one(record, reg, today, dry_run, result):
+            if quota_note is not None:
+                # 일반 갱신 경로는 LLM 을 쓴다. 한도가 없으니 시도하지 않는다.
+                log.info("저장된 해설 없음 [%s] — 한도 소진으로 건너뜁니다.", record.id)
+                result.rejected.append({
+                    "id": record.id, "name": record.name,
+                    "reason": "일일 한도 소진 — 저장된 해설이 없어 갱신 보류",
+                })
+                continue
             log.info("저장된 해설 없음 [%s] — 일반 갱신 경로로 처리합니다.", record.id)
             _write_one(record, reg, today, client, True, dry_run, result)
+
+    if quota_note is not None:
+        log.warning("━━━ 오늘 쓸 수 있는 토큰을 다 썼습니다 — 남은 후보는 건너뜁니다 ━━━")
+        log.warning("  %s", quota_note)
+        log.warning("  이미 발행된 것은 그대로 배포됩니다. 남은 제도는 다음 실행에서 다시 잡힙니다.")
 
     log.info("쓰기 완료 — %s", result.summary())
     return result
