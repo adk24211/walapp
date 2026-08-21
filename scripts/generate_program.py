@@ -61,6 +61,26 @@ class ModelUnavailable(RuntimeError):
     그래서 이 예외는 제도별 반려로 삼키지 않고 위로 올려 실행을 세운다.
     """
 
+
+class DailyQuotaExhausted(RuntimeError):
+    """오늘 쓸 수 있는 토큰을 다 썼다(TPD/RPD).
+
+    같은 429 라도 분당 한도와는 성격이 완전히 다르다.
+
+      · 분당 한도(TPM/RPM) — 몇십 초 기다리면 회복된다. 재시도가 듣는다.
+      · 하루 한도(TPD/RPD) — 제공처가 알려 주는 복구 시각이 '46분 뒤' 다.
+        25초·65초를 기다려 봐야 같은 429 를 두 번 더 맞고 반려된다.
+        게다가 **남은 제도 전부가 같은 이유로 실패한다.**
+
+    2026-08-20 실행이 그랬다. 13건을 낸 뒤 한도가 소진됐는데, 남은 11건이
+    각각 재시도 90초씩 합쳐 16분 30초를 버리고 전부 반려됐다(파이프라인 30분).
+    한 건도 더 나갈 수 없는 상태에서 16분을 기다린 것이다.
+
+    그래서 재시도하지 않고 즉시 올린다. 받는 쪽(publish.run)은 남은 제도를
+    포기하되 **이미 발행한 것은 그대로 지킨다** — 그날 나간 13건은 정상이었고,
+    실행을 실패로 만들면 그것까지 배포되지 않는다.
+    """
+
 # 429 재시도 간격(초).
 #
 # ⚠️ 분당 한도(RPM/TPM)에만 듣는 값이다. 하루 총량(TPD)이 소진된 429 에는
@@ -344,6 +364,18 @@ def _failed_generation(err: Exception, limit: int = 600) -> str:
     return ""
 
 
+def _is_daily_quota(text: str) -> bool:
+    """이 429 가 하루 한도인가. text 는 소문자로 넘어온다.
+
+    Groq 는 어느 한도인지 문구에 적어 준다:
+        "... on tokens per day (TPD): Limit 200000, Used 199790 ..."
+        "... on tokens per minute (TPM): ..."
+    'day' 만 보면 날짜가 섞인 다른 메시지에 걸릴 수 있어 형태를 좁게 잡는다.
+    모르는 문구는 False — 재시도하는 쪽이 안전한 기본값이다(한 건만 늦어진다).
+    """
+    return any(k in text for k in ("per day", "(tpd)", "(rpd)"))
+
+
 def _call_with_retry(call, record: ProgramRecord):
     """한도(429)에 걸리면 기다렸다 같은 모델로 다시 부른다.
 
@@ -380,6 +412,11 @@ def _call_with_retry(call, record: ProgramRecord):
                 log.warning("프롬프트 초과 [%s] → 출력 길이를 줄여 재시도", record.id)
                 return call(PRIMARY_MODEL, max(1600, MAX_TOKENS // 2))
             rate_limited = "429" in text or "rate_limit" in text
+            # 하루 한도는 기다려서 풀리는 종류가 아니다. 자세한 이유는
+            # DailyQuotaExhausted 참고. 분당 한도와 문구로 구분된다 —
+            # "on tokens per day (TPD)" vs "on tokens per minute (TPM)".
+            if rate_limited and _is_daily_quota(text):
+                raise DailyQuotaExhausted(str(e)) from e
             if not rate_limited or attempt >= len(delays):
                 raise
             wait = delays[attempt]
