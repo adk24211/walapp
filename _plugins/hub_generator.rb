@@ -86,6 +86,20 @@ module Walapp
     end
 
     def add_audience_hubs(site, taxonomy)
+      # 대상별 색인. 개별 허브 8개는 오래 있었는데 그 축으로 들어가는 문이
+      # 없었다 — 홈은 분야 축만 쓰고, /who/ 자체는 404 였다. 그래서 제도
+      # 상세의 대상 링크로만 닿았고 페이지당 유입이 8개에 그쳤다
+      # (분야 허브는 24~46개).
+      #
+      # 사람들이 검색하는 말은 '생활·기타' 가 아니라 '청년 지원금'·'노인
+      # 지원금' 쪽이라, 이 축이 막혀 있던 것은 그냥 손해였다.
+      push(site, "/who/",
+           "title"    => "대상별 지원금 총정리",
+           "heading"  => "누가 받을 수 있나",
+           "eyebrow"  => "대상별",
+           "blurb"    => "나이·가구 형태·상황에 따라 신청할 수 있는 제도가 다릅니다. 해당하는 쪽을 고르면 그 대상이 받을 수 있는 제도만 모아 보여 줍니다.",
+           "hub_axis" => "audience_index")
+
       (taxonomy["audience_order"] || []).each do |key|
         meta = taxonomy.dig("audiences", key) || {}
         label = meta["label"] || key
