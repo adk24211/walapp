@@ -32,11 +32,13 @@
     "start": ""
   },
   "apply_url": "https://www.familynet.or.kr",
-  "audiences": [],
+  "audiences": [
+    "multicultural"
+  ],
   "benefit_raw": "○ 다문화 가족 입국 초기상담, 통역 및 번역 지원, 가족 간 의사소통 및 생활상담, 행정·사법·공공기관 이용 중 통번역 위기 상황 시 긴급 지원 등\n\n○ 한국말이 서툰 결혼이민자의 가족·사회생활에 필요한 의사소통을 지원하기 위한 통·번역 서비스 제공\n- 제공 언어 : 결혼이민자 주요 출신국 언어",
   "category": "living",
   "contact_raw": "다누리콜센터/1577-1366",
-  "content_hash": "sha256:b2217ed5e7ae8f8070b33d166106e0d5",
+  "content_hash": "sha256:8664fe7bb113ac36b9e6c7e56178e13a",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [
@@ -61,7 +63,7 @@
   "name": "결혼이민자 통번역서비스",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000001240",
   "org": "성평등가족부",
-  "primary_audience": "",
+  "primary_audience": "multicultural",
   "receiver_raw": "가족센터, 다문화가족지원센터",
   "region": {
     "scope": "national",

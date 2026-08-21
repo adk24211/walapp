@@ -39,6 +39,7 @@ _AUDIENCE_WEIGHT = {
     "newlywed": 0.7,
     "senior": 0.7,
     "business": 0.6,
+    "multicultural": 0.6,
     "disabled": 0.5,
 }
 
