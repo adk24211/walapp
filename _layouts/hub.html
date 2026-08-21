@@ -5,7 +5,7 @@ layout: default
   분야·대상·지역·마감임박·신규를 한 레이아웃으로 처리한다.
   페이지 front matter 에서 축(hub_axis)과 키(hub_key)만 지정하면 된다.
 
-  hub_axis: category | audience | region | deadline | new | all
+  hub_axis: category | audience | audience_index | region | deadline | new | all
 {% endcomment %}
 
 {% assign axis = page.hub_axis %}
@@ -17,6 +17,13 @@ layout: default
   {% assign items = all_programs | where: "category", key %}
 {% elsif axis == 'audience' %}
   {% assign items = all_programs | where_exp: "p", "p.audiences contains key" %}
+{% elsif axis == 'audience_index' %}
+  {% comment %}
+    이 화면만 카드 목록이 아니라 '대상 8개' 를 싣는다. 전체 제도를 다시
+    늘어놓으면 /support/ 와 같은 페이지가 되고, 그러면 색인이 아니라 중복이다.
+    머리말의 건수는 이 축이 덮는 제도 수를 뜻하므로 전체를 그대로 쓴다.
+  {% endcomment %}
+  {% assign items = all_programs %}
 {% elsif axis == 'region' %}
   {% if key == 'national' %}
     {% assign items = all_programs | where: "region_scope", "national" %}
@@ -64,7 +71,7 @@ layout: default
   </a>
   {% endfor %}
 </nav>
-{% elsif axis == 'audience' %}
+{% elsif axis == 'audience' or axis == 'audience_index' %}
 <nav class="hub-nav" aria-label="대상별 탐색">
   {% for a in site.data.taxonomy.audience_order %}
   {% assign am = site.data.taxonomy.audiences[a] %}
@@ -184,6 +191,59 @@ layout: default
   {% if items.size == 0 %}
   <p class="hub-empty">마감일이 정해진 제도가 아직 없습니다. 상시 접수 제도는 <a href="{{ '/support/' | relative_url }}">전체 지원 제도</a>에서 보실 수 있습니다.</p>
   {% endif %}
+</div>
+
+{% elsif axis == 'audience_index' %}
+{% comment %}
+  홈의 색인 줄(topic-index)을 그대로 쓴다. 같은 일을 하는 화면이 사이트에
+  두 벌 있을 이유가 없고, 여백·정렬을 한 곳에서 고치면 양쪽이 함께 따라온다.
+
+  대상 하나가 한 줄이고, 줄마다 최신 세 건을 미리 보여 준다. 이름만 여덟 개
+  늘어놓으면 그 안에 무엇이 있는지 몰라 결국 여덟 번 눌러 봐야 한다.
+{% endcomment %}
+<div class="topic-index">
+  {% comment %}
+    ⚠️ 대상은 제도 하나가 여럿에 걸린다(분야와 다른 점이다). 그래서 최신순으로
+       그냥 세 건씩 뽑으면 같은 제도가 여러 줄에 반복된다 — 실제로 24칸에 고유
+       제도가 15개뿐이었고 '장애인 스포츠강좌이용권' 하나가 네 줄에 나왔다.
+       미리보기가 겹치면 줄을 나눠 놓은 의미가 없다.
+
+       그래서 이미 낸 것은 아래 줄에서 걸러낸다. 대상마다 19~62건이 있어
+       세 칸을 채우고도 남는다. 홈 색인이 쓰는 방법과 같다.
+
+       주소를 `|` 로 감싸는 이유: 그냥 이어 붙이면 짧은 주소가 긴 주소의
+       앞부분과 겹쳐(`…/장학금/` 과 `…/장학금-추가/`) 엉뚱한 제도가 걸러진다.
+  {% endcomment %}
+  {% assign seen = '' %}
+  {% for a in site.data.taxonomy.audience_order %}
+  {% assign am = site.data.taxonomy.audiences[a] %}
+  {% assign mine = all_programs | where_exp: "p", "p.audiences contains a" %}
+  {% assign live = mine | where: "status", "active" %}
+  {% assign soon = mine | where: "status", "upcoming" %}
+  {% assign pick = live | concat: soon | sort: "first_published" | reverse %}
+  {% if mine.size > 0 %}
+  <div class="tx-row">
+    <div class="tx-topic">
+      <a class="tx-name" href="{{ '/who/' | append: a | append: '/' | relative_url }}">{{ am.label }}</a>
+      <span class="tx-count">{{ mine | size }}건</span>
+      <a class="tx-more" href="{{ '/who/' | append: a | append: '/' | relative_url }}">전체보기 <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="tx-list">
+      {%- assign n = 0 -%}
+      {%- for p in pick -%}
+        {%- capture mark %}|{{ p.url }}|{% endcapture -%}
+        {%- unless seen contains mark -%}
+          {%- if n < 3 -%}
+            {% include tx-item.html program=p %}
+            {%- capture seen %}{{ seen }}{{ mark }}{% endcapture -%}
+            {%- assign n = n | plus: 1 -%}
+          {%- endif -%}
+        {%- endunless -%}
+      {%- endfor -%}
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
 </div>
 
 {% else %}
