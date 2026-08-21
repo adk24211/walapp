@@ -2,7 +2,7 @@
  * 레이아웃 상시 점검 — 데스크톱 · 태블릿 · 모바일 세 폭을 한 번에 본다.
  *
  * 디자인을 고칠 때마다 세 폭을 손으로 확인하다 빠뜨리는 일이 반복돼 도구로 만들었다.
- * `_site` 를 정적 서버로 띄우고 주요 페이지를 돌며 아래를 검사한다:
+ * 빌드 결과(_site_check 또는 _site)를 정적 서버로 띄우고 주요 페이지를 돌며 검사한다:
  *
  *   · 가로 넘침(스크롤바가 생기는지)
  *   · 컨테이너 밖으로 삐져나간 요소
@@ -19,7 +19,15 @@ import http from 'http';
 import fs from 'fs';
 import path from 'path';
 
-const ROOT = path.resolve(process.cwd(), '_site');
+// 빌드 위치는 부르는 쪽이 정한다. check_inline_js.mjs 와 같은 이유 —
+// '_site' 를 박아 두면 CI 가 쓰는 '_site_check' 에서 "빌드 결과가 없다" 로
+// 떨어진다. 그쪽에서는 그게 배포를 통째로 막은 적이 있다.
+// 첫 인자가 플래그(--shots)면 경로가 아니다.
+const ARG = process.argv[2] && !process.argv[2].startsWith('--') ? process.argv[2] : null;
+const CANDIDATES = ARG ? [ARG] : ['_site_check', '_site'];
+const ROOT = CANDIDATES
+  .map((c) => path.resolve(process.cwd(), c))
+  .find((c) => fs.existsSync(c)) || path.resolve(process.cwd(), CANDIDATES[0]);
 const BASEURL = '/walapp';
 const SHOTS = process.argv.includes('--shots');
 const SHOT_DIR = path.resolve(process.cwd(), '.layout-shots');
@@ -37,9 +45,10 @@ const MIME = {
 };
 
 if (!fs.existsSync(ROOT)) {
-  console.error('_site 가 없습니다. 먼저 jekyll build 를 실행하세요.');
+  console.error(`빌드 결과를 찾지 못했습니다(${CANDIDATES.join(', ')}). 먼저 jekyll build 를 실행하세요.`);
   process.exit(1);
 }
+console.log(`검사 대상: ${path.relative(process.cwd(), ROOT) || ROOT}`);
 
 /** 검사할 페이지. 제도 상세는 빌드 결과에서 하나 골라 넣는다. */
 function pages() {
