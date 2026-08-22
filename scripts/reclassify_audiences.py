@@ -17,13 +17,13 @@ taxonomy.classify_audiences 를 고쳤을 때 쓴다. 수집 단계는 앞으로
    바뀐 게 아니라 우리 분류가 나아진 것뿐인데 last_updated 를 오늘로 올리면
    페이지가 '오늘 갱신됨' 이라고 거짓말한다.
 
-⚠️⚠️ **_records/ 만 고치면 소용이 없다.** 변경 감지는 registry.json 의 해시로
-   한다(registry.Registry.is_changed). save_record 는 _records/ 에만 쓰므로,
-   registry 쪽 해시를 함께 맞추지 않으면 다음 동기화가 이 제도들을 '변경됨' 으로
-   잡아 해설을 통째로 다시 만든다 — 우리가 아끼려던 바로 그 LLM 호출이다.
+⚠️ 원장(registry.json)의 해시는 건드리지 않는다. 한 번 맞춰 봤다가 되돌렸다 —
+   자세한 이유는 registry.py 의 mark_checked 위 주석에 적어 뒀다.
 
-   mark_updated 는 쓰면 안 된다. 그건 revision 을 올리고 last_updated 를 오늘로
-   바꾼다. 여기서는 해시 하나만 맞춘다.
+   그래서 **분류가 바뀐 레코드는 다음 동기화에서 한 번씩 재생성된다.** 분류를
+   해시에 넣기로 한 이상 피할 수 없는 비용이고, 한 번으로 끝난다. 규칙을 자주
+   바꾸지 말아야 할 이유이기도 하다 — 2026-08-22 실행에서 8건이 그렇게
+   재생성되어 그날 한도 32건 중 8건을 썼다.
 
 primary_audience 도 audiences 에서 파생되므로 함께 다시 고른다.
 
@@ -103,8 +103,7 @@ def main() -> int:
         log.info("완료(dry-run) — 파일은 쓰지 않았습니다.")
         return 0
 
-    reg = registry.Registry()
-    written = skipped = stale = 0
+    written = skipped = 0
     for pid, rec, _, after in changed:
         # ⚠️ save_record 는 prose 를 넘기지 않으면 저장돼 있던 해설을 통째로
         #    날린다. 반드시 읽어서 그대로 다시 넘길 것.
@@ -114,12 +113,6 @@ def main() -> int:
         rec.primary_audience = taxonomy.pick_primary_audience(after, blob_of(rec))
         rec.content_hash = schema.compute_hash(rec)
         registry.save_record(rec, prose)
-
-        # 원장 쪽 해시도 맞춘다. 위 주석 참고 — 이걸 빼면 다음 동기화가
-        # 전부 '변경됨' 으로 잡는다. revision·last_updated 는 손대지 않는다.
-        if not reg.sync_hash(rec):
-            stale += 1
-            log.warning("원장에 항목 없음 [%s] — 아직 발행되지 않은 레코드", pid)
 
         if prose is None:
             log.warning("해설 없음 [%s] — 레코드만 고치고 페이지는 건너뜁니다.", pid)
@@ -131,13 +124,10 @@ def main() -> int:
         path.write_text(render.to_markdown(rec, prose), encoding="utf-8")
         written += 1
 
-    reg.save()
-
     log.info("완료 — 레코드 %d개 · 페이지 %d건 다시 씀%s", len(changed), written,
              f" · {skipped}건 건너뜀" if skipped else "")
-    log.info("원장 해시 %d건 갱신%s", len(changed) - stale,
-             f" · {stale}건은 미발행이라 건너뜀" if stale else "")
-    log.info("revision·last_updated 는 그대로입니다. 다음 동기화에서 '동일'로 잡힙니다.")
+    log.info("revision·last_updated 는 그대로입니다.")
+    log.info("⚠ 다음 동기화에서 이 %d건은 한 번 재생성됩니다(위 주석 참고).", len(changed))
     return 0
 
 

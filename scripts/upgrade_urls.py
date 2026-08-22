@@ -14,12 +14,14 @@ content_hash 는 바뀐 주소에 맞춰 다시 계산하되 revision 과 last_u
 같은 곳을 가리키는 더 나은 주소를 쓰게 된 것뿐인데 last_updated 를 오늘로
 올리면 페이지가 '오늘 갱신됨' 이라고 거짓말을 한다.
 
-⚠️ 해시는 _records/ 와 registry.json **양쪽** 을 맞춰야 한다. 변경 감지는
-   원장 쪽 해시로 하는데(Registry.is_changed) save_record 는 _records/ 에만
-   쓴다. 한동안 이 스크립트가 원장을 안 맞추고 있어서, 여기 적힌 "다음
-   동기화도 '변경됨' 으로 잡지 않는다" 가 사실이 아니었다 — 주소를 올린
-   제도는 다음 실행에서 해설이 통째로 다시 만들어졌다.
-   (Registry.sync_hash 주석 참고)
+⚠️ 원장(registry.json)의 해시는 건드리지 않는다. 한 번 맞춰 봤다가 되돌렸다 —
+   원장 해시는 수집 시점에 원천 값으로 계산된 것이라, 저장된 레코드에서 다시
+   계산한 값으로 덮어쓰면 오히려 어긋난다. 자세한 이유는 registry.py 의
+   mark_checked 위 주석에 적어 뒀다.
+
+   그래서 주소를 올린 제도는 **다음 동기화에서 한 번 재생성된다.** 피할 수
+   없는 비용이고 한 번으로 끝난다(mark_updated 가 원장을 수집 시점 해시로
+   되돌려 놓는다).
 
     python3 scripts/upgrade_urls.py --dry-run   # 뭐가 바뀔지만 본다
     python3 scripts/upgrade_urls.py             # 레코드를 고치고 페이지를 다시 찍는다
@@ -94,8 +96,7 @@ def main() -> int:
         log.info("완료(dry-run) — 주소 %d건이 바뀔 예정. 파일은 쓰지 않았습니다.", len(changed))
         return 0
 
-    reg = registry.Registry()
-    written = skipped = unregistered = 0
+    written = skipped = 0
     for pid in sorted({pid for pid, _, _, _ in changed}):
         rec = records[pid]
 
@@ -105,11 +106,6 @@ def main() -> int:
 
         rec.content_hash = schema.compute_hash(rec)
         registry.save_record(rec, prose)
-
-        # 원장 쪽 해시도 맞춘다. 위 주석 참고 — 이걸 빼면 다음 동기화가
-        # 주소를 올린 제도를 '변경됨' 으로 잡아 해설을 다시 만든다.
-        if not reg.sync_hash(rec):
-            unregistered += 1
 
         if prose is None:
             # 해설이 없으면 본문을 다시 찍을 수 없다. 레코드는 고쳐 뒀으니
@@ -123,15 +119,12 @@ def main() -> int:
         path.write_text(render.to_markdown(rec, prose), encoding="utf-8")
         written += 1
 
-    reg.save()
-
     log.info("완료 — 주소 %d건 · 레코드 %d개 · 페이지 %d건 다시 씀%s",
              len(changed), len({p for p, _, _, _ in changed}), written,
              f" · {skipped}건 건너뜀" if skipped else "")
-    log.info("원장 해시 %d건 갱신%s",
-             len({p for p, _, _, _ in changed}) - unregistered,
-             f" · {unregistered}건은 미발행이라 건너뜀" if unregistered else "")
-    log.info("revision·last_updated 는 건드리지 않았습니다. 다음 동기화에서 '동일'로 잡힙니다.")
+    log.info("revision·last_updated 는 건드리지 않았습니다.")
+    log.info("⚠ 다음 동기화에서 이 %d건은 한 번 재생성됩니다(위 주석 참고).",
+             len({p for p, _, _, _ in changed}))
     return 0
 
 

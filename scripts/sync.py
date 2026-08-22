@@ -31,8 +31,13 @@ log = logging.getLogger(__name__)
 DEFAULT_SCOPES = ("national",)
 
 
-def _keep_verified_https(record: ProgramRecord, existing: ProgramRecord) -> None:
+def _keep_verified_https(record: ProgramRecord, stored: ProgramRecord | None) -> None:
     """확인해 둔 https 주소를 http 로 되돌리지 않는다.
+
+    ⚠️ 두 번째 인자는 **저장된 레코드**(_records/)여야 한다. 원장 항목(Entry)이
+       아니다. 한동안 Entry 를 넘기고 있었는데, Entry 에는 apply_url 이 없어서
+       getattr 이 늘 빈 문자열을 돌려줬다 — 즉 이 함수가 통째로 무력했다.
+       조건이 한 번도 참이 된 적이 없으니 로그에도 아무것도 안 남았다.
 
     수집 단계는 http 주소를 https 가 열릴 때만 올린다(collect/url_https.py).
     그런데 그 확인은 매 실행마다 네트워크를 탄다. 어느 날 그 서버가 잠깐
@@ -48,10 +53,12 @@ def _keep_verified_https(record: ProgramRecord, existing: ProgramRecord) -> None
     곳이 같을 때만(스킴만 다를 때만) 이미 확인해 둔 https 를 그대로 쓴다.
     원천이 주소 자체를 바꿨다면 그건 진짜 변경이므로 건드리지 않는다.
     """
+    if stored is None:
+        return
     restored = False
     for field_name in ("apply_url", "official_url"):
         new = str(getattr(record, field_name, "") or "")
-        old = str(getattr(existing, field_name, "") or "")
+        old = str(getattr(stored, field_name, "") or "")
         if (new.startswith("http://") and old.startswith("https://")
                 and new[len("http://"):] == old[len("https://"):]):
             setattr(record, field_name, old)
@@ -211,7 +218,9 @@ def run(
             if existing is not None:
                 record.first_published = existing.first_published
                 record.revision = existing.revision
-                _keep_verified_https(record, existing)
+                # ⚠️ 원장 항목(existing)이 아니라 저장된 레코드를 넘긴다.
+                #    원장에는 주소 필드가 없다 — 자세한 이유는 함수 주석.
+                _keep_verified_https(record, registry.load_record(record.id))
                 if existing.content_hash != record.content_hash:
                     result.changed.append(record)
                 elif existing.status != record.status:
