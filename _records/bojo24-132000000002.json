@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "다문화 가정에 속한 가구",
+      "국내에 체류 중인 외국인",
+      "이주여성·외국인 근로자 등 사회 정착 지원이 필요한 경우"
+    ],
+    "faq": [
+      {
+        "a": "도로교통공단 등과 협조하여 전문 강사와 언어별 통역을 지정해 교육을 진행합니다.",
+        "q": "교육은 어느 기관이 주관합니까?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "관할 경찰서 또는 다문화 가족지원센터 등 외국인 도움센터를 직접 방문하여 신청합니다. 필요한 서류는 현장에서 안내받으시면 됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "다문화가족 및 국내 체류 외국인을 대상으로 교통안전 교육과 운전면허 교재 지원을 제공하는 전국 규모의 프로그램입니다. 교통사고 예방·요령 교육과 교재·문제은행 제공, 도로교통공단 협조 전문 강사와 언어별 통역을 통해 언어 장벽을 해소합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관에 문의",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "multicultural"
+  ],
+  "benefit_raw": "○ 교통사고예방, 사고 발생 시 요령 등 실생활에 필요한 내용 중심으로 운전면허 학과 교육 진행\n\n○ 운전면허교실 교재(DVD) 구매 및 운전면허시험 문제은행 책자 제작 등 운영예산 및 교재 확대 지원\n\n○ 전문적이고 체계적인 교육 실시를 위해 도로교통공단 등과 협조로 전문 강사 확보 및 언어권별 통역을 지정\n\n○ 교육 이수자 친교 모임 활성화\n\n○ 국적별, 지역별 네트워크 구축 및 정보교환 등 상호 지원 유도\n\n○ 면허 취득자를 면허교실 통역 강사로 활용, 언어불통 해소",
+  "category": "living",
+  "contact_raw": "경찰민원콜센터/182",
+  "content_hash": "sha256:3e676cb2e5e4aa240634244d31f1778b",
+  "criteria_raw": "○ 다문화 가정 및 국내 체류 중인 외국인이라면 누구나 선정 가능",
+  "deferred_detail": false,
+  "documents_raw": [
+    "경찰서 방문 또는 다문화 가족지원센터 등 외국인 도움센터에 문의"
+  ],
+  "first_published": "2026-08-23",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-132000000002",
+  "is_mock": false,
+  "last_checked": "2026-08-23",
+  "last_updated": "2026-08-23",
+  "law_raw": "",
+  "name": "다문화 가족 및 국내체류 외국인 대상 운전면허교실 운영 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/132000000002",
+  "org": "경찰청",
+  "primary_audience": "multicultural",
+  "receiver_raw": "경찰청",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "다문화-가족-및-국내체류-외국인-대상-운전면허교실-운영-지원",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타(교육) 개인",
+  "source_id": "132000000002",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 이주여성, 외국인 근로자 중심으로 국내 체류 외국인 중 실질적인 사회 정착지원이 필요한 대상",
+  "view_count": 8902
+}

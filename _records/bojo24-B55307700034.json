@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "소상공인 지식배움터 내 제휴교육 중 신용회복위원회의 신용관리교육을 사전 이수한 소상공인",
+      "중·저신용 소상공인",
+      "대출신청일 기준 NCB 개인신용평점이 839점 이하인 소상공인"
+    ],
+    "faq": [
+      {
+        "a": "대출금리는 정책자금 기준금리에 1.6%p를 가산한 변동금리로 적용됩니다.",
+        "q": "대출금리는 어떻게 결정되나요?"
+      },
+      {
+        "a": "대출기간은 5년 이내이며, 그 중 2년은 거치기간으로 포함됩니다.",
+        "q": "대출기간에 거치기간이 포함되나요?"
+      }
+    ],
+    "note": "대출한도는 해당 연도별 자금 대출잔액을 합산한 금액으로 제한됩니다.",
+    "steps": [
+      {
+        "body": "소상공인정책자금 사이트의 공지사항을 확인합니다. 온라인 신청 양식을 작성하고, 안내된 구비 서류를 첨부하여 제출합니다. 신청은 온라인으로만 진행됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "신용취약소상공인자금은 신용점수가 낮은 소상공인에게 운전자금으로 최대 3천만원을 대출해 주는 정책자금입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "소상공인정책자금 사이트 별도 안내",
+    "start": ""
+  },
+  "apply_url": "https://ols.semas.or.kr",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "□ 융자범위\n◦ 운전자금 : 제품생산 비용 및 기업경영에 필요한 자금\n\n□ 융자조건\n◦ 대출금리(변동금리) : 정책자금 기준금리 + 1.6%p\n◦ 대출기간 : 5년 이내(거치기간 2년 포함)\n◦ 대출한도 : 3천만원(‘23년 소상공인·전통시장자금, ’24년 저신용 소상공인 자금, '25년 신용취약소상공인자금, '26년 신용취약소상공인자금 대출잔액 합산)\n◦ 융자방식 : 소진공을 통한 직접대출",
+  "category": "jobs",
+  "contact_raw": "중소기업통합콜센터 /1357\n소상공인시장진흥공단 통합콜센터/1533-0100",
+  "content_hash": "sha256:1dd8d965e28d7773bb47862c74c0a2dc",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "소상공인정책자금 사이트(ols.semas.or.kr) 내 공지사항에서 별도 안내"
+  ],
+  "first_published": "2026-08-23",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55307700034",
+  "is_mock": false,
+  "last_checked": "2026-08-23",
+  "last_updated": "2026-08-23",
+  "law_raw": "",
+  "name": "신용취약소상공인자금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55307700034",
+  "org": "소상공인시장진흥공단",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "신용취약소상공인자금",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금(융자) 소상공인",
+  "source_id": "B55307700034",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "소상공인 지식배움터(http://edu.sbiz.or.kr) 내 제휴교육 중 신용회복위원회의 신용관리교육을 사전 이수한 중‧저신용(대출신청일 기준 NCB 개인신용평점 839점 이하) 소상공인",
+  "view_count": 25624
+}

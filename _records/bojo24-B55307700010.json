@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "소상공인기본법 제2조에 정의된 소상공인(업력 무관)이어야 합니다.",
+      "전국에 사업장을 두고 있는 소상공인이어야 합니다.",
+      "부동산업(표준산업분류 68) 중 비주거용 건물 임대업(68112)은 착한 임대인에 한해 신청 가능합니다."
+    ],
+    "faq": [
+      {
+        "a": "대출금리는 변동금리로, 정책자금 기준금리에 0.6%p를 가산하여 적용됩니다.",
+        "q": "대출금리는 어떻게 결정되나요?"
+      },
+      {
+        "a": "대출기간은 5년 이내이며, 이 중 2년은 거치기간으로 포함됩니다.",
+        "q": "대출기간에 거치기간은 포함되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "소상공인정책자금 사이트에 접속하여 온라인 신청 메뉴를 선택합니다. 신청 양식을 작성하고 필요한 서류를 업로드합니다. 제출 후 금융기관을 통한 대리대출 절차가 진행됩니다.",
+        "title": "온라인 신청 절차"
+      }
+    ],
+    "summary": "일반경영안정자금은 전국의 소상공인을 대상으로 운전자금 대출을 지원하는 제도로, 연간 7천만원 한도, 변동금리(기준금리+0.6%p)로 5년 이내(거치 2년 포함)까지 이용할 수 있습니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "소상공인정책자금 사이트 별도 안내",
+    "start": ""
+  },
+  "apply_url": "https://ols.semas.or.kr",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "□ 융자범위 및 형태\n◦ 운전자금 : 제품생산 비용 및 기업경영에 필요한 자금\n\n□ 융자조건\n◦ 대출금리(변동금리) : 정책자금 기준금리 + 0.6%p\n◦ 대출기간 : 5년 이내(거치기간 2년 포함)\n◦ 대출한도 : 연간 7천만원\n◦ 융자방식 : 금융기관 통한 대리대출",
+  "category": "housing",
+  "contact_raw": "중소기업통합콜센터/1357\n소상공인시장진흥공단 통합콜센터/1533-0100",
+  "content_hash": "sha256:34f8c1821998c60a63173fa867036a9b",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "소상공인정책자금 사이트(ols.semas.or.kr) 내 공지사항에서 별도 안내"
+  ],
+  "first_published": "2026-08-23",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55307700010",
+  "is_mock": false,
+  "last_checked": "2026-08-23",
+  "last_updated": "2026-08-23",
+  "law_raw": "",
+  "name": "일반경영안정자금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55307700010",
+  "org": "소상공인시장진흥공단",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "일반경영안정자금",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금(융자) 소상공인",
+  "source_id": "B55307700010",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "｢소상공인기본법｣제2조의 소상공인(업력 무관)\n* 융자 제외업종인 부동산업(표준산업분류 68) 중 비주거용 건물 임대업(68112)은 ’착한 임대인‘에 한해 허용",
+  "view_count": 29499
+}

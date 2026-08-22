@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "국내에 체류하고 있는 외국인",
+      "다문화가족에 속한 외국인",
+      "선정 기준에 따라 누구나 신청 가능"
+    ],
+    "faq": [
+      {
+        "a": "전국에 지정된 다문화 가족지원센터와 NGO 단체 394개소에서 서비스를 이용하실 수 있습니다.",
+        "q": "지원 서비스를 제공하는 기관은 어디인가요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "지원받고자 하는 경우 가까운 다문화 가족지원센터나 지정된 NGO 단체를 직접 방문하여 신청합니다. 구비 서류는 필요하지 않습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "외국인 피해자 지원제도 안내·연계 서비스는 국내에 체류 중인 외국인을 대상으로 전국 394개소 다문화 가족지원센터와 NGO 단체에서 법률 상담 등 지원을 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관에 문의",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "multicultural"
+  ],
+  "benefit_raw": "○ 외국인이 자유롭게 출입하는 다문화 가족지원센터, NGO 단체 등 전국 394개소 지정 운영, 법률 지원(상담) 피해 구조",
+  "category": "living",
+  "contact_raw": "경찰민원콜센터/182",
+  "content_hash": "sha256:732fdeddc747b256b96d60dae75cd9ec",
+  "criteria_raw": "○ 국내 체류 중인 외국인이라면 누구나 선정 가능",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-23",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-132000000003",
+  "is_mock": false,
+  "last_checked": "2026-08-23",
+  "last_updated": "2026-08-23",
+  "law_raw": "",
+  "name": "외국인 피해자 지원제도 안내·연계 서비스",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/132000000003",
+  "org": "경찰청",
+  "primary_audience": "multicultural",
+  "receiver_raw": "경찰청",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "외국인-피해자-지원제도-안내-연계-서비스",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타(상담)\n상담/법률지원 개인",
+  "source_id": "132000000003",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 국내 체류 외국인",
+  "view_count": 2767
+}

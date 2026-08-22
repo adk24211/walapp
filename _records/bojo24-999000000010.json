@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "만 18세 이상 69세 이하 구직 장애인",
+      "중위소득 60% 이하인 저소득층 포함",
+      "구직 등록을 한 장애인"
+    ],
+    "faq": [
+      {
+        "a": "취업성공 후 3개월 근속 유지 시 30만원, 6개월 근속 유지 시 40만원, 12개월 근속 유지 시 80만원이 각각 지급됩니다.",
+        "q": "수당은 언제 지급되나요?"
+      }
+    ],
+    "note": "저소득층 구직촉진수당은 2유형 참여자에 한해 지급됩니다.",
+    "steps": [
+      {
+        "body": "고용노동부 또는 관할 기관을 직접 방문하여 참여신청서와 개인정보 이용 동의서를 제출하시면 신청이 완료됩니다. 방문 시 담당 직원과 상담을 받아 지원 내용을 확인하시기 바랍니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "장애인 취업성공패키지는 만 18세 이상 69세 이하의 구직 장애인 및 중위소득 60% 이하 저소득층을 대상으로 상담·취업역량 강화·고용 유지까지 지원하고, 일정 근속 시 수당을 지급하는 고용노동부 주관 전국 프로그램입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "한국장애인고용공단 서비스담당자 확인필요",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled",
+    "jobseeker",
+    "lowincome",
+    "business"
+  ],
+  "benefit_raw": "○ [1단계] : 상담 및 취업활동계획\n\n○ [2단계] : 취업역량 강화\n\n- 저소득층 구직촉진수당 월 50만원,최대 6개월(2유형 참여자에 한함)\n\n○ [3단계] : 고용 유지\n\n- 취업성공 후 3개월 근속유지 (취업성공수당 30만원 지급)\n\n- 취업성공 후 6개월 근속유지 (취업성공수당 40만원 지급)\n\n- 취업성공 후 12개월 근속유지 (취업성공수당 80만원 지급)",
+  "category": "jobs",
+  "contact_raw": "한국장애인고용공단/1588-1519",
+  "content_hash": "sha256:5da75fa11ae1915f02e62c70987509b0",
+  "criteria_raw": "○ 취업성공패키지 참여를 희망하는 구직 등록한 장애인",
+  "deferred_detail": false,
+  "documents_raw": [
+    "참여신청서",
+    "개인정보이용 동의서 등"
+  ],
+  "first_published": "2026-08-23",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-999000000010",
+  "is_mock": false,
+  "last_checked": "2026-08-23",
+  "last_updated": "2026-08-23",
+  "law_raw": "",
+  "name": "장애인 취업성공패키지",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000010",
+  "org": "고용노동부",
+  "primary_audience": "disabled",
+  "receiver_raw": "한국장애인고용공단",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "장애인-취업성공패키지",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 서비스(일자리) 개인",
+  "source_id": "999000000010",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 만 18세 이상 69세 이하 구직장애인(중위소득 60% 이하 저소득층 포함)",
+  "view_count": 14716
+}

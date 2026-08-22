@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "직업계고 및 일반고 직업교육위탁과정(6개월) 3학년 중 중소·중견기업에 취업한 학생",
+      "지원 대상 중 심사를 통해 선착순으로 지급",
+      "주요 대상은 소상공인"
+    ],
+    "faq": [
+      {
+        "a": "3개월 재직을 완료하면 2백만원이 지급되고, 추가로 9개월 재직을 완료하면 나머지 3백만원이 지급됩니다.",
+        "q": "지원금은 언제 지급되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "지원자는 교육부가 제공하는 온라인 신청 페이지에서 필요한 정보를 입력하고, 수혜약정서 등을 첨부하여 제출하면 됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "고교 취업연계 장려금은 직업계고·일반고 직업교육위탁과정 3학년 학생이 중소·중견기업에 취업하면 3개월 재직 시 2백만원, 추가 9개월 재직 시 3백만원을 포함한 총 500만원을 지원받는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "2024년 5~6월, 9~12월",
+    "start": ""
+  },
+  "apply_url": "https://www.kosaf.go.kr",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ 학생 1인당 총 500만원 지원(3개월 재직 시 2백만원, 추가 9개월 재직 시 3백만원 후지급)",
+  "category": "jobs",
+  "contact_raw": "한국장학재단/1800-0499",
+  "content_hash": "sha256:da6735fdfe3567ea95433d99326b288b",
+  "criteria_raw": "○ 지원 대상 중 심사를 통해 선착순 지급",
+  "deferred_detail": false,
+  "documents_raw": [
+    "수혜약정서등"
+  ],
+  "first_published": "2026-08-23",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-999000000013",
+  "is_mock": false,
+  "last_checked": "2026-08-23",
+  "last_updated": "2026-08-23",
+  "law_raw": "",
+  "name": "고교 취업연계 장려금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000013",
+  "org": "교육부",
+  "primary_audience": "business",
+  "receiver_raw": "한국장학재단",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "고교-취업연계-장려금",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 개인",
+  "source_id": "999000000013",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 직업계고 및 일반고 직업교육위탁과정(6개월) 3학년 중 중소/중견기업에 취업한 자",
+  "view_count": 39989
+}
