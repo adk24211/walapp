@@ -139,29 +139,24 @@ class Registry:
         entry.status = record.status
         return entry
 
-    def sync_hash(self, record: ProgramRecord) -> bool:
-        """해시만 맞춘다. revision·last_updated·last_checked 는 건드리지 않는다.
-
-        내용이 바뀐 게 아니라 **우리가 같은 내용을 더 잘 다루게 됐을 때** 쓴다 —
-        http 를 https 로 올렸다든지, 대상 분류 규칙이 나아졌다든지.
-        (upgrade_urls.py · reclassify_audiences.py)
-
-        ⚠️ mark_updated 와 헷갈리면 안 된다. 그건 revision 을 올리고 last_updated 를
-           오늘로 바꾼다 — 제도 내용이 실제로 바뀌었을 때만 맞는 일이다. 여기서
-           그걸 쓰면 페이지가 '오늘 갱신됨' 이라고 거짓말한다.
-
-        ⚠️ 그리고 이걸 **빼먹으면 안 된다.** 변경 감지는 registry 의 해시로 하는데
-           (is_changed) save_record 는 _records/ 에만 쓴다. 레코드만 고치고 여기를
-           안 맞추면 다음 동기화가 그 제도들을 '변경됨' 으로 잡아 해설을 통째로
-           다시 만든다 — 그런 스크립트가 아끼려던 바로 그 LLM 호출이다.
-
-        반환값: 원장에 항목이 있어서 실제로 맞췄으면 True.
-        """
-        entry = self.entries.get(record.id)
-        if entry is None:
-            return False        # 아직 발행되지 않은 레코드 — 맞출 항목이 없다
-        entry.content_hash = record.content_hash
-        return True
+    # ⚠️ 여기에 '원장 해시만 맞추는' 함수를 두지 말 것. 한 번 뒀다가 되돌렸다.
+    #
+    # 그럴듯해 보인다 — 레코드를 고치는 스크립트(upgrade_urls·reclassify_audiences)
+    # 가 _records/ 만 쓰니 원장도 맞춰 주면 다음 동기화가 '동일' 로 잡을 것 같다.
+    # 실제로는 반대다.
+    #
+    # 원장의 content_hash 는 **수집 시점에 원천 값으로 계산된 값**이다
+    # (collect/adapters/base.py). 저장된 레코드에서 다시 계산한 값은 그것과
+    # 같다는 보장이 없다 — 저장할 때 clean_text 를 거치기 때문이다. 그래서
+    # 지역에서 계산한 해시로 원장을 덮어쓰면, 맞추려던 것이 오히려 어긋난다.
+    #
+    # 2026-08-22 실행이 그랬다. 재분류한 레코드 22개 중 19개가 '변경' 으로
+    # 잡혀 8건이 재생성됐다(그날 한도 32건 중 8건). 그중 7건은 동기화가 매긴
+    # 대상이 우리가 매긴 것과 **완전히 같았다** — 분류가 아니라 해시 때문이었다.
+    #
+    # 분류 규칙이나 해시 대상 필드를 바꾸면 영향받은 레코드당 재생성 1회가 든다.
+    # 그건 피할 수 없는 비용이고, mark_updated 가 원장을 수집 시점 해시로
+    # 되돌려 놓으므로 한 번으로 끝난다.
 
     def mark_checked(self, program_id: str, today: str, status: str | None = None) -> None:
         """내용은 그대로고 확인만 했을 때. revision 은 올리지 않는다."""
