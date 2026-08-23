@@ -1,0 +1,74 @@
+{
+  "_prose": {
+    "eligibility": [
+      "65세 이상인 노인",
+      "65세 미만이지만 노인성 질병을 가진 국민",
+      "일상생활 수행이 어려워 장기요양 등급을 받은 사람",
+      "장기요양 1~2등급 수급자",
+      "3~5등급 중 시설급여가 가능한 수급자"
+    ],
+    "faq": [
+      {
+        "a": "지원 대상은 3~5등급 중 시설급여가 가능한 수급자에 한정됩니다. 따라서 시설에 거주하지 않는 경우에는 신청이 제한될 수 있습니다.",
+        "q": "시설에 거주하지 않는 경우에도 신청이 가능한가요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "관할 보건복지부 혹은 지정된 기관을 직접 방문하여 신청합니다. 방문 시 장기요양인정서, 복지용구급여확인서, 의사소견서, 건강진단서를 제출하시면 됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "기타재가급여(장기요양보험 복지용구)는 전국의 65세 이상 어르신 및 노인성 질병을 가진 65세 미만 국민 중 일상생활이 어려워 장기요양 등급을 받은 분들에게 장기 요양 서비스를 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "senior",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 노인의료복지시설 등에 장기간 동안 입소하여 신체활동 지원 및 심신기능의 유지 향상을 위한 교육훈련 등을 제공하는 장기 요양급여",
+  "category": "care",
+  "contact_raw": "국민건강보험공단/1577-1000",
+  "content_hash": "sha256:e3caba734d72002cba560b8aa5583120",
+  "criteria_raw": "○ 65세 이상 노인 및 노인성 질병을 가진 65세 미만의 국민으로서 혼자서 일상생활을 수행하기 어려워 장기 요양 등급을 받은 수급자",
+  "deferred_detail": false,
+  "documents_raw": [
+    "장기요양인정서",
+    "복지용구급여확인서",
+    "의사소견서",
+    "건강진단서"
+  ],
+  "first_published": "2026-08-24",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-SSE000000030",
+  "is_mock": false,
+  "last_checked": "2026-08-24",
+  "last_updated": "2026-08-24",
+  "law_raw": "",
+  "name": "기타재가급여 (장기요양보험 복지용구)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SSE000000030",
+  "org": "보건복지부",
+  "primary_audience": "senior",
+  "receiver_raw": "국민건강보험공단 지사",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "기타재가급여-장기요양보험-복지용구",
+  "source": "bojo24",
+  "source_category_raw": "보호·돌봄 서비스(의료)\n의료지원 개인",
+  "source_id": "SSE000000030",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 65세 이상 노인 및 노인성 질병을 가진 65세 미만의 국민으로서 혼자서 일상생활을 수행하기 어려워 장기 요양 1~2등급을 받은 수급자 및 3~5등급 수급자 중 시설급여 가능한 수급자",
+  "view_count": 4667
+}

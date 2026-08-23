@@ -31,14 +31,14 @@
     "raw": "지자체(시, 군, 구) 공고",
     "start": ""
   },
-  "apply_url": "http://nongupez.go.kr",
+  "apply_url": "https://nongupez.go.kr",
   "audiences": [
     "youth"
   ],
   "benefit_raw": "○ 선발인원에 대해 정착지원금(월 최대 110만원), 농신보 우대보증, 농지임대 우선지원 및 영농기술 교육 등 패키지 지원",
   "category": "housing",
   "contact_raw": "해당지역 시군구청/1670-0255",
-  "content_hash": "sha256:2133ea035cad253efc531605a1669d53",
+  "content_hash": "sha256:46dd9ec2a4d55969d14cdb5c9ea3e0fa",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [

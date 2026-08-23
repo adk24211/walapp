@@ -1,0 +1,70 @@
+{
+  "_prose": {
+    "eligibility": [
+      "만 3~5세 영유아와 학부모",
+      "20~30대 청년 1인 가구",
+      "청소년, 노인, 취약계층 등 모든 지역주민"
+    ],
+    "faq": [
+      {
+        "a": "농림축산식품부가 소관 기관으로 담당합니다.",
+        "q": "이 사업을 담당하는 부처는 어디인가요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "관할 기관을 직접 방문하여 지원신청서를 제출합니다. 신청 시 지원신청서를 작성해 가져가시면 됩니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "바른 식생활교육 지원(지자체사업)은 전국의 영유아·청소년·청년·노인·취약계층 등 지역주민에게 식생활교육 관련 워크숍·체험활동·교사 연수 등을 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "각 지자체 지원센터(식생활교육네트워크 또는 종합식생활지원센터) 문의 필요",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "youth",
+    "parent",
+    "senior"
+  ],
+  "benefit_raw": "○ (식생활교육 관계자) 지역단위 민관협력 워크숍\n\n○ (초등학교) 바른 식생활교육 창의적 체험활동 또는 방과 후 교실 학습지원\n\n○ (어린이집, 유치원, 초중고등학교) 농업, 농촌 체험과 연계한 바른 식생활교육 프로그램\n\n○ (학교교사 및 영양교사) 학교교사, 영양(교)사 및 학교 조리사 식생활교육\n\n○ (어린이집, 유치원, 초중고등학교) 텃밭 연계 식생활교육 프로그램\n\n○ (지자체 및 위탁기관 담당자) 지자체 식생활교육 담당자 역량강화\n\n○ (고령자) 고령자 식생활 건강 개선사업\n\n○ 학교급식 또는 전통음식 활성화와 연계된 바른식생활 교육사업 등",
+  "category": "care",
+  "contact_raw": "식생활소비정책과/044-201-2273",
+  "content_hash": "sha256:cb691eb5b567bbd53576c8c4e6a632c3",
+  "criteria_raw": "○ 만3~5세유아와 학부모, 20~30대 청년 1인가구 및 전국민",
+  "deferred_detail": false,
+  "documents_raw": [
+    "지원신청서"
+  ],
+  "first_published": "2026-08-24",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-154300000330",
+  "is_mock": false,
+  "last_checked": "2026-08-24",
+  "last_updated": "2026-08-24",
+  "law_raw": "",
+  "name": "바른 식생활교육 지원(지자체사업)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/154300000330",
+  "org": "농림축산식품부",
+  "primary_audience": "senior",
+  "receiver_raw": "시·군·구청",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "바른-식생활교육-지원-지자체사업",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 개인",
+  "source_id": "154300000330",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 영유아, 청소년, 청년, 노인, 취약계층 등 각 지역주민",
+  "view_count": 2842
+}

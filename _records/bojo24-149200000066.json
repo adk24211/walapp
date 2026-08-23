@@ -26,7 +26,7 @@
     "raw": "접수기관 별 상이",
     "start": ""
   },
-  "apply_url": "http://hrd.go.kr",
+  "apply_url": "https://hrd.go.kr",
   "audiences": [
     "jobseeker",
     "business"
@@ -34,7 +34,7 @@
   "benefit_raw": "○ 훈련비, 유급휴가 훈련 인건비, 훈련수당, 숙식비를 정해진 한도 내에서 지원",
   "category": "jobs",
   "contact_raw": "한국산업인력공단/052-714-8277",
-  "content_hash": "sha256:ff1a7507614a7d3a620dfeb55519ddbe",
+  "content_hash": "sha256:c060be55ccde1979b7f30f603c8e14bb",
   "criteria_raw": "○ 사업주가 비용을 전적으로 부담하여 소속 근로자, 채용예정자, 구직자 등을 대상으로 직업능력개발훈련을 실시(자체 또는 위탁)했을 때 정해준 수료기준을 충족한 근로자에게 소요된 비용에 한해서 지원",
   "deferred_detail": false,
   "documents_raw": [

@@ -1,0 +1,64 @@
+{
+  "_prose": {
+    "eligibility": [
+      "보건소에 등록된 임산부",
+      "임신 전후 3개월 이내인 경우 엽산제 지원 대상",
+      "임신 16주 이상인 경우 철분제 지원 대상",
+      "양육가정에 해당하는 임산부"
+    ],
+    "faq": [],
+    "note": "보건소에 등록되지 않은 임산부는 신청이 불가합니다.",
+    "steps": [
+      {
+        "body": "보건소를 직접 방문하여 임산부임을 확인하고 신청합니다. 신청 시 임신확인서를 제출하시면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "보건복지부가 전국 보건소를 통해 임산부에게 엽산제와 철분제를 지원하는 제도이며, 임신 전후 3개월 및 임신 16주 이상인 보건소 등록 임산부에게 각각 제공됩니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "○ (엽산제) 임신 전후 3개월까지 엽산제 지원\n○ (철분제) 임신 16주부터 철분제 5개월분",
+  "category": "care",
+  "contact_raw": "보건복지상담센터/129",
+  "content_hash": "sha256:9a3f48d46a0367f073cbe99576b036f2",
+  "criteria_raw": "보건소 등록 임산부",
+  "deferred_detail": false,
+  "documents_raw": [
+    "임신확인서"
+  ],
+  "first_published": "2026-08-24",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-SD0000016094",
+  "is_mock": false,
+  "last_checked": "2026-08-24",
+  "last_updated": "2026-08-24",
+  "law_raw": "",
+  "name": "임산부 엽산제, 철분제 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000016094",
+  "org": "보건복지부",
+  "primary_audience": "parent",
+  "receiver_raw": "보건소",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "임산부-엽산제-철분제-지원",
+  "source": "bojo24",
+  "source_category_raw": "임신·출산 의료지원\n현물 개인",
+  "source_id": "SD0000016094",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ (엽산제) 임신 전후 3개월\n○ (철분제) 임신 16주 이상",
+  "view_count": 33769
+}

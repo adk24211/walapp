@@ -1,0 +1,73 @@
+{
+  "_prose": {
+    "eligibility": [
+      "66세 이상인 의료급여 수급권자",
+      "어르신(노인) 또는 장애인에 해당하는 경우",
+      "지원 대상과 동일한 기준을 만족하는 경우"
+    ],
+    "faq": [
+      {
+        "a": "66세 이상 여성에게는 골밀도 검사가 제공됩니다.",
+        "q": "66세 이상 여성에게 제공되는 검사는 무엇인가요?"
+      },
+      {
+        "a": "70세에는 생활습관평가와 정신건강검사가 제공됩니다.",
+        "q": "70세에 제공되는 검사는 무엇인가요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "별도 신청이 필요하지 않습니다. 의료급여 수급권자이시고 66세 이상이면 자동으로 검진 대상에 포함됩니다. 국민건강보험공단이 발송한 건강검진표와 신분증을 지참하시면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "보건복지부가 전국에서 시행하는 의료급여 생애전환기검진 지원은 66세 이상 의료급여 수급권자를 대상으로 다양한 건강검진을 무료로 제공합니다. 문진·키·몸무게 등 신체검사와 골밀도·인지기능·생활습관·정신건강·노인신체기능·폐기능 검사가 포함됩니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "검진대상자로 통보받은 당해 연도 내",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "senior",
+    "disabled"
+  ],
+  "benefit_raw": "○ 검진 항목\n· 건강검진 상담(문진, 키, 몸무게 등 신체검사)\n· 골밀도 검사(66세 중 여성)\n· 인지기능장애 검사( 66세 이상)\n· 생활습관평가( 70세)\n· 정신건강검사( 70세)\n· 노인신체기능(하지 기능, 평형성) 검사(66, 70, 80세)\n· 폐기능검사",
+  "category": "health",
+  "contact_raw": "국민건강보험공단/1577-1000",
+  "content_hash": "sha256:092710ce50bc859fe4352160da27601d",
+  "criteria_raw": "지원대상과 동일",
+  "deferred_detail": false,
+  "documents_raw": [
+    "국민건강보험공단 발송 건강검진표 및 신분증"
+  ],
+  "first_published": "2026-08-24",
+  "how_to_raw": "신청불필요",
+  "id": "bojo24-SME000000030",
+  "is_mock": false,
+  "last_checked": "2026-08-24",
+  "last_updated": "2026-08-24",
+  "law_raw": "",
+  "name": "의료급여 생애전환기검진 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SME000000030",
+  "org": "보건복지부",
+  "primary_audience": "senior",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "의료급여-생애전환기검진-지원",
+  "source": "bojo24",
+  "source_category_raw": "보건·의료 서비스(의료) 개인",
+  "source_id": "SME000000030",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "66세 이상 의료급여 수급권자",
+  "view_count": 6582
+}

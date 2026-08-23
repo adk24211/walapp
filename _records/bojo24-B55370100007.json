@@ -1,0 +1,74 @@
+{
+  "_prose": {
+    "eligibility": [
+      "서민 및 기타 취약계층으로, 취업서비스를 원하는 성인",
+      "구직자",
+      "소상공인",
+      "선정 기준은 별도로 제시되지 않습니다"
+    ],
+    "faq": [
+      {
+        "a": "정부가 운영하는 기존 취업지원사업과 연계하여 구인·구직 상담 외에 추가적인 취업 정보와 연계 서비스를 제공한다는 의미입니다.",
+        "q": "‘정부 취업지원프로그램 연계’는 구체적으로 어떤 지원을 의미하나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "서민금융진흥원 홈페이지에서 신청 양식을 작성합니다. 필요한 정보를 기재하고 제출하면 접수가 완료됩니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "서민금융진흥원 관할 사무소를 직접 방문하여 신청서를 제출합니다. 담당 직원이 신청 내용을 확인하고 접수를 진행합니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "취약계층 취업 지원은 서민금융진흥원이 전국에서 진행하는 프로그램으로, 서민·취약계층 성인에게 구인·구직 상담 및 정부 취업지원프로그램 연계를 제공하여 일자리 확보를 돕습니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "http://kinfa.or.kr/cyber/index.do",
+  "audiences": [
+    "jobseeker",
+    "business"
+  ],
+  "benefit_raw": "○ 서민생활 안정에 기여를 목적으로 취업지원 사업실시\n- 서민, 취약계층 대상 구인구직 상담 및 알선\n- 정부 취업지원프로그램 연계",
+  "category": "jobs",
+  "contact_raw": "서민금융콜센터/1397",
+  "content_hash": "sha256:98df7ebb2f04a6ef33784c2836234763",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-24",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-B55370100007",
+  "is_mock": false,
+  "last_checked": "2026-08-24",
+  "last_updated": "2026-08-24",
+  "law_raw": "",
+  "name": "취약계층 취업 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55370100007",
+  "org": "서민금융진흥원",
+  "primary_audience": "jobseeker",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "취약계층-취업-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타(상담) 개인",
+  "source_id": "B55370100007",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "서민, 취약계층 등 취업서비스를 원하는 성인",
+  "view_count": 1921
+}

@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "중소기업에 취업을 원하는 구직자",
+      "직원 채용을 원하고 있는 중소기업",
+      "전국에 거주하거나 활동하는 구직자"
+    ],
+    "faq": [
+      {
+        "a": "본 사업은 선정 기준이 별도로 제시되지 않아, 지원 대상에 해당하면 별도의 심사 없이 신청이 가능합니다.",
+        "q": "선정 기준이 없다는 것은 어떻게 해석해야 하나요?"
+      }
+    ],
+    "note": "구비 서류가 없으므로 신청 시 제출할 서류가 없습니다.",
+    "steps": [
+      {
+        "body": "중소벤처기업진흥공단 홈페이지에서 온라인 신청서를 작성하고 제출하면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "기업인력애로센터를 활용해 중소기업의 구인난을 해소하고자 하는 구직자와 직원 채용을 원하는 중소기업에게 온라인으로 취업컨설팅·인적성검사 등 취업 서비스를 제공하는 지원사업입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "job.kosmes.or.kr",
+  "audiences": [
+    "jobseeker",
+    "business"
+  ],
+  "benefit_raw": "○ 기업인력애로센터를 활용하여 우수 구인기업 및 구직자 발굴, 구직자 대상 취업컨설팅 및 취업연계 등을 통해 중소기업 구인난 해소\n- 구직자 대상 취업컨설팅, 온라인 인적성검사 등의 취업서비스 제공",
+  "category": "jobs",
+  "contact_raw": "인력지원처/055-751-9792",
+  "content_hash": "sha256:a4a714b5ccedce756a66573a4be07302",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-24",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55400900028",
+  "is_mock": false,
+  "last_checked": "2026-08-24",
+  "last_updated": "2026-08-24",
+  "law_raw": "",
+  "name": "기업인력애로센터 활용 취업지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55400900028",
+  "org": "중소벤처기업진흥공단",
+  "primary_audience": "jobseeker",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "기업인력애로센터-활용-취업지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 서비스(일자리) 개인\n법인/시설/단체",
+  "source_id": "B55400900028",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "중소기업 취업희망 구직자, 직원 채용을 원하는 중소기업",
+  "view_count": 1939
+}

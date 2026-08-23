@@ -32,7 +32,7 @@
     "raw": "상시신청",
     "start": ""
   },
-  "apply_url": "http://www.bokjiro.go.kr",
+  "apply_url": "https://www.bokjiro.go.kr",
   "audiences": [
     "parent",
     "disabled",
@@ -41,7 +41,7 @@
   "benefit_raw": "○ 중증장애아동수당(중증장애인)\n- 국민기초생활 보장 생계 또는 의료급여수급자 : 22만 원/월\n- 국민기초생활 보장 주거 또는 교육급여수급자(단, 생계 또는 의료급여수급자 제외), 차상위계층 : 17만 원/월\n- 보장시설수급자(생계,의료) : 9만 원/월\n\n○ 경증장애아동수당(경증장애인)\n- 국민기초생활 보장 생계 또는 의료급여수급자 : 11만 원/월\n- 국민기초생활 보장 주거 또는 교육급여수급자(단, 생계 또는 의료급여수급자 제외), 차상위계층 : 11만 원/월\n- 보장시설수급자(생계,의료) : 3만 원/월",
   "category": "finance",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:4fa6a2bb2a11972b45ae13ee8ecc8bc5",
+  "content_hash": "sha256:3a256ea1cf883b2fea79c4460a02adfd",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [

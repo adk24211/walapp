@@ -1,0 +1,64 @@
+{
+  "_prose": {
+    "eligibility": [
+      "경력보유여성",
+      "구직을 희망하는 여성",
+      "여성 구직자"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "관할 기관인 성평등가족부 산하 여성 새로 일하기 센터를 직접 방문합니다. 방문 시 구직자 1:1 상담을 신청하고, 구비 서류인 방문 신청서와 온라인 신청서를 제출합니다. 상담 후 적합한 취업 지원 서비스가 연계됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "경력보유여성 등 구직을 희망하는 여성에게 여성 새로 일하기 센터에서 1:1 상담 후 적합한 취업 지원 서비스를 연계해 주는 전국 단위 취업지원 제도입니다. 이 제도는 성평등가족부가 관할하며, 신청은 직접 방문하여 신청서와 온라인 신청서를 제출하면 됩니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "jobseeker",
+    "business"
+  ],
+  "benefit_raw": "○ 여성 새로 일하기 센터에서 구직자 1:1 상담 후 적합한 취업 지원 서비스 연계",
+  "category": "jobs",
+  "contact_raw": "여성새로일하기센터/1544-1199",
+  "content_hash": "sha256:e0b9d66081325237cc5fbd5730291aec",
+  "criteria_raw": "경력보유여성 등 구직 희망 여성",
+  "deferred_detail": false,
+  "documents_raw": [
+    "방문 신청 및 온라인 신청"
+  ],
+  "first_published": "2026-08-24",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-138300000055",
+  "is_mock": false,
+  "last_checked": "2026-08-24",
+  "last_updated": "2026-08-24",
+  "law_raw": "",
+  "name": "경력보유여성 등 취업지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000055",
+  "org": "성평등가족부",
+  "primary_audience": "jobseeker",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "경력보유여성-등-취업지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 서비스(일자리) 개인",
+  "source_id": "138300000055",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "경력보유여성 등 구직 희망 여성",
+  "view_count": 2116
+}

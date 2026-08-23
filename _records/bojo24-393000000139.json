@@ -1,0 +1,74 @@
+{
+  "_prose": {
+    "eligibility": [
+      "관내에 거주하는 고등학생으로 직전학년 전체 평균이 90점 이상인 경우입니다.",
+      "관내에 거주하는 고등학생으로 법정저소득층이며 직전학년 전체 평균이 50점 이상인 경우입니다.",
+      "관내에 거주하는 대학생으로 직전학기 백분율 환산 점수가 90점 이상이고 12학점 이상 이수한 경우입니다."
+    ],
+    "faq": [
+      {
+        "a": "선정 기준이 별도로 제시되지 않았습니다. 따라서 선정 방법은 공개되지 않았습니다.",
+        "q": "선정 기준이 명시되어 있지 않은데, 어떻게 선정되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "안산꿈키움 장학금은 온라인으로 신청할 수 있습니다. 신청 페이지에 접속하여 필요한 정보를 입력하시면 됩니다. 구비 서류는 요구되지 않습니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "온라인 신청이 어려운 경우 직접 방문하여 신청할 수 있습니다. 관할 재단 사무실에 방문하셔서 신청 양식을 작성하시면 됩니다. 구비 서류는 없습니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "안산꿈키움 장학금은 전국의 관내 거주 고등학생·대학생에게 학업 성적 및 소득 기준에 따라 장학금을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "https://www.ansanfys.or.kr/",
+  "audiences": [
+    "youth",
+    "parent",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 관내 거주 고등학생(50만원)과 대학생(200만원) 중 지원이 필요한 학생에 대한 장학금 지급\n- 고등 : 우수(직전학년 전체 평균이 90점 이상), 희망(법정저소득층, 직전학년 전체 평균 50점 이상)\n- 대학 : 직전학기 백분율 환산점수 90점 이상, 12학점 이상 이수",
+  "category": "education",
+  "contact_raw": "안산인재육성재단/031-414-0924",
+  "content_hash": "sha256:9510556b73133fa21ab6b42346cb7587",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-24",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-393000000139",
+  "is_mock": false,
+  "last_checked": "2026-08-24",
+  "last_updated": "2026-08-24",
+  "law_raw": "",
+  "name": "안산꿈키움 장학금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/393000000139",
+  "org": "재단법인안산인재육성재단",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "안산꿈키움-장학금",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "393000000139",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 관내 거주 고등학생 및 대학생\n- 고등 : 우수(직전학년 전체 평균 90점 이상), 희망(법정저소득층, 직전학년 전체평균 50점 이상)\n* 학교장 추천\n- 대학 : 직전학기 백분율 환산 점수 90점 이상, 12학점 이상 이수",
+  "view_count": 6047
+}
