@@ -45,7 +45,12 @@ layout: default
   {% assign deadline_soon = dated | where: "status", "upcoming" | where_exp: "p", "p.apply_end" | sort: "apply_end" %}
   {% assign items = deadline_open | concat: deadline_soon %}
 {% elsif axis == 'new' %}
+  {% comment %}
+    '새로 추가' 는 최근 것만 싣는다(page.hub_limit). 전량을 실으면 정렬만 다른
+    /support/ 복제가 되고, 실제로 그 상태였다 — 201건이 그대로 들어가 있었다.
+  {% endcomment %}
   {% assign items = all_programs | sort: "first_published" | reverse %}
+  {% if page.hub_limit %}{% assign items = items | slice: 0, page.hub_limit %}{% endif %}
 {% else %}
   {% assign items = all_programs %}
 {% endif %}

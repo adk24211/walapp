@@ -63,12 +63,15 @@ module Walapp
            "hub_axis"  => "deadline",
            "footnote"  => "예산이 일찍 소진되면 표시된 마감일보다 먼저 접수가 끝날 수 있습니다.")
 
+      # '새로 추가' 가 이름값을 못 하고 있었다 — 최근 순으로 **전량**(201건)을
+      # 싣고 있어서 /support/ 와 같은 목록이었다. 최근 것만 남긴다.
       push(site, "/new/",
            "title"     => "새로 추가된 제도",
            "heading"   => "새로 추가된 제도",
            "eyebrow"   => "신규",
-           "blurb"     => "최근에 정리해 올린 제도입니다.",
-           "hub_axis"  => "new")
+           "blurb"     => "최근에 정리해 올린 제도를 새로 올라온 순으로 모았습니다. 지난 제도는 전체 지원 제도에서 보실 수 있습니다.",
+           "hub_axis"  => "new",
+           "hub_limit" => 30)
     end
 
     def add_category_hubs(site, taxonomy)
@@ -133,6 +136,23 @@ module Walapp
     end
 
     def add_region_hubs(site, taxonomy)
+      # ⚠️ 지자체 제도가 하나도 없으면 이 축을 통째로 만들지 않는다.
+      #
+      # REGION_SCOPE 가 national 인 동안 /region/national/ 은 /support/ 와
+      # **제도 목록이 완전히 같다.** 실제로 재 봤다 — 둘 다 201장, 제도 링크
+      # 집합이 정확히 일치. 제목만 다른 같은 페이지가 둘 있는 셈이고,
+      # 검색엔진에는 중복 콘텐츠로 보인다.
+      #
+      # 시도 허브를 '제도가 실제로 있는 시도만 만든다' 로 둔 것과 같은 규칙을
+      # national 에도 적용하는 것뿐이다. 지자체 제도가 들어오는 날 자동으로
+      # 다시 생긴다 — 그때는 '전국' 과 '서울' 이 서로 다른 목록이 되므로
+      # 축으로서 뜻이 생긴다.
+      programs = site.collections["programs"]&.docs || []
+      unless programs.any? { |d| d.data["region_scope"] && d.data["region_scope"] != "national" }
+        Jekyll.logger.info "HubGenerator:", "지자체 제도가 없어 지역별 축은 건너뜀 (/support/ 와 같은 목록이 된다)"
+        return
+      end
+
       push(site, "/region/national/",
            "title"    => "전국 지원 제도",
            "heading"  => "전국 어디서나 신청 가능한 제도",
