@@ -36,6 +36,7 @@ module Walapp
       add_category_hubs(site, taxonomy)
       add_audience_hubs(site, taxonomy)
       add_region_hubs(site, taxonomy)
+      add_cross_hubs(site, taxonomy)
 
       Jekyll.logger.info "HubGenerator:", "허브 페이지 #{@count} 개 생성"
     end
@@ -133,6 +134,75 @@ module Walapp
              "hub_axis" => "audience",
              "hub_key"  => key)
       end
+    end
+
+    # ── 대상 × 분야 교차 허브 ──
+    #
+    # 사람이 검색하는 말은 '청년 지원금' 보다 '청년 주거 지원금' 이 더 구체적이다.
+    # 그런데 이 사이트에는 축을 교차해 좁히는 화면이 없어서, 청년 허브 51건을
+    # 눈으로 훑어야 주거 12건을 골라낼 수 있었다.
+    #
+    # ⚠️ 다만 조합을 다 만들면 안 된다. 두 가지에 걸린다.
+    #
+    #   ① 얇은 페이지 — 63칸 중 15칸이 1~2건이다. 카드 한 장짜리 페이지를
+    #      양산하면 색인에 해롭다.  → MIN_CROSS 로 자른다.
+    #
+    #   ② 부모의 복제 — '소상공인 × 일자리' 는 일자리 허브의 93%, 소상공인
+    #      허브의 82%다. 제목만 다른 같은 페이지가 또 생기는 것이고, 그건
+    #      /region/national/ 에서 방금 걷어낸 문제다.  → MAX_OVERLAP 으로 자른다.
+    #
+    # 임계값은 건수가 늘면 자동으로 더 많은 조합을 통과시킨다. 지금은 15개다.
+    MIN_CROSS = 8
+    MAX_OVERLAP = 0.85
+
+    def add_cross_hubs(site, taxonomy)
+      programs = site.collections["programs"]&.docs || []
+      return if programs.empty?
+
+      aud_total = Hash.new(0)
+      cat_total = Hash.new(0)
+      pair      = Hash.new(0)
+      programs.each do |d|
+        cat = d.data["category"]
+        cat_total[cat] += 1
+        Array(d.data["audiences"]).each do |a|
+          aud_total[a] += 1
+          pair[[a, cat]] += 1
+        end
+      end
+
+      made = skipped_thin = skipped_dupe = 0
+      (taxonomy["audience_order"] || []).each do |a|
+        (taxonomy["category_order"] || []).each do |c|
+          n = pair[[a, c]]
+          next if n.zero?
+
+          if n < MIN_CROSS
+            skipped_thin += 1
+            next
+          end
+          if n.to_f / aud_total[a] >= MAX_OVERLAP || n.to_f / cat_total[c] >= MAX_OVERLAP
+            skipped_dupe += 1
+            next
+          end
+
+          am = taxonomy.dig("audiences", a) || {}
+          cm = taxonomy.dig("categories", c) || {}
+          al = am["label"] || a
+          cl = cm["label"] || c
+          push(site, "/who/#{a}/#{c}/",
+               "title"     => "#{al} #{cl} 지원금 총정리",
+               "heading"   => "#{al}#{eul_reul(al)} 위한 #{cl} 제도",
+               "eyebrow"   => "#{al} × #{cl}",
+               "blurb"     => "#{al} 대상 제도 가운데 #{cl} 분야만 모았습니다.",
+               "hub_axis"  => "cross",
+               "hub_key"   => a,
+               "hub_key2"  => c)
+          made += 1
+        end
+      end
+      Jekyll.logger.info "HubGenerator:",
+                         "교차 허브 #{made}개 (얇아서 건너뜀 #{skipped_thin} · 부모와 겹쳐 건너뜀 #{skipped_dupe})"
     end
 
     def add_region_hubs(site, taxonomy)
