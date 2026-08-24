@@ -5,7 +5,7 @@ layout: default
   분야·대상·지역·마감임박·신규를 한 레이아웃으로 처리한다.
   페이지 front matter 에서 축(hub_axis)과 키(hub_key)만 지정하면 된다.
 
-  hub_axis: category | audience | audience_index | region | deadline | new | all
+  hub_axis: category | audience | audience_index | cross | region | deadline | new | all
 {% endcomment %}
 
 {% assign axis = page.hub_axis %}
@@ -17,6 +17,14 @@ layout: default
   {% assign items = all_programs | where: "category", key %}
 {% elsif axis == 'audience' %}
   {% assign items = all_programs | where_exp: "p", "p.audiences contains key" %}
+{% elsif axis == 'cross' %}
+  {% comment %}
+    대상 × 분야. key 가 대상, hub_key2 가 분야다.
+    어느 조합을 만들지는 hub_generator.rb 가 정한다 — 얇거나(8건 미만) 부모
+    허브와 85% 이상 겹치면 아예 만들지 않는다. 뒤엣것을 안 걸렀다면
+    '소상공인 × 일자리'(일자리 허브의 93%) 같은 복제가 또 생긴다.
+  {% endcomment %}
+  {% assign items = all_programs | where_exp: "p", "p.audiences contains key" | where: "category", page.hub_key2 %}
 {% elsif axis == 'audience_index' %}
   {% comment %}
     이 화면만 카드 목록이 아니라 '대상 8개' 를 싣는다. 전체 제도를 다시
@@ -76,6 +84,19 @@ layout: default
   </a>
   {% endfor %}
 </nav>
+{% elsif axis == 'cross' %}
+{% comment %}
+  같은 대상 안에서 분야를 갈아탄다. 교차 페이지가 실제로 만들어진 분야만
+  링크한다 — 없는 곳에 걸면 404 다.
+{% endcomment %}
+{% assign cross_pages = site.pages | where: "hub_axis", "cross" | where: "hub_key", key %}
+<nav class="hub-nav" aria-label="분야로 좁히기">
+  <a class="hub-chip" href="{{ '/who/' | append: key | append: '/' | relative_url }}">{{ site.data.taxonomy.audiences[key].label }} 전체</a>
+  {% for c in site.data.taxonomy.category_order %}
+  {% assign hit = cross_pages | where: "hub_key2", c | first %}
+  {% if hit %}<a class="hub-chip{% if page.hub_key2 == c %} active{% endif %}" href="{{ hit.url | relative_url }}">{{ site.data.taxonomy.categories[c].label }}</a>{% endif %}
+  {% endfor %}
+</nav>
 {% elsif axis == 'audience' or axis == 'audience_index' %}
 <nav class="hub-nav" aria-label="대상별 탐색">
   {% for a in site.data.taxonomy.audience_order %}
@@ -85,6 +106,27 @@ layout: default
   </a>
   {% endfor %}
 </nav>
+{% comment %}
+  대상 허브에서 분야로 좁혀 들어가는 문.
+
+  ⚠️ 이 줄이 없으면 교차 페이지가 서로만 링크하는 섬이 된다. 실제로 그랬다 —
+     /who/youth/ 에서 /who/youth/housing/ 로 갈 길이 없었다. 방금 /new/ 에서
+     걷어낸 것과 같은 고아 문제를 새로 만들 뻔했다.
+
+  만들어진 조합만 건다. 없는 곳에 걸면 404 다.
+{% endcomment %}
+{% if axis == 'audience' %}
+{% assign my_cross = site.pages | where: "hub_axis", "cross" | where: "hub_key", key %}
+{% if my_cross.size > 0 %}
+<nav class="hub-nav hub-nav-sub" aria-label="분야로 좁히기">
+  <span class="hub-chip-label">분야로 좁히기</span>
+  {% for c in site.data.taxonomy.category_order %}
+  {% assign hit = my_cross | where: "hub_key2", c | first %}
+  {% if hit %}<a class="hub-chip" href="{{ hit.url | relative_url }}">{{ site.data.taxonomy.categories[c].label }}</a>{% endif %}
+  {% endfor %}
+</nav>
+{% endif %}
+{% endif %}
 {% elsif axis == 'region' %}
 <nav class="hub-nav" aria-label="지역별 탐색">
   <a class="hub-chip{% if key == 'national' %} active{% endif %}" href="{{ '/region/national/' | relative_url }}">전국</a>
@@ -116,13 +158,13 @@ layout: default
   종료된 제도를 지우지 않는 대신 아래로 내려, 홈 카드에 찍힌 '시행중 N건'과
   첫 묶음의 건수가 일치하게 한다. 마감임박·신규 허브는 이미 정렬이 의미를 가지므로 나누지 않는다.
 {% endcomment %}
-{% if axis == 'category' or axis == 'audience' or axis == 'region' %}
+{% if axis == 'category' or axis == 'audience' or axis == 'region' or axis == 'cross' %}
 {% assign open_items = items | where: "status", "active" %}
 {% assign upcoming_items = items | where: "status", "upcoming" %}
 {% assign closed_items = items | where: "status", "closed" %}
 {% comment %} 분야 허브 안에서는 모든 카드가 같은 분야라 분야 칩이 군더더기다. {% endcomment %}
 {% assign show_cat = true %}
-{% if axis == 'category' %}{% assign show_cat = false %}{% endif %}
+{% if axis == 'category' or axis == 'cross' %}{% assign show_cat = false %}{% endif %}
 
 <div class="feed">
   {% if open_items.size > 0 %}
