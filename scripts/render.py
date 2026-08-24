@@ -11,6 +11,7 @@
 from __future__ import annotations
 
 import html
+import json
 import re
 
 from schema import (STATUS_CLOSED, STATUS_LABELS, ProgramRecord,
@@ -321,6 +322,34 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
                 "  </details>",
             ]
         block.append("</div>")
+
+        # 구조화 데이터(FAQPage). 화면에 이미 보이는 질문·답을 검색엔진에도
+        # 알려 준다 — 검색 결과에서 질문이 접힌 채로 함께 표시될 수 있다.
+        #
+        # ⚠️ 화면에 **보이는 것과 똑같은 내용**만 넣는다. 구글은 페이지에 없는
+        #    내용을 구조화 데이터로만 넣는 것을 정책 위반으로 본다. 그래서 위
+        #    block 을 만든 것과 같은 faq 목록을 그대로 쓴다(_useful_faq 로 걸러낸
+        #    뒤의 것). 질문을 더 넣고 싶으면 화면에도 함께 넣어야 한다.
+        #
+        # 페이지에 GovernmentService JSON-LD 가 따로 있다(_layouts/program.html).
+        # 둘은 다른 것을 말하므로 함께 있어도 된다 — 이 제도가 무엇인지와,
+        # 이 페이지에 어떤 문답이 실려 있는지.
+        faq_ld = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": item["q"],
+                    "acceptedAnswer": {"@type": "Answer", "text": item["a"]},
+                }
+                for item in faq
+            ],
+        }
+        block.append('<script type="application/ld+json">')
+        block.append(json.dumps(faq_ld, ensure_ascii=False))
+        block.append("</script>")
+
         parts += sec("자주 묻는 질문", block, prose_written=True)
 
     # ── 주의 안내 ──
@@ -530,9 +559,32 @@ def to_markdown(record: ProgramRecord, prose: dict) -> str:
     if record.region.sigungu:
         front.append(f'region_sigungu: "{_yaml(record.region.sigungu)}"')
 
+    summary_text = _yaml(_polite(prose.get("summary")) or record.benefit_raw)[:160]
     front += [
         f'org: "{_yaml(record.org)}"',
-        f'summary: "{_yaml(_polite(prose.get("summary")) or record.benefit_raw)[:160]}"',
+        f'summary: "{summary_text}"',
+        # ⚠️ description 은 summary 와 같은 값이지만 지워서는 안 된다.
+        #
+        # jekyll-seo-tag 는 page.summary 를 모른다. description 이 없으면 본문
+        # 앞부분을 잘라 쓰는데, 이 사이트의 본문은 카드 마크업으로 시작해서
+        # 201개 페이지의 meta description 이 전부 이런 조각이었다:
+        #
+        #   "01 지원 내용 금액이 적힌 항목 시중 시세의 60~80% 수준으로 공공임대주택공급"
+        #
+        # 그게 구글 검색 결과에 그대로 나가는 자리다. 우리가 이미 검증한 문장을
+        # 두고 잘린 마크업을 내보내고 있었다.
+        f'description: "{summary_text}"',
+        # 이 페이지가 무엇인지 seo-tag 에게 알려 준다.
+        #
+        # 안 주면 '_programs 컬렉션 + 날짜' 를 보고 BlogPosting 으로 찍는다.
+        # 뉴스 브리핑 시절이면 맞았지만 지금은 아니다 — 한 페이지가 자기를
+        # '블로그 글' 이자 '정부 서비스'(아래 program.html 의 GovernmentService)
+        # 라고 동시에 주장하게 된다.
+        #
+        # WebPage 로 둔다. 페이지는 실제로 WebPage 가 맞고, 그 페이지가 다루는
+        # 대상이 GovernmentService 다 — 둘은 모순이 아니라 층이 다른 말이다.
+        "seo:",
+        "  type: WebPage",
         f"status: {record.status}",
         f'status_label: "{STATUS_LABELS.get(record.status, record.status)}"',
         f"apply_always: {'true' if record.apply_period.always else 'false'}",

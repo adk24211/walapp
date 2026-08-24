@@ -13,6 +13,9 @@ region_scope: national
 region_label: "전국"
 org: "과학기술정보통신부"
 summary: "다문화가정 EMS 요금 할인 지원은 내국인과 결혼한 다문화 가족이 국제 특급(EMS) 우편물을 발송할 경우, 2025년 현재 요금을 10% 감액받을 수 있도록 제공되는 제도이며, 별도 신청 없이 상시 접수됩니다."
+description: "다문화가정 EMS 요금 할인 지원은 내국인과 결혼한 다문화 가족이 국제 특급(EMS) 우편물을 발송할 경우, 2025년 현재 요금을 10% 감액받을 수 있도록 제공되는 제도이며, 별도 신청 없이 상시 접수됩니다."
+seo:
+  type: WebPage
 status: active
 status_label: "시행중"
 apply_always: true
