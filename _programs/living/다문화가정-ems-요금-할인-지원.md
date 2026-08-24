@@ -19,6 +19,7 @@ seo:
 status: active
 status_label: "시행중"
 apply_always: true
+receiver: "국제사업과"
 apply_methods: ["별도 신청 불필요"]
 apply_not_needed: true
 official_url: "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/171000000008"
