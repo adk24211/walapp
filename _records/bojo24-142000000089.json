@@ -1,0 +1,71 @@
+{
+  "_prose": {
+    "eligibility": [
+      "전통시장·상점가·골목형상점가·상권활성화구역·자율상권구역 내에서 사업을 영위하는 상인 또는 상인조직",
+      "소상공인으로서 위 지역에서 영업 중인 경우",
+      "백년소상공인"
+    ],
+    "faq": [
+      {
+        "a": "중소벤처기업부가 담당합니다.",
+        "q": "담당 기관은 어디인가요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청은 홈페이지에서 신청서를 작성하여 제출하고, 방문 신청은 관할 중소벤처기업부 담당 부서에 직접 방문하여 제출합니다. 제출 시 온누리상품권 가맹점 등록 신청서와 사업자등록증, 주민등록표 등본을 함께 제출해야 합니다. 담당 공무원의 확인이 필요합니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "온누리상품권 가맹점 등록 지원은 전국의 전통시장·상점가·골목형상점가·상권활성화구역·자율상권구역 등에서 영업하는 소상공인·백년소상공인에게 온누리상품권을 취급할 수 있도록 가맹점 등록을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "frc.sbiz.or.kr",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ 온누리상품권 가맹점 등록 시 상품권 취급 가능",
+  "category": "living",
+  "contact_raw": "중소기업통합콜센터/1357",
+  "content_hash": "sha256:7b31b79e7b2dd7c1544a3cdc52011acd",
+  "criteria_raw": "전통시장, 상점가, 골목형상점가, 상권활성화구역, 자율상권구역 내에서 사업을 영위하고 있는 상인 또는 상인조직 및 백년소상공인",
+  "deferred_detail": false,
+  "documents_raw": [
+    "온누리상품권 가맹점 등록 신청서",
+    "사업자등록증(담당 공무원 확인 미동의시)",
+    "주민등록표 등본(노점",
+    "담당 공무원 확인 미동의시)"
+  ],
+  "first_published": "2026-08-25",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-142000000089",
+  "is_mock": false,
+  "last_checked": "2026-08-25",
+  "last_updated": "2026-08-25",
+  "law_raw": "",
+  "name": "온누리상품권 가맹점 등록 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/142000000089",
+  "org": "중소벤처기업부",
+  "primary_audience": "business",
+  "receiver_raw": "해당지역 관할 지방중소벤처기업청",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "온누리상품권-가맹점-등록-지원",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 현금 소상공인",
+  "source_id": "142000000089",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "전통시장, 상점가, 골목형상점가, 상권활성화구역, 자율상권구역 내에서 사업을 영위하고 있는 상인 또는 상인조직 및 백년소상공인",
+  "view_count": 20316
+}

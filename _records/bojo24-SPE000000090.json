@@ -1,0 +1,78 @@
+{
+  "_prose": {
+    "eligibility": [
+      "18세 이상이어야 합니다.",
+      "미취업 상태여야 합니다.",
+      "등록장애인이어야 합니다."
+    ],
+    "faq": [
+      {
+        "a": "지원 금액이 월 단위로 제시되어 있으므로 매월 지급됩니다.",
+        "q": "지원금은 매월 지급되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "관할 보건복지부 또는 지정된 복지센터를 직접 방문하여 신청합니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "보건복지부에서 운영하는 장애인일자리지원은 18세 이상 미취업 등록장애인에게 일반형·복지·특화형 일자리와 월별 급여를 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "자세한 날짜는 지자체에 따라 다를 수 있음",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled",
+    "jobseeker",
+    "business"
+  ],
+  "benefit_raw": "○ 일반형 일자리\n- 전일제 : 월 2,156,880원(주 40시간 근무)\n- 시간제 : 월 1,078,440원(주 20시간 근무)\n\n○ 복지일자리\n- 복지일자리 : 월577,920원(월 56시간 근무)\n\n○특화형 일자리\n- 시각장애인안마사파견 : 월 1,351,920원(주25시간 근무)\n- 발달장애인요양보호사보조 : 월 1,351,920원(주25시간 근무)",
+  "category": "jobs",
+  "contact_raw": "보건복지상담센터/129",
+  "content_hash": "sha256:5dcdc7604c88bfdf9f33fb4f94b0370a",
+  "criteria_raw": "○ 18세 이상 미취업 등록장애인",
+  "deferred_detail": false,
+  "documents_raw": [
+    "장애인 일자리 사업 참여 신청서",
+    "개인 정보 수집",
+    "이용 및 제3자 제공 안내 및 동의서",
+    "장애인 등록증 사본(앞뒷면)",
+    "건강보험 자격 득실 확인서",
+    "장기요양등급 미판정 확인서(자필서명 필수)",
+    "자격증 사본(해당자에 한함)",
+    "소득 신고 사실 없음 증명원(해당자에 한함)",
+    "소득금액 증명원(해당자에 한함)"
+  ],
+  "first_published": "2026-08-25",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-SPE000000090",
+  "is_mock": false,
+  "last_checked": "2026-08-25",
+  "last_updated": "2026-08-25",
+  "law_raw": "",
+  "name": "장애인일자리지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SPE000000090",
+  "org": "보건복지부",
+  "primary_audience": "disabled",
+  "receiver_raw": "시도 또는 시군구청",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "장애인일자리지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 서비스(일자리) 개인",
+  "source_id": "SPE000000090",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 18세 이상 미취업 등록장애인",
+  "view_count": 13751
+}

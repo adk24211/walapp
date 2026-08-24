@@ -1,0 +1,71 @@
+{
+  "_prose": {
+    "eligibility": [
+      "예비창업자(소상공인) 등 예비창업자",
+      "요건검토를 통과해야 함",
+      "서류평가를 통과해야 함",
+      "인큐베이팅 과정을 거쳐야 함",
+      "발표평가를 통과해야 함"
+    ],
+    "faq": [
+      {
+        "a": "요건검토, 서류평가, 인큐베이팅, 발표평가, 대상자 선정의 5단계로 진행됩니다.",
+        "q": "선정 절차는 몇 단계로 이루어져 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "K-Startup에 회원가입 후 사업신청을 진행합니다. 사업계획서를 첨부하여 온라인으로 신청합니다. 제출이 완료되면 선정 절차가 진행됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "예비창업패키지는 중소벤처기업부가 전국 소상공인 예비창업자를 대상으로 시제품 제작·마케팅 등 사업화 자금을 평균 0.5억원 지원하고, MVP 제작·멘토링 등 창업프로그램을 제공하는 지원제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "공고 확인",
+    "start": ""
+  },
+  "apply_url": "https://www.K-startup.go.kr",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "시제품제작, 마케팅 등에 소요되는 사업화 자금(평균 0.5억원), 창업프로그램(MVP 제작, 멘토링 등) 등을 지원",
+  "category": "jobs",
+  "contact_raw": "창업진흥원 예비초기팀/044-410-1802\n창업진흥원 예비초기팀/044-410-1803\n창업진흥원 예비초기팀/044-410-1804\n창업진흥원 예비초기팀/044-410-1806\n창업진흥원 예비초기팀/044-410-1807\n창업진흥원 예비초기팀/044-410-1809",
+  "content_hash": "sha256:30bd673babfa35e41c18d2ffa7e00235",
+  "criteria_raw": "요건검토 → 서류평가 → 인큐베이팅 → 발표평가 → 대상자 선정(1단계)",
+  "deferred_detail": false,
+  "documents_raw": [
+    "K-Startup 회원가입 및 사업신청",
+    "사업계획서 첨부"
+  ],
+  "first_published": "2026-08-25",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-999000000074",
+  "is_mock": false,
+  "last_checked": "2026-08-25",
+  "last_updated": "2026-08-25",
+  "law_raw": "",
+  "name": "예비창업패키지",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000074",
+  "org": "중소벤처기업부",
+  "primary_audience": "business",
+  "receiver_raw": "창업진흥원 예비창업실",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "예비창업패키지",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 법인/시설/단체",
+  "source_id": "999000000074",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "예비창업자",
+  "view_count": 22084
+}

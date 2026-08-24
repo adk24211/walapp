@@ -1,0 +1,71 @@
+{
+  "_prose": {
+    "eligibility": [
+      "어업인 또는 어업인 단체가 신청 가능합니다.",
+      "교육·역량 강화 교육이 가능한 기관·단체도 신청 가능합니다.",
+      "여성 어업인·다문화가정 여성 어업인도 지원 대상에 포함됩니다.",
+      "어업인·수산업경영인·해양수산신지식인 등도 신청할 수 있습니다.",
+      "사업계획서 등 서류심사와 대면 발표 평가, 선정위원회 위원의 평가를 통과해야 합니다."
+    ],
+    "faq": [
+      {
+        "a": "선정은 서류심사와 대면 발표 평가, 그리고 선정위원회 위원의 평가를 종합하여 이루어집니다.",
+        "q": "선정 절차에 발표 평가는 포함되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "지원하고자 하는 기관·단체는 해양수산부 담당 부서를 직접 방문하여 신청합니다. 방문 시 모집공고에 명시된 단체소개서와 사업계획서 등 필요한 서류를 제출해야 합니다. 제출된 서류는 서류심사와 대면 발표 평가를 거쳐 선정위원회 위원의 평가에 따라 최종 선정됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "해양수산부가 전국에서 시행하는 어업인 역량 강화 교육 지원은 어업인·단체 및 교육 가능 기관을 대상으로 교육, 박람회 참가, 기술교류 등을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "매년초 모집공고에 따름",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "multicultural"
+  ],
+  "benefit_raw": "○ 어업인 혹은 어업인 단체의 역량강화 교육\n\n○ 여성어업인, 다문화가정 여성어업인 대상 역량 강화\n\n○ 어업인, 수산업경영인, 해양수산신지식인 대상 역량강화\n\n○ 어업인 등 국내외 시장개척을 위한 박람회 참가, 벤치마킹, 기술교류 활동, 학술대회 지원",
+  "category": "education",
+  "contact_raw": "해양수산부 소득복지과/051-773-6013",
+  "content_hash": "sha256:cfd39f27be657af51ce4432e740b2fef",
+  "criteria_raw": "○ 사업계획 서류심사 및 대면 발표 평가, 선정위원회 위원의 평가에 따름",
+  "deferred_detail": false,
+  "documents_raw": [
+    "모집공고에 명시된 서류(단체소개서",
+    "사업계획서 등)"
+  ],
+  "first_published": "2026-08-25",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-119200000066",
+  "is_mock": false,
+  "last_checked": "2026-08-25",
+  "last_updated": "2026-08-25",
+  "law_raw": "",
+  "name": "어업인 역량 강화 교육 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/119200000066",
+  "org": "해양수산부",
+  "primary_audience": "multicultural",
+  "receiver_raw": "해양수산부 소득복지과",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "어업인-역량-강화-교육-지원",
+  "source": "bojo24",
+  "source_category_raw": "농림축산어업 기타(교육) 개인",
+  "source_id": "119200000066",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 어업인 및 단체의 역량 강화 교육이 가능한 기관 혹은 단체",
+  "view_count": 2400
+}

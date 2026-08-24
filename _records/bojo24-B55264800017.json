@@ -1,0 +1,86 @@
+{
+  "_prose": {
+    "eligibility": [
+      "양육가정",
+      "어르신",
+      "장애인",
+      "저소득 가구(기초생활수급자·차상위계층 포함)",
+      "다문화가족·다문화가정",
+      "한부모가정·독거노인·탈북자"
+    ],
+    "faq": [
+      {
+        "a": "구독 기간은 2026년 4월부터 12월까지이며, 총 9개월입니다.",
+        "q": "구독 기간은 언제까지인가요?"
+      }
+    ],
+    "note": "우선지원대상사에 선정된 신문만 신청 가능하므로, 해당 신문인지 사전에 확인이 필요합니다.",
+    "steps": [
+      {
+        "body": "정부24에 접속하여 신문무료구독신청서를 작성합니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "필요 시 개인정보동의서와 취약계층 확인 증빙서류를 첨부합니다.",
+        "title": "서류 제출"
+      },
+      {
+        "body": "신청을 완료하면 선정 여부를 확인하실 수 있습니다.",
+        "title": "결과 확인"
+      }
+    ],
+    "summary": "지역신문 무료 구독 지원은 전국의 양육가정·어르신·장애인·저소득·다문화가족 등 취약계층에게 2026년 4월부터 12월까지 지역일간지·주간지를 무료로 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "2026. 2. 24~3. 10",
+    "start": "2026-02-24"
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent",
+    "senior",
+    "disabled",
+    "lowincome",
+    "multicultural"
+  ],
+  "benefit_raw": "○ 지역일간지, 지역주간지 신문 무료 구독 지원\n- 해당년도 지역신문발전기금 우선지원대상사에 선정된 신문만 신청 가능\n- 구독기간 : 2026년 4월~12월 (9개월)",
+  "category": "living",
+  "contact_raw": "한국언론진흥재단 신문유통팀/02-2001-7553",
+  "content_hash": "sha256:05beb82a1d81c6caddd1a924540454b9",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "(정부24 신청 외 서류신청시에만 적용됨)",
+    "신문무료구독신청서",
+    "개인정보동의서",
+    "취약계층확인 증빙서류"
+  ],
+  "first_published": "2026-08-25",
+  "how_to_raw": "정부24온라인신청\n직접입력",
+  "id": "bojo24-B55264800017",
+  "is_mock": false,
+  "last_checked": "2026-08-25",
+  "last_updated": "2026-08-25",
+  "law_raw": "",
+  "name": "지역신문 무료 구독 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55264800017",
+  "org": "한국언론진흥재단",
+  "primary_audience": "lowincome",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "지역신문-무료-구독-지원",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 이용권 개인",
+  "source_id": "B55264800017",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "기초생활수급자, 차상위계층, 장애인, 다문화가정, 탈북자, 독거노인, 한부모가정 등 취약 가정 대상",
+  "view_count": 29262
+}

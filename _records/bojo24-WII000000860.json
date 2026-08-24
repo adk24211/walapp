@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "지원 대상은 여성(예비)창업자입니다.",
+      "주요 대상은 소상공인입니다.",
+      "관할 부처는 중소벤처기업부이며, 분야는 일자리·창업입니다."
+    ],
+    "faq": [
+      {
+        "a": "구비 서류는 사업별 공고문에 따라 다르므로 해당 공고문을 확인하시기 바랍니다.",
+        "q": "구비 서류는 어떻게 확인하나요?"
+      },
+      {
+        "a": "지원 대상은 여성(예비)창업자로 한정되어 있으므로 대상이 아닌 경우 신청이 제한됩니다.",
+        "q": "지원 대상이 아닌 경우에도 신청이 가능한가요?"
+      }
+    ],
+    "note": "사업별 구비 서류가 다르므로 공고문을 반드시 확인하시기 바랍니다.",
+    "steps": [
+      {
+        "body": "온라인 신청 페이지에서 신청서를 작성하고 제출합니다. 구비 서류는 사업별 공고문을 확인하여 준비하시기 바랍니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "여성 창업 지원은 여성(예비)창업자를 대상으로 여성전용 창업보육시설 운영과 창업경진대회·글로벌 액셀러레이팅 등을 지원하는 제도이며, 전국의 소상공인에게도 적용됩니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "분야별 공고에 따라 상이",
+    "start": ""
+  },
+  "apply_url": "https://www.wbiz.or.kr",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "여성전용 창업보육시설 등을 갖춘 여성기업종합지원센터 운영, 여성창업 액셀러레이팅(여성창업경진대회 개최 및 사업화 지원, 글로벌 액셀러레이팅)",
+  "category": "jobs",
+  "contact_raw": "(재)여성기업종합지원센터(여성창업보육센터 문의)/02-369-0993\n(재)여성기업종합지원센터(여성창업액셀러레이팅 문의)/02-369-0943",
+  "content_hash": "sha256:70fcb5073bb8f8545eee5a614e8d5e15",
+  "criteria_raw": "○ 여성(예비)창업자",
+  "deferred_detail": false,
+  "documents_raw": [
+    "사업별 구비서류가 상이하므로 별도 공고문 확인 필요"
+  ],
+  "first_published": "2026-08-25",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-WII000000860",
+  "is_mock": false,
+  "last_checked": "2026-08-25",
+  "last_updated": "2026-08-25",
+  "law_raw": "",
+  "name": "여성 창업 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000860",
+  "org": "중소벤처기업부",
+  "primary_audience": "business",
+  "receiver_raw": "(재)여성기업종합지원센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "여성-창업-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타\n기타(교육)\n기타(상담)\n시설이용 법인/시설/단체",
+  "source_id": "WII000000860",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 여성(예비)창업자",
+  "view_count": 16754
+}
