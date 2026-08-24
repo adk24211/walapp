@@ -161,6 +161,12 @@ jobs:
       - name: Check inline scripts
         run: node scripts/check_inline_js.mjs _site_check
 
+      # 검색엔진에 자기를 뭐라고 소개하는지. 화면은 멀쩡한데 조용히 틀리는
+      # 부류라 기계가 본다 — 실제로 201개 페이지의 meta description 이 전부
+      # 본문 조각이었고, 제도 페이지가 자기를 블로그 글이라고 말하고 있었다.
+      - name: Check search metadata
+        run: node scripts/check_seo.mjs _site_check
+
       - name: Deploy to GitHub Pages
         if: ${{ github.event.inputs.dry_run != 'true' }}
         uses: peaceiris/actions-gh-pages@v3

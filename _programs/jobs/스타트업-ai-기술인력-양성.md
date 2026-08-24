@@ -14,6 +14,9 @@ region_scope: national
 region_label: "전국"
 org: "중소벤처기업진흥공단"
 summary: "스타트업 AI 기술인력 양성은 중소벤처기업진흥공단이 전국 청년에게 인공지능 특화 교육을 무료로 제공하고, 취·창업 연계를 지원하는 제도이며, 교육 인프라와 프로젝트 경험도 제공합니다."
+description: "스타트업 AI 기술인력 양성은 중소벤처기업진흥공단이 전국 청년에게 인공지능 특화 교육을 무료로 제공하고, 취·창업 연계를 지원하는 제도이며, 교육 인프라와 프로젝트 경험도 제공합니다."
+seo:
+  type: WebPage
 status: active
 status_label: "시행중"
 apply_always: false
@@ -138,6 +141,9 @@ revision: 0
     <div class="cn-faq-body">선정 기준은 별도로 제시되지 않았습니다.</div>
   </details>
 </div>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "선정 기준이 있습니까?", "acceptedAnswer": {"@type": "Answer", "text": "선정 기준은 별도로 제시되지 않았습니다."}}]}
+</script>
   </div>
 </section>
 
