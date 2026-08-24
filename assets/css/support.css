@@ -149,6 +149,16 @@
 .hub-chip.active { background: var(--brand); border-color: var(--brand); color: #fff; }
 [data-theme="dark"] .hub-chip.active { color: #10231D; }
 
+/* 대상 허브 아래 한 줄 더 — 같은 대상 안에서 분야로 좁히는 링크.
+   위 줄(대상 갈아타기)과 같은 굵기면 두 줄이 한 덩어리로 보여 어느 쪽이
+   지금 위치인지 흐려진다. 위와 붙여 두되 한 급 낮춘다. */
+.hub-nav-sub { margin-top: -1.35rem; align-items: center; }
+.hub-nav-sub .hub-chip { padding: 5px 11px; font-size: .8rem; }
+.hub-chip-label {
+  font-size: .78rem; font-weight: 600; color: var(--ink3);
+  letter-spacing: -.01em; margin-right: 2px; white-space: nowrap;
+}
+
 /* ---- 카드 확장 -------------------------------------------- */
 .card-chips { display: flex; flex-wrap: wrap; gap: 5px; margin: .7rem 0 .2rem; }
 .chip {
