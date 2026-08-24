@@ -600,6 +600,34 @@ def to_markdown(record: ProgramRecord, prose: dict) -> str:
         front.append(f'apply_start: "{record.apply_period.start}"')
     if record.apply_period.end:
         front.append(f'apply_end: "{record.apply_period.end}"')
+
+    # 날짜로 못 읽은 신청기간 원문.
+    #
+    # 발행된 201건 중 116건은 시작·마감·상시 어느 쪽으로도 안 잡힌다. 그동안
+    # 그 자리에 '원문 참고' 라고만 적혀 있었는데, 그건 아무것도 알려 주지 않는다.
+    #
+    # 파서를 넓혀서 해결될 일이 아니다. 못 읽은 96건(원문이 있는 것)을 훑어 보니
+    # 애초에 달력 날짜가 아니었다:
+    #
+    #   기관마다 다름   42건  "자세한 날짜는 국민건강보험공단 지사에 따라 다를 수 있음"
+    #   사건 기준 상대   17건  "전역 후 6개월 이내"
+    #   공고를 봐야 함   12건  "사업별 공고 확인"
+    #   주기 반복        9건  "매월 1일부터 10일까지"
+    #   연·월 표기 있음   4건  ← 날짜로 바꿀 수 있는 것은 이것뿐
+    #
+    # 억지로 날짜를 만들면 YMYL 페이지에서 지어내는 것이 된다. 대신 원천이 쓴
+    # 문장을 그대로 보여 준다 — '매월 1일부터 10일까지' 는 사람에게 충분히
+    # 쓸모 있는 말이고, 우리가 버리고 있었을 뿐이다.
+    if not (record.apply_period.always or record.apply_period.start or record.apply_period.end):
+        raw_period = str(record.apply_period.raw or "").strip()
+        if raw_period:
+            front.append(f'apply_period_raw: "{_yaml(raw_period)[:120]}"')
+
+    # 접수 기관. 표에도 있지만 신청 경로 안내에서 한 번 더 쓴다 —
+    # 온라인 창구가 없는 제도(85건)에서 '방문신청' 만으로는 어디로 가야 할지
+    # 알 수 없기 때문이다.
+    if str(record.receiver_raw or "").strip():
+        front.append(f'receiver: "{_yaml(record.receiver_raw)[:80]}"')
     # 오른쪽 레일이 어떤 버튼을 낼지 고르는 값. 자세한 이유는 _layouts/program.html.
     methods = _apply_methods(record.how_to_raw)
     if methods:

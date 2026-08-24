@@ -20,6 +20,7 @@ seo:
 status: active
 status_label: "시행중"
 apply_always: false
+apply_period_raw: "매년 1월 중 K-Startup 홈페이지를 통해 모집공고 게시"
 apply_methods: ["온라인 신청"]
 apply_url: "www.kosmes.or.kr"
 official_url: "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55400900022"
