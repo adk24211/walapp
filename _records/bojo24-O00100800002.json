@@ -1,0 +1,75 @@
+{
+  "_prose": {
+    "eligibility": [
+      "구직을 희망하는 경력단절여성",
+      "취업취약계층에 해당하는 여성(결혼이민자, 여성가장 등)",
+      "전국에 거주하는 여성",
+      "선정 기준이 별도로 없습니다"
+    ],
+    "faq": [
+      {
+        "a": "(재)전북여성가족재단이 운영합니다.",
+        "q": "프로그램은 어느 기관에서 운영하나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청 또는 방문 신청을 통해 신청서를 제출합니다. 신청은 상시 접수되며, 별도의 구비 서류는 필요하지 않습니다.",
+        "title": "신청"
+      },
+      {
+        "body": "신청이 완료되면 취업입문스쿨에 참여할 수 있습니다. 교육 내용은 직업세계 변화 이해, 직업흥미·가치관 탐색, 직업·채용정보 탐색 방법, 개인 역량 및 강점 파악 등으로 구성됩니다.",
+        "title": "프로그램 참여"
+      }
+    ],
+    "summary": "여성 집단상담 프로그램은 구직을 희망하는 경력단절여성 및 취업취약계층 여성을 대상으로 직업세계 이해와 역량 탐색 교육을 제공하는 일자리·창업 지원 사업입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://www.jbwf.or.kr/",
+  "audiences": [
+    "jobseeker",
+    "business",
+    "multicultural"
+  ],
+  "benefit_raw": "○ 취업입문스쿨\n- 직업세계 변화의 이해\n- 직업흥미, 직업가치관 탐색\n- 취업희망직종 탐색 및 확장(직업정보 및 채용정보 탐색방법)\n- 나의 역량과 강점 파악 등",
+  "category": "jobs",
+  "contact_raw": "취업지원팀/063-254-3604",
+  "content_hash": "sha256:566a0277d0655972311dd7d4616e74be",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-26",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-O00100800002",
+  "is_mock": false,
+  "last_checked": "2026-08-26",
+  "last_updated": "2026-08-26",
+  "law_raw": "",
+  "name": "여성 집단상담 프로그램",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00100800002",
+  "org": "(재)전북여성가족재단",
+  "primary_audience": "jobseeker",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "여성-집단상담-프로그램",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타(상담)\n서비스(일자리) 개인",
+  "source_id": "O00100800002",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "구직을 희망하는 경력단절여성 및 취업취약계층(결혼이민자, 여성가장 등) 여성",
+  "view_count": 860
+}

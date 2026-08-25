@@ -1,0 +1,66 @@
+{
+  "_prose": {
+    "eligibility": [
+      "다문화가족",
+      "1인가구",
+      "맞벌이가족",
+      "한부모",
+      "조손가족"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "관할 성평등가족부 산하 지원센터를 직접 방문합니다. 방문 시 지원 대상임을 알리고 담당자에게 신청 의사를 전달합니다. 필요 서류는 프로그램별로 다르므로 현장에서 확인합니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "온가족보듬사업은 성평등가족부가 전국에서 운영하는 양육·돌봄 지원 프로그램으로, 다문화가족·1인가구·맞벌이·한부모·조손가족 등 다양한 가족에게 사례관리·상담·교육·자원연계 등을 제공하여 가족 기능 회복과 자립 역량 강화를 돕습니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent",
+    "multicultural"
+  ],
+  "benefit_raw": "○ 사례관리, 상담, 교육, 자원연계 등을 통하여 가족기능회복 및 정서,경제적 자립역량 강화 도모\n- 가족상담 및 전문상담기관 연계\n- 가족기능 회복, 역량 강화를 위한 지속적인 사례관리(학습정서지원, 생활도움지원, 출산·양육지원, 법률지원, 지역사회 자원 활용·연계 등)\n- 부모교육, 가족관계, 자녀 양육 교육 등 프로그램 및 자조모임\n- 긴급위기지원(1인가구 병원동행, 긴급돌봄 등)",
+  "category": "care",
+  "contact_raw": "시·군·구 가족센터/1577-9337",
+  "content_hash": "sha256:955d7cc8cf6549f2e25a14f972d63e0d",
+  "criteria_raw": "지원대상 : 다문화가족, 1인가구, 맞벌이가족, 한부모, 조손가족 등 다양한 모든 가족",
+  "deferred_detail": false,
+  "documents_raw": [
+    "참여 프로그램별로 상이하므로 개별 센터 문의"
+  ],
+  "first_published": "2026-08-26",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-SD0000003474",
+  "is_mock": false,
+  "last_checked": "2026-08-26",
+  "last_updated": "2026-08-26",
+  "law_raw": "",
+  "name": "온가족보듬사업",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000003474",
+  "org": "성평등가족부",
+  "primary_audience": "parent",
+  "receiver_raw": "시·군·구 가족센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "온가족보듬사업",
+  "source": "bojo24",
+  "source_category_raw": "보호·돌봄 서비스(돌봄) 개인\n가구",
+  "source_id": "SD0000003474",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "지원대상 : 다문화가족, 1인가구, 맞벌이가족, 한부모, 조손가족 등 다양한 모든 가족",
+  "view_count": 25754
+}

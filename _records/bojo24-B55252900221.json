@@ -1,0 +1,59 @@
+{
+  "_prose": {
+    "eligibility": [
+      "멘토는 사업 참여대학에 재학(원) 중인 대학(원)생이어야 합니다.",
+      "멘티는 초·중·고등학교, 지역아동센터, 학교밖청소년지원센터 등에 소속된 학생이어야 합니다.",
+      "지원 대상은 전국이며, 청년 및 양육가정이 주요 대상에 포함됩니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [],
+    "summary": "대학생 재능봉사 캠프는 방학 기간에 대학(원)생 멘토가 초·중·고등학생 및 지역아동센터·학교밖청소년지원센터 소속 청소년에게 학습지도·체험활동·진로·상담 등을 제공하는 프로그램입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "(하계캠프) 매년 5월 경, (동계캠프) 매년 11월 경",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "youth",
+    "parent"
+  ],
+  "benefit_raw": "방학 기간 중 대학생(멘토)가 청소년(멘티)를 대상으로 멘토링 활동(학습지도, 창의적 체험활동, 진로 및 고민상담 등)을 진행",
+  "category": "education",
+  "contact_raw": "대학생 재능봉사 캠프 사무국/053-238-2993\n대학생 재능봉사 캠프 사무국/053-238-2994",
+  "content_hash": "sha256:dd896e8d621cc5ff618acefc71ad8259",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-26",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-B55252900221",
+  "is_mock": false,
+  "last_checked": "2026-08-26",
+  "last_updated": "2026-08-26",
+  "law_raw": "",
+  "name": "대학생 재능봉사 캠프",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252900221",
+  "org": "한국장학재단",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "대학생-재능봉사-캠프",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 개인",
+  "source_id": "B55252900221",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "1. (멘토) 사업 참여대학 소속 대학(원)생\n2. (멘티) 초중고교, 지역아동센터, 학교밖청소년지원센터 등 소속 학생",
+  "view_count": 14660
+}

@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "소외지역에 거주하는 독거노인",
+      "취약계층에 해당하는 어르신",
+      "전국에 거주하고 있는 경우 신청 가능"
+    ],
+    "faq": [],
+    "note": "서비스 제공은 지역 내 기관과 연계된 경우에만 가능합니다.",
+    "steps": [
+      {
+        "body": "한국수자원공사 홈페이지에서 온라인 신청 양식을 작성하여 제출하면 됩니다. 별도의 구비 서류는 필요하지 않으며, 신청은 상시 접수됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "‘K-water 사랑샘터’는 전국의 소외지역 독거노인 등 취약계층 어르신을 대상으로 이동식 세탁 차량을 이용해 방문 세탁 서비스를 제공하는 지원 사업입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://www.kwater.or.kr/danbitoktok/kor/bbs/BBSMSTR_000000000082/lst.do",
+  "audiences": [
+    "senior"
+  ],
+  "benefit_raw": "이동식 세탁 차량을 활용한 방문 세탁 서비스 제공(지역 내 기관 연계 필수)",
+  "category": "care",
+  "contact_raw": "경영혁신실/042-629-2433",
+  "content_hash": "sha256:8edaaf804d54977c05a90d18298f824b",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-26",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B50000100003",
+  "is_mock": false,
+  "last_checked": "2026-08-26",
+  "last_updated": "2026-08-26",
+  "law_raw": "",
+  "name": "K-water 사랑샘터",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B50000100003",
+  "org": "한국수자원공사",
+  "primary_audience": "senior",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "k-water-사랑샘터",
+  "source": "bojo24",
+  "source_category_raw": "보호·돌봄 서비스(돌봄) 가구",
+  "source_id": "B50000100003",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "소외지역 독거노인 등 취약계층",
+  "view_count": 2317
+}

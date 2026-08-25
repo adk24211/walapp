@@ -1,0 +1,75 @@
+{
+  "_prose": {
+    "eligibility": [
+      "청년이 신청할 수 있습니다.",
+      "양육가정이 신청할 수 있습니다.",
+      "초등학생·중학생·고등학생 등 청소년이 이용 가능합니다.",
+      "대학생 및 동일 연령 성인이 이용 가능합니다.",
+      "전국 어디서든 이용할 수 있습니다."
+    ],
+    "faq": [
+      {
+        "a": "검사 종료 후 진로정보망 커리어넷에서 확인할 수 있습니다.",
+        "q": "검사 결과는 어디에서 확인할 수 있나요?"
+      },
+      {
+        "a": "직업적성검사, 직업흥미검사, 직업가치관검사, 진로성숙도 검사를 포함한 여러 검사를 이용할 수 있습니다.",
+        "q": "제공되는 검사 종류는 어떤 것이 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "진로교육정보망 통합회원에 가입합니다. 가입 후 진로정보망 커리어넷에 접속합니다. 원하는 심리검사를 선택하고 검사를 진행합니다. 검사 결과는 바로 확인할 수 있습니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "온라인 진로심리검사(진로정보망 커리어넷)는 전국의 청년·양육가정 및 초·중·고·대학생 등에게 무료로 다양한 직업·진로 관련 심리검사를 제공하는 서비스입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.career.go.kr",
+  "audiences": [
+    "youth",
+    "parent"
+  ],
+  "benefit_raw": "진로교육정보망 통합회원 가입후 진로정보망 커리어넷에서\n진로와 관련된 다양한 심리검사를 실시하고 검사 결과를 확인할 수 있는 무료 서비스 입니다.\n직업적성검사, 직업흥미검사, 직업가치관검사, 진로성숙도 검사등 다양한 검사를 이용할 수 있습니다.",
+  "category": "care",
+  "contact_raw": "국가진로교육연구센터/044-415-5325",
+  "content_hash": "sha256:c81ec5f2bea5dfc0dd4f1e089d1e87b0",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-26",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55462500002",
+  "is_mock": false,
+  "last_checked": "2026-08-26",
+  "last_updated": "2026-08-26",
+  "law_raw": "",
+  "name": "온라인 진로심리검사(진로정보망 커리어넷)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55462500002",
+  "org": "한국직업능력연구원",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "온라인-진로심리검사-진로정보망-커리어넷",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타 개인",
+  "source_id": "B55462500002",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "초등학생, 중학생, 고등학생 및 동일 연령의 청소년, 대학생 및 동일 연령의 성인이 이용가능합니다.",
+  "view_count": 4259
+}

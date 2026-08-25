@@ -1,0 +1,71 @@
+{
+  "_prose": {
+    "eligibility": [
+      "제주인재육성장학금 신청자격에 부합하는 자",
+      "청년 및 양육가정",
+      "학업성적이 우수한 국내 대학(원)생(성취장학금 대상)",
+      "학업환경이 어려운 도내 고등학생 및 국내 대학생(희망장학금 대상)",
+      "예체능·과학 분야 수상실적이 있는 도내 고등학생·대학생(재능장학금 대상)"
+    ],
+    "faq": [
+      {
+        "a": "기부자가 지정한 목적에 부합하는 경우에 특별지정장학금이 지급됩니다.",
+        "q": "특별지정장학금은 어떤 경우에 지급되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "제주평생교육장학진흥원 홈페이지에서 온라인 신청 양식을 작성합니다. 작성한 내용을 확인 후 제출하시면 신청이 완료됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "제주인재육성 장학금은 전국의 청년 및 양육가정을 대상으로 학업성적 우수자, 학업환경 어려운 학생, 예체능·과학 수상자 등에 성취·희망·재능·특별지정 장학금을 온라인으로 지원할 수 있는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "2025년 5월 초 ~ 6월 중순 공고 및 접수",
+    "start": ""
+  },
+  "apply_url": "https://jiles.or.kr/index.htm",
+  "audiences": [
+    "youth",
+    "parent"
+  ],
+  "benefit_raw": "○ 성취장학금\n- 학업성적이 우수한 국내 대학(원)생\n\n○ 희망장학금\n- 학업환경이 어려운 도내 고등학생 및 국내 대학생 대상 생활비 명목 장학금 지급\n\n○ 재능장학금\n- 예체능 및 과학 우수자 수상실적 순으로 도내 고등학교 및 국내 대학생 대상 생활비 명목 장학금 지급\n\n○ 특별지정장학금\n- 기부자의 기탁 목적에 따른 장학금",
+  "category": "education",
+  "contact_raw": "미래인재육성부/064-744-9810",
+  "content_hash": "sha256:f556f1940a469e2ac75d58c4367ca5c2",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "○ 제주평생교육장학진흥원 홈페이지 공고문 참조"
+  ],
+  "first_published": "2026-08-26",
+  "how_to_raw": "기타 온라인신청\n직접입력",
+  "id": "bojo24-O00107000001",
+  "is_mock": false,
+  "last_checked": "2026-08-26",
+  "last_updated": "2026-08-26",
+  "law_raw": "",
+  "name": "제주인재육성 장학금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00107000001",
+  "org": "(재)제주평생교육장학진흥원",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "제주인재육성-장학금",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "O00107000001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 제주인재육성장학금 신청자격에 부합하는 자(제주평생교육장학진흥원 홈페이지 공고문 참조)",
+  "view_count": 4213
+}

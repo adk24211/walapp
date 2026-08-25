@@ -1,0 +1,66 @@
+{
+  "_prose": {
+    "eligibility": [
+      "청년·양육가정·장애인 등 지역사회 주민이면 누구나 이용 가능합니다.",
+      "중증 정신질환자를 포함한 해당 지역 주민도 이용 가능합니다.",
+      "전국 시도 단위에 운영되는 광역 정신건강복지센터를 이용 가능합니다.",
+      "전국 시군구 단위에 운영되는 기초 정신건강복지센터를 이용 가능합니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "관할 보건복지부 산하 정신건강복지센터를 직접 방문하여 신청서를 제출하면 됩니다. 구비 서류는 필요하지 않으며, 신청 즉시 서비스 이용이 가능합니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "보건복지부가 운영하는 정신건강복지센터는 전국 17개 광역센터와 246개 기초센터를 통해 청년·양육가정·장애인 등 지역사회 주민에게 중증 정신질환자 상담·사례관리·재활 등 정신건강 서비스를 제공하는 제도이며, 이용은 지역사회 주민이면 누구나 가능하고 방문 신청만으로 접수할 수 있습니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "youth",
+    "parent",
+    "disabled"
+  ],
+  "benefit_raw": "○ 정신과적 상담, 정신질환자 사례관리, 재활 및 치료지원 등 정신건강 서비스",
+  "category": "health",
+  "contact_raw": "정신건강복지센터/1577-0199",
+  "content_hash": "sha256:ef4f8b1e7bb511b2918d4c977bc352eb",
+  "criteria_raw": "○ 지역사회 주민이면 누구나 이용 가능",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-26",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-GMW000000140",
+  "is_mock": false,
+  "last_checked": "2026-08-26",
+  "last_updated": "2026-08-26",
+  "law_raw": "",
+  "name": "정신건강복지센터 운영 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GMW000000140",
+  "org": "보건복지부",
+  "primary_audience": "youth",
+  "receiver_raw": "정신건강복지센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "정신건강복지센터-운영-지원",
+  "source": "bojo24",
+  "source_category_raw": "보건·의료 기타(상담)\n상담/법률지원\n의료지원 개인",
+  "source_id": "GMW000000140",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 광역 정신건강복지센터 : 2024년 전국 시도 단위에 17개소 운영\n\n○ 기초 정신건강복지센터 : 2024년 전국 시군구 단위에 246개소 운영\n\n○ 정신건강복지센터 이용대상 : 중증 정신질환자를 포함한 해당 지역 주민\n\n○ 센터 수행사업\n- 중증정신질환자 상담·사례관리\n- 아동·청소년, 청년 등 정신건강증진사업\n- 정신건강 위기대응 등",
+  "view_count": 4292
+}

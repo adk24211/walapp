@@ -1,0 +1,74 @@
+{
+  "_prose": {
+    "eligibility": [
+      "전역예정군인(병사)입니다.",
+      "전역예정군인(단기복무간부)입니다.",
+      "전역예정군인(중기복무간부)입니다.",
+      "전역예정군인(장기복무간부)입니다."
+    ],
+    "faq": [
+      {
+        "a": "전담 상담사가 온·오프라인으로 채용박람회 참가 방법을 안내하고, 필요 시 신청 절차를 도와드립니다.",
+        "q": "채용박람회 참가는 어떻게 지원받을 수 있나요?"
+      },
+      {
+        "a": "전담 상담사는 상황에 맞게 온·오프라인 모두에서 상담을 제공하며, 신청자와 협의하여 진행합니다.",
+        "q": "상담은 온·오프라인 중 어느 방식으로 진행되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "국방전직교육원 홈페이지에서 전역예정군인 취업컨설팅 서비스를 선택합니다. 온라인 양식에 따라 신청 정보를 입력하고 제출합니다. 별도의 구비 서류는 없으며, 신청 후 담당 상담사가 연락을 드립니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "전역예정군인(병사·간부)을 대상으로 전역 후 재취업과 사회정착을 돕는 1:1 맞춤형 취업컨설팅 서비스를 전국에서 온라인으로 신청할 수 있는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://www.moti.or.kr",
+  "audiences": [
+    "jobseeker",
+    "business"
+  ],
+  "benefit_raw": "○ 군 복무 전역예정군인들의 전역 후 성공적 재취업 및 안정적 사회정착을 위한 개인별 1:1 맞춤형 컨설팅 지원\n\n○ 전역후 희망 취업분야에 부합한 1:1 맞춤형 전직상담\n- 취업 활동 계획 수립, 자소서 작성 및 면접법 교육, 채용정보 제공 및 활용법, 기업분석, 채용박람회 참가 등\n- 전담 상담사에 의한 온.오프라인 상담 및 구직활동 지원",
+  "category": "jobs",
+  "contact_raw": "일자리지원부/031-760-9352",
+  "content_hash": "sha256:1d53aa36257cf77afc94d4823e9c317a",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-26",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55346600005",
+  "is_mock": false,
+  "last_checked": "2026-08-26",
+  "last_updated": "2026-08-26",
+  "law_raw": "",
+  "name": "전역예정군인 취업컨설팅 서비스",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55346600005",
+  "org": "국방전직교육원",
+  "primary_audience": "jobseeker",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "전역예정군인-취업컨설팅-서비스",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타(상담) 개인",
+  "source_id": "B55346600005",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "전역예정군인(병사, 단기복무간부, 중기복무간부, 장기복무간부)",
+  "view_count": 332
+}
