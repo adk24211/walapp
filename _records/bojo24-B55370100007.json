@@ -31,7 +31,7 @@
     "raw": "상시신청",
     "start": ""
   },
-  "apply_url": "http://kinfa.or.kr/cyber/index.do",
+  "apply_url": "https://kinfa.or.kr/cyber/index.do",
   "audiences": [
     "jobseeker",
     "business"
@@ -39,7 +39,7 @@
   "benefit_raw": "○ 서민생활 안정에 기여를 목적으로 취업지원 사업실시\n- 서민, 취약계층 대상 구인구직 상담 및 알선\n- 정부 취업지원프로그램 연계",
   "category": "jobs",
   "contact_raw": "서민금융콜센터/1397",
-  "content_hash": "sha256:98df7ebb2f04a6ef33784c2836234763",
+  "content_hash": "sha256:1d09fc4f0b8a992a05d16210905014e4",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

@@ -33,7 +33,7 @@
     "raw": "상시신청",
     "start": ""
   },
-  "apply_url": "http://www.kdhc.co.kr",
+  "apply_url": "https://www.kdhc.co.kr",
   "audiences": [
     "parent",
     "disabled",
@@ -43,7 +43,7 @@
   "benefit_raw": "○ 에너지복지요금 지원 제도는 사회적으로 배려가 필요한 계층(저소득층, 장애인, 유공자, 다자녀 가구 등)의 지역난방비 부담을 경감하고자 요금을 지원해드리는 제도입니다.\n- 지원금액 : 10,000원/월 ~ 4,000원/월(지원자격에 따라 상이)\n- 지원방법 : 전년도 4월 ~ 올해 3월에 대한 공사 지역난방 공급 아파트(건물) 거주 및 자격 보유 여부를 확인하여, 매년 8~10월 사이 신청 계좌로 최대 12개월분 입금\n※ 한번 신청하신 경우 매년 자동으로 신청이 갱신되나, 이사, 개명, 계좌변경 등이 있으신 경우 반드시 변경 신청해주셔야 합니다.",
   "category": "care",
   "contact_raw": "한국지역난방공사 고객상담센터/1688-2488",
-  "content_hash": "sha256:8c62cbe6d02530b8603cda9c3b0a95ca",
+  "content_hash": "sha256:99a5cf6118d3514d8d51b49b29d31fef",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
