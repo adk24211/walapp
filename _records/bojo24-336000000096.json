@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "소득인정액이 기준 중위소득 48% 이내인 가구",
+      "4인 가구 기준 소득인정액이 3,117,474원 이하인 경우",
+      "저소득 가구(주거급여(맞춤형 급여) 지원 대상)"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 또는 방문으로 신청서를 제출합니다. 주거급여신청서와 금융정보 제공동의서, 임대차 계약서, 소득·재산 확인 서류, 제적등본을 함께 제출하셔야 합니다. 제출 후 담당 부처에서 심사하여 지원 여부를 결정합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "주거급여(맞춤형 급여)는 저소득 가구를 대상으로 임차료와 주거 수선비를 지원하는 제도로, 소득인정액이 기준 중위소득 48% 이하인 가구에 지역별 기준임대료 상한까지 현금으로 지급합니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://bokjiro.go.kr",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "○ 현금급여\n- 타인의 주택 등에 거주하면서 임대차 계약 등을 체결하고 임차료를 지불하는 자에게\n지역별 기준임대료를 상한으로 실제 임차료(월임차료+보증금 환산액) 지원\nㆍ3급지(광역시) 기준 4인 가구 최대 381,000원 지급",
+  "category": "housing",
+  "contact_raw": "마이홈 콜센터/1600-0777",
+  "content_hash": "sha256:53c0418529f311b2d7b1ac9301506c86",
+  "criteria_raw": "○ 소득 인정액 기준\n- 가구 소득인정액이 기준 중위소득의 48% 이하인 가구\nㆍ4인 가구 기준 : 3,117,474원 이하\n\n※ 지원형태: 서비스(임차급여, 수선유지급여)",
+  "deferred_detail": false,
+  "documents_raw": [
+    "주거급여신청서",
+    "금융정보 등 제공동의서(부양의무자 포함)",
+    "임대차 계약서",
+    "소득 재산확인서류",
+    "제적등본"
+  ],
+  "first_published": "2026-08-27",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-336000000096",
+  "is_mock": false,
+  "last_checked": "2026-08-27",
+  "last_updated": "2026-08-27",
+  "law_raw": "",
+  "name": "주거급여 (맞춤형 급여)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/336000000096",
+  "org": "국토교통부",
+  "primary_audience": "lowincome",
+  "receiver_raw": "주민센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "주거급여-맞춤형-급여",
+  "source": "bojo24",
+  "source_category_raw": "주거·자립 현금 가구",
+  "source_id": "336000000096",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "소득인정액이 기준 중위소득 48% 이내의 가구\n\n※ 지원형태: 서비스(임차급여, 수선유지급여)",
+  "view_count": 364111
+}

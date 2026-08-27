@@ -1,0 +1,73 @@
+{
+  "_prose": {
+    "eligibility": [
+      "우대형은 사회취약계층 수급자이며 무주택 세대주여야 합니다.",
+      "일반형은 부부합산소득이 5천만원 이하이며 사회취약계층에 해당해야 합니다.",
+      "지원 대상은 저소득 가구입니다."
+    ],
+    "faq": [
+      {
+        "a": "우대형은 사회취약계층 수급자 중 무주택 세대주에게 제공되며 금리는 1.3%입니다. 일반형은 부부합산소득이 5천만원 이하인 사회취약계층에게 제공되며 금리는 1.8%입니다.",
+        "q": "우대형과 일반형의 차이는 무엇인가요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청은 홈페이지를 통해 진행합니다. 필요한 서류를 전자파일 형태로 첨부하고, 제출 후 심사가 이루어집니다. 승인되면 대출 계약을 체결합니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "방문 신청은 관할 구청이나 지정된 기관을 직접 찾습니다. 구비 서류를 지참하여 담당자에게 제출하고, 현장에서 심사를 받습니다. 승인 절차가 완료되면 대출 계약을 진행합니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "주거안정 월세대출은 저소득 가구를 대상으로 무주택 세대주에게는 우대형, 부부합산소득 5천만원 이하인 경우 일반형으로 월 40만원까지, 연 960만원까지 대출을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "https://enhuf.molit.go.kr",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "○ 주거 안정을 위한 월세 대출을 지원\n\n○ 대출한도 : 960만원(월40만원)\n\n○ 대출금리 : (일반형) 1.8%, (우대형) 1.3%",
+  "category": "housing",
+  "contact_raw": "주택도시보증공사/1566-9009",
+  "content_hash": "sha256:1844eefec0acd139ce8fceb80483bc2c",
+  "criteria_raw": "○ 우대형의 사회취약계층\n\n○ 일반형의 사회취약계층",
+  "deferred_detail": false,
+  "documents_raw": [
+    "소득 및 재직 증빙 서류",
+    "개인 정보 제공동의서 등"
+  ],
+  "first_published": "2026-08-27",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-999000000025",
+  "is_mock": false,
+  "last_checked": "2026-08-27",
+  "last_updated": "2026-08-27",
+  "law_raw": "",
+  "name": "주거안정 월세대출",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000025",
+  "org": "국토교통부",
+  "primary_audience": "lowincome",
+  "receiver_raw": "국토교통부주택도시보증공사주택도시기금 수탁은행",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "주거안정-월세대출",
+  "source": "bojo24",
+  "source_category_raw": "주거·자립 현금(융자) 개인",
+  "source_id": "999000000025",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 우대형의 경우 사회취약계층 수급자 중 무주택(세대원포함) 세대주인 자에게 지원\n\n○ 일반형의 경우 부부합산소득 5천만원 이하인 자에게 지원",
+  "view_count": 327112
+}

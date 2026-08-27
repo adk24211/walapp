@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "만 18세 이상 만 60세 이하인 소상공인으로, 관내 또는 비상소집 시 1시간 이내 도착 거리에 거주해야 합니다",
+      "서류전형에서 경력·자격증·자기소개서를 평가받습니다",
+      "2차 체력검정(60%)과 면접시험(40%)을 통과해야 합니다"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "산림청 또는 지정된 접수처를 직접 방문하여 지원신청서를 제출합니다. 구비 서류를 모두 준비한 뒤 제출하면 신청이 완료됩니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "산림청이 운영하는 산불재난특수진화대는 전국 소상공인을 대상으로 월 2,907,000원의 임금과 급식·휴가비 등을 지원하는 일자리·창업 지원 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "수행기관 공고에 따름",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ 임금 : 2,907,000원/월, 정액급식비 16만원/월, 명절휴가비 1,744만원/회(설날, 추석), 초과근무수당 최대 169만원/연 등\n\n○ 근무조건 : 주5일(40시간) * 산불조심기간 탄력적 운영",
+  "category": "jobs",
+  "contact_raw": "산림청 민원대표번호/1588-3249",
+  "content_hash": "sha256:9a346b6f8a296bafd23d4fd247fb52e3",
+  "criteria_raw": "○ 1차 서류전형 : 경력 및 자격증, 자기소개서 평가\n○ 2차 체력검정 60%, 면접시험 40%,",
+  "deferred_detail": false,
+  "documents_raw": [
+    "지원신청서",
+    "개인정보제공 및 이용동의서",
+    "주민등록 초본",
+    "경력(재직)증명서 사본",
+    "자격증 사본(기타구비서류는 공고문 참고)"
+  ],
+  "first_published": "2026-08-27",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-999000000049",
+  "is_mock": false,
+  "last_checked": "2026-08-27",
+  "last_updated": "2026-08-27",
+  "law_raw": "",
+  "name": "산불재난특수진화대",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000049",
+  "org": "산림청",
+  "primary_audience": "business",
+  "receiver_raw": "산림청 소속기관(지방산림청 및 국유림관리소)",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "산불재난특수진화대",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 서비스(일자리) 개인",
+  "source_id": "999000000049",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 연령은 만 18세 이상 만 60세 이하로 공고일 현재 주민등록상 해당기관 관내 또는 비상소집 시 1시간 이내 도착 거리에 거주하는 자",
+  "view_count": 11526
+}

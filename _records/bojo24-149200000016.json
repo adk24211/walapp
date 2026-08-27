@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "산재 장해등급이 제1급부터 제12급 중 하나에 해당해야 합니다.",
+      "현재 취업(자영업 포함) 상태가 아니어야 합니다.",
+      "고용노동부 등 다른 직업훈련을 받고 있지 않아야 합니다.",
+      "장해판정일로부터 3년 이내여야 합니다.",
+      "재취업을 위해 직업훈련이 필요해야 합니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "고용노동부를 직접 방문하여 신청합니다. 구비 서류인 직업복귀 계획서와 워크넷 구직등록을 제출하시면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "산재근로자를 위한 직업훈련 지원으로, 장해등급 1~12급이며 현재 취업(자영업 포함)하지 않고 다른 직업훈련을 받지 않은 경우에 훈련비와 훈련수당을 제공하며, 신청은 고용노동부 방문으로 진행합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "○ (급여)장해판정일로부터 3년 이내(2021.2.1. 1년이내에서 3년이내로 확대)",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled",
+    "jobseeker",
+    "business"
+  ],
+  "benefit_raw": "○ 재취업을 위한 직업훈련 신청 시 훈련비용 및 훈련수당 지원\n- (직업훈련비용) 1인당 12개월 이내 2회까지 지원, 국민평생직업능력개발법에 따른 직업능력개발훈련 및 한국장애인고용공단의 위탁훈련은 정부지원승인 훈련비, 그 이외 훈련은 1인당 6백만원\n- (직업훈련수당) 1일당 최저임금액의 범위 내 훈련시간에 따라 차등 지급(1일 2시간 미만의 훈련은 부지급)",
+  "category": "jobs",
+  "contact_raw": "근로복지공단/1588-0075",
+  "content_hash": "sha256:e33d4e491b4f01ef15aa388c7e3e8f3c",
+  "criteria_raw": "○ 자격 확인자 중 재취업을 위해 직업훈련이 필요한 자\n- 장해판정일로부터 3년 이내",
+  "deferred_detail": false,
+  "documents_raw": [
+    "직업복귀 계획서",
+    "워크넷 구직등록"
+  ],
+  "first_published": "2026-08-27",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-149200000016",
+  "is_mock": false,
+  "last_checked": "2026-08-27",
+  "last_updated": "2026-08-27",
+  "law_raw": "",
+  "name": "산재근로자 직업훈련",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000016",
+  "org": "고용노동부",
+  "primary_audience": "disabled",
+  "receiver_raw": "재활보상부",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "산재근로자-직업훈련",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 서비스(일자리) 개인",
+  "source_id": "149200000016",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 직업훈련 신청일 현재 산재 장해등급 제1급~12급 어느 하나에 해당한 자로, 취업(자영업 포함)하고 있지 않으며, 고용노동부 등 다른 직업훈련을 받고 있지 아니할 것",
+  "view_count": 9051
+}
