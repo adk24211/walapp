@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "경기도에 거주하는 60세 이상 노인",
+      "노인가족",
+      "노인복지 종사자"
+    ],
+    "faq": [
+      {
+        "a": "심리·위기·복지에 관한 정보를 전화상담을 통해 제공받으실 수 있습니다.",
+        "q": "상담에서 어떤 정보를 받을 수 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "평일 08시부터 22시까지 전화로 상담을 신청하시면 심리·위기·복지 정보를 제공받으실 수 있습니다.",
+        "title": "전화상담 이용"
+      }
+    ],
+    "summary": "경기도에 거주하는 60세 이상 노인 및 노인가족, 그리고 노인복지 종사자를 대상으로 평일 08시부터 22시까지 심리·위기·복지 정보를 전화로 제공하는 상담 서비스입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "senior"
+  ],
+  "benefit_raw": "○ 경기도 거주 노인 및 노인가족 대상 심리/위기/복지정보제공 상담\n- 평일 전화상담 08시~22시\n- 상담번호 : 1833-2255(이리오오)",
+  "category": "care",
+  "contact_raw": "노인온상담팀/1833-2255",
+  "content_hash": "sha256:ece943787887ea776fbd3cd6e2890c3d",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-28",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-O00045800002",
+  "is_mock": false,
+  "last_checked": "2026-08-28",
+  "last_updated": "2026-08-28",
+  "law_raw": "",
+  "name": "노인 및 노인가족 대상 전화상담",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045800002",
+  "org": "재단법인경기도사회서비스원",
+  "primary_audience": "senior",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "노인-및-노인가족-대상-전화상담",
+  "source": "bojo24",
+  "source_category_raw": "보호·돌봄 기타(상담) 개인",
+  "source_id": "O00045800002",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "경기도 내 노인(60세 이상) 및 노인가족, 노인복지 종사자",
+  "view_count": 1425
+}

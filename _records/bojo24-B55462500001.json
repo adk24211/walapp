@@ -1,0 +1,71 @@
+{
+  "_prose": {
+    "eligibility": [
+      "초등학생",
+      "중학생(14~16세 청소년)",
+      "고등학생(17~19세 청소년)",
+      "대학생",
+      "교사·학부모·일반 성인"
+    ],
+    "faq": [
+      {
+        "a": "진로와 직업 선택에 관한 전반적인 상담을 무료로 제공받을 수 있습니다.",
+        "q": "상담 내용은 어떤 분야를 다루나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "진로교육정보망 통합회원(커리어 원패스)에 가입하고, 진로정보망 커리어넷 웹사이트에서 상담을 신청하면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "온라인 진로상담(진로정보망 커리어넷)은 전국의 청년·양육가정을 포함한 모든 연령층이 진로교육정보망 통합회원으로 가입 후 웹사이트에서 무료로 진로 상담을 신청하고 답변을 받을 수 있는 서비스입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.career.go.kr",
+  "audiences": [
+    "youth",
+    "parent"
+  ],
+  "benefit_raw": "진로교육정보망 통합회원(커리어 원패스)에 가입 후 진로정보망 커리어넷 웹사이트에서 진로 상담을 신청하고 답변을 받을 수 있는 서비스 입니다.\n가입된 회원이면 누구나 진로에 관련된 상담을 무료로 받을 수 있습니다.",
+  "category": "care",
+  "contact_raw": "국가진로교육연구센터 커리어넷 이용문의/044-415-5325",
+  "content_hash": "sha256:b4780355bef4dda2dc64e2736e1f188b",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-28",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55462500001",
+  "is_mock": false,
+  "last_checked": "2026-08-28",
+  "last_updated": "2026-08-28",
+  "law_raw": "",
+  "name": "온라인 진로상담(진로정보망 커리어넷)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55462500001",
+  "org": "한국직업능력연구원",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "온라인-진로상담-진로정보망-커리어넷",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(상담) 개인",
+  "source_id": "B55462500001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "초등학생, 중학생(14~16세 청소년), 고등학생(17~19세 청소년), 대학생, 교사, 학부모, 일반(성인)",
+  "view_count": 3707
+}

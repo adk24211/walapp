@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "자녀를 출산하거나 입양한 국민연금 가입자",
+      "인정 대상 자녀가 친생자·인지된 출생자·양자·친양자·특례법에 의한 입양자 중 하나인 경우",
+      "전국의 양육가정으로서 보건복지부가 관할하는 경우"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청하거나 보건복지부 관할 사무소를 직접 방문하여 신청합니다. 신청 시 가족관계증명서 등 법령에 규정된 서류를 제출해야 합니다. 제출 후 심사가 진행되어 국민연금 수급 시점에 가입기간이 추가 인정됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "국민연금출산크레딧은 자녀를 출산·입양한 국민연금 가입자를 대상으로, 노령연금 수급 시점에 자녀 수에 따라 국민연금 가입기간을 추가로 인정해 주는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "자세한 날짜는 국민연금공단 지사에 따라 다를 수 있음",
+    "start": ""
+  },
+  "apply_url": "https://www.nps.or.kr",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "○ 국민연금(노령연금) 수급 시점에 출생 또는 입양한 자녀수에 따라 국민연금 가입기간을 추가로 인정\n* (‘08.1.1. 이후) 둘째 12개월, 셋째부터 18개월씩 인정 (상한 50개월)\n(’26.1.1. 이후) 첫째·둘째 12개월, 셋째부터 18개월씩 인정 (상한 폐지)",
+  "category": "care",
+  "contact_raw": "국민연금공단 콜센터/1355",
+  "content_hash": "sha256:1505246ad635bb9035bbd34ef739d237",
+  "criteria_raw": "○ 선정 기준\n- 자녀를 출산하거나 입양한 국민연금 가입자\n\n○ 자녀의 인정 범위\n- 친생자(민법 제844조)\n- 인지된 출생자(민법 제855조~제864조)\n- 양자(민법 제866조~제897조)\n- 친양자(민법 제908조의 2~제908조의 8)\n- 입양촉진 및 절차에 관한 특례법에 의해 입양된 자녀",
+  "deferred_detail": false,
+  "documents_raw": [
+    "가족관계증명서 등 법령 및 지침에 규정된 서류"
+  ],
+  "first_published": "2026-08-28",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-WII000000260",
+  "is_mock": false,
+  "last_checked": "2026-08-28",
+  "last_updated": "2026-08-28",
+  "law_raw": "",
+  "name": "국민연금출산크레딧",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000260",
+  "org": "보건복지부",
+  "primary_audience": "parent",
+  "receiver_raw": "국민연금공단 지사",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "국민연금출산크레딧",
+  "source": "bojo24",
+  "source_category_raw": "임신·출산 기타 개인",
+  "source_id": "WII000000260",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 지원 대상\n- 자녀를 출산하거나 입양한 국민연금 가입자",
+  "view_count": 16852
+}
