@@ -63,6 +63,25 @@ layout: default
   {% assign items = all_programs %}
 {% endif %}
 
+{% comment %}
+  ── 목록 정렬 ──
+
+  자기 순서를 갖는 축(마감 임박=마감일 순, 새로 추가=발행일 순)만 빼고 조회수
+  내림차순으로 세운다.
+
+  왜: 그 전에는 정렬이 아예 없어 site.programs 가 주는 순서(파일 경로순)를
+  그대로 썼다. 그래서 국민내일배움카드가 — 조회수 508만으로 이 사이트에서
+  가장 많이 찾는 제도가 — 전체 목록 281건 중 181번째에 있었다. 근로·자녀장려금
+  (239만), 국민취업지원제도(121만)도 마찬가지였다.
+  목록의 첫 화면은 사람들이 실제로 찾는 것을 보여 주는 자리다.
+
+  조회수는 원천이 주는 값이라 우리가 만든 순위가 아니다(collect 단계).
+  값이 없는 제도는 Jekyll 의 sort 가 앞에 두므로, reverse 하면 뒤로 간다.
+{% endcomment %}
+{% unless axis == 'deadline' or axis == 'new' or axis == 'audience_index' %}
+  {% assign items = items | sort: "view_count" | reverse %}
+{% endunless %}
+
 <div class="page-header is-wide">
   <div class="ph-top">
     <span class="ph-issue">{{ page.eyebrow | default: '지원 제도' }}</span>

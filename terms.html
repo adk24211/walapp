@@ -2,11 +2,20 @@
 layout: default
 title: 이용약관
 permalink: /terms/
+# 문서를 실제로 고친 날. 빌드 때마다 바뀌면 안 된다(본문 주석 참고).
+updated: 2026-08-21
 ---
 
 <div class="legal-page">
   <h1>서비스 이용약관</h1>
-  <p class="legal-updated">최종 수정일: {{ site.time | date: "%Y년 %m월 %d일" }}</p>
+  {%- comment -%}
+    ⚠️ site.time 을 쓰지 말 것. 그건 문서가 고쳐진 날이 아니라 사이트를 빌드한
+    날이다. 이 사이트는 매일 07시(KST) 자동 동기화로 다시 빌드되므로, 한 글자도
+    안 바뀐 법률 문서의 '최종 수정일' 이 매일 오늘 날짜로 갱신되고 있었다.
+    검증 가능한 거짓 표시이고, 하필 정확성을 약속하는 문서에 붙어 있었다.
+    문서를 실제로 고칠 때 아래 front matter 의 updated 를 함께 고칠 것.
+  {%- endcomment -%}
+  <p class="legal-updated">최종 수정일: {{ page.updated | date: "%Y년 %m월 %d일" }}</p>
 
   <h2>제1조 (목적)</h2>
   <p>본 약관은 Walapp(이하 "사이트")이 제공하는 정보 서비스의 이용 조건 및 절차, 이용자와 사이트의 권리·의무·책임 사항을 규정함을 목적으로 합니다.</p>
