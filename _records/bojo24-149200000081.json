@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "중증장애인(시각·뇌병변·정신·신장·언어·호흡기·뇌전증·척수손상·근육병증 등) 및 발달장애인",
+      "만 50세 이상 중증 또는 경증 장애인",
+      "구직 등록한 15세 이상 중증장애인",
+      "구직 등록한 만 50세 이상 경증장애인"
+    ],
+    "faq": [
+      {
+        "a": "발달장애는 지적 장애와 자폐성 장애를 포함합니다.",
+        "q": "발달장애는 어떤 유형을 포함하나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "고용노동부 관할 사무소를 직접 방문하여 인턴참여신청서와 개인정보 수집·이용·제공 동의서를 제출하시면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "장애인 인턴제는 고용노동부가 전국을 대상으로 운영하는 제도로, 중증·경증 장애인에게 인턴 채용 시 사업주에게 인턴지원금과 정규직 전환지원금을 제공하며, 인턴기간은 최대 6개월, 지원금은 인턴 시 월 최대 100만 원, 정규직 전환 시 월 최대 80만 원까지 지원합니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "수시신청(예산소진시까지)",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled",
+    "jobseeker",
+    "business"
+  ],
+  "benefit_raw": "○ 인턴 채용 사업주 지원금\n\n- 인턴지원금: 약정임금의 80%지원, 최대 월 100만 원, 인턴기간 최대 6개월\n\n- 정규직 전환지원금: 인턴 종료 후 정규직 전환 시 약정임금의 80% 지원, 최대 월 80만 원",
+  "category": "jobs",
+  "contact_raw": "한국장애인고용공단/1588-1519",
+  "content_hash": "sha256:0c287f97ae894ebcaddc6f6988e06bfd",
+  "criteria_raw": "○ 구직 등록한 15세 이상 중증장애인 또는 만 50세 이상 경증장애인",
+  "deferred_detail": false,
+  "documents_raw": [
+    "인턴참여신청서",
+    "개인정보 수집 이용 및 제공 활용 동의서 등"
+  ],
+  "first_published": "2026-08-29",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-149200000081",
+  "is_mock": false,
+  "last_checked": "2026-08-29",
+  "last_updated": "2026-08-29",
+  "law_raw": "",
+  "name": "장애인 인턴제",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000081",
+  "org": "고용노동부",
+  "primary_audience": "disabled",
+  "receiver_raw": "한국장애인고용공단",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "장애인-인턴제",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 서비스(일자리) 법인/시설/단체",
+  "source_id": "149200000081",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 중증장애인 평균 고용률 이하 8개 장애유형 및 발달장애\n\n- 시각, 뇌병변, 정신, 신장, 언어, 호흡기, 뇌전증, 척수손상 또는 근육병증으로 운동기능 장애가 있는 지체 등\n- 발달(지적, 자폐성)\n\n○ 만 50세 이상 중증 또는 경증 장애인",
+  "view_count": 7009
+}

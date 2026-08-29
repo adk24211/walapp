@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "상시근로자 수가 300인 미만인 중소기업 사업장입니다.",
+      "해당 사업장의 근로자이며, 소상공인에 해당하는 경우입니다.",
+      "지원 대상은 소상공인 사업장입니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "근로복지공단 홈페이지 또는 근로복지넷에서 온라인 신청 양식을 작성합니다. 별도의 구비 서류는 필요하지 않으며, 신청은 상시 접수됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "근로복지공단이 운영하는 근로자 지원 프로그램(EAP)은 상시근로자 수 300인 미만 중소기업 및 소상공인 근로자를 대상으로 업무 스트레스 해소를 위한 무상 상담 서비스를 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "welfare.comwel.or.kr",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ 근로자가 업무수행 및 개인생활에서 발생하는 직무 스트레스 등 업무 저해요인을 해결하도록 무상제공하는 상담서비스로 생산성 향상 도모\n- 근로복지넷을 통한 온라인상담(게시판, 전화 상담) 및 오프라인상담(근로자 개인 상담, 기업 교육특강 및 특화프로그램) 제공",
+  "category": "jobs",
+  "contact_raw": "복지계획부/052-704-7336",
+  "content_hash": "sha256:45479e3a2514a8a0861fcc4559c2eee1",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-29",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B49000100210",
+  "is_mock": false,
+  "last_checked": "2026-08-29",
+  "last_updated": "2026-08-29",
+  "law_raw": "",
+  "name": "근로자 지원 프로그램(EAP)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B49000100210",
+  "org": "근로복지공단",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "근로자-지원-프로그램-eap",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타(상담) 법인/시설/단체",
+  "source_id": "B49000100210",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "상시근로자 수 300인 미만 중소기업 사업장 또는 그 소속근로자",
+  "view_count": 9857
+}

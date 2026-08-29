@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "저소득층(생계·의료·주거·교육 급여 수급권자 및 차상위계층)",
+      "복지시설(사회복지사업법 제34조에 따라 설치·운영되는 시설)",
+      "지방자치단체가 실시한 수요조사 결과에 따라 선정"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "관내 기초자치단체를 직접 방문하여 신청합니다. 신청 시 필요한 서류는 해당 자치단체에 문의하시기 바랍니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "기후에너지환경부가 전국 주거지역 저소득 가구와 복지시설에 고효율 LED조명으로 무상 교체해 주는 지원사업이며, 지방자치단체가 수요조사 후 대상자를 선정합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "자세한 날짜는 시군구청에 따라 다를 수 있음",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "저소득층, 복지시설 대상으로 저효율 조명기기를 고효율 LED조명 무상교체 지원",
+  "category": "housing",
+  "contact_raw": "한국에너지재단/1670-7653",
+  "content_hash": "sha256:6a0b86a36c5b40508224edf7fe09a98c",
+  "criteria_raw": "○ 해당 지방자체단체에서 지원대상 수요조사 및 사업집행",
+  "deferred_detail": false,
+  "documents_raw": [
+    "지원대상자 거주 관내 기초자치단체로 문의"
+  ],
+  "first_published": "2026-08-29",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-GKE000000070",
+  "is_mock": false,
+  "last_checked": "2026-08-29",
+  "last_updated": "2026-08-29",
+  "law_raw": "",
+  "name": "고효율조명기기 무상교체 지원 (취약계층 에너지복지사업)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GKE000000070",
+  "org": "기후에너지환경부",
+  "primary_audience": "lowincome",
+  "receiver_raw": "시·군·구청",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "고효율조명기기-무상교체-지원-취약계층-에너지복지사업",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현물 가구",
+  "source_id": "GKE000000070",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 저소득층 : 국민기초생활보장법 제7조(급여의 종류) 중 생계,의료,주거,교육급여 수급권자의 가구 및 차상위계층\n\n○ 복지시설 : 사회복지사업법 제34조(사회복지시설의 설치)에 따라 설치·운영하는 시설",
+  "view_count": 127922
+}

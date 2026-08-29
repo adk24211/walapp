@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "농·산촌 취업 취약계층",
+      "소상공인",
+      "산림청 직접일자리 사업 종합지침에 따라 선정"
+    ],
+    "faq": [
+      {
+        "a": "숲가꾸기자원조사단은 연 202명을, 숲가꾸기패트롤은 연 823명을 모집합니다.",
+        "q": "각 프로그램별 모집 인원은 어떻게 되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "지원하고자 하는 경우, 산림청 관할 사무소를 직접 방문하여 신청서를 제출합니다. 구비 서류인 신청서와 주민등록등본 등을 지참하셔야 합니다. 제출 후 담당자가 서류를 검토합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "공공산림관리단은 산림청이 운영하는 전국 규모 일자리·창업 지원 사업으로, 농·산촌 취업 취약계층과 소상공인을 대상으로 숲가꾸기 관련 업무를 수행하도록 연 202명과 연 823명을 각각 모집합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "연 중(각 운영기관별 자체 공고에 따라)",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ (숲가꾸기자원조사단) 산림자원 조사 및 숲가꾸기 DB 구축(연202명 모집)\n\n○ (숲가꾸기패트롤) 주택 및 농경지와 연접하여 기울어지거나 쓰러질 우려가 있는 위험목 제거 등 산림 민원 처리(연 823명 모집)",
+  "category": "jobs",
+  "contact_raw": "산림청 산림자원과/042-481-4157",
+  "content_hash": "sha256:8d999721988448f5bb9e5b5a9b525713",
+  "criteria_raw": "○ 산림청 직접일자리 사업 종합지침에 따름",
+  "deferred_detail": false,
+  "documents_raw": [
+    "신청서",
+    "주민등록등본 등"
+  ],
+  "first_published": "2026-08-29",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-495000000308",
+  "is_mock": false,
+  "last_checked": "2026-08-29",
+  "last_updated": "2026-08-29",
+  "law_raw": "",
+  "name": "공공산림관리단",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/495000000308",
+  "org": "산림청",
+  "primary_audience": "business",
+  "receiver_raw": "시·군·구청",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "공공산림관리단",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 서비스(일자리) 개인",
+  "source_id": "495000000308",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 농,산촌 취업 취약계층",
+  "view_count": 10436
+}
