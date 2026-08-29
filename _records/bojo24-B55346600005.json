@@ -33,13 +33,12 @@
   },
   "apply_url": "https://www.moti.or.kr",
   "audiences": [
-    "jobseeker",
-    "business"
+    "jobseeker"
   ],
   "benefit_raw": "○ 군 복무 전역예정군인들의 전역 후 성공적 재취업 및 안정적 사회정착을 위한 개인별 1:1 맞춤형 컨설팅 지원\n\n○ 전역후 희망 취업분야에 부합한 1:1 맞춤형 전직상담\n- 취업 활동 계획 수립, 자소서 작성 및 면접법 교육, 채용정보 제공 및 활용법, 기업분석, 채용박람회 참가 등\n- 전담 상담사에 의한 온.오프라인 상담 및 구직활동 지원",
   "category": "jobs",
   "contact_raw": "일자리지원부/031-760-9352",
-  "content_hash": "sha256:1d53aa36257cf77afc94d4823e9c317a",
+  "content_hash": "sha256:0ec6f3f7a3cc55ceccd90cfac539f6a2",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

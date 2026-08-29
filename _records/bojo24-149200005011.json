@@ -24,12 +24,12 @@
   "apply_url": "www.nosa.or.kr",
   "audiences": [
     "jobseeker",
-    "business"
+    "employer"
   ],
   "benefit_raw": "○ (지원대상) 재취업지원서비스를 시행 중이거나 시행하려는 사업주(담당자)\n○ (지원내용) 제도설계 컨설팅, 프로그램 개발·보급, 기업담당자 교육 등",
   "category": "jobs",
   "contact_raw": "노사발전재단/02-6021-1157",
-  "content_hash": "sha256:992444fc9fd3f00bd9bb1e70993de49b",
+  "content_hash": "sha256:a654ab50e6368dc52d89518a6712e257",
   "criteria_raw": "100인 이상 기업",
   "deferred_detail": false,
   "documents_raw": [

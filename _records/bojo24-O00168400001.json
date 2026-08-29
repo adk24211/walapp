@@ -34,13 +34,12 @@
   },
   "apply_url": "",
   "audiences": [
-    "jobseeker",
-    "business"
+    "jobseeker"
   ],
   "benefit_raw": "지원금액 : 1인 2회, 5만원 이내 실비 지원\n지원자격증 : 국가기술자격 및 국가전문자격 시험\n※ 국가자격증 세부종목은 Q-Net(www.q-net.go.kr) 사이트를 통해 확인 가능\n접수기간 : 공고일 ~ 예산 소진 시까지",
   "category": "jobs",
   "contact_raw": "전남일자리종합센터(동부)/061-750-7730\n전남일자리종합센터(서부)/061-287-1142",
-  "content_hash": "sha256:896a6bdb70ee7760bdf3db2198f699b8",
+  "content_hash": "sha256:97b28315163a84b32e5a9145795c3a33",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

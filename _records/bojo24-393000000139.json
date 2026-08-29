@@ -33,13 +33,13 @@
   "apply_url": "https://www.ansanfys.or.kr/",
   "audiences": [
     "youth",
-    "parent",
-    "lowincome"
+    "lowincome",
+    "student"
   ],
   "benefit_raw": "○ 관내 거주 고등학생(50만원)과 대학생(200만원) 중 지원이 필요한 학생에 대한 장학금 지급\n- 고등 : 우수(직전학년 전체 평균이 90점 이상), 희망(법정저소득층, 직전학년 전체 평균 50점 이상)\n- 대학 : 직전학기 백분율 환산점수 90점 이상, 12학점 이상 이수",
   "category": "education",
   "contact_raw": "안산인재육성재단/031-414-0924",
-  "content_hash": "sha256:9510556b73133fa21ab6b42346cb7587",
+  "content_hash": "sha256:0b85678753c5246a112e40b5a80300f1",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

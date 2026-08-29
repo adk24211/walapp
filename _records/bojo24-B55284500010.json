@@ -39,12 +39,13 @@
   "audiences": [
     "youth",
     "parent",
-    "lowincome"
+    "lowincome",
+    "student"
   ],
   "benefit_raw": "(사업목적) 취약계층의 식품 접근성 강화 및 지속가능한 농식품 소비체계 구축을 통한 국민 먹거리 안전망 구축\n(지원내용) 취약계층이 양질의 신선 농산물을 구매할 수 있는 이용권을 가구원 수에 따라 월 단위로 지원(월 10만원/4인가구)하고 식생활 교육 병행\n(지원품목) 국산 과일류, 채소류, 흰우유, 알류, 육류, 잡곡류, 두부류, 임산물류",
   "category": "living",
   "contact_raw": "고객지원센터/1551-0857",
-  "content_hash": "sha256:ca7caef7305d28f559e74ceb8ee2ac9c",
+  "content_hash": "sha256:eff760d2202f2c5dfd188ebbc5ac068b",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -60,7 +61,7 @@
   "name": "농식품바우처 지원",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55284500010",
   "org": "한국농수산식품유통공사",
-  "primary_audience": "lowincome",
+  "primary_audience": "student",
   "receiver_raw": "",
   "region": {
     "scope": "national",

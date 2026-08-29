@@ -30,12 +30,13 @@
   },
   "apply_url": "https://www.ocean.or.kr",
   "audiences": [
-    "youth"
+    "youth",
+    "student"
   ],
   "benefit_raw": "○ (해양문화체험프로그램) 해양영토(바닷길, 해양관련 시설 등) 방문(공모 선정)",
   "category": "living",
   "contact_raw": "한국해양재단/02-741-5278",
-  "content_hash": "sha256:3bb1d9bb24756cc810db6d71ab240f32",
+  "content_hash": "sha256:eeec48610bd4e71e6e1d081f7f989def",
   "criteria_raw": "○ 참가신청서를 제출받아 외부전문가 심사(민간위원 5명 내외)를 통해 사업 수혜자를 선정",
   "deferred_detail": false,
   "documents_raw": [

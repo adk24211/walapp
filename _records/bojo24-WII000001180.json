@@ -24,13 +24,12 @@
   },
   "apply_url": "https://www.디지털배움터.kr",
   "audiences": [
-    "parent",
     "disabled"
   ],
   "benefit_raw": "복지관 등 민간 교육기관을 선정하여 모바일 활용교육 및 ICT신기술 시범교육 등 수준별·맞춤형 정보화 교육",
   "category": "care",
   "contact_raw": "한국지능정보사회진흥원/1588-2670",
-  "content_hash": "sha256:58f9e5a9673c551a1bc77a70dee34fae",
+  "content_hash": "sha256:35c4d647bcb445436956d51c5e965d41",
   "criteria_raw": "장애인 복지카드 등 장애인 등록 관련 서류",
   "deferred_detail": false,
   "documents_raw": [

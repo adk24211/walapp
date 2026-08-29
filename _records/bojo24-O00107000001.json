@@ -31,12 +31,12 @@
   "apply_url": "https://jiles.or.kr/index.htm",
   "audiences": [
     "youth",
-    "parent"
+    "student"
   ],
   "benefit_raw": "○ 성취장학금\n- 학업성적이 우수한 국내 대학(원)생\n\n○ 희망장학금\n- 학업환경이 어려운 도내 고등학생 및 국내 대학생 대상 생활비 명목 장학금 지급\n\n○ 재능장학금\n- 예체능 및 과학 우수자 수상실적 순으로 도내 고등학교 및 국내 대학생 대상 생활비 명목 장학금 지급\n\n○ 특별지정장학금\n- 기부자의 기탁 목적에 따른 장학금",
   "category": "education",
   "contact_raw": "미래인재육성부/064-744-9810",
-  "content_hash": "sha256:f556f1940a469e2ac75d58c4367ca5c2",
+  "content_hash": "sha256:218a6cd0e2a9f18c70e5911c66022825",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

@@ -23,16 +23,17 @@
   "apply_period": {
     "always": false,
     "end": "2026-11-30",
+    "raw": "",
     "start": "2026-11-01"
   },
   "apply_url": "",
   "audiences": [
-    "parent"
+    "student"
   ],
   "benefit_raw": "○ 수혜자에게 일시적으로 제공하는 현금성 장학금\n- 예·체능 분야 수상경력이 있는 중·고생에게 1인당 1,000천원 장학금 지급",
   "category": "education",
   "contact_raw": "목포인재육성재단/061-274-9888",
-  "content_hash": "sha256:79eb4197285121880d771bf4fe1354dc",
+  "content_hash": "sha256:3d830870232e211fe4b93e0dc3cd0e4c",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -48,7 +49,7 @@
   "name": "예체능 우수 학생 장학금",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00096800007",
   "org": "재단법인목포인재육성재단",
-  "primary_audience": "parent",
+  "primary_audience": "student",
   "receiver_raw": "",
   "region": {
     "scope": "national",

@@ -29,13 +29,11 @@
     "start": ""
   },
   "apply_url": "https://welfare.comwel.or.kr",
-  "audiences": [
-    "business"
-  ],
+  "audiences": [],
   "benefit_raw": "○ 노동자 대상 정책 자금 융자사업(생활안정자금(융자), 직업훈련생계비대부, 산재근로자생활안정자금융자, 체불근로자생계비융자)에 대하여 근로복지공단에서 신용보증을 지원\n\n○ 지원한도: 융자사업별 한도액으로 하되, 1인당 2,000만 원 이내",
   "category": "jobs",
   "contact_raw": "근로복지공단/1588-0075",
-  "content_hash": "sha256:a3de9874c3b7d4c9a67a3e36d94a8839",
+  "content_hash": "sha256:d31abfbf5a536af052ea5520c4e4c311",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [
@@ -52,7 +50,7 @@
   "name": "신용보증지원",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000010",
   "org": "고용노동부",
-  "primary_audience": "business",
+  "primary_audience": "",
   "receiver_raw": "사업장관할 근로복지공단 각 지역본부 및 지사",
   "region": {
     "scope": "national",

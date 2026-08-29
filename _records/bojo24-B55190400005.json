@@ -34,13 +34,12 @@
   "apply_url": "https://www.work24.go.kr",
   "audiences": [
     "jobseeker",
-    "lowincome",
-    "business"
+    "lowincome"
   ],
   "benefit_raw": "○ 수급자격 신청자 온라인 교육 서비스 (실업급여 신청 시 필수 교육)\n- 실업급여(구직급여)에 대한 전반적인 신청 및 제도 안내\nㆍ실업급여 정의\nㆍ구직급여 수급요건 및 관련 용어 안내\nㆍ수급자격 인정 신청 및 구직신청 절차 안내\nㆍ실업인정 및 조기재취업수당 안내\nㆍ실업급여 부정수급 안내",
   "category": "jobs",
   "contact_raw": "고용노동부/1350",
-  "content_hash": "sha256:f55f971e527c429e2aea2b99d0cc8dac",
+  "content_hash": "sha256:86889794108045ee0c010f891aa75676",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

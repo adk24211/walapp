@@ -33,13 +33,12 @@
   },
   "apply_url": "",
   "audiences": [
-    "jobseeker",
-    "business"
+    "jobseeker"
   ],
   "benefit_raw": "○ 여성새로일하기센터에서 구직자 1:1 상담 후 적합한 취업 지원 서비스 연계",
   "category": "jobs",
   "contact_raw": "전국 여성새로일하기센터/1544-1199",
-  "content_hash": "sha256:e72b87e56fa4dc508ca0cff712482014",
+  "content_hash": "sha256:5f8a20537db4a5777396b434bfe8fa88",
   "criteria_raw": "사업 지원 대상: 법정 인력 및 시설을 갖춘 비영리법인 또는 단체로써 시도의 추천을 통해 성평등가족부 ·고용노동부 장관이 지정한 여성새로일하기센터\n최종 사업 수혜자: 재취업을 희망하는 경력단절여성 등",
   "deferred_detail": false,
   "documents_raw": [

@@ -28,6 +28,7 @@
   "apply_period": {
     "always": true,
     "end": "",
+    "raw": "",
     "start": ""
   },
   "apply_url": "https://www.seniorro.or.kr",
@@ -35,13 +36,12 @@
     "parent",
     "senior",
     "disabled",
-    "lowincome",
-    "business"
+    "lowincome"
   ],
   "benefit_raw": "○ 공익활동 : 노인이 자기만족과 성취감 향상 및 지역사회 공익증진을 위해 자발적으로 참여하는 봉사활동(노노케어, 학교급식지원 봉사 등)\n\n○ 사회서비스형 : 노인의 경력과 활동역량을 활용하여 사회적 도움이 필요한 영역에 서비스를 제공하는 일자리(장애인, 아동, 노인 서비스 지원 등)\n\n○ 사회서비스형선도모델 : 외부자원(인적,물적)을 활용한 사회서비스 분야 신노년세대 맞춤형 일자리\n\n○ 민간형\n- (시장형 사업단) 노인 일자리 사업단의 제조, 판매 등 수익 창출 활동 지원\n- (취업알선형) 민간 업체 등 수요처에 파견 지원\n- (시니어인턴십) 민간기업 인턴 기회 제공 및 계속고용 지원\n- (고령자친화기업) 노인 다수(10~20인 이상) 고용 기업 설립등 지원",
   "category": "jobs",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:34cacf2eac793a734fbeb37c73bcc1cc",
+  "content_hash": "sha256:0438560553d6e10966d14eba432f3edc",
   "criteria_raw": "○ 각 유형별 선발기준표에 따라 선발",
   "deferred_detail": false,
   "documents_raw": [

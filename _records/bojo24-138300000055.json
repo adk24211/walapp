@@ -23,13 +23,12 @@
   },
   "apply_url": "",
   "audiences": [
-    "jobseeker",
-    "business"
+    "jobseeker"
   ],
   "benefit_raw": "○ 여성 새로 일하기 센터에서 구직자 1:1 상담 후 적합한 취업 지원 서비스 연계",
   "category": "jobs",
   "contact_raw": "여성새로일하기센터/1544-1199",
-  "content_hash": "sha256:e0b9d66081325237cc5fbd5730291aec",
+  "content_hash": "sha256:ed39505110749044318647055e0e0267",
   "criteria_raw": "경력보유여성 등 구직 희망 여성",
   "deferred_detail": false,
   "documents_raw": [

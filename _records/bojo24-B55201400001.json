@@ -30,13 +30,12 @@
   },
   "apply_url": "",
   "audiences": [
-    "parent",
     "multicultural"
   ],
   "benefit_raw": "○ 다문화 가정 청소년들(재외국민, 영주권자, 난민 자녀 포함)에게 기술 습득과 취업능력을 높일 수 있는 기술교육 기회 제공\n- 수업료, 교복, 기숙사비, 식비 지원",
   "category": "education",
   "contact_raw": "교학팀/043-649-2800",
-  "content_hash": "sha256:76d6b6f140a22ae36ff5f39d89690c17",
+  "content_hash": "sha256:255103a97a92bb0f898a7bc0b3806279",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

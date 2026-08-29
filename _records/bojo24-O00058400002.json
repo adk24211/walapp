@@ -29,13 +29,12 @@
   },
   "apply_url": "https://www.lls-hstree.org",
   "audiences": [
-    "youth",
-    "parent"
+    "youth"
   ],
   "benefit_raw": "○ 화성시민 평생장학금\n- 화성시 1년이상 거주한 만 19세 이상 화성시민에게 평생학습 수강료 30만원 지급\n- 화성시민에게 균등한 교육기회를 제공하고 보편적 학습권을 보장\n- 화성시민의 평생학습 활성화에 기여\n- 화성시인재육성재단과 업무협약된 교육가맹점 내에서 평생직업교육 강좌 수강",
   "category": "education",
   "contact_raw": "장학사업팀/031-898-6252",
-  "content_hash": "sha256:fe9f5b051675f2e817ba2f0f781cdec1",
+  "content_hash": "sha256:018cd04e24fc02c129a14d4f265f19b0",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

@@ -28,13 +28,12 @@
   },
   "apply_url": "job.kosmes.or.kr",
   "audiences": [
-    "jobseeker",
-    "business"
+    "jobseeker"
   ],
   "benefit_raw": "○ 기업인력애로센터를 활용하여 우수 구인기업 및 구직자 발굴, 구직자 대상 취업컨설팅 및 취업연계 등을 통해 중소기업 구인난 해소\n- 구직자 대상 취업컨설팅, 온라인 인적성검사 등의 취업서비스 제공",
   "category": "jobs",
   "contact_raw": "인력지원처/055-751-9792",
-  "content_hash": "sha256:a4a714b5ccedce756a66573a4be07302",
+  "content_hash": "sha256:bf69e7f401fa500fc367dfb041bd01f0",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

@@ -39,12 +39,12 @@
   "apply_url": "https://link.venture.or.kr/PUakG4",
   "audiences": [
     "jobseeker",
-    "business"
+    "student"
   ],
   "benefit_raw": "공동채용 등을 통해 벤처기업‧구직자 채용 연계\n벤처기업 신입직원 대상 기초 업무소양, 역량강화 등 교육\n해외(인도) SW 전문인력 채용 연계",
   "category": "jobs",
   "contact_raw": "(사)벤처기업협회/02-6331-7045\n(사)벤처기업협회/02-6331-7044",
-  "content_hash": "sha256:8a3e4acd0f0c4633fa6356a7a04518c5",
+  "content_hash": "sha256:055beeee3f9c08c335f4f862b890aa3f",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [

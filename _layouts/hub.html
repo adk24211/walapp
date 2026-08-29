@@ -27,7 +27,7 @@ layout: default
   {% assign items = all_programs | where_exp: "p", "p.audiences contains key" | where: "category", page.hub_key2 %}
 {% elsif axis == 'audience_index' %}
   {% comment %}
-    이 화면만 카드 목록이 아니라 '대상 8개' 를 싣는다. 전체 제도를 다시
+    이 화면만 카드 목록이 아니라 대상 축 전체를 싣는다(지금 11개). 전체 제도를 다시
     늘어놓으면 /support/ 와 같은 페이지가 되고, 그러면 색인이 아니라 중복이다.
     머리말의 건수는 이 축이 덮는 제도 수를 뜻하므로 전체를 그대로 쓴다.
   {% endcomment %}

@@ -25,13 +25,12 @@
   },
   "apply_url": "",
   "audiences": [
-    "youth",
-    "parent"
+    "youth"
   ],
   "benefit_raw": "○ 지자체 학자금대출 이자지원\n- (목적)지역사회와 협업을 통해 학자금대출자의 이자부담을 경감하여 학업에 전념할 수 있는 여건 조성\n- (내용)각 지자체별 지원 기준에 맞는 대학생 혹은 대학원생의 학자금대출 발생이자 지원",
   "category": "education",
   "contact_raw": "한국장학재단/1599-2000",
-  "content_hash": "sha256:8fbe0eaba9506a98a9da839fc1d7739e",
+  "content_hash": "sha256:94e63c2f065c3b636a75add7f89941ae",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

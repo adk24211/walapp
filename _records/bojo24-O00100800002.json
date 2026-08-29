@@ -34,13 +34,12 @@
   "apply_url": "https://www.jbwf.or.kr/",
   "audiences": [
     "jobseeker",
-    "business",
     "multicultural"
   ],
   "benefit_raw": "○ 취업입문스쿨\n- 직업세계 변화의 이해\n- 직업흥미, 직업가치관 탐색\n- 취업희망직종 탐색 및 확장(직업정보 및 채용정보 탐색방법)\n- 나의 역량과 강점 파악 등",
   "category": "jobs",
   "contact_raw": "취업지원팀/063-254-3604",
-  "content_hash": "sha256:566a0277d0655972311dd7d4616e74be",
+  "content_hash": "sha256:873fd986f2dae2111e9632fdb309d1f5",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

@@ -97,6 +97,16 @@
       "label": "다문화가족",
       "emoji": "🌏",
       "desc": "결혼이민자와 그 가족, 이주배경을 가진 분을 위한 제도입니다."
+    },
+    "student": {
+      "label": "학생",
+      "emoji": "🎒",
+      "desc": "초·중·고 학생이 받을 수 있는 지원을 모았습니다."
+    },
+    "employer": {
+      "label": "사업주",
+      "emoji": "🏢",
+      "desc": "근로자를 고용한 사업주가 신청할 수 있는 제도입니다."
     }
   },
   "audience_order": [
@@ -108,7 +118,9 @@
     "jobseeker",
     "lowincome",
     "business",
-    "multicultural"
+    "multicultural",
+    "student",
+    "employer"
   ],
   "sido": {
     "seoul": "서울특별시",

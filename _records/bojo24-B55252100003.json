@@ -23,16 +23,15 @@
   "apply_period": {
     "always": false,
     "end": "2026-10-30",
+    "raw": "",
     "start": "2026-10-01"
   },
   "apply_url": "",
-  "audiences": [
-    "parent"
-  ],
+  "audiences": [],
   "benefit_raw": "발전소주변지역 지역주민 자녀 대상 취약계층 및 성적우수자 장학금 지원",
   "category": "education",
   "contact_raw": "경영기획부/070-7511-4122",
-  "content_hash": "sha256:c7ec914cb41dbbd32059909a32be2b68",
+  "content_hash": "sha256:f19b554e2dd3101fb3741445f90452ec",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -62,7 +61,7 @@
   "name": "발전소 주변지역 장학금 지원(인천)",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252100003",
   "org": "한국중부발전(주)",
-  "primary_audience": "parent",
+  "primary_audience": "",
   "receiver_raw": "",
   "region": {
     "scope": "national",

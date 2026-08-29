@@ -24,12 +24,13 @@
   },
   "apply_url": "https://pension.comwel.or.kr",
   "audiences": [
-    "business"
+    "business",
+    "employer"
   ],
   "benefit_raw": "O 수수료 0원(3년간 면제)\n. '26년 중소기업퇴직연금기금제도 신규 가입시\n\nO 사업주 및 근로자 지원금(3년)\n. 전년도 고용보험 월평균보수액 281만원 미만 근로자 1인당 최대 28만 1천원('26년 기준 최저임금 130% 수준)",
   "category": "jobs",
   "contact_raw": "근로복지공단 퇴직연금 고객센터/1661-0075",
-  "content_hash": "sha256:6ff01570b987cf4de40f3d9fd62c4d5e",
+  "content_hash": "sha256:402ca9b7da4d65e22956bcac28f8a8f7",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

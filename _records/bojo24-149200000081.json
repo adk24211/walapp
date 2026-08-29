@@ -31,12 +31,12 @@
   "audiences": [
     "disabled",
     "jobseeker",
-    "business"
+    "employer"
   ],
   "benefit_raw": "○ 인턴 채용 사업주 지원금\n\n- 인턴지원금: 약정임금의 80%지원, 최대 월 100만 원, 인턴기간 최대 6개월\n\n- 정규직 전환지원금: 인턴 종료 후 정규직 전환 시 약정임금의 80% 지원, 최대 월 80만 원",
   "category": "jobs",
   "contact_raw": "한국장애인고용공단/1588-1519",
-  "content_hash": "sha256:0c287f97ae894ebcaddc6f6988e06bfd",
+  "content_hash": "sha256:2049c63ce4050d0b1dcb8444e529e3e2",
   "criteria_raw": "○ 구직 등록한 15세 이상 중증장애인 또는 만 50세 이상 경증장애인",
   "deferred_detail": false,
   "documents_raw": [

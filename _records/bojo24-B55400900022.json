@@ -34,13 +34,12 @@
   "apply_url": "www.kosmes.or.kr",
   "audiences": [
     "youth",
-    "parent",
     "business"
   ],
   "benefit_raw": "○ 교육비: 무료\n\n○ 교육 인프라: 전용 교육장 및 장비(오프라인 교육생에 한함)\n\n○ 인공지능 특화교육 및 프로젝트\n- 인공지능 관련 대학 학과의 전공과정을 이수할 수 있는 특화 커리큘럼(기본과정, 심화과정)\n- 산업특화 연계 프로젝트를 통한 실무 경험 제공\n\n○ 취·창업 연계\n- 취창업프로그램을 통한 교육생과 스타트업간 맞춤 취업 연계\n- 창업 교육, 멘토링, 데모데이 등 창업Track 지원",
   "category": "jobs",
   "contact_raw": "청년창업사관학교/02-2130-1464\n청년창업사관학교/02-2130-1469",
-  "content_hash": "sha256:e458ff290773812cc1b40697f028a4b8",
+  "content_hash": "sha256:1a1748294d14004aa8e89b6088764d74",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

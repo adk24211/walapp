@@ -4,9 +4,7 @@ title: "근로자 지원 프로그램(EAP)"
 program_id: "bojo24-B49000100210"
 source: "bojo24"
 category: jobs
-audiences:
-  - business
-primary_audience: business
+audiences: []
 view_count: 9857
 region_scope: national
 region_label: "전국"

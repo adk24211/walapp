@@ -25,12 +25,13 @@
   },
   "apply_url": "",
   "audiences": [
+    "parent",
     "senior"
   ],
   "benefit_raw": "○ 지역주민의 건강증진을 위한 예방적 교육, 보건의료 서비스 제공\n- 복지 대상자에 대한 사업 간 연계 서비스 제공",
   "category": "health",
   "contact_raw": "해당지역 보건소/각 지자체 보건소 문의",
-  "content_hash": "sha256:338cacd4018199cd011abc1e02c9b46e",
+  "content_hash": "sha256:18603853d6176e0a464946a5fc38edbb",
   "criteria_raw": "○ 사업분야에 따라 다르므로 상세 내용은 지역사회 통합건강증진사업 분야별 안내(지침) 참고",
   "deferred_detail": false,
   "documents_raw": [
@@ -46,7 +47,7 @@
   "name": "지역사회 통합건강증진 서비스 제공",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000001280",
   "org": "보건복지부",
-  "primary_audience": "senior",
+  "primary_audience": "parent",
   "receiver_raw": "보건소",
   "region": {
     "scope": "national",

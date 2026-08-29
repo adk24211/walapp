@@ -34,13 +34,12 @@
   "apply_url": "",
   "audiences": [
     "youth",
-    "jobseeker",
-    "business"
+    "jobseeker"
   ],
   "benefit_raw": "직업탐색, 구직기술 향상 등을 집중 지원하는 집단상담, 취업특강 등의 다양한 취업역량강화 프로그램 운영",
   "category": "jobs",
   "contact_raw": "고용노동부 고객상담센터/1350",
-  "content_hash": "sha256:1ac2f3972c05a44eb6fd47fbc547157c",
+  "content_hash": "sha256:f862535b35a063c7a4a137508d3d3fea",
   "criteria_raw": "○ 직업선택을 고민하고 있거나 취업의욕 고취 및 구직기술 향상이 필요한 구직자 중 프로그램 참여를 신청한 자\n○ 다만, 청년층 직업지도프로그램(CAP@) 등과 같이 대상자 특성을 고려하여 맞춤형으로 개발된 프로그램의 경우에는 연령 등 참여요건을 일부 제한할 수 있음",
   "deferred_detail": false,
   "documents_raw": [

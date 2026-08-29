@@ -22,13 +22,11 @@
     "start": ""
   },
   "apply_url": "welfare.comwel.or.kr",
-  "audiences": [
-    "business"
-  ],
+  "audiences": [],
   "benefit_raw": "○ 근로자가 업무수행 및 개인생활에서 발생하는 직무 스트레스 등 업무 저해요인을 해결하도록 무상제공하는 상담서비스로 생산성 향상 도모\n- 근로복지넷을 통한 온라인상담(게시판, 전화 상담) 및 오프라인상담(근로자 개인 상담, 기업 교육특강 및 특화프로그램) 제공",
   "category": "jobs",
   "contact_raw": "복지계획부/052-704-7336",
-  "content_hash": "sha256:45479e3a2514a8a0861fcc4559c2eee1",
+  "content_hash": "sha256:79692ff440232e4b15b4b124ac067209",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,7 +42,7 @@
   "name": "근로자 지원 프로그램(EAP)",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B49000100210",
   "org": "근로복지공단",
-  "primary_audience": "business",
+  "primary_audience": "",
   "receiver_raw": "",
   "region": {
     "scope": "national",

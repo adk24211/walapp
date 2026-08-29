@@ -42,13 +42,12 @@
   },
   "apply_url": "",
   "audiences": [
-    "parent",
     "disabled"
   ],
   "benefit_raw": "○ 발달장애인 가족을 대상으로 힐링캠프, 테마여행 등 휴식지원 프로그램 운영 및 서비스 이용을 위한 일시적 돌봄 서비스 제공(연 1회)",
   "category": "living",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:d8e7c0013be532d68d819adf1dda0190",
+  "content_hash": "sha256:a647bc10bc82a81d08df29eb131d495d",
   "criteria_raw": "○ 지적 · 자폐성 장애인 및 그 가족(우선순위 기준 있음)",
   "deferred_detail": false,
   "documents_raw": [

@@ -33,12 +33,13 @@
   },
   "apply_url": "www.sjhle.or.kr",
   "audiences": [
+    "youth",
     "jobseeker"
   ],
   "benefit_raw": "한국장학재단 학자금 대출에 따른 이자 대리상환 지원",
   "category": "education",
   "contact_raw": "인재개발팀/044-865-9685",
-  "content_hash": "sha256:69b011008644146a1208521f545ed64d",
+  "content_hash": "sha256:88de8ac2fd238f3966a9d49796d29ac3",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -54,7 +55,7 @@
   "name": "학자금 대출이자 지원",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00088400003",
   "org": "재단법인세종특별자치시인재육성평생교육진흥원",
-  "primary_audience": "jobseeker",
+  "primary_audience": "youth",
   "receiver_raw": "",
   "region": {
     "scope": "national",

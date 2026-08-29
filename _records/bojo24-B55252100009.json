@@ -28,12 +28,12 @@
   },
   "apply_url": "",
   "audiences": [
-    "parent"
+    "student"
   ],
   "benefit_raw": "발전소주변지역 중고등학생 중 취약계층 장학금 지원",
   "category": "education",
   "contact_raw": "경영기획부/070-7511-6614",
-  "content_hash": "sha256:f36f7a1a46b511cf758c0c3ad8d71485",
+  "content_hash": "sha256:02432b31952620250f30d08926fa32af",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -55,7 +55,7 @@
   "name": "발전소 주변지역 장학금 지원(세종)",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252100009",
   "org": "한국중부발전(주)",
-  "primary_audience": "parent",
+  "primary_audience": "student",
   "receiver_raw": "",
   "region": {
     "scope": "national",

@@ -26,12 +26,13 @@
   "audiences": [
     "disabled",
     "jobseeker",
-    "business"
+    "business",
+    "employer"
   ],
   "benefit_raw": "○ 고용촉진장려금\n- 지원수준: 대상근로자 고용시 1년간 우선지원대상기업, 중견기업은 연 최대 720만원, 대규모기업은 연 360만원(6개월단위 지급, 사업주가 고용산재보험료징수법 제16조의10에 따라 신고한 보수 한도에서 지원)\n- 중증장애인, 여성가장 등은 최대 2년간 지원",
   "category": "jobs",
   "contact_raw": "고용노동부 고객상담센터/1350",
-  "content_hash": "sha256:b6c2f0c092ce1a0f1a8b16a9bb3d9924",
+  "content_hash": "sha256:0b68518242b3f36f34871e3a0e87f5e8",
   "criteria_raw": "○ 직업안정기관 등에 구직등록을 한 사람으로서 고용노동부 장관이 고시하는 취업지원프로그램을 이수한 자거나, 고용일 이전 1년 이내에 구직등록 이력과 1개월 이상 실업 상태에 있는 중증장애인, 여성가장을 피보험자로 고용한 사업주를 지원\n* 중증장애인, 여성가장은 취업지원프로그램 이수 면제",
   "deferred_detail": false,
   "documents_raw": [
