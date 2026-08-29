@@ -81,6 +81,19 @@ CASES: list[tuple[str, str, tuple[str, ...], tuple[str, ...]]] = [
     ("'외국인' 만으로는 다문화가족이 아니다",
      "외국인등록증을 제출한 사업주에게 지급하는 고용장려금",
      ("multicultural",), ()),
+
+    # ── 원천 분류 문자열의 대분류가 대상으로 새던 것 ──
+    # (아래 세 건은 audience_source_category 를 거친 뒤의 글을 넣는다.
+    #  거치기 전 글로 넣으면 통과하지 못하는 것이 정상이다 — 그게 이 함수의 이유다.)
+    ("'고용·창업' 대분류가 소상공인으로 새지 않는다",
+     "국민내일배움카드 국민 누구나 " + taxonomy.audience_source_category("고용·창업 서비스(일자리) 개인"),
+     ("business",), ()),
+    ("'보육·교육' 대분류가 양육가정으로 새지 않는다",
+     "교육급여 저소득층 학생의 교육비 지원 " + taxonomy.audience_source_category("보육·교육 이용권 개인"),
+     ("parent",), ()),
+    ("뒤쪽 토큰의 '소상공인' 은 진짜 수급자 유형이라 남는다",
+     "관광진흥개발기금 융자지원 " + taxonomy.audience_source_category("문화·환경 현금(융자) 소상공인\n법인/시설/단체"),
+     (), ("business",)),
 ]
 
 failures: list[str] = []

@@ -71,8 +71,16 @@ class BaseAdapter:
     ) -> ProgramRecord:
         """원천 값 → 표준 레코드. 분류가 비면 키워드로 추정한다."""
         name = clean_text(name)
+        # 분야 분류와 대상 분류는 같은 글을 다르게 읽는다.
+        #
+        # source_category_raw("고용·창업 서비스(일자리) 개인")의 첫 토큰은 분야다.
+        # 분야 분류기에는 그게 가장 좋은 신호이고, 대상 분류기에는 '창업'·'보육'
+        # 같은 글자가 소상공인·양육가정으로 잘못 읽히는 함정이다(281건 중 85건).
+        # 자세한 사정은 taxonomy.audience_source_category 주석.
         blob = " ".join([name, target_raw, benefit_raw, criteria_raw,
                          source_category_raw, org])
+        audience_blob = " ".join([name, target_raw, benefit_raw, criteria_raw,
+                                  taxonomy.audience_source_category(source_category_raw), org])
 
         # 대상 목록이 인자로 넘어왔으면 원천이 직접 분류한 값이다(복지로의
         # lifeArray·trgterIndvdlArray). 키워드 추정보다 신뢰도가 높으므로
@@ -87,7 +95,7 @@ class BaseAdapter:
             name=name,
             org=clean_text(org),
             category=category or taxonomy.classify_category(blob),
-            audiences=audiences if audiences is not None else taxonomy.classify_audiences(blob),
+            audiences=audiences if audiences is not None else taxonomy.classify_audiences(audience_blob),
             region=Region(scope=region_scope, sido=sido, sigungu=sigungu),
             target_raw=clean_text(target_raw),
             benefit_raw=clean_text(benefit_raw),
