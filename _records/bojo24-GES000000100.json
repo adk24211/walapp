@@ -30,12 +30,12 @@
   },
   "apply_url": "https://www.kosaf.go.kr",
   "audiences": [
-    "parent"
+    "youth"
   ],
   "benefit_raw": "○ 대출조건\n- 등록금 대출 : 등록금 소요액 전액 * 단, 학제, 교육과정에 따라 4천만원 ~ 1억2천만원의 총 한도 내\n- 생활비 대출 : 연 400만원 (학기당 200만원) * 단, 학제, 교육과정에 따라 2천4백만원 ~ 4천8백만원의 총 한도 내\n\n○ 대출금리 : (2026년 2학기)1.7%(고정금리)",
   "category": "education",
   "contact_raw": "한국장학재단 상담센터/1599-2000",
-  "content_hash": "sha256:82e65b00e9b0855012e434406ad050fe",
+  "content_hash": "sha256:88eda9b616281546a81b9c9075d4c53b",
   "criteria_raw": "○ 선정기준\n- (연령기준) 만 55세 이하\n- (성적기준) 성적70/100점(C학점) 이상(신입생 제외)\n- (이수학점 기준) 재학생은 직전학기 12학점(또는 소속대학 최소 이수학점) 이상 이수시(신입생 제외)\n- (소득기준) 제한없음\n- (신용요건) 학자금대출 연체자 및 금융채무불이행자 등 대출 제한",
   "deferred_detail": false,
   "documents_raw": [
@@ -52,7 +52,7 @@
   "name": "일반 상환 학자금대출",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GES000000100",
   "org": "교육부",
-  "primary_audience": "parent",
+  "primary_audience": "youth",
   "receiver_raw": "한국장학재단",
   "region": {
     "scope": "national",

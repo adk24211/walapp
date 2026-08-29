@@ -156,8 +156,6 @@ SYSTEM_PROMPT = (
 
 def build_prompt(record: ProgramRecord) -> str:
     cat_label = taxonomy.CATEGORIES.get(record.category, {}).get("label", "지원 제도")
-    audience_labels = [taxonomy.AUDIENCES[a]["label"]
-                       for a in record.audiences if a in taxonomy.AUDIENCES]
 
     period = record.apply_period
     if period.always:
@@ -176,13 +174,29 @@ def build_prompt(record: ProgramRecord) -> str:
         text = str(text or "").strip()
         return text if len(text) <= limit else text[:limit].rstrip() + " …(이하 생략)"
 
+    # ⚠️ '주요 대상' 과 '지원 지역' 을 여기 넣지 말 것. 한 번 넣었다가 뺐다.
+    #
+    # 이 블록의 제목은 "고정 사실 (원문 그대로)" 다. 그런데 저 두 줄은 원문이
+    # 아니라 **우리가 만든 값**이었다.
+    #   · 주요 대상 — taxonomy.classify_audiences 가 키워드로 추정한 결과
+    #   · 지원 지역 — parse_region 이 판정한 결과. 지금은 사실상 전 건 '전국' 상수다
+    #
+    # 모델은 그걸 원문으로 알고 문장에 넣는다. 그래서 추정이 틀리면 틀린 자격
+    # 요건이 해설에 박힌다. 실제로 원천 분류 문자열의 대분류('고용·창업' →
+    # '창업')가 대상 분류기로 새어 281건 중 84건이 틀린 대상을 달고 있었고,
+    # 그 라벨이 이 줄을 타고 해설 문장으로 들어갔다. 국민내일배움카드는
+    # 대상이 "국민 누구나" 인데 '소상공인' 이라고 설명되고 있었다.
+    #
+    # 대상과 지역은 [지원 대상] 원문에 이미 들어 있다. 모델이 그것을 읽으면
+    # 된다. 우리 추정을 원문인 척 끼워 넣을 자리가 아니다.
+    #
+    # 분야(cat_label)는 남긴다 — 그건 글의 어조를 잡는 데 쓰이고, 문장에
+    # 사실로 박히지 않는다. 소관 기관은 원문 값이다.
     facts = textwrap.dedent(f"""
         === 고정 사실 (원문 그대로. 이 밖의 수치·조건은 존재하지 않습니다) ===
         제도명: {record.name}
         분야: {cat_label}
         소관 기관: {record.org or "명시되지 않음"}
-        지원 지역: {record.region.label}
-        주요 대상: {", ".join(audience_labels) or "명시되지 않음"}
 
         [지원 대상]
         {cap(record.target_raw) or "(내용 없음)"}

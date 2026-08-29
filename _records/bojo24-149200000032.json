@@ -29,13 +29,12 @@
   "apply_url": "",
   "audiences": [
     "disabled",
-    "jobseeker",
-    "business"
+    "jobseeker"
   ],
   "benefit_raw": "○ 장애인공단 훈련 : 훈련생 훈련수당 지원\n○ 공공훈련 기관: 훈련생 훈련수당 및 교사 수당 지원\n○ 민간훈련 기관: 훈련생 훈련수당 및 훈련 기관 훈련비 지원",
   "category": "jobs",
   "contact_raw": "한국장애인고용공단/1588-1519",
-  "content_hash": "sha256:d3456b27f749a209a89abc80320c79a2",
+  "content_hash": "sha256:87c855b304fc3aacc1a96830bcb3312b",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [

@@ -19,12 +19,13 @@
   "apply_url": "",
   "audiences": [
     "youth",
-    "parent"
+    "parent",
+    "student"
   ],
   "benefit_raw": "방학 기간 중 대학생(멘토)가 청소년(멘티)를 대상으로 멘토링 활동(학습지도, 창의적 체험활동, 진로 및 고민상담 등)을 진행",
   "category": "education",
   "contact_raw": "대학생 재능봉사 캠프 사무국/053-238-2993\n대학생 재능봉사 캠프 사무국/053-238-2994",
-  "content_hash": "sha256:dd896e8d621cc5ff618acefc71ad8259",
+  "content_hash": "sha256:d6e393fbb9b03df2128e9eab3e0af230",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -40,7 +41,7 @@
   "name": "대학생 재능봉사 캠프",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252900221",
   "org": "한국장학재단",
-  "primary_audience": "parent",
+  "primary_audience": "youth",
   "receiver_raw": "",
   "region": {
     "scope": "national",

@@ -29,13 +29,12 @@
   },
   "apply_url": "https://www.kopo.ac.kr",
   "audiences": [
-    "jobseeker",
-    "business"
+    "jobseeker"
   ],
   "benefit_raw": "○ 교통비 및 훈련장려금 지급\n- 교통비: 출석 일수 * 2,500원(월 5만원 한도), 기숙사생 제외\n- 훈련장려금: 출석 일수 * 3,300원(월 6만 6천원 한도)",
   "category": "jobs",
   "contact_raw": "한국폴리텍대학/032-650-6645",
-  "content_hash": "sha256:70e14d955d6c5c171debf2b0569c0b2b",
+  "content_hash": "sha256:8a5eb135bd1c88ca1606e8aa08773878",
   "criteria_raw": "○ 매월 80%이상 출석한 자",
   "deferred_detail": false,
   "documents_raw": [

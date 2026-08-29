@@ -24,13 +24,12 @@
   "apply_url": "",
   "audiences": [
     "youth",
-    "jobseeker",
-    "business"
+    "jobseeker"
   ],
   "benefit_raw": "도민의 취업지원을 위해 일자리 상담소 70회, 일자리 홍보단 40회 지원",
   "category": "jobs",
   "contact_raw": "충남경제진흥원 일자리추진팀/041-404-1417",
-  "content_hash": "sha256:1620484c1c64bf12a547e454fb5917f4",
+  "content_hash": "sha256:b0cc9203c2e3a662669dfb1207c314ec",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

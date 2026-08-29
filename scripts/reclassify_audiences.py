@@ -56,7 +56,20 @@ BLOB_FIELDS = ("name", "target_raw", "benefit_raw", "criteria_raw",
 
 
 def blob_of(rec) -> str:
-    return " ".join(str(getattr(rec, f, "") or "") for f in BLOB_FIELDS)
+    """대상 분류에 넘길 글. 수집 단계(collect/adapters/base.py)와 **같아야 한다**.
+
+    둘이 어긋나면 재분류가 수집이 매기는 것과 다른 답을 내고, 다음 동기화가
+    그 차이를 '변경' 으로 잡아 재생성이 한 번 더 든다. 한 번 겪은 일이다
+    (registry.py 의 mark_checked 위 주석 참고). 그래서 원천 분류 문자열을
+    다듬는 규칙은 taxonomy 에 한 번만 정의해 두고 양쪽이 그것을 부른다.
+    """
+    parts = []
+    for f in BLOB_FIELDS:
+        v = str(getattr(rec, f, "") or "")
+        if f == "source_category_raw":
+            v = taxonomy.audience_source_category(v)
+        parts.append(v)
+    return " ".join(parts)
 
 
 def main() -> int:

@@ -28,13 +28,12 @@
   },
   "apply_url": "https://www.kosaf.go.kr",
   "audiences": [
-    "youth",
-    "parent"
+    "youth"
   ],
   "benefit_raw": "사회 각 분야 리더(멘토)와 대학생(멘티)의 멘토링 지원, 역량개발 프로그램 운영 등",
   "category": "education",
   "contact_raw": "멘토링 운영사무국/02-2259-2640\n멘토링 운영사무국/02-2259-2641\n멘토링 운영사무국/02-2259-2642\n멘토링 운영사무국/02-2259-2643",
-  "content_hash": "sha256:a0ffa9831c7bfbcb6b8becca6b222869",
+  "content_hash": "sha256:116e03a17e1adc25d3b8d51f005f339a",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

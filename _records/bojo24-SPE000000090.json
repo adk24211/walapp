@@ -29,13 +29,12 @@
   "apply_url": "",
   "audiences": [
     "disabled",
-    "jobseeker",
-    "business"
+    "jobseeker"
   ],
   "benefit_raw": "○ 일반형 일자리\n- 전일제 : 월 2,156,880원(주 40시간 근무)\n- 시간제 : 월 1,078,440원(주 20시간 근무)\n\n○ 복지일자리\n- 복지일자리 : 월577,920원(월 56시간 근무)\n\n○특화형 일자리\n- 시각장애인안마사파견 : 월 1,351,920원(주25시간 근무)\n- 발달장애인요양보호사보조 : 월 1,351,920원(주25시간 근무)",
   "category": "jobs",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:5dcdc7604c88bfdf9f33fb4f94b0370a",
+  "content_hash": "sha256:8f2e31ca210156028f36574c4a3ef3a8",
   "criteria_raw": "○ 18세 이상 미취업 등록장애인",
   "deferred_detail": false,
   "documents_raw": [

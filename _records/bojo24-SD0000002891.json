@@ -33,13 +33,12 @@
   },
   "apply_url": "",
   "audiences": [
-    "parent",
     "multicultural"
   ],
   "benefit_raw": "○ 이주배경청소년 레인보우스쿨 운영\n- 일반형, 진로형, 찾아가는 레인보우스쿨 등 지원 형태 다양화로 대상자 특성별 맞춤형 프로그램 제공\n○ 이주배경청소년 상담 및 상담통역지원\n- 이주배경청소년의 심리상담 및 사례관리 제공과 한국어가 미숙한 이주배경청소년의 상담통역(중국어, 베트남어, 러시아어, 몽골어)을 지원",
   "category": "care",
   "contact_raw": "이주배경청소년지원재단/02-6261-7193",
-  "content_hash": "sha256:a38e9dbc73dede09509259fa60bb95ab",
+  "content_hash": "sha256:7c6dcfb02bebb6e7ded541125cd480d4",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [

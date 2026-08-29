@@ -30,12 +30,12 @@
   },
   "apply_url": "https://www.work24.go.kr",
   "audiences": [
-    "business"
+    "employer"
   ],
   "benefit_raw": "○ 정규직전환에 따른 임금상승분와 간접노무비를 최대 1년간 지원(정규직 전환 시 임금증가액에 따라 차등 지원)\n- (임금증가액이 월 20만원 이상) 월 60만원\n- (임금증가액이 월 20만원 미만) 월 40만원",
   "category": "jobs",
   "contact_raw": "고용노동부 고객상담센터/1588-2089",
-  "content_hash": "sha256:730ec93cb6ce754ebab7e7c2198d4880",
+  "content_hash": "sha256:a82ea3d9927dc08f2d8d8c19ae810be0",
   "criteria_raw": "○ 다음의 요건을 충족하는 경우\n- 6개월 이상 2년 이하 근속한 기간제, 파견 근로자, 사내 하도급 근로자 또는 6개월 이상 근무한 노무제공자를 정규직으로 전환하고 1개월 이상 고용을 유지\n- 정규직전환 후 임금수준은 최저임금액 이상\n- 정규직전환 전후 4대 사회보험에 반드시 가입\n- 전환된 근로자의 처우는 기존 동종, 유사 업무에 종사하는 정규직과 비교하여 임금 등에 있어 불합리한 차별 없을 것",
   "deferred_detail": false,
   "documents_raw": [
@@ -51,7 +51,7 @@
   "name": "고용안정장려금지원(정규직전환지원)",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000093",
   "org": "고용노동부",
-  "primary_audience": "business",
+  "primary_audience": "employer",
   "receiver_raw": "고객상담센터",
   "region": {
     "scope": "national",

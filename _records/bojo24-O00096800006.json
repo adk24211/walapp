@@ -22,16 +22,17 @@
   "apply_period": {
     "always": false,
     "end": "2026-09-30",
+    "raw": "",
     "start": "2026-09-01"
   },
   "apply_url": "",
   "audiences": [
-    "parent"
+    "student"
   ],
   "benefit_raw": "○ 수혜자에게 일시적으로 제공하는 현금성 장학금\n-관내 고교 재학생 중 성적이 상위 3% 이내 고등학생에게 1인당 1,000천원 장학금 지급",
   "category": "education",
   "contact_raw": "목포인재육성재단/061-274-9888",
-  "content_hash": "sha256:17e826e3c1acf702619e8ce23b2d609f",
+  "content_hash": "sha256:42b8e3fc176d02330b0cbb45744dfa26",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -47,7 +48,7 @@
   "name": "고교 진학 후 성적우수 학생 장학금",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00096800006",
   "org": "재단법인목포인재육성재단",
-  "primary_audience": "parent",
+  "primary_audience": "student",
   "receiver_raw": "",
   "region": {
     "scope": "national",

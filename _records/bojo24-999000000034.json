@@ -43,13 +43,12 @@
   "apply_url": "https://www.rhof.or.kr",
   "audiences": [
     "youth",
-    "parent",
     "business"
   ],
   "benefit_raw": "○ 매학기 등록금 전액과 학업장려금 250만원 지원",
   "category": "education",
   "contact_raw": "한국농어촌희망재단/02-6958-9472",
-  "content_hash": "sha256:3330e2172ef788f8b9c716354a5f2110",
+  "content_hash": "sha256:a97cf8ffab4651698dfa7e24a40c73f6",
   "criteria_raw": "○ 취창업계획서, 성적 등 서류 심사로 우선선발 대상자 선정 후 보증보험가입 완료 시 최종 선정",
   "deferred_detail": false,
   "documents_raw": [

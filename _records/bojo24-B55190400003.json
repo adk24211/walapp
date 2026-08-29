@@ -34,13 +34,12 @@
   "apply_url": "https://www.work24.go.kr",
   "audiences": [
     "youth",
-    "jobseeker",
-    "business"
+    "jobseeker"
   ],
   "benefit_raw": "○ 자신에 대한 이해를 돕고 개인의 특성에 보다 적합한 진로분야를 선택할 수 있도록 지원\n\n○ 개인의 능력과 흥미, 성격 등 다양한 심리 특성을 객관적으로 측정할 수 있도록 대상별 진로탐색 및 설계 지원을 위한 직업심리검사 서비스 제공",
   "category": "jobs",
   "contact_raw": "한국고용정보원/1577-7114",
-  "content_hash": "sha256:1dcdc98eadb6c03e04855440c2f38827",
+  "content_hash": "sha256:5e291655e82af2c4c1d919e87f56fcb3",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

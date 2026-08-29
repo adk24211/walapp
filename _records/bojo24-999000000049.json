@@ -22,13 +22,11 @@
     "start": ""
   },
   "apply_url": "",
-  "audiences": [
-    "business"
-  ],
+  "audiences": [],
   "benefit_raw": "○ 임금 : 2,907,000원/월, 정액급식비 16만원/월, 명절휴가비 1,744만원/회(설날, 추석), 초과근무수당 최대 169만원/연 등\n\n○ 근무조건 : 주5일(40시간) * 산불조심기간 탄력적 운영",
   "category": "jobs",
   "contact_raw": "산림청 민원대표번호/1588-3249",
-  "content_hash": "sha256:9a346b6f8a296bafd23d4fd247fb52e3",
+  "content_hash": "sha256:67a837626994200e0c66f5d030f943cf",
   "criteria_raw": "○ 1차 서류전형 : 경력 및 자격증, 자기소개서 평가\n○ 2차 체력검정 60%, 면접시험 40%,",
   "deferred_detail": false,
   "documents_raw": [
@@ -48,7 +46,7 @@
   "name": "산불재난특수진화대",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000049",
   "org": "산림청",
-  "primary_audience": "business",
+  "primary_audience": "",
   "receiver_raw": "산림청 소속기관(지방산림청 및 국유림관리소)",
   "region": {
     "scope": "national",

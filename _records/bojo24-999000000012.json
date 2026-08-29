@@ -26,13 +26,12 @@
   },
   "apply_url": "",
   "audiences": [
-    "jobseeker",
-    "business"
+    "jobseeker"
   ],
   "benefit_raw": "○ 훈련을 받는 기간 중 실업의 인정을 받은 날에 대해 구직급여의 100%를 최대 2년간 지급",
   "category": "jobs",
   "contact_raw": "고용노동부 고객상담센터/1350",
-  "content_hash": "sha256:79a823dbc868b48e3cb1cf4e7ddd4a3e",
+  "content_hash": "sha256:5e2fb64cad59f7c80ed3ceec3d0ea3e3",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [

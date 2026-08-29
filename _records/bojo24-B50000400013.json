@@ -34,12 +34,13 @@
   "apply_url": "",
   "audiences": [
     "youth",
-    "business"
+    "business",
+    "student"
   ],
   "benefit_raw": "○ 지역 고교·대학 창업동아리 활동지원을 통한 청년 창업 기회제공 및 지역경제 활성화에 기여\n\n○ 창업활동비 지원\n- 사업계획서 심사를 통한 서면 평가 후 창업활동비 지급(4백만원/팀)\n\n○ 창업활동 지원\n- 시제품 제작비, 특허 등 지식재산권 등록비용 지원, 교육훈련비 제공",
   "category": "jobs",
   "contact_raw": "미래전략처/054-811-3322",
-  "content_hash": "sha256:9258d56a350033c611bba9ef60110bef",
+  "content_hash": "sha256:2bfee51ed5711eaec4886d4c2e311dc2",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

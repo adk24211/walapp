@@ -27,13 +27,11 @@
     "start": ""
   },
   "apply_url": "mssmiv.com",
-  "audiences": [
-    "business"
-  ],
+  "audiences": [],
   "benefit_raw": "○ 제조소기업의 혁신역량 강화, 저탄소 경영체계 구축 및 재기지원\n\n○ 일반바우처: 혁신역량진단 및 평가를 통한 기업별 특성에 맞는 맞춤형 지원(컨설팅, 기술지원, 마케팅)\n- (컨설팅) 경영기술전략, AX·DX컨설팅, 중대재해예방 컨설팅\n- (기술지원) 시제품제작, 시스템 및 시설구축, IP기반 기술사업화, 인증/연구장비 활용시험\n- (마케팅) 디자인 및 브랜드 지원, 홍보 및 광고 지원\n\n○ 탄소바우처: 탄소역량평가를 통한 탄소중립 컨설팅 및 맞춤형 패키지 지원\n- (컨설팅) 탄소중립 경영혁신 컨설팅\n- (기술지원) 시제품 제작, 에너지 효율향상시스템 및 시설구축, 저탄소 인증 및 연구장비 활용 시험",
   "category": "jobs",
   "contact_raw": "제조AI지원처/055-751-9847\n제조AI지원처/055-751-9851\n제조AI지원처/055-751-9523",
-  "content_hash": "sha256:70c81761c074d358f18736f59746dd40",
+  "content_hash": "sha256:b51555bbdff0b4a07dc61e6d8adc7565",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -49,7 +47,7 @@
   "name": "중소기업 혁신바우처",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55400900008",
   "org": "중소벤처기업진흥공단",
-  "primary_audience": "business",
+  "primary_audience": "",
   "receiver_raw": "",
   "region": {
     "scope": "national",

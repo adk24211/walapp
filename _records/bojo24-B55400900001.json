@@ -33,13 +33,12 @@
   "apply_url": "job.kosmes.or.kr",
   "audiences": [
     "youth",
-    "jobseeker",
-    "business"
+    "jobseeker"
   ],
   "benefit_raw": "○ 대기업 교육 인프라를 활용하여 청년 구직자에게 직무교육을 실시하고, 대기업(중견기업) 협력사에 취업연계\n- 교육과정 개발 및 운영비, 교육생 훈련수당(주당 10만원)",
   "category": "jobs",
   "contact_raw": "인력지원처/055-751-9881",
-  "content_hash": "sha256:34ddc7cb98d1df51976140e67e744506",
+  "content_hash": "sha256:6c35b3bd7230d6151aeada99486880e0",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

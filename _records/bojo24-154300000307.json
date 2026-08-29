@@ -30,13 +30,12 @@
   },
   "apply_url": "",
   "audiences": [
-    "parent",
     "multicultural"
   ],
   "benefit_raw": "○ (단계별 농업교육) 결혼이민여성 정착 단계별 기초·심화 과정 구분 운영\n○ (1:1 맞춤형 농업교육) 전문 여성농업인 1:1 연계로 실습 위주 맞춤형 영농 교육(작물별 재배농법)\n○ (다문화가족 정착지원) 결혼이민여성 및 가족, 지역주민, 농촌지역 청소년 등 대상으로 다문화 가족간, 지역주민과의 이해증진을 위한 과정 운영\n○ (농외소득 창출) 농업 외 소득 창출을 위한 자격증 취득 지원",
   "category": "education",
   "contact_raw": "농협중앙회 지역사회공헌부/02-2080-5423",
-  "content_hash": "sha256:abdcb648a243000572d0bf0a9c5ec156",
+  "content_hash": "sha256:481da851df06b66e4b047c642c3781c0",
   "criteria_raw": "○ 선발위원회(지역농협) 심사를 통해 선발",
   "deferred_detail": false,
   "documents_raw": [

@@ -27,17 +27,17 @@
   "apply_period": {
     "always": false,
     "end": "2026-11-30",
+    "raw": "",
     "start": "2026-11-01"
   },
   "apply_url": "",
   "audiences": [
-    "youth",
-    "parent"
+    "youth"
   ],
   "benefit_raw": "○ 수혜자에게 일시적으로 제공하는 현금성 장학금\n- 공고일 기준 최근 본인이 1년 이상 목포시에 주소를 두고 직전 학기 12학점 이상 이수\n- 목포소재 대학(교) 및 인근지역 재학생 중 성적이 우수한 학생에게 1인당 2,000천원 장학금 지급\n- 지원대학 : 목포가톨릭대학교, 목포과학대학교, 목포대학교, 목포해양대학교, 세한대학교, 초당대학교, 동아보건대학교",
   "category": "education",
   "contact_raw": "목포인재육성재단/061-274-9888",
-  "content_hash": "sha256:9390fbc01e406d3f8bbf4e104f786808",
+  "content_hash": "sha256:bd5b266eab73ca6ac2444953db96eea2",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

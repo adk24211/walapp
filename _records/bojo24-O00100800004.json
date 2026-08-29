@@ -35,13 +35,12 @@
   "apply_url": "https://saeil.mogef.go.kr",
   "audiences": [
     "jobseeker",
-    "business",
     "multicultural"
   ],
   "benefit_raw": "○ 참여기업에 인턴 기간(3개월) 매월 80만원씩 지급\n- 인턴 종료 후 상용직 또는 정규직으로 채용하고 6개월 이상 고용을 유지한 경우 기업에 80만원, 개인에 60만원 지급",
   "category": "jobs",
   "contact_raw": "취업지원팀/063-254-3610",
-  "content_hash": "sha256:67e3fa8856dfd18e068c1bec1c735abe",
+  "content_hash": "sha256:c14f4a47656d3cc2d9553d2462e12666",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

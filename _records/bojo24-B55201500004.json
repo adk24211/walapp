@@ -28,13 +28,12 @@
   },
   "apply_url": "",
   "audiences": [
-    "jobseeker",
-    "business"
+    "jobseeker"
   ],
   "benefit_raw": "○ 인정소득은 실직 전 3개월간 평균소득의 50%(최대70만원)로, 지원기간은 구직급여 수급기간으로하되 실업-재취업 반복시 지속수급이 가능하며 생애 최대 12개월까지 지원 받을 수 있음\n\n○ 월보험료의 25%를 본인이 부담하는 경우에 한해 연금보험료의 75%를 지원하여 가입기간을 추가 산입 받을 수 있음",
   "category": "jobs",
   "contact_raw": "국민연금공단 콜센터/1355",
-  "content_hash": "sha256:048ba784a1a68ec545f8d27dd91b8826",
+  "content_hash": "sha256:06e3acb967a6f5dde39189daa1a10670",
   "criteria_raw": "실업크레딧 신청자 중 본인부담 연금보험료를 납부한 자",
   "deferred_detail": false,
   "documents_raw": [

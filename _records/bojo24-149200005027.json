@@ -31,12 +31,13 @@
     "newlywed",
     "parent",
     "lowincome",
-    "business"
+    "business",
+    "employer"
   ],
   "benefit_raw": "ㅇ 결혼, 자녀 양육 등 생활자금이 부족한 노동자 등에게 생활안정자금 융자(개인 신용 대출금리에서 3.0% 이내 보전)\n\n- 중위소득 이하자(3인가구 기준): 1인당 총 2,000만 원(생활안정자금(융자) 한도와 별도)",
   "category": "jobs",
   "contact_raw": "근로복지공단/1588-0075",
-  "content_hash": "sha256:4352829952197ee5adf0adbbd4ed21db",
+  "content_hash": "sha256:396b4a43736e664c636e42d772ea634e",
   "criteria_raw": "① 혼례비, ② 자녀양육비, ③ 노부모부양비, ④장례비\n\n- 3개월 이상 근속 중인 노동자, 특수형태근로종사자, 중소기업 사업주 산재보험 임의 가입한 1인 자영업자\n- 월평균 소득이 중위소득(3인 가구) 이하",
   "deferred_detail": false,
   "documents_raw": [

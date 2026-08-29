@@ -23,16 +23,15 @@
   "apply_period": {
     "always": false,
     "end": "2026-12-11",
+    "raw": "",
     "start": "2026-11-23"
   },
   "apply_url": "",
-  "audiences": [
-    "parent"
-  ],
+  "audiences": [],
   "benefit_raw": "○ 발전소주변지역 지역주민 또는 지역주민 자녀 대상 장학금 지원",
   "category": "education",
   "contact_raw": "경영기획부/070-7511-6109",
-  "content_hash": "sha256:741a50c74f08deb48788ae58e1355d40",
+  "content_hash": "sha256:891488539f82b88b5f7634b4b13b5fce",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [],
@@ -46,7 +45,7 @@
   "name": "발전소 주변지역 장학금 지원(신서천)",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252100002",
   "org": "한국중부발전(주)",
-  "primary_audience": "parent",
+  "primary_audience": "",
   "receiver_raw": "",
   "region": {
     "scope": "national",

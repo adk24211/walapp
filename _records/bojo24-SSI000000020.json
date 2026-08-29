@@ -30,18 +30,20 @@
   "apply_period": {
     "always": false,
     "end": "",
+    "raw": "",
     "start": ""
   },
   "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001068",
   "audiences": [
     "youth",
     "parent",
-    "lowincome"
+    "lowincome",
+    "student"
   ],
   "benefit_raw": "○ 아동 양육비 : 저소득 한부모가족의 18세 미만 자녀 1인당 아동 양육비(월 23만 원) 지급\n* 단, 고등학교 이하 재학(고3 12월까지) 중인 경우 22세 미만 자녀까지 지원\n* 생계급여 지원 한부모가족도 동일하게 지원\n\n○ 추가 아동 양육비\n- 조손가족 및 35세 이상 미혼 한부모의 5세 이하 자녀 1인당 월 10만 원 지급\n- 25~34세 이하 청년 한부모의 18세 미만 자녀 1인당 월 10만원 지급\n\n○ 학용품비 : 한부모가족(조손가족 포함)의 초등학생, 중학생 및 고등학생 자녀 1인당 연 10만 원의 학용품비 지급\n\n○ 생활보조금 : 한부모가족 복지시설에 입소한 저소득 한 부모 가족(조손가족 포함)에 대해 가구당 월 10만 원 지급",
   "category": "care",
   "contact_raw": "한부모상담전화/1577-4206",
-  "content_hash": "sha256:84a44cf43ede65a5f91e04a5c1b68804",
+  "content_hash": "sha256:3bb6e976cbee797385f6c5b3becf5584",
   "criteria_raw": "○ 모(조 모) 또는 부(조부)가 18세 미만의 자녀(손자녀)를 양육하는 기준 중위소득 65% 이하인 가정",
   "deferred_detail": false,
   "documents_raw": [

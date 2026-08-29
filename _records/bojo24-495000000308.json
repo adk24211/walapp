@@ -27,13 +27,11 @@
     "start": ""
   },
   "apply_url": "",
-  "audiences": [
-    "business"
-  ],
+  "audiences": [],
   "benefit_raw": "○ (숲가꾸기자원조사단) 산림자원 조사 및 숲가꾸기 DB 구축(연202명 모집)\n\n○ (숲가꾸기패트롤) 주택 및 농경지와 연접하여 기울어지거나 쓰러질 우려가 있는 위험목 제거 등 산림 민원 처리(연 823명 모집)",
   "category": "jobs",
   "contact_raw": "산림청 산림자원과/042-481-4157",
-  "content_hash": "sha256:8d999721988448f5bb9e5b5a9b525713",
+  "content_hash": "sha256:2bdb930f30a215bd2ee54987c2b170bd",
   "criteria_raw": "○ 산림청 직접일자리 사업 종합지침에 따름",
   "deferred_detail": false,
   "documents_raw": [
@@ -50,7 +48,7 @@
   "name": "공공산림관리단",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/495000000308",
   "org": "산림청",
-  "primary_audience": "business",
+  "primary_audience": "",
   "receiver_raw": "시·군·구청",
   "region": {
     "scope": "national",

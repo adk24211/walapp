@@ -33,13 +33,12 @@
   },
   "apply_url": "",
   "audiences": [
-    "parent",
     "multicultural"
   ],
   "benefit_raw": "○ 결혼이민자 역량강화지원 교육과정\n- 실생활에 유용한 7개 과정의 한국어 교육으로 구성",
   "category": "education",
   "contact_raw": "다누리콜센터/1577-1366",
-  "content_hash": "sha256:f1610307188c8b01ce468183ebd6c41f",
+  "content_hash": "sha256:dc4b63083c4d94c7befdd7f42164e6be",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [

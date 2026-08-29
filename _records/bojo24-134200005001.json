@@ -25,12 +25,12 @@
   },
   "apply_url": "https://www.kosaf.go.kr",
   "audiences": [
-    "parent"
+    "student"
   ],
   "benefit_raw": "○ 학기당 등록금 전액 지원 (대기업, 비영리기관 재직자는 등록금의 50% 지원)",
   "category": "education",
   "contact_raw": "한국장학재단 상담센터/1599-2000",
-  "content_hash": "sha256:6e3224089cb4240730d4c5a29038da63",
+  "content_hash": "sha256:1c23324ae7a65f3fe77e3731a077e7bd",
   "criteria_raw": "○ 장학금 신청자에 대한 선발요건을 심사하고 요건 충족자 중 선발 배점 적용을 통해 최종 선발",
   "deferred_detail": false,
   "documents_raw": [
@@ -47,7 +47,7 @@
   "name": "고졸 후학습자 장학금 (희망사다리Ⅱ유형)",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/134200005001",
   "org": "교육부",
-  "primary_audience": "parent",
+  "primary_audience": "student",
   "receiver_raw": "한국장학재단",
   "region": {
     "scope": "national",

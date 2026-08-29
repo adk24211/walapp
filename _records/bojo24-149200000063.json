@@ -35,12 +35,13 @@
   "audiences": [
     "jobseeker",
     "lowincome",
-    "business"
+    "business",
+    "employer"
   ],
   "benefit_raw": "○ 잔여 소정급여일수의 1/2를 지급",
   "category": "jobs",
   "contact_raw": "고용노동부 고객상담센터/1350",
-  "content_hash": "sha256:689765e221f98512e9f5aa6443bacd7d",
+  "content_hash": "sha256:4bdc500cc2d143eaba8f969dff0abfc6",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [

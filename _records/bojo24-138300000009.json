@@ -29,13 +29,12 @@
   "apply_url": "",
   "audiences": [
     "newlywed",
-    "parent",
     "multicultural"
   ],
   "benefit_raw": "○ 한국 입국 전 결혼이민예정자에게 한국생활에 필요한 정보를 사전 제공",
   "category": "care",
   "contact_raw": "성평등가족부 청소년가족정책실 다문화가족과/02-2100-6379",
-  "content_hash": "sha256:89a633755bc6f268a64d110167b53fe5",
+  "content_hash": "sha256:8f0165f3ec8117473cf51f914b9f4b82",
   "criteria_raw": "○ 혼인신고자 또는 비자발급신청자",
   "deferred_detail": false,
   "documents_raw": [

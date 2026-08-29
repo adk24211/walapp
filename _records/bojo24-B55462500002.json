@@ -35,12 +35,12 @@
   "apply_url": "www.career.go.kr",
   "audiences": [
     "youth",
-    "parent"
+    "student"
   ],
   "benefit_raw": "진로교육정보망 통합회원 가입후 진로정보망 커리어넷에서\n진로와 관련된 다양한 심리검사를 실시하고 검사 결과를 확인할 수 있는 무료 서비스 입니다.\n직업적성검사, 직업흥미검사, 직업가치관검사, 진로성숙도 검사등 다양한 검사를 이용할 수 있습니다.",
   "category": "care",
   "contact_raw": "국가진로교육연구센터/044-415-5325",
-  "content_hash": "sha256:c81ec5f2bea5dfc0dd4f1e089d1e87b0",
+  "content_hash": "sha256:138b3509824f7294feacd1660e81062b",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -56,7 +56,7 @@
   "name": "온라인 진로심리검사(진로정보망 커리어넷)",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55462500002",
   "org": "한국직업능력연구원",
-  "primary_audience": "youth",
+  "primary_audience": "student",
   "receiver_raw": "",
   "region": {
     "scope": "national",

@@ -34,7 +34,6 @@
   },
   "apply_url": "",
   "audiences": [
-    "parent",
     "senior",
     "disabled",
     "lowincome"
@@ -42,7 +41,7 @@
   "benefit_raw": "한국잡월드 체험료 징수규정 시행규칙에 따른 입장료 면제 및 할인",
   "category": "care",
   "contact_raw": "고객센터/1644-1333",
-  "content_hash": "sha256:b69aeed7797a9198bce8c4ed5b0c2289",
+  "content_hash": "sha256:c4d3ec51e163f880d662c4a5e52d7e14",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

@@ -27,13 +27,11 @@
     "start": ""
   },
   "apply_url": "https://csa.nps.or.kr",
-  "audiences": [
-    "parent"
-  ],
+  "audiences": [],
   "benefit_raw": "○ 노후준비에 필요한 재무,건강,여가,대인관계 등의 분야에 대한 종합적인 노후준비 진단, 상담, 교육, 관계기관 연계, 사후관리 서비스 제공",
   "category": "care",
   "contact_raw": "국민연금공단/1355",
-  "content_hash": "sha256:e15f2991af9f6fbe6d6bcaaa12c96d06",
+  "content_hash": "sha256:210bdd8db5ce83591fc6aba460fdde6c",
   "criteria_raw": "○ 전 국민",
   "deferred_detail": false,
   "documents_raw": [
@@ -49,7 +47,7 @@
   "name": "노후준비서비스제공",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000310",
   "org": "보건복지부",
-  "primary_audience": "parent",
+  "primary_audience": "",
   "receiver_raw": "국민연금공단 거점지사 또는 지자체 노후준비지원센터",
   "region": {
     "scope": "national",

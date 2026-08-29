@@ -38,12 +38,12 @@
   },
   "apply_url": "",
   "audiences": [
-    "parent"
+    "youth"
   ],
   "benefit_raw": "정의) 학자금대출 상환전용 카드 출시를 통해 '카드 사용실적에 따라 적립된 포인트* 로 학자금대출 원리금을 상환'하는 방식\n* 전 월 카드 사용실적에 따른 포인트가 1,000P 이상 시 매 월 해당되는 금액 중도 상환\n목적) 학자금대출 이용자의 상환부담 경감 상환방식 다양화 및 편의성 제고로 학자금대출 건전성 강화\n시행) 재단 및 3개 금융기관(신한카드, 우리은행, 하나은행)과 협약체결을 통해 학자금대출 이용자의 체크카드 사용실적에 따라 포인트 적립 후 해당 포인트로 학자금대출 원리금 상환",
   "category": "education",
   "contact_raw": "한국장학재단/1599-2000",
-  "content_hash": "sha256:a8efe28a9d5b7e7967a6dbac9c9bffc5",
+  "content_hash": "sha256:ab4234f60c53b6e71c55b6bbe4d25a67",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -59,7 +59,7 @@
   "name": "학자금대출 체크카드 포인트 상환",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252900219",
   "org": "한국장학재단",
-  "primary_audience": "parent",
+  "primary_audience": "youth",
   "receiver_raw": "",
   "region": {
     "scope": "national",

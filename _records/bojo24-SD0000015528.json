@@ -28,13 +28,12 @@
   },
   "apply_url": "https://www.safedriving.or.kr/eduSeOldWebEdu/eduSeOldWebEduOperGuide.do?menuCode=MN-PO-1322",
   "audiences": [
-    "parent",
     "senior"
   ],
   "benefit_raw": "○ 고령 운전자 대상으로 ‘노인 특별 교통안전 교육’ 활성화 65세 이상 노인이 도로교통공단에서 실시하는 교통안전교육을 받으면(인지 지각검사 1시간, 교통안전교육 2시간) 2년간 5% 보험료 할인\n\n○ 노인 보행자에 대한 시인성 제고를 위한 야광지팡이 등 맞춤형 안전용품 제작 배포",
   "category": "living",
   "contact_raw": "도로교통공단 안전운전 통합민원/1577-1120",
-  "content_hash": "sha256:e55eb21a0bafaf2c070c1aed46894b68",
+  "content_hash": "sha256:8c9d0ecb6e96e18e7f7bc6498993f132",
   "criteria_raw": "○ 지원 대상\n- 개인 한정 또는 부부 특약 자동차 운전보험 가입자\n\n○ 연령 기준\n- 65세 이상\n\n○ 기타 기준\n- 인지 지각검사에 합격하고 3년 이내 이수한 교육 수료증 제출",
   "deferred_detail": false,
   "documents_raw": [

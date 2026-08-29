@@ -6,7 +6,6 @@ source: "bojo24"
 category: jobs
 audiences:
   - youth
-  - parent
   - business
 primary_audience: youth
 view_count: 10415

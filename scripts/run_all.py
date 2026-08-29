@@ -50,7 +50,9 @@ log = logging.getLogger("run_all")
 # 테마 조 방식: 그날 조의 테마마다 1건 + 시행 예정 1건 = 하루 최대 5건.
 # (테마 8개를 4개씩 격일로 돌리므로 시행중 발행은 하루 4건이다.)
 DEFAULT_PUBLISH_MODE = "theme"
-DEFAULT_PER_THEME_LIMIT = 6
+# 테마 11개 · 큰 조 6개 기준으로 5×6+1 = 31건. 하루 토큰 천장(약 32건) 아래다.
+# ⚠️ taxonomy.AUDIENCE_GROUPS 와 함께 봐야 한다 — 한쪽만 바꾸면 한도에 부딪힌다.
+DEFAULT_PER_THEME_LIMIT = 5
 DEFAULT_UPCOMING_LIMIT = 1
 # PUBLISH_MODE=top 일 때만 쓰는 상한. 초기 백필용 탈출구다.
 DEFAULT_PUBLISH_LIMIT = 5

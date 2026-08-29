@@ -29,13 +29,12 @@
   },
   "apply_url": "eum.cw.or.kr",
   "audiences": [
-    "youth",
-    "parent"
+    "youth"
   ],
   "benefit_raw": "○ 건설노동자 본인 및 대학생 자녀에게 생활비 성격의 장학금(200만원) 지원",
   "category": "education",
   "contact_raw": "고객상담센터/1666-1122",
-  "content_hash": "sha256:7eab015833f455cd72461dc25c72f297",
+  "content_hash": "sha256:1f93f72168314d3f9a7e4261a9a5a444",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

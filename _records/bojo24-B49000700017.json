@@ -26,13 +26,12 @@
   "apply_url": "https://www.worldjob.or.kr",
   "audiences": [
     "youth",
-    "jobseeker",
-    "business"
+    "jobseeker"
   ],
   "benefit_raw": "○ 지원규모: 3,900명\n\n○ 지원금액: 1인당 최대 500만원\n- 취업 후 1개월 후 250만원(1차), 6개월 후 100만원(2차), 12개월 후 150만원(3차)",
   "category": "jobs",
   "contact_raw": "한국산업인력공단 해외취업지원부/1644-8000",
-  "content_hash": "sha256:b94c927d5a68077bc2d2129bb9a09d5a",
+  "content_hash": "sha256:5e80011f57ed3fe4a7aae64b5e95e5e3",
   "criteria_raw": "○ 사업 취업인정기준 부합 여부 검토 후 승인",
   "deferred_detail": false,
   "documents_raw": [

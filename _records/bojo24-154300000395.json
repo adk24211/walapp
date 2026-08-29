@@ -29,13 +29,12 @@
   },
   "apply_url": "",
   "audiences": [
-    "youth",
-    "business"
+    "youth"
   ],
   "benefit_raw": "○ 국제기구·해외기업 등과 인턴수요를 협의, 자격요건에 맞는 우리나라 청년들을 선발·파견하고 그에 따른 체재비 등을 지원",
   "category": "jobs",
   "contact_raw": "농림수산식품교육문화정보원/044-861-8769",
-  "content_hash": "sha256:d49e3f7fd64b1b2666c639973706d683",
+  "content_hash": "sha256:86cdb5a820236cd8ffdef66131536316",
   "criteria_raw": "○ 3단계 전형(서류-국내면접-기관원격면접)을 통한 우수자 선발",
   "deferred_detail": false,
   "documents_raw": [

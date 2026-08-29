@@ -25,13 +25,12 @@
   "apply_url": "",
   "audiences": [
     "youth",
-    "parent",
     "business"
   ],
   "benefit_raw": "○ 지방자치단체가 자체 보유하고 있는 농지 및 한국농어촌공사 비축 농지 등에 시설을 신축(개보수)하여 청년농업인에게 임대",
   "category": "housing",
   "contact_raw": "시군구청 또는 농업기술센터/지역별 상이",
-  "content_hash": "sha256:f33024d25aea73ea9d62be9ad9e20afb",
+  "content_hash": "sha256:97884f00fed27b14f59a2575beb905da",
   "criteria_raw": "○ 시설 임대인 : 농지를 보유한 지방자치단체를 공모하여 사업 추진계획 및 현장조사보고서 검토를 통해 평가하여 선정\n\n○ 시설 임차인 : 지방자치단체 장이 본인 명의의 시설이 없는 청년농업의 영농창업계획서를 평가하여 대상자로 확정한 자",
   "deferred_detail": false,
   "documents_raw": [

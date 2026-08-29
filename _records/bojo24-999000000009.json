@@ -30,12 +30,12 @@
   "apply_url": "https://www.work24.go.kr",
   "audiences": [
     "senior",
-    "business"
+    "employer"
   ],
   "benefit_raw": "○ 정년도래자를 계속고용하는 사업주에게 계속고용 근로자 1인당 분기 90만원씩 3년간 지원(비수도권 사업주의 경우, '26.1분기 지원대상부터 근로자 1인당 분기 120만원씩 3년간 지원)",
   "category": "jobs",
   "contact_raw": "고용노동부 고객상담센터/1350",
-  "content_hash": "sha256:81ca36e4fa23d9ae88953e397eb3f6d2",
+  "content_hash": "sha256:7bbce8ef517df519b6551bffb6b65e5a",
   "criteria_raw": "○ 정년퇴직자 계속고용제도(정년연장, 폐지, 재고용) 도입 후 정년도래를 계속고용하는 사업주",
   "deferred_detail": false,
   "documents_raw": [

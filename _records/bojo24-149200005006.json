@@ -29,13 +29,12 @@
   "apply_url": "https://yw.work24.go.kr",
   "audiences": [
     "youth",
-    "jobseeker",
-    "business"
+    "jobseeker"
   ],
   "benefit_raw": "ㅇ 인턴형 일경험: 기업에서 과업을 수행하면서 직무역량 강화(1~5개월 내외)\nㅇ 프로젝트형 일경험: 기업이 제안하는 실전형 프로젝트 수행(2개월 내외)\nㅇ ESG지원형 일경험: 청년의 취업역량 향상을 위해 기업이 ESG 경영 차원에서 편성한 일경험, 훈련 등 참여(6개월 이내)\nㅇ 사회적가치형 일경험: 정책적으로 필요한 분야(사회서비스, 지역, 환경 등) 관련 사회적 기업에서의 일경험 제공(3개월 이내)",
   "category": "jobs",
   "contact_raw": "고용노동부 통합고용정책국 청년고용정책관 청년취업지원과/044-202-7492\n청년 일경험 상담센터/1811-8447",
-  "content_hash": "sha256:085a83c7f5fdfd9f0421fd25ce1523a9",
+  "content_hash": "sha256:1620f101c77d9ad453317b833d472149",
   "criteria_raw": "15세 이상 34세 이하 미취업 청년",
   "deferred_detail": false,
   "documents_raw": [

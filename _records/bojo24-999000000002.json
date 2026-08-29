@@ -24,13 +24,12 @@
   "apply_url": "https://www.work24.go.kr/",
   "audiences": [
     "jobseeker",
-    "lowincome",
-    "business"
+    "lowincome"
   ],
   "benefit_raw": "○ 구직급여일액의 70%를 최대 60일간 연장하여 지급",
   "category": "jobs",
   "contact_raw": "고용노동부 고객상담센터/1350",
-  "content_hash": "sha256:ccb80c8d48d677c59d1bd0c7092e7734",
+  "content_hash": "sha256:f77c0f6150b129cd82e69de35c66d35d",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [

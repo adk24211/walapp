@@ -30,13 +30,12 @@
   "audiences": [
     "disabled",
     "jobseeker",
-    "lowincome",
-    "business"
+    "lowincome"
   ],
   "benefit_raw": "○ [1단계] : 상담 및 취업활동계획\n\n○ [2단계] : 취업역량 강화\n\n- 저소득층 구직촉진수당 월 50만원,최대 6개월(2유형 참여자에 한함)\n\n○ [3단계] : 고용 유지\n\n- 취업성공 후 3개월 근속유지 (취업성공수당 30만원 지급)\n\n- 취업성공 후 6개월 근속유지 (취업성공수당 40만원 지급)\n\n- 취업성공 후 12개월 근속유지 (취업성공수당 80만원 지급)",
   "category": "jobs",
   "contact_raw": "한국장애인고용공단/1588-1519",
-  "content_hash": "sha256:5da75fa11ae1915f02e62c70987509b0",
+  "content_hash": "sha256:50ddd87333dc23de7ee45c324bb382db",
   "criteria_raw": "○ 취업성공패키지 참여를 희망하는 구직 등록한 장애인",
   "deferred_detail": false,
   "documents_raw": [
