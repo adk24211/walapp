@@ -177,6 +177,99 @@ layout: default
   종료된 제도를 지우지 않는 대신 아래로 내려, 홈 카드에 찍힌 '시행중 N건'과
   첫 묶음의 건수가 일치하게 한다. 마감임박·신규 허브는 이미 정렬이 의미를 가지므로 나누지 않는다.
 {% endcomment %}
+{% comment %}
+  ── 교차 허브만: 비교표 ──
+
+  교차 허브(대상 × 분야)는 24개인데, 카드 격자만 놓으면 다른 허브와 같은 화면이
+  하나 더 생길 뿐이다. 실제로 그랬다 — 고유 텍스트가 제목 한 줄뿐이었다.
+
+  그런데 이 묶음은 비교하기에 딱 맞는 크기다(8~26건). 그리고 비교는
+  **정부24에 없는 정보**다. 원천은 제도 하나에 페이지 하나를 주므로,
+  "청년이 신청할 수 있는 주거 제도 14건 중 지금 온라인으로 되는 것은 몇 건인가"
+  를 알려면 열네 페이지를 열어 봐야 한다. 그 답은 우리만 만들 수 있다.
+
+  ⚠️ 금액은 일부러 넣지 않았다.
+     금액이 뽑히는 115건 중 82건이 기간 단위 없이 적혀 있다. '일 47,560원' 과
+     '220만원' 을 한 열에 세우면 정렬하지 않아도 비교 가능한 값처럼 읽힌다.
+     지원금은 틀린 비교가 곧 실제 피해라, 안전하게 비교되는 축만 쓴다 —
+     마감일(파싱된 날짜) · 신청 방법(원문에서 분류) · 소관 기관.
+     그 사실 자체도 아래 각주로 밝힌다. 숨길 일이 아니다.
+{% endcomment %}
+{% assign cmp_shown = false %}
+{% if axis == 'cross' %}
+{% assign live = items | where_exp: "p", "p.status != 'closed'" %}
+{% if live.size > 2 %}
+{% assign cmp_shown = true %}
+  {% assign cmp_dated = live | where_exp: "p", "p.apply_always != true" | where_exp: "p", "p.apply_end" | sort: "apply_end" %}
+  {% assign cmp_always = live | where: "apply_always", true %}
+  {% assign cmp_rest = live | where_exp: "p", "p.apply_always != true" | where_exp: "p", "p.apply_end == nil" %}
+  {% assign cmp_rows = cmp_dated | concat: cmp_always | concat: cmp_rest %}
+  {% assign cmp_online = live | where_exp: "p", "p.apply_methods contains '온라인 신청' or p.apply_methods contains '정부24 온라인 신청'" %}
+  {% assign cmp_orgs = live | map: "org" | uniq %}
+  {% assign aud_label = site.data.taxonomy.audiences[key].label %}
+  {% assign cat_label = site.data.taxonomy.categories[page.hub_key2].label %}
+
+<section class="cmp">
+  <h2 class="cmp-h">{{ live | size }}건을 한 화면에서</h2>
+  <p class="cmp-lead">
+    {{ aud_label }} 대상 {{ cat_label }} 제도로 이 사이트가 정리해 둔 것은 {{ live | size }}건입니다.
+    {%- if cmp_online.size > 0 %} 그중 {{ cmp_online | size }}건은 온라인으로 신청할 수 있고,
+    나머지 {{ live.size | minus: cmp_online.size }}건은 기관을 찾아가야 합니다.{% endif %}
+    {%- if cmp_always.size > 0 %} {{ cmp_always | size }}건은 상시 접수라 마감을 신경 쓰지 않아도 됩니다.{% endif %}
+    {%- if cmp_dated.size > 0 %}{% assign first_end = cmp_dated | first %}
+    마감일이 정해진 {{ cmp_dated | size }}건 중 가장 먼저 끝나는 것은
+    ‘{{ first_end.title }}’({{ first_end.apply_end }})입니다.{% endif %}
+    {%- if cmp_orgs.size > 1 %} 소관 기관은 {{ cmp_orgs | size }}곳으로 나뉘어 있어 신청 창구가 한 곳이 아닙니다.{% endif %}
+  </p>
+
+  <div class="cmp-scroll">
+    <table class="cmp-table">
+      <colgroup>
+        <col class="c-name"><col class="c-when"><col class="c-how"><col class="c-org">
+      </colgroup>
+      <thead>
+        <tr><th scope="col">제도</th><th scope="col">신청 기간</th><th scope="col">신청 방법</th><th scope="col">소관 기관</th></tr>
+      </thead>
+      <tbody>
+        {% for p in cmp_rows %}
+        <tr{% if p.status == 'upcoming' %} class="is-upcoming"{% endif %}>
+          <th scope="row">
+            <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+            {%- if p.status == 'upcoming' %} <span class="cmp-flag">시행 예정</span>{% endif %}
+            {%- if p.summary %}<span class="cmp-sub">{{ p.summary }}</span>{% endif %}
+          </th>
+          {%- comment -%}
+            신청 기간 원문은 '주택도시기금 주거안정 월세대출 규정에 따름' 처럼 길어서
+            그대로 두면 표의 한 열이 무너진다. 줄여서 보여 주고 전문은 제도 페이지에 있다.
+          {%- endcomment -%}
+          <td class="cmp-when">{% if p.apply_always %}상시{% elsif p.apply_end %}~ {{ p.apply_end }}{% elsif p.apply_period_raw %}<span title="{{ p.apply_period_raw }}">{{ p.apply_period_raw | truncate: 20 }}</span>{% else %}원문 확인{% endif %}</td>
+          {%- comment -%}
+            '정부24 온라인 신청' 과 '온라인 신청' 이 함께 붙은 제도가 있어 문자열을
+            그대로 이으면 "정부24 온라인 · 온라인 · 방문" 이 된다. 갈래로 판정한다.
+          {%- endcomment -%}
+          {%- assign m_online = false -%}
+          {%- if p.apply_methods contains '온라인 신청' or p.apply_methods contains '정부24 온라인 신청' -%}{%- assign m_online = true -%}{%- endif -%}
+          {%- assign m_visit = false -%}
+          {%- if p.apply_methods contains '방문 신청' -%}{%- assign m_visit = true -%}{%- endif -%}
+          <td>{% if p.apply_not_needed %}신청 불필요{% elsif m_online and m_visit %}온라인 · 방문{% elsif m_online %}온라인{% elsif m_visit %}방문{% else %}원문 확인{% endif %}</td>
+          <td>{{ p.org | default: '—' }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <p class="cmp-hint">← 표를 옆으로 밀어 나머지 열을 보실 수 있습니다.</p>
+
+  <p class="cmp-foot">
+    금액은 이 표에 넣지 않았습니다. 원문이 ‘일 47,560원’·‘월 10만 원’·‘220만 원’처럼
+    서로 다른 기준으로 적어 두어, 한 열에 세우면 비교할 수 없는 값이 비교되는 것처럼
+    보이기 때문입니다. 금액은 각 제도 페이지의 <b>지원 내용</b>에서 원문 그대로 확인하실 수 있습니다.
+  </p>
+</section>
+{% endif %}
+{% endif %}
+
 {% if axis == 'category' or axis == 'audience' or axis == 'region' or axis == 'cross' %}
 {% assign open_items = items | where: "status", "active" %}
 {% assign upcoming_items = items | where: "status", "upcoming" %}
@@ -185,8 +278,14 @@ layout: default
 {% assign show_cat = true %}
 {% if axis == 'category' or axis == 'cross' %}{% assign show_cat = false %}{% endif %}
 
+{% comment %}
+  비교표를 이미 낸 화면에서는 같은 제도를 카드로 또 늘어놓지 않는다.
+  표가 카드보다 많은 것을 담고 있다(이름·요약·기간·방법·기관). 둘 다 두면
+  한 페이지에서 같은 14건을 두 번 읽게 되고, 그건 내용이 아니라 분량이다.
+  종료된 제도만 아래 카드로 남긴다 — 표는 신청할 수 있는 것을 고르는 자리다.
+{% endcomment %}
 <div class="feed">
-  {% if open_items.size > 0 %}
+  {% if open_items.size > 0 and cmp_shown != true %}
   <div class="section-group">
     <div class="section-label">
       <span class="sec-tag {% if axis == 'category' %}{{ key }}{% endif %}">시행중</span>
@@ -199,7 +298,7 @@ layout: default
   </div>
   {% endif %}
 
-  {% if upcoming_items.size > 0 %}
+  {% if upcoming_items.size > 0 and cmp_shown != true %}
   <div class="section-group">
     <div class="section-label">
       <span class="sec-tag">시행 예정</span>
