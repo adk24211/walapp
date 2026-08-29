@@ -136,26 +136,49 @@ layout: default
   {% endcomment %}
   <div class="side-rail">
     <aside class="apply-rail" aria-label="신청 정보">
+      {%- comment -%}
+        ── 레일의 값 두 줄 ──
+
+        둘 다 '있으면 보여 주고 없으면 줄째로 뺀다'. 예전에는 둘 다 없을 때
+        `default: '원문 참고'` 로 채웠는데, 그러면 '지원 규모'·'신청 기간' 이라는
+        제목 아래 아무 값도 없는 줄이 선다. 라벨이 값을 약속하고 지키지 않는
+        자리다. 금액은 281건 중 166건, 기간은 20건이 그 상태였다.
+
+        없는 것을 없다고 두면 화면에서 사라질 뿐 정보가 줄지 않는다 —
+        지원 내용 원문은 바로 아래 01 카드에 그대로 있고, 신청 기간이 원문에
+        없다는 사실은 원문을 봐도 마찬가지다.
+
+        둘 다 없는 11건에서는 dl 자체를 내지 않는다. 빈 dl 을 남기면 레일 위쪽에
+        설명 없는 여백만 생긴다.
+      {%- endcomment -%}
+      {%- assign has_period = false -%}
+      {%- if page.apply_always or page.apply_start or page.apply_end or page.apply_period_raw -%}
+        {%- assign has_period = true -%}
+      {%- endif -%}
+      {% if page.highlight or has_period %}
       <dl class="program-facts">
+        {% if page.highlight %}
         <div>
           <dt>지원 규모</dt>
-          <dd class="is-amount">{{ page.highlight | default: '원문 참고' }}</dd>
+          <dd class="is-amount">{{ page.highlight }}</dd>
         </div>
+        {% endif %}
+        {% if has_period %}
         <div>
           <dt>신청 기간</dt>
           {%- comment -%}
             날짜가 안 잡힌 제도에는 원천이 쓴 문장을 그대로 보여 준다.
-            예전에는 '원문 참고' 라고만 적었는데 그건 아무것도 알려 주지 않는다 —
-            201건 중 116건이 그 상태였다. 자세한 사정은 render.py 의
-            apply_period_raw 주석 참고.
+            '매월 1일부터 10일까지' 같은 값은 날짜로는 못 읽어도 사람에게는
+            충분히 쓸모 있다. 자세한 사정은 render.py 의 apply_period_raw 주석 참고.
           {%- endcomment -%}
           <dd>{% if page.apply_always %}상시 접수
               {%- elsif page.apply_start and page.apply_end %}{{ page.apply_start }} ~ {{ page.apply_end }}
               {%- elsif page.apply_end %}~ {{ page.apply_end }}
-              {%- elsif page.apply_period_raw %}{{ page.apply_period_raw }}
-              {%- else %}원문 참고{% endif %}</dd>
+              {%- else %}{{ page.apply_period_raw }}{% endif %}</dd>
         </div>
+        {% endif %}
       </dl>
+      {% endif %}
 
       {% comment %}
         ── 신청 경로 ──
@@ -237,14 +260,35 @@ layout: default
         <dt>원문 출처</dt>
         <dd>{{ src_label }}{% if page.org %} · {{ page.org }} 제공{% endif %}</dd>
       </div>
+      {%- comment -%}
+        ⚠️ 이 두 줄을 다시 문자열로 박지 말 것.
+
+        예전에는 여기 목록이 고정이었다: "금액 · 지원 대상 · 선정 기준 · 신청 기간
+        · 접수 기관 · 문의처 · 준비 서류" 와 "한 줄 요약 · 나도 받을 수 있나요 ·
+        어떻게 신청하나요 · 자주 묻는 질문".
+
+        그런데 페이지마다 실리는 항목이 다르다. FAQ 는 되묻는 질문을 걸러내면
+        남는 게 없는 경우가 많고(render.py `_useful_faq`), 서류·문의처·근거 법령이
+        원문에 아예 없는 제도도 많다. 그런데도 모든 페이지가 같은 목록을 보여
+        주면서 "이 항목들은 원문 그대로입니다" 라고 말하고 있었다 — 출처를
+        밝히는 자리에서, 페이지에 없는 항목의 출처를 밝힌 것이다.
+
+        이제 render.py 가 본문을 찍으면서 실제로 실린 것을 세어 front matter 로
+        내보낸다(source_parts / own_parts). 여기서는 읽기만 한다. 판정이 한 곳에
+        있어야 어긋나지 않는다.
+      {%- endcomment -%}
+      {% if page.source_parts %}
       <div>
         <dt>원문 그대로</dt>
-        <dd>금액 · 지원 대상 · 선정 기준 · 신청 기간 · 접수 기관 · 문의처 · 준비 서류</dd>
+        <dd>{{ page.source_parts | join: ' · ' }}</dd>
       </div>
+      {% endif %}
+      {% if page.own_parts %}
       <div>
         <dt>본 사이트가 쓴 문장</dt>
-        <dd>맨 위 한 줄 요약과 ‘나도 받을 수 있나요’ · ‘어떻게 신청하나요’ · ‘자주 묻는 질문’</dd>
+        <dd>{{ page.own_parts | join: ' · ' }}</dd>
       </div>
+      {% endif %}
       {% if page.last_checked %}
       <div>
         <dt>확인일</dt>
@@ -254,15 +298,58 @@ layout: default
     </dl>
   </div>
 
-  {% comment %} ── 함께 보면 좋은 제도 — 같은 분야 → 같은 대상 순 ── {% endcomment %}
-  {% assign same_cat = site.programs | where: "category", cat %}
+  {% comment %}
+    ── 함께 보면 좋은 제도 ──
+
+    예전에는 `where: "category", cat` 의 **앞 4건**을 그대로 썼다. site.programs 의
+    순서는 파일 경로 순이라 페이지마다 바뀌지 않는다. 그래서 같은 분야의 제도는
+    전부 똑같은 4개를 추천했다 — 281건 중 196건이 동일한 블록이었다.
+    한 사이트에서 서로 다른 200개 페이지가 같은 4개를 가리키는 것은 추천이 아니라
+    템플릿이고, 기계가 찍어 낸 티가 나는 자리이기도 하다.
+
+    이제 세 갈래로 후보를 모아 앞에서부터 채운다. 각 갈래 안에서는 조회수 순:
+      ① 같은 분야이면서 이 제도의 대표 대상을 함께 가진 것  — 가장 가까운 관계
+      ② 같은 기관의 다른 제도                                — 분야가 달라도 이어진다
+      ③ 같은 분야                                            — 남는 자리를 채운다
+    종료된 제도는 넣지 않는다. 이미 끝난 것을 '함께 보면 좋다' 고 할 수 없다.
+
+    Jekyll 의 sort 는 값이 없는 것을 앞에 두므로, reverse 하면 조회수 없는 것이
+    뒤로 간다 — 의도한 순서다.
+  {% endcomment %}
+  {% assign pool = site.programs | where_exp: "p", "p.url != page.url" %}
+  {% assign pool = pool | where_exp: "p", "p.status != 'closed'" %}
+  {% assign same_cat = pool | where: "category", cat | sort: "view_count" | reverse %}
+  {% assign ranked = "" | split: "" %}
+  {% comment %}
+    ①의 상위 2건을 먼저 놓고 ②를 끼운 뒤 ①의 나머지로 채운다.
+    ①만 순서대로 쓰면 '같은 분야 + 같은 대상' 페이지들이 조회수 상위 4건을
+    똑같이 가리킨다 — 관계가 실제로 비슷하니 당연하지만, 기관이 다른 제도끼리도
+    같은 목록이 된다. ②를 사이에 끼우면 그 지점에서 갈린다.
+  {% endcomment %}
+  {% if page.primary_audience %}
+    {% assign pa = page.primary_audience %}
+    {% assign tier1 = same_cat | where_exp: "p", "p.audiences contains pa" %}
+    {% assign ranked = ranked | concat: tier1 | slice: 0, 2 %}
+  {% endif %}
+  {% if page.org and page.org != "" %}
+    {% assign tier2 = pool | where: "org", page.org | sort: "view_count" | reverse %}
+    {% assign ranked = ranked | concat: tier2 %}
+  {% endif %}
+  {% if tier1 %}{% assign ranked = ranked | concat: tier1 %}{% endif %}
+  {% assign ranked = ranked | concat: same_cat | uniq %}
+
   {% assign related_count = 0 %}
   {% capture related_html %}
-    {% for p in same_cat %}
-      {% if p.url != page.url and related_count < 4 %}
+    {% for p in ranked %}
+      {% if related_count < 4 %}
         {% assign related_count = related_count | plus: 1 %}
         <a href="{{ p.url | relative_url }}" class="related-card">
-          <span class="related-cat {{ cat }}">{{ p.region_label | default: '전국' }}</span>
+          {% comment %}
+            여기에 예전에는 region_label 이 있었다. 전 건이 '전국' 이라 네 장의
+            카드에 같은 두 글자가 나란히 찍혔다. 기관명은 카드마다 다르고,
+            이 제도와 어떻게 이어지는지도 알려 준다.
+          {% endcomment %}
+          <span class="related-cat {{ p.category }}">{{ p.org | default: site.data.taxonomy.categories[p.category].label | default: '지원 제도' }}</span>
           <span class="related-title">{{ p.title }}</span>
           <span class="related-date">{% if p.apply_always %}상시 접수{% elsif p.apply_end %}~ {{ p.apply_end }}{% endif %}</span>
         </a>
@@ -313,9 +400,25 @@ layout: default
 {% if page.apply_url %}
 <div class="apply-dock" id="apply-dock" hidden>
   <div class="apply-dock-inner">
+    {%- comment -%}
+      금액이 없으면 '지원 규모 / 원문 참고' 대신 다음으로 행동에 쓸모 있는 값을
+      넣는다. 좁은 화면에서 한참 내려온 사람에게는 지금 무엇을 신청하려는
+      중인지가 실제로 필요한 정보다.
+    {%- endcomment -%}
     <p class="apply-dock-amount">
+      {%- if page.highlight %}
       <span>지원 규모</span>
-      <strong>{{ page.highlight | default: '원문 참고' }}</strong>
+      <strong>{{ page.highlight }}</strong>
+      {%- elsif page.apply_always %}
+      <span>신청 기간</span>
+      <strong>상시 접수</strong>
+      {%- elsif page.apply_end %}
+      <span>신청 마감</span>
+      <strong>~ {{ page.apply_end }}</strong>
+      {%- else %}
+      <span>{{ page.org | default: '지원 제도' }}</span>
+      <strong>{{ page.title }}</strong>
+      {%- endif %}
     </p>
     <a class="apply-dock-btn" href="{{ page.apply_url }}" target="_blank" rel="noopener nofollow">
       공식 창구에서 신청

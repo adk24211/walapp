@@ -136,10 +136,25 @@ def _yaml(text) -> str:
 # ─────────────────────────────────────────────────────────────
 #  본문 컴포넌트
 # ─────────────────────────────────────────────────────────────
-def render_body(record: ProgramRecord, prose: dict) -> str:
+def render_body(record: ProgramRecord, prose: dict, *,
+                manifest: dict | None = None) -> str:
+    """본문 HTML 을 만든다. `manifest` 를 주면 실제로 렌더된 항목 목록을 채워 준다.
+
+    manifest 가 필요한 이유: 페이지 아래 '출처표시' 박스가 어떤 항목이 원문이고
+    어떤 항목이 우리 문장인지 밝히는데, 그 목록이 레이아웃에 문자열로 박혀
+    있었다. 그래서 FAQ 를 렌더하지 않은 페이지(_useful_faq 가 전부 걸러낸 경우)
+    에서도 "'자주 묻는 질문' 은 본 사이트가 썼다" 고 적혀 있었다 —
+    페이지에 없는 항목의 출처를 밝히고 있었던 것이다.
+
+    같은 판정을 두 곳에서 하면 반드시 어긋난다. 렌더하면서 세어 두고,
+    레이아웃은 그것을 읽기만 한다.
+    """
     prose = _politen(prose or {})
     cat = record.category
     parts: list[str] = []
+    # 이 페이지에 실제로 실린 것 — 왼쪽은 원문 그대로, 오른쪽은 우리가 쓴 문장
+    src_parts: list[str] = []
+    own_parts: list[str] = []
 
     def open_block(cls: str) -> str:
         return f'<div class="cn {cls}" data-cat="{cat}">'
@@ -207,7 +222,8 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
     if str(record.benefit_raw).strip():
         parts += sec("지원 내용",
                      [open_block("cn-raw"), _render_lines(record.benefit_raw), "</div>"],
-                     key=True)
+                     key=bool(extract_highlight(record.benefit_raw)))
+        src_parts.append("지원 내용")
 
     # ── 2) 나도 받을 수 있나요 ──
     eligibility = [c for c in (prose.get("eligibility") or []) if str(c).strip()]
@@ -217,6 +233,7 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
             block.append(f"  <li>{_esc(item)}</li>")
         block.append("</ul>")
         parts += sec("나도 받을 수 있나요?", block, prose_written=True)
+        own_parts.append("나도 받을 수 있나요")
 
     # ── 3) 어떻게 신청하나요 — 준비 서류를 여기 흡수한다 ──
     # 서류는 신청 절차의 일부다. 따로 카드를 두니 세로 지분 1위(18.2%)를 먹으면서
@@ -250,6 +267,10 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
                 block.append(f"  <li>{_esc(doc)}</li>")
             block.append("</ul>")
         parts += sec("어떻게 신청하나요?", block, prose_written=bool(steps))
+        if steps:
+            own_parts.append("어떻게 신청하나요")
+        if docs:
+            src_parts.append("준비 서류")
 
     # ── 4) 지원 대상·선정 기준 — 원문 한 카드에 ──
     # 둘은 원문 기준으로 겹칠 때가 있다(최대 유사도 0.94). 한쪽이 다른 쪽에 통째로
@@ -269,6 +290,7 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
         names.append("선정 기준")
     if blocks:
         parts += sec("·".join(names), blocks)
+        src_parts += names
 
     # ── 5) 신청 창구 ──
     # 오른쪽 신청 레일에는 '얼마 · 언제까지 · 신청 버튼' 만 둔다. 스크롤을 따라다니는
@@ -304,6 +326,7 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
                 "</div>",
             ]
         parts += sec("신청 창구", block)
+        src_parts += [label for label, _ in rows]
 
     # ── 6) FAQ ──
     # 생성된 질문의 76%(55개 중 42개)가 바로 위 카드에 답이 있는 것이었다.
@@ -351,6 +374,7 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
         block.append("</script>")
 
         parts += sec("자주 묻는 질문", block, prose_written=True)
+        own_parts.append("자주 묻는 질문")
 
     # ── 주의 안내 ──
     # 카드로 만들지 않는다. 제목이 없는 경고 한 줄이라 번호를 붙이면 목차에 없는
@@ -369,10 +393,70 @@ def render_body(record: ProgramRecord, prose: dict) -> str:
     # 있던 9건 전부가 오른쪽 레일의 '신청 기간' 과 같은 날짜였다. 같은 값을
     # 241px 짜리 카드로 다시 쓸 이유가 없다. 종료·예정 안내는 히어로 배지 옆 문장이 한다.
 
+    if manifest is not None:
+        manifest["source_parts"] = src_parts
+        manifest["own_parts"] = own_parts
+
     return "\n".join(parts)
 
 
 _NO_DOC_RE = re.compile(r"^(해당\s*없음|없음|불필요|미해당|-|없다)$")
+
+
+# 괄호 짝. 여는 것과 닫는 것을 같은 순서로 둔다.
+_BRACKETS = (("(", ")"), ("（", "）"), ("[", "]"), ("［", "］"), ("「", "」"), ("《", "》"))
+
+
+def _bracket_depth(text: str) -> int:
+    """열려 있는 괄호 수. 음수(닫는 게 더 많음)는 0 으로 본다."""
+    depth = 0
+    for opener, closer in _BRACKETS:
+        depth += text.count(opener) - text.count(closer)
+    return max(depth, 0)
+
+
+def _rejoin_split_brackets(items: list[str]) -> list[str]:
+    """괄호 안에서 잘린 서류 항목을 도로 붙인다.
+
+    수집기(collect/adapters/base.py `split_documents`)가 구비서류 원문을
+    `[\n·•,、]` 로 쪼개는데, 쉼표가 괄호 **안**에 있어도 자른다. 그래서 원문의
+
+        ○ 근로활동불가 모형(경기 부천시, 강원 원주시)
+
+    이 화면에 두 줄로 나온다:
+
+        · ○ 근로활동불가 모형(경기 부천시
+        · 강원 원주시)
+
+    281건 중 47페이지 158항목이 이 상태다. 읽는 사람에게는 괄호가 열린 채
+    끝난 문장과, 아무 맥락 없이 시작하는 지명 하나가 보인다.
+
+    진짜 고칠 자리는 쪼개는 쪽이다. 다만 documents_raw 는 해시 대상 필드라
+    (schema.py `_HASHED_FIELDS`) 분할 규칙을 바꾸면 영향받은 47건이 다음
+    동기화에서 '변경' 으로 잡혀 재생성 47회가 든다. 그건 어차피 예정된
+    프롬프트 수정(고정 사실 블록) 재생성 배치에 얹으면 추가 비용이 0이므로,
+    지금은 화면에 나가는 것만 되돌린다. 원문을 바꾸지 않고 붙이기만 한다.
+
+    괄호가 끝내 안 맞으면 손대지 않는다 — 원문이 원래 그런 것일 수 있고,
+    맞추려고 글자를 지우는 쪽이 더 나쁘다.
+    """
+    out: list[str] = []
+    i = 0
+    while i < len(items):
+        merged = items[i]
+        # 6개까지만 본다. 그 이상 이어 붙여야 맞는다면 쉼표 분할 문제가 아니다.
+        steps = 0
+        while _bracket_depth(merged) > 0 and i + 1 < len(items) and steps < 6:
+            i += 1
+            steps += 1
+            merged = f"{merged}, {items[i]}"
+        if _bracket_depth(merged) > 0:
+            # 못 맞췄다. 되돌리고 원래 항목들을 그대로 둔다.
+            out += items[i - steps:i + 1]
+        else:
+            out.append(merged)
+        i += 1
+    return out
 
 
 def _real_documents(documents) -> list[str]:
@@ -385,6 +469,7 @@ def _real_documents(documents) -> list[str]:
     items = [str(d).strip() for d in (documents or []) if str(d).strip()]
     if not items:
         return []
+    items = _rejoin_split_brackets(items)
     if all(_NO_DOC_RE.match(re.sub(r"[\s·•○●\-]+", " ", i).strip()) for i in items):
         return []
     return items
@@ -530,6 +615,11 @@ def _contains(outer: str, inner: str) -> bool:
 #  전체 파일
 # ─────────────────────────────────────────────────────────────
 def to_markdown(record: ProgramRecord, prose: dict) -> str:
+    # 본문을 먼저 찍는다. 어떤 항목이 실제로 실렸는지는 찍어 봐야 알고,
+    # 그 목록이 front matter 로 나가 출처표시 박스가 된다.
+    manifest: dict = {}
+    body = render_body(record, prose, manifest=manifest)
+
     front: list[str] = [
         "---",
         "layout: program",
@@ -639,10 +729,28 @@ def to_markdown(record: ProgramRecord, prose: dict) -> str:
     if record.official_url:
         front.append(f'official_url: "{_yaml(record.official_url)}"')
 
+    # ── 날짜 ──
+    #
+    # first_published/last_updated 는 우리가 화면에 쓰는 값이고,
+    # date/last_modified_at 은 기계가 읽는 값이다. 둘 다 있어야 한다.
+    #
+    # 왜: front matter 에 date 가 없으면 Jekyll 은 파일의 mtime 을 쓴다. 저장소를
+    # 새로 clone 하는 CI 에서는 281개 파일의 mtime 이 전부 체크아웃 시각이라,
+    # 빌드 결과의 datePublished 가 281건 모두 같은 초 단위 값으로 나갔다:
+    #
+    #   224 "datePublished":"2026-08-28T14:41:28+09:00"
+    #
+    # 한 사이트의 모든 글이 같은 순간에 발행됐다는 것은 대량 자동생성의
+    # 교과서적 지문이다. 그런데 진짜 발행일은 이미 갖고 있었다 — 원장의
+    # first_published 가 제도마다 다르다. 내보내지 않고 있었을 뿐이다.
+    #
+    # sitemap 의 <lastmod> 도 같은 값을 읽는다.
     front += [
         f'first_published: "{record.first_published}"',
         f'last_updated: "{record.last_updated}"',
         f'last_checked: "{record.last_checked}"',
+        f'date: "{record.first_published}"',
+        f'last_modified_at: "{record.last_updated}"',
         f"revision: {record.revision}",
     ]
     if record.is_mock:
@@ -653,8 +761,39 @@ def to_markdown(record: ProgramRecord, prose: dict) -> str:
     if highlight:
         front.append(f'highlight: "{_yaml(highlight)}"')
 
+    # ── 출처표시 박스가 읽을 목록 ──
+    #
+    # 예전에는 레이아웃에 이렇게 박혀 있었다:
+    #   원문 그대로 — 금액·지원 대상·선정 기준·신청 기간·접수 기관·문의처·준비 서류
+    #   본 사이트가 쓴 문장 — 한 줄 요약·나도 받을 수 있나요·어떻게 신청하나요·자주 묻는 질문
+    #
+    # 페이지마다 실린 항목이 다른데 목록은 하나였다. FAQ 가 한 건도 안 남은
+    # 페이지에서도 "'자주 묻는 질문' 은 본 사이트가 썼다" 고 적혀 있었고,
+    # 서류가 없는 페이지도 "준비 서류는 원문 그대로" 라고 말했다.
+    # 출처를 밝히는 자리에서 없는 항목의 출처를 밝히고 있었다.
+    src_parts = list(manifest.get("source_parts") or [])
+    own_parts = list(manifest.get("own_parts") or [])
+
+    # 신청 기간은 본문이 아니라 오른쪽 레일에 있다. 원문에서 온 값이므로 여기서 센다.
+    if (record.apply_period.always or record.apply_period.start
+            or record.apply_period.end or str(record.apply_period.raw or "").strip()):
+        src_parts.insert(0, "신청 기간")
+
+    # 한 줄 요약은 해설이 있을 때만 우리 문장이다.
+    # 없으면 benefit_raw 를 잘라 쓰므로(위 summary_text) 그건 원문이다.
+    if str(prose.get("summary") or "").strip():
+        own_parts.insert(0, "맨 위 한 줄 요약")
+
+    def _dedup(items: list[str]) -> list[str]:
+        seen: set[str] = set()
+        return [x for x in items if not (x in seen or seen.add(x))]
+
+    for key, values in (("source_parts", _dedup(src_parts)), ("own_parts", _dedup(own_parts))):
+        if values:
+            front.append(f"{key}: [" + ", ".join(f'"{_yaml(v)}"' for v in values) + "]")
+
     front.append("---")
-    return "\n".join(front) + "\n\n" + render_body(record, prose) + "\n"
+    return "\n".join(front) + "\n\n" + body + "\n"
 
 
 _AMOUNT_RE = re.compile(
@@ -663,7 +802,27 @@ _AMOUNT_RE = re.compile(
 
 
 def extract_highlight(benefit: str) -> str:
-    """지원 내용에서 대표 금액 표현을 뽑는다. 카드 배지에 쓴다."""
+    """지원 내용에서 대표 금액 표현을 뽑는다. 카드 배지에 쓴다.
+
+    281건 기준: 금액이 잡히는 것 115건, 안 잡히는 것 166건.
+    안 잡히는 쪽은 '월 최대 100시간', '교육비 전액' 처럼 원 단위가 아닌 경우다.
+    그때 화면에 '지원 규모 · 원문 참고' 라고 쓰던 것은 없앴다(_layouts/program.html).
+
+    ⚠️ 고르는 규칙(최대 → 첫 매치)을 '더 큰 금액' 으로 바꾸고 싶어지는데,
+    실제로 재 보면 나아지지 않는다. 금액이 둘 이상이면서 '최대' 가 없는 56건을
+    직접 훑은 결과:
+
+      · 첫 매치가 맞는 것   한부모 아동양육비 23만 원(월 지급액) ·
+                            제대군인 전직지원금 81만 원 · 개발제한구역 100만 원
+      · 첫 매치가 틀린 것   고용안정장려금 20만 원 ← 이건 지급액이 아니라
+                            '임금증가액 20만원 이상' 이라는 요건이다(정답 60만원)
+      · 큰 금액이 틀린 것   디딤씨앗통장 50만 원 ← 이건 본인 추가 적립 한도이고
+                            정부 지원은 10만 원(첫 매치)이 맞다
+
+    즉 첫 매치도 최대 금액도 각각 틀리는 사례가 있고, 어느 쪽이 나은지는
+    측정으로 갈리지 않았다. 규칙을 바꾸려면 원문에서 '지급액' 과 '기준액' 을
+    구분해야 하는데 그건 정규식의 일이 아니다. 바꾸기 전에 다시 재 볼 것.
+    """
     if not benefit:
         return ""
     matches = _AMOUNT_RE.findall(benefit)
