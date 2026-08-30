@@ -1,0 +1,71 @@
+{
+  "_prose": {
+    "eligibility": [
+      "전라북도에 거주하는 학생입니다.",
+      "전라북도에 거주하는 구직자입니다.",
+      "전라북도에 거주하는 창업자입니다.",
+      "전라북도에 거주하는 재직자입니다."
+    ],
+    "faq": [
+      {
+        "a": "전주정보문화산업진흥원이 교육을 주관합니다.",
+        "q": "주관 기관은 어디인가요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청하거나 방문하여 교육신청서를 제출하시면 됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "전주ICT이노베이션스퀘어에서 제공하는 블록체인·데이터·IoT 160시간 전문인력양성 과정으로, 전라북도 내 학생·구직자·창업자·재직자를 대상으로 상시 접수합니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://jedu.jica.or.kr",
+  "audiences": [
+    "jobseeker",
+    "business"
+  ],
+  "benefit_raw": "전주ICT이노베이션스퀘어 블록체인(BC) 전문인력양성과정(160시간)\n- 통합 블록체인 기본과정, NFT/Wed 3.0, 블록체인과 가상화페 De-Fi 개발 및 실습과정\n전주ICT이노베이션스퀘어 데이터 전문인력양성과정(160시간)\n- 빅데이터의 이해 및 데이터 활용 실습, 인공지능 활용 빅데이터 분석 전문가 양성 과정\n전주ICT이노베이션스퀘어 IoT 전문인력양성과정(160시간)\n- IoT, 농업 데이터 활용 스마트팜 설계 및 제작 과정",
+  "category": "jobs",
+  "contact_raw": "(재)전주정보문화산업진흥원/063-281-4185",
+  "content_hash": "sha256:6dfc3552c4e23b5b2e379a2821a9d641",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "교육신청서",
+    "지역소재확인서류(주민등록등본 or 재학/졸업증명서 or 재직증명서 등)"
+  ],
+  "first_published": "2026-08-30",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-O00105400008",
+  "is_mock": false,
+  "last_checked": "2026-08-30",
+  "last_updated": "2026-08-30",
+  "law_raw": "",
+  "name": "전주ICT이노베이션스퀘어 블록체인, 데이터, IoT 전문인력양성과정",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00105400008",
+  "org": "전주정보문화산업진흥원",
+  "primary_audience": "jobseeker",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "전주ict이노베이션스퀘어-블록체인-데이터-iot-전문인력양성과정",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 개인",
+  "source_id": "O00105400008",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "전라북도 도내 학생, 구직자, 창업자, 재직자 등",
+  "view_count": 1296
+}

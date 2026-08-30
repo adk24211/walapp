@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "대학원 학과를 기반으로 구성된 교육연구단(팀)이어야 합니다.",
+      "교육연구단(팀)은 평가를 통해 선정됩니다.",
+      "선정된 교육연구단은 자체 내규에 따라 연구장학금 수혜자를 선발합니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "관할 교육부 담당 부서를 직접 방문하여 신청합니다. 별도의 구비 서류는 필요하지 않습니다. 신청 후 평가가 진행됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "교육부에서 운영하는 대학원 학과 기반 교육연구단 연구장학금 지원 사업은 대학원 학과를 기반으로 구성된 교육연구단(팀)을 대상으로 평가 후 선정된 팀에 연구장학금 및 인건비, 국제화 경비 등을 지원합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "youth"
+  ],
+  "benefit_raw": "○ 대학원생 연구장학금, 신진 연구인력 인건비, 국제화 경비, 실험실습비 및 산학협력 활동 지원비",
+  "category": "education",
+  "contact_raw": "BK21사업팀/042-869-6447",
+  "content_hash": "sha256:85bed81de1b01037b721fcd9eb1fa3e2",
+  "criteria_raw": "○ 평가를 통하여 교육연구단(팀)을 선정하여 사업비를 지원하면, 해당 교육연구단(팀)의 내규에 의해 연구장학금 수혜 대상을 선발하여 지원\n(평가 및 선정 완료)",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-30",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-134200000007",
+  "is_mock": false,
+  "last_checked": "2026-08-30",
+  "last_updated": "2026-08-30",
+  "law_raw": "",
+  "name": "대학원 학과 기반 교육연구단 연구장학금 등 지원(4단계 두뇌한국21 사업)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/134200000007",
+  "org": "교육부",
+  "primary_audience": "youth",
+  "receiver_raw": "BK21사업팀",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "대학원-학과-기반-교육연구단-연구장학금-등-지원-4단계-두뇌한국21-사업",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "134200000007",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 대학원 학과를 기반으로 구성된 교육연구단(팀)",
+  "view_count": 8544
+}

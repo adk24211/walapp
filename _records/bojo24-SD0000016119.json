@@ -36,14 +36,14 @@
     "raw": "상시신청",
     "start": ""
   },
-  "apply_url": "http://bokjiro.go.kr",
+  "apply_url": "https://bokjiro.go.kr",
   "audiences": [
     "disabled"
   ],
   "benefit_raw": "○ 18세 이상 중증장애인에게 매월 일정액의 장애인연금 지급\n\n○ 지원금액\n- 기초급여 월 349,700원\n- 부가급여 월 30,000~439,700원(소득, 연령에 따라 차등)",
   "category": "finance",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:2f3c440ef115f3933a7d67c884a2cf52",
+  "content_hash": "sha256:0c51b2dbc873a7bfea418fa489caed41",
   "criteria_raw": "○ 배우자가 없는 가구(단독가구) : 140만원 이하\n○ 배우자가 있는 가구(부부 가구) : 224만원 이하",
   "deferred_detail": false,
   "documents_raw": [

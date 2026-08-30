@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "50세 이상인 춘천시민이면 신청 가능합니다.",
+      "선정 기준이 별도로 없으므로 신청자 전원에게 교육이 제공됩니다.",
+      "구비 서류가 없으므로 서류 제출 없이 신청할 수 있습니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "홈페이지에서 신청 양식을 작성합니다. 필요한 정보를 입력하고 제출하면 신청이 완료됩니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "지정된 기관을 직접 방문합니다. 담당자에게 신청 의사를 전달하면 접수가 이루어집니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "춘천 시니어 아카데미는 50세 이상 춘천시민을 대상으로 신중년·노인 대상의 인생 재설계, 자격증 취득, 취미·여가, 웰다잉 등 다양한 교육 서비스를 제공하는 프로그램입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "교육별 상이 / 교육전 춘천 봄내소식지를 통해 공고",
+    "start": ""
+  },
+  "apply_url": "www.cc5070.or.kr",
+  "audiences": [
+    "senior"
+  ],
+  "benefit_raw": "○ 교육 서비스 지원 : 신중년 및 노인의 생애재설계를 위한 다양한 교육 진행\n- 인생 재설계 과정\n- (민간)자격증 취득 과정\n- 취미/여가 증진 과정\n- 웰다잉 관련 강의\n- 전문가, 지도사 과정\n- 1인가구 특화 과정\n- 디지털 교육, ICT 강사양성 등",
+  "category": "education",
+  "contact_raw": "신중년사업팀/033-242-5060",
+  "content_hash": "sha256:b35f3bd43bf3da487a20f1e6bc6a8f26",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-30",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-O00041400001",
+  "is_mock": false,
+  "last_checked": "2026-08-30",
+  "last_updated": "2026-08-30",
+  "law_raw": "",
+  "name": "춘천 시니어 아카데미",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00041400001",
+  "org": "재단법인춘천지혜의숲",
+  "primary_audience": "senior",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "춘천-시니어-아카데미",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 개인",
+  "source_id": "O00041400001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "50세 이후 춘천시민 누구나",
+  "view_count": 1462
+}

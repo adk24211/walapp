@@ -1,0 +1,80 @@
+{
+  "_prose": {
+    "eligibility": [
+      "전라북도에 거주하는 학생",
+      "전라북도에 거주하는 구직자",
+      "전라북도에 거주하는 창업자",
+      "전라북도에 거주하는 재직자",
+      "선정 기준은 별도로 정해져 있지 않습니다"
+    ],
+    "faq": [
+      {
+        "a": "전주ICT이노베이션스퀘어 인공지능 전문인력양성과정은 총 160시간으로 구성되어 있습니다.",
+        "q": "교육 과정은 총 몇 시간인가요?"
+      },
+      {
+        "a": "농생명 및 금융데이터 기반 프로젝트를 수행하며 딥러닝, 머신러닝, 파이썬 등을 학습합니다.",
+        "q": "교육 내용은 어떤 분야를 다루나요?"
+      }
+    ],
+    "note": "선정 기준이 없으므로 서류만 충족하면 신청이 가능합니다.",
+    "steps": [
+      {
+        "body": "전주정보문화산업진흥원 홈페이지에서 교육신청서를 작성합니다. 작성 후 전자 파일을 제출합니다. 제출이 완료되면 접수가 확인됩니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "전주정보문화산업진흥원을 직접 방문하여 교육신청서를 제출할 수 있습니다. 주민등록등본·졸업·재학·재직증명서 등 지역소재 확인 서류를 함께 제출합니다. 현장에서 서류 확인 후 신청이 완료됩니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "전주ICT이노베이션스퀘어에서 제공하는 인공지능 전문인력양성과정은 160시간 교육으로, 전라북도 학생·구직자·창업자·재직자를 대상으로 기본·중급·고급 과정을 운영합니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://jedu.jica.or.kr",
+  "audiences": [
+    "jobseeker",
+    "business"
+  ],
+  "benefit_raw": "전주ICT이노베이션스퀘어 인공지능 전문인력양성과정(160시간)\n- 기본, 중급, 고급 과정 개설로 교육생 난이도별 수강 가능\n- 농생명, 금융데이터 기반 프로젝트 개발(딥러닝, 머신러닝, 파이썬 등)",
+  "category": "jobs",
+  "contact_raw": "(재)전주정보문화산업진흥원/063-281-4185",
+  "content_hash": "sha256:809dfdf007abefe5e026e018e2a9741f",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "교육신청서",
+    "지역소재확인서류(주민등록등본 or 졸업/재학증명서 or 재직증명서 등)"
+  ],
+  "first_published": "2026-08-30",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-O00105400007",
+  "is_mock": false,
+  "last_checked": "2026-08-30",
+  "last_updated": "2026-08-30",
+  "law_raw": "",
+  "name": "전주ICT이노베이션스퀘어 인공지능(AI) 전문인력양성과정",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00105400007",
+  "org": "전주정보문화산업진흥원",
+  "primary_audience": "jobseeker",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "전주ict이노베이션스퀘어-인공지능-ai-전문인력양성과정",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 개인",
+  "source_id": "O00105400007",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "전라북도 도내 학생, 구직자, 창업자, 재직자 등",
+  "view_count": 1390
+}
