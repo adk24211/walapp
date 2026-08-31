@@ -1,0 +1,74 @@
+{
+  "_prose": {
+    "eligibility": [
+      "소상공인기본법 제2조에 따른 소상공인",
+      "선정 기준이 별도 없습니다",
+      "온라인 신청만 가능합니다"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "소상공인시장진흥공단 홈페이지에 접속하여 온라인 신청서를 작성합니다.",
+        "title": "신청서 작성"
+      },
+      {
+        "body": "시스템에 사업계획서, 사업자등록증명원, 소상공인확인서 등 요구 서류를 첨부하여 제출합니다.",
+        "title": "서류 제출"
+      }
+    ],
+    "summary": "강한 소상공인 성장지원은 소상공인기본법 제2조에 해당하는 소상공인을 대상으로 팀빌딩·교육·멘토링 등 사업화 지원과 최대 1억원까지 사업화 자금을 제공하는 온라인 신청 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "2026. 2월 ~ 3월 (지원 유형별 상이, 공고문 참고 필요)",
+    "start": ""
+  },
+  "apply_url": "https://www.sbiz24.kr",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "팀빌딩 프로그램 및 교육, 멘토링과 사업모델 고화 및 스케일업(확장)에 필요한 사업화 자금 지원 (최대 1억원 이내)",
+  "category": "jobs",
+  "contact_raw": "기업가형소상공인육성팀/042-363-7723\n기업가형소상공인육성팀/042-363-7737\n기업가형소상공인육성팀/042-363-7734",
+  "content_hash": "sha256:8b61a15d1f88d51353b28ba8234ebef8",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "사업신청서(시스템 상 정보입력)",
+    "사업계획서",
+    "사업자등록증명원",
+    "소상공인확인서",
+    "부가가치세과세표준증명",
+    "국세",
+    "지방세납세증명서",
+    "기타 우대지원 증빙서류"
+  ],
+  "first_published": "2026-08-31",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55307700024",
+  "is_mock": false,
+  "last_checked": "2026-08-31",
+  "last_updated": "2026-08-31",
+  "law_raw": "",
+  "name": "강한 소상공인 성장지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55307700024",
+  "org": "소상공인시장진흥공단",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "강한-소상공인-성장지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 소상공인",
+  "source_id": "B55307700024",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "소상공인기본법 제2조에 따른 소상공인",
+  "view_count": 9519
+}

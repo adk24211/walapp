@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "창업 후 3년 이내인 초기창업자(팀)이어야 합니다.",
+      "누적 투자유치 금액이 30억원을 초과하면 지원이 불가합니다.",
+      "문제인식을 명확히 제시해야 합니다.",
+      "실현 가능한 해결방안을 제시해야 합니다.",
+      "구체적인 성장전략을 제시해야 합니다.",
+      "팀구성이 적절해야 합니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "중소벤처기업부 홈페이지에서 온라인 신청 양식을 엽니다. 참가신청서와 사업계획서를 작성하여 첨부합니다. 모든 서류를 제출하면 신청이 완료됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "‘올해의 K-스타트업’은 중소벤처기업부가 주관하는 일자리·창업 분야 지원사업으로, 창업 3년 이내 초기창업팀에게 우수 아이디어 시상과 후속 연계지원을 제공하는 프로그램입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "https://www.k-startup.go.kr",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "우수 아이디어 시상 및 후속연계지원 등",
+  "category": "jobs",
+  "contact_raw": "창업진흥원 글로벌협력실/044-410-1714\n창업진흥원 글로벌협력실/044-410-1783",
+  "content_hash": "sha256:3d87f8072934e0a31073083fcb65aa10",
+  "criteria_raw": "○ 문제인식, 해결방안, 성장전략, 팀구성",
+  "deferred_detail": false,
+  "documents_raw": [
+    "참가신청서",
+    "사업계획서 등"
+  ],
+  "first_published": "2026-08-31",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-999000000085",
+  "is_mock": false,
+  "last_checked": "2026-08-31",
+  "last_updated": "2026-08-31",
+  "law_raw": "",
+  "name": "올해의 K-스타트업",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000085",
+  "org": "중소벤처기업부",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "올해의-k-스타트업",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 개인\n법인/시설/단체",
+  "source_id": "999000000085",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 창업 후 3년 이내 초기창업자(팀)\n* 누적 투자유치 금액 30억원 초과한 기업은 지원 불가",
+  "view_count": 9086
+}

@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "국민기초생활보장법 제2조에 따른 수급자",
+      "한부모가족 지원법 제4조에 따른 한부모가족",
+      "주민등록상 고양시 거주자",
+      "장애인복지법에 따른 장애인",
+      "보훈대상자",
+      "고양시 초·중·고등학생"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "고양도시관리공사 사무실을 직접 방문하여 신청합니다. 구비 서류는 없습니다. 신청 후 담당자가 이용료 감면 여부를 확인합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "킨텍스 캠핑장 이용료를 기초생활보장 수급자·한부모가족·고양시민·장애인·보훈대상자·고양시 초·중·고등학생에게 각각 일정 비율로 감면해 주는 제도이며, 고양도시관리공사가 운영하고 상시 방문 신청이 가능합니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent",
+    "disabled",
+    "lowincome",
+    "student"
+  ],
+  "benefit_raw": "○ 킨텍스 캠핑장 이용료 감면\n- 기초생활보장 수급자 50% 감면\n- 한부모가족 50% 감면\n- 고양시민 사용료 30% 감면\n- 장애인 50% 감면\n- 보훈대상자 사용료 50% 감면\n- 고양시 초·중·고등학생의 수련활동 참여자 50% 감면",
+  "category": "living",
+  "contact_raw": "킨텍스캠핑장/031-913-1700(203)",
+  "content_hash": "sha256:bc055752e2c4315d0958a664b75e5cd2",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-31",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-O00004000010",
+  "is_mock": false,
+  "last_checked": "2026-08-31",
+  "last_updated": "2026-08-31",
+  "law_raw": "",
+  "name": "킨텍스 캠핑장 이용요금 감면",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00004000010",
+  "org": "고양도시관리공사",
+  "primary_audience": "disabled",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "킨텍스-캠핑장-이용요금-감면",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 시설이용 개인",
+  "source_id": "O00004000010",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 국민기초생활 보장법 제2조에 따른 수급자\n\n○ 한부모가족 지원법 제4조에 따른 한부모가족\n\n○ 주민등록상 고양시 거주자\n\n○ 장애인복지법에 따른 장애인\n\n○ 보훈대상자\n\n○ 고양시 초·중·고등학생",
+  "view_count": 4355
+}

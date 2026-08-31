@@ -26,14 +26,14 @@
     "raw": "사업별 상이",
     "start": ""
   },
-  "apply_url": "http://moti.or.kr",
+  "apply_url": "https://moti.or.kr",
   "audiences": [
     "jobseeker"
   ],
   "benefit_raw": "○ 전직지원교육\n\n○ 전직상담(경력상담 포함)\n\n○ 그 외 취업지원",
   "category": "jobs",
   "contact_raw": "국방전직교육원 일자리지원부/031-760-9343",
-  "content_hash": "sha256:c8c116fadbb24a677b94c07733974bbe",
+  "content_hash": "sha256:ba46c098eecec22f2da443fbe519d737",
   "criteria_raw": "○ 전역예정장병 누구나 지원 가능",
   "deferred_detail": false,
   "documents_raw": [

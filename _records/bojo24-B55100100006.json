@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "국외 한국학교",
+      "국내 소외지역 초등학교",
+      "군부대"
+    ],
+    "faq": [
+      {
+        "a": "선정 기준은 별도로 정해져 있지 않습니다.",
+        "q": "선정 기준이 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "신청은 상시 접수됩니다. 구비 서류는 필요하지 않습니다. 신청 절차에 대해서는 독립기념관에 직접 문의하시기 바랍니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "찾아가는 독립기념관은 국외 한국학교와 국내 소외지역 초등학교·군부대를 대상으로, 독립운동사 전시와 체험을 연 4회 제공하는 전국 양육·돌봄 분야 지원 사업입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "multicultural"
+  ],
+  "benefit_raw": "○ 교육 소외지역 또는 독립기념관에 방문하기 어려운 원거리지역의 학교를 방문하여 독립운동사 전시와 체험을 제공하는 프로그램(연 4회)",
+  "category": "care",
+  "contact_raw": "독립기념관 교육부/041-560-0267",
+  "content_hash": "sha256:e61fb86628fd48a0d4e4e5a498da3ee3",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-31",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-B55100100006",
+  "is_mock": false,
+  "last_checked": "2026-08-31",
+  "last_updated": "2026-08-31",
+  "law_raw": "",
+  "name": "찾아가는 독립기념관(다문화정책학교, 독립운동같이(가치) 찾기)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55100100006",
+  "org": "독립기념관",
+  "primary_audience": "multicultural",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "찾아가는-독립기념관-다문화정책학교-독립운동같이-가치-찾기",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 법인/시설/단체",
+  "source_id": "B55100100006",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 국외 한국학교\n\n○ 국내 소외지역 초등학교 및 군부대",
+  "view_count": 1116
+}

@@ -1,0 +1,76 @@
+{
+  "_prose": {
+    "eligibility": [
+      "최저임금 적용 제외 인가를 받은 중증장애인 근로자",
+      "국민기초생활수급 중증장애인 근로자",
+      "차상위계층 중증장애인 근로자"
+    ],
+    "faq": [
+      {
+        "a": "지원금은 전용카드로만 지급되며, 신청 시 카드 발급을 위한 안내를 받으실 수 있습니다.",
+        "q": "전용카드 발급 절차는 어떻게 진행되나요?"
+      }
+    ],
+    "note": "전용카드가 발급되지 않으면 지원금을 받을 수 없습니다.",
+    "steps": [
+      {
+        "body": "고용노동부 홈페이지에서 신청서를 작성하고 필요한 서류를 첨부합니다. 전용카드 발급 절차는 온라인 신청 시 안내됩니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "관할 고용노동부 담당 부서에 직접 방문하여 신청서를 제출합니다. 서류 확인 후 전용카드 발급 안내를 받으실 수 있습니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "중증장애인 근로자를 대상으로 최저임금 적용 제외 인가를 받은 경우 또는 국민기초생활수급·차상위계층인 경우에 매월 7만원 한도로 대중교통·택시·유류비 등 교통 실비를 전용카드로 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "수시신청(예산소진시까지)",
+    "start": ""
+  },
+  "apply_url": "https://www.kead.or.kr",
+  "audiences": [
+    "disabled",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 지원내용: 매월 7만원 한도로 교통 실비 지원(전용카드 발급 필수)\n○ 지원범위: 대중교통(버스, 지하철), 택시(장애인콜택시포함), 유류비 등",
+  "category": "jobs",
+  "contact_raw": "한국장애인고용공단/1588-1519",
+  "content_hash": "sha256:f23c489bc8c8656db4b60e6d9f14c8a0",
+  "criteria_raw": "○ 최저임금적용제외인가를 받은 중증장애인 근로자 또는 국민기초생활수급·차상위계층인 중증장애인 근로자",
+  "deferred_detail": false,
+  "documents_raw": [
+    "○ 신청서",
+    "통장사본",
+    "근로계약서사본",
+    "기초생활수급 및 차상위계층 증빙서류"
+  ],
+  "first_published": "2026-08-31",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-149200005019",
+  "is_mock": false,
+  "last_checked": "2026-08-31",
+  "last_updated": "2026-08-31",
+  "law_raw": "",
+  "name": "중증장애인근로자 출퇴근 비용 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005019",
+  "org": "고용노동부",
+  "primary_audience": "disabled",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "중증장애인근로자-출퇴근-비용-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 개인",
+  "source_id": "149200005019",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 최저임금적용제외인가를 받은 중증장애인 근로자 또는 국민기초생활수급·차상위계층인 중증장애인 근로자",
+  "view_count": 5450
+}

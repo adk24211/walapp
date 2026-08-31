@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "영등포구 관내 중학교에 재학 중인 학생이어야 합니다.",
+      "다문화가정 학생이어야 합니다.",
+      "학교장이 추천한 학생이어야 합니다."
+    ],
+    "faq": [
+      {
+        "a": "지원 대상은 현재 영등포구 관내 중학교에 재학 중인 학생에 한합니다. 졸업생은 대상에서 제외됩니다.",
+        "q": "지원 대상이 중학교 졸업생도 포함되나요?"
+      },
+      {
+        "a": "선정 기준에 대한 구체적인 내용은 제공되지 않았습니다. 따라서 별도의 기준 없이 학교장의 추천만으로 지원이 결정됩니다.",
+        "q": "선정 기준이 따로 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "학교장은 다문화가정 학생을 선정하여 장학금 지원 신청을 합니다. 신청서는 별도 서류 없이 학교 내에서 작성됩니다. 재단은 제출된 신청을 검토 후 장학금을 지급합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "영등포구 관내 중학교에 재학 중인 다문화가정 학생을 대상으로, 학교장이 추천한 경우에만 재단에서 장학금을 지원하는 제도이며, 별도의 구비 서류 없이 진행됩니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "multicultural"
+  ],
+  "benefit_raw": "○ 관내 중학교 재학생으로 학교장이 추천한 다문화가정 학생에게 장학금 지원",
+  "category": "education",
+  "contact_raw": "미래교육재단/02-2670-3072",
+  "content_hash": "sha256:2617839e0c3282f0e35dde8a10ad2fe5",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-08-31",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-318000000105",
+  "is_mock": false,
+  "last_checked": "2026-08-31",
+  "last_updated": "2026-08-31",
+  "law_raw": "",
+  "name": "다문화 장학금 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/318000000105",
+  "org": "재단법인영등포구미래교육재단",
+  "primary_audience": "multicultural",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "다문화-장학금-지원",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "318000000105",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 영등포구 관내 중학교 다문화가정 학생",
+  "view_count": 1362
+}
