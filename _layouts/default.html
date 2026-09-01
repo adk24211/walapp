@@ -37,7 +37,20 @@
   {%- endcomment -%}
   {%- assign show_ads = true -%}
   {%- if site.ads_min_own_chars and site.ads_min_own_chars > 0 and page.own_chars -%}
-    {%- if page.own_chars < site.ads_min_own_chars -%}{%- assign show_ads = false -%}{%- endif -%}
+    {%- if page.own_chars < site.ads_min_own_chars -%}
+      {%- comment -%}
+        얇다. 그런데 그것만으로는 빼지 않는다 — 사이트에서 가장 얇은 축에
+        조회수 67만짜리 페이지가 있다(장기전세 주택공급, 236자). 거의 안 보는
+        페이지일 때만 뺀다.
+
+        view_count 는 원천이 주는 값이고, 없으면 render.py 가 아예 안 쓴다.
+        그때는 0 으로 보아 '거의 안 봄' 쪽에 넣는다.
+      {%- endcomment -%}
+      {%- assign views = page.view_count | default: 0 -%}
+      {%- if site.ads_min_view_count == nil or site.ads_min_view_count == 0 or views < site.ads_min_view_count -%}
+        {%- assign show_ads = false -%}
+      {%- endif -%}
+    {%- endif -%}
   {%- endif -%}
   {% if show_ads and site.ads_enabled and site.google_adsense and site.google_adsense != "" %}
   <!-- Google AdSense (자동 광고) -->

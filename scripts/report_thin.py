@@ -27,6 +27,10 @@ PROGRAMS = ROOT / "_programs"
 # 기준선 후보. 진단이 제시한 '상위 40~60건만' 을 글자 수로 옮기면 이 근처다.
 THRESHOLDS = (300, 400, 500, 600, 800)
 
+# 글자 수 × 조회수 조합. 광고는 **둘 다** 미만일 때만 뺀다 —
+# 사이트에서 두 번째로 얇은 페이지가 조회수 67만이기 때문이다(장기전세 주택공급).
+PAIRS = ((300, 10_000), (400, 5_000), (400, 10_000), (400, 20_000), (500, 10_000))
+
 
 def pages() -> list[tuple[int, int, str, str]]:
     """(own_chars, view_count, 분야, 제도명)"""
@@ -84,6 +88,17 @@ def main() -> int:
         print(f"  {t:>5}자  {len(below):>6}건 ({len(below)*100//total:>2}%)  "
               f"{len(above):>6}건  {med:>10}자")
 
+    print("\n두 조건을 함께 걸었을 때 — 광고를 빼는 규칙은 이쪽이다")
+    print(f"  {'글자 / 조회':>16}  {'광고 제외':>12}  {'남는 쪽 중앙값':>14}  {'제외분 조회 지분':>16}")
+    total_views = sum(v for _, v, *_ in rows) or 1
+    for oc_t, vc_t in PAIRS:
+        excl = [r for r in rows if r[0] < oc_t and r[1] < vc_t]
+        keep = [r for r in rows if not (r[0] < oc_t and r[1] < vc_t)]
+        med = int(statistics.median([r[0] for r in keep])) if keep else 0
+        share = sum(r[1] for r in excl) * 100 / total_views
+        print(f"  {oc_t:>5}자 / {vc_t:>6,}  {len(excl):>5}건 ({len(excl)*100//total:>2}%)  "
+              f"{med:>10}자  {share:>14.1f}%")
+
     # 조회수 상위가 얇은 쪽에 있으면 그건 덜어낼 대상이 아니다.
     by_views = sorted(rows, key=lambda r: -r[1])[:15]
     thin_top = [r for r in by_views if r[0] < 400]
@@ -94,7 +109,7 @@ def main() -> int:
         print("  ↳ 사람이 가장 많이 찾는 제도가 얇다면, 덜어낼 것이 아니라 채울 것이다.")
 
     print("\n덜어내는 방법은 둘뿐이다(진단 결론):")
-    print("  · 광고만 빼기  — _config.yml 의 ads_min_own_chars 에 기준선을 넣는다")
+    print("  · 광고만 빼기  — _config.yml 의 ads_min_own_chars / ads_min_view_count")
     print("  · 빌드에서 빼기 — 페이지 자체를 지운다. 되돌리기 어려우므로 신중히")
     print("  noindex 는 색인 지시일 뿐 광고 심사 범위를 좁히지 못한다.")
     return 0
