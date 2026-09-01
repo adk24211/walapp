@@ -1,0 +1,73 @@
+{
+  "_prose": {
+    "eligibility": [
+      "신청일 현재 18세 미만인 자",
+      "장애인 복지법 제32조에 따라 등록된 중증 장애아동",
+      "소득이 기준 중위소득 120% 이하이면 무료, 초과이면 이용료 40%를 본인부담"
+    ],
+    "faq": [
+      {
+        "a": "연 1,080시간을 가정당 제공받으며, 돌봄 서비스와 휴식지원프로그램에 사용할 수 있습니다.",
+        "q": "지원 시간은 어떻게 이용할 수 있나요?"
+      }
+    ],
+    "note": "소득 기준에 따라 이용료 부담 비율이 달라질 수 있습니다.",
+    "steps": [
+      {
+        "body": "온라인 신청 또는 방문 신청으로 신청서를 제출합니다. 구비 서류와 함께 제출하면 신청이 완료됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "보건복지부에서 운영하는 장애아가족 양육 지원은 18세 미만 중증 장애아동에게 연 1,080시간의 돌봄 및 휴식지원 서비스를 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "http://www.bokjiro.go.kr",
+  "audiences": [
+    "parent",
+    "disabled",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 급여액 : 1 가정 당 연 1,080시간 지원\n○ 서비스 내용 : 돌봄 서비스, 휴식지원프로그램",
+  "category": "care",
+  "contact_raw": "보건복지상담센터/129",
+  "content_hash": "sha256:a0fe8126de27582ad3b990f80c56517b",
+  "criteria_raw": "○ 지원 대상 : 18세 미만의 등록한 중증 장애인\n\n○ 연령 기준 : 신청일 현재 18세 미만인자\n\n○ 장애등급\n- 신청일 현재, 장애인 복지법 제32조에 따라 등록한 장애인\n- 장애정도가 심한 장애아동\n\n○ 소득기준 : 없음",
+  "deferred_detail": false,
+  "documents_raw": [
+    "사회복지서비스 및 급여 제공(변경) 신청서",
+    "개인 정보 제공 및 활용 동의서",
+    "서비스 대상자가 등재된 건강보험증 사본",
+    "기타소득증명자료"
+  ],
+  "first_published": "2026-09-01",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-SPE000000120",
+  "is_mock": false,
+  "last_checked": "2026-09-01",
+  "last_updated": "2026-09-01",
+  "law_raw": "",
+  "name": "장애아가족 양육 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SPE000000120",
+  "org": "보건복지부",
+  "primary_audience": "parent",
+  "receiver_raw": "주민센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "장애아가족-양육-지원",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 서비스(돌봄) 개인",
+  "source_id": "SPE000000120",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 18세 미만 중증장애 아동\n- 소득기준 : 기준 중위소득 120% 이하(무료), 기준 중위소득 120% 초과(이용료의 40% 본인부담)\n- 장애등급 : 장애정도가 심한 장애 아동",
+  "view_count": 7698
+}

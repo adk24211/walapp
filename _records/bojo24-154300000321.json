@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "청년 귀농·귀촌인",
+      "도시민 귀농·귀촌인",
+      "예비 귀농·귀촌인"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "농림축산식품부 홈페이지에서 귀농귀촌종합센터 운영 지원을 신청할 수 있습니다. 신청 양식을 작성하고 제출하면 접수가 완료됩니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "관할 기관인 농림축산식품부 또는 지정된 센터를 직접 방문하여 신청할 수 있습니다. 현장에서 담당자에게 신청 의사를 밝히고 절차를 안내받으면 됩니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "귀농귀촌종합센터 운영은 청년·도시민 등 예비 귀농·귀촌인을 대상으로 상담·교육·홍보·협의회 운영 등 다양한 지원을 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "https://www.greendaero.go.kr",
+  "audiences": [
+    "youth"
+  ],
+  "benefit_raw": "○ 청년, 도시민 등 (예비) 귀농귀촌인에게 상담, 교육, 홍보, 협의회 운영 등",
+  "category": "care",
+  "contact_raw": "귀농귀촌종합센터/1899-9097",
+  "content_hash": "sha256:286e03b50493b58490f9fc69dc13351a",
+  "criteria_raw": "지원대상과 동일",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-01",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-154300000321",
+  "is_mock": false,
+  "last_checked": "2026-09-01",
+  "last_updated": "2026-09-01",
+  "law_raw": "",
+  "name": "귀농귀촌종합센터 운영",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/154300000321",
+  "org": "농림축산식품부",
+  "primary_audience": "youth",
+  "receiver_raw": "귀농귀촌종합센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "귀농귀촌종합센터-운영",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타\n기타(교육)\n민원\n상담/법률지원 개인",
+  "source_id": "154300000321",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 청년, 도시민 등 (예비) 귀농·귀촌인",
+  "view_count": 3411
+}

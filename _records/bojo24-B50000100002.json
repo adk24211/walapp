@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "댐 주변 지역에 거주하는 중·고등학생",
+      "K-water 지사 소재지에 거주하는 중·고등학생",
+      "선정 기준은 별도로 제시되지 않음"
+    ],
+    "faq": [
+      {
+        "a": "1:1 멘토링과 진로·취업 특강 등 성장 지원 활동이 포함됩니다.",
+        "q": "멘토링은 어떤 형태로 제공되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청서를 작성하여 제출합니다. 별도의 서류는 필요하지 않습니다. 신청 후 안내에 따라 멘토링 및 특강 등에 참여하시면 됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "K-water 장학회는 댐 주변 지역 및 K-water 지사 소재지에 거주하는 중·고등학생에게 장학금과 1:1 멘토링, 진로·취업 특강 등 성장 지원 활동을 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "연 1회 공모",
+    "start": ""
+  },
+  "apply_url": "https://www.kwater.or.kr/danbitoktok/kor.do",
+  "audiences": [
+    "student"
+  ],
+  "benefit_raw": "□ 장학금 지급 및 성장 지원 활동 진행\n○ 1:1 멘토링, 진로 및 취업 특강 등 성장 지원",
+  "category": "education",
+  "contact_raw": "경영혁신실/042-629-2434",
+  "content_hash": "sha256:2283f8b35dfc613b9086cf98048392b3",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-01",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B50000100002",
+  "is_mock": false,
+  "last_checked": "2026-09-01",
+  "last_updated": "2026-09-01",
+  "law_raw": "",
+  "name": "K-water 장학회",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B50000100002",
+  "org": "한국수자원공사",
+  "primary_audience": "student",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "k-water-장학회",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "B50000100002",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "댐주변지역 및 K-water 지사 소재지의 중·고등학생",
+  "view_count": 2396
+}

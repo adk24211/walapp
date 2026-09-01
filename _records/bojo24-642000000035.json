@@ -1,0 +1,73 @@
+{
+  "_prose": {
+    "eligibility": [
+      "한부모가족 지원법에 따라 지원 대상 가구에 속해야 합니다.",
+      "고등학교에 재학 중인 학생이어야 합니다.",
+      "교육급여 지급 대상자는 제외됩니다."
+    ],
+    "faq": [
+      {
+        "a": "교육급여 지급 대상자는 지원 대상에서 제외되므로 신청이 불가능합니다.",
+        "q": "교육급여를 받고 있는 경우에도 지원을 받을 수 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청 또는 방문 신청을 통해 신청서를 제출합니다. 신청 시 소득·재산 신고서 등 구비 서류를 함께 제출해야 합니다. 제출 후 담당 부처에서 서류를 검토하고 지원 여부를 결정합니다.",
+        "title": "신청 및 제출"
+      }
+    ],
+    "summary": "한부모가족자녀 교육비 지원은 교육부가 운영하는 제도로, 한부모가족 지원법 대상 가구의 고등학생에게 입학금·수업료 등을 지원합니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://oneclick.neis.go.kr",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "○ 고등학교 입학금 및 수업료 등",
+  "category": "care",
+  "contact_raw": "교육비원클릭 신청시스템 상담센터/1544-9654",
+  "content_hash": "sha256:36f37979e4a54b4e300d251f2f9a88d5",
+  "criteria_raw": "○ 한부모가족 지원법 지원 대상자",
+  "deferred_detail": false,
+  "documents_raw": [
+    "한부모가족자녀 교육비 지원 신청서",
+    "소득",
+    "재산 신고서",
+    "소득",
+    "재산 확인서류",
+    "금융 정보 등 제공동의서"
+  ],
+  "first_published": "2026-09-01",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-642000000035",
+  "is_mock": false,
+  "last_checked": "2026-09-01",
+  "last_updated": "2026-09-01",
+  "law_raw": "",
+  "name": "한부모가족자녀 교육비 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/642000000035",
+  "org": "교육부",
+  "primary_audience": "parent",
+  "receiver_raw": "주민센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "한부모가족자녀-교육비-지원",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(감면) 개인",
+  "source_id": "642000000035",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 한부모가족 지원법 지원 대상 가구의 고등학교 학생(교육급여 지급 대상자 제외)",
+  "view_count": 7883
+}
