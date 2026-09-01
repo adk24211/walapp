@@ -17,12 +17,17 @@
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import statistics
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
 PROGRAMS = ROOT / "_programs"
+RECORDS = ROOT / "_records"
+
+# 원문 분량을 재는 필드. 표·문의처는 빼고 '읽을 내용' 만 센다.
+RAW_FIELDS = ("target_raw", "benefit_raw", "criteria_raw", "how_to_raw")
 
 # 기준선 후보. 진단이 제시한 '상위 40~60건만' 을 글자 수로 옮기면 이 근처다.
 THRESHOLDS = (300, 400, 500, 600, 800)
@@ -30,6 +35,19 @@ THRESHOLDS = (300, 400, 500, 600, 800)
 # 글자 수 × 조회수 조합. 광고는 **둘 다** 미만일 때만 뺀다 —
 # 사이트에서 두 번째로 얇은 페이지가 조회수 67만이기 때문이다(장기전세 주택공급).
 PAIRS = ((300, 10_000), (400, 5_000), (400, 10_000), (400, 20_000), (500, 10_000))
+
+
+def raw_lengths() -> dict[str, int]:
+    """제도명 → 원문 글자 수. 우리 문장을 원문과 견주려면 이 값이 필요하다."""
+    out: dict[str, int] = {}
+    for path in RECORDS.glob("*.json"):
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        out[data.get("name", "")] = sum(
+            len(str(data.get(f) or "")) for f in RAW_FIELDS)
+    return out
 
 
 def pages() -> list[tuple[int, int, str, str]]:
@@ -107,6 +125,36 @@ def main() -> int:
         print(f"  {own:>4}자  조회 {views:>9,}  {name}")
     if thin_top:
         print("  ↳ 사람이 가장 많이 찾는 제도가 얇다면, 덜어낼 것이 아니라 채울 것이다.")
+
+    # ── 원문과 견주기 ──
+    #
+    # '얇다' 에는 두 가지가 섞여 있다. 원문 자체가 두어 문장뿐이라 더 쓸 게
+    # 없는 것과, 원문은 넉넉한데 우리가 안 쓴 것. 앞은 코드로 못 고치고
+    # 뒤는 고칠 수 있다. 섞어 놓으면 어느 쪽에 힘을 쓸지 알 수 없다.
+    raws = raw_lengths()
+    paired = [(own, views, raws.get(name, 0), name) for own, views, _, name in rows
+              if name in raws]
+    if paired:
+        print("\n원문 길이대별 — 우리가 쓴 분량")
+        for lo, hi in ((0, 150), (150, 300), (300, 500), (500, 800), (800, 1500), (1500, 10 ** 9)):
+            band = [p for p in paired if lo <= p[2] < hi]
+            if not band:
+                continue
+            label = f"{lo:>4}~{hi:<4}" if hi < 10 ** 9 else f"{lo:>4}~    "
+            print(f"  원문 {label}자  {len(band):>3}건 · 자체 문장 중앙값 "
+                  f"{int(statistics.median([p[0] for p in band])):>4}자")
+
+        poor = [p for p in paired if p[2] < 400]
+        print(f"\n원문이 400자 미만 — 코드로 못 늘리는 쪽: {len(poor)}건 / {len(paired)}")
+        print("  원천이 두어 문장뿐이라 무엇을 고쳐도 길어지지 않는다. 사람이 취재하거나, 두는 수밖에 없다.")
+
+        gap = sorted([p for p in paired if p[2] >= 600 and p[0] < 500], key=lambda p: -p[1])
+        print(f"\n원문은 넉넉한데(600자+) 우리 문장이 얇은(500자 미만) 것: {len(gap)}건")
+        print("  ↳ 여기가 코드로 고칠 수 있는 쪽이다. 재생성하면 늘어난다.")
+        for own, views, raw, name in gap[:10]:
+            print(f"    자체 {own:>4}자 · 원문 {raw:>5}자 · 조회 {views:>9,}  {name}")
+        if len(gap) > 10:
+            print(f"    … 외 {len(gap) - 10}건")
 
     print("\n덜어내는 방법은 둘뿐이다(진단 결론):")
     print("  · 광고만 빼기  — _config.yml 의 ads_min_own_chars / ads_min_view_count")
