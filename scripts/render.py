@@ -774,6 +774,27 @@ def to_markdown(record: ProgramRecord, prose: dict) -> str:
     src_parts = list(manifest.get("source_parts") or [])
     own_parts = list(manifest.get("own_parts") or [])
 
+    # ── 이 페이지가 원문 위에 얹은 글자 수 ──
+    #
+    # 애드센스가 "가치가 별로 없는 콘텐츠" 로 반려한 뒤, 무엇을 얼마나 줄이거나
+    # 늘릴지 정하려면 페이지마다 '우리가 쓴 분량' 을 알아야 했다. 눈으로 세는
+    # 대신 렌더가 세어 front matter 로 내보낸다.
+    #
+    # 세는 것: 요약 + 자격 불릿 + 절차(제목·본문) + FAQ(문·답) + 주의 안내.
+    # 세지 않는 것: 원문 인용, 표, 상용구. 그건 우리가 더한 것이 아니다.
+    #
+    # ⚠️ 이 값은 '품질' 이 아니라 '분량' 이다. 길다고 좋은 문장은 아니다.
+    #    다만 400자 미만이면 원문 재진술 말고 들어갈 자리가 없다는 것은 맞다.
+    own_chars = len(str(_polite(prose.get("summary")) or ""))
+    for item in (prose.get("eligibility") or []):
+        own_chars += len(str(item or ""))
+    for step in (prose.get("steps") or []):
+        own_chars += len(str(step.get("title") or "")) + len(str(step.get("body") or ""))
+    for item in (prose.get("faq") or []):
+        own_chars += len(str(item.get("q") or "")) + len(str(item.get("a") or ""))
+    own_chars += len(str(prose.get("note") or ""))
+    front.append(f"own_chars: {own_chars}")
+
     # 신청 기간은 본문이 아니라 오른쪽 레일에 있다. 원문에서 온 값이므로 여기서 센다.
     if (record.apply_period.always or record.apply_period.start
             or record.apply_period.end or str(record.apply_period.raw or "").strip()):

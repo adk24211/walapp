@@ -23,7 +23,36 @@
     한 번 세이프 브라우징에 걸렸을 때 이 스위치로 광고를 내렸다.
     (왜 그랬는지와 다시 켤 때 함께 할 일은 _config.yml 의 ads_enabled 주석 참고)
   {% endcomment %}
-  {% if site.ads_enabled and site.google_adsense and site.google_adsense != "" %}
+  {%- comment -%}
+    얇은 제도 페이지에는 광고를 넣지 않는다.
+
+    own_chars 는 원문 위에 우리가 얹은 글자 수다(render.py 가 계산해 front
+    matter 로 내보낸다). 기준선은 _config.yml 의 ads_min_own_chars 이고,
+    0 이면 아무것도 걸리지 않는다.
+
+    ⚠️ `page.own_chars < N` 을 바로 쓰면 안 된다. own_chars 가 없는 페이지
+       (홈·허브·검색·법률 문서)에서는 nil 이 되고, Liquid 에서 nil < 숫자 는
+       참이 되어 사이트 전체에서 광고가 사라진다. own_chars 가 **있는**
+       페이지에 한해 비교한다.
+  {%- endcomment -%}
+  {%- assign show_ads = true -%}
+  {%- if site.ads_min_own_chars and site.ads_min_own_chars > 0 and page.own_chars -%}
+    {%- if page.own_chars < site.ads_min_own_chars -%}
+      {%- comment -%}
+        얇다. 그런데 그것만으로는 빼지 않는다 — 사이트에서 가장 얇은 축에
+        조회수 67만짜리 페이지가 있다(장기전세 주택공급, 236자). 거의 안 보는
+        페이지일 때만 뺀다.
+
+        view_count 는 원천이 주는 값이고, 없으면 render.py 가 아예 안 쓴다.
+        그때는 0 으로 보아 '거의 안 봄' 쪽에 넣는다.
+      {%- endcomment -%}
+      {%- assign views = page.view_count | default: 0 -%}
+      {%- if site.ads_min_view_count == nil or site.ads_min_view_count == 0 or views < site.ads_min_view_count -%}
+        {%- assign show_ads = false -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endif -%}
+  {% if show_ads and site.ads_enabled and site.google_adsense and site.google_adsense != "" %}
   <!-- Google AdSense (자동 광고) -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.google_adsense }}" crossorigin="anonymous"></script>
   {% endif %}
