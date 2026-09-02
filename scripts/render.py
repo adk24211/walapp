@@ -155,6 +155,15 @@ def render_body(record: ProgramRecord, prose: dict, *,
     # 이 페이지에 실제로 실린 것 — 왼쪽은 원문 그대로, 오른쪽은 우리가 쓴 문장
     src_parts: list[str] = []
     own_parts: list[str] = []
+    # 화면에 실제로 남은 우리 문장의 글자 수.
+    #
+    # ⚠️ prose 를 그대로 세면 안 된다. 아래 _useful_faq 가 되묻는 질문을
+    #    걸러내고 _useful_note 가 상용구 주의를 버리므로, 생성된 것과 실린 것이
+    #    다르다. 385건 중 88건이 그 상태였고 과다 계상이 중앙값 82자,
+    #    최대 232자였다. 그 값이 광고 문턱(_config.yml ads_min_own_chars)을
+    #    가르는 데 쓰이는데, 21건이 실제로는 문턱 아래인데 위로 잡혀 있었다.
+    #    세는 자리는 '찍은 자리' 여야 한다.
+    own_chars = 0
 
     def open_block(cls: str) -> str:
         return f'<div class="cn {cls}" data-cat="{cat}">'
@@ -234,6 +243,7 @@ def render_body(record: ProgramRecord, prose: dict, *,
         block.append("</ul>")
         parts += sec("나도 받을 수 있나요?", block, prose_written=True)
         own_parts.append("나도 받을 수 있나요")
+        own_chars += sum(len(str(item)) for item in eligibility)
 
     # ── 3) 어떻게 신청하나요 — 준비 서류를 여기 흡수한다 ──
     # 서류는 신청 절차의 일부다. 따로 카드를 두니 세로 지분 1위(18.2%)를 먹으면서
@@ -269,6 +279,8 @@ def render_body(record: ProgramRecord, prose: dict, *,
         parts += sec("어떻게 신청하나요?", block, prose_written=bool(steps))
         if steps:
             own_parts.append("어떻게 신청하나요")
+            own_chars += sum(len(str(st.get("title") or "")) + len(str(st.get("body") or ""))
+                             for st in steps)
         if docs:
             src_parts.append("준비 서류")
 
@@ -375,12 +387,15 @@ def render_body(record: ProgramRecord, prose: dict, *,
 
         parts += sec("자주 묻는 질문", block, prose_written=True)
         own_parts.append("자주 묻는 질문")
+        own_chars += sum(len(str(item.get("q") or "")) + len(str(item.get("a") or ""))
+                         for item in faq)
 
     # ── 주의 안내 ──
     # 카드로 만들지 않는다. 제목이 없는 경고 한 줄이라 번호를 붙이면 목차에 없는
     # 항목이 본문에만 생겨 번호가 어긋난다. 카드 사이에 낀 알림으로 둔다.
     note = _useful_note(prose.get("note"))
     if note:
+        own_chars += len(note)
         parts += [
             open_block("cn-note"),
             f'  {_icon("alert-triangle")}',
@@ -396,6 +411,7 @@ def render_body(record: ProgramRecord, prose: dict, *,
     if manifest is not None:
         manifest["source_parts"] = src_parts
         manifest["own_parts"] = own_parts
+        manifest["own_chars"] = own_chars
 
     return "\n".join(parts)
 
@@ -780,19 +796,19 @@ def to_markdown(record: ProgramRecord, prose: dict) -> str:
     # 늘릴지 정하려면 페이지마다 '우리가 쓴 분량' 을 알아야 했다. 눈으로 세는
     # 대신 렌더가 세어 front matter 로 내보낸다.
     #
-    # 세는 것: 요약 + 자격 불릿 + 절차(제목·본문) + FAQ(문·답) + 주의 안내.
-    # 세지 않는 것: 원문 인용, 표, 상용구. 그건 우리가 더한 것이 아니다.
+    # ⚠️ 생성된 prose 를 세지 말고 **본문이 실제로 찍은 것**을 세야 한다.
+    #    한 번 prose 를 그대로 셌다가 되돌렸다 — render_body 의 _useful_faq 가
+    #    되묻는 질문을 걸러내고 _useful_note 가 상용구 주의를 버리므로,
+    #    생성된 것과 화면에 실린 것이 다르다. 385건 중 88건이 과다 계상이었고
+    #    (중앙값 82자·최대 232자), 그중 21건은 광고 문턱 400자 아래인데
+    #    위로 잡혀 광고가 실리고 있었다. 그래서 render_body 가 찍으면서 센
+    #    값(manifest["own_chars"])을 쓴다.
     #
-    # ⚠️ 이 값은 '품질' 이 아니라 '분량' 이다. 길다고 좋은 문장은 아니다.
-    #    다만 400자 미만이면 원문 재진술 말고 들어갈 자리가 없다는 것은 맞다.
-    own_chars = len(str(_polite(prose.get("summary")) or ""))
-    for item in (prose.get("eligibility") or []):
-        own_chars += len(str(item or ""))
-    for step in (prose.get("steps") or []):
-        own_chars += len(str(step.get("title") or "")) + len(str(step.get("body") or ""))
-    for item in (prose.get("faq") or []):
-        own_chars += len(str(item.get("q") or "")) + len(str(item.get("a") or ""))
-    own_chars += len(str(prose.get("note") or ""))
+    #    요약만 여기서 더한다 — 그건 본문이 아니라 front matter 로 나가고,
+    #    화면에서는 히어로 아래 한 줄로 그대로 실린다.
+    own_chars = manifest.get("own_chars", 0)
+    if str(prose.get("summary") or "").strip():
+        own_chars += len(str(_polite(prose.get("summary")) or ""))
     front.append(f"own_chars: {own_chars}")
 
     # 신청 기간은 본문이 아니라 오른쪽 레일에 있다. 원문에서 온 값이므로 여기서 센다.

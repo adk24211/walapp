@@ -23,6 +23,16 @@ on:
     - cron: "0 22 * * *"
   workflow_dispatch:
     inputs:
+      mode:
+        description: "실행 모드 (sync: 평소 동기화 / regenerate: 표적 재생성)"
+        required: false
+        type: choice
+        options: ["sync", "regenerate"]
+        default: "sync"
+      regenerate_limit:
+        description: "표적 재생성 상한 (regenerate 모드에서만)"
+        required: false
+        default: "40"
       post_date:
         description: "기준 날짜 (YYYY-MM-DD, 비워두면 오늘)"
         required: false
@@ -94,6 +104,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run pipeline
+        if: ${{ github.event.inputs.mode != 'regenerate' }}
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           # 해설 생성 모델. 제공처가 모델을 내리면 여기만 바꿔 복구한다.
@@ -113,6 +124,26 @@ jobs:
           DRY_RUN: ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
           TZ: Asia/Seoul
         run: python scripts/run_all.py
+
+      # ── 표적 재생성 (수동 실행 전용) ──
+      #
+      # 동기화는 **원문이 바뀐** 제도만 다시 쓴다. 그래서 프롬프트를 고쳐도
+      # 이미 발행된 페이지는 그대로 남는다. 이 스텝이 그 간극을 메운다.
+      # 원문은 넉넉한데 우리 문장이 얇은 것만 골라 조회수 순으로 다시 쓴다.
+      #
+      # 새 제도를 수집하지 않으므로 이날은 신규 발행이 없다. 토큰 한도를
+      # 재생성에 쓰는 것이라, 돌릴지 말지는 사람이 정한다(그래서 수동 전용).
+      - name: Run targeted regeneration
+        if: ${{ github.event.inputs.mode == 'regenerate' }}
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          WALAPP_LLM_MODEL: ${{ vars.WALAPP_LLM_MODEL }}
+          # 상세 보강(adapter.enrich)이 함께 도는 경로라 수집 키도 필요하다.
+          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY }}
+          TZ: Asia/Seoul
+        run: |
+          python scripts/regenerate.py --dry-run
+          python scripts/regenerate.py --limit "${{ github.event.inputs.regenerate_limit || '40' }}"
 
       # 이미 저장돼 있던 http:// 신청 링크를 https 로 올린다.
       # 새로 들어오는 레코드는 수집 단계가 알아서 올리므로(collect/url_https.py)
@@ -139,7 +170,11 @@ jobs:
           else
             NEW=$(git diff --staged --name-only --diff-filter=A -- _programs/ | wc -l)
             MOD=$(git diff --staged --name-only --diff-filter=M -- _programs/ | wc -l)
-            git commit -m "📋 제도 동기화 $(date +'%Y-%m-%d') — 신규 ${NEW} · 갱신 ${MOD}"
+            if [ "${{ github.event.inputs.mode }}" = "regenerate" ]; then
+              git commit -m "♻️ 표적 재생성 $(date +'%Y-%m-%d') — ${MOD}건 다시 씀"
+            else
+              git commit -m "📋 제도 동기화 $(date +'%Y-%m-%d') — 신규 ${NEW} · 갱신 ${MOD}"
+            fi
             git push
           fi
 
