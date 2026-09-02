@@ -48,10 +48,12 @@ class VerifyReport:
     language: list[str] = field(default_factory=list)     # 한국어가 아니거나 코드값
     dropped: list[str] = field(default_factory=list)      # 버려진 문장
     emptied: list[str] = field(default_factory=list)      # 내용이 다 날아간 필드
+    duplicates: list[str] = field(default_factory=list)   # 같은 말을 나눠 적은 항목
+    ungrounded: list[str] = field(default_factory=list)   # 원문에 근거어가 없는 조건
 
     @property
     def ok(self) -> bool:
-        return not self.violations and not self.language
+        return not self.violations and not self.language and not self.duplicates
 
     @property
     def fatal(self) -> bool:
@@ -62,6 +64,10 @@ class VerifyReport:
         if self.ok:
             return "검증 통과"
         bits = []
+        if self.duplicates:
+            bits.append(f"같은 말 반복 {len(self.duplicates)}건")
+        if self.ungrounded:
+            bits.append(f"원문에 없는 조건어 {', '.join(self.ungrounded[:5])}")
         if self.violations:
             bits.append(f"위반 수치 {len(self.violations)}건({', '.join(self.violations[:5])})")
         if self.language:
@@ -136,7 +142,21 @@ def _numbers(text: str) -> set[str]:
 
 
 def allowed_numbers(record: ProgramRecord) -> set[str]:
-    """원본에서 허용되는 숫자 집합."""
+    """원본에서 허용되는 숫자 집합.
+
+    ⚠️ 알려진 한계: **단위를 보지 않는다.** 원문 어디에든 '31' 이 있으면
+       생성문의 '31세' 도 '31일' 도 '31회' 도 통과한다. 원문이 길수록 허용
+       집합이 커지므로(800자+ 구간 중앙값 15개 · 최대 49개) 긴 원문일수록
+       느슨하다.
+
+       (숫자, 단위) 쌍으로 바꾸는 것을 재 봤다. 385건의 저장된 해설에서
+       수치가 든 문장 796개 중 **달라지는 것은 9개뿐**이고, 그 9개가 전부
+       정상 문장이었다 — 원문 '3년' 에 생성문 '3년간', 원문 '12개월' 에
+       생성문 '1년' 처럼 같은 사실을 다른 말로 쓴 것들이다. 잡는 것 없이
+       멀쩡한 문장만 버리므로 바꾸지 않는다.
+
+       바꾸고 싶어지면 먼저 다시 재 볼 것. 코퍼스가 달라지면 답도 달라진다.
+    """
     sources = [
         record.name, record.org,
         record.target_raw, record.benefit_raw,
@@ -182,6 +202,71 @@ def scrub_text(text: str, allowed: set[str], report: VerifyReport,
     return " ".join(kept).strip()
 
 
+# ─────────────────────────────────────────────────────────────
+#  같은 말을 나눠 적기 · 원문에 근거가 없는 조건
+# ─────────────────────────────────────────────────────────────
+# 왜 필요해졌나: 출력 항목 수 상한을 원문 길이에 맞춰 올렸다(자격 최대 6 → 9개).
+# 그런데 그때 프롬프트에 "자리를 채우려고 같은 말을 나눠 적거나 원문에 없는
+# 조건을 만들어 넣으면 검증에서 걸러집니다" 라고 적어 놓고, 정작 그 검사가
+# 코드에 없었다. 위의 수치 검증은 **숫자가 붙은 문장만** 본다.
+#
+# 실제로 재현됐다. 유아학비(원문 1,096자 · 최대 등급)에 원문 근거가 전혀 없는
+# 자격 9개("소득 기준을 충족해야 합니다", "재산 기준이 적용됩니다" …)를 넣으면
+# violations=[] · dropped=0 으로 전량 통과하고, 페이지와 FAQPage 구조화
+# 데이터에까지 실린다. 상한만 올리고 방어를 안 둔 것이다.
+#
+# 여기서 두 가지를 잡는다. 둘 다 '숫자가 없어서' 기존 검사를 빠져나가는 것들이다.
+
+_STOP_CHARS_RE = re.compile(r"[\s·,()（）\[\]「」/]+")
+
+# 조건을 여는 핵심 명사. 이 말이 생성문에 있는데 원문 어디에도 없으면,
+# 그 조건은 원천이 말한 적 없는 것이다.
+#
+# ⚠️ 여기에 흔한 말을 넣지 말 것. '대상'·'신청'·'지원' 같은 것은 어느 원문에나
+#    있어서 검사가 무력해지고, 반대로 너무 좁으면 멀쩡한 문장을 버린다.
+#    지어낸 자격 요건에 실제로 반복해서 나타난 것만 둔다.
+GROUNDING_TERMS: tuple[str, ...] = (
+    "소득", "재산", "자산", "거주", "주민등록", "중복", "가구원", "동의",
+    "연령", "나이", "국적", "체류", "보험", "납부", "세대주",
+)
+
+
+def _normalize(text: str) -> str:
+    return _STOP_CHARS_RE.sub("", str(text or ""))
+
+
+def _near_duplicate(a: str, b: str) -> bool:
+    """공백·기호를 지운 뒤 한쪽이 다른 쪽에 통째로 들어 있으면 같은 말로 본다.
+
+    "3~5세 유아입니다" 와 "만 3세부터 5세까지의 유아입니다" 처럼 표현만 바꾼
+    것까지 잡으려면 이보다 정교해야 하지만, 그 선을 넘으면 멀쩡한 항목을
+    버리기 시작한다. 확실한 것만 잡는다.
+    """
+    na, nb = _normalize(a), _normalize(b)
+    if not na or not nb:
+        return False
+    short, long = (na, nb) if len(na) <= len(nb) else (nb, na)
+    if len(short) < 6:
+        return False
+    return short in long
+
+
+def drop_duplicates(items: list[str], report: VerifyReport) -> list[str]:
+    """앞 항목과 같은 말을 하는 항목을 버린다."""
+    kept: list[str] = []
+    for item in items:
+        if any(_near_duplicate(item, k) for k in kept):
+            report.duplicates.append(item)
+            continue
+        kept.append(item)
+    return kept
+
+
+def ungrounded_terms(text: str, haystack: str) -> list[str]:
+    """생성문에 있는데 원문에는 없는 조건 명사."""
+    return [t for t in GROUNDING_TERMS if t in str(text or "") and t not in haystack]
+
+
 def scrub(prose: dict, record: ProgramRecord) -> tuple[dict, VerifyReport]:
     """생성된 해설에서 검증 실패 문장을 걷어낸다.
 
@@ -202,10 +287,34 @@ def scrub(prose: dict, record: ProgramRecord) -> tuple[dict, VerifyReport]:
             if not value:
                 report.emptied.append(key)
 
+    # 조건 명사가 원문에 있는지 볼 때 쓸 원문 뭉치.
+    grounding_haystack = " ".join(str(t or "") for t in (
+        record.name, record.target_raw, record.benefit_raw,
+        record.criteria_raw, record.how_to_raw, " ".join(record.documents_raw),
+    ))
+
     # ── 리스트 필드 ──
     if cleaned.get("eligibility"):
         items = [scrub_text(str(c), allowed, report, codes) for c in cleaned["eligibility"]]
-        cleaned["eligibility"] = [c for c in items if c]
+        items = [c for c in items if c]
+
+        # 원문에 근거어가 없는 조건은 버린다.
+        #
+        # "소득 기준을 충족해야 합니다" 는 숫자가 없어 수치 검증을 그대로
+        # 빠져나간다. 그런데 원문에 '소득' 이라는 말이 한 번도 없으면 그 조건은
+        # 원천이 말한 적 없는 것이다. 자격 요건은 사람이 '나는 해당하나' 를
+        # 판단하는 자리라, 지어낸 조건 하나가 신청을 포기하게 만들 수 있다.
+        grounded: list[str] = []
+        for item in items:
+            missing = ungrounded_terms(item, grounding_haystack)
+            if missing:
+                report.ungrounded.extend(missing)
+                report.dropped.append(item)
+                continue
+            grounded.append(item)
+
+        # 같은 말을 나눠 적은 것도 버린다.
+        cleaned["eligibility"] = drop_duplicates(grounded, report)
         if not cleaned["eligibility"]:
             report.emptied.append("eligibility")
 
@@ -226,15 +335,24 @@ def scrub(prose: dict, record: ProgramRecord) -> tuple[dict, VerifyReport]:
         for item in cleaned["faq"]:
             question = scrub_text(str(item.get("q", "")), allowed, report, codes)
             answer = scrub_text(str(item.get("a", "")), allowed, report, codes)
-            if question and answer:
-                faq.append({"q": question, "a": answer})
-        cleaned["faq"] = faq
+            if not (question and answer):
+                continue
+            missing = ungrounded_terms(question + " " + answer, grounding_haystack)
+            if missing:
+                report.ungrounded.extend(missing)
+                report.dropped.append(question)
+                continue
+            faq.append({"q": question, "a": answer})
+        # 질문이 서로 같은 말이면 뒤엣것을 버린다.
+        kept_q = drop_duplicates([f["q"] for f in faq], report)
+        cleaned["faq"] = [f for f in faq if f["q"] in kept_q]
 
     # 요약이 날아갔으면 원본 지원내용으로 되돌린다 (사실이므로 언제나 안전)
     if not cleaned.get("summary"):
         cleaned["summary"] = record.benefit_raw
 
     report.violations = sorted(set(report.violations), key=lambda n: (len(n), n))
-    if report.violations:
+    report.ungrounded = sorted(set(report.ungrounded))
+    if report.violations or report.duplicates or report.ungrounded:
         log.warning("[%s] %s", record.id, report.summary_line())
     return cleaned, report
