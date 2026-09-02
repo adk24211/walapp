@@ -50,10 +50,12 @@ class VerifyReport:
     emptied: list[str] = field(default_factory=list)      # 내용이 다 날아간 필드
     duplicates: list[str] = field(default_factory=list)   # 같은 말을 나눠 적은 항목
     ungrounded: list[str] = field(default_factory=list)   # 원문에 근거어가 없는 조건
+    orgs: list[str] = field(default_factory=list)         # 원문에 없는 기관명(신청처 지어내기)
 
     @property
     def ok(self) -> bool:
-        return not self.violations and not self.language and not self.duplicates
+        return (not self.violations and not self.language
+                and not self.duplicates and not self.orgs)
 
     @property
     def fatal(self) -> bool:
@@ -64,6 +66,8 @@ class VerifyReport:
         if self.ok:
             return "검증 통과"
         bits = []
+        if self.orgs:
+            bits.append(f"원문에 없는 기관명 {', '.join(sorted(set(self.orgs))[:4])}")
         if self.duplicates:
             bits.append(f"같은 말 반복 {len(self.duplicates)}건")
         if self.ungrounded:
@@ -231,6 +235,83 @@ GROUNDING_TERMS: tuple[str, ...] = (
 )
 
 
+# 기관명처럼 보이는 말. 신청처를 지어내는 자리를 잡으려는 것이다.
+#
+# 왜 필요했나: 프롬프트의 '고정 사실' 에 **접수 기관이 없었다.** 소관 기관(제도를
+# 만든 부처)만 알려 주니 모델이 그것을 신청처로 삼아 문장을 만들었다.
+#
+#   "보건복지부 지정기관을 직접 방문합니다"        실제 접수 기관: 시·군·구청
+#   "관할 행정안전부 담당 부서를 직접 방문합니다"   실제 접수 기관: 시·군·구청
+#   "중소벤처기업부 홈페이지에서 신청합니다"        실제 신청 주소: kosmes.or.kr
+#   "관할 시·군·구청 방문으로 신청할 수 있습니다"   접수 기관: 원문에 없음
+#
+# 385건 중 127건이 원문에 없는 기관명으로 신청처를 안내하고 있었다. 사람을
+# 엉뚱한 건물로 보내는 문장이고, 지원금 정보에서 이보다 실질적인 피해는 없다.
+#
+# 프롬프트에 접수 기관을 넣어 원인을 막았지만(generate_program), 모델이 또
+# 지어낼 수 있으므로 여기서도 막는다.
+# ⚠️ 접미사로 훑지 말 것. `[가-힣]+(부|원|처|센터)` 로 잡아 봤더니 임산부·
+#    본인부담·신혼부부·대학원·천만원·가구원·바우처가 전부 기관명으로 걸려
+#    멀쩡한 문장을 죽였다. 실패 양상은 하나로 좁혀진다 — **중앙부처·청을
+#    신청처로 대는 것**. 닫힌 목록이므로 그대로 적는다.
+_CENTRAL_BODIES: tuple[str, ...] = (
+    "기획재정부", "교육부", "과학기술정보통신부", "외교부", "통일부", "법무부",
+    "국방부", "행정안전부", "국가보훈부", "문화체육관광부", "농림축산식품부",
+    "산업통상자원부", "보건복지부", "환경부", "고용노동부", "여성가족부",
+    "성평등가족부", "국토교통부", "해양수산부", "중소벤처기업부",
+    "국가보훈처", "인사혁신처", "법제처", "식품의약품안전처",
+    "국세청", "관세청", "조달청", "통계청", "검찰청", "병무청", "방위사업청",
+    "경찰청", "소방청", "국가유산청", "문화재청", "농촌진흥청", "산림청",
+    "특허청", "질병관리청", "기상청", "해양경찰청", "새만금개발청",
+    "교육청", "도교육청",
+)
+
+# 신청 창구를 뜻하는 말. 원문이 접수 기관을 말해 주지 않았는데 이런 곳을
+# 지목하면 지어낸 것이다("관할 시·군·구청 방문으로 신청할 수 있습니다").
+_VENUE_WORDS: tuple[str, ...] = (
+    "시·군·구청", "시군구청", "구청", "시청", "군청", "도청",
+    "주민센터", "행정복지센터", "동사무소", "읍사무소", "면사무소", "보건소",
+)
+
+_ORG_TOKENS: tuple[str, ...] = _CENTRAL_BODIES + _VENUE_WORDS
+
+
+def organization_names(text: str) -> set[str]:
+    """문장에 나온 기관·창구 이름.
+
+    부처명은 긴 것부터 본다 — '성평등가족부' 가 '가족부' 로 잘리면 안 된다.
+    """
+    body = str(text or "")
+    return {name for name in _ORG_TOKENS if name in body}
+
+
+def allowed_organizations(record: ProgramRecord) -> str:
+    """신청 절차에서 이름을 대도 되는 기관이 적힌 원문 뭉치.
+
+    ⚠️ record.org(소관 기관)는 **접수 기관이 따로 있으면 넣지 않는다.**
+       그게 바로 지어내기의 출처였다 — 원천이 '시·군·구청에 신청하라' 고
+       적어 놨는데 모델이 '보건복지부' 를 방문처로 썼다. 원천이 접수 기관을
+       말해 줬으면 소관 부처는 신청처가 아니다.
+
+       접수 기관이 비어 있을 때만 소관 기관을 허용한다 — 그때는 원문에 더 나은
+       정보가 없고, 소관 기관은 적어도 원문에 있는 이름이다.
+
+    ⚠️ 자격·지원내용 원문(target/benefit/criteria)은 넣지 않는다. 거기 나오는
+       부처 이름은 '보건복지부 장관이 매년 고시하는 금액' 처럼 **규칙을 정하는
+       주체**로 등장하지 신청을 받는 곳이 아니다. 그걸 허용하면 기초연금이
+       "보건복지부가 지정한 접수처에 제출합니다" 로 통과한다(실제 접수처는
+       주민센터다). 신청 경로를 말하는 필드만 본다.
+    """
+    parts = [
+        record.receiver_raw, record.contact_raw, record.how_to_raw,
+        record.apply_url, record.official_url,
+        " ".join(record.documents_raw or []),
+    ]
+    if not str(record.receiver_raw or "").strip():
+        parts.append(record.org)
+    return " ".join(str(p or "") for p in parts)
+
+
 def _normalize(text: str) -> str:
     return _STOP_CHARS_RE.sub("", str(text or ""))
 
@@ -319,10 +400,25 @@ def scrub(prose: dict, record: ProgramRecord) -> tuple[dict, VerifyReport]:
             report.emptied.append("eligibility")
 
     # ── steps ──
+    #
+    # 신청 절차는 사람이 '어디로 가야 하나' 를 읽는 자리라, 여기 적힌 기관명이
+    # 틀리면 헛걸음이 된다. 원문에 없는 기관을 대는 문장은 버린다.
+    org_haystack = allowed_organizations(record)
     if cleaned.get("steps"):
         steps = []
         for step in cleaned["steps"]:
             body = scrub_text(str(step.get("body", "")), allowed, report, codes)
+            if not body:
+                continue
+            kept_sentences = []
+            for sentence in _split_sentences(body):
+                unknown = [o for o in organization_names(sentence) if o not in org_haystack]
+                if unknown:
+                    report.orgs.extend(unknown)
+                    report.dropped.append(sentence)
+                    continue
+                kept_sentences.append(sentence)
+            body = " ".join(kept_sentences).strip()
             if body:
                 steps.append({"title": step.get("title", ""), "body": body})
         cleaned["steps"] = steps
@@ -342,6 +438,12 @@ def scrub(prose: dict, record: ProgramRecord) -> tuple[dict, VerifyReport]:
                 report.ungrounded.extend(missing)
                 report.dropped.append(question)
                 continue
+            unknown = [o for o in organization_names(question + " " + answer)
+                       if o not in org_haystack]
+            if unknown:
+                report.orgs.extend(unknown)
+                report.dropped.append(question)
+                continue
             faq.append({"q": question, "a": answer})
         # 질문이 서로 같은 말이면 뒤엣것을 버린다.
         kept_q = drop_duplicates([f["q"] for f in faq], report)
@@ -353,6 +455,7 @@ def scrub(prose: dict, record: ProgramRecord) -> tuple[dict, VerifyReport]:
 
     report.violations = sorted(set(report.violations), key=lambda n: (len(n), n))
     report.ungrounded = sorted(set(report.ungrounded))
-    if report.violations or report.duplicates or report.ungrounded:
+    report.orgs = sorted(set(report.orgs))
+    if report.violations or report.duplicates or report.ungrounded or report.orgs:
         log.warning("[%s] %s", record.id, report.summary_line())
     return cleaned, report
