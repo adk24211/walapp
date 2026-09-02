@@ -274,9 +274,15 @@ scripts/
     └── welfare_central.py 중앙부처복지서비스 — 기본 꺼짐(ENABLE_WELFARE_CENTRAL=1)
 
 점검 도구
-├── scripts/check_period.py   신청기한 표기 24종 기대값 표 ★ 파서를 고치면 먼저 돌린다
-├── scripts/check_layout.mjs  데스크톱 1440 / 태블릿 768 / 모바일 390 레이아웃 점검
-└── scripts/inspect_api.py    새 API 의 필드명 조사 (--docs / --probe)
+├── scripts/check_period.py    신청기한 표기 24종 기대값 표 ★ 파서를 고치면 먼저 돌린다
+├── scripts/check_layout.mjs   데스크톱 1440 / 태블릿 768 / 모바일 390 레이아웃 점검
+├── scripts/check_contrast.mjs 글자 대비 WCAG AA · 라이트/다크 두 테마 ★ 색을 만지면 돌린다
+└── scripts/inspect_api.py     새 API 의 필드명 조사 (--docs / --probe)
+
+앞의 셋 중 `check_layout` · `check_contrast` 는 브라우저가 필요해 CI 에 넣지 않았습니다
+(데일리 워크플로는 내용 동기화라 매일 크로미움을 받을 일이 없습니다). **CSS 를
+고치면 두 개를 로컬에서 돌리고 머지합니다.** CI 가 도는 것은 브라우저가 필요 없는
+셋입니다 — `check_inline_js` · `check_seo` · `check_verify`.
 
 _layouts/program.html      제도 상세 (섹션 6개 + 신청 레일)
 _layouts/hub.html          분야·대상·지역·마감·신규 공용
