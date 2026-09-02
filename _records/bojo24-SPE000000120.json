@@ -26,7 +26,7 @@
     "raw": "상시신청",
     "start": ""
   },
-  "apply_url": "http://www.bokjiro.go.kr",
+  "apply_url": "https://www.bokjiro.go.kr",
   "audiences": [
     "parent",
     "disabled",
@@ -35,7 +35,7 @@
   "benefit_raw": "○ 급여액 : 1 가정 당 연 1,080시간 지원\n○ 서비스 내용 : 돌봄 서비스, 휴식지원프로그램",
   "category": "care",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:a0fe8126de27582ad3b990f80c56517b",
+  "content_hash": "sha256:7b9b4f56f73c2e3d12a58a135a9dc474",
   "criteria_raw": "○ 지원 대상 : 18세 미만의 등록한 중증 장애인\n\n○ 연령 기준 : 신청일 현재 18세 미만인자\n\n○ 장애등급\n- 신청일 현재, 장애인 복지법 제32조에 따라 등록한 장애인\n- 장애정도가 심한 장애아동\n\n○ 소득기준 : 없음",
   "deferred_detail": false,
   "documents_raw": [

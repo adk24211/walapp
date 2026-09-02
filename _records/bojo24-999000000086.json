@@ -1,0 +1,86 @@
+{
+  "_prose": {
+    "eligibility": [
+      "예비창업자이거나 창업 후 7년 이내인 기업이어야 합니다.",
+      "사업계획서를 제출해야 합니다.",
+      "사업아이템의 기술성이 평가됩니다.",
+      "창업자의 역량 및 의지가 검토됩니다.",
+      "시장성과 사업성이 심사 기준에 포함됩니다."
+    ],
+    "faq": [
+      {
+        "a": "사업계획서, 사업아이템 기술성, 창업자 역량 및 의지, 시장성, 사업성 등이 평가됩니다.",
+        "q": "선정 기준은 어떤 항목으로 구성되어 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청 페이지에 접속하여 신청서를 작성합니다. 필요한 정보를 정확히 입력합니다.",
+        "title": "신청서 작성"
+      },
+      {
+        "body": "사업계획서와 해당 서류를 온라인으로 첨부합니다. 사업자등록증·법인등기부등본 등 필요한 서류를 함께 제출합니다.",
+        "title": "서류 제출"
+      },
+      {
+        "body": "제출된 서류와 사업계획서를 기준으로 선정 기준을 적용해 심사합니다. 심사 결과는 추후 통보됩니다.",
+        "title": "심사 및 선정"
+      },
+      {
+        "body": "선정된 기업에게 창업존 공간과 인프라, 네트워킹 지원이 제공됩니다. 지원 내용은 선정 시 안내됩니다.",
+        "title": "지원 제공"
+      }
+    ],
+    "summary": "창업존 운영은 예비창업자와 창업 7년 이내 기업을 대상으로 창업존 공간과 인프라, 네트워킹 등을 지원하는 중소벤처기업부 주관 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "연중 수시",
+    "start": ""
+  },
+  "apply_url": "https://www.K-startup.go.kr",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "창업기업을 선발하여 창업존 공간, 인프라 및 네트워킹 등 지원",
+  "category": "jobs",
+  "contact_raw": "창업진흥원 지역창업실/044-410-1888",
+  "content_hash": "sha256:840c3253a5490fbedaa5eb71f03e16ef",
+  "criteria_raw": "사업계획서, 사업아이템 기술성, 창업자 역량 및 의지, 시장성, 사업성 등",
+  "deferred_detail": false,
+  "documents_raw": [
+    "사업계획서",
+    "사업자등록증(해당시)",
+    "법인등기부등본(해당시)",
+    "국세/지방세 납세증명서",
+    "4대보험가입자명부 등"
+  ],
+  "first_published": "2026-09-02",
+  "how_to_raw": "기타 온라인신청\n직접입력",
+  "id": "bojo24-999000000086",
+  "is_mock": false,
+  "last_checked": "2026-09-02",
+  "last_updated": "2026-09-02",
+  "law_raw": "",
+  "name": "창업존 운영",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000086",
+  "org": "중소벤처기업부",
+  "primary_audience": "business",
+  "receiver_raw": "창업진흥원 지역창업실",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "창업존-운영",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타(교육) 법인/시설/단체",
+  "source_id": "999000000086",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "예비창업자 및 창업 7년 이내 기업",
+  "view_count": 7116
+}

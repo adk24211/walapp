@@ -31,14 +31,14 @@
     "raw": "접수기관 별 상이",
     "start": ""
   },
-  "apply_url": "http://www.kics.go.kr",
+  "apply_url": "https://www.kics.go.kr",
   "audiences": [
     "youth"
   ],
   "benefit_raw": "○ 범죄로 인해 피해를 당한 피해자에게 치료비, 심리치료비, 생계비, 학자금, 장례비, 긴급생활안정비 등 경제적 지원",
   "category": "health",
   "contact_raw": "검찰청 피해자지원실/1577-2584",
-  "content_hash": "sha256:4515868c05a980136f87895f8062d44a",
+  "content_hash": "sha256:360533382da716f1754ccdd5bc6be69c",
   "criteria_raw": "○ 범죄피해자에 대한 경제적 지원 업무처리지침 제3조에 해당하는 경우",
   "deferred_detail": false,
   "documents_raw": [

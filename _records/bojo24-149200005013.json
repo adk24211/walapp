@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "저탄소·디지털 전환 관련 사업주",
+      "최근 3년 이내 사업재편·사업전환 승인 기업",
+      "노동전환 고용안정 컨설팅 참여기업",
+      "산업전환 공동훈련센터 협약기업"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "고용노동부에 직접 방문하여 신청서를 제출합니다. 제출 시 구비 서류를 모두 첨부해야 합니다. 담당자가 서류를 검토한 후 지원 여부를 결정합니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "산업·일자리전환 지원금은 저탄소·디지털 전환 사업주가 근로자에게 직무심화·전환·재배치·적응·전직지원 훈련을 제공할 경우, 1인당 최대 300만원까지 훈련비와 장려금을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "employer"
+  ],
+  "benefit_raw": "탄소중립‧디지털 전환 관련 기업의 사업주가 재직 근로자에 대해 직무심화‧전환‧재배치‧적응 훈련 또는 전직지원서비스 제공 시 사업주에게 훈련비와 훈련장려금 등을 지원(1인당 최대 300만원)",
+  "category": "jobs",
+  "contact_raw": "고용노동부 고객상담센터/1350",
+  "content_hash": "sha256:68dc06abb55e21461fa0c63515dbc183",
+  "criteria_raw": "저탄소,디지털 전환 관련 사업주\n* 최근 3년이내 사업재편, 사업전환 승인 기업, 노동전환 고용안정 컨설팅 참여기업, 산업전환 공동훈련센터 협약기업 등",
+  "deferred_detail": false,
+  "documents_raw": [
+    "노동전환 고용안정 지원금 사업 참여 신청서",
+    "직무심화‧전환‧재배치‧적응‧전직지원 계획서",
+    "근로자대표 선임서",
+    "노사협의 입증 서류(노사협의서 등)",
+    "훈련 대상 근로자 동의서(필요 시)",
+    "교육 훈련 등 견적서 및 계약서 등"
+  ],
+  "first_published": "2026-09-02",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-149200005013",
+  "is_mock": false,
+  "last_checked": "2026-09-02",
+  "last_updated": "2026-09-02",
+  "law_raw": "",
+  "name": "산업‧일자리전환 지원금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005013",
+  "org": "고용노동부",
+  "primary_audience": "employer",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "산업-일자리전환-지원금",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 법인/시설/단체",
+  "source_id": "149200005013",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "저탄소,디지털 전환 관련 사업주\n* 최근 3년이내 사업재편, 사업전환 승인 기업, 노동전환 고용안정 컨설팅 참여기업, 산업전환 공동훈련센터 협약기업 등",
+  "view_count": 3372
+}

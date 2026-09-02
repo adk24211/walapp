@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "소상공인 기본법 제2조에 따른 소상공인만 신청 가능합니다.",
+      "선정 기준은 별도로 명시되지 않았습니다.",
+      "신청 시 소상공인확인서를 제출해야 합니다.",
+      "1인 사업장은 건강보험자격득실확인서를, 간이과세자는 사업자등록증명원을, 장애인 기업은 장애인증명서를 추가로 제출해야 합니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "소상공인 스마트상점 기술보급은 온라인을 통해 신청합니다. 신청 페이지에 접속하여 안내에 따라 필수 서류를 업로드하고 제출하면 됩니다. 신청 완료 후 심사가 진행됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "소상공인 스마트상점 기술보급은 소상공인 기본법 제2조에 해당하는 소상공인을 대상으로 주문·키오스크·로봇·경영 분석 등 스마트 기술을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "스마트상점 지원사업 홈페이지 공고 예정",
+    "start": ""
+  },
+  "apply_url": "https://www.sbiz.or.kr/smst/index.do",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "주문(배리어프리 키오스크), 로봇(조리, 서빙), 경영(매출분석) 등 지원",
+  "category": "jobs",
+  "contact_raw": "권역별 전문기관 문의처/1600-6185\n스마트상점팀/042-363-7802\n스마트상점팀/042-363-7804\n스마트상점팀/042-363-7806\n스마트상점팀/042-363-7807\n스마트상점팀/042-363-7808\n스마트상점팀/042-363-7809",
+  "content_hash": "sha256:8b3e0ea843f5e51e24fbe8f70d363859",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "1) 필수서류 : 소상공인확인서",
+    "2) 취약계층 자부담 완화서류",
+    "1인 사업장: 건강보험자격득실확인서",
+    "간이과세자: 사업자등록증명원",
+    "장애인(기업): 장애인증명서"
+  ],
+  "first_published": "2026-09-02",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55307700014",
+  "is_mock": false,
+  "last_checked": "2026-09-02",
+  "last_updated": "2026-09-02",
+  "law_raw": "",
+  "name": "소상공인 스마트상점 기술보급",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55307700014",
+  "org": "소상공인시장진흥공단",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "소상공인-스마트상점-기술보급",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기술지원 소상공인",
+  "source_id": "B55307700014",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "소상공인 기본법 제2조에 따른 소상공인",
+  "view_count": 6979
+}
