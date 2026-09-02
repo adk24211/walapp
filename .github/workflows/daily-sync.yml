@@ -133,17 +133,31 @@ jobs:
       #
       # 새 제도를 수집하지 않으므로 이날은 신규 발행이 없다. 토큰 한도를
       # 재생성에 쓰는 것이라, 돌릴지 말지는 사람이 정한다(그래서 수동 전용).
-      - name: Run targeted regeneration
+      # 미리보기. dry_run 여부와 무관하게 무엇이 대상인지 로그에 남긴다.
+      # ⚠️ 실제 실행과 **같은 --limit** 을 줘야 한다. 안 그러면 미리보기는
+      #    기본값 40건을 찍는데 실제로는 100건을 돌리는 식으로 어긋난다.
+      - name: Preview targeted regeneration
         if: ${{ github.event.inputs.mode == 'regenerate' }}
+        env:
+          REGEN_LIMIT: ${{ github.event.inputs.regenerate_limit || '40' }}
+          TZ: Asia/Seoul
+        run: python scripts/regenerate.py --dry-run --limit "$REGEN_LIMIT"
+
+      # ⚠️ dry_run 이면 여기서 멈춘다. regenerate.py 는 --dry-run 이 아니면
+      #    실제로 모델을 부르므로, dry_run 을 무시하면 하루 토큰을 다 태우고
+      #    결과는 커밋되지 않아 그대로 버려진다.
+      #
+      # ⚠️ 입력값을 run 문자열에 직접 보간하지 않는다. 이 잡은 contents:write 와
+      #    GROQ_API_KEY·DATA_GO_KR_API_KEY 를 들고 있어서, 자유입력이 셸에
+      #    그대로 들어가면 임의 명령 실행 통로가 된다. env 로 받아 인용한다.
+      - name: Run targeted regeneration
+        if: ${{ github.event.inputs.mode == 'regenerate' && github.event.inputs.dry_run != 'true' }}
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           WALAPP_LLM_MODEL: ${{ vars.WALAPP_LLM_MODEL }}
-          # 상세 보강(adapter.enrich)이 함께 도는 경로라 수집 키도 필요하다.
-          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY }}
+          REGEN_LIMIT: ${{ github.event.inputs.regenerate_limit || '40' }}
           TZ: Asia/Seoul
-        run: |
-          python scripts/regenerate.py --dry-run
-          python scripts/regenerate.py --limit "${{ github.event.inputs.regenerate_limit || '40' }}"
+        run: python scripts/regenerate.py --limit "$REGEN_LIMIT"
 
       # 이미 저장돼 있던 http:// 신청 링크를 https 로 올린다.
       # 새로 들어오는 레코드는 수집 단계가 알아서 올리므로(collect/url_https.py)
@@ -201,6 +215,11 @@ jobs:
       # 본문 조각이었고, 제도 페이지가 자기를 블로그 글이라고 말하고 있었다.
       - name: Check search metadata
         run: node scripts/check_seo.mjs _site_check
+
+      # 지어낸 자격 요건이 검증을 빠져나가지 않는지. 항목 수 상한을 올린 뒤
+      # 실제로 그 구멍이 있었다 — 원문 근거 없는 자격 9개가 전량 통과했다.
+      - name: Check fact verification
+        run: python scripts/check_verify.py
 
       - name: Deploy to GitHub Pages
         if: ${{ github.event.inputs.dry_run != 'true' }}

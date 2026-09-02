@@ -18,13 +18,17 @@
 ⚠️ LLM 을 쓴다. 하루 토큰 한도(TPD)가 있으므로 --limit 을 반드시 확인할 것.
    한도가 소진되면 그 자리에서 멈추고, 그때까지 다시 쓴 것은 그대로 남는다.
 
-⚠️ publish._write_one 을 그대로 쓰므로 **상세 보강(adapter.enrich)이 함께 돈다.**
-   즉 이 스크립트는 GROQ_API_KEY 말고 DATA_GO_KR_API_KEY 도 필요하고,
-   원천의 상세 조회 쿼터를 대상 건수만큼 쓴다. 대신 다시 쓸 때 원문도 최신이
-   되므로, 그 사이 원천이 바뀌었으면 그 변경까지 반영된다.
+⚠️ 저장된 원문으로 다시 쓴다. publish._write_one 안에 상세 보강(adapter.enrich)
+   호출이 있지만, 이 스크립트는 collect.adapters 를 등록하지 않으므로
+   adapters.get(source) 가 None 이 되어 그 블록은 항상 건너뛰어진다.
+   (한때 독스트링과 워크플로 주석이 '보강이 함께 돈다' 고 적혀 있었다 —
+    실행해 보면 adapters._ACTIVE 가 {} 다. 사실이 아니었다)
 
-   같은 이유로 last_updated 가 오늘로 바뀌고 revision 이 1 오른다. 제도 정보가
-   바뀐 게 아니라 우리 문장이 바뀐 것이지만, 페이지 내용이 실제로 달라지므로
+   그래서 수집 키가 필요 없고 원천의 상세 조회 쿼터도 쓰지 않는다. 대신
+   원문은 마지막 동기화 시점 값이다. 최신 원문이 필요하면 동기화를 먼저 돌릴 것.
+
+   last_updated 가 오늘로 바뀌고 revision 이 1 오른다. 제도 정보가 바뀐 게
+   아니라 우리 문장이 바뀐 것이지만, 페이지 내용이 실제로 달라지므로
    dateModified 가 오늘이 되는 것은 맞다.
 
     python3 scripts/regenerate.py --dry-run        # 대상만 본다 (LLM 호출 없음)
@@ -36,8 +40,10 @@ from __future__ import annotations
 import argparse
 import logging
 import sys
-from datetime import date
+import os
+from datetime import date, datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -45,6 +51,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import generate_program  # noqa: E402
 import publish           # noqa: E402
 import registry          # noqa: E402
+import render            # noqa: E402
 import run_all           # noqa: E402
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s",
@@ -59,15 +66,24 @@ def raw_len(record) -> int:
 
 
 def own_len(record) -> int:
-    """저장된 해설의 글자 수. render.py 의 own_chars 와 같은 셈법이다."""
-    prose = registry.load_prose(record.id) or {}
-    total = len(str(prose.get("summary") or ""))
-    total += sum(len(str(x or "")) for x in (prose.get("eligibility") or []))
-    for step in (prose.get("steps") or []):
-        total += len(str(step.get("title") or "")) + len(str(step.get("body") or ""))
-    for item in (prose.get("faq") or []):
-        total += len(str(item.get("q") or "")) + len(str(item.get("a") or ""))
-    total += len(str(prose.get("note") or ""))
+    """화면에 실제로 실린 우리 문장의 글자 수.
+
+    ⚠️ 저장된 prose 를 그대로 세지 말 것. 한 번 그렇게 썼다가 되돌렸다 —
+       render_body 의 _useful_faq 가 되묻는 질문을 걸러내고 _useful_note 가
+       상용구 주의를 버리므로, 생성된 것과 실린 것이 다르다. 385건 중 131건이
+       그 상태였고(중앙값 +80자·최대 +217자), 그래서 '얇은 것' 을 고르는 이
+       필터가 실제로 얇은 페이지를 걸러 냈다. 대상 55건 중 15건을 놓쳤다.
+
+       render.to_markdown 과 같은 경로로 센다.
+    """
+    prose = registry.load_prose(record.id)
+    if not prose:
+        return 0
+    manifest: dict = {}
+    render.render_body(record, prose, manifest=manifest)
+    total = manifest.get("own_chars", 0)
+    if str(prose.get("summary") or "").strip():
+        total += len(str(render._polite(prose.get("summary")) or ""))
     return total
 
 
@@ -119,6 +135,10 @@ def main() -> int:
 
     # 동기화와 같은 클라이언트를 쓴다. 키가 없으면 None 이 오고 오프라인
     # 폴백(원문 재배치)으로 떨어지는데, 그건 다시 쓰는 의미가 없다 — 막는다.
+    # .env 를 먼저 읽는다. 이걸 빼먹으면 .env 에 키를 둔 로컬 실행이
+    # "키가 없습니다" 로 죽는다 — dry-run 은 client 확보 전에 끝나므로
+    # dry-run 만 되고 본 실행만 안 되는 모양으로 나타난다.
+    run_all._load_dotenv()
     client = run_all._groq_client()
     if client is None:
         log.error("GROQ_API_KEY 가 없습니다. 표적 재생성은 실제 모델이 있어야 의미가 있습니다.")
@@ -127,12 +147,35 @@ def main() -> int:
 
     reg = registry.Registry()
     result = publish.WriteResult()
-    today = date.today()
+    # run_all 과 같은 방식으로 날짜를 정한다. date.today() 를 쓰면 TZ 가 UTC 인
+    # 곳에서 KST 새벽에 돌 때 하루가 어긋나고, POST_DATE override 도 무시된다.
+    date_override = os.environ.get("POST_DATE")
+    today: date = (
+        datetime.strptime(date_override, "%Y-%m-%d").date()
+        if date_override
+        else datetime.now(ZoneInfo("Asia/Seoul")).date()
+    )
 
     # 갱신 경로로 넘긴다(is_update=True). 원장 기록·검증·렌더가 동기화와 같아야
     # 다음 실행이 이 제도들을 '변경' 으로 다시 잡지 않는다.
     try:
         for record in targets:
+            # ⚠️ 원장 값을 레코드에 되돌려 넣은 뒤에 넘긴다. sync.py:218-220 이
+            #    하는 것과 같은 일이다.
+            #
+            #    안 하면 mark_updated 가 **지역에서 다시 계산한 해시**로 원장을
+            #    덮어쓴다. 저장된 레코드는 clean_text 를 거쳐 저장되므로 수집
+            #    시점 해시와 같다는 보장이 없고, 실제로 385건 중 156건이 이미
+            #    다르다. 그러면 다음 동기화가 이 제도들을 '변경' 으로 다시 잡아
+            #    재생성이 한 번 더 든다 — 원장을 맞추려던 것이 오히려 어긋난다.
+            #    (registry.py 의 mark_checked 위 주석에 같은 사고가 적혀 있다.
+            #     2026-08-22 에 그렇게 8건을 헛되이 재생성했다)
+            entry = reg.get(record.id)
+            if entry is not None:
+                record.content_hash = entry.content_hash
+                record.first_published = entry.first_published
+                record.revision = entry.revision
+
             before = own_len(record)
             publish._write_one(record, reg, today, client, True, False, result)
             after = own_len(record)

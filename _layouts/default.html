@@ -30,26 +30,23 @@
     matter 로 내보낸다). 기준선은 _config.yml 의 ads_min_own_chars 이고,
     0 이면 아무것도 걸리지 않는다.
 
-    ⚠️ `page.own_chars < N` 을 바로 쓰면 안 된다. own_chars 가 없는 페이지
-       (홈·허브·검색·법률 문서)에서는 nil 이 되고, Liquid 에서 nil < 숫자 는
-       참이 되어 사이트 전체에서 광고가 사라진다. own_chars 가 **있는**
-       페이지에 한해 비교한다.
+    판정 대상을 own_chars 가 있는 페이지(제도 상세)로 명시적으로 좁힌다.
+    Liquid 에서 nil < 숫자 는 거짓이라 가드가 없어도 홈·허브에서 광고가
+    사라지지는 않지만, 조건이 무엇을 보는지 코드에 드러나 있어야 한다.
+
+    ⚠️ 두 문턱은 **AND** 다. 하나라도 빠지면 규칙이 무너진다.
+       ads_min_view_count 를 지우거나 0 으로 두면 '글자 수만으로 자르기' 가
+       되어 own_chars 400 미만 187건이 전부 광고를 잃는다 — 조회수 54만짜리
+       노후준비서비스제공(141자)까지 포함해서다. 그래서 조회수 문턱이
+       없으면 아무것도 빼지 않는 쪽으로 둔다.
   {%- endcomment -%}
   {%- assign show_ads = true -%}
-  {%- if site.ads_min_own_chars and site.ads_min_own_chars > 0 and page.own_chars -%}
-    {%- if page.own_chars < site.ads_min_own_chars -%}
-      {%- comment -%}
-        얇다. 그런데 그것만으로는 빼지 않는다 — 사이트에서 가장 얇은 축에
-        조회수 67만짜리 페이지가 있다(장기전세 주택공급, 236자). 거의 안 보는
-        페이지일 때만 뺀다.
-
-        view_count 는 원천이 주는 값이고, 없으면 render.py 가 아예 안 쓴다.
-        그때는 0 으로 보아 '거의 안 봄' 쪽에 넣는다.
-      {%- endcomment -%}
-      {%- assign views = page.view_count | default: 0 -%}
-      {%- if site.ads_min_view_count == nil or site.ads_min_view_count == 0 or views < site.ads_min_view_count -%}
-        {%- assign show_ads = false -%}
-      {%- endif -%}
+  {%- assign min_chars = site.ads_min_own_chars | default: 0 -%}
+  {%- assign min_views = site.ads_min_view_count | default: 0 -%}
+  {%- if min_chars > 0 and min_views > 0 and page.own_chars -%}
+    {%- assign views = page.view_count | default: 0 -%}
+    {%- if page.own_chars < min_chars and views < min_views -%}
+      {%- assign show_ads = false -%}
     {%- endif -%}
   {%- endif -%}
   {% if show_ads and site.ads_enabled and site.google_adsense and site.google_adsense != "" %}
