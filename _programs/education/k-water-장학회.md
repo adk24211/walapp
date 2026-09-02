@@ -28,7 +28,7 @@ last_checked: "2026-09-01"
 date: "2026-09-01"
 last_modified_at: "2026-09-01"
 revision: 0
-own_chars: 299
+own_chars: 252
 source_parts: ["신청 기간", "지원 내용", "지원 대상", "소관 기관", "지원 지역", "신청 방법", "문의처"]
 own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 신청하나요", "자주 묻는 질문"]
 ---
@@ -56,8 +56,6 @@ own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 
   </div>
   <div class="cn-sec-body">
 <ul class="cn cn-check" data-cat="education">
-  <li>댐 주변 지역에 거주하는 중·고등학생</li>
-  <li>K-water 지사 소재지에 거주하는 중·고등학생</li>
   <li>선정 기준은 별도로 제시되지 않음</li>
 </ul>
   </div>

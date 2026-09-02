@@ -80,6 +80,44 @@ def main() -> int:
             if bad:
                 print(f"        버려졌어야 할 문구가 남음: {', '.join(bad)}")
 
+    # ── 신청처를 지어내지 않는지 ──
+    #
+    # 실패 양상: '고정 사실' 에 접수 기관이 없어서 모델이 소관 부처를 방문처로
+    # 삼았다. "보건복지부 지정기관을 방문합니다"(실제 접수: 시·군·구청).
+    # 385건 중 101건이 그 상태였다 — 사람을 엉뚱한 건물로 보내는 문장이다.
+    rec_with_receiver = record(org="보건복지부", receiver_raw="시·군·구청",
+                               how_to_raw="방문신청", contact_raw="보건복지상담센터/129")
+    org_cases = [
+        ("소관 부처를 신청처로 대면 버린다",
+         "준비한 서류를 지참하고 관할 보건복지부 지정기관을 직접 방문합니다.", False),
+        ("접수 기관은 그대로 둔다",
+         "시·군·구청에 방문하여 신청서를 제출합니다.", True),
+        ("원문에 없는 창구를 지어내도 버린다",
+         "가까운 주민센터를 방문해 신청하시면 됩니다.", False),
+    ]
+    for label, body, should_keep in org_cases:
+        cleaned, report = verify.scrub(
+            {"summary": "시험 제도입니다.", "steps": [{"title": "1단계", "body": body}]},
+            rec_with_receiver)
+        kept = bool(cleaned.get("steps"))
+        ok = kept == should_keep
+        print(f"  {'✓' if ok else '✗'}  {label}")
+        if not ok:
+            failures += 1
+            print(f"        기대 {'유지' if should_keep else '폐기'} · 실제 {'유지' if kept else '폐기'}"
+                  f" — 걸린 기관명 {report.orgs}")
+
+    # 접수 기관이 비어 있으면 소관 기관은 쓸 수 있어야 한다(더 나은 정보가 없다)
+    rec_no_receiver = record(org="보건복지부", receiver_raw="", how_to_raw="방문신청")
+    cleaned, _ = verify.scrub(
+        {"summary": "시험 제도입니다.",
+         "steps": [{"title": "1단계", "body": "보건복지부에서 안내하는 절차에 따릅니다."}]},
+        rec_no_receiver)
+    ok = bool(cleaned.get("steps"))
+    print(f"  {'✓' if ok else '✗'}  접수 기관이 없으면 소관 기관은 허용한다")
+    if not ok:
+        failures += 1
+
     # FAQ 도 같은 방어를 받는지
     cleaned, _ = verify.scrub(
         {"summary": "시험 제도입니다.",
@@ -93,7 +131,7 @@ def main() -> int:
     if failures:
         print(f"✗ {failures}건 실패")
         return 1
-    print(f"✅ {len(CASES) + 1}건 전부 통과")
+    print(f"✅ {len(CASES) + len(org_cases) + 2}건 전부 통과")
     return 0
 
 

@@ -27,7 +27,7 @@ last_checked: "2026-08-26"
 date: "2026-08-26"
 last_modified_at: "2026-08-26"
 revision: 0
-own_chars: 249
+own_chars: 214
 source_parts: ["신청 기간", "지원 내용", "지원 대상", "소관 기관", "지원 지역", "신청 방법", "문의처"]
 own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 신청하나요"]
 ---
@@ -52,9 +52,7 @@ own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 
   </div>
   <div class="cn-sec-body">
 <ul class="cn cn-check" data-cat="care">
-  <li>소외지역에 거주하는 독거노인</li>
   <li>취약계층에 해당하는 어르신</li>
-  <li>전국에 거주하고 있는 경우 신청 가능</li>
 </ul>
   </div>
 </section>
