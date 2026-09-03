@@ -23,13 +23,11 @@
     "start": ""
   },
   "apply_url": "https://www.i-sh.co.kr",
-  "audiences": [
-    "employer"
-  ],
+  "audiences": [],
   "benefit_raw": "○ 시세의 80% 수준의 저렴한 임대보증금의 장기전세주택 공급",
   "category": "housing",
   "contact_raw": "서울주택도시공사/1600-3456",
-  "content_hash": "sha256:e85e1c0149d6a4fdaa993f06918c1284",
+  "content_hash": "sha256:cd586b9b961f034af203a06b4fc90637",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [
@@ -49,7 +47,7 @@
   "name": "장기전세 주택공급",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000024",
   "org": "국토교통부",
-  "primary_audience": "employer",
+  "primary_audience": "",
   "receiver_raw": "한국토지주택공사;1600-1004, SH공사 홈페이지;1600-3456, LH콜센터;1600-1004, SH콜센터;1600-3456",
   "region": {
     "scope": "national",

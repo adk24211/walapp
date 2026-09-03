@@ -33,13 +33,12 @@
   },
   "apply_url": "",
   "audiences": [
-    "parent",
-    "business"
+    "parent"
   ],
   "benefit_raw": "○ 한부모가족 임대주택 특별공급",
   "category": "housing",
   "contact_raw": "LH마이홈/1600-1004",
-  "content_hash": "sha256:0699e0dd4832f83b2537001fd4d115ba",
+  "content_hash": "sha256:d9494c6a417cefd7af5512c97008165f",
   "criteria_raw": "○ 입주대상 : 한부모가족지원법상 지원 대상 한부모가족\n- 입주자모집공고일 기준 무주택세대구성원(세대주 및 세대주와 동일 주민등록표등본에 등재되어 있는 직계존･비속인 세대원)\n\n○ 시.도지사가 지원 우선순위를 정하여 특별공급대상 한부모 선정\n- 선정 기준은‘특별공급 배점기준표’를 참고하여 지역 사정에 따라 수정 가능",
   "deferred_detail": false,
   "documents_raw": [
