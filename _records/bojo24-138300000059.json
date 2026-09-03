@@ -28,12 +28,13 @@
   },
   "apply_url": "",
   "audiences": [
-    "multicultural"
+    "multicultural",
+    "student"
   ],
   "benefit_raw": "○ 정서상담\n-가정 내 문제, 학업, 교우관계 등 생활 전반에 대해 적응할 수 있도록 상담 제공, 필요시 센터 내 사업과 연계 지원\n○진로설계\n-초·중·고 학교급별 발달과정에 맞는 진로·취업 컨설팅 및 외부 전문기관 등에 연계하여 진로탐색 지원",
   "category": "living",
   "contact_raw": "한국건강가정진흥원/1577-9337",
-  "content_hash": "sha256:da5be54d23911b81701fbcdb37eeab1e",
+  "content_hash": "sha256:72fc4a026d6c212a3dc4767e27994261",
   "criteria_raw": "○ 다문화가족 학령기 자녀(8~19세)\n*세부 지원 대상: 다문화가족 자녀, 외국인가족 자녀, 난민가족 자녀",
   "deferred_detail": false,
   "documents_raw": [
