@@ -15,6 +15,11 @@
      페이지는 글꼴도 바깥에서 받는다(fonts.googleapis.com · cdn.jsdelivr.net).
      글꼴 파일을 받는 것만으로 그쪽에 접속 IP 가 남는다.
 
+  ③ 처음 만들 때 about·disclaimer 만 보게 했더니 /terms/ 제2조가 그대로
+     빠져나갔다. 거기엔 갯수가 아니라 이름이 나란히 적혀 있었다 —
+     "보조금24·중앙부처 복지서비스 API에서 받은 값입니다". 그래서 문서 목록에
+     terms.html 을 넣고, 이름을 대는 문장도 잡도록 넓혔다.
+
 두 경우 모두 문서가 처음 쓰일 때는 맞았거나 맞을 예정이었고, 코드가 나중에
 달라졌다. 사람이 다시 읽지 않으면 영영 안 고쳐진다.
 
@@ -93,7 +98,8 @@ def check_sources() -> None:
     #    라고 적혀 있으면 여기서 걸린다. 반대로 원천이 둘로 늘었는데 문서가
     #    "한 개" 라고 적혀 있어도 걸린다 — 어느 방향이든 어긋나면 알려야 한다.
     counts = {1: ("한 개", "하나"), 2: ("두 개", "둘"), 3: ("세 개", "셋")}
-    for doc in ("about.html", "disclaimer.html"):
+    # ⚠️ 세 문서를 다 본다. 이용약관을 빼 두었다가 제2조가 그대로 빠져나갔다.
+    for doc in ("about.html", "disclaimer.html", "terms.html"):
         text = visible(ROOT / doc)
         for n, words in counts.items():
             for word in words:
@@ -113,7 +119,10 @@ def check_sources() -> None:
                     continue
                 if re.search(r"아직|않았|예정|계획|꺼(져|둔)|만들어 두", line):
                     continue
-                if re.search(r"받아\s*(옵니다|온다)|에서\s*데이터를\s*받아", line):
+                # 이름을 대며 그 원천에서 왔다고 말하는 여러 어투를 잡는다.
+                # "…에서 받아 옵니다" · "…에서 데이터를 받아" · "…API에서 받은 값"
+                if re.search(r"받아\s*(옵니다|온다)|에서\s*데이터를\s*받아"
+                             r"|에서\s*받은\s*값|에서\s*받아\s*", line):
                     failures.append(
                         f"{doc}: '{label}' 에서 받아 온다고 적혀 있는데 그 원천의 레코드가 0건입니다."
                     )
