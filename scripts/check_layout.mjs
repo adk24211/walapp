@@ -66,6 +66,9 @@ function pages() {
     ['교차 허브(비교표)', '/who/youth/housing/'],
     ['마감 예정', '/deadline/'],
     ['검색', '/search/'],
+    // 소개는 사이트에서 유일하게 '읽는' 화면이다. 커버리지 숫자와 목록이
+    // 들어가면서 좁은 폭에서 줄이 어떻게 접히는지 볼 필요가 생겼다.
+    ['소개', '/about/'],
   ];
   const detail = firstDetail();
   if (detail) list.push(['제도 상세', detail]);
@@ -139,12 +142,18 @@ for (const [label, url] of pages()) {
       // 같은 취지의 주의 문구가 여러 번 나오는지 — 핵심 어구로 센다
       const text = document.body.innerText;
       const dup = {};
-      // '공식 창구' 같은 보통 말은 섹션 제목·버튼 이름으로도 쓰여 오탐이 난다.
-      // 고지 문장에만 나오는 어구로 좁힌다.
-      ['정부 공식 사이트가 아닙니다', '지침 개정', '참고 자료이며'].forEach((k) => {
-        const n = text.split(k).length - 1;
-        if (n >= 2) dup[k] = n;
-      });
+      // ⚠️ 소개·법률 문서(.legal-page)는 빼고 센다. 그 화면들은 푸터가 한 줄로
+      //    말하는 것을 **설명하는 것이 일** 이다. /about/ 의 '정부 공식 사이트가
+      //    아닙니다' 절과 푸터 고지가 같은 화면에 있는 것은 중복이 아니라 구조다.
+      //    이 검사가 잡으려던 것은 목록·허브에서 같은 고지가 두 번 나오는 경우다.
+      if (!document.querySelector('.legal-page')) {
+        // '공식 창구' 같은 보통 말은 섹션 제목·버튼 이름으로도 쓰여 오탐이 난다.
+        // 고지 문장에만 나오는 어구로 좁힌다.
+        ['정부 공식 사이트가 아닙니다', '지침 개정', '참고 자료이며'].forEach((k) => {
+          const n = text.split(k).length - 1;
+          if (n >= 2) dup[k] = n;
+        });
+      }
 
       // 한글이 어절 한가운데서 끊겼는가.
       //
