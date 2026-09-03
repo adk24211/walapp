@@ -27,13 +27,11 @@
     "start": ""
   },
   "apply_url": "https://www.work24.go.kr",
-  "audiences": [
-    "senior"
-  ],
+  "audiences": [],
   "benefit_raw": "○ 자신에 대한 흥미 특성에 대한 이해를 돕고 개인의 특성에 보다 적합한 진로분야를 선택할 수 있도록 지원\n- 좋아하는 활동, 관심있는 직업, 선호하는 분야를 탐색하여 자신의 직업흥미유형을 파악하고, 직업흥미유형에 적합한 직업을 탐색할 수 있도록 검사 결과 제공",
   "category": "jobs",
   "contact_raw": "한국고용정보원/1577-7114",
-  "content_hash": "sha256:6e6facb7df387c339f798479aaf90dbd",
+  "content_hash": "sha256:6515e36c3a0458de383c0141a72fccd7",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -49,7 +47,7 @@
   "name": "준고령자 직업선호도검사 서비스",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55190400002",
   "org": "한국고용정보원",
-  "primary_audience": "senior",
+  "primary_audience": "",
   "receiver_raw": "",
   "region": {
     "scope": "national",

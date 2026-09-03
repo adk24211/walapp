@@ -22,13 +22,12 @@
   },
   "apply_url": "",
   "audiences": [
-    "disabled",
     "lowincome"
   ],
   "benefit_raw": "○ 일반건강검진(20세~64세)\n- 문진과 진찰\n- 신체계측, 혈압측정, 시력․청력 측정\n- 흉부방사선 촬영, 요검사, 혈액검사\n- 구강검진\n- 심뇌혈관질환 위험평가\n- 인지기능장애 검사\n- B형 간염검사\n- C형 간염검사\n- 구강 치면세균막 검사\n- 골밀도 검사\n- 생활습관평가\n- 정신건강검사(우울증, 조기정신증)\n- 폐기능검사",
   "category": "health",
   "contact_raw": "국민건강보험공단/1577-1000",
-  "content_hash": "sha256:350dcdfe4b5e8792aeac0eb8fa278540",
+  "content_hash": "sha256:00276ae3883895ec08a767e44c9da266",
   "criteria_raw": "○ 의료급여 수급권자",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,7 +43,7 @@
   "name": "의료급여수급권자 일반건강검진비 지원",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/408000000419",
   "org": "보건복지부",
-  "primary_audience": "disabled",
+  "primary_audience": "lowincome",
   "receiver_raw": "",
   "region": {
     "scope": "national",

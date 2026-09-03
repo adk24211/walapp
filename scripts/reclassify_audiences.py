@@ -69,7 +69,10 @@ def blob_of(rec) -> str:
         if f == "source_category_raw":
             v = taxonomy.audience_source_category(v)
         parts.append(v)
-    return " ".join(parts)
+    # ⚠️ 줄바꿈으로 잇는다. 공백으로 이으면 strip_exclusion_sections 가
+    #    '지원 제외 대상' 다음 필드까지 통째로 삼킨다 — 자세한 사정은
+    #    collect/adapters/base.py 의 audience_blob 주석에 적어 뒀다.
+    return "\n".join(parts)
 
 
 def main() -> int:

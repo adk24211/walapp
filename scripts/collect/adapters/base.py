@@ -79,8 +79,24 @@ class BaseAdapter:
         # 자세한 사정은 taxonomy.audience_source_category 주석.
         blob = " ".join([name, target_raw, benefit_raw, criteria_raw,
                          source_category_raw, org])
-        audience_blob = " ".join([name, target_raw, benefit_raw, criteria_raw,
-                                  taxonomy.audience_source_category(source_category_raw), org])
+        # ⚠️ 대상 분류용 blob 만 **줄바꿈**으로 잇는다. 공백으로 이으면
+        #    strip_exclusion_sections 가 다음 필드까지 통째로 삼킨다.
+        #
+        #    그 함수는 '○ 지원 제외 대상' 줄부터 다음 '○' 줄 전까지를 버린다.
+        #    그런데 공백으로 이으면 지원대상의 마지막 줄("⑥ 만 75세 이상자 등")과
+        #    선정기준의 첫 줄("○ 직업경력, …")이 **한 줄**이 되어 버린다. 그 줄은
+        #    '○' 로 시작하지 않으므로 버리는 상태가 안 풀리고, 선정기준 전체가
+        #    분류에서 사라진다.
+        #
+        #    국민내일배움카드(조회 5,090,712)가 291자 중 84자로만 분류되고 있었다.
+        #    지금은 그래도 결과가 같지만(전량 재분류해 0건 변화 확인), 원문이
+        #    조금만 달라지면 티 없이 틀린다.
+        #
+        #    ⚠️ reclassify_audiences.blob_of 와 **같아야 한다**. 한쪽만 고치면
+        #       재분류가 수집과 다른 답을 내고, 다음 동기화가 그 차이를 '변경' 으로
+        #       잡아 재생성이 한 번 더 든다.
+        audience_blob = "\n".join([name, target_raw, benefit_raw, criteria_raw,
+                                   taxonomy.audience_source_category(source_category_raw), org])
 
         # 대상 목록이 인자로 넘어왔으면 원천이 직접 분류한 값이다(복지로의
         # lifeArray·trgterIndvdlArray). 키워드 추정보다 신뢰도가 높으므로
