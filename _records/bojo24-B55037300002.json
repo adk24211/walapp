@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "초·중·고교생",
+      "일반인 단체",
+      "인솔자는 반드시 참석해야 합니다"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "홈페이지에서 온라인 신청 양식을 작성합니다. 작성한 내용을 확인한 뒤 제출하면 신청이 완료됩니다. 별도의 구비 서류는 필요하지 않습니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "한국지역난방공사 통합운영센터 견학은 초·중·고교생 및 일반인 단체를 대상으로 전 지사의 시설운영 상황실 역할을 소개하고, 브리핑실을 연중 무료로 운영하며, 열병합발전 전시모형 관람을 통해 지역난방 공급과정을 이해할 수 있는 프로그램입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.kdhc.co.kr",
+  "audiences": [
+    "student"
+  ],
+  "benefit_raw": "○ 한국지역난방공사 전 지사의 시설운영을 총괄하는 종합상황실 역할 소개\n\n○ 통합운영센터 브리핑실 연중 무료 운영\n\n○ 열병합발전 전시모형 관람을 통한 지역난방 공급과정 이해",
+  "category": "care",
+  "contact_raw": "통합운영처 통합운영부/031-8018-6473",
+  "content_hash": "sha256:db84a801fb4d4afa9016655bf6a40845",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-03",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55037300002",
+  "is_mock": false,
+  "last_checked": "2026-09-03",
+  "last_updated": "2026-09-03",
+  "law_raw": "",
+  "name": "한국지역난방공사 통합운영센터 견학",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55037300002",
+  "org": "한국지역난방공사",
+  "primary_audience": "student",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "한국지역난방공사-통합운영센터-견학",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 시설이용 법인/시설/단체",
+  "source_id": "B55037300002",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "초,중,고교생(인솔자 필수 참석) 및 일반인 단체",
+  "view_count": 1125
+}

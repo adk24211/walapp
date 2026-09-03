@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "초등학생 4학년",
+      "초등학생 5학년",
+      "초등학생 6학년"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청서를 작성하여 제출합니다. 구비 서류는 해당없으며, 접수 기관이 명시되지 않아 별도의 방문 신청도 가능합니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "독립기념관에서 운영하는 어린이 독립군체험학교는 초등학교 4·5·6학년을 대상으로 연 60회의 신흥무관학교 생활 체험 교육을 제공하는 프로그램입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "독립기념관 홈페이지, 공문 안내",
+    "start": ""
+  },
+  "apply_url": "http://www.i815.or.kr",
+  "audiences": [
+    "student"
+  ],
+  "benefit_raw": "○ 대표적 독립군 양성학교인 신흥무관학교 일상생활을 체험하며 독립을 향한 우리 조상들의 희생과 활동을 살펴보는 어린이 체험 교육 프로그램(연 60회)",
+  "category": "care",
+  "contact_raw": "교육부/041-560-0256",
+  "content_hash": "sha256:c83f5cde5095bb9d37c9d2c9c2126af2",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-03",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55100100010",
+  "is_mock": false,
+  "last_checked": "2026-09-03",
+  "last_updated": "2026-09-03",
+  "law_raw": "",
+  "name": "독립기념관 어린이 독립군체험학교",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55100100010",
+  "org": "독립기념관",
+  "primary_audience": "student",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "독립기념관-어린이-독립군체험학교",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 법인/시설/단체",
+  "source_id": "B55100100010",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "초등학생 4, 5, 6학년(학급별 교육)",
+  "view_count": 1102
+}

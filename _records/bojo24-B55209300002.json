@@ -1,0 +1,65 @@
+{
+  "_prose": {
+    "eligibility": [
+      "중학생",
+      "고등학생",
+      "선정 기준이 별도로 제시되지 않음"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "제공된 온라인 양식에 따라 신청합니다. 보안서약서·개인정보활용동의서·신분증·출입자정보(생년월일·성명)를 함께 제출합니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "안전에너지 원자력연료 체험은 중·고등학생을 대상으로 원자력연료 제조공정을 견학하여 안전성 체험과 에너지 이해를 높이는 프로그램입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.ggoomgil.go.kr",
+  "audiences": [
+    "student"
+  ],
+  "benefit_raw": "원자력연료 제조공정 견학을 통한 안정성 체험 및 에너지 이해 증진",
+  "category": "care",
+  "contact_raw": "소통협력실/042-868-1144",
+  "content_hash": "sha256:bcc1414316cc6ef3867e8f5c175e2425",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "보안서약서 / 개인정보활용동의서 / 신분증 /",
+    "출입자정보 사전 제출(생년월일",
+    "성명)"
+  ],
+  "first_published": "2026-09-03",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55209300002",
+  "is_mock": false,
+  "last_checked": "2026-09-03",
+  "last_updated": "2026-09-03",
+  "law_raw": "",
+  "name": "안전에너지 원자력연료 체험",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55209300002",
+  "org": "한전원자력연료(주)",
+  "primary_audience": "student",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "안전에너지-원자력연료-체험",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 시설이용 개인",
+  "source_id": "B55209300002",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "중·고등학생",
+  "view_count": 1146
+}

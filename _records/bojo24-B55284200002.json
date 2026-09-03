@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "북한이탈주민이어야 합니다.",
+      "중고등학생인 북한이탈주민 재학생이어야 합니다.",
+      "대학(원)생인 북한이탈주민 재학생이어야 합니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청 페이지에 접속하여 지원자 정보를 입력합니다. 제출 후 확인 메일을 받으시면 신청이 완료됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "북한이탈주민 장학금 지원은 중고등학생 및 대학(원) 재학생인 북한이탈주민에게 각각 100만원·200만원을 지급하는 교육·역량 분야 지원 제도입니다. 온라인으로 신청할 수 있습니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "https://online.nkrf.or.kr",
+  "audiences": [
+    "student"
+  ],
+  "benefit_raw": "○ 장학금 지급\n- 북한이탈주민 중(고등)학생,대학(원)생에게 심사를 통해 장학금 지급\nㆍ중(고등)학생 100만원 / 대학(원)생 200만원",
+  "category": "education",
+  "contact_raw": "교육지원부/02-3215-5853",
+  "content_hash": "sha256:a363900cb6fea9361e41e066fab426fa",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-03",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55284200002",
+  "is_mock": false,
+  "last_checked": "2026-09-03",
+  "last_updated": "2026-09-03",
+  "law_raw": "",
+  "name": "북한이탈주민 장학금 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55284200002",
+  "org": "북한이탈주민지원재단",
+  "primary_audience": "student",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "북한이탈주민-장학금-지원",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금 개인",
+  "source_id": "B55284200002",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 북한이탈주민 재학생(중고등학생, 대학(원)생)",
+  "view_count": 1306
+}
