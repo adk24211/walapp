@@ -28,12 +28,13 @@
   },
   "apply_url": "",
   "audiences": [
-    "parent"
+    "parent",
+    "lowincome"
   ],
   "benefit_raw": "○ 질병, 부상, 출산 등 요양비\n\n○ 자동 복막투석에 사용되는 복막 관류액 또는 소모성 재료비\n\n○ 당뇨병 소모성 재료\n\n○ 당뇨병 관리기기\n\n○ 자가 도뇨 소모성 재료(간헐적 도뇨 카테터)\n\n○ 산소 치료\n\n○ 인공호흡기 대여 서비스 등\n\n○ 기침유발기\n\n○ 양압기",
   "category": "health",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:0ccfe218f41f021612e533ee9c733fea",
+  "content_hash": "sha256:5f466eaec40a1f327e6cbd1a3b6e00fe",
   "criteria_raw": "○ 의료급여 수급권자가 긴급하거나 그 밖의 부득이한 사유로 의료급여기관과 동일한 기능을 수행하는 기관에서 질병·부상·출산 등에 대하여 의료급여를 받거나 의료급여기관 외의 장소에서 출산을 한 경우",
   "deferred_detail": false,
   "documents_raw": [

@@ -29,12 +29,13 @@
   "apply_url": "",
   "audiences": [
     "parent",
-    "disabled"
+    "disabled",
+    "lowincome"
   ],
   "benefit_raw": "○ 의료급여 수급권자에 대한 의료비를 지원",
   "category": "health",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:eaa6a59e023cf64096c3a3f7961caad0",
+  "content_hash": "sha256:4376bfc9f4514256fa18ba1dfae21e32",
   "criteria_raw": "○ 의료급여 1종 수급권자",
   "deferred_detail": false,
   "documents_raw": [

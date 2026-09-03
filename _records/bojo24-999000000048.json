@@ -35,12 +35,13 @@
   },
   "apply_url": "",
   "audiences": [
-    "senior"
+    "senior",
+    "lowincome"
   ],
   "benefit_raw": "○ 가족요양비 지급액 : 매월 수급자에게 233,400원 지급('25년 기준)",
   "category": "health",
   "contact_raw": "국민건강보험공단/1577-1000",
-  "content_hash": "sha256:517175fd0c65c126220af23741627578",
+  "content_hash": "sha256:8f676f2f411d337ead37f0cb6a0983f5",
   "criteria_raw": "○ 소득수준과 상관없이 노인장기요양 보험 가입자(국민건강보험 가입자와 동일)와 그 피부양자, 의료급여 수급권자로서 65세 이상 노인과 64세 이하 노인성 질병이 있다면 지원가능\n\n○ 3~5등급자는 등급판정위원회가 심의하여 시설급여 대상으로 판정 받은 사람에 한하여 지원",
   "deferred_detail": false,
   "documents_raw": [
@@ -59,7 +60,7 @@
   "name": "특별현금급여 (가족요양비)",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000048",
   "org": "보건복지부",
-  "primary_audience": "senior",
+  "primary_audience": "lowincome",
   "receiver_raw": "국민건강보험공단 지사",
   "region": {
     "scope": "national",
