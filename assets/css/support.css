@@ -146,8 +146,14 @@
   transition: border-color .15s, color .15s, background .15s;
 }
 .hub-chip:hover { border-color: var(--brand); color: var(--brand-dark); }
-.hub-chip.active { background: var(--brand); border-color: var(--brand); color: #fff; }
-[data-theme="dark"] .hub-chip.active { color: #10231D; }
+/* 지금 위치를 알려 주는 칩. 밝은 브랜드 그린(#2BA888)에 흰 글자는 2.97:1 로,
+   이 사이트에서 대비가 가장 낮은 글자였다 — 하필 '내가 어디에 있는가' 를
+   말하는 글자다. 진한 쪽(--brand-dark)으로 내리면 6.2:1 이 된다.
+   다크 테마는 --brand 가 이미 밝은 민트(#5DCAA5)라 어두운 글자로 8.17:1 이고,
+   여기서 --brand-dark 를 쓰면 오히려 밝은 배경에 밝은 글자가 된다. 그래서
+   배경을 라이트에서만 바꾼다. */
+.hub-chip.active { background: var(--brand-dark); border-color: var(--brand-dark); color: #fff; }
+[data-theme="dark"] .hub-chip.active { background: var(--brand); border-color: var(--brand); color: #10231D; }
 
 /* 대상 허브 아래 한 줄 더 — 같은 대상 안에서 분야로 좁히는 링크.
    위 줄(대상 갈아타기)과 같은 굵기면 두 줄이 한 덩어리로 보여 어느 쪽이
@@ -254,6 +260,16 @@
   font-family: var(--font-sans);
   font-size: 1.05rem; font-weight: 700; line-height: 1.4;
   letter-spacing: -.025em; color: var(--ink); word-break: keep-all;
+}
+/* 요약 — 두 줄에서 자른다.
+   줄 수를 고정하는 것이 핵심이다. 자유롭게 흐르게 두면 카드마다 높이가 달라져
+   그리드가 흔들린다 — 그래서 한때 요약을 통째로 뺐었다. 두 줄이면 무슨 제도인지
+   알기에 충분하고 높이는 일정하다. */
+.pcard-sum {
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: .84rem; line-height: 1.6; color: var(--ink2);
+  word-break: keep-all; margin-top: -.05rem;
 }
 .pcard-amount {
   font-size: 1.14rem; font-weight: 700; letter-spacing: -.035em;
@@ -843,6 +859,7 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
 .pcard .pcard-body { gap: .28rem; padding: .95rem 1.1rem; }
 .pcard-title { font-size: 1rem; line-height: 1.35; }
 .pcard-amount { font-size: 1.05rem; margin-top: 0; }
+.pcard-sum { font-size: .82rem; line-height: 1.55; }
 .pcard-meta { padding-top: .6rem; gap: .15rem .6rem; font-size: .76rem; }
 
 /* ── 그리드 — 3열에서 4열로 ──
@@ -1030,6 +1047,31 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
   font-size: .73rem; color: var(--ink3); white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
+/* 분야 — 회색 메타 줄에서 이것만 색을 갖는다. 제도 카드의 .pcard-cat 과 같은
+   규칙이다: 한 줄에 회색 값이 여럿이면 눈이 어디부터 읽을지 못 정한다. */
+.tx-cat {
+  display: inline-flex; align-items: center; gap: .28rem;
+  font-size: .73rem; font-weight: 600; letter-spacing: -.01em;
+  white-space: nowrap; color: var(--c, var(--ink2));
+}
+.tx-cat::before {
+  content: ""; width: 5px; height: 5px; border-radius: 50%;
+  background: currentColor; flex: 0 0 auto;
+}
+
+/* ── 대상별 색인(/who/)에서만 붙는 것 ── */
+/* 대상은 이름이 스스로를 설명하지 못한다 — '학생' 이 대학생까지인지, '청년' 이
+   몇 살까지인지는 이름이 답하지 않는다. 왼쪽 칸에 한 줄 설명이 들어가면서
+   168px 로는 서너 줄로 접혔다. 대상은 열한 줄뿐이라 왼쪽을 넓혀도 오른쪽
+   세 칸이 좁아지는 폭이 크지 않다. */
+.topic-index.is-audience .tx-row { grid-template-columns: 232px minmax(0, 1fr); }
+.topic-index.is-audience .tx-name { display: flex; align-items: baseline; gap: .4rem; }
+.tx-emoji { font-size: 1.1rem; line-height: 1; }
+.tx-desc {
+  margin-top: .3rem;
+  font-size: .78rem; line-height: 1.5; color: var(--ink2);
+  word-break: keep-all;
+}
 
 /* 시간 축 두 줄 — 분야 줄과 같은 생김새를 쓰되 색만 다르다 */
 .tx-row.is-deadline { --c: var(--urgent); }
@@ -1037,6 +1079,9 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
 
 @media (max-width: 1000px) {
   .tx-row { grid-template-columns: 118px minmax(0, 1fr); gap: 0 1rem; padding: 1rem 1rem; }
+  /* 118px 에 한 줄 설명을 넣으면 두 글자씩 끊긴다. 대상별만 예외로 둔다. */
+  .topic-index.is-audience .tx-row { grid-template-columns: 176px minmax(0, 1fr); }
+  .tx-desc { font-size: .74rem; }
   .tx-name { font-size: 1.08rem; }
   .tx-more { font-size: .7rem; padding: .18rem .5rem; }
   .tx-item { padding: .7rem .75rem; }
@@ -1049,6 +1094,10 @@ body:has(.apply-dock) .site-footer { padding-bottom: 5.5rem; }
      꼴로 읽혔다. 두 축이 서로 다른 자리에서 시작하면 그건 색인이 아니다. */
   .tx-row { grid-template-columns: minmax(0, 1fr); gap: .6rem; padding: 1.15rem 1.1rem; }
   .tx-topic { flex-direction: row; align-items: baseline; gap: .45rem; flex-wrap: wrap; }
+  /* 좁아지면 왼쪽 칸이 가로 한 줄이 된다. 설명은 이름·건수·전체보기 사이에
+     끼면 읽을 수 없으니 통째로 줄을 바꿔 아래에 깐다. */
+  .topic-index.is-audience .tx-row { grid-template-columns: minmax(0, 1fr); }
+  .tx-desc { flex-basis: 100%; margin-top: .1rem; }
   .tx-name { font-size: 1.02rem; }
   .tx-more { margin-top: 0; margin-left: auto; }
   /* 항목의 좌우 패딩만큼 목록을 바깥으로 당긴다. 그래야 항목의 **글자**가
