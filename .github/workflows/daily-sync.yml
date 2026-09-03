@@ -269,6 +269,14 @@ jobs:
       - name: Check fact verification
         run: python scripts/check_verify.py
 
+      # 공개 문서가 코드에 없는 것을 말하고 있지 않은지. 조용히 틀리는 부류라
+      # 기계가 본다 — 실제로 소개·면책이 "두 개의 공식 API 에서 받아 온다" 고
+      # 단정하고 있었는데 두 번째 원천의 기여분은 0건이었고, 처리방침은
+      # "두 가지 Google 서비스" 라고 적어 두었는데 글꼴을 받는 호스트가 셋 더
+      # 있었다. 둘 다 문서가 쓰일 때는 맞았고 코드가 나중에 달라진 경우다.
+      - name: Check public claims
+        run: python scripts/check_claims.py
+
       - name: Deploy to GitHub Pages
         if: ${{ github.event.inputs.dry_run != 'true' }}
         uses: peaceiris/actions-gh-pages@v3

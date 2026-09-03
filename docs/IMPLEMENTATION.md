@@ -277,6 +277,8 @@ scripts/
 ├── scripts/check_period.py    신청기한 표기 24종 기대값 표 ★ 파서를 고치면 먼저 돌린다
 ├── scripts/check_layout.mjs   데스크톱 1440 / 태블릿 768 / 모바일 390 레이아웃 점검
 ├── scripts/check_contrast.mjs 글자 대비 WCAG AA · 라이트/다크 두 테마 ★ 색을 만지면 돌린다
+├── scripts/check_claims.py    공개 문서가 말하는 원천·외부 서비스가 코드와 맞는지 (CI)
+├── scripts/restore_thinner.py 재생성이 오히려 얇게 만든 페이지를 되살린다 (토큰 0)
 └── scripts/inspect_api.py     새 API 의 필드명 조사 (--docs / --probe)
 
 앞의 셋 중 `check_layout` · `check_contrast` 는 브라우저가 필요해 CI 에 넣지 않았습니다
