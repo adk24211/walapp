@@ -147,6 +147,7 @@ def main() -> int:
 
     reg = registry.Registry()
     result = publish.WriteResult()
+    reverted: list[tuple[str, int, int]] = []
     # run_all 과 같은 방식으로 날짜를 정한다. date.today() 를 쓰면 TZ 가 UTC 인
     # 곳에서 KST 새벽에 돌 때 하루가 어긋나고, POST_DATE override 도 무시된다.
     date_override = os.environ.get("POST_DATE")
@@ -176,17 +177,61 @@ def main() -> int:
                 record.first_published = entry.first_published
                 record.revision = entry.revision
 
+            # ⚠️ 다시 쓴 것이 더 얇으면 되돌린다.
+            #
+            #    2026-09-02 배치에서 28건 중 2건이 그렇게 됐다. 특히
+            #    '구직자 취업지원 서비스 제공'(조회 209,401)은 439자 → 205자로
+            #    반 토막이 났다 — 자격 3개가 2개("구직자"/"취업희망자", 사실상
+            #    제목 되풀이)로 줄고, 절차 2단계가 뭉뚱그린 1단계가 되고,
+            #    자주 묻는 질문 절이 통째로 사라졌다. 원문 635자짜리라
+            #    프롬프트가 요구한 하한(자격 4~7 · 절차 2~4)에도 못 미친다.
+            #
+            #    모델이 하한을 지키지 않는 일은 막을 수 없지만, 그 결과를
+            #    **받아들일지는** 우리가 정할 수 있다. 얇은 페이지를 두껍게
+            #    하려고 도는 작업이 페이지를 얇게 만들면 그건 그냥 손해다.
+            #    되돌리는 데 토큰이 들지 않는다 — 이전 해설이 아직
+            #    prev_prose 에 있다.
+            #
+            #    '같으면' 이 아니라 '더 얇으면' 만 되돌린다. 길이가 줄지 않은
+            #    재작성은 문장이 나아졌을 수 있으므로 판단하지 않는다.
+            prev_prose = registry.load_prose(record.id)
             before = own_len(record)
             publish._write_one(record, reg, today, client, True, False, result)
             after = own_len(record)
-            if after != before:
+
+            if prev_prose and after < before:
+                log.warning("  ⤺ %s — %d자 → %d자 로 얇아져 이전 문장을 되돌립니다.",
+                            record.name, before, after)
+                #    되돌리는 것은 세 가지다: 저장된 해설(_records), 화면에
+                #    나가는 마크다운(_programs), 그리고 원장의 revision.
+                #    revision 은 _write_one 이 이미 1 올려 놓았으므로, 내용이
+                #    그대로 돌아간 마당에 판(版)만 올라가 있으면 안 된다.
+                #    ⚠️ 레코드에 찍힌 날짜·판도 함께 되돌린다. _write_one 이
+                #       last_updated·last_checked 를 오늘로, revision 을 +1 로
+                #       바꿔 놓았는데, 내용이 그대로 돌아갔으면 "오늘 고쳤다"
+                #       고 말하는 dateModified 가 거짓이 된다. 되돌리기는
+                #       아무 일도 없었던 것처럼 끝나야 한다.
+                if entry is not None:
+                    record.revision = entry.revision
+                    record.last_updated = entry.last_updated
+                    record.last_checked = entry.last_checked
+                    reg.entries[record.id] = entry
+                registry.save_record(record, prev_prose)
+                path = registry.PROGRAMS_DIR / record.path()
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(render.to_markdown(record, prev_prose), encoding="utf-8")
+                reverted.append((record.name, before, after))
+            elif after != before:
                 log.info("  └ 자체 문장 %d자 → %d자 (%+d)", before, after, after - before)
     except generate_program.DailyQuotaExhausted as e:
         log.warning("일일 한도 소진 — 여기서 멈춥니다: %s", e)
         log.warning("다시 쓴 %d건은 그대로 남습니다. 내일 이어서 돌리면 됩니다.", len(result.updated))
 
     reg.save()
-    log.info("완료 — 다시 씀 %d건 · 반려 %d건", len(result.updated), len(result.rejected))
+    log.info("완료 — 다시 씀 %d건 · 되돌림 %d건 · 반려 %d건",
+             len(result.updated) - len(reverted), len(reverted), len(result.rejected))
+    for name, before, after in reverted:
+        log.warning("  되돌림 [%s] %d자 → %d자", name, before, after)
     for item in result.rejected:
         log.warning("  반려 [%s] %s", item.get("name"), item.get("reason"))
     return 0

@@ -28,6 +28,9 @@ REVIEW_FILE = DATA_DIR / "review_needed.json"
 INCOMPLETE_FILE = DATA_DIR / "incomplete.json"
 # 신청기한 표기 분포 (scripts/sync.py PeriodStats). 사이트에 나가지 않는 진단용이다.
 PERIOD_FILE = DATA_DIR / "period_formats.json"
+# 원천에 몇 건이 있고 그중 얼마를 다루는지. 소개 화면이 이 파일을 읽어 커버리지를
+# 밝힌다 — 숫자를 HTML 에 적어 두면 다음 동기화부터 거짓말이 되기 때문이다.
+COVERAGE_FILE = DATA_DIR / "coverage.json"
 
 # 제도 원본 레코드. REDESIGN.md 는 `_data/programs/` 로 적었으나 `_records/` 로 옮겼다.
 # Jekyll 은 `_data` 하위를 전부 읽어 site.data 에 올리는데, 레코드가 수천 건이 되면
@@ -238,6 +241,16 @@ def save_incomplete(items: list[dict]) -> None:
 def save_period_report(data: dict) -> None:
     """신청기한 표기 분포를 남긴다. 못 읽은 표기가 다음 파서 작업 목록이 된다."""
     _write_json(PERIOD_FILE, data)
+
+
+def save_coverage(data: dict) -> None:
+    """원천 대비 커버리지. 소개 화면(/about/)이 읽는다.
+
+    사람이 화면에서 보게 될 숫자이므로 동기화가 실제로 센 값만 담는다.
+    추정하거나 반올림해서 적지 않는다 — 그러면 다음에 누가 그 숫자를 근거로
+    다른 계산을 한다.
+    """
+    _write_json(COVERAGE_FILE, data)
 
 
 # ─────────────────────────────────────────────────────────────

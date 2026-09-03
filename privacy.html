@@ -3,7 +3,7 @@ layout: default
 title: 개인정보 처리방침
 permalink: /privacy/
 # 문서를 실제로 고친 날. 빌드 때마다 바뀌면 안 된다(본문 주석 참고).
-updated: 2026-08-29
+updated: 2026-09-03
 ---
 
 <div class="legal-page">
@@ -42,7 +42,22 @@ updated: 2026-08-29
     <li><a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">www.aboutads.info</a>에서 제3자 벤더 쿠키 일괄 거부</li>
     <li><a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics 차단 브라우저 부가기능</a></li>
   </ul>
+  {%- comment -%}
+    ⚠️ 이 문단은 **콘솔 설정**을 말한다. 저장소를 아무리 읽어도 확인할 수 없는
+       유일한 문장이었다. 예전에는 "동의 여부를 여쭙습니다" 라고 단정해 두었는데,
+       그게 실제로 켜져 있는지 아무도 확인한 적이 없었다.
+
+       지금은 _config.yml 의 adsense_eea_cmp 가 상태를 들고 있다. 콘솔에서
+       켜져 있는 것을 **눈으로 확인한 뒤에** 그 값을 true 로 바꾸면 그때
+       단정하는 문장이 나간다. 그 전까지는 확인된 것만 적는다.
+
+       ⚠️ 값을 true 로 바꾸는 것이 도구를 켜는 것이 아니다. 순서가 반대다.
+  {%- endcomment -%}
+  {% if site.adsense_eea_cmp %}
   <p>유럽 경제 지역(EEA)·영국·스위스에서 접속하신 경우, Google이 제공하는 동의 관리 도구를 통해 광고 쿠키 사용에 대한 동의 여부를 여쭙습니다. 동의하지 않으셔도 사이트 이용에는 제한이 없습니다.</p>
+  {% else %}
+  <p>본 사이트는 국내 이용자를 대상으로 합니다. 유럽 경제 지역(EEA)·영국·스위스 등 별도의 사전 동의 절차가 요구되는 지역에서 접속하시는 경우, 위에 안내한 브라우저 설정과 Google 광고 설정으로 광고 쿠키 사용을 거부하실 수 있습니다. 어느 쪽을 택하셔도 사이트의 모든 내용을 그대로 보실 수 있습니다.</p>
+  {% endif %}
 
   <h2>4. 아동의 개인정보</h2>
   <p>사이트는 만 14세 미만 아동을 대상으로 하지 않으며, 해당 아동의 개인정보를 고의로 수집하지 않습니다.</p>

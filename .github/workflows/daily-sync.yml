@@ -33,6 +33,10 @@ on:
         description: "표적 재생성 상한 (regenerate 모드에서만)"
         required: false
         default: "40"
+      daily_regen_limit:
+        description: "매일 동기화 전에 다시 쓸 건수 (0 이면 하지 않음)"
+        required: false
+        default: ""
       post_date:
         description: "기준 날짜 (YYYY-MM-DD, 비워두면 오늘)"
         required: false
@@ -103,6 +107,45 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
+      # ── 하루 토큰의 일부를 이미 낸 페이지에 쓴다 ──
+      #
+      # 왜 필요했나. Groq TPD 는 200,000 이고 제도 하나에 약 4,600 토큰이 든다.
+      # 하루 43건이 이론상 상한인데, 창(window)이 24시간이고 일일 실행 간격도
+      # 24시간이라 앞뒤 두 실행이 창을 나눠 쓴다 — 그래서 실제로는 한 실행에
+      # 20건 남짓이다. 그 20건을 **전부 신규 발행에 쓰고 있었다.**
+      #
+      # 그 결과가 이렇다(2026-09-03):
+      #   · 제도 페이지 405건 중 own_chars 400자 미만이 202건(49%)이다.
+      #     ads_min_own_chars 가 400 이라 **그 절반에는 광고가 붙지 않는다.**
+      #   · 표적 재생성 대상(원문 넉넉·우리 문장 얇음)이 51건 밀려 있는데,
+      #     수동으로 돌려 봐도 그날 한도가 이미 비어 1건만 돌고 멈췄다.
+      #
+      # 애드센스가 "가치가 별로 없는 콘텐츠" 로 반려한 상태에서, 얇은 페이지를
+      # 하루 20장씩 더 얹으면서 이미 있는 얇은 페이지를 못 고치는 것은 방향이
+      # 반대다. 그래서 하루 몫을 **재생성 먼저** 떼어 쓴다.
+      #
+      # ⚠️ 순서가 중요하다. 파이프라인이 먼저 돌면 한도를 다 써 버려 이 스텝이
+      #    할 일이 없다. 오늘 수동 실행이 정확히 그렇게 됐다(1건 하고 429).
+      #
+      # ⚠️ 이건 성장 속도와의 맞바꿈이다. 밀린 것이 정리되면 DAILY_REGEN 을 0 으로
+      #    되돌리고 PER_THEME_LIMIT 을 5 로 올릴 것. 지금 값이면 하루
+      #    발행 10~12건 + 재생성 8건 ≈ 20건으로, 한 실행 몫 안에 들어간다.
+      #    밀린 51건은 대략 일주일이면 없어진다.
+      - name: Regenerate a few thin pages first
+        if: ${{ github.event.inputs.mode != 'regenerate' && github.event.inputs.dry_run != 'true' }}
+        continue-on-error: true
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          WALAPP_LLM_MODEL: ${{ vars.WALAPP_LLM_MODEL }}
+          DAILY_REGEN: ${{ github.event.inputs.daily_regen_limit || '8' }}
+          TZ: Asia/Seoul
+        run: |
+          if [ "$DAILY_REGEN" -gt 0 ] 2>/dev/null; then
+            python scripts/regenerate.py --limit "$DAILY_REGEN"
+          else
+            echo "DAILY_REGEN=$DAILY_REGEN — 건너뜁니다."
+          fi
+
       - name: Run pipeline
         if: ${{ github.event.inputs.mode != 'regenerate' }}
         env:
@@ -115,7 +158,10 @@ jobs:
           MOCK_DATA: "0"
           POST_DATE: ${{ github.event.inputs.post_date }}
           PUBLISH_MODE: ${{ github.event.inputs.publish_mode || 'theme' }}
-          PER_THEME_LIMIT: ${{ github.event.inputs.per_theme_limit || '5' }}
+          # 5 → 2 로 줄였다. 위 'Regenerate a few thin pages first' 주석 참고 —
+          # 하루 몫을 재생성과 나눠 쓰려면 발행 쪽이 줄어야 한다.
+          # 밀린 재생성이 끝나면 5 로 되돌릴 것.
+          PER_THEME_LIMIT: ${{ github.event.inputs.per_theme_limit || '2' }}
           UPCOMING_LIMIT: ${{ github.event.inputs.upcoming_limit || '1' }}
           PUBLISH_LIMIT: ${{ github.event.inputs.publish_limit || '5' }}
           REFRESH_LIMIT: ${{ github.event.inputs.refresh_limit || '10' }}

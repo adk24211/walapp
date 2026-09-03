@@ -1036,11 +1036,11 @@
   "bojo24-149200000092": {
     "content_hash": "sha256:cdc34cce93b3d4120a169c8d4229ec4c",
     "first_published": "2026-08-14",
-    "last_checked": "2026-09-03",
-    "last_updated": "2026-09-02",
+    "last_checked": "2026-09-01",
+    "last_updated": "2026-09-01",
     "name": "구직자 취업지원 서비스 제공",
     "path": "_programs/jobs/구직자-취업지원-서비스-제공.md",
-    "revision": 3,
+    "revision": 1,
     "slug": "구직자-취업지원-서비스-제공",
     "status": "active"
   },
