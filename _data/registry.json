@@ -1125,10 +1125,10 @@
     "content_hash": "sha256:4cd1e5ace7085de137826aa1705e4de7",
     "first_published": "2026-08-13",
     "last_checked": "2026-09-03",
-    "last_updated": "2026-09-02",
+    "last_updated": "2026-09-03",
     "name": "국민취업지원제도",
     "path": "_programs/jobs/국민취업지원제도.md",
-    "revision": 4,
+    "revision": 5,
     "slug": "국민취업지원제도",
     "status": "active"
   },
