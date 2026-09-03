@@ -293,7 +293,7 @@ layout: default
       <span class="sec-count">{{ open_items | size }}건</span>
     </div>
     <div class="cards">
-      {% for p in open_items %}{% include program-card.html program=p show_category=show_cat %}{% endfor %}
+      {% for p in open_items %}{% include program-card.html program=p show_category=show_cat show_status=false %}{% endfor %}
     </div>
   </div>
   {% endif %}
@@ -306,7 +306,7 @@ layout: default
       <span class="sec-count">{{ upcoming_items | size }}건</span>
     </div>
     <div class="cards">
-      {% for p in upcoming_items %}{% include program-card.html program=p show_category=show_cat %}{% endfor %}
+      {% for p in upcoming_items %}{% include program-card.html program=p show_category=show_cat show_status=false %}{% endfor %}
     </div>
   </div>
   {% endif %}
@@ -319,7 +319,7 @@ layout: default
       <span class="sec-count">{{ closed_items | size }}건</span>
     </div>
     <div class="cards">
-      {% for p in closed_items %}{% include program-card.html program=p show_category=show_cat %}{% endfor %}
+      {% for p in closed_items %}{% include program-card.html program=p show_category=show_cat show_status=false %}{% endfor %}
     </div>
   </div>
   {% endif %}
@@ -366,7 +366,7 @@ layout: default
   대상 하나가 한 줄이고, 줄마다 최신 세 건을 미리 보여 준다. 이름만 여덟 개
   늘어놓으면 그 안에 무엇이 있는지 몰라 결국 여덟 번 눌러 봐야 한다.
 {% endcomment %}
-<div class="topic-index">
+<div class="topic-index is-audience">
   {% comment %}
     ⚠️ 대상은 제도 하나가 여럿에 걸린다(분야와 다른 점이다). 그래서 최신순으로
        그냥 세 건씩 뽑으면 같은 제도가 여러 줄에 반복된다 — 실제로 24칸에 고유
@@ -389,8 +389,24 @@ layout: default
   {% if mine.size > 0 %}
   <div class="tx-row">
     <div class="tx-topic">
-      <a class="tx-name" href="{{ '/who/' | append: a | append: '/' | relative_url }}">{{ am.label }}</a>
+      {% comment %}
+        여기서만 홈 색인과 갈라진다 — 이모지와 한 줄 설명을 더 붙인다.
+
+        분야('주거'·'일자리·창업')는 이름만 봐도 무엇인지 알지만, 대상은 그렇지
+        않다. '학생' 이 대학생까지인지, '청년' 이 몇 살까지인지는 이름이 답하지
+        못한다. taxonomy 에 대상마다 그 답이 이미 있는데(만 19~39세 청년이…)
+        이 화면에서만 안 쓰고 있었다. 열한 줄을 다 눌러 봐야 알 수 있던 것을
+        색인에서 바로 읽게 한다.
+
+        이모지도 같은 데이터에 있고 대상 허브 제목(🧑‍🎓 청년을 위한 제도)에는
+        이미 나온다. 색인에만 없어서 들어가고 나올 때 같은 줄이 달라 보였다.
+        장식이 아니라 그 줄이 어느 허브로 가는지의 표식이라 aria-hidden 이다.
+      {% endcomment %}
+      <a class="tx-name" href="{{ '/who/' | append: a | append: '/' | relative_url }}">
+        {% if am.emoji %}<span class="tx-emoji" aria-hidden="true">{{ am.emoji }}</span>{% endif %}{{ am.label }}
+      </a>
       <span class="tx-count">{{ mine | size }}건</span>
+      {% if am.desc %}<span class="tx-desc">{{ am.desc }}</span>{% endif %}
       <a class="tx-more" href="{{ '/who/' | append: a | append: '/' | relative_url }}">전체보기 <span aria-hidden="true">→</span></a>
     </div>
     <div class="tx-list">

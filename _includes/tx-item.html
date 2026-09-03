@@ -2,25 +2,54 @@
   분야 색인의 항목 한 줄. 홈의 색인이 줄마다 세 건씩 내므로 같은 마크업이
   아홉 줄 × 세 건 = 스물일곱 번 반복된다. 여기 한 곳에서만 고치도록 뺐다.
 
-  파라미터: program (필수)
+  파라미터
+    program        (필수)
+    show_category  (선택, 기본 true) — 줄 제목이 이미 분야인 곳에서는 false.
 
-  오른쪽에 금액 + 기간 두 값을 둔다. 금액은 대표 금액이 뽑힌 제도에만 있고,
-  기간은 원문에 없으면 지원 지역으로 대신한다. '원문 참고' 는 여러 줄에 똑같이
-  찍히면서 아무것도 알려 주지 않아 쓰지 않는다.
+  오른쪽에 금액 · 기간 · 분야를 둔다. '원문 참고' 는 여러 줄에 똑같이 찍히면서
+  아무것도 알려 주지 않아 쓰지 않는다.
+
+  ── '전국' 을 뺀 이유 ──
+  기간이 없으면 지원 지역(region_label)으로 대신했는데, 385건이 **전부** 전국이다.
+  값이 하나뿐인 칸은 정보가 아니다. 기간이 없는 216건(56%)에 매번 같은 두 글자가
+  찍혀 있었고, 홈 색인과 /who/ 색인은 그 줄이 절반을 넘었다.
+  대신 분야를 넣는다 — 다섯 개 값이 실제로 갈리고, 대상별 색인처럼 여러 분야가
+  섞여 있는 줄에서는 이게 유일한 구분 단서다. 지역은 전국이 아닌 제도가 생기면
+  그때 되살리면 된다(아래 조건이 이미 그렇게 되어 있다).
 {% endcomment %}
 {% assign it = include.program %}
+{% assign it_cat = site.data.taxonomy.categories[it.category] %}
 <a class="tx-item" href="{{ it.url | relative_url }}">
   <span class="tx-main">
     <span class="tx-title">{{ it.title }}{% if it.status == 'upcoming' %}<span class="tx-flag">예정</span>{% endif %}</span>
     {% if it.org %}<span class="tx-meta">{{ it.org }}</span>{% endif %}
   </span>
-  <span class="tx-right">
-    {% if it.highlight %}<span class="tx-amount">{{ it.highlight }}</span>{% endif %}
-    <span class="tx-when">
+  {% comment %}
+    아래 줄은 셋 다 없을 수 있다(금액도 기간도 없고, 분야를 끈 홈 분야 색인).
+    그때 빈 span 을 그냥 내면 margin-top 만큼 밑이 벌어져 그 항목만 아래로
+    처진다 — 셋을 나란히 놓은 격자에서 한 칸만 길어 보인다. 담아 보고
+    비어 있으면 아예 내지 않는다.
+  {% endcomment %}
+  {% capture tx_right %}
+    {%- if it.highlight %}<span class="tx-amount">{{ it.highlight }}</span>{% endif -%}
+    {%- capture tx_when -%}
       {%- if it.status == 'upcoming' and it.apply_start %}{{ it.apply_start }} 시작
       {%- elsif it.apply_always %}상시 접수
       {%- elsif it.apply_end %}{{ it.apply_end }}까지
-      {%- else %}{{ it.region_label | default: '전국' }}{% endif -%}
-    </span>
-  </span>
+      {%- elsif it.region_label and it.region_label != '전국' %}{{ it.region_label }}{% endif -%}
+    {%- endcapture -%}
+    {%- assign tx_when = tx_when | strip -%}
+    {%- if tx_when != '' %}<span class="tx-when">{{ tx_when }}</span>{% endif -%}
+    {%- unless include.show_category == false -%}
+    {%- comment %}
+      data-cat 은 줄(.tx-row)이 아니라 이 span 에만 단다. 줄에 달면 항목 사이
+      세로 실선(.tx-item + .tx-item)이 항목마다 다른 색이 되고, 홈의 '마감 예정'
+      줄은 줄 색(--urgent)을 항목별 분야색에 빼앗긴다. 여기서 --c 가 필요한 건
+      이 글자 하나뿐이다.
+    {% endcomment -%}
+    {%- if it_cat %}<span class="tx-cat" data-cat="{{ it.category }}">{{ it_cat.label }}</span>{% endif -%}
+    {%- endunless -%}
+  {% endcapture %}
+  {% assign tx_right = tx_right | strip %}
+  {% if tx_right != '' %}<span class="tx-right">{{ tx_right }}</span>{% endif %}
 </a>

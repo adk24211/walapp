@@ -44,7 +44,7 @@
 .cn-step .cn-step-no {
   width: 32px; height: 32px; border-radius: 50%; margin-top: 0.4rem;
   display: grid; place-items: center; font-weight: 800; font-size: .95rem;
-  background: var(--c); color: #fff;
+  background: var(--c); color: var(--on-ink);
 }
 .cn-step .cn-step-body h4 { margin: 3px 0 6px; font-size: 1.05rem; color: var(--ink); }
 .cn-step .cn-step-body p { margin: 0; font-size: .95rem; color: var(--ink2); line-height: 1.6; }
@@ -80,7 +80,7 @@
 .cn-source .cn-source-tag {
   display: inline-flex; align-items: center; margin-bottom: 9px;
   padding: 2px 10px; border-radius: 6px;
-  background: var(--c); color: #fff; font-size: .73rem; font-weight: 700; letter-spacing: .02em;
+  background: var(--c); color: var(--on-ink); font-size: .73rem; font-weight: 700; letter-spacing: .02em;
 }
 .cn-source p {
   margin: 0; font-size: .83rem; color: var(--ink3); line-height: 1.65; word-break: keep-all;

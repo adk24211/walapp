@@ -173,6 +173,36 @@ def main() -> int:
     registry.save_period_report(result.period_stats.to_dict())
     _log_period_stats(result.period_stats)
 
+    # ── 커버리지 기록 ──
+    # 소개 화면이 "원천 몇 건 중 몇 건을 다루는가" 를 밝히는데, 그 숫자를 HTML 에
+    # 적어 두면 다음 동기화부터 틀린 말이 된다. 방금 실제로 센 값을 남겨 화면이
+    # 읽게 한다.
+    #
+    # 범위 밖(out_of_scope)이 왜 중요한가: 원천 10,961건 중 8,597건이 지자체
+    # 제도라 발행 범위(REGION_SCOPE=national) 밖이다. 이걸 밝히지 않고 "1만 건 중
+    # 405건" 만 적으면 4% 를 다루는 사이트로 읽히는데, 실제로는 다루기로 한
+    # 범위 안에서 405/2,364 다. 어느 쪽도 숨길 이유가 없으니 둘 다 적는다.
+    #
+    # dry_run 에서도 쓴다 — 파일 하나이고, 이 값은 발행 여부와 무관하게 '원천을
+    # 훑은 결과' 이기 때문이다. 커밋 단계가 _data/ 를 함께 담는다.
+    registry.save_coverage({
+        "synced_at": today.isoformat(),
+        "scopes": list(scopes),
+        # 이번 실행이 원천에서 훑은 전량
+        "source_total": result.total,
+        # 발행 범위 밖이라 건너뛴 것 (아직 발행 전인 것만 센다 — sync.run 주석 참고)
+        "out_of_scope": result.out_of_scope,
+        # 원문에 필수 항목이 없어 못 쓰는 것
+        "incomplete": len(result.incomplete),
+        # 기존 제도와 이름이 너무 비슷해 사람 확인을 기다리는 것
+        "review_needed": len(result.review_needed),
+    })
+    # ⚠️ 발행 건수를 여기 담지 않는 이유. 이 지점은 발행 **전**이라 len(reg) 는
+    #    오늘 새로 낸 것을 아직 모른다(오늘은 20건 차이가 났다). 화면은
+    #    site.programs 로 세면 언제나 정확하므로, 한 화면에 서로 다른 시점의
+    #    숫자가 섞이지 않도록 여기서는 아예 남기지 않는다.
+    #    '아직 못 낸 것' 도 화면에서 (범위 안 − 발행 − 검토대기)로 뺀다.
+
     # ── ② 큐 산출 ──
     queue_payload = queueing.build(result.new, today)
     if not dry_run:

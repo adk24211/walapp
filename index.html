@@ -155,7 +155,7 @@ top_notice: true
     {% capture tx_cat %}
       {% assign n = 0 %}
       {% for it in sorted %}{% unless tx_shown contains it.url %}{% if n < 3 %}
-        {% include tx-item.html program=it %}
+        {% include tx-item.html program=it show_category=false %}
         {% capture tx_shown %}{{ tx_shown }}{{ it.url }}|{% endcapture %}
         {% assign n = n | plus: 1 %}
       {% endif %}{% endunless %}{% endfor %}
