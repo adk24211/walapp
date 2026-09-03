@@ -21,14 +21,14 @@
     "raw": "독립기념관 홈페이지, 공문 안내",
     "start": ""
   },
-  "apply_url": "http://www.i815.or.kr",
+  "apply_url": "https://www.i815.or.kr",
   "audiences": [
     "student"
   ],
   "benefit_raw": "○ 대표적 독립군 양성학교인 신흥무관학교 일상생활을 체험하며 독립을 향한 우리 조상들의 희생과 활동을 살펴보는 어린이 체험 교육 프로그램(연 60회)",
   "category": "care",
   "contact_raw": "교육부/041-560-0256",
-  "content_hash": "sha256:c83f5cde5095bb9d37c9d2c9c2126af2",
+  "content_hash": "sha256:a4beb0a6a14c60830436d002aba7cb35",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
