@@ -23,13 +23,11 @@
     "start": ""
   },
   "apply_url": "minwon.koelsa.or.kr",
-  "audiences": [
-    "senior"
-  ],
+  "audiences": [],
   "benefit_raw": "○ 정기검사수수료 감면(100%)\n- 『노인복지법』 제32조 제1항 제1호에 따른 양로시설\n- 『노인복지법』 제34조 제1항 제1호에 따른 노인요양시설(「노인복지법 시행규칙」 제14조제1항제1호라목 또는 제18조제1항제1호라목에 따라 입 소자로부터 입소비용의 전부를 수납하여 운영하는 양로시설 또는 노인요양시설은 제외한 다)에 설치된 승강기",
   "category": "living",
   "contact_raw": "고객지원실/055-751-0915",
-  "content_hash": "sha256:25d36305822c2e716b97a64027900881",
+  "content_hash": "sha256:c298582ee39000e7328a952b88f25bd7",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -47,7 +45,7 @@
   "name": "승강기검사수수료 감면(노인복지시설)",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55366400003",
   "org": "한국승강기안전공단",
-  "primary_audience": "senior",
+  "primary_audience": "",
   "receiver_raw": "",
   "region": {
     "scope": "national",

@@ -33,13 +33,12 @@
   "apply_url": "",
   "audiences": [
     "senior",
-    "disabled",
     "lowincome"
   ],
   "benefit_raw": "○ 검진 항목\n· 건강검진 상담(문진, 키, 몸무게 등 신체검사)\n· 골밀도 검사(66세 중 여성)\n· 인지기능장애 검사( 66세 이상)\n· 생활습관평가( 70세)\n· 정신건강검사( 70세)\n· 노인신체기능(하지 기능, 평형성) 검사(66, 70, 80세)\n· 폐기능검사",
   "category": "health",
   "contact_raw": "국민건강보험공단/1577-1000",
-  "content_hash": "sha256:59a924e7c5faecb178761afa3ee72e91",
+  "content_hash": "sha256:21ceb6059d35ffbfc715960bef4678eb",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [
