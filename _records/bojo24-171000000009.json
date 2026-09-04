@@ -1,0 +1,64 @@
+{
+  "_prose": {
+    "eligibility": [
+      "보험계약의 피보험자가 의료급여 수급권자이어야 합니다.",
+      "지원 대상과 선정 기준이 동일합니다.",
+      "신규 신청과 갱신 신청 모두 지원 대상에 포함됩니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "전국에 있는 우체국을 직접 방문하여 신청합니다. 신규 신청 시 의료급여증 또는 의료급여증명서를, 갱신 신청 시 의료급여 증명서 또는 자격득실 확인서를 제출하시면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "우체국 실손의료보험에 가입한 피보험자가 의료급여 수급권자이면 납입보험료의 5%를 할인받을 수 있으며, 전국우체국을 방문해 의료급여증명서를 제출하면 적용됩니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "보험계약기간 중(신청일 이전소급적용가능)",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "우체국 실손의료보험 납입보험료의 5% 할인",
+  "category": "living",
+  "contact_raw": "우정사업본부 보험개발심사과/044-200-8664\n우체국보험고객센터/1599-0100",
+  "content_hash": "sha256:5e29cc49a0b376af4ed55dccb0a74f2d",
+  "criteria_raw": "지원대상과 동일",
+  "deferred_detail": false,
+  "documents_raw": [
+    "○ 신규신청 : 피보험자가 의료급여증 또는 의료급여증명서 제출(의료 수급권자 확인 서류)",
+    "○ 갱신신청 : 피보험자 의료급여 증명서 또는 의료급여 자격득실 확인서 제출"
+  ],
+  "first_published": "2026-09-04",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-171000000009",
+  "is_mock": false,
+  "last_checked": "2026-09-04",
+  "last_updated": "2026-09-04",
+  "law_raw": "",
+  "name": "의료급여 수급권자 우체국 실손 의료보험료 할인",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/171000000009",
+  "org": "과학기술정보통신부",
+  "primary_audience": "lowincome",
+  "receiver_raw": "전국우체국 방문 신청",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "의료급여-수급권자-우체국-실손-의료보험료-할인",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 의료지원\n현금(보험) 개인",
+  "source_id": "171000000009",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 보험계약의 피보험자가 의료급여 수급권자인 경우",
+  "view_count": 87337
+}

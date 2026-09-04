@@ -1,0 +1,77 @@
+{
+  "_prose": {
+    "eligibility": [
+      "의료급여 수급권자이어야 합니다.",
+      "장애인복지법에 따라 등록된 장애인이어야 합니다.",
+      "보조기기 급여 신청서와 보조기기 처방전, 검사 결과지를 제출해야 합니다.",
+      "지자체가 사전 적합 여부를 판정한 후 지원 여부가 결정됩니다."
+    ],
+    "faq": [
+      {
+        "a": "장애인복지법에 따라 등록된 모든 장애인 중 의료급여 수급권자이면 지원 대상이 됩니다.",
+        "q": "지원 대상이 되는 장애인 유형에 제한이 있나요?"
+      },
+      {
+        "a": "보조기기 유형별 필요한 보조기기급여신청서를 제출하고, 지자체가 사전 적합 여부를 판정하여 지원 여부가 결정됩니다.",
+        "q": "어떤 보조기기가 지원받을 수 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "신청자는 주민센터를 직접 방문하여 보조기기 처방전, 검사결과지, 검수확인서, 세금계산서 등을 제출합니다. 제출 서류를 검토한 후 지자체가 사전 적합 여부를 판정하고, 지원 여부를 결정합니다. 지원이 확정되면 보조기기 급여가 제공됩니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "의료급여를 받는 장애인에게 보조기기 급여를 제공하는 제도로, 주민센터에서 방문 신청 후 서류를 제출하면 지자체의 적합 판정에 따라 지원이 결정됩니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 장애인 보조기기 급여",
+  "category": "health",
+  "contact_raw": "보건복지상담센터/129",
+  "content_hash": "sha256:2bce76ab738875bffd574c4340848f6b",
+  "criteria_raw": "○ 장애인 보조기기 유형별 필요한 보조기기급여신청서, 보조기기 처방전, 검사 결과지 제출 하여 지자체의 사전 적합여부 판정이후 지원여부 결정",
+  "deferred_detail": false,
+  "documents_raw": [
+    "보조기기 처방전",
+    "검사결과지",
+    "검수확인서",
+    "세금계산서 등"
+  ],
+  "first_published": "2026-09-04",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-SHE000000060",
+  "is_mock": false,
+  "last_checked": "2026-09-04",
+  "last_updated": "2026-09-04",
+  "law_raw": "",
+  "name": "의료급여 장애인보조기기 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SHE000000060",
+  "org": "보건복지부",
+  "primary_audience": "disabled",
+  "receiver_raw": "주민센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "의료급여-장애인보조기기-지원",
+  "source": "bojo24",
+  "source_category_raw": "보건·의료 의료지원\n현금 개인",
+  "source_id": "SHE000000060",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 의료급여 수급권자 중 ‘장애인복지법’에 따라 등록한 장애인",
+  "view_count": 6859
+}

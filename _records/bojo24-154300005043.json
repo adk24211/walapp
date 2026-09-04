@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "농촌형 워케이션 사업에 참여하고자 하는 근로자입니다.",
+      "농촌형 워케이션 사업에 참여하고자 하는 사업주입니다.",
+      "농촌형 워케이션 사업에 참여하고자 하는 프리랜서 등입니다."
+    ],
+    "faq": [],
+    "note": "지원금은 2박3일 기준으로만 제공됩니다.",
+    "steps": [
+      {
+        "body": "온라인 신청 페이지에서 신청서를 작성하고 제출하면 됩니다. 별도의 구비 서류는 필요하지 않습니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "농촌형 워케이션에 참여하고자 하는 근로자·사업주·프리랜서를 대상으로 2박3일 기준 1인당 15만원을 정액 지원하는 생활·문화 분야 지원 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://www.welchon.com/web/index.do",
+  "audiences": [
+    "employer"
+  ],
+  "benefit_raw": "○ 워케이션 2박3일 기준 1인 15만원(1일 5만원) 정액 지원\n- 워케이션 참여자 대상 활동비(숙박비·체험비 등)",
+  "category": "living",
+  "contact_raw": "웰촌/1577-1417",
+  "content_hash": "sha256:ed851ebd7a3a1db599fa0927a2b36284",
+  "criteria_raw": "○ 농촌형 워케이션 사업 참여하고자 하는 근로자 및 사업주, 프리랜서 등",
+  "deferred_detail": false,
+  "documents_raw": [
+    "없음"
+  ],
+  "first_published": "2026-09-04",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-154300005043",
+  "is_mock": false,
+  "last_checked": "2026-09-04",
+  "last_updated": "2026-09-04",
+  "law_raw": "",
+  "name": "농촌관계인구 형성 지원(농촌형 워케이션)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/154300005043",
+  "org": "농림축산식품부",
+  "primary_audience": "employer",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "농촌관계인구-형성-지원-농촌형-워케이션",
+  "source": "bojo24",
+  "source_category_raw": "농림축산어업 현금 개인\n가구\n법인/시설/단체",
+  "source_id": "154300005043",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 농촌형 워케이션 사업 참여하고자 하는 근로자 및 사업주, 프리랜서 등",
+  "view_count": 2810
+}

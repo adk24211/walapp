@@ -1,10 +1,10 @@
 {
-  "synced_at": "2026-09-03",
+  "incomplete": 0,
+  "out_of_scope": 8593,
+  "review_needed": 84,
   "scopes": [
     "national"
   ],
-  "source_total": 10961,
-  "out_of_scope": 8597,
-  "incomplete": 0,
-  "review_needed": 84
+  "source_total": 10956,
+  "synced_at": "2026-09-04"
 }
