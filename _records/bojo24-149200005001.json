@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "수급자격자이어야 합니다.",
+      "직업안정기관장이 지시한 훈련을 받아야 합니다.",
+      "훈련을 받는 경우에만 교통비와 식대가 지원됩니다."
+    ],
+    "faq": [
+      {
+        "a": "훈련을 받은 날에 1일당 10,320원이 지급됩니다.",
+        "q": "지원금은 언제 지급되나요?"
+      }
+    ],
+    "note": "지원금은 훈련을 받은 날에만 지급되며, 훈련 외 활동에는 적용되지 않습니다.",
+    "steps": [
+      {
+        "body": "고용노동부 각 지역 관할 고용센터를 직접 방문하여 직업능력개발수당 청구서와 수강증명서 등을 제출합니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "직업능력개발수당은 직업안정기관장이 지정한 훈련을 받는 수급자에게 훈련일 1일당 10,320원을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "정확한 날짜는 개인별 수급기간 등에 따라 달라짐",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "○ 훈련을 받은 날 1일 10,320원 지급",
+  "category": "jobs",
+  "contact_raw": "고용노동부 고객상담센터/1350",
+  "content_hash": "sha256:9fb1dd1f90e4b1884a6e367c10a62548",
+  "criteria_raw": "지원대상과 동일",
+  "deferred_detail": false,
+  "documents_raw": [
+    "직업능력개발수당 청구서",
+    "수강증명서 등"
+  ],
+  "first_published": "2026-09-06",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-149200005001",
+  "is_mock": false,
+  "last_checked": "2026-09-06",
+  "last_updated": "2026-09-06",
+  "law_raw": "",
+  "name": "직업능력개발수당",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005001",
+  "org": "고용노동부",
+  "primary_audience": "lowincome",
+  "receiver_raw": "고용노동부 각 지역 관할 고용센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "직업능력개발수당",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 개인",
+  "source_id": "149200005001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 수급자격자가 직업안정기관장이 지시한 훈련을 받는 경우 교통비와 식대 지원",
+  "view_count": 64847
+}

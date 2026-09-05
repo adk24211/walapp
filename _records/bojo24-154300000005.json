@@ -1,0 +1,66 @@
+{
+  "_prose": {
+    "eligibility": [
+      "농림축산식품업종분류에 해당하는 기술·노하우를 보유하고 있어야 합니다",
+      "실용·사업화를 목표로 해야 합니다",
+      "농업법인 또는 중소기업이어야 합니다"
+    ],
+    "faq": [],
+    "note": "예산이 소진될 경우 조기 마감될 수 있습니다.",
+    "steps": [
+      {
+        "body": "홈페이지에서 온라인 신청 양식을 작성하고, 구비 서류를 첨부하여 제출합니다. 제출 후 예산 소진 시까지 평가가 진행됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "농림축산식품업종에 보유한 기술·노하우를 실용·사업화하려는 농업법인·중소기업에 저리 융자로 자금을 지원하는 제도이며, 예산이 소진될 때까지 신청 후 평가가 진행됩니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "예산 소진시 조기 마감",
+    "start": ""
+  },
+  "apply_url": "https://value.koat.or.kr",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ 우수기술 사업화에 필요한 소요자금 규모를 평가하여 저리 융자로 자금 지원",
+  "category": "jobs",
+  "contact_raw": "한국농업기술진흥원 기술평가팀/063-919-1478",
+  "content_hash": "sha256:10980cf9e385c140c2817dcdba0c27c6",
+  "criteria_raw": "○ 예산 소진 시까지 신청 후 평가 추진",
+  "deferred_detail": false,
+  "documents_raw": [
+    "금융기관 사전상담 확인서",
+    "지원사업 신청서",
+    "기술사업 계획서",
+    "법인등기부등본 등(공고문 구비서류 란 참조)"
+  ],
+  "first_published": "2026-09-06",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-154300000005",
+  "is_mock": false,
+  "last_checked": "2026-09-06",
+  "last_updated": "2026-09-06",
+  "law_raw": "",
+  "name": "기술창업자금 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/154300000005",
+  "org": "농림축산식품부",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "기술창업자금-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금(융자) 법인/시설/단체",
+  "source_id": "154300000005",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 농림축산식품업종분류에 해당하는 기술 및 노하우를 보유하고 이를 실용, 사업화하고자 하는 농업법인 또는 중소기업",
+  "view_count": 6610
+}
