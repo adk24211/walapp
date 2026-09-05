@@ -1,0 +1,64 @@
+{
+  "_prose": {
+    "eligibility": [
+      "한부모가정의 18세 미만 아동이어야 합니다.",
+      "아동양육비 지원대상자이어야 합니다.",
+      "생계 및 의료급여 대상자가 아니어야 합니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "별도의 신청 절차가 필요하지 않습니다. 지원 대상자는 자동으로 보험 혜택을 받게 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "저소득층 한부모가정의 18세 미만 아동 및 그 부양자를 대상으로, 아동양육비 지원 대상자이면서 생계·의료급여 대상자가 아닌 경우에 제공되는 단체보장성 보험 혜택을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "별도의 신청절차가 없음",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 아동양육비를 지원받는 한부모가족의 아동과 부양자를 대상으로 단체보장성 보험혜택 지원\n- (아동) 상해, 질병 후유장해, 입원일당, 수술비 등 지원\n- (부양자) 상해 및 질병 후유장해 등 지원",
+  "category": "finance",
+  "contact_raw": "서민금융콜센터/1397",
+  "content_hash": "sha256:2059d0ad296e2ee39227f9dd31f690d1",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-05",
+  "how_to_raw": "신청불필요",
+  "id": "bojo24-B55370100008",
+  "is_mock": false,
+  "last_checked": "2026-09-05",
+  "last_updated": "2026-09-05",
+  "law_raw": "",
+  "name": "저소득층 아동보험(한부모가정 의료보험) 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55370100008",
+  "org": "서민금융진흥원",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "저소득층-아동보험-한부모가정-의료보험-지원",
+  "source": "bojo24",
+  "source_category_raw": "보건·의료 현금(보험) 개인",
+  "source_id": "B55370100008",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "한부모가족의 18세 미만 아동과 그 부양자(친권자)중 두가지 조건 모두 충족\n1. 한부모가구 아동양육비 지원대상자\n2. 생계 및 의료급여 대상자가 아닌자",
+  "view_count": 6254
+}

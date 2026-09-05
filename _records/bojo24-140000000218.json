@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "신청일 현재 만 18세 이상인 자",
+      "선발은 2026년 산림청 직접일자리사업 종합지침에 따릅니다",
+      "각 채용기관(국유림관리소)의 모집공고에 명시된 기준을 충족해야 합니다"
+    ],
+    "faq": [
+      {
+        "a": "선발은 2026년 산림청 직접일자리사업 종합지침 및 각 채용기관(국유림관리소)의 모집공고에 따라 진행됩니다.",
+        "q": "선발은 언제 이루어지나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "본 사업은 별도의 신청 방법이 제공되지 않았습니다. 자세한 내용은 산림청에 문의하시기 바랍니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "산림보호지원단 일자리 제공은 산림청이 운영하는 현장 근무형 일자리로, 산림 내 불법행위 감시·계도와 정화활동을 지원합니다. 만 18세 이상인 국민을 대상으로 하며, 선발은 2026년 산림청 직접일자리사업 종합지침 및 각 채용기관 모집공고에 따릅니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "jobseeker"
+  ],
+  "benefit_raw": "○ 산림 내 불법행위 계도･감시 및 산림보호 업무보조(현장근무)\n○ 산림 내 정화활동(현장근무)",
+  "category": "jobs",
+  "contact_raw": "산림청/042-481-4067",
+  "content_hash": "sha256:33479ae9d6dccb93f6c2be9b01c08899",
+  "criteria_raw": "2026년 산림청 직접일자리사업 종합지침 및 채용기관별(국유림관리소) 모집공고에 따름",
+  "deferred_detail": false,
+  "documents_raw": [
+    "채용기관별 모집공고 참조"
+  ],
+  "first_published": "2026-09-05",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-140000000218",
+  "is_mock": false,
+  "last_checked": "2026-09-05",
+  "last_updated": "2026-09-05",
+  "law_raw": "",
+  "name": "산림보호지원단 일자리 제공",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/140000000218",
+  "org": "산림청",
+  "primary_audience": "jobseeker",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "산림보호지원단-일자리-제공",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 서비스(일자리) 개인",
+  "source_id": "140000000218",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "신청일 현재 만18세 이상인 자\n(자세한 내용은 산림청 홈페이지 채용게시판에서 '산림보호지원단' 검색)",
+  "view_count": 5204
+}

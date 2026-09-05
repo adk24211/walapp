@@ -5,12 +5,12 @@ program_id: "bojo24-B49000100210"
 source: "bojo24"
 category: jobs
 audiences: []
-view_count: 9857
+view_count: 9906
 region_scope: national
 region_label: "전국"
 org: "근로복지공단"
-summary: "근로복지공단이 운영하는 근로자 지원 프로그램(EAP)은 상시근로자 수 300인 미만 중소기업 및 소상공인 근로자를 대상으로 업무 스트레스 해소를 위한 무상 상담 서비스를 제공하는 제도입니다."
-description: "근로복지공단이 운영하는 근로자 지원 프로그램(EAP)은 상시근로자 수 300인 미만 중소기업 및 소상공인 근로자를 대상으로 업무 스트레스 해소를 위한 무상 상담 서비스를 제공하는 제도입니다."
+summary: "근로복지공단이 운영하는 근로자 지원 프로그램(EAP)은 중소기업 근로자를 대상으로 직무 스트레스 해소를 위한 무상 상담 서비스를 제공합니다."
+description: "근로복지공단이 운영하는 근로자 지원 프로그램(EAP)은 중소기업 근로자를 대상으로 직무 스트레스 해소를 위한 무상 상담 서비스를 제공합니다."
 seo:
   type: WebPage
 status: active
@@ -20,12 +20,12 @@ apply_methods: ["온라인 신청"]
 apply_url: "welfare.comwel.or.kr"
 official_url: "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B49000100210"
 first_published: "2026-08-29"
-last_updated: "2026-08-29"
-last_checked: "2026-08-29"
+last_updated: "2026-09-05"
+last_checked: "2026-09-05"
 date: "2026-08-29"
-last_modified_at: "2026-08-29"
-revision: 0
-own_chars: 268
+last_modified_at: "2026-09-05"
+revision: 1
+own_chars: 185
 source_parts: ["신청 기간", "지원 내용", "지원 대상", "소관 기관", "지원 지역", "신청 방법", "문의처"]
 own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 신청하나요"]
 ---
@@ -53,9 +53,9 @@ own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 
   </div>
   <div class="cn-sec-body">
 <ul class="cn cn-check" data-cat="jobs">
-  <li>상시근로자 수가 300인 미만인 중소기업 사업장입니다.</li>
-  <li>해당 사업장의 근로자이며, 소상공인에 해당하는 경우입니다.</li>
-  <li>지원 대상은 소상공인 사업장입니다.</li>
+  <li>상시근로자 수가 300인 미만인 중소기업 사업장</li>
+  <li>해당 사업장의 근로자</li>
+  <li>구비 서류는 필요하지 않습니다</li>
 </ul>
   </div>
 </section>
@@ -71,8 +71,8 @@ own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 
   <div class="cn-step">
     <span class="cn-step-no">1</span>
     <div class="cn-step-body">
-      <h4>온라인 신청</h4>
-      <p>근로복지공단 홈페이지 또는 근로복지넷에서 온라인 신청 양식을 작성합니다. 별도의 구비 서류는 필요하지 않으며, 신청은 상시 접수됩니다.</p>
+      <h4>신청 방법</h4>
+      <p>온라인으로 신청합니다. 신청은 상시 접수이며, 지정된 온라인 신청 페이지에서 진행합니다.</p>
     </div>
   </div>
 </div>

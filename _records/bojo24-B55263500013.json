@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "사립학교교직원연금법 적용 대상 교직원 본인",
+      "사립학교교직원연금법 적용 대상 교직원 자녀",
+      "대여 대상은 대학 등록금에 한합니다"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "제공된 신청 주소에서 온라인으로 신청서를 작성하고 제출합니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "신청이 승인되면 대학 등록금에 한해 무이자로 대여금이 지급됩니다.",
+        "title": "대여금 지급"
+      }
+    ],
+    "summary": "사립학교 교직원 및 교직원 자녀를 대상으로 대학 등록금 등을 무이자로 대여해 생활안정과 복리증진을 지원하는 국고 학자금 대여 제도이며, 온라인으로 신청 가능하고 상시 접수됩니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.tp.or.kr",
+  "audiences": [
+    "youth"
+  ],
+  "benefit_raw": "○ 교직원 자녀(교직원 포함)의 대학 학자금을 무이자로 대여함으로써 생활안정과 복리증진에 기여\n- 사립학교교직원연금법 대상 교직원 본인 및 교직원 자녀의 대학등록금 융자",
+  "category": "education",
+  "contact_raw": "대여사업팀/061-338-0242",
+  "content_hash": "sha256:6a717ff25e76c84bd77a11d397292bbb",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-05",
+  "how_to_raw": "기타 온라인신청\n직접입력",
+  "id": "bojo24-B55263500013",
+  "is_mock": false,
+  "last_checked": "2026-09-05",
+  "last_updated": "2026-09-05",
+  "law_raw": "",
+  "name": "사립학교 교직원 국고 학자금 대여",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55263500013",
+  "org": "사립학교교직원연금공단",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "사립학교-교직원-국고-학자금-대여",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금(융자) 개인",
+  "source_id": "B55263500013",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "사립학교교직원연금법 적용 대상 교직원 본인 및 교직원 자녀",
+  "view_count": 2983
+}

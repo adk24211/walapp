@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "어린이집·유치원·유·초·중·고등학교·특수학교·기타 학교에 재학 중인 자녀를 둔 보호자",
+      "연령에 관계없이 모든 국민",
+      "보호자와 국민 모두 신청 자격이 있습니다"
+    ],
+    "faq": [],
+    "note": "선정 기준이 없으므로 신청자는 모두 동일하게 지원받을 수 있습니다.",
+    "steps": [
+      {
+        "body": "학부모온누리 홈페이지에서 온라인 신청 화면에 접속합니다. 신청서를 작성하고 제출하면 됩니다. 별도 구비서류는 필요하지 않습니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "학부모온누리는 교육기관에 재학 중인 자녀를 둔 보호자와 연령에 관계없이 모든 국민에게 교육정책 정보 제공, 학부모 교육 연수, 학교 참여 교육 등 다양한 학부모 지원 서비스를 온라인으로 제공하는 양육·돌봄 분야 지원 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://www.parents.go.kr",
+  "audiences": [
+    "student"
+  ],
+  "benefit_raw": "○ 교육정책 및 학부모교육 정보 제공\n○ 학부모회, 학교운영위원회 등 학부모의 학교참여 교육(학부모회, 학교운영위원회 온라인 연수)\n○ 학교폭력예방, 교육활동보호, 선행학습예방을 위한 학부모교육 프로그램 운영(학부모 필수 교육과정)\n○ 마음바우처 발급을 위한 보호자 필수교육 운영\n○ 지역 학부모교육 정보 제공\n○ 자녀 영·유아기부터 성인초기까지 단계별 학부모 교육",
+  "category": "care",
+  "contact_raw": "전국학부모지원센터/02-3780-9937",
+  "content_hash": "sha256:b72c6dd032f94e05eb8572203052b1d9",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "별도 구비서류 없음"
+  ],
+  "first_published": "2026-09-05",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55288100003",
+  "is_mock": false,
+  "last_checked": "2026-09-05",
+  "last_updated": "2026-09-05",
+  "law_raw": "",
+  "name": "학부모온누리",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55288100003",
+  "org": "국가평생교육진흥원",
+  "primary_audience": "student",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "학부모온누리",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 개인",
+  "source_id": "B55288100003",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "교육기관(어린이집, 유치원, 유·초·중·고등학교, 특수학교, 각종학교 등) 에 재학중인 자녀를 둔 보호자와 모든 국민(연령 관계 없음)",
+  "view_count": 13142
+}

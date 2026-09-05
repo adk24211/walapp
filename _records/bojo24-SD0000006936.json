@@ -1,0 +1,65 @@
+{
+  "_prose": {
+    "eligibility": [
+      "임신부(산모)이어야 합니다.",
+      "만 19세 이하이어야 합니다.",
+      "임신확인서를 제출해야 합니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 사회서비스 전자바우처 사이트에서 신청하거나, 방문 신청이 가능합니다. 신청 시 임신확인서와 주민등록등본을 준비하시기 바랍니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "보건복지부가 시행하는 청소년산모 임신·출산 의료비 지원은 만 19세 이하 임신부에게 임신 1회당 최대 120만 원을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "임신확인서 상 임신확인일 기준으로 만 19세까지 신청 가능",
+    "start": ""
+  },
+  "apply_url": "http://www.socialservice.or.kr",
+  "audiences": [
+    "youth",
+    "parent"
+  ],
+  "benefit_raw": "○ 임신 1회당 120만 원 범위 내",
+  "category": "care",
+  "contact_raw": "보건복지상담센터/129",
+  "content_hash": "sha256:082a35e3cec9a06e8d9881b6390b18a4",
+  "criteria_raw": "○ 지원 대상 : 임신부\n\n○ 연령 기준 : 만 19세 이하",
+  "deferred_detail": false,
+  "documents_raw": [
+    "임신확인서",
+    "주민등록등본"
+  ],
+  "first_published": "2026-09-05",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-SD0000006936",
+  "is_mock": false,
+  "last_checked": "2026-09-05",
+  "last_updated": "2026-09-05",
+  "law_raw": "",
+  "name": "청소년산모 임신·출산 의료비 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000006936",
+  "org": "보건복지부",
+  "primary_audience": "parent",
+  "receiver_raw": "사회서비스 전자바우처 온라인 신청",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "청소년산모-임신-출산-의료비-지원",
+  "source": "bojo24",
+  "source_category_raw": "임신·출산 서비스(의료) 개인",
+  "source_id": "SD0000006936",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 만 19세 이하 산모",
+  "view_count": 4848
+}
