@@ -278,6 +278,8 @@ scripts/
 ├── scripts/check_layout.mjs   데스크톱 1440 / 태블릿 768 / 모바일 390 레이아웃 점검
 ├── scripts/check_contrast.mjs 글자 대비 WCAG AA · 라이트/다크 두 테마 ★ 색을 만지면 돌린다
 ├── scripts/check_claims.py    공개 문서가 말하는 원천·외부 서비스가 코드와 맞는지 (CI)
+├── scripts/check_audience.py  대상 분류 회귀 케이스 38건 ★ 키워드를 만지면 먼저 돌린다 (CI)
+├── scripts/check_overrides.py 손으로 적은 대상 덮어쓰기가 아직 근거와 맞는지 (CI)
 ├── scripts/restore_thinner.py 재생성이 오히려 얇게 만든 페이지를 되살린다 (토큰 0)
 └── scripts/inspect_api.py     새 API 의 필드명 조사 (--docs / --probe)
 

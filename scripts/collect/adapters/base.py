@@ -9,6 +9,7 @@ import re
 from datetime import date
 
 import schema
+import audience_overrides
 import taxonomy
 from schema import ApplyPeriod, ProgramRecord, Region
 from .. import url_https
@@ -103,15 +104,25 @@ class BaseAdapter:
         # 대표 테마를 고를 때 표기 순서를 그대로 존중한다.
         audiences_from_source = audiences is not None and len(audiences) > 0
 
+        # ⚠️ id 를 먼저 구한다. 손으로 적은 대상 덮어쓰기가 id 로 걸려 있어서,
+        #    ProgramRecord 를 만들면서 동시에 쓸 수 없다.
+        program_id = schema.make_id(self.source, source_id)
+
         record = ProgramRecord(
-            id=schema.make_id(self.source, source_id),
+            id=program_id,
             source=self.source,
             source_id=str(source_id),
             slug=schema.make_slug(name, source_id),
             name=name,
             org=clean_text(org),
             category=category or taxonomy.classify_category(blob),
-            audiences=audiences if audiences is not None else taxonomy.classify_audiences(audience_blob),
+            # 손으로 적은 덮어쓰기는 **원천이 준 대상에도** 적용한다. 원천이
+            # 틀렸을 때 고칠 방법이 달리 없기 때문이다.
+            # (_data/audience_overrides.json · scripts/audience_overrides.py)
+            audiences=audience_overrides.apply(
+                program_id,
+                audiences if audiences is not None else taxonomy.classify_audiences(audience_blob),
+            ),
             region=Region(scope=region_scope, sido=sido, sigungu=sigungu),
             target_raw=clean_text(target_raw),
             benefit_raw=clean_text(benefit_raw),

@@ -277,6 +277,17 @@ jobs:
       - name: Check public claims
         run: python scripts/check_claims.py
 
+      # 손으로 적은 대상 덮어쓰기가 아직 근거와 맞는지. 원문이 바뀌어 근거 문장이
+      # 사라졌는데 덮어쓰기만 남거나, 규칙을 고쳐서 필요 없어졌는데 그대로
+      # 남아 있으면 여기서 걸린다 — 덮어쓰기가 규칙의 결함을 뒤에 숨기는 것을
+      # 막는 장치다.
+      - name: Check audience overrides
+        run: python scripts/check_overrides.py
+
+      # 대상 분류 규칙의 회귀 케이스. 키워드를 넓히거나 좁힐 때마다 여기가 먼저다.
+      - name: Check audience rules
+        run: python scripts/check_audience.py
+
       - name: Deploy to GitHub Pages
         if: ${{ github.event.inputs.dry_run != 'true' }}
         uses: peaceiris/actions-gh-pages@v3

@@ -40,6 +40,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
+import audience_overrides  # noqa: E402
 import registry   # noqa: E402
 import render     # noqa: E402
 import schema     # noqa: E402
@@ -85,11 +86,18 @@ def main() -> int:
         log.error("_records/ 가 비어 있습니다.")
         return 1
 
+    # ⚠️ 수집(collect/adapters/base.py)과 **같은 순서**로 적용한다 —
+    #    규칙으로 뽑고, 그 위에 손으로 적은 덮어쓰기를 얹는다. 한쪽만 얹으면
+    #    둘이 다른 답을 내고 다음 동기화가 그 차이를 '변경' 으로 잡는다.
+    overrides = audience_overrides.load()
+    if overrides:
+        log.info("손으로 적은 대상 덮어쓰기 %d건을 함께 적용합니다.", len(overrides))
+
     changed = []
     for pid, rec in sorted(records.items(), key=lambda kv: kv[1].name):
         blob = blob_of(rec)
         before = list(rec.audiences or [])
-        after = taxonomy.classify_audiences(blob)
+        after = audience_overrides.apply(pid, taxonomy.classify_audiences(blob), overrides)
         if before == after:
             continue
         changed.append((pid, rec, before, after))
