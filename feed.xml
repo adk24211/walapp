@@ -4,8 +4,72 @@
   <subtitle>정부·지자체 지원금과 복지 제도를 받을 수 있는지부터 신청 방법까지 하나씩 정리합니다. 공공데이터 원문을 토대로 쉬운 말로 풀어 씁니다.</subtitle>
   <link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html"/>
-  <updated>2026-09-05T09:07:44+09:00</updated>
+  <updated>2026-09-06T08:56:07+09:00</updated>
   <id>https://adk24211.github.io/walapp/</id>
+  <entry>
+    <title type="text">귀화허가, 국적회복허가 신청 및 국적업무 증명서 발급 수수료 면제 안내</title>
+    <link href="https://adk24211.github.io/walapp/support/living/%EA%B7%80%ED%99%94%ED%97%88%EA%B0%80-%EA%B5%AD%EC%A0%81%ED%9A%8C%EB%B3%B5%ED%97%88%EA%B0%80-%EC%8B%A0%EC%B2%AD-%EB%B0%8F-%EA%B5%AD%EC%A0%81%EC%97%85%EB%AC%B4-%EC%A6%9D%EB%AA%85%EC%84%9C-%EB%B0%9C%EA%B8%89-%EC%88%98%EC%88%98%EB%A3%8C-%EB%A9%B4%EC%A0%9C-%EC%95%88%EB%82%B4/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/%EA%B7%80%ED%99%94%ED%97%88%EA%B0%80-%EA%B5%AD%EC%A0%81%ED%9A%8C%EB%B3%B5%ED%97%88%EA%B0%80-%EC%8B%A0%EC%B2%AD-%EB%B0%8F-%EA%B5%AD%EC%A0%81%EC%97%85%EB%AC%B4-%EC%A6%9D%EB%AA%85%EC%84%9C-%EB%B0%9C%EA%B8%89-%EC%88%98%EC%88%98%EB%A3%8C-%EB%A9%B4%EC%A0%9C-%EC%95%88%EB%82%B4/</id>
+    <published>2026-09-06T00:00:00+09:00</published>
+    <updated>2026-09-06T00:00:00+09:00</updated><author><name>법무부</name></author><category term="living"/>
+    <summary type="text">법무부가 지정한 특별공로자 및 그 가족 등에게 귀화허가·국적회복허가·국적업무 증명서 발급 시 발생하는 수수료를 면제해 주는 제도이며, 신청은 지방출입국·외국인관서에 직접 방문하여 면제 대상임을 증명하는 자료와 함께 하면 되고, 상시 접수됩니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">직업능력개발수당</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%A7%81%EC%97%85%EB%8A%A5%EB%A0%A5%EA%B0%9C%EB%B0%9C%EC%88%98%EB%8B%B9/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%A7%81%EC%97%85%EB%8A%A5%EB%A0%A5%EA%B0%9C%EB%B0%9C%EC%88%98%EB%8B%B9/</id>
+    <published>2026-09-06T00:00:00+09:00</published>
+    <updated>2026-09-06T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
+    <summary type="text">직업능력개발수당은 직업안정기관장이 지정한 훈련을 받는 수급자에게 훈련일 1일당 10,320원을 지원하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">산재근로자 대체인력지원 사업</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%82%B0%EC%9E%AC%EA%B7%BC%EB%A1%9C%EC%9E%90-%EB%8C%80%EC%B2%B4%EC%9D%B8%EB%A0%A5%EC%A7%80%EC%9B%90-%EC%82%AC%EC%97%85/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%82%B0%EC%9E%AC%EA%B7%BC%EB%A1%9C%EC%9E%90-%EB%8C%80%EC%B2%B4%EC%9D%B8%EB%A0%A5%EC%A7%80%EC%9B%90-%EC%82%AC%EC%97%85/</id>
+    <published>2026-09-06T00:00:00+09:00</published>
+    <updated>2026-09-06T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
+    <summary type="text">산재근로자 복귀와 대체인력 고용을 지원하기 위해 대체근로자 임금의 50%를 월 60만원 한도, 최대 6개월까지 지원하는 사업이며, 신청은 근로복지공단을 방문하여 할 수 있습니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">기술창업자금 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EA%B8%B0%EC%88%A0%EC%B0%BD%EC%97%85%EC%9E%90%EA%B8%88-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EA%B8%B0%EC%88%A0%EC%B0%BD%EC%97%85%EC%9E%90%EA%B8%88-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-09-06T00:00:00+09:00</published>
+    <updated>2026-09-06T00:00:00+09:00</updated><author><name>농림축산식품부</name></author><category term="jobs"/>
+    <summary type="text">농림축산식품업종에 보유한 기술·노하우를 실용·사업화하려는 농업법인·중소기업에 저리 융자로 자금을 지원하는 제도이며, 예산이 소진될 때까지 신청 후 평가가 진행됩니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">근로조건 자율개선 지원사업</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EA%B7%BC%EB%A1%9C%EC%A1%B0%EA%B1%B4-%EC%9E%90%EC%9C%A8%EA%B0%9C%EC%84%A0-%EC%A7%80%EC%9B%90%EC%82%AC%EC%97%85/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EA%B7%BC%EB%A1%9C%EC%A1%B0%EA%B1%B4-%EC%9E%90%EC%9C%A8%EA%B0%9C%EC%84%A0-%EC%A7%80%EC%9B%90%EC%82%AC%EC%97%85/</id>
+    <published>2026-09-06T00:00:00+09:00</published>
+    <updated>2026-09-06T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
+    <summary type="text">근로조건 자율개선 지원사업은 상시근로자 30인 미만(사업주가 자율점검을 신청한 경우 100인 미만) 사업장을 대상으로 근로기준법 등 3개 법률 10개 조항을 집중점검해 자율개선을 돕는 지원사업입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">1인 창조기업 지원센터</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/1%EC%9D%B8-%EC%B0%BD%EC%A1%B0%EA%B8%B0%EC%97%85-%EC%A7%80%EC%9B%90%EC%84%BC%ED%84%B0/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/1%EC%9D%B8-%EC%B0%BD%EC%A1%B0%EA%B8%B0%EC%97%85-%EC%A7%80%EC%9B%90%EC%84%BC%ED%84%B0/</id>
+    <published>2026-09-06T00:00:00+09:00</published>
+    <updated>2026-09-06T00:00:00+09:00</updated><author><name>중소벤처기업부</name></author><category term="jobs"/>
+    <summary type="text">1인 창조기업 지원센터는 중소벤처기업부가 관할하고 창업진흥원 창업저변부가 접수하는 제도로, 창의성과 전문성을 갖춘 1인·5인 미만 사업자를 대상으로 사무공간·네트워킹·판로개척·마케팅 등을 지원합니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">제대군인 의료지원</title>
+    <link href="https://adk24211.github.io/walapp/support/health/%EC%A0%9C%EB%8C%80%EA%B5%B0%EC%9D%B8-%EC%9D%98%EB%A3%8C%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/health/%EC%A0%9C%EB%8C%80%EA%B5%B0%EC%9D%B8-%EC%9D%98%EB%A3%8C%EC%A7%80%EC%9B%90/</id>
+    <published>2026-09-06T00:00:00+09:00</published>
+    <updated>2026-09-06T00:00:00+09:00</updated><author><name>국가보훈부</name></author><category term="health"/>
+    <summary type="text">제대군인 의료지원은 국가보훈부가 운영하는 제도로, 장기복무 제대군인·군 복무 중 질환 발병 제대군인·상이등급 미달 전·공상 제대군인에게 보훈병원·위탁병원 진료비를 감면하거나 전액 지원합니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">노인맞춤돌봄서비스</title>
+    <link href="https://adk24211.github.io/walapp/support/care/%EB%85%B8%EC%9D%B8%EB%A7%9E%EC%B6%A4%EB%8F%8C%EB%B4%84%EC%84%9C%EB%B9%84%EC%8A%A4/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/%EB%85%B8%EC%9D%B8%EB%A7%9E%EC%B6%A4%EB%8F%8C%EB%B4%84%EC%84%9C%EB%B9%84%EC%8A%A4/</id>
+    <published>2026-09-06T00:00:00+09:00</published>
+    <updated>2026-09-06T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="care"/>
+    <summary type="text">노인맞춤돌봄서비스는 65세 이상 돌봄이 필요한 노인에게 방문·통원형 직접서비스와 연계·특화서비스를 제공하는 보건복지부 주관 제도입니다.</summary>
+  </entry>
   <entry>
     <title type="text">체육시설 이용요금 감면(다목적배드민턴체육관)</title>
     <link href="https://adk24211.github.io/walapp/support/living/%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EB%8B%A4%EB%AA%A9%EC%A0%81%EB%B0%B0%EB%93%9C%EB%AF%BC%ED%84%B4%EC%B2%B4%EC%9C%A1%EA%B4%80/" rel="alternate" type="text/html"/>
@@ -181,69 +245,5 @@
     <published>2026-09-03T00:00:00+09:00</published>
     <updated>2026-09-03T00:00:00+09:00</updated><author><name>한국환경공단</name></author><category term="housing"/>
     <summary type="text">라돈 무료 측정 및 저감 컨설팅 서비스는 일반 주택 거주자와 마을회관 담당자를 대상으로 라돈 농도 측정과 저감 관리, 고농도 건물에 대한 알람기기 및 시공 지원을 제공하는 프로그램입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">농지 임대 수탁 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/housing/%EB%86%8D%EC%A7%80-%EC%9E%84%EB%8C%80-%EC%88%98%ED%83%81-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/housing/%EB%86%8D%EC%A7%80-%EC%9E%84%EB%8C%80-%EC%88%98%ED%83%81-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-09-03T00:00:00+09:00</published>
-    <updated>2026-09-03T00:00:00+09:00</updated><author><name>한국농어촌공사</name></author><category term="housing"/>
-    <summary type="text">농지은행이 농지소유자의 농지를 장기 임차(5년 이상)하거나 청년·2030세대 등 농업인에게 장기 임대(5년 이상)하도록 지원하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">농지 매입 비축 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/housing/%EB%86%8D%EC%A7%80-%EB%A7%A4%EC%9E%85-%EB%B9%84%EC%B6%95-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/housing/%EB%86%8D%EC%A7%80-%EB%A7%A4%EC%9E%85-%EB%B9%84%EC%B6%95-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-09-03T00:00:00+09:00</published>
-    <updated>2026-09-03T00:00:00+09:00</updated><author><name>한국농어촌공사</name></author><category term="housing"/>
-    <summary type="text">농지 매입 비축 지원은 은퇴(예정)농업인·이농·상속농지 소유자를 대상으로 농업진흥지역·진흥밖 경지정리 완료된 1,000㎡ 이상 농지를 감정가격(㎡당 28,000원~130,000원)으로 매입하고, 청년후계농·2030세대·후계농업인·일반농업인·귀농인에게는 매입한 농지를 5년 이상 장기 임대</summary>
-  </entry>
-  <entry>
-    <title type="text">전국민 마음투자 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/health/%EC%A0%84%EA%B5%AD%EB%AF%BC-%EB%A7%88%EC%9D%8C%ED%88%AC%EC%9E%90-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/health/%EC%A0%84%EA%B5%AD%EB%AF%BC-%EB%A7%88%EC%9D%8C%ED%88%AC%EC%9E%90-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-09-03T00:00:00+09:00</published>
-    <updated>2026-09-03T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="health"/>
-    <summary type="text">보건복지부가 운영하는 전국민 마음투자 지원은 우울·불안 등 정서적 어려움을 겪는 국민에게 심리 검사·상담 바우처를 제공하는 제도이며, 바우처는 1인당 회당 최소 50분, 생성일로부터 120일 이내에 총 8회 이용 가능하고, 인력 등급에 따라 7만~8만원의 비용이 지원됩니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">난임 부부, 유산 및 사산경험 부부, 임산부 및 양육모를 위한 심리상담</title>
-    <link href="https://adk24211.github.io/walapp/support/health/%EB%82%9C%EC%9E%84-%EB%B6%80%EB%B6%80-%EC%9C%A0%EC%82%B0-%EB%B0%8F-%EC%82%AC%EC%82%B0%EA%B2%BD%ED%97%98-%EB%B6%80%EB%B6%80-%EC%9E%84%EC%82%B0%EB%B6%80-%EB%B0%8F-%EC%96%91%EC%9C%A1%EB%AA%A8%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%8B%AC%EB%A6%AC%EC%83%81%EB%8B%B4/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/health/%EB%82%9C%EC%9E%84-%EB%B6%80%EB%B6%80-%EC%9C%A0%EC%82%B0-%EB%B0%8F-%EC%82%AC%EC%82%B0%EA%B2%BD%ED%97%98-%EB%B6%80%EB%B6%80-%EC%9E%84%EC%82%B0%EB%B6%80-%EB%B0%8F-%EC%96%91%EC%9C%A1%EB%AA%A8%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%8B%AC%EB%A6%AC%EC%83%81%EB%8B%B4/</id>
-    <published>2026-09-03T00:00:00+09:00</published>
-    <updated>2026-09-03T00:00:00+09:00</updated><author><name>국립중앙의료원</name></author><category term="health"/>
-    <summary type="text">국립중앙의료원이 제공하는 난임·유산·사산·임산·양육모 부부를 위한 심리상담 서비스로, 정서적 지지와 필요 시 의료비 지원을 통해 삶의 질을 향상시키는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">입소 이용서비스(대전보훈요양원)</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%EC%9E%85%EC%86%8C-%EC%9D%B4%EC%9A%A9%EC%84%9C%EB%B9%84%EC%8A%A4-%EB%8C%80%EC%A0%84%EB%B3%B4%ED%9B%88%EC%9A%94%EC%96%91%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%EC%9E%85%EC%86%8C-%EC%9D%B4%EC%9A%A9%EC%84%9C%EB%B9%84%EC%8A%A4-%EB%8C%80%EC%A0%84%EB%B3%B4%ED%9B%88%EC%9A%94%EC%96%91%EC%9B%90/</id>
-    <published>2026-09-03T00:00:00+09:00</published>
-    <updated>2026-09-03T00:00:00+09:00</updated><author><name>한국보훈복지의료공단</name></author><category term="education"/>
-    <summary type="text">입소 이용서비스(대전보훈요양원)는 장기간 입소하는 노인장기요양 수급자에게 신체활동 지원·교육·훈련 등 장기요양 서비스를 제공하고, 보훈대상자 중 의료급여수급자·감경대상자에게 본인부담금을 차등 감면해 주는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">입소 이용서비스(김해보훈요양원)</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%EC%9E%85%EC%86%8C-%EC%9D%B4%EC%9A%A9%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B9%80%ED%95%B4%EB%B3%B4%ED%9B%88%EC%9A%94%EC%96%91%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%EC%9E%85%EC%86%8C-%EC%9D%B4%EC%9A%A9%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B9%80%ED%95%B4%EB%B3%B4%ED%9B%88%EC%9A%94%EC%96%91%EC%9B%90/</id>
-    <published>2026-09-03T00:00:00+09:00</published>
-    <updated>2026-09-03T00:00:00+09:00</updated><author><name>한국보훈복지의료공단</name></author><category term="education"/>
-    <summary type="text">입소 이용서비스(김해보훈요양원)는 장기요양 시설에 입소한 노인 및 국가유공자를 대상으로 신체활동 지원과 교육·훈련을 제공하고, 대상자에게 본인부담금을 차등 감면해 주는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">분할상환약정 조건변경 제도</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%EB%B6%84%ED%95%A0%EC%83%81%ED%99%98%EC%95%BD%EC%A0%95-%EC%A1%B0%EA%B1%B4%EB%B3%80%EA%B2%BD-%EC%A0%9C%EB%8F%84/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%EB%B6%84%ED%95%A0%EC%83%81%ED%99%98%EC%95%BD%EC%A0%95-%EC%A1%B0%EA%B1%B4%EB%B3%80%EA%B2%BD-%EC%A0%9C%EB%8F%84/</id>
-    <published>2026-09-03T00:00:00+09:00</published>
-    <updated>2026-09-03T00:00:00+09:00</updated><author><name>한국장학재단</name></author><category term="education"/>
-    <summary type="text">분할상환약정 조건변경 제도는 한국장학재단이 운영하며, 분할상환 중인 학자금대출 채무자가 월 납입금액이나 납입일을 경제적 사정에 따라 변경할 수 있도록 지원합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">북한이탈주민 장학금 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%EB%B6%81%ED%95%9C%EC%9D%B4%ED%83%88%EC%A3%BC%EB%AF%BC-%EC%9E%A5%ED%95%99%EA%B8%88-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%EB%B6%81%ED%95%9C%EC%9D%B4%ED%83%88%EC%A3%BC%EB%AF%BC-%EC%9E%A5%ED%95%99%EA%B8%88-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-09-03T00:00:00+09:00</published>
-    <updated>2026-09-03T00:00:00+09:00</updated><author><name>북한이탈주민지원재단</name></author><category term="education"/>
-    <summary type="text">북한이탈주민 장학금 지원은 중고등학생 및 대학(원) 재학생인 북한이탈주민에게 각각 100만원·200만원을 지급하는 교육·역량 분야 지원 제도입니다. 온라인으로 신청할 수 있습니다.</summary>
   </entry>
 </feed>
