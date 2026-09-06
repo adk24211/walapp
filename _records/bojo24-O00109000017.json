@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "충남에 소재한 기업·기관",
+      "해당 기업·기관이 면접을 진행하는 구직자",
+      "면접 참여가 선정된 구직자"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "지원 대상에 해당하는 구직자는 참가신청서, 개인정보동의서, 사업자등록증, 지급신청서, 지급신청 내역서 및 이력서 사본을 준비합니다. 준비된 서류를 접수 기관에 제출하면 신청이 완료됩니다.",
+        "title": "서류 제출"
+      }
+    ],
+    "summary": "이 제도는 충남경제진흥원이 운영하며, 신청은 상시 접수로 진행됩니다. 필요 서류는 참가신청서, 개인정보동의서, 사업자등록증, 지급신청서, 지급신청 내역서 및 이력서 사본이며, 문의는 충남경제진흥원 일자리추진팀으로 가능합니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "2026. 3. 3. ~ 11. 30.(상시신청) ※ 예산 소진 시 마감",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "jobseeker"
+  ],
+  "benefit_raw": "구직자 면접수당 지원금 1인당 50,000원 지급",
+  "category": "jobs",
+  "contact_raw": "충남경제진흥원 일자리추진팀/041-404-1412",
+  "content_hash": "sha256:bcc40ebad811716e10f213fe68f3cabf",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "(참가신청) 참가신청서",
+    "개인정보동의서",
+    "사업자등록증",
+    "(지급신청) 지급신청서",
+    "지급신청 내역서",
+    "개인정보동의서",
+    "이력서 사본(앞장)"
+  ],
+  "first_published": "2026-09-07",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-O00109000017",
+  "is_mock": false,
+  "last_checked": "2026-09-07",
+  "last_updated": "2026-09-07",
+  "law_raw": "",
+  "name": "구직자 면접수당 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00109000017",
+  "org": "재단법인충남경제진흥원",
+  "primary_audience": "jobseeker",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "구직자-면접수당-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 서비스(일자리) 개인",
+  "source_id": "O00109000017",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "(기업) 충남 소재 기업 및 기관\n(면접자) 선정된 기업 및 기관의 면접 참여 구직자",
+  "view_count": 1226
+}

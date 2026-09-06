@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "북한이탈주민",
+      "만13세 이상 만24세 이하(초과 연령자는 학교장이 판단)"
+    ],
+    "faq": [],
+    "note": "만24세를 초과하는 경우 학교장의 판단에 따라 지원 여부가 결정됩니다.",
+    "steps": [
+      {
+        "body": "방문하여 신청서를 제출하시면 됩니다. 필요 시 북한이탈주민 확인서를 함께 제출하셔야 합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "통일부에서 운영하는 북한이탈주민 청소년 교육 지원 제도는 탈북 청소년 및 그 자녀에게 특성화학교와 대안학교 운영비를 지원합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "student"
+  ],
+  "benefit_raw": "○ 탈북청소년 특성화학교(한겨레중고등학교) 및 학력인정 대안학교(여명학교, 하늘꿈중고등학교, 드림학교, 장대현중고등학교)의 운영비 지원",
+  "category": "care",
+  "contact_raw": "통일부 자립지원과/2100-5806",
+  "content_hash": "sha256:97c2a6f793aff24437b4e88f846118db",
+  "criteria_raw": "○ 만13세~만24세(초과연령자는 학교장 판단) 북한이탈청소년 및 북한이탈주민의 자녀",
+  "deferred_detail": false,
+  "documents_raw": [
+    "필요 시",
+    "북한이탈주민 확인서"
+  ],
+  "first_published": "2026-09-07",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-WII000000100",
+  "is_mock": false,
+  "last_checked": "2026-09-07",
+  "last_updated": "2026-09-07",
+  "law_raw": "",
+  "name": "북한이탈주민 청소년 교육 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000100",
+  "org": "통일부",
+  "primary_audience": "student",
+  "receiver_raw": "통일부",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "북한이탈주민-청소년-교육-지원",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 개인\n법인/시설/단체",
+  "source_id": "WII000000100",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 북한이탈주민 및 북한이탈주민의 자녀",
+  "view_count": 2500
+}

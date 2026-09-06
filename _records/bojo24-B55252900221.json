@@ -1,14 +1,24 @@
 {
   "_prose": {
     "eligibility": [
-      "멘토는 사업 참여대학에 재학(원) 중인 대학(원)생이어야 합니다.",
-      "멘티는 초·중·고등학교, 지역아동센터, 학교밖청소년지원센터 등에 소속된 학생이어야 합니다.",
-      "지원 대상은 전국이며, 청년 및 양육가정이 주요 대상에 포함됩니다."
+      "멘토: 사업 참여대학에 재학 중인 대학(원)생",
+      "멘티: 초등학교, 중학교, 고등학교에 재학 중인 학생",
+      "멘티: 지역아동센터 또는 학교밖청소년지원센터에 소속된 학생"
     ],
-    "faq": [],
-    "note": "",
-    "steps": [],
-    "summary": "대학생 재능봉사 캠프는 방학 기간에 대학(원)생 멘토가 초·중·고등학생 및 지역아동센터·학교밖청소년지원센터 소속 청소년에게 학습지도·체험활동·진로·상담 등을 제공하는 프로그램입니다."
+    "faq": [
+      {
+        "a": "멘토링은 대학생이 방학 기간 동안 청소년을 대상으로 진행합니다.",
+        "q": "멘토링 활동은 언제 진행되나요?"
+      }
+    ],
+    "note": "선정 기준이 공개되지 않아, 선정 방법에 대해서는 문의처에 확인하시기 바랍니다.",
+    "steps": [
+      {
+        "body": "본 프로그램은 별도의 온라인 신청 절차가 제공되지 않습니다. 참여를 원하시면 대학생 재능봉사 캠프 사무국에 직접 문의하시기 바랍니다. 문의 후 안내받은 절차에 따라 신청을 진행하시면 됩니다.",
+        "title": "신청 안내"
+      }
+    ],
+    "summary": "대학생 재능봉사 캠프는 대학(원)생이 방학 기간에 초·중·고등학생 및 지역아동·학교밖청소년에게 학습지도·체험·진로 상담 등 멘토링을 제공하는 프로그램입니다."
   },
   "apply_period": {
     "always": false,
@@ -25,7 +35,7 @@
   "benefit_raw": "방학 기간 중 대학생(멘토)가 청소년(멘티)를 대상으로 멘토링 활동(학습지도, 창의적 체험활동, 진로 및 고민상담 등)을 진행",
   "category": "education",
   "contact_raw": "대학생 재능봉사 캠프 사무국/053-238-2993\n대학생 재능봉사 캠프 사무국/053-238-2994",
-  "content_hash": "sha256:d6e393fbb9b03df2128e9eab3e0af230",
+  "content_hash": "sha256:f2cd495ac2c0872d5a5752f28275dae0",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -35,20 +45,20 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-B55252900221",
   "is_mock": false,
-  "last_checked": "2026-08-26",
-  "last_updated": "2026-08-26",
+  "last_checked": "2026-09-07",
+  "last_updated": "2026-09-07",
   "law_raw": "",
   "name": "대학생 재능봉사 캠프",
   "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252900221",
   "org": "한국장학재단",
-  "primary_audience": "youth",
+  "primary_audience": "parent",
   "receiver_raw": "",
   "region": {
     "scope": "national",
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "대학생-재능봉사-캠프",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 개인",
@@ -56,5 +66,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "1. (멘토) 사업 참여대학 소속 대학(원)생\n2. (멘티) 초중고교, 지역아동센터, 학교밖청소년지원센터 등 소속 학생",
-  "view_count": 14660
+  "view_count": 14687
 }

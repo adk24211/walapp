@@ -1,0 +1,64 @@
+{
+  "_prose": {
+    "eligibility": [
+      "학생",
+      "기업·연구소 등",
+      "대학(원) 및 교원",
+      "초중고 학생"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청합니다. 신청은 상시 접수이며, 구비 서류는 필요하지 않습니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "지식재산 디지털 교육 서비스 제공(IP‑Academy)은 양육·돌봄 분야에서 학생·기업·대학·교원 등을 대상으로 지식재산 e‑러닝 과정을 온라인으로 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://www.ipacademy.net",
+  "audiences": [
+    "student"
+  ],
+  "benefit_raw": "○ 지식재산 e-러닝 교과과정 운영\n- 수요자 중심의 기업, 연구소 지식재산 e-러닝 서비스\n- 대학(원) 대상의 지식재산 e-러닝 교육 과정\n- 초중고 학생 대상의 e-러닝\n- 교원 대상 발명 원격 직무연수 제공\n\n○ 지식재산 스토리 센터\n- 지식재산 분야 핫이슈 등 시의성 있는 내용에 대한 신개념 지식과 스토리가 있는 콘텐츠 개발\n- 지식재산 분야 공개교육자원(OER)을 통한 확충",
+  "category": "care",
+  "contact_raw": "지식재산처 국제지식재산연수원 교육기획과/042-601-4312",
+  "content_hash": "sha256:68dfb70f8b56949b48ccf91ed0acdec2",
+  "criteria_raw": "지원대상과 동일",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-07",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-PTR000054374",
+  "is_mock": false,
+  "last_checked": "2026-09-07",
+  "last_updated": "2026-09-07",
+  "law_raw": "",
+  "name": "지식재산 디지털 교육 서비스 제공(IP-Academy)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/PTR000054374",
+  "org": "지식재산처",
+  "primary_audience": "student",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "지식재산-디지털-교육-서비스-제공-ip-academy",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 개인",
+  "source_id": "PTR000054374",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 학생, 기업 관련 등 대상 해당자",
+  "view_count": 2732
+}
