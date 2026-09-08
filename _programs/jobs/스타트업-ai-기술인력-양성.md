@@ -8,12 +8,12 @@ audiences:
   - youth
   - business
 primary_audience: youth
-view_count: 10415
+view_count: 10518
 region_scope: national
 region_label: "전국"
 org: "중소벤처기업진흥공단"
-summary: "스타트업 AI 기술인력 양성은 중소벤처기업진흥공단이 전국 청년에게 인공지능 특화 교육을 무료로 제공하고, 취·창업 연계를 지원하는 제도이며, 교육 인프라와 프로젝트 경험도 제공합니다."
-description: "스타트업 AI 기술인력 양성은 중소벤처기업진흥공단이 전국 청년에게 인공지능 특화 교육을 무료로 제공하고, 취·창업 연계를 지원하는 제도이며, 교육 인프라와 프로젝트 경험도 제공합니다."
+summary: "만 39세 이하 청년을 대상으로 AI 특화 교육과 실무 프로젝트, 취·창업 연계까지 무료로 제공하는 스타트업 AI 기술인력 양성 프로그램입니다. 전용 교육장 및 장비가 제공되며, 기본·심화 과정을 포함한 특화 커리큘럼을 이수할 수 있습니다."
+description: "만 39세 이하 청년을 대상으로 AI 특화 교육과 실무 프로젝트, 취·창업 연계까지 무료로 제공하는 스타트업 AI 기술인력 양성 프로그램입니다. 전용 교육장 및 장비가 제공되며, 기본·심화 과정을 포함한 특화 커리큘럼을 이수할 수 있습니다."
 seo:
   type: WebPage
 status: active
@@ -24,12 +24,12 @@ apply_methods: ["온라인 신청"]
 apply_url: "www.kosmes.or.kr"
 official_url: "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55400900022"
 first_published: "2026-08-22"
-last_updated: "2026-08-22"
-last_checked: "2026-08-22"
+last_updated: "2026-09-08"
+last_checked: "2026-09-08"
 date: "2026-08-22"
-last_modified_at: "2026-08-22"
-revision: 0
-own_chars: 289
+last_modified_at: "2026-09-08"
+revision: 1
+own_chars: 356
 source_parts: ["신청 기간", "지원 내용", "준비 서류", "지원 대상", "소관 기관", "지원 지역", "신청 방법", "문의처"]
 own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 신청하나요", "자주 묻는 질문"]
 ---
@@ -66,7 +66,6 @@ own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 
   <li>만 39세 이하의 청년</li>
   <li>학력·전공 무관</li>
   <li>재학생·휴학생·직장인 등은 지원 불가</li>
-  <li>주민등록증 및 통장 사본 등 필수 서류 제출</li>
 </ul>
   </div>
 </section>
@@ -82,8 +81,8 @@ own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 
   <div class="cn-step">
     <span class="cn-step-no">1</span>
     <div class="cn-step-body">
-      <h4>신청 방법</h4>
-      <p>온라인으로 신청서를 작성하고, 주민등록증 및 통장 사본 등 필수 서류를 첨부하여 제출하시면 됩니다. 제출 후 별도의 심사 절차 없이 교육이 시작됩니다.</p>
+      <h4>신청 절차</h4>
+      <p>홈페이지에서 온라인 신청서를 작성하고, 주민등록증 및 통장 사본 등 필수 서류를 첨부합니다. 제출 후 관계 부처에서 서류를 검토하여 지원 여부를 결정합니다.</p>
     </div>
   </div>
 </div>
@@ -141,13 +140,18 @@ own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 
   <div class="cn-sec-body">
 <div class="cn cn-faq" data-cat="jobs">
   <details>
-    <summary>선정 기준이 있습니까?</summary>
-    <div class="cn-faq-body">선정 기준은 별도로 제시되지 않았습니다.</div>
+    <summary>교육은 오프라인으로만 진행되나요?</summary>
+    <div class="cn-faq-body">교육 인프라는 전용 교육장 및 장비가 제공되며, 이는 오프라인 교육생에 한합니다.</div>
   </details>
 </div>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "선정 기준이 있습니까?", "acceptedAnswer": {"@type": "Answer", "text": "선정 기준은 별도로 제시되지 않았습니다."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "교육은 오프라인으로만 진행되나요?", "acceptedAnswer": {"@type": "Answer", "text": "교육 인프라는 전용 교육장 및 장비가 제공되며, 이는 오프라인 교육생에 한합니다."}}]}
 </script>
   </div>
 </section>
+
+<div class="cn cn-note" data-cat="jobs">
+  <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-alert-triangle"></use></svg>
+  <p>교육 인프라는 오프라인 교육생에 한해 제공됩니다.</p>
+</div>
 

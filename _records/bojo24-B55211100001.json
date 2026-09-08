@@ -1,0 +1,65 @@
+{
+  "_prose": {
+    "eligibility": [
+      "경제적 소외계층",
+      "기초생활수급자",
+      "차상위계층"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "과학문화바우처 홈페이지에서 온라인 신청서를 작성하고, 기초생활수급자증명서 또는 차상위계층확인서를 첨부하여 제출합니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "과학문화바우처는 경제적 소외계층에게 과학문화상품·서비스를 구입·이용할 수 있도록 1인당 5만원의 온라인 포인트를 제공하는 지원제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "2025년 4월 8일(화) 10시 ~ 5월 8일(목) 17시",
+    "start": ""
+  },
+  "apply_url": "https://scivoucher.ezwel.com/",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "○ 과학문화 소외지역·계층에게 과학상품 및 서비스를 제공하여 과학문화 격차해소에 기여합니다.\n\n○ 과학문화상품 및 서비스를 구입·이용할 수 있는 온라인 포인트(1인당 5만원)를 제공합니다.\n- 과학문화상품 유형\nㆍ과학교구 : 실험교구, 아두이노교구, 과학보드게임, 과학원리 DIY 키트 등\nㆍ과학공연 : 과학연극, 과학뮤지컬, 과학콘서트 등\nㆍ과학전시·체험 : 과학관, 박물관, 생태체험, 천체관측, 과학캠프 등\nㆍ강연·교육 : 실험교육, 코딩교육, 키트 만들기 온라인 교육 등\nㆍ과학도서 : 과학기술정보통신부 인증 우수과학도서",
+  "category": "living",
+  "contact_raw": "과학문화바우처 지원센터/1551-0012",
+  "content_hash": "sha256:66bb2f59e05a834d4864eba60b00f141",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "신청서(온라인 작성)",
+    "수혜자격 증빙서류(국민기초생활수급자증명서",
+    "차상위계층확인서)"
+  ],
+  "first_published": "2026-09-08",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55211100001",
+  "is_mock": false,
+  "last_checked": "2026-09-08",
+  "last_updated": "2026-09-08",
+  "law_raw": "",
+  "name": "과학문화바우처",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55211100001",
+  "org": "한국과학창의재단",
+  "primary_audience": "lowincome",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "과학문화바우처",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 이용권 개인\n가구",
+  "source_id": "B55211100001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "경제적 소외계층(기초생활수급자, 차상위계층)",
+  "view_count": 60909
+}

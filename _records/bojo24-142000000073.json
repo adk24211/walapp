@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "지원 대상은 (예비)재창업자입니다.",
+      "폐업을 완료한 예비 재창업자는 신청할 수 있습니다.",
+      "재창업 후 7년 이내인 재창업자도 신청 대상입니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "창업진흥원 홈페이지에서 온라인으로 신청하시면 됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "재창업기업 사업화 지원은 중소벤처기업부가 마련하고 창업진흥원이 접수하는 제도로, (예비)재창업자를 대상으로 재창업자금·멘토링·최대 1억원까지 지원하는 사업입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "공고 확인",
+    "start": ""
+  },
+  "apply_url": "www.k-startup.go.kr",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "재창업자금, 멘토링, 사업화자금(최대 1억원)",
+  "category": "jobs",
+  "contact_raw": "창업진흥원 리챌린지팀/044-410-1763\n창업진흥원 리챌린지팀/044-410-1760",
+  "content_hash": "sha256:89b9d7cd75c4ae666158ca720b98f3a0",
+  "criteria_raw": "○ 요건검토, 서류 및 발표평가를 통해 폐업을 완료한 예비 재창업자 또는 재창업 7년이내 재창업자 선정",
+  "deferred_detail": false,
+  "documents_raw": [
+    "공고 참고"
+  ],
+  "first_published": "2026-09-08",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-142000000073",
+  "is_mock": false,
+  "last_checked": "2026-09-08",
+  "last_updated": "2026-09-08",
+  "law_raw": "",
+  "name": "재창업기업 사업화 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/142000000073",
+  "org": "중소벤처기업부",
+  "primary_audience": "business",
+  "receiver_raw": "창업진흥원",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "재창업기업-사업화-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타(교육)\n기타(상담)\n현금 개인\n법인/시설/단체",
+  "source_id": "142000000073",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ (예비)재창업자",
+  "view_count": 6395
+}

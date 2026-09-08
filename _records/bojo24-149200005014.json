@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "저탄소 디지털 전환 사업주가 지원 대상입니다.",
+      "최근 3년 이내 사업재편·사업전환 승인기업이 지원 대상입니다.",
+      "노동전환 고용안정 컨설팅 참여기업이 지원 대상입니다.",
+      "산업전환 공동훈련센터 협약기업이 지원 대상입니다."
+    ],
+    "faq": [
+      {
+        "a": "지원은 고용을 유지할 경우에만 제공됩니다.",
+        "q": "고용을 유지하지 못하면 지원을 받을 수 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "지원 대상 기업은 방문 신청을 통해 사업계획서를 제출하시면 됩니다. 제출 후 고용노동부 고객상담센터에 문의하여 진행 상황을 확인하시면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "산업‧일자리전환 고용환경개선지원금은 저탄소·디지털 전환을 추진하는 기업이 고용을 유지할 경우 고용환경 개선을 지원하는 제도이며, 고용노동부가 운영합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "신규 사업참여 신청 종료",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "employer"
+  ],
+  "benefit_raw": "탄소중립‧디지털 전환 관련 기업이 고용을 유지할 경우 고용환경 개선 등 지원",
+  "category": "jobs",
+  "contact_raw": "고용노동부 고객상담센터/1350",
+  "content_hash": "sha256:8f0c2e9d655e5b34945767abd38d174a",
+  "criteria_raw": "저탄소 디지털 전환 사업주\n* 최근 3년 이내 사업재편, 사업전환 승인기업, 노동전환 고용안정 컨설팅 참여기업, 산업전환 공동훈련센터 협약기업 등",
+  "deferred_detail": false,
+  "documents_raw": [
+    "사업계획서"
+  ],
+  "first_published": "2026-09-08",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-149200005014",
+  "is_mock": false,
+  "last_checked": "2026-09-08",
+  "last_updated": "2026-09-08",
+  "law_raw": "",
+  "name": "산업‧일자리전환 고용환경개선지원금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005014",
+  "org": "고용노동부",
+  "primary_audience": "employer",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "산업-일자리전환-고용환경개선지원금",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 법인/시설/단체",
+  "source_id": "149200005014",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "저탄소 디지털 전환 사업주\n* 최근 3년 이내 사업재편, 사업전환 승인기업, 노동전환 고용안정 컨설팅 참여기업, 산업전환 공동훈련센터 협약기업 등",
+  "view_count": 1981
+}
