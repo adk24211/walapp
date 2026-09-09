@@ -1,0 +1,65 @@
+{
+  "_prose": {
+    "eligibility": [
+      "다문화가정 자녀이며 세종시 초·중·고·대학생",
+      "북한이탈주민 자녀이며 세종시 초·중·고·대학생",
+      "세종시 내에 거주하거나 재학 중인 초·중·고·대학생"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청합니다. 홈페이지에 접속해 신청서를 작성하고 제출하면 됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "다문화가정·북한이탈주민 자녀를 대상으로 세종시 초·중·고·대학생에게 1인당 30만원에서 100만원까지 장학금을 지원하는 제도이며, 초등학생은 30만원, 중학생은 60만원, 고등학생은 90만원, 대학생은 100만원을 각각 지급합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "상,하반기 각 1회",
+    "start": ""
+  },
+  "apply_url": "www.sjhle.or.kr",
+  "audiences": [
+    "youth",
+    "multicultural",
+    "student"
+  ],
+  "benefit_raw": "○ 다문화 가정 및 북한이탈주민의 자녀 대상 지급 장학금\n○ 1인당 30~100만원 장학금 지급\n- 초 : 30만원 / 중 : 60만원 / 고 : 90만원 / 대 : 100만원",
+  "category": "education",
+  "contact_raw": "인재개발팀/044-865-9686",
+  "content_hash": "sha256:1ec4cbc3c96f171cc690b208c4104e9d",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "홈페이지 공고문 참고"
+  ],
+  "first_published": "2026-09-09",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-O00088400001",
+  "is_mock": false,
+  "last_checked": "2026-09-09",
+  "last_updated": "2026-09-09",
+  "law_raw": "",
+  "name": "다문화가정·북한이탈주민 장학금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00088400001",
+  "org": "재단법인세종특별자치시인재육성평생교육진흥원",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "다문화가정-북한이탈주민-장학금",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "O00088400001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "다문화가정 및 북한이탈주민 중 세종시 초·중·고·대학생(거주 또는 재학)",
+  "view_count": 2953
+}
