@@ -1,0 +1,71 @@
+{
+  "_prose": {
+    "eligibility": [
+      "외국인 근로자",
+      "지원이 필요한 사업장"
+    ],
+    "faq": [
+      {
+        "a": "공단은 현장 방문 또는 전화로 애로사항 해소 지원을 제공합니다.",
+        "q": "지원은 현장 방문과 전화 중 어느 방식으로 제공되나요?"
+      },
+      {
+        "a": "구비 서류는 해당없음이며, 별도의 서류 제출이 필요하지 않습니다.",
+        "q": "지원 신청 시 제출해야 할 서류가 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "방문 신청을 통해 지원 요청을 하시면, 공단이 통역원 가능한 일자와 사업장 일정을 조율하여 현장 또는 전화로 애로사항을 해소해 드립니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "외국인 근로자와 고용주가 겪는 고용·노무 갈등 및 체류 중 애로사항을 현장 방문 또는 전화로 해소해 주는 지원 서비스이며, 한국산업인력공단이 통역원과 함께 일정에 맞춰 지원합니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "employer"
+  ],
+  "benefit_raw": "국내 체류 외국인근로자 애로사항, 사업주와 외국인근로자간 고용 및 노무관리에 대한 갈등 해소 지원 등을 목적으로 서비스 수혜가 필요한 사업장에서 한국산업인력공단 지부지사로 지원요청을 하면, 공단에서는 통역원의 가능한 일자와 요청 사업장과의 일정을 조율하여 현장(또는 전화)에서 애로사항 해소 지원",
+  "category": "jobs",
+  "contact_raw": "고용체류지원부/052-714-8593",
+  "content_hash": "sha256:435a36450aa1687af70531a4b79230c9",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-10",
+  "how_to_raw": "방문신청\n직접입력",
+  "id": "bojo24-B49000700205",
+  "is_mock": false,
+  "last_checked": "2026-09-10",
+  "last_updated": "2026-09-10",
+  "law_raw": "",
+  "name": "외국인 근로자 지원 서비스",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B49000700205",
+  "org": "한국산업인력공단",
+  "primary_audience": "employer",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "외국인-근로자-지원-서비스",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타(상담) 개인\n법인/시설/단체",
+  "source_id": "B49000700205",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "외국인근로자와 그 사업주(담당자)",
+  "view_count": 1971
+}

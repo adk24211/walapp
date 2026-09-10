@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "기존 형광등·메탈할라이드등·LED 등을 효율 1등급 또는 고효율 인증 LED로 교체하고 절감 전력이 0.4 kW 이상인 경우.",
+      "농업용 전력을 사용하는 경우, 기존 백열등을 효율 1등급 또는 고효율 인증 LED로 교체하고 절감 전력이 10 kW 이상인 경우.",
+      "지원 가능한 LED는 한국에너지공단에 등록된 효율 1등급 또는 고효율 인증 LED여야 합니다."
+    ],
+    "faq": [],
+    "note": "농업용 전력 사용 고객이 형광등·메탈할라이드등·LED·백열등 외의 조명을 교체하려는 경우 현재 지원 신청이 일시 중단됩니다.",
+    "steps": [
+      {
+        "body": "홈페이지에서 신청서를 작성하고 제출하면 됩니다. 별도의 서류 제출은 필요하지 않습니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "관할 기관을 직접 방문하여 신청서를 제출할 수 있습니다. 서류 제출은 요구되지 않습니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "고효율 LED 지원은 기존 형광등·메탈할라이드등·LED 등을 효율 1등급·고효율 인증 LED로 교체해 절감 전력이 일정 기준 이상인 가구·사업자를 대상으로 지원금을 지급하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "2026-12-18",
+    "raw": "2026.01.19~2026.12.18",
+    "start": "2026-01-19"
+  },
+  "apply_url": "https://online.kepco.co.kr/",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "에너지 효율향상 및 온실가스 감축을 위해 고객이 기존 조명기기(형광등, 메탈할라이드등 등) 고효율 LED(에너지효율1등급 또는 고효율 인증 LED)로 교체 시 지원금 지급",
+  "category": "living",
+  "contact_raw": "수요효율처/123",
+  "content_hash": "sha256:5ae8db3dd2340dd1a6b3deddcd631e28",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-10",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-B41000200008",
+  "is_mock": false,
+  "last_checked": "2026-09-10",
+  "last_updated": "2026-09-10",
+  "law_raw": "",
+  "name": "고효율 LED 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B41000200008",
+  "org": "한국전력공사",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "고효율-led-지원",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금 개인\n가구\n소상공인\n법인/시설/단체",
+  "source_id": "B41000200008",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 기존 조명기기(형광등, 메탈할라이드등, LED 등)를 효율 1등급 또는 고효율인증 LED로 교체 시 절감전력 합계가 0.4kW 이상인 고객, 사업자 등\n○ 농사용 전력을 사용하며, 백열등을 고효율 또는 1등급 LED로 교체 시 절감전력 합계가 10kW 이상인 고객, 사업자 등\n- 농사용 전력을 사용하는 고객의 기존 조명기기 중 형광등, 메탈할라이드등, LED, 백열등 외 조명기기의 지원신청은 일시 중단\n- (지원기기) 한국에너지공단에 등록된 효율1등급 또는 고효율 인증 LED",
+  "view_count": 8222
+}
