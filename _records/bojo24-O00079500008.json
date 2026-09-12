@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "부산광역시 내에 사업자등록이 된 소상공인입니다.",
+      "고용보험에 가입하고 기준보수 1~7등급인 경우(신규·기존가입자 모두 포함)입니다.",
+      "산재보험에 가입한 경우(신규·기존가입자 모두 포함)입니다."
+    ],
+    "faq": [
+      {
+        "a": "고용보험료는 납부한 월액의 최대 30%를, 산재보험료는 납부한 월액의 최대 50%를 각각 5년간 지원합니다.",
+        "q": "지원 금액은 어떻게 산정되나요?"
+      }
+    ],
+    "note": "지원액은 납부한 보험료의 일정 비율만 지원되므로 실제 지원액은 납부액에 따라 달라집니다.",
+    "steps": [
+      {
+        "body": "방문 신청을 통해 소상공인확인서·사업자등록증·통장사본을 제출하시면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "부산시 소상공인을 대상으로 고용보험료와 산재보험료를 각각 일정 비율, 최대 5년간 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "business",
+    "employer"
+  ],
+  "benefit_raw": "납부한 월 고용보험료의 최대 30% 5년간 지원, 납부한 월 산재보험료의 최대 50%, 5년간 지원",
+  "category": "jobs",
+  "contact_raw": "부산시소상공인종합지원센터/1833-3665",
+  "content_hash": "sha256:8c71a22ce9be4ceba39b85d25572b388",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "○ 신청인 제출서류",
+    "소상공인확인서",
+    "사업자등록증",
+    "통장사본"
+  ],
+  "first_published": "2026-09-12",
+  "how_to_raw": "방문신청\n직접입력",
+  "id": "bojo24-O00079500008",
+  "is_mock": false,
+  "last_checked": "2026-09-12",
+  "last_updated": "2026-09-12",
+  "law_raw": "",
+  "name": "소상공인 고용·산재 보험료 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00079500008",
+  "org": "(재)부산경제진흥원",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "소상공인-고용-산재-보험료-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금(보험) 소상공인",
+  "source_id": "O00079500008",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 부산광역시 내 사업자 등록된 소상공인 중\n- 고용보험 : 자영업자 고용보험에 가입한 소상공인 중 기준보수 1~7등급인 신규 및 기존가입자\n- 산재보험 : 중소기업 사업주 산재보험에 가입한 소상공인 중 신규 및 기존 가입자",
+  "view_count": 5616
+}

@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "소득인정액이 기준 중위소득 50% 이하인 주거급여 수급 가구",
+      "소득인정액이 기준 중위소득 50% 이하인 교육급여 수급 가구",
+      "기타 차상위 계층 중 현재 근로활동 중이며 근로·사업소득이 있는 가구"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "방문 신청이 가능합니다. 구비 서류는 필요하지 않습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "자산형성지원사업(희망저축Ⅱ)은 소득인정액이 기준 중위소득 50% 이하인 주거·교육급여 수급 가구와 차상위 계층에게 본인 적립금 10만원에 정부지원금 10만원을 매칭해 주는 금융·자산 지원 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "24년 2월, 5월, 8월 모집예정 , 세부 모집일정은 주민센터 통해 문의",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "일하는 주거‧교육급여 수급자와 차상위자를 대상으로 본인적립금(10만 원)에 정부지원금(10만 원)을 매칭하여 지급\n-(지원대상) 소득인정액이 기준 중위소득 50% 이하인 주거.교육급여 수급 가구 및 기타 차상위 계층, 현재 근로활동 중이며 근로.사업소득이 있는 가구",
+  "category": "finance",
+  "contact_raw": "보건복지상담센터/129\n자산형성지원콜센터/1522-3690",
+  "content_hash": "sha256:850c37d01fc73a96733705a94e90d64d",
+  "criteria_raw": "소득인정액이 기준 중위소득 50% 이하인 주거.교육급여 수급 가구 및 기타 차상위 계층, 현재 근로활동 중이며 근로.사업소득이 있는 가구",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-12",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-135200005012",
+  "is_mock": false,
+  "last_checked": "2026-09-12",
+  "last_updated": "2026-09-12",
+  "law_raw": "",
+  "name": "자산형성지원사업(희망저축Ⅱ)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005012",
+  "org": "보건복지부",
+  "primary_audience": "lowincome",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "자산형성지원사업-희망저축",
+  "source": "bojo24",
+  "source_category_raw": "주거·자립 현금 가구",
+  "source_id": "135200005012",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "소득인정액이 기준 중위소득 50% 이하인 주거.교육급여 수급 가구 및 기타 차상위 계층, 현재 근로활동 중이며 근로.사업소득이 있는 가구",
+  "view_count": 43420
+}
