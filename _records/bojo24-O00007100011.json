@@ -1,0 +1,73 @@
+{
+  "_prose": {
+    "eligibility": [
+      "65세 이상 노인·국가유공자·장애인은 이용요금을 100% 할인받을 수 있습니다.",
+      "시흥시 내에 거주하는 사람은 이용요금을 50% 할인받을 수 있습니다.",
+      "국민기초수급자·한부모가정·다자녀(2명 이상)·다문화 가정은 이용요금을 50% 할인받을 수 있습니다.",
+      "김포·평택·광명·안산·화성·부천에 거주하는 경우 이용요금을 30% 할인받을 수 있습니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청서를 작성하고, 주민등록등본·주민등록증 등 확인 서류를 첨부합니다. 제출 후 심사가 진행됩니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "방문 신청도 가능합니다. 준비 서류를 지참하여 직접 제출하면 됩니다. 접수는 상시 진행됩니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "시흥시 갯골캠핑장 이용요금을 대상별로 할인해 주는 제도이며, 65세 이상·국가유공자·장애인에게는 전액, 시흥 거주자와 특정 가구는 절반, 경기 서부 거주자는 30% 할인됩니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://tickets.interpark.com/",
+  "audiences": [
+    "parent",
+    "senior",
+    "disabled",
+    "lowincome",
+    "multicultural"
+  ],
+  "benefit_raw": "* 65세 이상의 노인/국가유공자/장애인 : 100% 할인\n* 시흥 관내 거주자 : 50% 할인\n* 국민기초수급자/한부모가정/다자녀(2명이상) 및 다문화 가정 : 50% 할인\n* 경기서부(김포, 평택, 광명, 안산, 화성, 부천) 거주자 : 30% 할인",
+  "category": "living",
+  "contact_raw": "시흥도시공사 공원사업부/031-488-6999",
+  "content_hash": "sha256:cedf83dcceeca9e6e7ded9b37d94dca6",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "지원 대상자임을 확인할 수 있는 관련 서류(주민등록등본",
+    "주민등록증 등)"
+  ],
+  "first_published": "2026-09-13",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-O00007100011",
+  "is_mock": false,
+  "last_checked": "2026-09-13",
+  "last_updated": "2026-09-13",
+  "law_raw": "",
+  "name": "문화시설 이용요금 감면(갯골캠핑장)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00007100011",
+  "org": "시흥도시공사",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "문화시설-이용요금-감면-갯골캠핑장",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 시설이용 개인",
+  "source_id": "O00007100011",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "* 65세 이상의 노인/국가유공자/장애인 : 100% 할인\n* 시흥 관내 거주자 : 50% 할인\n* 국민기초수급자/한부모가정/다자녀(2명이상) 및 다문화 가정 : 50% 할인\n* 경기서부(김포, 평택, 광명, 안산, 화성, 부천) 거주자 : 30% 할인",
+  "view_count": 4331
+}

@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "지원 대상은 노인복지법 제26조에 해당하는 사람입니다.",
+      "선정 기준은 별도로 정해져 있지 않습니다.",
+      "구비 서류는 필요하지 않습니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "정부24 웹사이트에 접속하여 신청서를 작성하고 제출합니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "관할 기관을 직접 방문하여 신청서를 제출합니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "용산구시설관리공단이 운영하는 체육시설 이용요금 감면(경로) 제도는 노인복지법 제26조에 해당하는 노인에게 체육시설 이용료를 50% 감면해 주는 지원이며, 신청은 정부24 온라인 또는 방문 신청으로 상시 접수됩니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "senior"
+  ],
+  "benefit_raw": "체육시설 이용료 감면(50%)",
+  "category": "living",
+  "contact_raw": "체육공익사업팀/02-749-5314",
+  "content_hash": "sha256:e8148caea0d63dcce4fda2c33150c45b",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-13",
+  "how_to_raw": "정부24온라인신청\n방문신청",
+  "id": "bojo24-O00024000031",
+  "is_mock": false,
+  "last_checked": "2026-09-13",
+  "last_updated": "2026-09-13",
+  "law_raw": "",
+  "name": "체육시설 이용요금 감면(경로)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00024000031",
+  "org": "용산구시설관리공단",
+  "primary_audience": "senior",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "체육시설-이용요금-감면-경로",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 시설이용 개인",
+  "source_id": "O00024000031",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "노인복지법 제26조",
+  "view_count": 723
+}

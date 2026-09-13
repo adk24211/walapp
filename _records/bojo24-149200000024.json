@@ -22,14 +22,14 @@
     "raw": "접수기관 별 상이",
     "start": ""
   },
-  "apply_url": "http://www.reis.or.kr",
+  "apply_url": "https://www.reis.or.kr",
   "audiences": [
     "business"
   ],
   "benefit_raw": "자치단체와 지역 내 고용 관련 비영리법인 또는 단체, 고용서비스 우수기관, 훈련인증기관, 유·무료 직업소개사업자 등과 컨소시엄으로 참여하여 지역 특성에 적합한 일자리 사업을 제안하면, 고용부에서 선정, 지원",
   "category": "jobs",
   "contact_raw": "고용노동부 지역산업고용정책과/044-202-7411",
-  "content_hash": "sha256:508b80e9983554edd5dd7428fd55340e",
+  "content_hash": "sha256:020ad8f920961ebcc4c6113d59ac1b6e",
   "criteria_raw": "고용노동부에서 광역자치단체를 대상으로 공모\n* 자치단체 매칭 비율 10~30%(재정자주도에 따라 차등 매칭)",
   "deferred_detail": false,
   "documents_raw": [

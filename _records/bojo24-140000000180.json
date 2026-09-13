@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "자연재해로 인한 피해를 입은 임가",
+      "가뭄 등 건조 관련 재해로 임산물 피해가 발생한 경우",
+      "홍수·호우·해일·태풍·강풍·이상저온·우박·서리·조수·대설·한파·폭염 등 기타 자연재해로 임산물 피해가 발생한 경우"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "주민센터를 직접 방문하여 신청서를 제출합니다. 구비 서류와 신분증을 지참하고 담당 직원에게 제출하면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "임업인 자연재해 피해 복구 지원은 자연재해로 임산물 피해를 입은 임가에게 대파대·농약대·생계비·학자금 등을 지원하는 제도이며, 산림청이 관할하고 주민센터에서 신청할 수 있습니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "재해종료 10일 이내 신청 가능",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "youth"
+  ],
+  "benefit_raw": "자연재해로 임산물 피해가 발생한 임가에 대파대, 농약대, 생계비, 학자금 등을 지원",
+  "category": "education",
+  "contact_raw": "산림청 사유림경영소득과/042-481-1848",
+  "content_hash": "sha256:262ed2bb8603e785617e67ffe07f730a",
+  "criteria_raw": "가뭄, 홍수, 호우, 해일, 태풍, 강풍, 이상저온, 우박, 서리, 조수, 대설, 한파, 폭염 등의 자연재해 피해를 입은 임가",
+  "deferred_detail": false,
+  "documents_raw": [
+    "o \"자연재난 피해신고서\" 자연재난 구호 및 복구 비용 부담기준 등에 관한 규정 [별지 제1호 서식]",
+    "* 행정정보 공동이용 동의서",
+    "개인정보 수집 이용 동의",
+    "개인정보 제3자 제공 활용동의",
+    "신분증(신청자 본인)"
+  ],
+  "first_published": "2026-09-13",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-140000000180",
+  "is_mock": false,
+  "last_checked": "2026-09-13",
+  "last_updated": "2026-09-13",
+  "law_raw": "",
+  "name": "임업인 자연재해 피해 복구 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/140000000180",
+  "org": "산림청",
+  "primary_audience": "youth",
+  "receiver_raw": "주민센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "임업인-자연재해-피해-복구-지원",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 현금 개인",
+  "source_id": "140000000180",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "자연재해로 인한 피해를 입은 임가",
+  "view_count": 2555
+}
