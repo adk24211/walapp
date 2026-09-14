@@ -4,8 +4,48 @@
   <subtitle>정부·지자체 지원금과 복지 제도를 받을 수 있는지부터 신청 방법까지 하나씩 정리합니다. 공공데이터 원문을 토대로 쉬운 말로 풀어 씁니다.</subtitle>
   <link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html"/>
-  <updated>2026-09-13T09:02:52+09:00</updated>
+  <updated>2026-09-14T09:07:24+09:00</updated>
   <id>https://adk24211.github.io/walapp/</id>
+  <entry>
+    <title type="text">위기청소년 특별 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/living/%EC%9C%84%EA%B8%B0%EC%B2%AD%EC%86%8C%EB%85%84-%ED%8A%B9%EB%B3%84-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/%EC%9C%84%EA%B8%B0%EC%B2%AD%EC%86%8C%EB%85%84-%ED%8A%B9%EB%B3%84-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-09-14T00:00:00+09:00</published>
+    <updated>2026-09-14T00:00:00+09:00</updated><author><name>성평등가족부</name></author><category term="living"/>
+    <summary type="text">위기청소년 특별 지원은 9세~24세 청소년에게 생활·건강·학업·자립·상담·법률·활동 등 다양한 지원을 제공하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">장애인맞춤형창업교육</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%9E%A5%EC%95%A0%EC%9D%B8%EB%A7%9E%EC%B6%A4%ED%98%95%EC%B0%BD%EC%97%85%EA%B5%90%EC%9C%A1/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%9E%A5%EC%95%A0%EC%9D%B8%EB%A7%9E%EC%B6%A4%ED%98%95%EC%B0%BD%EC%97%85%EA%B5%90%EC%9C%A1/</id>
+    <published>2026-09-14T00:00:00+09:00</published>
+    <updated>2026-09-14T00:00:00+09:00</updated><author><name>중소벤처기업부</name></author><category term="jobs"/>
+    <summary type="text">장애인맞춤형창업교육은 장애인 예비창업자와 장애인기업을 대상으로 온라인 기본교육과 창업 아이템 특화 교육·멘토링을 제공하는 상시 접수 지원제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">소상공인 협업활성화 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8-%ED%98%91%EC%97%85%ED%99%9C%EC%84%B1%ED%99%94-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8-%ED%98%91%EC%97%85%ED%99%9C%EC%84%B1%ED%99%94-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-09-14T00:00:00+09:00</published>
+    <updated>2026-09-14T00:00:00+09:00</updated><author><name>중소벤처기업부</name></author><category term="jobs"/>
+    <summary type="text">소상공인 협업체가 공동사업에 드는 비용을 일부 지원받는 제도로, 5인 이상이며 조합원 50% 이상이 소상공인인 경우 신청이 필요 없습니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">소상공인, 중소기업, 중견기업, 대기업등 무역 보험 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8-%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85-%EC%A4%91%EA%B2%AC%EA%B8%B0%EC%97%85-%EB%8C%80%EA%B8%B0%EC%97%85%EB%93%B1-%EB%AC%B4%EC%97%AD-%EB%B3%B4%ED%97%98-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8-%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85-%EC%A4%91%EA%B2%AC%EA%B8%B0%EC%97%85-%EB%8C%80%EA%B8%B0%EC%97%85%EB%93%B1-%EB%AC%B4%EC%97%AD-%EB%B3%B4%ED%97%98-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-09-14T00:00:00+09:00</published>
+    <updated>2026-09-14T00:00:00+09:00</updated><author><name>산업통상부</name></author><category term="jobs"/>
+    <summary type="text">소상공인·중소기업·중견기업·대기업을 대상으로 수출·수입 관련 보험을 제공하는 무역보험 지원 제도이며, 수출입자의 신용도와 국가위험을 종합 검토하여 선발합니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">의료급여 (의료급여 대지급금)</title>
+    <link href="https://adk24211.github.io/walapp/support/health/%EC%9D%98%EB%A3%8C%EA%B8%89%EC%97%AC-%EC%9D%98%EB%A3%8C%EA%B8%89%EC%97%AC-%EB%8C%80%EC%A7%80%EA%B8%89%EA%B8%88/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/health/%EC%9D%98%EB%A3%8C%EA%B8%89%EC%97%AC-%EC%9D%98%EB%A3%8C%EA%B8%89%EC%97%AC-%EB%8C%80%EC%A7%80%EA%B8%89%EA%B8%88/</id>
+    <published>2026-09-14T00:00:00+09:00</published>
+    <updated>2026-09-14T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="health"/>
+    <summary type="text">2종 의료급여 수급권자가 입원 시 본인부담금이 20만원을 초과하면 초과분을 대지급받을 수 있는 제도이며, 신청은 시·군·구청에서 방문 신청합니다.</summary>
+  </entry>
   <entry>
     <title type="text">체육시설 이용요금 감면(경로)</title>
     <link href="https://adk24211.github.io/walapp/support/living/%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EA%B2%BD%EB%A1%9C/" rel="alternate" type="text/html"/>
@@ -205,45 +245,5 @@
     <published>2026-09-10T00:00:00+09:00</published>
     <updated>2026-09-10T00:00:00+09:00</updated><author><name>질병관리청</name></author><category term="health"/>
     <summary type="text">격리치료가 필요한 감염병 환자와 의사환자를 대상으로 보건소에서 입원비를 지원하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">서민금융진흥원 고용보조금</title>
-    <link href="https://adk24211.github.io/walapp/support/finance/%EC%84%9C%EB%AF%BC%EA%B8%88%EC%9C%B5%EC%A7%84%ED%9D%A5%EC%9B%90-%EA%B3%A0%EC%9A%A9%EB%B3%B4%EC%A1%B0%EA%B8%88/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/finance/%EC%84%9C%EB%AF%BC%EA%B8%88%EC%9C%B5%EC%A7%84%ED%9D%A5%EC%9B%90-%EA%B3%A0%EC%9A%A9%EB%B3%B4%EC%A1%B0%EA%B8%88/</id>
-    <published>2026-09-10T00:00:00+09:00</published>
-    <updated>2026-09-10T00:00:00+09:00</updated><author><name>서민금융진흥원</name></author><category term="finance"/>
-    <summary type="text">신용회복지원자를 고용한 사업주에게 채용일로부터 1년 동안 3개월 단위로 최대 360만원을 지원하는 고용보조금 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">기부식품등 제공사업(푸드뱅크·푸드마켓)</title>
-    <link href="https://adk24211.github.io/walapp/support/care/%EA%B8%B0%EB%B6%80%EC%8B%9D%ED%92%88%EB%93%B1-%EC%A0%9C%EA%B3%B5%EC%82%AC%EC%97%85-%ED%91%B8%EB%93%9C%EB%B1%85%ED%81%AC-%ED%91%B8%EB%93%9C%EB%A7%88%EC%BC%93/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/care/%EA%B8%B0%EB%B6%80%EC%8B%9D%ED%92%88%EB%93%B1-%EC%A0%9C%EA%B3%B5%EC%82%AC%EC%97%85-%ED%91%B8%EB%93%9C%EB%B1%85%ED%81%AC-%ED%91%B8%EB%93%9C%EB%A7%88%EC%BC%93/</id>
-    <published>2026-09-10T00:00:00+09:00</published>
-    <updated>2026-09-11T00:00:00+09:00</updated><author><name>한국사회복지협의회</name></author><category term="care"/>
-    <summary type="text">기부식품등 제공사업(푸드뱅크·푸드마켓)은 양육·돌봄 분야에서 결식 위기·저소득 가구에 기부식품·생활용품을 푸드뱅크와 푸드마켓을 통해 제공하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">2026년 경상남도 장애인 평생교육이용권 지원(우수이용자)</title>
-    <link href="https://adk24211.github.io/walapp/support/care/2026%EB%85%84-%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84-%EC%9E%A5%EC%95%A0%EC%9D%B8-%ED%8F%89%EC%83%9D%EA%B5%90%EC%9C%A1%EC%9D%B4%EC%9A%A9%EA%B6%8C-%EC%A7%80%EC%9B%90-%EC%9A%B0%EC%88%98%EC%9D%B4%EC%9A%A9%EC%9E%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/care/2026%EB%85%84-%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84-%EC%9E%A5%EC%95%A0%EC%9D%B8-%ED%8F%89%EC%83%9D%EA%B5%90%EC%9C%A1%EC%9D%B4%EC%9A%A9%EA%B6%8C-%EC%A7%80%EC%9B%90-%EC%9A%B0%EC%88%98%EC%9D%B4%EC%9A%A9%EC%9E%90/</id>
-    <published>2026-09-10T00:00:00+09:00</published>
-    <updated>2026-09-10T00:00:00+09:00</updated><author><name>재단법인경상남도평생교육진흥원</name></author><category term="care"/>
-    <summary type="text">2026년 경상남도 장애인 평생교육이용권 지원(우수이용자) 제도는 35만원 포인트를 재충전해 평생교육 강좌 수강료와 교재비에 사용할 수 있도록 지원하며, 충전된 포인트는 NH농협채움카드에 입금되어 2026년 12월 31일까지 이용할 수 있습니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">체육시설 이용요금 감면(스포츠클라이밍경기장)</title>
-    <link href="https://adk24211.github.io/walapp/support/living/%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EC%8A%A4%ED%8F%AC%EC%B8%A0%ED%81%B4%EB%9D%BC%EC%9D%B4%EB%B0%8D%EA%B2%BD%EA%B8%B0%EC%9E%A5/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/living/%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EC%8A%A4%ED%8F%AC%EC%B8%A0%ED%81%B4%EB%9D%BC%EC%9D%B4%EB%B0%8D%EA%B2%BD%EA%B8%B0%EC%9E%A5/</id>
-    <published>2026-09-09T00:00:00+09:00</published>
-    <updated>2026-09-09T00:00:00+09:00</updated><author><name>영등포구시설관리공단</name></author><category term="living"/>
-    <summary type="text">영등포구 스포츠클라이밍 경기장 이용료를 장애인·국가유공자·의사상자 등에게 50% 감면하고, 65세 이상 노인·기초생활수급자·다둥이행복카드 소지자에게는 30% 감면해 주는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">박물관 문화시설 이용요금 감면(별마로천문대)</title>
-    <link href="https://adk24211.github.io/walapp/support/living/%EB%B0%95%EB%AC%BC%EA%B4%80-%EB%AC%B8%ED%99%94%EC%8B%9C%EC%84%A4-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EB%B3%84%EB%A7%88%EB%A1%9C%EC%B2%9C%EB%AC%B8%EB%8C%80/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/living/%EB%B0%95%EB%AC%BC%EA%B4%80-%EB%AC%B8%ED%99%94%EC%8B%9C%EC%84%A4-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EB%B3%84%EB%A7%88%EB%A1%9C%EC%B2%9C%EB%AC%B8%EB%8C%80/</id>
-    <published>2026-09-09T00:00:00+09:00</published>
-    <updated>2026-09-09T00:00:00+09:00</updated><author><name>영월군시설관리공단</name></author><category term="living"/>
-    <summary type="text">영월군 영월군시설관리공단이 운영하는 별마로천문대 이용료를 영월군민 등 지정 대상에게 전액 면제하거나 50% 감면해 주는 제도입니다.</summary>
   </entry>
 </feed>
