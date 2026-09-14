@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "2종 의료급여 수급권자이어야 합니다.",
+      "의료급여기관에 입원하여 발생한 급여비용 중 본인부담금이 20만원을 초과한 경우에 해당합니다.",
+      "수급권자 또는 부양의무자가 신청하고 보장기관이 승인한 금액만 지원됩니다."
+    ],
+    "faq": [],
+    "note": "퇴원 후 본인부담금을 직접 납부하고 사후에 대지급금을 신청할 수 없습니다.",
+    "steps": [
+      {
+        "body": "시·군·구청을 직접 방문하여 급여비용대지급신청서를 제출합니다. 신청은 상시 접수되며, 퇴원 후 본인부담금을 직접 납부하고 사후에 대지급금을 신청할 수 없습니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "2종 의료급여 수급권자가 입원 시 본인부담금이 20만원을 초과하면 초과분을 대지급받을 수 있는 제도이며, 신청은 시·군·구청에서 방문 신청합니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "○ 의료급여 2종 수급권자가 의료급여기관에 입원하여 발생한 급여비용 중 본인 부담금이 20만 원을 초과한 경우\n\n○ 20만원을 초과한 금액 중 수급권자 또는 부양의무자의 신청에 의해 보장기관이 승인한 금액\n\n* 비급여 비용은 지원대상 아님\n* 퇴원 시 본인부담금을 직접 납부하고 사후에 대지급금을 신청할 수 없음",
+  "category": "health",
+  "contact_raw": "보건복지상담센터/129",
+  "content_hash": "sha256:e171e0b807b6f2207d0109fbc887c23a",
+  "criteria_raw": "○ 2종 의료급여 수급권자",
+  "deferred_detail": false,
+  "documents_raw": [
+    "급여비용대지급신청서"
+  ],
+  "first_published": "2026-09-14",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-SHE000000090",
+  "is_mock": false,
+  "last_checked": "2026-09-14",
+  "last_updated": "2026-09-14",
+  "law_raw": "",
+  "name": "의료급여 (의료급여 대지급금)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SHE000000090",
+  "org": "보건복지부",
+  "primary_audience": "lowincome",
+  "receiver_raw": "시·군·구청",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "의료급여-의료급여-대지급금",
+  "source": "bojo24",
+  "source_category_raw": "보건·의료 서비스(의료)\n의료지원\n현금(융자) 개인",
+  "source_id": "SHE000000090",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 2종 의료급여 수급권자",
+  "view_count": 37005
+}

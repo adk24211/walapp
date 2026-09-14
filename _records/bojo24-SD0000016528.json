@@ -1,0 +1,77 @@
+{
+  "_prose": {
+    "eligibility": [
+      "소상공인, 중소기업, 중견기업, 대기업이 지원 대상입니다.",
+      "지원 대상 기업은 수출입자의 신용도와 국가위험을 종합적으로 검토합니다.",
+      "선정 기준은 수출입자 신용도 및 국가위험의 종합 평가입니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "무역보험공사 고객센터 홈페이지에서 신청서를 작성합니다. 준비한 구비 서류를 전자파일 형태로 첨부하여 제출하면 됩니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "무역보험공사 고객센터를 직접 방문하여 신청서를 제출합니다. 서류를 현장에서 확인받을 수 있습니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "소상공인·중소기업·중견기업·대기업을 대상으로 수출·수입 관련 보험을 제공하는 무역보험 지원 제도이며, 수출입자의 신용도와 국가위험을 종합 검토하여 선발합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "https://www.ksure.or.kr",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ 수출 보험\n\n○ 수입 보험\n\n○ 수출신용보증\n\n○ 기타 보험(환변동보험, 부품·소재 신뢰성 보험 등)",
+  "category": "jobs",
+  "contact_raw": "무역보험공사 고객센터/1588-3884",
+  "content_hash": "sha256:3210ad313a2f8001498eff8c11194157",
+  "criteria_raw": "○ 수출입자 신용도 및 국가위험 등을 종합적으로 검토",
+  "deferred_detail": false,
+  "documents_raw": [
+    "청약서",
+    "상사 현황표",
+    "금융기관 거래 상황 확인서",
+    "수출실적 확인서",
+    "고객 정보 수집",
+    "이용",
+    "제공",
+    "조회 동의서",
+    "주주 현황표",
+    "사업자등록증",
+    "법인 등기부 등본 등"
+  ],
+  "first_published": "2026-09-14",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-SD0000016528",
+  "is_mock": false,
+  "last_checked": "2026-09-14",
+  "last_updated": "2026-09-14",
+  "law_raw": "",
+  "name": "소상공인, 중소기업, 중견기업, 대기업등 무역 보험 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000016528",
+  "org": "산업통상부",
+  "primary_audience": "business",
+  "receiver_raw": "무역보험공사 고객센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "소상공인-중소기업-중견기업-대기업등-무역-보험-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금(보험)\n현금(융자) 소상공인",
+  "source_id": "SD0000016528",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 소상공인, 중소기업, 중견기업, 대기업을 대상으로 수출 입자 신용도 및 국가위험 등을 종합적으로 검토하여 선발",
+  "view_count": 4875
+}

@@ -1,0 +1,74 @@
+{
+  "_prose": {
+    "eligibility": [
+      "장애인 예비창업자",
+      "장애인기업"
+    ],
+    "faq": [
+      {
+        "a": "온라인 기본교육은 시각장애인을 위한 음성자료와 발달장애 특화 영상, 자막 등을 제공하고, 특화교육은 창업에 적합한 아이템을 선정해 기술교육과 멘토링을 진행합니다.",
+        "q": "지원 내용에 포함되는 교육은 어떤 형태인가요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청은 교육지원시스템에 접속하여 교육신청서와 장애인증명서, 개인정보 수집·이용동의서를 제출하면 완료됩니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "방문 신청은 (재)장애인기업종합지원센터에 직접 방문하여 동일 서류를 제출하면 접수가 이루어집니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "장애인맞춤형창업교육은 장애인 예비창업자와 장애인기업을 대상으로 온라인 기본교육과 창업 아이템 특화 교육·멘토링을 제공하는 상시 접수 지원제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "연중 수시",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled",
+    "business"
+  ],
+  "benefit_raw": "○ (온라인교육) 기본교육을 온라인 교육지원시스템을 이용하여 실시(시각장애 음성교육자료 제공, 발달장애 특화교육 프로그램 영상자료 제공, 기존 수어 외 자막 추가 등)\n\n○ (특화교육) 장애인이 창업하기 용이한 아이템을 선정하여 기술교육, 멘토링 실시",
+  "category": "jobs",
+  "contact_raw": "(재)장애인기업종합지원센터 사업전략팀/02-2181-6521",
+  "content_hash": "sha256:6b662c87d95087cb7b5d785d02a24096",
+  "criteria_raw": "○ 장애인 예비창업자, 장애인기업",
+  "deferred_detail": false,
+  "documents_raw": [
+    "교육신청서",
+    "장애인증명서",
+    "개인정보 수집 및 이용동의서"
+  ],
+  "first_published": "2026-09-14",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-WII000000880",
+  "is_mock": false,
+  "last_checked": "2026-09-14",
+  "last_updated": "2026-09-14",
+  "law_raw": "",
+  "name": "장애인맞춤형창업교육",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000880",
+  "org": "중소벤처기업부",
+  "primary_audience": "disabled",
+  "receiver_raw": "(재)장애인기업종합지원센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "장애인맞춤형창업교육",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타(교육) 소상공인",
+  "source_id": "WII000000880",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 장애인 예비창업자, 장애인기업",
+  "view_count": 5604
+}

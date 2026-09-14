@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "협업체는 사업에 참여하는 인원이 5인 이상이어야 합니다.",
+      "조합원 중 절반 이상이 소상공인이어야 합니다.",
+      "사업 계획서를 포함한 신청 서류를 제출해야 합니다.",
+      "서류·현장평가 및 선정위원회를 통해 지원 대상이 선정됩니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "사업 계획서를 작성하고, 사업 신청서·신용 정보제공 동의서·참가업체 현황·관련 증빙서류 등을 준비합니다. 별도 신청 절차가 없으므로 준비된 서류를 제출하면 서류·현장평가와 선정위원회를 통해 지원 대상이 선정됩니다. 선정 결과에 따라 지원 금액이 지급됩니다.",
+        "title": "지원 절차"
+      }
+    ],
+    "summary": "소상공인 협업체가 공동사업에 드는 비용을 일부 지원받는 제도로, 5인 이상이며 조합원 50% 이상이 소상공인인 경우 신청이 필요 없습니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "매회 상이함",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ 소상공인 협동조합 공동사업(공동브랜드 개발, 공동마케팅, 공동연구개발, 공동 네트워크, 공동장소 임차)에 소요되는 비용을 한도 내에서 지원(자부담 20~30%, 현금출자 원칙)",
+  "category": "jobs",
+  "contact_raw": "소상공인시장진흥공단/042-363-7922",
+  "content_hash": "sha256:bd4b795e38943fe7eeb63c91ea4a1153",
+  "criteria_raw": "○ 소상공인 협업체의 사업 계획서를 바탕으로 서류 또는 현장평가 및 선정위원회를 통해 지원 대상 선정",
+  "deferred_detail": false,
+  "documents_raw": [
+    "사업 신청서",
+    "사업 계획서",
+    "신용 정보제공 및 활용 동의서",
+    "참가업체 현황",
+    "관련 증빙서류 등"
+  ],
+  "first_published": "2026-09-14",
+  "how_to_raw": "신청불필요",
+  "id": "bojo24-SD0000001492",
+  "is_mock": false,
+  "last_checked": "2026-09-14",
+  "last_updated": "2026-09-14",
+  "law_raw": "",
+  "name": "소상공인 협업활성화 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000001492",
+  "org": "중소벤처기업부",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "소상공인-협업활성화-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금\n현물 소상공인",
+  "source_id": "SD0000001492",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 소상공인 협업체\n- 5인 이상이고, 조합원의 50%이상이 소상공인으로 이루어진 협업추진주체",
+  "view_count": 5401
+}
