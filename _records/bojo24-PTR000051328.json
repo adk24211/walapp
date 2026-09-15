@@ -26,14 +26,14 @@
     "raw": "접수기관 별 상이",
     "start": ""
   },
-  "apply_url": "http://support.klac.or.kr",
+  "apply_url": "https://support.klac.or.kr",
   "audiences": [
     "employer"
   ],
   "benefit_raw": "○ 체불근로자가 사업주를 상대로 민사절차를 통해 임금채권을 확보할 수 있도록 대한법률구조공단에서 체불근로자에 대하여 무료로 소송을 지원하는 제도\n\n○ 무료법률구조 범위 : 체불임금등 임금채권 청구 관련 소송대리, 소장 작성 등\n- 단, 소송에서 패소한 경우에는 상대방의 소송비용(변호사비용 등)은 지원하지 않음\n\n○ 지원 기관 : 고용노동부 및 대한법률구조공단",
   "category": "living",
   "contact_raw": "무료법률상담센터/132",
-  "content_hash": "sha256:b5574eb28cf5972a1a9244b607d459ac",
+  "content_hash": "sha256:9d586ba7aa83363b7ef2680d6e865d08",
   "criteria_raw": "○ 임금 및 퇴직금 체불 당시 최종 3개월분의 월평균 임금이 400만원 미만인 자",
   "deferred_detail": false,
   "documents_raw": [

@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "성적우수 장학생 – 평택시민 중 성적이 우수한 자",
+      "행복장학생 – 평택시민 중 2자녀 이상 가구의 자녀",
+      "희망장학생 – 평택시민 중 저소득 가구의 자녀",
+      "자립장학생 – 읍면동장의 추천을 받은 평택시민",
+      "특기장학생 – 예체능 분야에서 특기(우수)를 인정받은 평택시민"
+    ],
+    "faq": [],
+    "note": "선정 기준이 별도로 제시되지 않아 장학생선발위원회의 의결에 따라 선발됩니다.",
+    "steps": [
+      {
+        "body": "평택시 장학재단을 직접 방문하여 신청합니다. 신청 시 장학생선발위원회의 의결서와 평택시 장학재단 홈페이지에 공고된 자료를 제출하시기 바랍니다. 제출 서류에 대한 자세한 내용은 현장 안내를 참고하십시오.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "평택시민 자녀를 대상으로 성적우수, 다자녀, 저소득, 읍면동장 추천, 예체능 특기 등 5가지 유형에 현금 장학금을 지원하는 제도이며, 평택시 장학재단이 운영하고 신청은 직접 방문하여 진행합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 평택시민의 자녀에게 장학금(현금) 지원\n- 성적우수 장학생\n- 다자녀가구를 위한 행복 장학생\n- 저소득층 가구의 학생을 위한 희망 장학생\n- 읍면동장의 추천으로 선발되는 자립 장학생\n- 예체능 우수자를 위한 특기 장학생",
+  "category": "education",
+  "contact_raw": "평택시 장학재단/031-651-5520",
+  "content_hash": "sha256:2ffab9f3b6bb88f8a70cc1a2eec41040",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "매년 장학생선발위원회 의결을 통해",
+    "평택시 장학재단 홈페이지(ptsf.or.kr)에",
+    "올리는 공고문 참고"
+  ],
+  "first_published": "2026-09-15",
+  "how_to_raw": "방문신청\n직접입력",
+  "id": "bojo24-O00057000001",
+  "is_mock": false,
+  "last_checked": "2026-09-15",
+  "last_updated": "2026-09-15",
+  "law_raw": "",
+  "name": "평택시 장학금 지급",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00057000001",
+  "org": "재단법인평택시장학재단",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "평택시-장학금-지급",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "O00057000001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 우수장학생 : 성적 우수장학생\n\n○ 행복장학생 : 2자녀 이상 가구의 자녀\n\n○ 희망장학생 : 저소득(소득구간) 가구의 자녀\n\n○ 자립장학생 : 읍면동장 추천자\n\n○ 특기장학생 : 예체능 특기생",
+  "view_count": 3933
+}

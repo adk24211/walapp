@@ -1,0 +1,64 @@
+{
+  "_prose": {
+    "eligibility": [
+      "세종시 내에 거주하거나 재학 중인 초등학생이며 가구의 기준중위소득 이하인 경우",
+      "세종시 내에 거주하거나 재학 중인 중학생이며 가구의 기준중위소득 이하인 경우",
+      "세종시 내에 거주하거나 재학 중인 고등학생이며 가구의 기준중위소득 이하인 경우"
+    ],
+    "faq": [],
+    "note": "선정 기준이 별도로 제시되지 않아, 신청 후 심사 결과에 따라 지원 여부가 결정됩니다.",
+    "steps": [
+      {
+        "body": "홈페이지에서 온라인 신청 양식을 작성하여 제출합니다. 제출 시 필요한 서류는 홈페이지 공고문을 확인하시기 바랍니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "모범(초중고) 장학금은 세종시 내 저소득 가정의 초·중·고등학생에게 교육기회 평등을 위해 장학금을 지원하는 제도이며, 초등학생은 30만원, 중학생은 60만원, 고등학생은 90만원을 지급합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "상,하반기 각 1회",
+    "start": ""
+  },
+  "apply_url": "www.sjhle.or.kr",
+  "audiences": [
+    "lowincome",
+    "student"
+  ],
+  "benefit_raw": "○ 저소득 세종시 초·중·고등학생의 교육기회 평등을 위한 장학금 지원\n\n○ 1인당 30~90만원 장학금 지급\n- 초 : 30만원 / 중 : 60만원 / 고 : 90만원",
+  "category": "education",
+  "contact_raw": "인재개발팀/044-865-9685",
+  "content_hash": "sha256:40a646ed7fe991ae8dea1dea58af6e68",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "홈페이지 공고문 참고"
+  ],
+  "first_published": "2026-09-15",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-O00088400011",
+  "is_mock": false,
+  "last_checked": "2026-09-15",
+  "last_updated": "2026-09-15",
+  "law_raw": "",
+  "name": "모범(초중고) 장학금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00088400011",
+  "org": "재단법인세종특별자치시인재육성평생교육진흥원",
+  "primary_audience": "student",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "모범-초중고-장학금",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "O00088400011",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "기준중위소득 이하의 가정 세종시 초·중·고등학생(거주 또는 재학)",
+  "view_count": 902
+}

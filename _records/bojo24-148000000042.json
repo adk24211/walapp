@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "상수원보호구역 내에서 농림업에 종사하는 사람(수계기금 지원지역 제외)",
+      "주민지원사업계획이 수립된 시·군·구에 속한 경우"
+    ],
+    "faq": [
+      {
+        "a": "네, 수계기금 지원지역에 해당하는 경우는 본 지원 대상에서 제외됩니다.",
+        "q": "수계기금 지원지역은 지원 대상에서 제외되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "지원 대상자는 관할 시·군·구청을 직접 방문하여 신청합니다. 구비 서류는 필요하지 않으며, 신청 시 담당 직원에게 지원 내용과 대상 여부를 확인하면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "수도법 상수원 보호구역에 거주하는 주민과 농림업 종사자를 대상으로, 소득증대·복지·학자금 지원 등을 제공하는 주민지원 제도이며, 주민지원사업계획이 수립된 시·군·구에서 방문 신청으로 신청할 수 있습니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "각 지자체에서 별도 정한 기한",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "youth"
+  ],
+  "benefit_raw": "○ 소득증대사업(농기계·농자재 구입, 비료구입 등), 복지증진사업(생필품·구입, 마을회관 보수 등), 육영사업(장학기금, 학자금 지원 등) 등",
+  "category": "education",
+  "contact_raw": "기후에너지환경부 물이용정책과/044-201-7154",
+  "content_hash": "sha256:6be8411a93c0252e4b9db13b41bf50d9",
+  "criteria_raw": "○ 주민지원사업계획이 수립된 시군구",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-15",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-148000000042",
+  "is_mock": false,
+  "last_checked": "2026-09-15",
+  "last_updated": "2026-09-15",
+  "law_raw": "",
+  "name": "수도법 상수원 보호구역 주민지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/148000000042",
+  "org": "기후에너지환경부",
+  "primary_audience": "youth",
+  "receiver_raw": "시·군·구청",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "수도법-상수원-보호구역-주민지원",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 현물 개인",
+  "source_id": "148000000042",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 상수원보호구역 주민 또는 농림업종사자(수계기금 지원지역 제외)",
+  "view_count": 2470
+}

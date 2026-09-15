@@ -1,0 +1,61 @@
+{
+  "_prose": {
+    "eligibility": [
+      "주민등록 등본에 만 65세 이상으로 기재된 어르신"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "용산제주유스호스텔을 직접 방문합니다. 방문 시 담당자에게 할인 신청을 요청하시면 됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "용산제주유스호스텔은 주민등록 등본에 만 65세 이상으로 기재된 어르신에게 숙박 요금 20% 할인을 제공하는 생활·문화 지원 제도이며, 상시 접수로 방문 신청만 하면 이용할 수 있습니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "senior"
+  ],
+  "benefit_raw": "「노인복지법」에 따른 만 65세 이상의 자 20% 할인",
+  "category": "living",
+  "contact_raw": "용산 제주유스호스텔/064-738-9502",
+  "content_hash": "sha256:8818256f91c5de8d3d227281129ee657",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-15",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-O00024000025",
+  "is_mock": false,
+  "last_checked": "2026-09-15",
+  "last_updated": "2026-09-15",
+  "law_raw": "",
+  "name": "용산제주유스호스텔 할인(경로)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00024000025",
+  "org": "용산구시설관리공단",
+  "primary_audience": "senior",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "용산제주유스호스텔-할인-경로",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 시설이용 개인",
+  "source_id": "O00024000025",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "주민등록 등본 상 만 65세 이상 어르신",
+  "view_count": 708
+}

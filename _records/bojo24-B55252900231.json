@@ -1,0 +1,65 @@
+{
+  "_prose": {
+    "eligibility": [
+      "대한민국 국적을 가진 대학 재학생이며, 휴학생·시간제 등록생이 아닌 자입니다.",
+      "아동·청소년의 성보호에 관한 법률 등 결격 사유에 해당하지 않는 자입니다.",
+      "학점이 C0(70점) 이상인 자이며, 대학의 추천에 따라 승인될 경우 1회에 한해 성적 기준이 완화될 수 있습니다.",
+      "초·중·고등학생(특수학교 포함) 및 학교 밖 청소년이 멘티가 될 수 있습니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "현재 제공된 자료에는 구체적인 신청 방법에 대한 안내가 없습니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "대학생이 멘토가 되어 초·중·고등학생(특수학교 포함) 및 학교 밖 청소년에게 학습·상담을 지원하고, 멘토에게는 지식·경험을 나누는 근로 기회를 제공하는 청소년교육지원장학금입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "매년 3월 ~ 2월 (참여대학별 신청시기 상이)",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "youth",
+    "student"
+  ],
+  "benefit_raw": "- (대학생) 대학생들의 지식과 경험을 나누는 가치 있는 근로 기회 제공\n- (청소년) 초·중·고등학생의 학습·상담지원 등을 통해 균등한 교육기회 제공",
+  "category": "care",
+  "contact_raw": "한국장학재단/1599-2000",
+  "content_hash": "sha256:6139290731519ddcb17ccbb801417d89",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-15",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-B55252900231",
+  "is_mock": false,
+  "last_checked": "2026-09-15",
+  "last_updated": "2026-09-15",
+  "law_raw": "",
+  "name": "대학생 청소년교육지원장학금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252900231",
+  "org": "한국장학재단",
+  "primary_audience": "student",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "대학생-청소년교육지원장학금",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "B55252900231",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ (멘토) 참여대학 재학생 중 아래의 조건을 충족한 학생\n- 대한민국 국적 소지\n- 지원대상 대학의 재학생(휴학생, 시간제 등록생 등 제외)\n- 「아동·청소년의 성보호에 관한 법률」등 관련 결격사유에 해당하지 않는 자\n- 성적기준 C0(70점/100점 만점) 이상을 충족하는 자\n* 대학의 추천에 따라 한국장학재단에서 승인하는 경우 재학 중 1회에 한해 성적기준 적용 완화(교·사대생 등 대학생 튜터링 사업 승인이력 포함)\n○ (멘티) 초·중·고등학생 학생*(특수학교 포함)\n* 학교 밖 청소년도 지원대상에 포함",
+  "view_count": 712
+}
