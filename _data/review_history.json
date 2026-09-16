@@ -1,0 +1,18 @@
+[
+ {
+  "date": "2026-09-16",
+  "thin": {
+   "count": 506,
+   "median_own_chars": 392,
+   "under_400": 260,
+   "under_400_pct": 51,
+   "under_500": 359
+  },
+  "regen_backlog": 43,
+  "ads_on_thin": 34,
+  "audiences_empty": 12,
+  "near_duplicates": 1,
+  "stale_over_30d": 9,
+  "checks_failed": []
+ }
+]
