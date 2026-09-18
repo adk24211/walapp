@@ -1,0 +1,62 @@
+{
+  "_prose": {
+    "eligibility": [
+      "도시형 소공인 지원에 관한 특별법에 따른 소공인",
+      "선정 기준은 별도 없습니다"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "스마트 제조지원사업은 온라인으로 신청합니다. 신청서는 해당 홈페이지에서 작성하고, 소공인 확인서류와 공고에 명시된 제출서류를 첨부합니다. 제출 후 문의처(소공인지원실)로 연락하면 됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "스마트 제조지원사업은 도시형 소공인을 대상으로 스마트화 장비·기계 구매비용과 소프트웨어 임차비용을 지원하는 일자리·창업 지원 제도이며, 신청은 온라인으로만 가능하고 소공인 확인서류 및 공고에 명시된 서류를 제출해야 합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "매년 시기가 상이함으로 소상공인24 공고 확인 필요",
+    "start": ""
+  },
+  "apply_url": "https://www.sbiz24.kr",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "- H/W : 스마트화 장비 · 기계 구매비용\n- S/W : 스마트화를 위한 소프트웨어 임차비용",
+  "category": "jobs",
+  "contact_raw": "소공인지원실/042-363-7912\n소공인지원실/042-363-7914\n소공인지원실/042-363-7915\n소공인지원실/042-363-7916\n소공인지원실/042-363-7919\n소공인지원실/042-363-7920",
+  "content_hash": "sha256:295de8b62c27b5935dc9407bb7e6f209",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "소공인 확인서류 및 공고 상 요구 제출서류"
+  ],
+  "first_published": "2026-09-18",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55307700015",
+  "is_mock": false,
+  "last_checked": "2026-09-18",
+  "last_updated": "2026-09-18",
+  "law_raw": "",
+  "name": "스마트 제조지원사업",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55307700015",
+  "org": "소상공인시장진흥공단",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "스마트-제조지원사업",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기술지원 소상공인",
+  "source_id": "B55307700015",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "도시형 소공인 지원에 관한 특별법에 따른 소공인",
+  "view_count": 4351
+}

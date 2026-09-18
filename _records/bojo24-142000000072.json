@@ -1,0 +1,78 @@
+{
+  "_prose": {
+    "eligibility": [
+      "상시근로자 수가 10인 미만인 제조 소상공인",
+      "제출 서류를 모두 구비해야 함",
+      "서류·대면평가를 통해 고득점 순으로 선정"
+    ],
+    "faq": [
+      {
+        "a": "제출한 서류와 대면평가를 통해 고득점 순으로 선정됩니다.",
+        "q": "선정은 어떤 기준으로 이루어지나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "소상공인시장진흥공단 홈페이지에서 온라인으로 신청하고, 사업 신청서·계획서·사업자등록증명원·중소기업확인서·개인정보 수집·이용·제공 동의서를 첨부합니다.",
+        "title": "신청"
+      },
+      {
+        "body": "제출한 서류와 대면평가 결과를 고득점 순으로 선정하여, 선정된 소공인에게 TrackⅠ(민간협업형) 또는 TrackⅡ(개별형) 프로그램을 제공하고 판로개척을 지원합니다.",
+        "title": "선정 및 지원"
+      }
+    ],
+    "summary": "소공인 판로개척 지원은 상시근로자 수 10인 미만인 제조 소상공인을 대상으로 온라인 신청 후 서류·대면평가 고득점 순으로 선정해 판로개척을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "5~6월",
+    "start": ""
+  },
+  "apply_url": "https://www.fanfandaero.kr",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "('26년 공고 기준)\n1. Track Ⅰ(민간협업형) : 생활소비재 제조 소공인에게 민간 협력 전주기 육성 프로그램을 제공하여 스타 소공인으로 혁신 성장을 지원\n2. Track Ⅱ(개별형) : 성장 의지 및 잠재력을 갖춘 유망소공인의 판로개척 지원(①전시회 참가, ②오프라인 매장 입점 지원, ③브랜드 강화)",
+  "category": "jobs",
+  "contact_raw": "소상공인시장진흥공단 소공인지원실/042-363-7917",
+  "content_hash": "sha256:1bbceb00ff20711350c6f45f3dac7681",
+  "criteria_raw": "○ 서류, 대면평가를 통해 고득점순으로 선정",
+  "deferred_detail": false,
+  "documents_raw": [
+    "사업 신청서 및 계획서",
+    "사업자등록증명원",
+    "중소기업확인서(소상공인확인서)",
+    "개인정보 수집",
+    "이용",
+    "제공 동의서 등",
+    "* 자세한 내용은 공고내용 참고"
+  ],
+  "first_published": "2026-09-18",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-142000000072",
+  "is_mock": false,
+  "last_checked": "2026-09-18",
+  "last_updated": "2026-09-18",
+  "law_raw": "",
+  "name": "소공인 판로개척 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/142000000072",
+  "org": "중소벤처기업부",
+  "primary_audience": "business",
+  "receiver_raw": "소상공인시장진흥공단",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "소공인-판로개척-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 소상공인",
+  "source_id": "142000000072",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 상시근로자 수 10인 미만 제조 소상공인",
+  "view_count": 4277
+}
