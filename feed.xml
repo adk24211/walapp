@@ -4,8 +4,72 @@
   <subtitle>정부·지자체 지원금과 복지 제도를 받을 수 있는지부터 신청 방법까지 하나씩 정리합니다. 공공데이터 원문을 토대로 쉬운 말로 풀어 씁니다.</subtitle>
   <link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html"/>
-  <updated>2026-09-18T09:10:30+09:00</updated>
+  <updated>2026-09-19T09:11:15+09:00</updated>
   <id>https://adk24211.github.io/walapp/</id>
+  <entry>
+    <title type="text">전략작물직불</title>
+    <link href="https://adk24211.github.io/walapp/support/living/%EC%A0%84%EB%9E%B5%EC%9E%91%EB%AC%BC%EC%A7%81%EB%B6%88/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/%EC%A0%84%EB%9E%B5%EC%9E%91%EB%AC%BC%EC%A7%81%EB%B6%88/</id>
+    <published>2026-09-19T00:00:00+09:00</published>
+    <updated>2026-09-19T00:00:00+09:00</updated><author><name>농림축산식품부</name></author><category term="living"/>
+    <summary type="text">전략작물직불은 농업경영정보를 등록한 농업인·법인·공동경영체가 일정 요건을 갖춘 논에서 전략작물을 재배할 경우, 논당 50만 원에서 600만 원까지 지원금을 지급하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">용산문화체육센터 프로그램 할인(경로)</title>
+    <link href="https://adk24211.github.io/walapp/support/living/%EC%9A%A9%EC%82%B0%EB%AC%B8%ED%99%94%EC%B2%B4%EC%9C%A1%EC%84%BC%ED%84%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%ED%95%A0%EC%9D%B8-%EA%B2%BD%EB%A1%9C/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/%EC%9A%A9%EC%82%B0%EB%AC%B8%ED%99%94%EC%B2%B4%EC%9C%A1%EC%84%BC%ED%84%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%ED%95%A0%EC%9D%B8-%EA%B2%BD%EB%A1%9C/</id>
+    <published>2026-09-19T00:00:00+09:00</published>
+    <updated>2026-09-19T00:00:00+09:00</updated><author><name>용산구시설관리공단</name></author><category term="living"/>
+    <summary type="text">용산문화체육센터는 만 65세 이상 회원에게 헬스장 이용 시 50%, 그 외 시설 이용 시 20% 할인을 제공하는 프로그램입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">진폐근로자복지지원</title>
+    <link href="https://adk24211.github.io/walapp/support/education/%EC%A7%84%ED%8F%90%EA%B7%BC%EB%A1%9C%EC%9E%90%EB%B3%B5%EC%A7%80%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/education/%EC%A7%84%ED%8F%90%EA%B7%BC%EB%A1%9C%EC%9E%90%EB%B3%B5%EC%A7%80%EC%A7%80%EC%9B%90/</id>
+    <published>2026-09-19T00:00:00+09:00</published>
+    <updated>2026-09-19T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="education"/>
+    <summary type="text">진폐 근로자 복지지원은 광업 분진작업에 종사하고 진폐 장해 판정을 받은 근로자의 자녀에게 중·고등학교 학자금을 지원하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">부산진구장학회 장학금</title>
+    <link href="https://adk24211.github.io/walapp/support/education/%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC%EC%9E%A5%ED%95%99%ED%9A%8C-%EC%9E%A5%ED%95%99%EA%B8%88/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/education/%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC%EC%9E%A5%ED%95%99%ED%9A%8C-%EC%9E%A5%ED%95%99%EA%B8%88/</id>
+    <published>2026-09-19T00:00:00+09:00</published>
+    <updated>2026-09-19T00:00:00+09:00</updated><author><name>재단법인부산진구장학회</name></author><category term="education"/>
+    <summary type="text">부산진구장학회가 부산진구 내 고등학생 및 대학생에게 장학금을 지원하는 제도이며, 일반 고등학생에게 100만원, 대학생에게 350만원, 예체능·기능 고등학생에게는 100만원을 지급합니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">국가보훈대상자 학습보조비 지급</title>
+    <link href="https://adk24211.github.io/walapp/support/education/%EA%B5%AD%EA%B0%80%EB%B3%B4%ED%9B%88%EB%8C%80%EC%83%81%EC%9E%90-%ED%95%99%EC%8A%B5%EB%B3%B4%EC%A1%B0%EB%B9%84-%EC%A7%80%EA%B8%89/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/education/%EA%B5%AD%EA%B0%80%EB%B3%B4%ED%9B%88%EB%8C%80%EC%83%81%EC%9E%90-%ED%95%99%EC%8A%B5%EB%B3%B4%EC%A1%B0%EB%B9%84-%EC%A7%80%EA%B8%89/</id>
+    <published>2026-09-19T00:00:00+09:00</published>
+    <updated>2026-09-19T00:00:00+09:00</updated><author><name>국가보훈부</name></author><category term="education"/>
+    <summary type="text">국가보훈부에서 운영하는 교육·역량 분야 지원으로, 중·고등학생·대학생·특수학교 학생에게 학습보조비를 지급합니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">영유아보육료 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/care/%EC%98%81%EC%9C%A0%EC%95%84%EB%B3%B4%EC%9C%A1%EB%A3%8C-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/%EC%98%81%EC%9C%A0%EC%95%84%EB%B3%B4%EC%9C%A1%EB%A3%8C-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-09-19T00:00:00+09:00</published>
+    <updated>2026-09-19T00:00:00+09:00</updated><author><name>교육부</name></author><category term="care"/>
+    <summary type="text">2026년 0세부터 5세까지 영유아를 대상으로 보육료를 지원하는 제도로, 연령과 보육시간에 따라 지원 금액이 다르게 정해져 있습니다. 신청은 온라인과 방문 두 가지 방법으로 할 수 있습니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">에너지 기후변화 미래세대 교육</title>
+    <link href="https://adk24211.github.io/walapp/support/care/%EC%97%90%EB%84%88%EC%A7%80-%EA%B8%B0%ED%9B%84%EB%B3%80%ED%99%94-%EB%AF%B8%EB%9E%98%EC%84%B8%EB%8C%80-%EA%B5%90%EC%9C%A1/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/%EC%97%90%EB%84%88%EC%A7%80-%EA%B8%B0%ED%9B%84%EB%B3%80%ED%99%94-%EB%AF%B8%EB%9E%98%EC%84%B8%EB%8C%80-%EA%B5%90%EC%9C%A1/</id>
+    <published>2026-09-19T00:00:00+09:00</published>
+    <updated>2026-09-19T00:00:00+09:00</updated><author><name>한국에너지공단</name></author><category term="care"/>
+    <summary type="text">에너지 기후변화 미래세대 교육은 한국에너지공단이 주관하는 양육·돌봄 분야 지원 제도로, 초·중·고 학교와 학생·교원을 대상으로 에너지교육 관련 콘텐츠를 무상으로 제공하며, 별도 신청 절차 없이 상시 접수됩니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">4대궁, 종묘 및 조선왕릉 무료 관람</title>
+    <link href="https://adk24211.github.io/walapp/support/care/4%EB%8C%80%EA%B6%81-%EC%A2%85%EB%AC%98-%EB%B0%8F-%EC%A1%B0%EC%84%A0%EC%99%95%EB%A6%89-%EB%AC%B4%EB%A3%8C-%EA%B4%80%EB%9E%8C/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/4%EB%8C%80%EA%B6%81-%EC%A2%85%EB%AC%98-%EB%B0%8F-%EC%A1%B0%EC%84%A0%EC%99%95%EB%A6%89-%EB%AC%B4%EB%A3%8C-%EA%B4%80%EB%9E%8C/</id>
+    <published>2026-09-19T00:00:00+09:00</published>
+    <updated>2026-09-19T00:00:00+09:00</updated><author><name>국가유산청</name></author><category term="care"/>
+    <summary type="text">4대궁·종묘·조선왕릉을 무료로 관람할 수 있는 제도로, 국가유산청이 운영합니다.</summary>
+  </entry>
   <entry>
     <title type="text">스마트 제조지원사업</title>
     <link href="https://adk24211.github.io/walapp/support/jobs/%EC%8A%A4%EB%A7%88%ED%8A%B8-%EC%A0%9C%EC%A1%B0%EC%A7%80%EC%9B%90%EC%82%AC%EC%97%85/" rel="alternate" type="text/html"/>
@@ -181,69 +245,5 @@
     <published>2026-09-15T00:00:00+09:00</published>
     <updated>2026-09-15T00:00:00+09:00</updated><author><name>한국농어촌공사</name></author><category term="housing"/>
     <summary type="text">농지규모화 지원은 농지를 보유하고 있으나 직접 경작이 어려운 소유자를 위해 공사가 농지를 매입·임차하고, 이를 농업인에게 임대하거나 매매 차액을 지원하는 사업입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">평택시 장학금 지급</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%ED%8F%89%ED%83%9D%EC%8B%9C-%EC%9E%A5%ED%95%99%EA%B8%88-%EC%A7%80%EA%B8%89/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%ED%8F%89%ED%83%9D%EC%8B%9C-%EC%9E%A5%ED%95%99%EA%B8%88-%EC%A7%80%EA%B8%89/</id>
-    <published>2026-09-15T00:00:00+09:00</published>
-    <updated>2026-09-15T00:00:00+09:00</updated><author><name>재단법인평택시장학재단</name></author><category term="education"/>
-    <summary type="text">평택시민 자녀를 대상으로 성적우수, 다자녀, 저소득, 읍면동장 추천, 예체능 특기 등 5가지 유형에 현금 장학금을 지원하는 제도이며, 평택시 장학재단이 운영하고 신청은 직접 방문하여 진행합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">수도법 상수원 보호구역 주민지원</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%EC%88%98%EB%8F%84%EB%B2%95-%EC%83%81%EC%88%98%EC%9B%90-%EB%B3%B4%ED%98%B8%EA%B5%AC%EC%97%AD-%EC%A3%BC%EB%AF%BC%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%EC%88%98%EB%8F%84%EB%B2%95-%EC%83%81%EC%88%98%EC%9B%90-%EB%B3%B4%ED%98%B8%EA%B5%AC%EC%97%AD-%EC%A3%BC%EB%AF%BC%EC%A7%80%EC%9B%90/</id>
-    <published>2026-09-15T00:00:00+09:00</published>
-    <updated>2026-09-15T00:00:00+09:00</updated><author><name>기후에너지환경부</name></author><category term="education"/>
-    <summary type="text">수도법 상수원 보호구역에 거주하는 주민과 농림업 종사자를 대상으로, 소득증대·복지·학자금 지원 등을 제공하는 주민지원 제도이며, 주민지원사업계획이 수립된 시·군·구에서 방문 신청으로 신청할 수 있습니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">모범(초중고) 장학금</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%EB%AA%A8%EB%B2%94-%EC%B4%88%EC%A4%91%EA%B3%A0-%EC%9E%A5%ED%95%99%EA%B8%88/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%EB%AA%A8%EB%B2%94-%EC%B4%88%EC%A4%91%EA%B3%A0-%EC%9E%A5%ED%95%99%EA%B8%88/</id>
-    <published>2026-09-15T00:00:00+09:00</published>
-    <updated>2026-09-15T00:00:00+09:00</updated><author><name>재단법인세종특별자치시인재육성평생교육진흥원</name></author><category term="education"/>
-    <summary type="text">모범(초중고) 장학금은 세종시 내 저소득 가정의 초·중·고등학생에게 교육기회 평등을 위해 장학금을 지원하는 제도이며, 초등학생은 30만원, 중학생은 60만원, 고등학생은 90만원을 지급합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">대학생 청소년교육지원장학금</title>
-    <link href="https://adk24211.github.io/walapp/support/care/%EB%8C%80%ED%95%99%EC%83%9D-%EC%B2%AD%EC%86%8C%EB%85%84%EA%B5%90%EC%9C%A1%EC%A7%80%EC%9B%90%EC%9E%A5%ED%95%99%EA%B8%88/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/care/%EB%8C%80%ED%95%99%EC%83%9D-%EC%B2%AD%EC%86%8C%EB%85%84%EA%B5%90%EC%9C%A1%EC%A7%80%EC%9B%90%EC%9E%A5%ED%95%99%EA%B8%88/</id>
-    <published>2026-09-15T00:00:00+09:00</published>
-    <updated>2026-09-15T00:00:00+09:00</updated><author><name>한국장학재단</name></author><category term="care"/>
-    <summary type="text">대학생이 멘토가 되어 초·중·고등학생(특수학교 포함) 및 학교 밖 청소년에게 학습·상담을 지원하고, 멘토에게는 지식·경험을 나누는 근로 기회를 제공하는 청소년교육지원장학금입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">위기청소년 특별 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/living/%EC%9C%84%EA%B8%B0%EC%B2%AD%EC%86%8C%EB%85%84-%ED%8A%B9%EB%B3%84-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/living/%EC%9C%84%EA%B8%B0%EC%B2%AD%EC%86%8C%EB%85%84-%ED%8A%B9%EB%B3%84-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-09-14T00:00:00+09:00</published>
-    <updated>2026-09-18T00:00:00+09:00</updated><author><name>성평등가족부</name></author><category term="living"/>
-    <summary type="text">위기청소년 특별 지원은 9세 이상 24세 이하 청소년에게 생활·건강·학업·자립·상담·법률·활동 등 다양한 분야의 금전적 지원을 제공하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">장애인맞춤형창업교육</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%9E%A5%EC%95%A0%EC%9D%B8%EB%A7%9E%EC%B6%A4%ED%98%95%EC%B0%BD%EC%97%85%EA%B5%90%EC%9C%A1/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EC%9E%A5%EC%95%A0%EC%9D%B8%EB%A7%9E%EC%B6%A4%ED%98%95%EC%B0%BD%EC%97%85%EA%B5%90%EC%9C%A1/</id>
-    <published>2026-09-14T00:00:00+09:00</published>
-    <updated>2026-09-14T00:00:00+09:00</updated><author><name>중소벤처기업부</name></author><category term="jobs"/>
-    <summary type="text">장애인맞춤형창업교육은 장애인 예비창업자와 장애인기업을 대상으로 온라인 기본교육과 창업 아이템 특화 교육·멘토링을 제공하는 상시 접수 지원제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">소상공인 협업활성화 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8-%ED%98%91%EC%97%85%ED%99%9C%EC%84%B1%ED%99%94-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8-%ED%98%91%EC%97%85%ED%99%9C%EC%84%B1%ED%99%94-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-09-14T00:00:00+09:00</published>
-    <updated>2026-09-14T00:00:00+09:00</updated><author><name>중소벤처기업부</name></author><category term="jobs"/>
-    <summary type="text">소상공인 협업체가 공동사업에 드는 비용을 일부 지원받는 제도로, 5인 이상이며 조합원 50% 이상이 소상공인인 경우 신청이 필요 없습니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">소상공인, 중소기업, 중견기업, 대기업등 무역 보험 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8-%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85-%EC%A4%91%EA%B2%AC%EA%B8%B0%EC%97%85-%EB%8C%80%EA%B8%B0%EC%97%85%EB%93%B1-%EB%AC%B4%EC%97%AD-%EB%B3%B4%ED%97%98-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8-%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85-%EC%A4%91%EA%B2%AC%EA%B8%B0%EC%97%85-%EB%8C%80%EA%B8%B0%EC%97%85%EB%93%B1-%EB%AC%B4%EC%97%AD-%EB%B3%B4%ED%97%98-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-09-14T00:00:00+09:00</published>
-    <updated>2026-09-14T00:00:00+09:00</updated><author><name>산업통상부</name></author><category term="jobs"/>
-    <summary type="text">소상공인·중소기업·중견기업·대기업을 대상으로 수출·수입 관련 보험을 제공하는 무역보험 지원 제도이며, 수출입자의 신용도와 국가위험을 종합 검토하여 선발합니다.</summary>
   </entry>
 </feed>
