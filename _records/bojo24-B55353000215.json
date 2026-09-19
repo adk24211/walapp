@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "초중고 학교",
+      "학생",
+      "교원 등"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "별도 신청이 필요하지 않습니다. 에너지교육 관련 콘텐츠는 상시 접수 형태로 제공됩니다. 자세한 내용은 문의처로 연락해 주시기 바랍니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "에너지 기후변화 미래세대 교육은 한국에너지공단이 주관하는 양육·돌봄 분야 지원 제도로, 초·중·고 학교와 학생·교원을 대상으로 에너지교육 관련 콘텐츠를 무상으로 제공하며, 별도 신청 절차 없이 상시 접수됩니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "student"
+  ],
+  "benefit_raw": "○ 에너지교육 관련 콘텐츠 등 제공",
+  "category": "care",
+  "contact_raw": "한국에너지공단 재생에너지소통처/052-920-0307",
+  "content_hash": "sha256:367ff10f223bfedc31a3c7180a537168",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-19",
+  "how_to_raw": "신청불필요",
+  "id": "bojo24-B55353000215",
+  "is_mock": false,
+  "last_checked": "2026-09-19",
+  "last_updated": "2026-09-19",
+  "law_raw": "",
+  "name": "에너지 기후변화 미래세대 교육",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55353000215",
+  "org": "한국에너지공단",
+  "primary_audience": "student",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "에너지-기후변화-미래세대-교육",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 개인",
+  "source_id": "B55353000215",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "초중고 학교, 학생 및 교원 등",
+  "view_count": 1159
+}
