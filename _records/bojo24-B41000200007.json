@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "일반 냉동기를 효율기준을 충족하는 원심식 또는 고효율 스크루 냉동기로 교체하는 고객",
+      "원심식 냉동기의 경우 300USRT 이하이면 COP 5.96 이상, 301~2,000USRT이면 COP 6.39 이상이어야 함",
+      "고효율 스크루 냉동기의 경우 500USRT 이하이어야 함"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청은 KEPCO 온라인 시스템을 통해 진행합니다. 신청서 작성 후 제출하면 접수가 완료됩니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "방문 신청은 접수 기관에 직접 방문하여 신청서를 제출합니다. 담당 직원이 신청을 확인하고 접수합니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "고효율 냉동기로 교체하는 고객에게 에너지 효율 향상 및 온실가스 감축을 목표로 지원금을 지급하는 제도이며, 교체 대상은 한국에너지공단에 등록된 효율 기준을 충족하는 원심식 또는 고효율 스크루 냉동기입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "2026-12-18",
+    "raw": "2026.01.19~2026.12.18",
+    "start": "2026-01-19"
+  },
+  "apply_url": "https://online.kepco.co.kr/",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "에너지 효율향상 및 온실가스 감축을 위해 고객이 고효율 기기 교체 시 지원금 지급",
+  "category": "living",
+  "contact_raw": "수요효율처/123",
+  "content_hash": "sha256:2bbacfe18702f71bca848d0f08796577",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-20",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-B41000200007",
+  "is_mock": false,
+  "last_checked": "2026-09-20",
+  "last_updated": "2026-09-20",
+  "law_raw": "",
+  "name": "고효율 냉동기 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B41000200007",
+  "org": "한국전력공사",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "고효율-냉동기-지원",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금 개인\n가구\n소상공인\n법인/시설/단체",
+  "source_id": "B41000200007",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 일반 냉동기를 효율기준 충족하는 원심식 또는 고효율 스크루 냉동기로 교체하는 고객\n- 한국에너지공단에 등록된 300USRT 이하 COP 5.96 이상, 301~2,000USRT COP 6.39 이상의 원심식 냉동기 또는 500USRT 이하 고효율 스크루 냉동기",
+  "view_count": 4636
+}

@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "일반 펌프를 고효율 펌프로 교체하는 고객 또는 사업자",
+      "교체 후 동력 및 유량이 기존 펌프와 같거나 작은 경우",
+      "한국에너지공단에 등록된 고효율 펌프를 사용한 경우"
+    ],
+    "faq": [
+      {
+        "a": "일반 펌프를 고효율 펌프로 교체하고, 교체 후 동력 및 유량이 기존 펌프와 같거나 작으며, 한국에너지공단에 등록된 고효율 펌프를 사용하는 경우 지원 대상에 해당합니다.",
+        "q": "내가 지원 대상인지 어떻게 확인하나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청은 지정된 웹사이트에서 신청서를 작성하고 제출합니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "방문 신청은 신청을 받는 곳에 직접 방문하여 신청서를 제출합니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "고효율 펌프 지원은 기존 펌프를 동력·유량이 동일하거나 낮은 고효율 펌프로 교체하는 고객·사업자를 대상으로, 에너지 효율 향상과 온실가스 감축을 위해 지원금을 지급하는 제도입니다. 에너지 절감 효과도 기대됩니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "2026-12-18",
+    "raw": "2026.01.19~2026.12.18",
+    "start": "2026-01-19"
+  },
+  "apply_url": "https://online.kepco.co.kr/",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "에너지 효율향상 및 온실가스 감축을 위해 고객이 고효율기기 교체 시 지원금 지급",
+  "category": "living",
+  "contact_raw": "수요효율처/123",
+  "content_hash": "sha256:9edde03a401fe9639e4af5105eb793fa",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-20",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-B41000200021",
+  "is_mock": false,
+  "last_checked": "2026-09-20",
+  "last_updated": "2026-09-20",
+  "law_raw": "",
+  "name": "고효율 펌프 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B41000200021",
+  "org": "한국전력공사",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "고효율-펌프-지원",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금 개인\n소상공인\n법인/시설/단체",
+  "source_id": "B41000200021",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 일반 펌프를 고효율 펌프로 교체하는 고객, 사업자 등\n- 각각의 동력 및 유량이 기존 펌프와 같거나 작은 경우 지원\n- (지원기기) 한국에너지공단에 등록된 고효율 펌프",
+  "view_count": 3634
+}
