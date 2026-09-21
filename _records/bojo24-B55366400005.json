@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "전국 초등학교에 재학 중인 1학년 학생",
+      "지원 대상은 초등학생 1학년으로 제한됩니다",
+      "선정 기준이 별도로 없습니다"
+    ],
+    "faq": [
+      {
+        "a": "어린이 승강기 안전교육 서비스와 교과목과 연계한 부교재(안전활동지)가 제공됩니다.",
+        "q": "지원 내용에 포함되는 교육 자료는 무엇인가요?"
+      }
+    ],
+    "note": "지원 대상은 1학년 학생으로 한정되며, 다른 학년은 포함되지 않습니다.",
+    "steps": [
+      {
+        "body": "별도 신청이 필요하지 않으며, 대상 학생은 자동으로 교육 서비스를 제공받게 됩니다. 자세한 내용은 문화홍보실에 문의하시기 바랍니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "초등학생 승강기 안전교육 지원은 전국 초등학교 1학년 학생에게 승강기 안전교육과 안전활동지를 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "별도의 신청절차가 없음",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "student"
+  ],
+  "benefit_raw": "○ 어린이 승강기 안전교육 서비스\n- 교과목과 연계한 부교재(안전활동지) 제공\n· 전국 초등학생(1학년) 대상",
+  "category": "education",
+  "contact_raw": "문화홍보실/055-751-0775",
+  "content_hash": "sha256:0054948ca899e626feec95b8c55ccbdd",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-21",
+  "how_to_raw": "신청불필요",
+  "id": "bojo24-B55366400005",
+  "is_mock": false,
+  "last_checked": "2026-09-21",
+  "last_updated": "2026-09-21",
+  "law_raw": "",
+  "name": "초등학생 승강기 안전교육 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55366400005",
+  "org": "한국승강기안전공단",
+  "primary_audience": "student",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "초등학생-승강기-안전교육-지원",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타(교육) 개인",
+  "source_id": "B55366400005",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 전국 초등학교(초등학생 1학년)",
+  "view_count": 1107
+}

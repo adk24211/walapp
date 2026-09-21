@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "만 65세 이상인 회원",
+      "신분증 및 경로우대증을 소지하고 있는 사람",
+      "주민등록증과 경로우대증을 구비해야 함"
+    ],
+    "faq": [],
+    "note": "할인 적용을 위해서는 프로그램 이용 시 반드시 신분증과 경로우대증을 제시해야 합니다.",
+    "steps": [
+      {
+        "body": "별도 신청이 필요하지 않습니다. 프로그램 이용 시 신분증과 경로우대증을 제시하면 20% 할인이 적용됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "용산꿈나무종합타운에서 만 65세 이상 회원을 대상으로 문화·체육 프로그램을 이용하면, 신분증과 경로우대증을 제시하여 20% 할인을 받을 수 있는 상시 접수 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "senior"
+  ],
+  "benefit_raw": "만65세 이상 회원 꿈나무종합타운(문화, 체육 ) 프로그램 이용시 20%할인",
+  "category": "living",
+  "contact_raw": "용산꿈나무종합타운/02-707-0704",
+  "content_hash": "sha256:0642cade724722c48e11c5aa83ac7db0",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "주민등록증 및 경로우대증"
+  ],
+  "first_published": "2026-09-21",
+  "how_to_raw": "신청불필요",
+  "id": "bojo24-O00024000047",
+  "is_mock": false,
+  "last_checked": "2026-09-21",
+  "last_updated": "2026-09-21",
+  "law_raw": "",
+  "name": "용산꿈나무종합타운 프로그램 할인(경로)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00024000047",
+  "org": "용산구시설관리공단",
+  "primary_audience": "senior",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "용산꿈나무종합타운-프로그램-할인-경로",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 시설이용 개인",
+  "source_id": "O00024000047",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "신분증 및 경로우대증에 생년월일이 만65세 이상인 회원",
+  "view_count": 672
+}

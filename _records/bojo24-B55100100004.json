@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "중학교에 재학 중인 학생이면 신청할 수 있습니다.",
+      "고등학교에 재학 중인 학생이면 신청할 수 있습니다.",
+      "선정 기준이 없으므로 신청자 전원에게 동일하게 제공됩니다."
+    ],
+    "faq": [
+      {
+        "a": "본 진로체험프로그램은 연 17회 진행됩니다. 매 회는 자유학기제와 연계하여 운영됩니다.",
+        "q": "프로그램은 연 몇 회 진행되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인을 통해 신청합니다. 신청은 상시 접수이며, 별도의 구비 서류가 필요하지 않습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "독립기념관에서 진행하는 진로체험교육은 중·고등학교 학생을 대상으로 자유학기제와 연계한 학예연구사 진로탐색 및 직업체험 프로그램을 연 17회 제공하는 상시 온라인 신청 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.i815.or.kr",
+  "audiences": [
+    "student"
+  ],
+  "benefit_raw": "○ 자유학기(학년)제 연계프로그램으로, 학예연구사 진로탐색 및 직업체험을 주제로 한 청소년 진로체험프로그램(연 17회)",
+  "category": "care",
+  "contact_raw": "교육부/041-560-0268",
+  "content_hash": "sha256:6ac41578a48e0455148b7ff521fa2d2f",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-21",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55100100004",
+  "is_mock": false,
+  "last_checked": "2026-09-21",
+  "last_updated": "2026-09-21",
+  "law_raw": "",
+  "name": "독립기념관 진로체험교육",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55100100004",
+  "org": "독립기념관",
+  "primary_audience": "student",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "독립기념관-진로체험교육",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 시설이용 개인",
+  "source_id": "B55100100004",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "중·고등학교 학생(학급별 교육)",
+  "view_count": 1060
+}

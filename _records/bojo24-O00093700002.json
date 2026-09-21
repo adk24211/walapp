@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "비문해자",
+      "고령자",
+      "기타 제한이 없습니다"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "상시 접수이므로, 신청을 원하시면 평생교육팀에 문의하시기 바랍니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "문해교육센터 지원은 비문해자와 고령자를 대상으로 한글·디지털·생활문해교육을 제공하는 양육·돌봄 분야의 사업으로, 재단법인전남인재평생교육진흥원이 운영하며 신청은 상시 접수됩니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "senior"
+  ],
+  "benefit_raw": "○ 성인문해교육 프로그램 지원\n- 교육내용 : 한글 등 기초문해교육, 디지털 문해교육, 생활문해교육(금융, 역사, 문화예술) 지원",
+  "category": "care",
+  "contact_raw": "평생교육팀/061-285-9488",
+  "content_hash": "sha256:3c898248f8624b7dfcb3bcc0750bdf4d",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-21",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-O00093700002",
+  "is_mock": false,
+  "last_checked": "2026-09-21",
+  "last_updated": "2026-09-21",
+  "law_raw": "",
+  "name": "문해교육센터 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00093700002",
+  "org": "재단법인전남인재평생교육진흥원",
+  "primary_audience": "senior",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "문해교육센터-지원",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 개인",
+  "source_id": "O00093700002",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "비문해자 및 고령자",
+  "view_count": 676
+}
