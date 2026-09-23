@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "전국에 있는 대학에 재학 중인 학생이어야 합니다.",
+      "사이버·원격 대학에 재학 중인 경우는 제외됩니다.",
+      "참여 대학(전국 220개 대학) 중 해당 대학에 재학 중이어야 합니다."
+    ],
+    "faq": [
+      {
+        "a": "따라서 학생은 1,000원만 지불하면 아침 식사를 받을 수 있습니다.",
+        "q": "지원 금액은 어떻게 구성되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "지원 대상자는 지정된 장소에 직접 방문하여 신청합니다. 제출 서류는 필요하지 않으며, 신청 후 바로 지원 여부가 결정됩니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "천원의 아침밥은 전국 대학 재학생(사이버·원격 대학 제외)을 대상으로, 쌀·가공식품을 활용한 아침 식사를 1,000원에 제공하는 지원 제도이며, 농림축산식품부가 주관하고 전국 220개 대학이 참여합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "youth"
+  ],
+  "benefit_raw": "○ 대학생 대상 쌀·쌀 가공 식품을 활용한 아침 식사를 1,000원에 제공\n- 아침 식사 결식률이 높은 청년층에 학교와 정부 등이 식비 공동 지원\n- 농식품부 (2천 원)+학생 (1천 원)+지자체/학교(자율)\n○ 참여대학\n- 전국 220개 대학",
+  "category": "living",
+  "contact_raw": "정부민원안내콜센터/110",
+  "content_hash": "sha256:6f7b75c59c3ccd5e052e619635fbe52d",
+  "criteria_raw": "○ 전국 대학교에 재학 중인 학생(사이버·원격 대학 제외)",
+  "deferred_detail": false,
+  "documents_raw": [
+    "없음"
+  ],
+  "first_published": "2026-09-23",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-154300005045",
+  "is_mock": false,
+  "last_checked": "2026-09-23",
+  "last_updated": "2026-09-23",
+  "law_raw": "",
+  "name": "천원의 아침밥",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/154300005045",
+  "org": "농림축산식품부",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "천원의-아침밥",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현물 개인",
+  "source_id": "154300005045",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 전국 대학교에 재학 중인 학생(사이버·원격 대학 제외)",
+  "view_count": 2067
+}

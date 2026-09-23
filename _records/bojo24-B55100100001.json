@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "중학교에 재학 중인 학생",
+      "고등학교에 재학 중인 학생",
+      "학급 단위로 교육을 받는 경우"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "홈페이지에서 온라인으로 신청서를 작성하고 제출합니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "독립기념관이 운영하는 독도학교 중등 대상 교육은 중·고등학생을 대상으로 연 15회 진행되는 역사체험학습 프로그램으로, 독도가 우리 영토임을 근거와 함께 배우며 영토주권 의식과 나라사랑 정신을 함양하도록 설계되었습니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "연초",
+    "start": ""
+  },
+  "apply_url": "www.i815.or.kr",
+  "audiences": [
+    "student"
+  ],
+  "benefit_raw": "○ 일본의 독도 영유권 주장에 대응한 역사체험학습으로, 중고등학생들이 독도가 우리 영토인 근거를 알고 영토주권의식과 나라사랑정신 함양할 수 있도록 운영되는 교육 프로그램(연 15회)",
+  "category": "education",
+  "contact_raw": "교육부/041-560-0268",
+  "content_hash": "sha256:e9e524f8334472891d52a80c766d0f2b",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-23",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55100100001",
+  "is_mock": false,
+  "last_checked": "2026-09-23",
+  "last_updated": "2026-09-23",
+  "law_raw": "",
+  "name": "독립기념관 독도학교 중등 대상 교육",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55100100001",
+  "org": "독립기념관",
+  "primary_audience": "student",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "독립기념관-독도학교-중등-대상-교육",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 법인/시설/단체",
+  "source_id": "B55100100001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "중 고등학교 학생(학급별 교육)",
+  "view_count": 994
+}

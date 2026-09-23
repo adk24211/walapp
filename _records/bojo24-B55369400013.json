@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "청년창업기업이어야 합니다.",
+      "창업 후 7년 이내이어야 합니다.",
+      "선정 기준이 별도로 제시되지 않았습니다."
+    ],
+    "faq": [
+      {
+        "a": "청년창업기업의 사업운영을 위한 보증 형태로 지원됩니다.",
+        "q": "보증 지원은 어떤 형태로 제공되나요?"
+      }
+    ],
+    "note": "지원 대상이 청년창업기업으로 제한되므로, 다른 기업은 신청할 수 없습니다.",
+    "steps": [
+      {
+        "body": "온라인 신청은 해당 웹사이트에서 신청서를 작성하면 됩니다. 방문 신청은 담당 부서를 직접 찾아가서 제출하시면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "청년창업기업보증은 창업 후 7년 이내의 청년창업기업을 대상으로 사업운영에 필요한 보증을 지원하는 제도이며, 온라인 및 방문 신청이 가능합니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.kibo.or.kr",
+  "audiences": [
+    "youth",
+    "business"
+  ],
+  "benefit_raw": "○ 청년창업기업의 사업운영을 위한 보증 지원",
+  "category": "jobs",
+  "contact_raw": "기술보증부/051-606-7472",
+  "content_hash": "sha256:7386cba41aa1c292103e8a4cea0756b9",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-23",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-B55369400013",
+  "is_mock": false,
+  "last_checked": "2026-09-23",
+  "last_updated": "2026-09-23",
+  "law_raw": "",
+  "name": "청년창업기업보증",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55369400013",
+  "org": "기술보증기금",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "청년창업기업보증",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금(융자) 법인/시설/단체",
+  "source_id": "B55369400013",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "창업후 7년 이내 청년창업기업",
+  "view_count": 2043
+}

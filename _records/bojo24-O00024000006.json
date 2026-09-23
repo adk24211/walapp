@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "신분증 및 경로우대증을 소지해야 합니다.",
+      "생년월일이 만 65세 이상이어야 합니다.",
+      "용산청소년센터 회원이어야 합니다."
+    ],
+    "faq": [
+      {
+        "a": "헬스장 이용 시 50% 할인, 그 외 시설 이용 시 20% 할인됩니다.",
+        "q": "할인율은 어느 시설에 적용되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "용산청소년센터를 직접 방문하여 신청합니다. 별도의 서류는 필요하지 않으며, 상시 접수됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "용산청소년센터에서 만 65세 이상 회원을 대상으로 헬스장 이용 시 50% 할인, 기타 시설 이용 시 20% 할인을 제공하는 프로그램 할인(경로)입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "senior"
+  ],
+  "benefit_raw": "만 65세 이상 회원 헬스장 이용시 50% 할인, 그 외의 시설 이용시 20% 할인",
+  "category": "living",
+  "contact_raw": "용산청소년센터/02-749-0102(519)",
+  "content_hash": "sha256:7047b43f63b9b5d6a27f4091fcbd4836",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-23",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-O00024000006",
+  "is_mock": false,
+  "last_checked": "2026-09-23",
+  "last_updated": "2026-09-23",
+  "law_raw": "",
+  "name": "용산청소년센터 프로그램 할인(경로)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00024000006",
+  "org": "용산구시설관리공단",
+  "primary_audience": "senior",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "용산청소년센터-프로그램-할인-경로",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 시설이용 개인",
+  "source_id": "O00024000006",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "신분증 및 경로우대증에 생년월일이 만 65세 이상인 회원",
+  "view_count": 616
+}
