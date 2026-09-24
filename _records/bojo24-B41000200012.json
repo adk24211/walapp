@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "1차 정격전압이 22.9kV 이하인 고압고객용 일반 변압기를 교체하는 경우입니다.",
+      "3상 고효율 변압기로 용량이 100~3,000kVA인 경우입니다.",
+      "지원기기가 한국에너지공단에 등록된 고효율 변압기인 경우입니다."
+    ],
+    "faq": [],
+    "note": "지원 대상이 아닌 변압기를 교체해도 지원금을 받을 수 없습니다.",
+    "steps": [
+      {
+        "body": "온라인으로 신청하시거나 직접 방문하여 신청하시면 됩니다. 신청은 상시 접수되며 제출 서류는 필요하지 않습니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "고압고객용 일반 변압기를 22.9kV 이하 3상 고효율 변압기(용량 100~3,000kVA)로 교체하는 고객에게 에너지 효율 향상 및 온실가스 감축을 위한 지원금을 지급하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://online.kepco.co.kr/",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "에너지 효율향상 및 온실가스 감축을 위해 고객이 고효율 기기 교체 시 지원금 지급",
+  "category": "living",
+  "contact_raw": "수요효율처/123",
+  "content_hash": "sha256:91147c6e9ce23e3284fba3de1cffd56e",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-24",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-B41000200012",
+  "is_mock": false,
+  "last_checked": "2026-09-24",
+  "last_updated": "2026-09-24",
+  "law_raw": "",
+  "name": "고효율 변압기 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B41000200012",
+  "org": "한국전력공사",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "고효율-변압기-지원",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금 개인\n가구\n소상공인\n법인/시설/단체",
+  "source_id": "B41000200012",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 고압고객용 일반 변압기를 1차 정격전압 22.9kV이하 3상 고효율 변압기(용량 100~3,000KVA)로 교체하는 고객\n- 지원기기 : 한국에너지공단에 등록된 고효율변압기\n(용량 100~3,000kVA)",
+  "view_count": 4197
+}

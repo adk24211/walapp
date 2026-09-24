@@ -1,0 +1,77 @@
+{
+  "_prose": {
+    "eligibility": [
+      "국민 기초생활수급자이며 LPG 호스를 사용하고 금속배관으로 아직 교체하지 않은 가구",
+      "차상위계층이며 LPG 호스를 사용하고 금속배관으로 아직 교체하지 않은 가구",
+      "소외계층이며 LPG 호스를 사용하고 금속배관으로 아직 교체하지 않은 가구"
+    ],
+    "faq": [
+      {
+        "a": "지원 대상은 아직 금속배관으로 교체하지 않은 가구에 한정됩니다.",
+        "q": "이미 금속배관으로 교체한 경우에도 지원을 받을 수 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청 페이지에서 지원 신청서를 작성합니다. 지원 신청서와 필요한 증명서류를 첨부하여 제출하면 신청이 완료됩니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "주민센터를 직접 방문하여 지원 신청서를 제출합니다. 현장에서 지원 신청서와 수급 대상임을 증명할 수 있는 서류를 제출하면 접수가 완료됩니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "서민층 가스시설 개선 제도는 기초생활수급자·차상위·소외계층 등 LPG 호스를 사용하고 아직 금속배관으로 교체하지 않은 가구에 금속배관 교체와 안전장치 설치를 지원하는 정책입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "자세한 날짜는 읍면동 주민센터에 따라 다를 수 있음",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "○ 금속배관으로 교체 및 퓨즈콕 등 안전장치 설치",
+  "category": "living",
+  "contact_raw": "한국가스안전공사/1544-4500",
+  "content_hash": "sha256:f71eac20f0fa84139bdd35d3a5b0eb4d",
+  "criteria_raw": "지원대상과 동일",
+  "deferred_detail": false,
+  "documents_raw": [
+    "지원 신청서",
+    "기초생활수급자 증명서",
+    "차상위 증명서",
+    "기초노령연금 수급 확인서",
+    "장애인 증명서",
+    "가족관계 중명서 등 수급대상임을 증명할 수 있는 서류"
+  ],
+  "first_published": "2026-09-24",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-145000000004",
+  "is_mock": false,
+  "last_checked": "2026-09-24",
+  "last_updated": "2026-09-24",
+  "law_raw": "",
+  "name": "서민층 가스시설 개선",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/145000000004",
+  "org": "산업통상부",
+  "primary_audience": "lowincome",
+  "receiver_raw": "주민센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "서민층-가스시설-개선",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 현물 개인",
+  "source_id": "145000000004",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 국민 기초생활수급자, 차상위계층, 소외계층 등 LPG호스를 사용하고 있고 아직 금속배관으로 교체하지 않은 가구",
+  "view_count": 15515
+}

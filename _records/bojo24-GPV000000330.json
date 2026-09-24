@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "독립유공자, 국가유공자, 보훈보상대상자 본인입니다.",
+      "선순위 유족 중 저소득자입니다.",
+      "소득인정액이 국가보훈부장관이 정하는 기준금액의 50% 이하인 경우에 해당합니다.",
+      "1인가구 기준 소득인정액은 1,282,119원 이하, 4인가구 기준은 3,247,369원 이하 등입니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "지방보훈청 및 보훈지청을 직접 방문하여 생활조정수당 신청서와 구비 서류를 제출하시면 됩니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "국가보훈대상자를 위한 생활조정수당으로, 저소득 독립유공자·국가유공자·보훈보상대상자 및 선순위 유족에게 가구원수에 따라 월 242천원에서 370천원까지 차등 지급하는 지원제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "별도 신청기간 없음",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "○ 소득수준 및 가구원수에 따라 생활조정수당 차등지급\n- (3인이하) 월 242천원~월 311천원\n- (4인이상) 월 300천원~월 370천원",
+  "category": "finance",
+  "contact_raw": "국가보훈부 보훈상담센터/1577-0606\n주소지 관할 보훈지(방)청/1577-0606",
+  "content_hash": "sha256:5f1d9684fe47925445bc997328aae854",
+  "criteria_raw": "아래 소득인정액 기준을 충족하여야 합니다.\n○ 소득 인정액 기준\n- 국가보훈부장관이 정하는 기준금액의 50% 이하\n· (1인가구) 1,282,119원, (4인가구) 3,247,369원 등",
+  "deferred_detail": false,
+  "documents_raw": [
+    "생활조정수당신청서",
+    "개인정보제공 및 이용 동의서",
+    "금융정보제공동의서",
+    "소득재산신고서",
+    "가족관계증명서"
+  ],
+  "first_published": "2026-09-24",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-GPV000000330",
+  "is_mock": false,
+  "last_checked": "2026-09-24",
+  "last_updated": "2026-09-24",
+  "law_raw": "",
+  "name": "국가보훈대상자 생활조정수당",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GPV000000330",
+  "org": "국가보훈부",
+  "primary_audience": "lowincome",
+  "receiver_raw": "지방보훈청 및 보훈지청",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "국가보훈대상자-생활조정수당",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금 개인",
+  "source_id": "GPV000000330",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 독립유공자, 국가유공자, 보훈보상대상자 본인 및 선순위 유족 중 저소득자",
+  "view_count": 16523
+}
