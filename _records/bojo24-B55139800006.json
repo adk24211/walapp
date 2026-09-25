@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "초등학교",
+      "중학교",
+      "고등학교"
+    ],
+    "faq": [],
+    "note": "선정 기준이 별도로 없으므로 신청 후 별도의 심사 절차가 진행되지 않습니다.",
+    "steps": [
+      {
+        "body": "온라인 신청 페이지에서 교육요청 공문을 첨부하여 제출하면 됩니다. 신청은 상시 접수이며, 별도의 방문 절차는 없습니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "자유 학기제 교육 서비스는 초·중·고등학교 등 단위학교를 대상으로 직업체험 및 진로특강을 온라인으로 신청해 지원받을 수 있는 교육 서비스입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://edu.kesco.or.kr",
+  "audiences": [
+    "student"
+  ],
+  "benefit_raw": "○ (직업체험) 학생이 직업 현장을 방문하여 직업인과의 대화, 견학 및 체험 지원\n\n○ (진로특강) 학교 내외의 진로교육 프로그램 진행",
+  "category": "care",
+  "contact_raw": "전기안전인재개발원/063-928-3222\n전기안전인재개발원/063-928-3250",
+  "content_hash": "sha256:582fb3a9003f19121814757f5761d21a",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "○ 교육요청 공문"
+  ],
+  "first_published": "2026-09-25",
+  "how_to_raw": "기타 온라인신청\n직접입력",
+  "id": "bojo24-B55139800006",
+  "is_mock": false,
+  "last_checked": "2026-09-25",
+  "last_updated": "2026-09-25",
+  "law_raw": "",
+  "name": "자유 학기제 교육 서비스",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55139800006",
+  "org": "한국전기안전공사",
+  "primary_audience": "student",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "자유-학기제-교육-서비스",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 법인/시설/단체",
+  "source_id": "B55139800006",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "초·중·고등학교 등 단위학교",
+  "view_count": 857
+}

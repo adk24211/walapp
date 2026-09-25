@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "전역예정장병"
+    ],
+    "faq": [
+      {
+        "a": "중장기복무자는 맞춤형 진로설계와 전문지식·기술 습득 기회를 제공받고, 청년장병은 부대로 찾아가는 진로도움교육과 1:1 진로·취업 상담을 지원받습니다.",
+        "q": "지원받을 수 있는 교육이나 상담은 어떤 형태인가요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "공식 홈페이지에서 온라인으로 신청하시면 됩니다. 별도의 구비 서류는 필요하지 않으며, 신청은 상시 접수됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "전역예정장병을 대상으로 취업 및 창업 역량을 강화하는 지원 프로그램입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://www.moti.or.kr",
+  "audiences": [
+    "youth",
+    "business"
+  ],
+  "benefit_raw": "○ 중장기복무자 : 대상별 맞춤형 진로설계 지원, 사회진출에 필요한 전문지식 및 기술습득 기회제공을 통해 취창업 역량 강화\n○ 청년장병 : 부대로 찾아가는 진로도움교육, 1:1진로 및 취업상담 등을 통해 진로설정 및 취업준비과정 지원",
+  "category": "jobs",
+  "contact_raw": "국방전직교육원/031-760-9343",
+  "content_hash": "sha256:a7f4d4a89942dd6e8b6292da0bc1e4dc",
+  "criteria_raw": "전역예정장병",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-25",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-129000000015",
+  "is_mock": false,
+  "last_checked": "2026-09-25",
+  "last_updated": "2026-09-25",
+  "law_raw": "",
+  "name": "전역예정장병 취업활동지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/129000000015",
+  "org": "국방부",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "전역예정장병-취업활동지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 서비스(일자리) 개인",
+  "source_id": "129000000015",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "전역예정장병",
+  "view_count": 2014
+}

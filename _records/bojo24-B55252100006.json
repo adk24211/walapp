@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "서울시 마포구, 서대문구, 영등포구에 소재한 중고등학교 재학생",
+      "취약계층에 해당하는 학생",
+      "성적우수학생"
+    ],
+    "faq": [
+      {
+        "a": "선정 기준에 대한 구체적인 내용은 제공되지 않았습니다.",
+        "q": "선정 기준은 어떻게 되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "별도의 신청이 필요하지 않습니다. 대상 학생은 자동으로 선정됩니다. 자세한 내용은 문의처로 확인하시기 바랍니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "발전소 주변지역 장학금 지원(서울)은 마포구·서대문구·영등포구에 있는 중고등학교 재학생 중 취약계층 및 성적우수학생에게 장학금을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "2026. 8.~2026. 10.예정",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "student"
+  ],
+  "benefit_raw": "발전소주변지역 중고등학생 중 취약계층 및 성적우수학생 장학금 지원",
+  "category": "education",
+  "contact_raw": "기획홍보부/070-7511-5155",
+  "content_hash": "sha256:105c10bdc7a8e0a5b288416e50e4255b",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-25",
+  "how_to_raw": "신청불필요",
+  "id": "bojo24-B55252100006",
+  "is_mock": false,
+  "last_checked": "2026-09-25",
+  "last_updated": "2026-09-25",
+  "law_raw": "",
+  "name": "발전소 주변지역 장학금 지원(서울)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252100006",
+  "org": "한국중부발전(주)",
+  "primary_audience": "student",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "발전소-주변지역-장학금-지원-서울",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "B55252100006",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "서울시 마포구, 서대문구, 영등포구 소재 중고등학교 재학생으로 취약계층 및 성적우수학생",
+  "view_count": 821
+}
