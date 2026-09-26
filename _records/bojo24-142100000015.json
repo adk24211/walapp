@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "장애인 예비창업자",
+      "업종전환을 희망하는 장애인기업",
+      "평가우수자로 선정된 경우"
+    ],
+    "faq": [
+      {
+        "a": "지원금은 최대 5년간 지원됩니다.",
+        "q": "지원금은 어느 기간 동안 지원받을 수 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "관계 기관을 직접 방문하여 지원신청서와 장애인증명서, 사업자등록 사실증명, 개인정보 수집·이용 동의서를 제출합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "장애인 예비창업자와 업종전환을 희망하는 장애인기업에게 부동산 임차 보증금을 1억 3천만원 한도 내에서 최대 5년간 지원하는 창업점포 지원사업입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "3월",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled",
+    "business"
+  ],
+  "benefit_raw": "○ 부동산 임차 보증금(1억 3천만원 한도 내 최대 5년간 지원)",
+  "category": "jobs",
+  "contact_raw": "(재)장애인기업종합지원센터/02-2181-6536",
+  "content_hash": "sha256:2f198a58d1f7c1aa914b9850787ca0b6",
+  "criteria_raw": "○ 평가우수자 선정",
+  "deferred_detail": false,
+  "documents_raw": [
+    "지원신청서",
+    "장애인증명서",
+    "사업자등록 사실증명",
+    "개인정보 수집 및 이용 동의서"
+  ],
+  "first_published": "2026-09-26",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-142100000015",
+  "is_mock": false,
+  "last_checked": "2026-09-26",
+  "last_updated": "2026-09-26",
+  "law_raw": "",
+  "name": "장애인 창업점포 지원사업",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/142100000015",
+  "org": "중소벤처기업부",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "장애인-창업점포-지원사업",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타 소상공인",
+  "source_id": "142100000015",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 장애인 예비창업자, 업종전환 희망 장애인기업",
+  "view_count": 4119
+}

@@ -1,0 +1,77 @@
+{
+  "_prose": {
+    "eligibility": [
+      "중증 장애인 근로자",
+      "장애인 공무원(사업주의 동의 필요)",
+      "사업주의 동의가 있어야 지원 가능합니다"
+    ],
+    "faq": [
+      {
+        "a": "지원 시간은 주 40시간, 하루 최대 8시간 이내이며, 구체적인 배정은 한국장애인고용공단의 평가를 통해 결정됩니다.",
+        "q": "지원 시간은 어떻게 결정되나요?"
+      }
+    ],
+    "note": "시간당 본인부담금은 최대 300원이며, 이를 납부해야 합니다.",
+    "steps": [
+      {
+        "body": "한국장애인고용공단 홈페이지에서 근로지원인 서비스 신청서를 작성하고, 필요 서류를 첨부하여 제출합니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "한국장애인고용공단을 직접 방문하여 신청서와 증빙 서류를 제출합니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "근로지원인 지원은 중증 장애인 근로자와 장애인 공무원을 대상으로, 주 40시간·하루 최대 8시간까지 근로시간을 지원하고, 시간당 최대 300원의 본인부담금을 납부하도록 하는 고용노동부 산하 고용지원 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "수시신청(예산소진시까지)",
+    "start": ""
+  },
+  "apply_url": "https://hub.kead.or.kr/",
+  "audiences": [
+    "disabled",
+    "employer"
+  ],
+  "benefit_raw": "○ 지원 시간 : 주 40시간, 1일 최대 8시간 이내(공단 평가를 통하여 결정)\n* 장애인근로자 시간당 최대 300원 본인부담금 납부 필요",
+  "category": "jobs",
+  "contact_raw": "한국장애인고용공단/1588-1519",
+  "content_hash": "sha256:af9469f190dcfa730447d8a731962c9a",
+  "criteria_raw": "○ 중증 장애인 근로자, 장애인 공무원(사업주의 동의 필요)",
+  "deferred_detail": false,
+  "documents_raw": [
+    "○ 제출서류",
+    "근로지원인 서비스 신청서",
+    "중증장애인 기준에 적합함을 인정할 수 있는 서류",
+    "임금이 최저임금액 이상이라는 사실을 확인할 수 있는 서류(근로계약서",
+    "임금대장 등)"
+  ],
+  "first_published": "2026-09-26",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-149200000056",
+  "is_mock": false,
+  "last_checked": "2026-09-26",
+  "last_updated": "2026-09-26",
+  "law_raw": "",
+  "name": "근로지원인 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000056",
+  "org": "고용노동부",
+  "primary_audience": "disabled",
+  "receiver_raw": "한국장애인고용공단",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "근로지원인-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 서비스(일자리) 개인",
+  "source_id": "149200000056",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 중증 장애인 근로자, 장애인 공무원(사업주의 동의 필요)",
+  "view_count": 7119
+}

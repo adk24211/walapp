@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "국민(국내거주 외국인 포함)이며, 건강보험료 본인부담금 합산액이 기준중위소득 125% 이하인 자",
+      "형사 피의자·피고인"
+    ],
+    "faq": [
+      {
+        "a": "형사 피의자와 피고인 모두 무료 변호 서비스를 받을 수 있습니다.",
+        "q": "형사 피의자와 피고인 모두 지원 대상인가요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청할 수 있으며, 홈페이지에서 신청 절차를 진행합니다. 방문 신청도 가능하므로 직접 해당 기관을 방문하여 신청할 수 있습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "형사 피의자·피고인을 대상으로 경제적 어려움이나 법률 지식 부족으로 인해 법적 보호를 충분히 받지 못하는 경우, 무료 변호 서비스를 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.klac.or.kr",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "○ 경제적으로 어렵거나 법을 몰라서 법의 보호를 충분히 받지 못하는 형사 피의자, 피고인에 대하여 형사변호를 제공하여 국민의 기본적 인권을 옹호\n\n○ 형사 피의자 또는 피고인에 대하여 무료변호",
+  "category": "living",
+  "contact_raw": "(국번없이)132 법률상담 콜센타/132",
+  "content_hash": "sha256:fe4a446a3443b3a61e19e9b25f359e2c",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-26",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-B27000100007",
+  "is_mock": false,
+  "last_checked": "2026-09-26",
+  "last_updated": "2026-09-26",
+  "law_raw": "",
+  "name": "형사 피의자·피고인 무료변호",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B27000100007",
+  "org": "대한법률구조공단",
+  "primary_audience": "lowincome",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "형사-피의자-피고인-무료변호",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타 개인",
+  "source_id": "B27000100007",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 국민(국내거주 외국인 포함)\n- 건강보험료 본인부담금 합산액이 기준중위소득 125% 이하인 자",
+  "view_count": 15251
+}
