@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "만 65세 이상이어야 합니다.",
+      "신분증을 제시해야 합니다.",
+      "경로우대증을 제시해야 합니다."
+    ],
+    "faq": [
+      {
+        "a": "시설을 이용할 때 즉시 20% 할인이 적용됩니다.",
+        "q": "할인은 언제 적용되나요?"
+      },
+      {
+        "a": "구비 서류는 없습니다.",
+        "q": "구비 서류가 필요한가요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "정부24 온라인으로 신청하거나 직접 방문하여 신청할 수 있습니다. 온라인 신청은 언제든지 가능하며, 방문 신청은 해당 기관에 직접 방문하시면 됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "이태원초등학교수영장 프로그램 할인은 만 65세 이상 회원이 신분증·경로우대증을 제시하면 시설 이용 시 20%를 할인받을 수 있는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "senior"
+  ],
+  "benefit_raw": "만 65세 이상 회원 의 시설 이용시 20% 할인",
+  "category": "living",
+  "contact_raw": "이태원초등학교수영장/02-797-2492",
+  "content_hash": "sha256:be1ff5d33f4f60c171c50f9e41bc27a2",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-27",
+  "how_to_raw": "정부24온라인신청\n방문신청",
+  "id": "bojo24-O00024000055",
+  "is_mock": false,
+  "last_checked": "2026-09-27",
+  "last_updated": "2026-09-27",
+  "law_raw": "",
+  "name": "이태원초등학교수영장 프로그램 할인(경로)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00024000055",
+  "org": "용산구시설관리공단",
+  "primary_audience": "senior",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "이태원초등학교수영장-프로그램-할인-경로",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 시설이용 개인",
+  "source_id": "O00024000055",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "신분증 및 경로우대증에 생년월일이 만 65세 이상인 회원",
+  "view_count": 151
+}

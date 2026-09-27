@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "초·중·고등학교에 재학 중인 학생이어야 합니다.",
+      "보호자와 함께 성주군에 주소를 두고 거주해야 합니다.",
+      "성적순으로 선발되므로 학업 성적이 우수해야 합니다."
+    ],
+    "faq": [],
+    "note": "선발은 성적순으로만 진행되며, 성적이 낮은 경우 선발되지 않을 수 있습니다.",
+    "steps": [
+      {
+        "body": "지원은 직접 방문하여 신청합니다. 방문 시 별고을교육원 담당 직원이 신청을 접수하고, 제출 서류는 없습니다. 신청은 상시 접수되며, 선발 결과는 추후 안내됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "성주군별고을교육원 운영 및 우수학생 선발 제도는 성주군에 거주하는 초·중·고등학교 재학생 중 학업 성적이 우수한 학생에게 교육원 무료 수강 기회를 제공하는 지원 사업입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "student"
+  ],
+  "benefit_raw": "○ 성주군 관내 학교에 재학하고 있는 학업이 우수한 학생에게 양질의 면학기회를 제공하여 지역사회발전을 위한 인재를 육성하고 지역 교육 경쟁력 강화하기 위함\n\n○ 성주군별고을교육원 무료 수강\n- 성주군별고을교육원 설치 및 운영지원조례",
+  "category": "care",
+  "contact_raw": "성주군 미래전략실/054-930-6102",
+  "content_hash": "sha256:e8542fae45715e6a2cb47f6697986b76",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-27",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-O00069200001",
+  "is_mock": false,
+  "last_checked": "2026-09-27",
+  "last_updated": "2026-09-27",
+  "law_raw": "",
+  "name": "별고을교육원 운영 및 우수학생 선발",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00069200001",
+  "org": "성주군별고을장학회",
+  "primary_audience": "student",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "별고을교육원-운영-및-우수학생-선발",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타 개인",
+  "source_id": "O00069200001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "초·중·고등학교 재학생으로서 공고일 현재 그 보호자와 함께 성주군에 주소를 두고 거주하는 학생 중 성적순 선발",
+  "view_count": 703
+}
