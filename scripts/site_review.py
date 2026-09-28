@@ -385,6 +385,11 @@ def main() -> int:
     }
 
     history = load_history()
+    # ⚠️ 오늘 것은 '어제' 가 아니다. 같은 날 두 번 돌면(워크플로가 남긴 뒤 사람이
+    #    다시 돌리는 일이 있다) 오늘 것이 prev 가 되어 증감이 전부 0 으로 보인다.
+    #    그래서 오늘 날짜의 기록은 비교에서도, 이력에서도 빼고 새로 적는다.
+    today_str = datetime.now(ZoneInfo("Asia/Seoul")).date().isoformat()
+    history = [h for h in history if h.get("date") != today_str]
     prev = history[-1] if history else None
 
     if args.json:
@@ -472,16 +477,47 @@ def _print_human(r, prev) -> None:
     for c in r["checks"]:
         print(f"    {'✓' if c['ok'] else '✗'} {c['name']:<16} {c['last_line']}")
 
+    # ⚠️ '먼저 볼 것' 은 **지금 손댈 수 있는 것** 을 가리켜야 한다.
+    #
+    #    처음에는 크기 순으로 줄을 세워 늘 '광고가 붙는데 얇은 페이지' 를 맨 위에
+    #    올렸다. 그런데 그걸 고치는 길은 재생성(07:00 동기화 몫을 뺏는다) ·
+    #    광고 문턱 조정(사장님 확인) · 본문 손질(사장님 확인) 셋뿐이라, 매일 아침
+    #    점검 루틴이 맨 위 항목에서 막히고 그대로 끝났다 — 11번 실행되고 커밋이
+    #    0건이었다. 크기가 아니라 **손댈 수 있는지**로 줄을 세운다. 혼자 할 수
+    #    없는 것은 누가 정해 줘야 하는지 함께 적는다.
     failed = [c["name"] for c in r["checks"] if not c["ok"]]
-    print()
+    todo: list[str] = []
     if failed:
-        print(f"→ 먼저 볼 것: 실패한 검사 {', '.join(failed)}")
-    elif dups:
-        print("→ 먼저 볼 것: 같은 제도가 두 주소에 서 있는 것 (우리가 만든 중복 콘텐츠다)")
-    elif r["ads_on_thin"]:
-        print("→ 먼저 볼 것: 광고가 붙는데 본문이 얇은 페이지 (심사에서 가장 먼저 눈에 띈다)")
+        todo.append(f"실패한 검사 {', '.join(failed)} — 다른 무엇보다 먼저.")
+    if dups:
+        todo.append(f"같은 제도가 두 주소에 {len(dups)}건 — 우리가 만든 중복 콘텐츠다. "
+                    "원장이 가리키지 않는 쪽을 지우면 된다.")
+    if r["audiences_empty"]:
+        todo.append(f"대상이 하나도 없는 제도 {len(r['audiences_empty'])}건 — 어느 대상 "
+                    "허브에도 안 뜬다. taxonomy.py 규칙이나 덮어쓰기로 고칠 수 있다. "
+                    "⚠️ audiences 는 해시 대상이라 한 건당 재생성 1회다 — "
+                    "reclassify_audiences.py --dry-run 으로 먼저 셀 것.")
+    if r["near_duplicates"]:
+        todo.append(f"본문이 서로 닮은 쌍 {len(r['near_duplicates'])}개 — 정말 다른 제도인지 "
+                    "보고, 같은 제도라면 하나로 합칠 것.")
+    if r["stale_over_30d"]:
+        todo.append(f"30일 넘게 원문과 대조 안 한 제도 {r['stale_over_30d']}건 — "
+                    "화면이 확인일을 약속하고 있다.")
+
+    print()
+    if todo:
+        print("→ 손댈 수 있는 것 (위에서부터)")
+        for i, line in enumerate(todo, 1):
+            print(f"   {i}. {line}")
     else:
-        print("→ 급한 것 없음.")
+        print("→ 손댈 수 있는 것: 없음.")
+
+    if r["ads_on_thin"]:
+        print(f"\n→ 사장님 확인이 필요한 것: 광고가 붙는데 본문이 얇은 페이지 "
+              f"{len(r['ads_on_thin'])}건. 심사에서 가장 먼저 눈에 띄는 조합이지만, "
+              f"고치는 길이 재생성·광고 문턱 조정·본문 손질뿐이라 혼자 정할 수 없다.")
+    if not todo and not r["ads_on_thin"]:
+        print("→ 급한 것 없음. 억지로 만들지 말 것.")
 
 
 if __name__ == "__main__":

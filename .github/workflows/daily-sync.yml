@@ -294,6 +294,38 @@ jobs:
       - name: Check audience rules
         run: python scripts/check_audience.py
 
+      # 사이트를 훑어 숫자를 남긴다. 고치지는 않는다 — 이력(_data/review_history.json)
+      # 에 추세가 쌓여야 "어제보다 나빠졌다" 를 말할 수 있다.
+      #
+      # ⚠️ 이 기록을 여기서 남기는 이유: 매일 아침 점검 루틴은 컨테이너가 매번
+      #    새로 뜨는 일회성 세션이라 이력 파일을 커밋하지 않는다. 그래서 11번
+      #    실행되고도 main 의 이력은 1건(2026-09-16)뿐이었고, 루틴이 늘 "어제와
+      #    비교할 것이 없는" 상태로 시작했다. 매일 도는 이 워크플로가 남기면
+      #    추세가 저절로 쌓인다.
+      #
+      # ⚠️ 검사 실패로 배포를 막지 않는다. 막는 것은 위의 개별 검사 단계들의
+      #    일이다. 여기서 또 막으면 같은 실패로 두 번 멈춘다.
+      - name: Measure the site and record the trend
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          TZ: Asia/Seoul
+        run: python scripts/site_review.py || true
+
+      - name: Commit the review record
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          TZ: Asia/Seoul
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/review_history.json
+          if git diff --staged --quiet; then
+            echo "점검 기록 변화 없음 — 커밋 스킵"
+          else
+            git commit -m "📊 사이트 점검 기록 $(date +'%Y-%m-%d')"
+            git push
+          fi
+
       - name: Deploy to GitHub Pages
         if: ${{ github.event.inputs.dry_run != 'true' }}
         uses: peaceiris/actions-gh-pages@v3
