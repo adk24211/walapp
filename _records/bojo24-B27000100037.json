@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "소상공인(소상공인 보호 및 지원에 관한 법률 제2조에 따른 소상공인, 사업자등록 말소일로부터 1년 이내인 사람 포함)",
+      "건강보험료 본인부담금 합산액이 기준중위소득 150% 이하인 자",
+      "연 매출액이 3억 이하인 자"
+    ],
+    "faq": [
+      {
+        "a": "개인회생·파산·면책 사건과 사업과 관련된 민사·행정심판·행정소송 사건을 지원합니다. 다만, 근로관계 사건과 소상공인시장진흥공단을 상대로 한 민사·행정 사건은 제외됩니다.",
+        "q": "어떤 사건에 대해 무료 소송대리를 받을 수 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청하거나 직접 방문하여 신청할 수 있습니다. 신청은 상시 접수이며, 별도의 구비 서류는 필요하지 않습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "대한법률구조공단이 제공하는 무료 소송대리 서비스는 소상공인에게 법률구조와 무료 상담, 소송대리를 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.klac.or.kr",
+  "audiences": [
+    "lowincome",
+    "business"
+  ],
+  "benefit_raw": "○ 사회·경제적 약자에 대한 법률구조서비스 제공으로 법률복지증진\n\n○ 무료 법률상담\n\n○ 무료 소송대리\n- 개인회생 및 파산·면책사건과 상행위와 관련된 민사사건·행정심판·행정소송 사건(다만, 근로관계와 대응된 사건과 소상공인시장진흥공단을 상대로 한 민사사건 및 행정심판·행정소송사건 제외)\n(사업자등록 말소일로부터 1년이내인 소상공인 포함)",
+  "category": "living",
+  "contact_raw": "(국번없이)132 법률상담 콜센타/132",
+  "content_hash": "sha256:2296e88ea81fc3bbb626384faeb78375",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-28",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-B27000100037",
+  "is_mock": false,
+  "last_checked": "2026-09-28",
+  "last_updated": "2026-09-28",
+  "law_raw": "",
+  "name": "무료 소송대리 서비스(소상공인)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B27000100037",
+  "org": "대한법률구조공단",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "무료-소송대리-서비스-소상공인",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타(상담) 소상공인",
+  "source_id": "B27000100037",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 소상공인[소상공인 보호 및 지원에 관한 법률 제2조에 따른 소상공인(사업자등록 말소일로부터 1년 이내인 사람을 포함)]\n- 건강보험료 본인부담금 합산액이 기준중위소득 150% 이하인 자 또는연 매출액 3억 이하인 자",
+  "view_count": 3055
+}

@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "LPG 호스를 사용하고 있는 가구",
+      "아직 금속배관으로 교체하지 않은 가구",
+      "가구 단위로 신청 가능"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "주민센터에 직접 방문하여 신청합니다. 신청 시 별도의 서류는 필요하지 않습니다. 지원 대상이 확인되면 현물 지원이 이루어지며, 자부담 5만원을 납부합니다. 기초생활수급자는 자부담이 면제됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "LPG용기 사용 가구를 대상으로 금속배관 교체와 퓨즈콕 등 안전장치를 현물로 지원하고, 자부담 5만원(기초생활수급자는 면제)으로 진행하는 생활·문화 분야 지원 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "※ 기타세부사항 : 시ㆍ군ㆍ구에 따라 다를 수 있음",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "금속배관으로 교체 및 퓨즈콕 등 안전장치 설치",
+  "category": "living",
+  "contact_raw": "한국가스안전공사/1544-4500",
+  "content_hash": "sha256:1e3fbe5b001bbed91d4bbec8224ffbcf",
+  "criteria_raw": "LPG호스를 사용하고 있고 아직 금속배관으로 교체하지 않은 가구\n\n※지원형태: 현물, 자부담 비용 5만원 원칙(단, 기초생활수급자는 지자체에서 예산자원시 면제)",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-28",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-174100000020",
+  "is_mock": false,
+  "last_checked": "2026-09-28",
+  "last_updated": "2026-09-28",
+  "law_raw": "",
+  "name": "LPG용기 사용가구 시설개선 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/174100000020",
+  "org": "산업통상부",
+  "primary_audience": "lowincome",
+  "receiver_raw": "주민센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "lpg용기-사용가구-시설개선-지원",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타\n현물 개인",
+  "source_id": "174100000020",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "LPG호스를 사용하고 있고 아직 금속배관으로 교체하지 않은 가구\n\n※지원형태: 현물, 자부담 비용 5만원 원칙(단, 기초생활수급자는 지자체에서 예산자원시 면제)",
+  "view_count": 13874
+}

@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "15세 이상이어야 합니다.",
+      "등록 중증장애인이어야 합니다.",
+      "장애인 등록증을 제출해야 합니다."
+    ],
+    "faq": [
+      {
+        "a": "현장중심직업재활센터 등 참여 훈련에 대해 월 10만원씩 지급됩니다.",
+        "q": "훈련수당은 언제, 얼마씩 지급되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "한국장애인개발원을 직접 방문하여 신청합니다. 장애인 등록증과 주민등록등본 등을 준비하여 담당 직원에게 제출하면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "중증장애인 직업재활 지원(훈련수당) 제도는 15세 이상 등록 중증장애인에게 직업상담·직업평가·직업적응 훈련 등 재활 서비스를 제공하고, 현장중심직업재활센터 등 참여 시 월 10만원의 훈련수당을 지급합니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled"
+  ],
+  "benefit_raw": "○ 직업상담, 직업평가, 직업적응 훈련 등 직업재활 서비스 제공\n○ 현장중심직업재활센터 등 참여 훈련수당(월 10만원) 지급",
+  "category": "jobs",
+  "contact_raw": "한국장애인개발원/02-3433-0600",
+  "content_hash": "sha256:d7f4b0a22bdf175ba5dca5a349f014a0",
+  "criteria_raw": "○ 15세 이상 등록 중증장애인",
+  "deferred_detail": false,
+  "documents_raw": [
+    "장애인 등록증",
+    "주민등록등본 등"
+  ],
+  "first_published": "2026-09-28",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-SPE000000080",
+  "is_mock": false,
+  "last_checked": "2026-09-28",
+  "last_updated": "2026-09-28",
+  "law_raw": "",
+  "name": "중증장애인직업재활 지원(훈련수당)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SPE000000080",
+  "org": "보건복지부",
+  "primary_audience": "disabled",
+  "receiver_raw": "한국장애인개발원",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "중증장애인직업재활-지원-훈련수당",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 개인",
+  "source_id": "SPE000000080",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 15세 이상 등록 중증장애인",
+  "view_count": 5912
+}

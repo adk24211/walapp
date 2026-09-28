@@ -1,0 +1,64 @@
+{
+  "_prose": {
+    "eligibility": [
+      "지원 대상은 중소기업입니다.",
+      "선정 기준은 중소기업입니다.",
+      "신청 시 별도의 구비 서류가 필요하지 않습니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "중소기업유통센터 홈페이지에서 온라인으로 신청합니다. 신청은 상시 접수이며, 별도의 서류 제출이 필요하지 않습니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "중소기업 공공구매 종합 정보 제공 제도는 중소기업을 대상으로 공공기관 구매계획·실적 보고, 경쟁제품 직접생산 확인, 소액 수의계약 추진 등 다양한 지원을 온라인으로 상시 접수하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://www.smpp.go.kr",
+  "audiences": [
+    "disabled",
+    "business"
+  ],
+  "benefit_raw": "○ 중소기업자 간 경쟁제품 직접생산 확인\n\n○ 공공기관 구매계획, 구매실적 보고\n\n○ 소액 수의계약 대상 업체 추진\n\n○ 여성·장애인 기업 확인서 발급\n\n○ 창업기업 확인서 조회 발급\n\n○ 기술 개발제품 성능 인증서 발급\n\n○ 중소기업 기술 개발제품 우선 구매 제도",
+  "category": "jobs",
+  "contact_raw": "중소기업유통센터 공공구매지원센터/042-712-5631",
+  "content_hash": "sha256:647ca044e934de9241f5b1ca7debd08b",
+  "criteria_raw": "○ 중소기업",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-28",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-SD0000018900",
+  "is_mock": false,
+  "last_checked": "2026-09-28",
+  "last_updated": "2026-09-28",
+  "law_raw": "",
+  "name": "중소기업 공공구매 종합 정보 제공",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000018900",
+  "org": "중소벤처기업부",
+  "primary_audience": "disabled",
+  "receiver_raw": "중소기업유통센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "중소기업-공공구매-종합-정보-제공",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타 법인/시설/단체",
+  "source_id": "SD0000018900",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 중소기업",
+  "view_count": 4554
+}
