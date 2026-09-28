@@ -195,6 +195,22 @@ def save_record(record: ProgramRecord, prose: dict | None = None) -> None:
     _write_json(RECORDS_DIR / f"{record.id}.json", payload)
 
 
+def page_owner(path: Path) -> str | None:
+    """그 페이지 파일 앞부분에 적힌 제도 id. 파일이 없으면 None.
+
+    페이지를 지우기 전에 부른다. 원장이 가리키는 경로만 믿고 지우면 안 되는
+    경우가 있었다 — slug 가 겹쳐 서로 다른 두 제도가 같은 파일을 가리켰고,
+    그 상황을 정리하는 도구가 확인 없이 지우면 살아 있는 남의 페이지를
+    지운다. (scripts/schema.py 의 _NUMERAL_MAP 주석 참고)
+    """
+    if not path.exists():
+        return None
+    for line in path.read_text(encoding="utf-8").split("\n")[:40]:
+        if line.startswith("program_id:"):
+            return line.split(":", 1)[1].strip().strip('"')
+    return None
+
+
 def load_prose(program_id: str) -> dict | None:
     """저장해 둔 해설. 없으면 None (이 경우 재생성이 필요하다)."""
     data = _read_json(RECORDS_DIR / f"{program_id}.json", None)

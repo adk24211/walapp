@@ -13,9 +13,10 @@
   · 광고 붙은 얇은 페이지 심사에서 가장 먼저 눈에 띌 조합
   · 재생성 밀린 건수      늘고 있으면 발행 속도와 맞바꿈이 깨진 것
   · 대상이 빈 제도        어느 대상 허브에도 안 뜨는 페이지
+  · 같은 제도 두 주소     경로가 옮겨질 때 예전 페이지가 남은 것 — 네 쌍 있었다
   · 중복 콘텐츠          405건 중 1쌍뿐이었지만, 늘면 알아야 한다
   · 커버리지 표시        화면에 적힌 숫자가 실제와 어긋나는지
-  · 기존 검사 전부        check_*.py / check_*.mjs
+  · 기존 검사 전부        check_*.py / check_*.mjs (check_pages 가 원장과의 어긋남을 본다)
 
 무엇을 하지 않나
 ────────────────
@@ -80,7 +81,10 @@ def read_pages() -> list[dict]:
         plain = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", body)).strip()
         out.append({
             "path": path,
+            # 같은 제목이 여럿일 수 있어 '이 페이지' 를 가리키는 데 쓰지 않는다.
+            # 사람에게 보여 줄 때만 제목을 쓰고, 세고 짝지을 때는 path 를 쓴다.
             "title": field("title") or "?",
+            "program_id": field("program_id") or "",
             "own_chars": field("own_chars", int, 0),
             "views": field("view_count", int, 0),
             "body_chars": len(plain),
@@ -178,11 +182,18 @@ def near_duplicates(pages, threshold=0.5) -> list[dict]:
         w = text.split()
         return {" ".join(w[i:i + n]) for i in range(max(0, len(w) - n + 1))}
 
-    sh = {p["title"]: shingles(p["body"]) for p in pages}
+    # ⚠️ 제목이 아니라 **경로**로 짝짓는다. 처음에 제목을 열쇠로 썼더니
+    #    제목이 같은 페이지들이 dict 에서 한 칸으로 합쳐졌고, 그래서 이 검사가
+    #    **가장 확실한 중복 네 쌍을 통째로 못 봤다** — 유사도 1.00 이 나와야 할
+    #    쌍들이 애초에 비교 대상에 들어오지 않았다(2026-09-27). 같은 제도가 두
+    #    경로에 서 있으면 제목은 당연히 같으므로, 제목을 열쇠로 쓰는 이 검사는
+    #    잡아야 할 것을 정확히 못 잡는 구조였다.
+    sh = {p["path"]: shingles(p["body"]) for p in pages}
+    label = {p["path"]: p["title"] for p in pages}
     inv = defaultdict(list)
-    for title, s in sh.items():
+    for path, s in sh.items():
         for g in itertools.islice(s, 0, 400):
-            inv[g].append(title)
+            inv[g].append(path)
     cand = set()
     for fs in inv.values():
         if 1 < len(fs) <= 12:
@@ -194,18 +205,65 @@ def near_duplicates(pages, threshold=0.5) -> list[dict]:
             continue
         j = len(A & B) / len(A | B)
         if j >= threshold:
-            hits.append({"a": a, "b": b, "jaccard": round(j, 2)})
+            hits.append({"a": label[a], "b": label[b], "jaccard": round(j, 2),
+                         "a_path": _rel(a), "b_path": _rel(b)})
     hits.sort(key=lambda x: -x["jaccard"])
     return hits
 
 
+def _rel(path: str) -> str:
+    try:
+        return str(Path(path).relative_to(ROOT))
+    except ValueError:
+        return path
+
+
+def duplicate_ids(pages) -> list[dict]:
+    """같은 제도 id 를 가진 페이지가 둘 이상 있는가.
+
+    유사도보다 훨씬 날카롭다 — 문장이 얼마나 닮았는지 재는 것이 아니라
+    "같은 제도가 두 주소에 서 있다" 를 곧바로 말한다. 원장이 가리키는 쪽이
+    정본이고 나머지는 경로가 옮겨질 때 치우지 못한 고아다.
+    (scripts/publish.py 의 _drop_moved_page 주석에 경위가 있다.)
+    """
+    reg = registry.Registry()
+    by_id = defaultdict(list)
+    for p in pages:
+        if p["program_id"]:
+            by_id[p["program_id"]].append(p)
+    out = []
+    for pid, group in by_id.items():
+        if len(group) < 2:
+            continue
+        entry = reg.get(pid)
+        canon = entry.path if entry else None
+        out.append({
+            "program_id": pid,
+            "title": group[0]["title"],
+            "paths": sorted(_rel(p["path"]) for p in group),
+            "canonical": canon,
+        })
+    out.sort(key=lambda x: x["program_id"])
+    return out
+
+
 def stale_pages(pages, days=30) -> int:
-    """마지막으로 원문과 대조한 지 오래된 페이지. 화면이 '최종 확인일' 을 약속한다."""
+    """마지막으로 원문과 대조한 지 오래된 제도. 화면이 '확인일' 을 약속한다.
+
+    ⚠️ **원장에서 읽는다.** 페이지 앞부분의 last_checked 를 세면 안 된다 — 그 값은
+       마지막으로 '내용이 바뀐' 날에 멈춰 있다(페이지는 내용이 바뀔 때만 다시
+       찍히므로). 그걸로 세던 동안 이 지표가 141건이라고 말했는데, 원장으로 세면
+       0건이었다. 있지도 않은 문제를 매일 아침 보고하고 있었던 것이다.
+       화면도 원장에서 읽으므로(_layouts/program.html) 이제 둘이 같은 값을 본다.
+    """
     today = datetime.now(ZoneInfo("Asia/Seoul")).date()
+    reg = registry.Registry()
     n = 0
     for p in pages:
+        entry = reg.get(p["program_id"]) if p["program_id"] else None
+        raw = entry.last_checked if entry else p["last_checked"]
         try:
-            d = date.fromisoformat(p["last_checked"])
+            d = date.fromisoformat(raw)
         except (ValueError, TypeError):
             continue
         if (today - d).days > days:
@@ -223,6 +281,11 @@ def run_checks() -> list[dict]:
         ("신청기한 파서", [sys.executable, "scripts/check_period.py"]),
     ]
     built = (ROOT / "_site_check").exists() or (ROOT / "_site").exists()
+    # 빌드가 있으면 화면의 확인일까지 본다. 없으면 파일과 원장만 본다 —
+    # 그 둘만으로도 중복 페이지와 slug 충돌은 잡힌다.
+    site = "_site_check" if (ROOT / "_site_check").exists() else "_site"
+    checks.append(("페이지·원장", [sys.executable, "scripts/check_pages.py"]
+                   + (["--site", site] if built else [])))
     if built:
         checks += [
             ("인라인 스크립트", ["node", "scripts/check_inline_js.mjs"]),
@@ -314,6 +377,7 @@ def main() -> int:
         "ads_on_thin": ads_on_thin(pages),
         "regen_backlog": regen_backlog(),
         "audiences_empty": aud["empty"],
+        "duplicate_ids": duplicate_ids(pages),
         "near_duplicates": near_duplicates(pages),
         "stale_over_30d": stale_pages(pages),
         "coverage": coverage_drift(),
@@ -342,6 +406,7 @@ def main() -> int:
             "regen_backlog": report["regen_backlog"],
             "ads_on_thin": len(report["ads_on_thin"]),
             "audiences_empty": len(report["audiences_empty"]),
+            "duplicate_ids": len(report["duplicate_ids"]),
             "near_duplicates": len(report["near_duplicates"]),
             "stale_over_30d": report["stale_over_30d"],
             "checks_failed": [c["name"] for c in report["checks"] if not c["ok"]],
@@ -381,6 +446,14 @@ def _print_human(r, prev) -> None:
     for x in r["audiences_empty"][:6]:
         print(f"    조회 {x['views']:>9,}  {x['title'][:44]}")
 
+    dups = r.get("duplicate_ids") or []
+    print(f"\n■ 같은 제도가 두 주소에 — {len(dups)}건")
+    for x in dups:
+        print(f"    {x['title'][:34]}")
+        for path in x["paths"]:
+            mark = "정본" if x["canonical"] == path else "고아"
+            print(f"      {mark}  {path}")
+
     print(f"\n■ 중복 콘텐츠 — 자카드 0.5 이상 {len(r['near_duplicates'])}쌍")
     for x in r["near_duplicates"][:5]:
         print(f"    {x['jaccard']}  {x['a'][:32]} ↔ {x['b'][:32]}")
@@ -403,6 +476,8 @@ def _print_human(r, prev) -> None:
     print()
     if failed:
         print(f"→ 먼저 볼 것: 실패한 검사 {', '.join(failed)}")
+    elif dups:
+        print("→ 먼저 볼 것: 같은 제도가 두 주소에 서 있는 것 (우리가 만든 중복 콘텐츠다)")
     elif r["ads_on_thin"]:
         print("→ 먼저 볼 것: 광고가 붙는데 본문이 얇은 페이지 (심사에서 가장 먼저 눈에 띈다)")
     else:

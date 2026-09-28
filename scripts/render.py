@@ -761,6 +761,14 @@ def to_markdown(record: ProgramRecord, prose: dict) -> str:
     # first_published 가 제도마다 다르다. 내보내지 않고 있었을 뿐이다.
     #
     # sitemap 의 <lastmod> 도 같은 값을 읽는다.
+    #
+    # ⚠️ 여기 적히는 last_checked 를 '마지막으로 원문과 대조한 날' 로 읽지 말 것.
+    #    페이지는 내용이 바뀔 때만 다시 찍히는데, 동기화는 내용이 그대로인
+    #    제도에도 대조 사실을 기록한다(원장만 갱신). 그래서 이 값은 마지막으로
+    #    **내용이 바뀐** 날에 멈춰 있고, 2026-09-27 에는 582건 중 566건이 실제보다
+    #    낡았다(최대 45일). 화면과 측정은 둘 다 원장에서 읽는다 —
+    #    _layouts/program.html 의 확인일 블록과 site_review.stale_pages 를 볼 것.
+    #    남겨 두는 이유는 원장이 없을 때의 대비값이기 때문이다.
     front += [
         f'first_published: "{record.first_published}"',
         f'last_updated: "{record.last_updated}"',

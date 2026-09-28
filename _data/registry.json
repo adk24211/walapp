@@ -324,9 +324,9 @@
     "last_checked": "2026-09-27",
     "last_updated": "2026-08-31",
     "name": "중소기업 취업연계 장학금 (희망사다리Ⅰ유형)",
-    "path": "_programs/education/중소기업-취업연계-장학금-희망사다리-유형.md",
+    "path": "_programs/education/중소기업-취업연계-장학금-희망사다리1유형.md",
     "revision": 1,
-    "slug": "중소기업-취업연계-장학금-희망사다리-유형",
+    "slug": "중소기업-취업연계-장학금-희망사다리1유형",
     "status": "active"
   },
   "bojo24-134200005001": {
@@ -335,9 +335,9 @@
     "last_checked": "2026-09-27",
     "last_updated": "2026-08-30",
     "name": "고졸 후학습자 장학금 (희망사다리Ⅱ유형)",
-    "path": "_programs/education/고졸-후학습자-장학금-희망사다리-유형.md",
+    "path": "_programs/education/고졸-후학습자-장학금-희망사다리2유형.md",
     "revision": 2,
-    "slug": "고졸-후학습자-장학금-희망사다리-유형",
+    "slug": "고졸-후학습자-장학금-희망사다리2유형",
     "status": "active"
   },
   "bojo24-134200005006": {
@@ -621,9 +621,9 @@
     "last_checked": "2026-09-27",
     "last_updated": "2026-09-12",
     "name": "자산형성지원사업(희망저축Ⅰ)",
-    "path": "_programs/finance/자산형성지원사업-희망저축.md",
+    "path": "_programs/finance/자산형성지원사업-희망저축1.md",
     "revision": 1,
-    "slug": "자산형성지원사업-희망저축",
+    "slug": "자산형성지원사업-희망저축1",
     "status": "active"
   },
   "bojo24-135200005012": {
@@ -632,9 +632,9 @@
     "last_checked": "2026-09-27",
     "last_updated": "2026-09-12",
     "name": "자산형성지원사업(희망저축Ⅱ)",
-    "path": "_programs/finance/자산형성지원사업-희망저축.md",
+    "path": "_programs/finance/자산형성지원사업-희망저축2.md",
     "revision": 1,
-    "slug": "자산형성지원사업-희망저축",
+    "slug": "자산형성지원사업-희망저축2",
     "status": "active"
   },
   "bojo24-135200005015": {

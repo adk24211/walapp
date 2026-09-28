@@ -289,10 +289,37 @@ layout: default
         <dd>{{ page.own_parts | join: ' · ' }}</dd>
       </div>
       {% endif %}
-      {% if page.last_checked %}
+      {%- comment -%}
+        ⚠️ 확인일은 페이지 앞부분(page.last_checked)이 아니라 **원장**에서 읽는다.
+
+        동기화는 내용이 안 바뀐 제도에도 "오늘 원문과 대조했다" 를 기록하는데
+        (sync.py 의 reg.mark_checked), 그건 원장만 갱신한다. 페이지는 내용이
+        바뀔 때만 다시 찍히므로, 앞부분의 날짜는 마지막으로 **내용이 바뀐** 날에
+        멈춰 있다.
+
+        그래서 582건 중 566건이 실제보다 낡은 날짜를 보여 주고 있었다 —
+        국민내일배움카드(조회 509만)가 화면엔 2026-08-31, 실제로는 2026-09-27
+        확인. 최대 45일 차이였고, 원장 기준으로 30일 넘은 것은 0건인데 화면은
+        127건이 30일 넘은 것처럼 보였다.
+
+        소개·면책·약관 세 곳이 이 날짜를 근거로 "그 이후 변경되었을 가능성을
+        고려하시라" 고 약속한다. 실제보다 낡아 보이게 만드는 것은 그 약속을
+        어기는 쪽이다.
+
+        ⚠️ 고치는 방법으로 '안 바뀐 레코드도 매일 다시 찍기' 는 쓰지 않았다.
+           그러면 매일 동기화 커밋에 500개 넘는 파일이 들어간다. 여기서 읽으면
+           파일을 하나도 더 쓰지 않고 언제나 정확하다.
+
+        ⚠️ dateModified(위 JSON-LD)는 그대로 last_updated 를 쓴다. 그건 '내용이
+           바뀐 날' 이고 여기 확인일과는 다른 값이다. 확인만 했다고 dateModified
+           를 오늘로 올리면 검색엔진에 매일 고쳤다고 거짓말하는 셈이다.
+      {%- endcomment -%}
+      {%- assign reg_entry = site.data.registry[page.program_id] -%}
+      {%- assign checked_on = reg_entry.last_checked | default: page.last_checked -%}
+      {% if checked_on %}
       <div>
         <dt>확인일</dt>
-        <dd>{{ page.last_checked }}</dd>
+        <dd>{{ checked_on }}</dd>
       </div>
       {% endif %}
     </dl>
