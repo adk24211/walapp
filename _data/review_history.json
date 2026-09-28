@@ -18,14 +18,14 @@
  {
   "date": "2026-09-28",
   "thin": {
-   "count": 579,
-   "median_own_chars": 382,
-   "under_400": 310,
-   "under_400_pct": 53,
-   "under_500": 415
+   "count": 585,
+   "median_own_chars": 381,
+   "under_400": 316,
+   "under_400_pct": 54,
+   "under_500": 420
   },
   "regen_backlog": 45,
-  "ads_on_thin": 38,
+  "ads_on_thin": 39,
   "audiences_empty": 12,
   "duplicate_ids": 0,
   "near_duplicates": 1,
