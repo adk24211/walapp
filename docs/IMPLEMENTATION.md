@@ -280,14 +280,21 @@ scripts/
 ├── scripts/check_claims.py    공개 문서가 말하는 원천·외부 서비스가 코드와 맞는지 (CI)
 ├── scripts/check_audience.py  대상 분류 회귀 케이스 38건 ★ 키워드를 만지면 먼저 돌린다 (CI)
 ├── scripts/check_overrides.py 손으로 적은 대상 덮어쓰기가 아직 근거와 맞는지 (CI)
+├── scripts/check_pages.py     페이지와 원장이 같은 말을 하는지 — 중복 주소·보이지 않는 제도·화면의 확인일 (CI)
 ├── scripts/site_review.py     사이트를 훑어 고칠 거리를 우선순위대로 ★ 매일 06시 루틴이 이걸로 시작한다
 ├── scripts/restore_thinner.py 재생성이 오히려 얇게 만든 페이지를 되살린다 (토큰 0)
+├── scripts/reslug.py          slug 규칙을 고친 뒤 저장된 레코드에 반영한다 (토큰 0 · 주소가 바뀐다)
 └── scripts/inspect_api.py     새 API 의 필드명 조사 (--docs / --probe)
 
 앞의 셋 중 `check_layout` · `check_contrast` 는 브라우저가 필요해 CI 에 넣지 않았습니다
 (데일리 워크플로는 내용 동기화라 매일 크로미움을 받을 일이 없습니다). **CSS 를
 고치면 두 개를 로컬에서 돌리고 머지합니다.** CI 가 도는 것은 브라우저가 필요 없는
-셋입니다 — `check_inline_js` · `check_seo` · `check_verify`.
+것들입니다 — `check_inline_js` · `check_seo` · `check_verify` · `check_claims` ·
+`check_overrides` · `check_audience` · `check_pages`.
+
+`_data/review_history.json` 은 매일 07:00 동기화 워크플로가 남깁니다. 매일 아침
+점검 루틴은 컨테이너가 매번 새로 뜨는 일회성 세션이라 이력을 커밋하지 못해,
+11번 실행되고도 이력이 1건뿐이었습니다. 추세를 보는 쪽과 남기는 쪽을 나눴습니다.
 
 _layouts/program.html      제도 상세 (섹션 6개 + 신청 레일)
 _layouts/hub.html          분야·대상·지역·마감·신규 공용
