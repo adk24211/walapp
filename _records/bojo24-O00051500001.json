@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "만 9세 이상 만 24세 이하인 청소년",
+      "대한민국에 거주하는 청소년"
+    ],
+    "faq": [
+      {
+        "a": "필요 시 이전 기관의 심리검사 결과보고서를 공유 요청할 수 있습니다.",
+        "q": "심리검사 결과보고서를 제공받을 수 있나요?"
+      },
+      {
+        "a": "청소년은 1주일에 1회, 총 12회까지 무료로 상담을 받을 수 있습니다.",
+        "q": "상담은 얼마나 자주 받을 수 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청하거나 직접 방문하여 신청할 수 있습니다. 신청은 상시 접수이며, 구비 서류는 필요하지 않습니다. 필요 시 이전 기관의 심리검사 결과보고서를 요청받을 수 있습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "청소년 무료 개인상담 및 심리검사 제도는 만 9세부터 만 24세까지 대한민국에 거주하는 청소년에게 1주일에 1회, 총 12회까지 1:1 상담과 심리검사를 무료로 제공하는 서비스입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://www.shyouth.or.kr/schs/main/view",
+  "audiences": [
+    "youth"
+  ],
+  "benefit_raw": "- 만9세~만24세 청소년, 개인상담 및 심리검사 무료 진행(1회/주, 총12회)\n- 청소년전문상담사와 1:1로 만나 1시간 내외로 상담서비스 및 복지지원서비스 연계.\n- 내부회의를 거쳐 상담사가 현장까지 찾아가는 상담서비스 제공 가능.",
+  "category": "health",
+  "contact_raw": "상담팀/031-318-7100",
+  "content_hash": "sha256:314921dfce78820275eb3bdc42d8db3d",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "구비서류 별도 없음",
+    "필요시 이전 기관 심리검사 결과보고서(최근 1년~6개월 이내) 공유요청할 수 있음(비용 절감 및 상담 효율성 고려)"
+  ],
+  "first_published": "2026-09-29",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-O00051500001",
+  "is_mock": false,
+  "last_checked": "2026-09-29",
+  "last_updated": "2026-09-29",
+  "law_raw": "",
+  "name": "청소년 무료 개인상담 및 심리검사",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00051500001",
+  "org": "재단법인시흥시청소년청년재단",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "청소년-무료-개인상담-및-심리검사",
+  "source": "bojo24",
+  "source_category_raw": "보건·의료 기타(상담) 개인",
+  "source_id": "O00051500001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "만9세~만24세 대한민국에 거주하는 청소년 모두 해당",
+  "view_count": 1786
+}

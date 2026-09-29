@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "초등학생이면 신청 가능합니다.",
+      "중학생이면 신청 가능합니다.",
+      "고등학생이면 신청 가능합니다."
+    ],
+    "faq": [
+      {
+        "a": "본 프로그램에서는 만들기 프로그램, 시설투어, 체험관 견학, 디자인교육 프로그램을 제공합니다. 참여를 통해 디자인 분야를 직접 체험할 수 있습니다.",
+        "q": "지원 내용에는 어떤 프로그램이 포함되어 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "접수 기관이 명시되지 않아 별도 안내가 제공되지 않습니다. 상시 접수로 진행되며, 자세한 내용은 문의처로 확인하시기 바랍니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "부산디자인진흥원이 운영하는 디자인 진로 체험 프로그램은 지역 초·중·고등학생을 대상으로 만들기, 시설투어, 체험관 견학, 디자인교육 등 다양한 체험 활동을 제공하는 사업입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "student"
+  ],
+  "benefit_raw": "○ 만들기프로그램\n\n○ 시설투어\n\n○ 체험관 견학\n\n○ 디자인교육프로그램",
+  "category": "care",
+  "contact_raw": "부산디자인진흥원/051-790-1071",
+  "content_hash": "sha256:e14d7394109fbd56ceb1e8b3823b4804",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-29",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-O00079300002",
+  "is_mock": false,
+  "last_checked": "2026-09-29",
+  "last_updated": "2026-09-29",
+  "law_raw": "",
+  "name": "디자인 진로 체험 프로그램",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00079300002",
+  "org": "(재)부산디자인진흥원",
+  "primary_audience": "student",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "디자인-진로-체험-프로그램",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 시설이용 개인",
+  "source_id": "O00079300002",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "지역 초·증·고등학생",
+  "view_count": 660
+}

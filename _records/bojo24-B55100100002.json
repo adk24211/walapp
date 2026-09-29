@@ -1,0 +1,62 @@
+{
+  "_prose": {
+    "eligibility": [
+      "초등학생이 포함된 가족",
+      "가족 관람객"
+    ],
+    "faq": [],
+    "note": "프로그램이 연 2회 진행되므로 신청 시점에 따라 참여 가능 여부가 달라질 수 있습니다.",
+    "steps": [
+      {
+        "body": "방문 신청을 통해 신청하시면 됩니다. 구비 서류는 필요하지 않습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "독립기념관에서 초등학생과 그 가족을 대상으로 임시정부의 수립 배경·활동을 배우는 전시연계 체험교육 프로그램을 연 2회 제공하며, 방문 신청만으로 참여할 수 있는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "5월 중",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "student"
+  ],
+  "benefit_raw": "○ 대한민국 임시정부의 수립 배경과 활동을 학습하고, 임시정부가 추구한 가치를 이해하기 위한 전시연계 체험교육 프로그램(연 2회)",
+  "category": "education",
+  "contact_raw": "교육부/041-560-0267",
+  "content_hash": "sha256:d50f565bf94b778c83d33d4598065678",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-29",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-B55100100002",
+  "is_mock": false,
+  "last_checked": "2026-09-29",
+  "last_updated": "2026-09-29",
+  "law_raw": "",
+  "name": "독립기념관 임시정부 초등단체 교육",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55100100002",
+  "org": "독립기념관",
+  "primary_audience": "student",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "독립기념관-임시정부-초등단체-교육",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 시설이용 개인",
+  "source_id": "B55100100002",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "초등학생 포함 가족 관람객",
+  "view_count": 647
+}
