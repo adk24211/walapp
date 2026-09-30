@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "농사용전력을 사용하고 있는 고객이어야 합니다.",
+      "에너지진단을 거쳐 기존 전열히터 김건조기를 김건조기 EHP(히트펌프)로 교체하려는 경우입니다.",
+      "ESCO사업자 등도 지원 대상에 포함됩니다.",
+      "지원 설비는 히트펌프와 급기팬 등 전 건조설비이며, 세부 구성품이 한국에너지공단 효율관리제도·고효율에너지기자재 대상인 경우 반드시 등록제품이어야 합니다."
+    ],
+    "faq": [
+      {
+        "a": "세부 구성품이 한국에너지공단 효율관리제도·고효율에너지기자재 대상인 경우, 등록제품이 아니면 지원 대상에서 제외됩니다.",
+        "q": "지원 설비가 등록제품이 아닌 경우에도 지원받을 수 있나요?"
+      }
+    ],
+    "note": "선정 기준이 별도로 제시되지 않았습니다.",
+    "steps": [
+      {
+        "body": "온라인 신청은 지정된 온라인 시스템을 통해 진행합니다. 방문 신청은 접수 기관이 명시되지 않아 가능한 경우 직접 방문하여 신청합니다. 구비 서류는 필요하지 않습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "농사용전력을 사용하는 고객이 에너지진단을 통해 기존 전열히터 김건조기를 고효율 히트펌프형 김건조기 EHP로 교체할 경우 지원금을 받을 수 있는 생활·문화 분야 지원제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "2026-12-18",
+    "raw": "2026.01.19~2026.12.18",
+    "start": "2026-01-19"
+  },
+  "apply_url": "https://online.kepco.co.kr/",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "에너지 효율향상 및 온실가스 감축을 위해 고객이 고효율 기기 교체 시 지원금 지급",
+  "category": "living",
+  "contact_raw": "수요효율처/123",
+  "content_hash": "sha256:b3d38b896991121620f9d0b7e55b5970",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-09-30",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-B41000200020",
+  "is_mock": false,
+  "last_checked": "2026-09-30",
+  "last_updated": "2026-09-30",
+  "law_raw": "",
+  "name": "김건조기 EHP 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B41000200020",
+  "org": "한국전력공사",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "김건조기-ehp-지원",
+  "source": "bojo24",
+  "source_category_raw": "농림축산어업 현금 개인\n소상공인\n법인/시설/단체",
+  "source_id": "B41000200020",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 농사용전력을 사용하며 에너지진단을 통해 전열히터 김건조기를 김건조기 EHP로 교체하는 고객 또는 ESCO사업자 등\n- (지원기기) 히트펌프와 급기팬 등 전 건조설비\n※ 세부 구성품(삼상유도전동기, 원심식송풍기) 중 한국에너지공단효율관리제도, 고효율에너지기자재 대상인 경우 반드시 등록제품 설치",
+  "view_count": 3149
+}

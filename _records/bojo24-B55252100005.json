@@ -33,7 +33,7 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-B55252100005",
   "is_mock": false,
-  "last_checked": "2026-09-15",
+  "last_checked": "2026-09-30",
   "last_updated": "2026-09-06",
   "law_raw": "",
   "name": "발전소주변지역 장학금 지원(보령발전본부)",
@@ -52,7 +52,7 @@
   "source_category_raw": "보육·교육 현금(장학금) 개인",
   "source_id": "B55252100005",
   "source_registered": "",
-  "status": "active",
+  "status": "closed",
   "target_raw": "보령시 오천면, 천북면, 주교면, 주포면, 웅천읍 성동리 2년 이상 거주한 주민 또는 주민 자녀",
-  "view_count": 1169
+  "view_count": 1279
 }
