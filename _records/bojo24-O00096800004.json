@@ -31,14 +31,12 @@
   "content_hash": "sha256:febfeef1dee593e810b875666dfba5eb",
   "criteria_raw": "",
   "deferred_detail": false,
-  "documents_raw": [
-    "해당없음"
-  ],
+  "documents_raw": [],
   "first_published": "2026-08-14",
   "how_to_raw": "신청불필요",
   "id": "bojo24-O00096800004",
   "is_mock": false,
-  "last_checked": "2026-09-09",
+  "last_checked": "2026-10-01",
   "last_updated": "2026-09-09",
   "law_raw": "",
   "name": "학업성취도 향상 고등학생 장학금",
@@ -51,13 +49,13 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "학업성취도-향상-고등학생-장학금",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
   "source_id": "O00096800004",
   "source_registered": "",
-  "status": "active",
+  "status": "closed",
   "target_raw": "관내 고등학생 중 성적 상위 50%이하인 학생 중 직전학기 성적대비 20%이상 향상자",
-  "view_count": 627
+  "view_count": 687
 }

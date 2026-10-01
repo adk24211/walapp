@@ -23,10 +23,10 @@
   "apply_period": {
     "always": false,
     "end": "2026-10-31",
-    "raw": "",
+    "raw": "2026.10.01~2026.10.31",
     "start": "2026-10-01"
   },
-  "apply_url": "https://forlife.catholic.or.kr",
+  "apply_url": "",
   "audiences": [
     "parent",
     "lowincome"
@@ -34,23 +34,15 @@
   "benefit_raw": "(필수)청소년 미혼 한부모(미혼모, 미혼부)에게 매월 생활비 50만원 지원\n(선택) 긴급 의료비, 교육/취업 축하 · 격려금",
   "category": "jobs",
   "contact_raw": "성평등가족부 가족지원과/02-2100-6349",
-  "content_hash": "sha256:ddc88ef1998f9e5c6cfa046000fba06d",
+  "content_hash": "sha256:ceefbe1de65b2a581b85927363b3edec",
   "criteria_raw": "대한민국 국적의 24세 이하 미혼 한부모 및 임산부\n- (1순위) 19세 이하 청소년 미혼 한부모(소득 무관, 전원 지원)\n- (2순위) 20세 이상 24세 이하 청소년 미혼 한부모(중위소득 50%이하)",
   "deferred_detail": false,
-  "documents_raw": [
-    "신청서",
-    "개인정보제공 동의서 및 지원금 중단에 대한 고지 및 서약서",
-    "가족관계증명서(상세)",
-    "혼인관계증명서(상세)",
-    "통장사본(행복지킴이통장 등 압류방지통장 제외)",
-    "(해당자)임신확인서(보건소/산부인과 발급가능)",
-    "(해당자)기초생활수급자/차상위 증명서(만 20세 이상 신청자 필수제출)"
-  ],
+  "documents_raw": [],
   "first_published": "2026-08-13",
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-138300000052",
   "is_mock": false,
-  "last_checked": "2026-08-13",
+  "last_checked": "2026-10-01",
   "last_updated": "2026-08-13",
   "law_raw": "",
   "name": "청소년 미혼 한부모 자립지원 (우리원더패밀리)",
@@ -63,13 +55,13 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "청소년-미혼-한부모-자립지원-우리원더패밀리",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금 개인",
   "source_id": "138300000052",
-  "source_registered": "2024-06-17",
-  "status": "upcoming",
+  "source_registered": "",
+  "status": "active",
   "target_raw": "대한민국 국적의 24세 이하 미혼 한부모 및 임산부\n- (1순위) 19세 이하 청소년 미혼 한부모(소득 무관, 전원 지원)\n- (2순위) 20세 이상 24세 이하 청소년 미혼 한부모(중위소득 50%이하)",
-  "view_count": 2704
+  "view_count": 3068
 }

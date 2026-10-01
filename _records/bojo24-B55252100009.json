@@ -31,20 +31,12 @@
   "content_hash": "sha256:ceffba70932c8f46720c0e01d7a5bcb6",
   "criteria_raw": "",
   "deferred_detail": false,
-  "documents_raw": [
-    "추천자명단",
-    "학교장 추천서",
-    "장학금 지급신청서",
-    "개인정보 수집 및 이용에 대한 동의서",
-    "서약서",
-    "세종시 거주 해당자(학생 본인 혹은 부모)의 주민등록초본(최근 1년간 주소변동사항 포함)",
-    "통장사본"
-  ],
+  "documents_raw": [],
   "first_published": "2026-08-14",
   "how_to_raw": "직접입력",
   "id": "bojo24-B55252100009",
   "is_mock": false,
-  "last_checked": "2026-09-07",
+  "last_checked": "2026-10-01",
   "last_updated": "2026-09-07",
   "law_raw": "",
   "name": "발전소 주변지역 장학금 지원(세종)",
@@ -57,13 +49,13 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "발전소-주변지역-장학금-지원-세종",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
   "source_id": "B55252100009",
   "source_registered": "",
-  "status": "upcoming",
+  "status": "active",
   "target_raw": "세종발전본부 반경 5km 이내 중고등학교에 재학중인 세종시 실거주 1년 이상인 자의 자녀 및 본인으로 취약계층 및 모범학생",
-  "view_count": 803
+  "view_count": 850
 }

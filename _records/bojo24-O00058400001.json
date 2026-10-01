@@ -1,0 +1,71 @@
+{
+  "_prose": {
+    "eligibility": [
+      "화성시에 1년 이상 거주하고 있는 고등학생",
+      "화성시에 1년 이상 거주하고 있는 대학생",
+      "본인 또는 부모·친권자가 신청할 수 있음"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "지원 홈페이지에서 온라인 신청서를 작성하고, 요구된 구비 서류를 첨부하여 제출하시면 됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "화성시 인재육성재단이 운영하는 ‘화성 into 테크노폴’은 화성시에 1년 이상 거주하는 고등학생·대학생을 대상으로 해외 탐방 비용 및 사전·사후 역량 강화 활동을 지원하는 교육·역량 지원 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "공고별 상이(공고문 참조)",
+    "start": ""
+  },
+  "apply_url": "http://www.hstree.org",
+  "audiences": [
+    "youth",
+    "student"
+  ],
+  "benefit_raw": "○ 화성 into 테크노폴\n- 대상: 고등학생 및 대학생\n- 탐방국가: 싱가포르, 유럽, 미국 등\n- 내용: 국제교류 및 4차산업 기술 탐방을 통해 글로벌 역량을 갖춘 인재육성\n- 지원내용: 해외탐방 활동 비용 지원(일부 자부담) 및 사전, 사후 역량강화 활동 지원",
+  "category": "education",
+  "contact_raw": "장학사업팀/031-898-5573",
+  "content_hash": "sha256:97436828c4897d3395aae0662100f7cb",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "주민등록초본",
+    "재학(휴학) 증명서",
+    "통장사본",
+    "여권사본",
+    "참가서약서",
+    "민간인 국외여비 지급 신청서",
+    "가족관계증명서(필요시)",
+    "※ 공고별 제출 서류가 다를 수 있으므로 당회차 공고문 참고 필수"
+  ],
+  "first_published": "2026-10-01",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-O00058400001",
+  "is_mock": false,
+  "last_checked": "2026-10-01",
+  "last_updated": "2026-10-01",
+  "law_raw": "",
+  "name": "화성 into 테크노폴",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00058400001",
+  "org": "화성시인재육성재단",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "화성-into-테크노폴",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "O00058400001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 화성 into 테크노폴 : 본인 또는 부모, 친권자가 1년이상 화성시 거주 중인 고등학생 및 대학생",
+  "view_count": 1744
+}

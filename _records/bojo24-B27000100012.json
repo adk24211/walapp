@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "한부모가족이어야 합니다.",
+      "건강보험료 본인부담금 합산액이 기준중위소득 125% 이하이어야 합니다."
+    ],
+    "faq": [
+      {
+        "a": "법률구조서비스를 제공하며, 무료 법률상담과 무료 소송대리를 지원합니다.",
+        "q": "지원 내용에 포함되는 서비스는 무엇인가요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청하거나 직접 방문하여 신청할 수 있습니다. 신청은 상시 접수이며, 별도의 서류는 필요하지 않습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "대한법률구조공단이 제공하는 무료 소송대리 서비스는 취약계층 한부모가족에게 법률상담과 소송대리를 무상으로 지원하며, 건강보험료 본인부담금 합산액이 기준중위소득 125% 이하인 경우에 적용됩니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.klac.or.kr",
+  "audiences": [
+    "parent",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 사회·경제적 약자에 대한 법률구조서비스 제공으로 법률복지증진\n\n○ 무료 법률상담\n\n○ 무료 소송대리",
+  "category": "living",
+  "contact_raw": "(국번없이)132 법률상담 콜센타/132",
+  "content_hash": "sha256:17319b081052915c4b5cc079bec6598b",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-01",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-B27000100012",
+  "is_mock": false,
+  "last_checked": "2026-10-01",
+  "last_updated": "2026-10-01",
+  "law_raw": "",
+  "name": "무료 소송대리 서비스(취약계층 한부모가족)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B27000100012",
+  "org": "대한법률구조공단",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "무료-소송대리-서비스-취약계층-한부모가족",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타(상담) 개인",
+  "source_id": "B27000100012",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 한부모가족\n- 건강보험료 본인부담금 합산액이 기준중위소득 125% 이하인 자\n- 취약계층 한부모가족",
+  "view_count": 3039
+}
