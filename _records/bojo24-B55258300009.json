@@ -1,0 +1,64 @@
+{
+  "_prose": {
+    "eligibility": [
+      "장애인복지법에 따라 장애인복지카드를 소지한 사람",
+      "장애인복지카드가 유효한 사람",
+      "선정 기준이 별도로 없습니다"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청 페이지에서 신청서를 작성하고 제출하면 됩니다. 별도의 구비 서류는 필요하지 않습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "한국장애인고용공단이 제공하는 장애인 온라인 직업심리검사 제도는 장애인복지카드 소지자를 대상으로 10가지 직업심리검사를 온라인으로 제공하는 서비스입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://hub.kead.or.kr/ve",
+  "audiences": [
+    "disabled",
+    "jobseeker"
+  ],
+  "benefit_raw": "○ 직업심리검사 10종에 대한 온라인검사 제공\n- 자기개념검사, 직업기능탐색검사, 직업기능스크리닝검사, 그림직업흥미검사(지적장애), 취업준비체크리스트, 청소년직업적성검사(청각장애), 고용서비스 다양성검사, 장애인 구직준비도 검사, 진로성숙도검사, 장애인 중장년 직업역량검사",
+  "category": "jobs",
+  "contact_raw": "한국장애인고용공단/1588-1519",
+  "content_hash": "sha256:4d7c51afe23c889ba817433a104f59d5",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-02",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55258300009",
+  "is_mock": false,
+  "last_checked": "2026-10-02",
+  "last_updated": "2026-10-02",
+  "law_raw": "",
+  "name": "장애인 온라인 직업심리검사",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55258300009",
+  "org": "한국장애인고용공단",
+  "primary_audience": "disabled",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "장애인-온라인-직업심리검사",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 서비스(일자리) 개인",
+  "source_id": "B55258300009",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "「장애인복지법」에 의한 장애인복지카드를 소지한 사람",
+  "view_count": 3241
+}

@@ -24,7 +24,7 @@
     "raw": "홈페이지(www.wbridge.or.kr) 참고",
     "start": ""
   },
-  "apply_url": "http://www.wbridge.or.kr",
+  "apply_url": "https://www.wbridge.or.kr",
   "audiences": [
     "parent",
     "jobseeker"
@@ -32,7 +32,7 @@
   "benefit_raw": "○ 지원내용\n- 복귀 인력의 연구비 지원(정부 지원금 2천2백만 원 내외)\n- 경력단절 여성과학기술인의 연구역량 강화 및 경력개발을 위한 교육 멘토링\n\n○ 지원 기간 : 최대 3년(12개월 단위로 연차평가 실시하여 계속지원 여부 평가)",
   "category": "jobs",
   "contact_raw": "한국여성과학기술인육성재단/02-6411-1010",
-  "content_hash": "sha256:97e6ba1db4ba22bd0b32546aaa38d345",
+  "content_hash": "sha256:807f527e8f898cc964a114a68dca0868",
   "criteria_raw": "○ 개인\n- 이공계 학위 소지 또는 연구개발 관련 경력 보유한 여성\n- 경력단절 사유 및 현황, 향후 경력개발 계획, 기존 경력 등을 평가하여 60점 이상 획득한 자\n\n○ 기관\n- 과학기술 분야 연구기관 및 대학, 민간기업 연구소\n- 복귀 여성인력에 기준연봉 3,000만원 이상 지급 가능한 기관\n- 근무환경, 재무건전성, 연구개발현황 등을 평가하여 60점 이상 획득한 기관",
   "deferred_detail": false,
   "documents_raw": [
