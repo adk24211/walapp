@@ -1,0 +1,79 @@
+{
+  "_prose": {
+    "eligibility": [
+      "노인복지법에 따라 운영되는 사회복지시설",
+      "아동복지법에 따라 운영되는 사회복지시설",
+      "장애인복지법에 따라 운영되는 사회복지시설",
+      "국민기초생활보장법에 따라 운영되는 사회복지시설",
+      "한부모가족지원법에 따라 운영되는 사회복지시설"
+    ],
+    "faq": [
+      {
+        "a": "선정 기준은 별도로 명시되지 않았습니다.",
+        "q": "선정 기준이 있나요?"
+      },
+      {
+        "a": "고효율 기기를 교체하면 지원금이 지급됩니다.",
+        "q": "지원금은 언제 지급되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청은 한국전력공사 홈페이지에서 신청서를 작성하여 제출합니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "방문 신청은 접수기관에 직접 방문하여 신청서를 제출합니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "한국전력공사가 운영하는 복지시설냉난방기 지원은 노인·아동·장애·기초생활보장·한부모 지원법에 해당하는 사회복지시설이 에너지소비효율 1등급 냉난방기를 설치·교체할 경우 교체 비용을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "2026-12-18",
+    "raw": "2026.01.19~2026.12.18",
+    "start": "2026-01-19"
+  },
+  "apply_url": "https://online.kepco.co.kr/",
+  "audiences": [
+    "parent",
+    "lowincome"
+  ],
+  "benefit_raw": "에너지 효율향상 및 온실가스 감축을 위해 고객이 고효율기기 교체 시 지원금 지급",
+  "category": "care",
+  "contact_raw": "수요효율처/123",
+  "content_hash": "sha256:5944d6c7e244b0db010ac70ced2a21bc",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-03",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-B41000200001",
+  "is_mock": false,
+  "last_checked": "2026-10-03",
+  "last_updated": "2026-10-03",
+  "law_raw": "",
+  "name": "복지시설냉난방기 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B41000200001",
+  "org": "한국전력공사",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "복지시설냉난방기-지원",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금 법인/시설/단체",
+  "source_id": "B41000200001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 고효율 냉난방기를 설치하는 노인복지법, 아동복지법, 장애인복지법, 국민기초생활보장법, 한부모가족지원법에 의한 사회복지시설\n- 에너지소비효율 1등급 제품(냉방기, 냉난방기, EHP 실외기)",
+  "view_count": 2625
+}
