@@ -4,8 +4,56 @@
   <subtitle>정부·지자체 지원금과 복지 제도를 받을 수 있는지부터 신청 방법까지 하나씩 정리합니다. 공공데이터 원문을 토대로 쉬운 말로 풀어 씁니다.</subtitle>
   <link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html"/>
-  <updated>2026-10-03T10:08:23+09:00</updated>
+  <updated>2026-10-04T09:33:59+09:00</updated>
   <id>https://adk24211.github.io/walapp/</id>
+  <entry>
+    <title type="text">발달장애인 개인별지원계획 수립 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/living/%EB%B0%9C%EB%8B%AC%EC%9E%A5%EC%95%A0%EC%9D%B8-%EA%B0%9C%EC%9D%B8%EB%B3%84%EC%A7%80%EC%9B%90%EA%B3%84%ED%9A%8D-%EC%88%98%EB%A6%BD-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/%EB%B0%9C%EB%8B%AC%EC%9E%A5%EC%95%A0%EC%9D%B8-%EA%B0%9C%EC%9D%B8%EB%B3%84%EC%A7%80%EC%9B%90%EA%B3%84%ED%9A%8D-%EC%88%98%EB%A6%BD-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-10-04T00:00:00+09:00</published>
+    <updated>2026-10-04T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="living"/>
+    <summary type="text">발달장애인(지적·자폐성)이 개인의 특성을 고려한 복지서비스를 받을 수 있도록 개인별지원계획을 수립하고 공공·민간 서비스를 연계해 주는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">무료 소송대리 서비스(기초생활보장수급자)</title>
+    <link href="https://adk24211.github.io/walapp/support/living/%EB%AC%B4%EB%A3%8C-%EC%86%8C%EC%86%A1%EB%8C%80%EB%A6%AC-%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B8%B0%EC%B4%88%EC%83%9D%ED%99%9C%EB%B3%B4%EC%9E%A5%EC%88%98%EA%B8%89%EC%9E%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/%EB%AC%B4%EB%A3%8C-%EC%86%8C%EC%86%A1%EB%8C%80%EB%A6%AC-%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B8%B0%EC%B4%88%EC%83%9D%ED%99%9C%EB%B3%B4%EC%9E%A5%EC%88%98%EA%B8%89%EC%9E%90/</id>
+    <published>2026-10-04T00:00:00+09:00</published>
+    <updated>2026-10-04T00:00:00+09:00</updated><author><name>대한법률구조공단</name></author><category term="living"/>
+    <summary type="text">무료 소송대리 서비스(기초생활보장수급자)는 기초생활보장수급자를 대상으로 법률구조공단이 제공하는 무료 법률상담 및 소송대리 서비스를 상시 접수하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">전통시장 주차환경개선 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%A0%84%ED%86%B5%EC%8B%9C%EC%9E%A5-%EC%A3%BC%EC%B0%A8%ED%99%98%EA%B2%BD%EA%B0%9C%EC%84%A0-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%A0%84%ED%86%B5%EC%8B%9C%EC%9E%A5-%EC%A3%BC%EC%B0%A8%ED%99%98%EA%B2%BD%EA%B0%9C%EC%84%A0-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-10-04T00:00:00+09:00</published>
+    <updated>2026-10-04T00:00:00+09:00</updated><author><name>중소벤처기업부</name></author><category term="jobs"/>
+    <summary type="text">전통시장·상점가의 고객전용 공영주차장 설치와 공·사설주차장 이용보조를 국비 60%, 지방비 40% 비율로 지원하는 사업이며, 중소벤처기업부가 주관하고 17개 광역지자체·시군구가 접수합니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">산림사업종합자금 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/housing/%EC%82%B0%EB%A6%BC%EC%82%AC%EC%97%85%EC%A2%85%ED%95%A9%EC%9E%90%EA%B8%88-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/housing/%EC%82%B0%EB%A6%BC%EC%82%AC%EC%97%85%EC%A2%85%ED%95%A9%EC%9E%90%EA%B8%88-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-10-04T00:00:00+09:00</published>
+    <updated>2026-10-04T00:00:00+09:00</updated><author><name>산림청</name></author><category term="housing"/>
+    <summary type="text">산림청이 마련한 산림사업종합자금 지원은 산림소유자·경영자, 임업인, 사립휴양시설 운영자 등 다양한 대상에게 저리 융자를 제공하는 주거 분야 지원 제도이며, 상시 접수로 지역 산림조합에 직접 방문 신청합니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">기초생활(생계·의료)수급자 TV수신료 면제</title>
+    <link href="https://adk24211.github.io/walapp/support/health/%EA%B8%B0%EC%B4%88%EC%83%9D%ED%99%9C-%EC%83%9D%EA%B3%84-%EC%9D%98%EB%A3%8C-%EC%88%98%EA%B8%89%EC%9E%90-tv%EC%88%98%EC%8B%A0%EB%A3%8C-%EB%A9%B4%EC%A0%9C/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/health/%EA%B8%B0%EC%B4%88%EC%83%9D%ED%99%9C-%EC%83%9D%EA%B3%84-%EC%9D%98%EB%A3%8C-%EC%88%98%EA%B8%89%EC%9E%90-tv%EC%88%98%EC%8B%A0%EB%A3%8C-%EB%A9%B4%EC%A0%9C/</id>
+    <published>2026-10-04T00:00:00+09:00</published>
+    <updated>2026-10-04T00:00:00+09:00</updated><author><name>한국방송공사</name></author><category term="health"/>
+    <summary type="text">생계급여 또는 의료급여 수급자가 TV수상기를 소지하고 있으면 월 2,500원의 TV수신료를 면제받을 수 있는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">보건의료인국가시험 응시자 편의제공</title>
+    <link href="https://adk24211.github.io/walapp/support/care/%EB%B3%B4%EA%B1%B4%EC%9D%98%EB%A3%8C%EC%9D%B8%EA%B5%AD%EA%B0%80%EC%8B%9C%ED%97%98-%EC%9D%91%EC%8B%9C%EC%9E%90-%ED%8E%B8%EC%9D%98%EC%A0%9C%EA%B3%B5/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/%EB%B3%B4%EA%B1%B4%EC%9D%98%EB%A3%8C%EC%9D%B8%EA%B5%AD%EA%B0%80%EC%8B%9C%ED%97%98-%EC%9D%91%EC%8B%9C%EC%9E%90-%ED%8E%B8%EC%9D%98%EC%A0%9C%EA%B3%B5/</id>
+    <published>2026-10-04T00:00:00+09:00</published>
+    <updated>2026-10-04T00:00:00+09:00</updated><author><name>한국보건의료인국가시험원</name></author><category term="care"/>
+    <summary type="text">보건의료인국가시험에서 장애인·상이등급 국가유공자·기타 장애·임산부 등 시험 응시에 현저한 지장이 있는 사람에게 시험 시간 연장·점자·대필 등 다양한 편의제공을 지원하는 제도입니다.</summary>
+  </entry>
   <entry>
     <title type="text">글로벌창업사관학교</title>
     <link href="https://adk24211.github.io/walapp/support/jobs/%EA%B8%80%EB%A1%9C%EB%B2%8C%EC%B0%BD%EC%97%85%EC%82%AC%EA%B4%80%ED%95%99%EA%B5%90/" rel="alternate" type="text/html"/>
@@ -197,53 +245,5 @@
     <published>2026-09-30T00:00:00+09:00</published>
     <updated>2026-09-30T00:00:00+09:00</updated><author><name>교육부</name></author><category term="care"/>
     <summary type="text">초·중·고 교육비 지원은 저소득층·한부모·차상위 가구 학생에게 고교 학비, 급식비, 교육정보화비, 방과후학교 수강권 등을 제공하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">청소년 무료 개인상담 및 심리검사</title>
-    <link href="https://adk24211.github.io/walapp/support/health/%EC%B2%AD%EC%86%8C%EB%85%84-%EB%AC%B4%EB%A3%8C-%EA%B0%9C%EC%9D%B8%EC%83%81%EB%8B%B4-%EB%B0%8F-%EC%8B%AC%EB%A6%AC%EA%B2%80%EC%82%AC/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/health/%EC%B2%AD%EC%86%8C%EB%85%84-%EB%AC%B4%EB%A3%8C-%EA%B0%9C%EC%9D%B8%EC%83%81%EB%8B%B4-%EB%B0%8F-%EC%8B%AC%EB%A6%AC%EA%B2%80%EC%82%AC/</id>
-    <published>2026-09-29T00:00:00+09:00</published>
-    <updated>2026-09-29T00:00:00+09:00</updated><author><name>재단법인시흥시청소년청년재단</name></author><category term="health"/>
-    <summary type="text">청소년 무료 개인상담 및 심리검사 제도는 만 9세부터 만 24세까지 대한민국에 거주하는 청소년에게 1주일에 1회, 총 12회까지 1:1 상담과 심리검사를 무료로 제공하는 서비스입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">일반 상환 학자금 특별상환유예대출</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%EC%9D%BC%EB%B0%98-%EC%83%81%ED%99%98-%ED%95%99%EC%9E%90%EA%B8%88-%ED%8A%B9%EB%B3%84%EC%83%81%ED%99%98%EC%9C%A0%EC%98%88%EB%8C%80%EC%B6%9C/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%EC%9D%BC%EB%B0%98-%EC%83%81%ED%99%98-%ED%95%99%EC%9E%90%EA%B8%88-%ED%8A%B9%EB%B3%84%EC%83%81%ED%99%98%EC%9C%A0%EC%98%88%EB%8C%80%EC%B6%9C/</id>
-    <published>2026-09-29T00:00:00+09:00</published>
-    <updated>2026-09-29T00:00:00+09:00</updated><author><name>한국장학재단</name></author><category term="education"/>
-    <summary type="text">일반 상환 학자금대출의 원금·이자를 최대 3년간 유예해 상환 부담을 경감하고, 유예 종료 후 무이자 4년 분할상환 또는 4년 후 일시상환을 선택할 수 있는 한국장학재단 운영 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">독립기념관 임시정부 초등단체 교육</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%EB%8F%85%EB%A6%BD%EA%B8%B0%EB%85%90%EA%B4%80-%EC%9E%84%EC%8B%9C%EC%A0%95%EB%B6%80-%EC%B4%88%EB%93%B1%EB%8B%A8%EC%B2%B4-%EA%B5%90%EC%9C%A1/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%EB%8F%85%EB%A6%BD%EA%B8%B0%EB%85%90%EA%B4%80-%EC%9E%84%EC%8B%9C%EC%A0%95%EB%B6%80-%EC%B4%88%EB%93%B1%EB%8B%A8%EC%B2%B4-%EA%B5%90%EC%9C%A1/</id>
-    <published>2026-09-29T00:00:00+09:00</published>
-    <updated>2026-09-29T00:00:00+09:00</updated><author><name>독립기념관</name></author><category term="education"/>
-    <summary type="text">독립기념관에서 초등학생과 그 가족을 대상으로 임시정부의 수립 배경·활동을 배우는 전시연계 체험교육 프로그램을 연 2회 제공하며, 방문 신청만으로 참여할 수 있는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">달성 장학금(다자녀가구)</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%EB%8B%AC%EC%84%B1-%EC%9E%A5%ED%95%99%EA%B8%88-%EB%8B%A4%EC%9E%90%EB%85%80%EA%B0%80%EA%B5%AC/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%EB%8B%AC%EC%84%B1-%EC%9E%A5%ED%95%99%EA%B8%88-%EB%8B%A4%EC%9E%90%EB%85%80%EA%B0%80%EA%B5%AC/</id>
-    <published>2026-09-29T00:00:00+09:00</published>
-    <updated>2026-09-29T00:00:00+09:00</updated><author><name>(재)달성교육재단</name></author><category term="education"/>
-    <summary type="text">달성군에 2년 이상 거주한 군민 또는 그 자녀 중 대학 신입생이며 다자녀 가구에 해당하고, 성적이 우수하면서 가정형편이 어려운 학생에게 300만원 장학금을 지원하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">입양숙려기간 모자지원</title>
-    <link href="https://adk24211.github.io/walapp/support/care/%EC%9E%85%EC%96%91%EC%88%99%EB%A0%A4%EA%B8%B0%EA%B0%84-%EB%AA%A8%EC%9E%90%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/care/%EC%9E%85%EC%96%91%EC%88%99%EB%A0%A4%EA%B8%B0%EA%B0%84-%EB%AA%A8%EC%9E%90%EC%A7%80%EC%9B%90/</id>
-    <published>2026-09-29T00:00:00+09:00</published>
-    <updated>2026-09-29T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="care"/>
-    <summary type="text">입양숙려기간 모자지원은 출산 예정인 미혼·이혼 한부모에게 산후지원인력 가정방문 서비스(1주 50만원), 아동 생필품비, 산후조리원 이용료(최대 140만원) 등을 지원하는 양육·돌봄 지원제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">디자인 진로 체험 프로그램</title>
-    <link href="https://adk24211.github.io/walapp/support/care/%EB%94%94%EC%9E%90%EC%9D%B8-%EC%A7%84%EB%A1%9C-%EC%B2%B4%ED%97%98-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/care/%EB%94%94%EC%9E%90%EC%9D%B8-%EC%A7%84%EB%A1%9C-%EC%B2%B4%ED%97%98-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/</id>
-    <published>2026-09-29T00:00:00+09:00</published>
-    <updated>2026-09-29T00:00:00+09:00</updated><author><name>(재)부산디자인진흥원</name></author><category term="care"/>
-    <summary type="text">부산디자인진흥원이 운영하는 디자인 진로 체험 프로그램은 지역 초·중·고등학생을 대상으로 만들기, 시설투어, 체험관 견학, 디자인교육 등 다양한 체험 활동을 제공하는 사업입니다.</summary>
   </entry>
 </feed>
