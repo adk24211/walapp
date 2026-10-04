@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "전통시장·상점가·상권활성화구역에 해당하는 경우",
+      "전통시장·상점가 고객전용 공영주차장 설치 사업을 추진하는 경우",
+      "사업 총사업비가 1억 원 이상인 경우",
+      "지원비는 국비 60%, 지방비 40% 비율로 지원됩니다"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "지원 대상에 해당하고 필요한 서류를 준비한 후, 17개 광역지자체 및 시군구 중 관할 기관에 제출합니다. 제출 서류는 주차환경개선 사업 신청서 등이며, 문의는 중소벤처기업부로 할 수 있습니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "전통시장·상점가의 고객전용 공영주차장 설치와 공·사설주차장 이용보조를 국비 60%, 지방비 40% 비율로 지원하는 사업이며, 중소벤처기업부가 주관하고 17개 광역지자체·시군구가 접수합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "1월~2월 초",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "전통시장 또는 상점가 고객전용 공영주차장 설치 지원\n공공 및 사설주차장 이용보조 지원",
+  "category": "jobs",
+  "contact_raw": "중소벤처기업부/044-204-7822",
+  "content_hash": "sha256:f869d6f39d24e97156072583766e7648",
+  "criteria_raw": "지원조건 : 국비 60%, 지방비 40% 원칙",
+  "deferred_detail": false,
+  "documents_raw": [
+    "주차환경개선 사업 신청서",
+    "부동산 매매 동의서",
+    "이해관계자 사전 동의서",
+    "시장 자문 또는 사전 컨설팅 결과 보고서(총사업비 1억 원 이상)",
+    "지방비 투융자심사 결과서 또는 당해 년도 심사계획서"
+  ],
+  "first_published": "2026-10-04",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-142000000045",
+  "is_mock": false,
+  "last_checked": "2026-10-04",
+  "last_updated": "2026-10-04",
+  "law_raw": "",
+  "name": "전통시장 주차환경개선 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/142000000045",
+  "org": "중소벤처기업부",
+  "primary_audience": "business",
+  "receiver_raw": "17개 광역지자체 및 시군구",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "전통시장-주차환경개선-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 소상공인\n법인/시설/단체",
+  "source_id": "142000000045",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "전통시장및상점가육성을위한특별법에 따른 전통시장, 상점가, 상권활성화구역",
+  "view_count": 3548
+}

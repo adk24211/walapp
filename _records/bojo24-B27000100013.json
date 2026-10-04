@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "기초생활보장수급자",
+      "선정 기준이 별도로 없으며 추가 요건이 없습니다",
+      "구비 서류가 필요하지 않아 신청이 간편합니다"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청하거나 직접 방문하여 신청할 수 있습니다. 신청은 상시 접수되며 별도의 서류 제출은 필요하지 않습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "무료 소송대리 서비스(기초생활보장수급자)는 기초생활보장수급자를 대상으로 법률구조공단이 제공하는 무료 법률상담 및 소송대리 서비스를 상시 접수하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.klac.or.kr",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "○ 사회·경제적 약자에 대한 법률구조서비스 제공으로 법률복지증진\n\n○ 무료 법률상담\n\n○ 무료 소송대리",
+  "category": "living",
+  "contact_raw": "(국번없이)132 법률상담 콜센타/132",
+  "content_hash": "sha256:3742930b4890cc4286ff046ec22e9880",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-04",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-B27000100013",
+  "is_mock": false,
+  "last_checked": "2026-10-04",
+  "last_updated": "2026-10-04",
+  "law_raw": "",
+  "name": "무료 소송대리 서비스(기초생활보장수급자)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B27000100013",
+  "org": "대한법률구조공단",
+  "primary_audience": "lowincome",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "무료-소송대리-서비스-기초생활보장수급자",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타(상담) 개인",
+  "source_id": "B27000100013",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "기초생활보장수급자",
+  "view_count": 11524
+}
