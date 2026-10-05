@@ -1,0 +1,70 @@
+{
+  "_prose": {
+    "eligibility": [
+      "학교장이 추천한 중고등학생은 1인당 20만원을 연 1회 지원받을 수 있습니다.",
+      "태백시에 주소를 두고 있는 고등학교 졸업생은 1인당 100만원을 연 1회 지원받을 수 있습니다.",
+      "태백시민의 자녀이며 대학 신입생 또는 재학생은 1인당 100만원을 연 1회 지원받을 수 있습니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "방문하여 신청서를 제출하고, 개인정보제공동의서·위임장·주민등록등본 등 필요한 서류를 구비합니다. 서류를 제출하면 담당자가 검토 후 장학금을 지급합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "태백시 향토 장학금은 태백시민 및 태백시 거주 고등학교 졸업생을 대상으로 중고등학생에게 20만원, 졸업축하 장학금 100만원, 대학생에게 100만원을 연 1회씩 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "youth",
+    "student"
+  ],
+  "benefit_raw": "○ 장학금지급\n- 관내 중고등학생 장학금 지급\n- 태백시민의 자녀 대학생 장학금 지급",
+  "category": "education",
+  "contact_raw": "(재)태백시민향토장학회/033-550-2250",
+  "content_hash": "sha256:303c6190bd2ace32a0928e06b1162980",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "각 분야별 해당 신청서류 구비 후 지원",
+    "예) 대학생 장학금",
+    "신청서",
+    "개인정보제공동의서",
+    "위임장",
+    "주민등록등본 등 각 개인에 해당하는 서류 추가 제출",
+    "* 자세한 사항은 공고문을 꼭 참고하시기 바랍니다."
+  ],
+  "first_published": "2026-10-05",
+  "how_to_raw": "방문신청\n직접입력",
+  "id": "bojo24-O00042800001",
+  "is_mock": false,
+  "last_checked": "2026-10-05",
+  "last_updated": "2026-10-05",
+  "law_raw": "",
+  "name": "태백시 향토 장학금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00042800001",
+  "org": "태백시민향토장학회",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "태백시-향토-장학금",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타 개인",
+  "source_id": "O00042800001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 중고등학생 장학금 지급\n- 학교장 추천 장학생\n- 1인 20만원 연1회\n\n○ 졸업축하장학금\n- 태백시에 주소를 두고 있는 고등학교 졸업생\n- 1인 100만원 연1회\n\n○ 대학생 장학금\n- 태백시민의 자녀로 대학 신입생 및 재학생\n- 1인 100만원 연1회",
+  "view_count": 1598
+}

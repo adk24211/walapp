@@ -1,0 +1,59 @@
+{
+  "_prose": {
+    "eligibility": [
+      "도내 농촌유학 학교에 재학 중인 학생이어야 합니다.",
+      "타시도 출신 유학생이어야 합니다.",
+      "지원 대상은 초등학생부터 중학생까지입니다.",
+      "장기연장 중인 농촌유학생은 우선 선발됩니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [],
+    "summary": "전북특별자치도에서 운영하는 전북사랑 장학금은 도내 농촌유학 학교에 재학 중인 타시도 출신 초·중학생 유학생 20명을 대상으로 1인당 100만원을 지원하는 교육·역량 지원 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "2026.5월중",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "student"
+  ],
+  "benefit_raw": "○ 전북사랑 장학금\n- 도내 농촌유학 학교 재학중인 타시도 출신 학생에게 학업장려 생활비 지원\n- 지원대상 : 농촌유학학교에 재학중인 타시도 출신 유학생(초~중학생)\n- 선발인원 : 20명\n- 1인당지원금액 : 100만원\n- 선발기준 : 농촌유학생 중 장기연장중인 학생을 우선 선발(도교육청 추천)",
+  "category": "education",
+  "contact_raw": "전북특별자치도평생교육장학진흥원/063-276-8307",
+  "content_hash": "sha256:1402d0fb9f443cbfd9e0d607cb9df40f",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-05",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-O00248600004",
+  "is_mock": false,
+  "last_checked": "2026-10-05",
+  "last_updated": "2026-10-05",
+  "law_raw": "",
+  "name": "전북특별자치도 농촌유학 장학금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00248600004",
+  "org": "재단법인전북특별자치도평생교육장학진흥원",
+  "primary_audience": "student",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "전북특별자치도-농촌유학-장학금",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금(장학금) 개인",
+  "source_id": "O00248600004",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 선발대상 : 도내 농촌유학 학교 재학중인 타시도 출신 유학생",
+  "view_count": 369
+}
