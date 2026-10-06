@@ -1,0 +1,70 @@
+{
+  "_prose": {
+    "eligibility": [
+      "천안시민",
+      "장애인",
+      "다자녀가정",
+      "국가유공자"
+    ],
+    "faq": [
+      {
+        "a": "구비 서류는 없습니다.",
+        "q": "신청 시 필요한 서류가 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청 페이지에서 신청서를 작성합니다. 작성한 내용을 제출하면 접수가 완료됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "천안도시공사가 운영하는 국민여가캠핑장 이용요금 감면 제도는 천안시민, 장애인, 다자녀가정, 국가유공자를 대상으로 요금을 할인해 주는 지원사업이며, 온라인으로 언제든 신청할 수 있고 구비 서류는 필요하지 않습니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.cauc.or.kr",
+  "audiences": [
+    "parent",
+    "disabled"
+  ],
+  "benefit_raw": "○ 천안시민, 장애인, 다자녀가정, 국가유공자 감면 혜택",
+  "category": "living",
+  "contact_raw": "공원운영부 자연휴양팀/041-529-5113",
+  "content_hash": "sha256:bcd47328eb64f782bf81de2e9c1e6dc2",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-06",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-O00033300020",
+  "is_mock": false,
+  "last_checked": "2026-10-06",
+  "last_updated": "2026-10-06",
+  "law_raw": "",
+  "name": "국민여가캠핑장 이용요금 감면",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00033300020",
+  "org": "천안도시공사",
+  "primary_audience": "disabled",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "국민여가캠핑장-이용요금-감면",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 현금(감면) 개인",
+  "source_id": "O00033300020",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "천안시민, 장애인, 다자녀가정, 국가유공자",
+  "view_count": 2811
+}

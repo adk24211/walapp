@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "사업자 등록 후 현재 영업 중인 소기업·소상공인",
+      "지역 신용보증재단 보증 잔액이 없는 기업·소상공인"
+    ],
+    "faq": [
+      {
+        "a": "지원 대상 요건을 충족하지 않으면 신청이 불가능합니다. 신청은 대상 기업에 한해 접수됩니다.",
+        "q": "지원 대상이 아닌 경우에도 신청이 가능한가요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "관할 기관을 직접 방문하여 신청서를 제출하시면 됩니다. 방문 신청만 가능합니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "첫걸음기업 금융지원 협약보증은 영업 중인 소기업·소상공인에게 지역 신보 보증 잔액이 없을 경우 최대 5천만원까지 보증을 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ 보증한도 : 본건 5천만원 이내\n○ 취급 금융회사 : 농협은행, 하나은행",
+  "category": "jobs",
+  "contact_raw": "신용보증재단중앙회(보증기획부)/1588-7365",
+  "content_hash": "sha256:326f51317109aef87709b8e894df49d8",
+  "criteria_raw": "○ 현재 사업자 등록 후 가동(영업)중으로, 지역 신보 보증 잔액이 없는 소기업·소상공인",
+  "deferred_detail": false,
+  "documents_raw": [
+    "신청서"
+  ],
+  "first_published": "2026-10-06",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-142100000074",
+  "is_mock": false,
+  "last_checked": "2026-10-06",
+  "last_updated": "2026-10-06",
+  "law_raw": "",
+  "name": "첫걸음기업 금융지원 협약보증",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/142100000074",
+  "org": "중소벤처기업부",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "첫걸음기업-금융지원-협약보증",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금(융자) 소상공인\n법인/시설/단체",
+  "source_id": "142100000074",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 현재 사업자 등록 후 가동(영업)중으로, 지역 신보 보증 잔액이 없는 소기업·소상공인",
+  "view_count": 3551
+}

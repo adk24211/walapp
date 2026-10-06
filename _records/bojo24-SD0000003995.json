@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "우체국예금고객이어야 합니다.",
+      "기초생활수급자, 소년·소녀가장, 차상위계층, 장애인, 국가·독립유공자, 대학생, 고령자 중 하나에 해당해야 합니다.",
+      "관련 서류를 제출해야 합니다.",
+      "해당 증명서를 구비해야 합니다."
+    ],
+    "faq": [],
+    "note": "지원 대상은 우체국예금고객에 한정됩니다.",
+    "steps": [
+      {
+        "body": "우체국을 직접 방문하여 신청서를 제출합니다. 신청 시에는 지원 대상임을 확인할 수 있는 증명서를 지참하셔야 합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "우체국예금고객 중 기초생활수급자·소년·소녀가장·차상위계층·장애인·국가·독립유공자·대학생·고령자를 대상으로 송금·현금인출 수수료를 면제해 주는 제도입니다. 해당수수료는전액면제됩니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "youth",
+    "senior",
+    "disabled",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 송금 및 현금인출 수수료 면제",
+  "category": "living",
+  "contact_raw": "우체국/1599-1900",
+  "content_hash": "sha256:b64c2cf1008194724efc68ae5460df31",
+  "criteria_raw": "○ 관련서류 제출",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당 증명서"
+  ],
+  "first_published": "2026-10-06",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-SD0000003995",
+  "is_mock": false,
+  "last_checked": "2026-10-06",
+  "last_updated": "2026-10-06",
+  "law_raw": "",
+  "name": "사회 소외계층 대상 금융수수료 면제",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000003995",
+  "org": "과학기술정보통신부",
+  "primary_audience": "lowincome",
+  "receiver_raw": "전국우체국",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "사회-소외계층-대상-금융수수료-면제",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 현금(감면) 개인",
+  "source_id": "SD0000003995",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 우체국예금고객 중 기초생활수급자, 소년소녀가장, 차상위계층, 장애인, 국가유공자, 독립유공자, 대학생, 고령자",
+  "view_count": 4536
+}

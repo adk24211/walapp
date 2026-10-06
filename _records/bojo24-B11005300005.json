@@ -1,0 +1,62 @@
+{
+  "_prose": {
+    "eligibility": [
+      "영업을 목적으로 설치한 TV수상기를 보유하고 있어야 합니다.",
+      "휴업 기간이 1개월 이상이며, 해당 기간 동안 TV를 시청하지 않아야 합니다."
+    ],
+    "faq": [],
+    "note": "면제는 신청한 달부터 적용되며, 휴업 시작일에 바로 적용되지 않으니 유의하시기 바랍니다.",
+    "steps": [
+      {
+        "body": "신청은 직접 방문하여 진행합니다. 신청 시 1개월 이상 영업 휴업을 증명할 수 있는 서류를 제출해야 합니다. 제출 후 신청한 달부터 TV수신료 면제가 적용됩니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "영업을 목적으로 설치한 TV수상기를 1개월 이상 휴업한 사업자는 TV수신료를 면제받을 수 있는 제도이며, 방문 신청 시 휴업을 증명하는 서류를 제출하면 신청한 달부터 면제가 적용됩니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ TV수신료 면제\n\n- 방송법시행령 제44조 제1항 8호에 규정된 면제 대상자가 접수기관에 TV수신료 면제를 신청한 달부터 면제 적용 (휴업일부터 적용되는 것이 아님에 주의)\n\n- 휴업기간 중 '영업을 목적으로 설치한 TV수상기 대수 X 2,500원' 에 해당하는 월 TV수신료 면제",
+  "category": "living",
+  "contact_raw": "KBS수신료콜센터/1588-1801",
+  "content_hash": "sha256:071e20820a387b79ebd8abb83705b0b9",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "1개월 이상 영업 휴업을 증명할 수 있는 증빙서류"
+  ],
+  "first_published": "2026-10-06",
+  "how_to_raw": "방문신청\n직접입력",
+  "id": "bojo24-B11005300005",
+  "is_mock": false,
+  "last_checked": "2026-10-06",
+  "last_updated": "2026-10-06",
+  "law_raw": "",
+  "name": "영업 휴업 사업자 대상 TV수신료 면제",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B11005300005",
+  "org": "한국방송공사",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "영업-휴업-사업자-대상-tv수신료-면제",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금(감면) 소상공인\n법인/시설/단체",
+  "source_id": "B11005300005",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 면제대상\n\n- 영업을 목적으로 설치한 수상기 중 1개월 이상의 휴업으로 시청하지 않는 수상기 소지자",
+  "view_count": 3540
+}
