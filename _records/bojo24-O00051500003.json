@@ -1,0 +1,77 @@
+{
+  "_prose": {
+    "eligibility": [
+      "2자녀 이상 가정",
+      "맞벌이 가정",
+      "한부모 가정",
+      "다문화 가정",
+      "저소득층"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "신청자는 직접 방문하여 주민등록등본 등 구비 서류를 제출하고, 현장에서 지원신청서류를 작성합니다. 제출 서류는 필수 서류와 동의서 등으로 구성됩니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "사회적취약계층 청소년을 대상으로 방과 후 학습지원·체험활동·급식·상담 등을 제공하는 지원사업으로, 2자녀 이상 가정·맞벌이·한부모·다문화·저소득층 등이 신청할 수 있습니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "youth",
+    "parent",
+    "lowincome",
+    "multicultural"
+  ],
+  "benefit_raw": "방과 후 돌봄이 필요한 청소년에게 학습지원, 체험활동, 급식, 상담 등 제공",
+  "category": "care",
+  "contact_raw": "은행청소년문화의집/070-4150-9690",
+  "content_hash": "sha256:ca35e366935297edccf22654d86aa5fc",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "필수 서류) 주민등록등본",
+    "지원신청서류 일체(방문 시 작성)*",
+    "* 개인신상정보",
+    "보호자동의서",
+    "개인정보 수집",
+    "이용 및 제공 동의서",
+    "응급처치 동의서",
+    "귀가지도 보호자 동의서 및 현황조사",
+    "초기면담지",
+    "※ 필요시 대상유형별 구비서류 요청"
+  ],
+  "first_published": "2026-10-07",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-O00051500003",
+  "is_mock": false,
+  "last_checked": "2026-10-07",
+  "last_updated": "2026-10-07",
+  "law_raw": "",
+  "name": "사회적취약계층 청소년방과후아카데미 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00051500003",
+  "org": "재단법인시흥시청소년청년재단",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "사회적취약계층-청소년방과후아카데미-지원",
+  "source": "bojo24",
+  "source_category_raw": "보호·돌봄 서비스(돌봄) 개인",
+  "source_id": "O00051500003",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "2자녀 이상 가정, 맞벌이 가정, 한부모가정, 다문화가정, 저소득층 등",
+  "view_count": 1554
+}

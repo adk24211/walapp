@@ -1,0 +1,80 @@
+{
+  "_prose": {
+    "eligibility": [
+      "안산에 거주하고 있습니다.",
+      "학생(초·중·고·대학생) 신분이어야 합니다.",
+      "가족이 4대 이상이 함께 거주하고 있어야 합니다."
+    ],
+    "faq": [
+      {
+        "a": "학생 및 해당 4대 가족의 주민등록등본·가족관계증명서 등을 제출하면 확인할 수 있습니다.",
+        "q": "가족이 4대 이상인지 어떻게 증명하나요?"
+      }
+    ],
+    "note": "제출 서류는 최신 자료여야 합니다.",
+    "steps": [
+      {
+        "body": "온라인으로 신청하거나 직접 방문하여 신청할 수 있습니다. 필요한 구비 서류를 모두 제출하면 됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "안산에 4대 이상이 함께 거주하는 초·중·고·대학생에게 50만원을 지원하는 행복이음 장학금입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "https://www.ansanfys.or.kr/",
+  "audiences": [
+    "youth",
+    "student"
+  ],
+  "benefit_raw": "○ 4대 이상이 함께 안산에 거주하는 초·중·고·대학생(50만원)",
+  "category": "education",
+  "contact_raw": "안산인재육성재단/070-4455-4546\n안산인재육성재단/031-414-0924",
+  "content_hash": "sha256:00395311f10f722eeef1cbf5f3ec0e52",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "1. 장학생 신청서",
+    "2. 서약서",
+    "3. 개인정보 수집‧이용 동의서",
+    "4. 주민등록 등",
+    "초본 : 학생 및 해당 4대 가족 등",
+    "초본",
+    "(학생 초본 - 주소변동이력 전체포함-3년이상 계속 또는 합산 10년 이상 거주 여부 확인)",
+    "(해당 4대 가족 등본 – 현재 안산시 거주 여부 확인)",
+    "5. 4대 확인 가능한 증명서",
+    "(예 : 부모 / (외)조부모의 [상세]가족관계증명서 각 1부씩)",
+    "6. 본인 통장사본",
+    "※ 보호자 통장 사본 제출 시 학생 기준 가족관계증명서 제출"
+  ],
+  "first_published": "2026-10-07",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-393000000123",
+  "is_mock": false,
+  "last_checked": "2026-10-07",
+  "last_updated": "2026-10-07",
+  "law_raw": "",
+  "name": "행복이음 장학금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/393000000123",
+  "org": "재단법인안산인재육성재단",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "행복이음-장학금",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금 개인",
+  "source_id": "393000000123",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 4대 이상이 함께 안산에 거주하는 학생(초, 중, 고, 대학생)",
+  "view_count": 1541
+}
