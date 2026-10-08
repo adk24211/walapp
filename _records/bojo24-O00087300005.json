@@ -1,0 +1,66 @@
+{
+  "_prose": {
+    "eligibility": [
+      "정기·공연 후원자",
+      "지역민",
+      "국가유공자",
+      "장애인",
+      "예술인패스 소지자",
+      "문화누리카드 소지자"
+    ],
+    "faq": [],
+    "note": "공연마다 할인율이 다르므로 영등포문화재단 홈페이지에서 확인하시기 바랍니다.",
+    "steps": [
+      {
+        "body": "영등포문화재단 홈페이지에서 온라인으로 신청하시면 됩니다. 별도의 구비 서류는 필요하지 않으며, 신청은 상시 접수됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "영등포문화재단이 제공하는 영등포아트홀 공연 입장료 감면 제도는 정기·공연 후원자, 지역민, 국가유공자·장애인, 예술인패스 및 문화누리카드 소지자를 대상으로 일정 비율(50%~20%)을 할인해 주며, 온라인으로 상시 접수됩니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://www.ydpcf.or.kr/",
+  "audiences": [
+    "disabled"
+  ],
+  "benefit_raw": "○ 영등포아트홀 후원(포커스 레드)(50%)\n○ 영등포아트홀 후원(포커스 그린)(40%)\n○ 문화도시 영등포(20%)\n- 신분증, 거주/재직 등 영등포 주소지가 나타난 서류 원본 증빙\n○ 국가유공자, 의상자(1~2급)(50%)\n- 국가유공자,의상자증 1-2급 증빙\n○ 유족(국가유공자, 의사자), 의상자(3급 이하)\n- 유족증,의상자증 3급 이하 증빙\n○ 중증장애인 (50%)\n- 장애인(1~3급) 복지카드 증빙\n○ 경증장애인 (50%)\n- 장애인(4~6급) 복지카드 증빙\n○ 예술인패스 및 공연예술종사자 (30%)\n- 예술인패스, 명함, 재직증명 등 증빙\n○ 문화누리카드 (20%)\n- 문화누리카드 소지 증빙\n\n※ 공연별 할인 내역 상이하여 영등포문화재단 홈페이지 참고",
+  "category": "living",
+  "contact_raw": "공연기획팀/02-2629-2212",
+  "content_hash": "sha256:5336d93f33ed8e50fd450d61233988a6",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-08",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-O00087300005",
+  "is_mock": false,
+  "last_checked": "2026-10-08",
+  "last_updated": "2026-10-08",
+  "law_raw": "",
+  "name": "영등포문화재단 기획공연 입장료 감면",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00087300005",
+  "org": "재단법인영등포문화재단",
+  "primary_audience": "disabled",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "영등포문화재단-기획공연-입장료-감면",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 현금(감면) 개인",
+  "source_id": "O00087300005",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "정기&공연 후원자, 지역민, 국가유공자, 장애인, 예술인패스, 문화누리카드 소유자",
+  "view_count": 4686
+}

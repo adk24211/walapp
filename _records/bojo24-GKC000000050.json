@@ -1,0 +1,81 @@
+{
+  "_prose": {
+    "eligibility": [
+      "보건복지부에 시각·청각장애인으로 등록된 사람",
+      "국가보훈처에 눈·귀 상이자로 등록된 사람",
+      "2020년부터 2025년 사이에 동일 TV를 받은 적이 없는 사람",
+      "저소득층(기초생활수급자·차상위계층)은 무상보급, 비저소득층은 10만원을 자부담"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청 또는 주민센터 방문을 통해 신청합니다.",
+        "title": "신청"
+      },
+      {
+        "body": "보건복지부·국가보훈처 등록증명서와 2026 신청서, 개인정보 수집·이용·제공 동의서, 국가유공자증 사본 등을 제출합니다.",
+        "title": "서류 제출"
+      }
+    ],
+    "summary": "시각·청각장애인용 TV 보급은 국내에 거주하는 보건복지부 등록 시각·청각장애인 및 국가보훈처 등록 눈·귀 상이자를 대상으로, 소득·장애 정도·연령 등을 고려해 무상 또는 10만원 자부담으로 TV를 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "저소득층(6.8.-7.3.), 비저소득층(7.13.-8.7.), 홈페이지는 5.26.부터 신청 가능",
+    "start": ""
+  },
+  "apply_url": "https://tv.kcmf.or.kr",
+  "audiences": [
+    "disabled",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 시각·청각장애인용 TV 지급",
+  "category": "living",
+  "contact_raw": "시청자미디어재단/1688-4596",
+  "content_hash": "sha256:196ccda78bb3ce12dfe4f6db83c751f7",
+  "criteria_raw": "장애 정도와 소득, 연령 등을 고려해 선정 후 보급",
+  "deferred_detail": false,
+  "documents_raw": [
+    "○ 보건복지부 등록 시각",
+    "청각장애인",
+    "1. 2026 신청서",
+    "2. 2026 개인정보 수집",
+    "이용",
+    "제공 동의서",
+    "○ 국가보훈처 등록된 눈",
+    "귀 상이자",
+    "1. 2026 신청서",
+    "2. 2026 개인정보 수집",
+    "이용",
+    "제공 동의서",
+    "3. 국가유공자증 또는 보훈보상대상증 사본(미제출 시 접수불가)"
+  ],
+  "first_published": "2026-10-08",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-GKC000000050",
+  "is_mock": false,
+  "last_checked": "2026-10-08",
+  "last_updated": "2026-10-08",
+  "law_raw": "",
+  "name": "시각·청각장애인용 TV 보급",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GKC000000050",
+  "org": "방송미디어통신위원회",
+  "primary_audience": "lowincome",
+  "receiver_raw": "주민센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "시각-청각장애인용-tv-보급",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 문화/여가지원\n현물 개인",
+  "source_id": "GKC000000050",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "주민등록상 국내에 거주 중인 보건복지부 등록 시각·청각장애인 또는 국가보훈처 등록 눈·귀 상이자\n\n- 저소득층(기초생활수급자, 차상위계층): 무상보급/ 비저소득층: 자부담비 10만원 유상보급\n- 소득 구분, 장애 정도, 연령 등을 고려하여 선정 후 보급(선착순 보급 아님)\n- 2020~2025년 시각·청각장애인용 TV를 받은 분은 신청 불가",
+  "view_count": 10109
+}
