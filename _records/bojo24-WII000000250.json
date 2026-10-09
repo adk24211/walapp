@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "아동복지법 제15조제1항제3호에 따라 가정위탁 보호조치된 아동",
+      "동조 제6항에 따라 위탁가정에 일시보호된 아동",
+      "아동복지법 제16조의3에 따라 가정위탁 보호 연장 중인 아동"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "관할 시·도 담당부서나 아동권리보장원에 직접 방문하여 신청합니다. 구비 서류는 필요하지 않습니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "보건복지부가 시행하는 가정위탁아동 상해보험료 지원은 가정위탁 보호받는 아동에게 1인당 약 68,500원의 보험료를 지원하는 제도이며, 아동복지법에 따라 보호조치된 아동·일시보호 아동이 대상이고 방문 신청만으로 신청할 수 있습니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "○ 1인당 지원 보험료 : 68,500원 내외\n○ 보험 담보 주요 내용\n-후유 장해 보험금\n-입원 의료비\n-통원 의료비\n-암 치료비(암 진단급여금)\n-상해 및 질병 입원 일당\n-치아 치료비\n-유괴, 납치, 인질 위로금\n-강력범죄 위로금\n-얼굴 성형\n-정신과 질환 진단금\n-일상생활배상책임\n-골절발생위로금\n-폭력피해위로금\n-식중독위로금",
+  "category": "care",
+  "contact_raw": "가정위탁지원센터/1577-1406",
+  "content_hash": "sha256:93b4901108af7b38ea8f9fa5151f0c0e",
+  "criteria_raw": "지원대상과 동일",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-09",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-WII000000250",
+  "is_mock": false,
+  "last_checked": "2026-10-09",
+  "last_updated": "2026-10-09",
+  "law_raw": "",
+  "name": "가정위탁아동 상해보험료 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000250",
+  "org": "보건복지부",
+  "primary_audience": "parent",
+  "receiver_raw": "17개 시도 담당부서, 아동권리보장원",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "가정위탁아동-상해보험료-지원",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(보험) 개인",
+  "source_id": "WII000000250",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 「아동복지법」 제15조제1항제3호에 따라 가정위탁 보호조치된 아동 및 동조 제6항에 따라 위탁가정에 일시보호된 아동\n○ 「아동복지법」제16조의3에 따른 가정위탁 보호 연장중인 아동",
+  "view_count": 2783
+}

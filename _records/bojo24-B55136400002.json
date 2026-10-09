@@ -1,0 +1,64 @@
+{
+  "_prose": {
+    "eligibility": [
+      "초등학생도 신청 가능합니다.",
+      "중학생도 신청 가능합니다.",
+      "고등학생도 신청 가능합니다.",
+      "대학생도 신청 가능합니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청 페이지에서 신청서를 작성하고 제출하면 됩니다. 별도의 구비 서류는 필요하지 않으며, 신청은 상시 접수됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "엑스사이언스 프로그램은 한국기초과학지원연구원이 운영하는 양육·돌봄 분야 청소년 과학활동 지원 사업으로, 초·중·고·대학생을 대상으로 과학 프로그램 소개·운영, 회원 모집, 이벤트 안내 등을 온라인으로 상시 접수합니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://jrdoctor.kbsi.re.kr/xscience/",
+  "audiences": [
+    "youth"
+  ],
+  "benefit_raw": "○ 청소년 과학활동 프로그램 소개 및 운영\n- 회원 및 신청자 모집\n- 프로그램 등록 및 진행\n- 이벤트 및 행사 안내 등",
+  "category": "care",
+  "contact_raw": "창의교육실/042-865-3936",
+  "content_hash": "sha256:597417fab65bbe5e277b0c55a9804b10",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-09",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55136400002",
+  "is_mock": false,
+  "last_checked": "2026-10-09",
+  "last_updated": "2026-10-09",
+  "law_raw": "",
+  "name": "엑스사이언스 프로그램",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55136400002",
+  "org": "한국기초과학지원연구원",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "엑스사이언스-프로그램",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 개인",
+  "source_id": "B55136400002",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "초등, 중등, 고등, 대학생",
+  "view_count": 1544
+}

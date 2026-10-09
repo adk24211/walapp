@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "공고일 이전에 충청북도에 거주하고 있는 자",
+      "충청북도 출생자",
+      "충청북도에 1년 이상 거주 경험이 있는 자",
+      "충청북도 소재 초·중·고·대학 중 1개 이상을 졸업한 자",
+      "작년도 청년예술창작지원사업 선정자(연속지원 대상)"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "청년예술지원 홈페이지에서 지원신청서를 작성하고, 주민등록초본·연고지 확인서류와 포트폴리오를 첨부하여 온라인으로 제출합니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "청년예술지원은 충청북도에 거주하거나 출생한 청년 예술가를 대상으로 문학·시각·공연·다원예술 분야의 창작활동비를 온라인으로 지원하는 제도이며, 충북에 1년 이상 거주 경험자·충북 소재 학교 졸업자 등도 신청할 수 있습니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "ncas.or.kr",
+  "audiences": [
+    "youth"
+  ],
+  "benefit_raw": "○ 지역 문화계를 이끌어갈 차세대 청년예술가 발굴 및 육성\n- 충북 연고의 청년 예술가 대상 문학, 시각, 공연, 다원예술 분야 창작활동비 지원",
+  "category": "living",
+  "contact_raw": "예술진흥팀/043-299-9255",
+  "content_hash": "sha256:29f98b2ff68d6837fda0187bf45108d8",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "지원신청서(사업계획서",
+    "주민등록초존",
+    "연고지 확인서류)",
+    "포트폴리오: 과거 활동 내역 자료(주요 경력 및 작품 등)"
+  ],
+  "first_published": "2026-10-09",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-O00113600007",
+  "is_mock": false,
+  "last_checked": "2026-10-09",
+  "last_updated": "2026-10-09",
+  "law_raw": "",
+  "name": "청년예술지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00113600007",
+  "org": "(재)충북문화재단",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "청년예술지원",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 현금 개인",
+  "source_id": "O00113600007",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 일반지원\n1. 공고일 이전 충청북도에 거주하고 있는 자\n2. 충북출생자\n3. 충북에 1년 이상 거주 경험자\n4. 충북 소재 학교(초, 중, 고, 대 중 1개 이상) 졸업생\n→ 상기 4가지 중 1개 조건에 부합하는 자\n\n※ 1~4 중 1개 조건에 부합하는 자\n\n○ 연속지원\n- 작년도 청년예슬가창작지원사업 선정자",
+  "view_count": 1510
+}

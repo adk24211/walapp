@@ -1,0 +1,65 @@
+{
+  "_prose": {
+    "eligibility": [
+      "가정폭력 피해자"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "전국 가정폭력 상담소, 보호시설, 1366센터, 해바라기 센터를 직접 방문하여 신청하실 수 있습니다. 치료·회복 프로그램은 구비서류 없이 신청 가능하며, 의료비 지원은 진료비 명세서와 가정폭력 피해 상담사실 확인서를 제출하셔야 합니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "가정폭력 피해자와 동반 아동에게 심리·정신 치료, 개별·집단 상담, 미술·음악 치료 등 다양한 치료·회복 프로그램을 제공하고, 치료비 본인 부담액 및 건강보험·의료급여 비적용 진료비용을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "○ 가정폭력 피해자 및 동반 아동\n- 치료회복 프로그램 : 가정폭력 피해자에 대하여 심리적 안정을 위한 전문상담, 심신 회복을 위한 정신 및 심리치료 등을 내용으로 하는 치료·회복 프로그램을 운영(개별상담, 집단상담, 미술치료, 음악치료, 부부 상담, 심신 회복 캠프, 문화체험 등)\n- 의료비 : 치료비용 본인 부담액, 건강보험 또는 의료급여 비적용 진료비용 지원하며, 그 대상은 보건에 관한 상담 및 지도, 신체적·정신적 피해에 대한 치료, 임산부의 심리적 안정을 위한 각종 치료 프로그램의 실시 등",
+  "category": "health",
+  "contact_raw": "여성긴급전화/1366",
+  "content_hash": "sha256:83f186bf96d52ed58999a9d8f8548d64",
+  "criteria_raw": "○ 가정폭력 피해자",
+  "deferred_detail": false,
+  "documents_raw": [
+    "○치료회복 프로그램",
+    "구비서류 없음",
+    "○의료비 지원",
+    "진료비 명세서",
+    "가정폭력 피해 상담사실 확인서"
+  ],
+  "first_published": "2026-10-09",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-WII000001490",
+  "is_mock": false,
+  "last_checked": "2026-10-09",
+  "last_updated": "2026-10-09",
+  "law_raw": "",
+  "name": "가정폭력피해자 치료회복 프로그램 및 의료비 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000001490",
+  "org": "성평등가족부",
+  "primary_audience": "parent",
+  "receiver_raw": "전국 가정폭력 상담소, 보호시설, 1366센터, 해바라기 센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "가정폭력피해자-치료회복-프로그램-및-의료비-지원",
+  "source": "bojo24",
+  "source_category_raw": "보호·돌봄 상담/법률지원\n서비스(의료)\n의료지원 개인",
+  "source_id": "WII000001490",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 가정폭력 피해자 및 동반 아동",
+  "view_count": 2762
+}
