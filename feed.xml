@@ -4,8 +4,40 @@
   <subtitle>정부·지자체 지원금과 복지 제도를 받을 수 있는지부터 신청 방법까지 하나씩 정리합니다. 공공데이터 원문을 토대로 쉬운 말로 풀어 씁니다.</subtitle>
   <link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html"/>
-  <updated>2026-10-10T10:43:46+09:00</updated>
+  <updated>2026-10-11T09:51:57+09:00</updated>
   <id>https://adk24211.github.io/walapp/</id>
+  <entry>
+    <title type="text">사회 취약계층 생태체험 기회 제공 등 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/living/%EC%82%AC%ED%9A%8C-%EC%B7%A8%EC%95%BD%EA%B3%84%EC%B8%B5-%EC%83%9D%ED%83%9C%EC%B2%B4%ED%97%98-%EA%B8%B0%ED%9A%8C-%EC%A0%9C%EA%B3%B5-%EB%93%B1-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/%EC%82%AC%ED%9A%8C-%EC%B7%A8%EC%95%BD%EA%B3%84%EC%B8%B5-%EC%83%9D%ED%83%9C%EC%B2%B4%ED%97%98-%EA%B8%B0%ED%9A%8C-%EC%A0%9C%EA%B3%B5-%EB%93%B1-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-10-11T00:00:00+09:00</published>
+    <updated>2026-10-11T00:00:00+09:00</updated><author><name>기후에너지환경부</name></author><category term="living"/>
+    <summary type="text">사회 취약계층 및 사회적 약자를 대상으로 국립공원 등에서 생태체험 프로그램을 제공하는 지원 사업입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">청년도전지원사업 안내</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%B2%AD%EB%85%84%EB%8F%84%EC%A0%84%EC%A7%80%EC%9B%90%EC%82%AC%EC%97%85-%EC%95%88%EB%82%B4/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%B2%AD%EB%85%84%EB%8F%84%EC%A0%84%EC%A7%80%EC%9B%90%EC%82%AC%EC%97%85-%EC%95%88%EB%82%B4/</id>
+    <published>2026-10-11T00:00:00+09:00</published>
+    <updated>2026-10-11T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
+    <summary type="text">청년들의 구직 의욕을 높이고 노동시장 참여를 촉진하기 위해 맞춤형 상담·프로그램·수당 등을 제공하는 청년도전지원사업입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">신용도판단정보 회복제도</title>
+    <link href="https://adk24211.github.io/walapp/support/education/%EC%8B%A0%EC%9A%A9%EB%8F%84%ED%8C%90%EB%8B%A8%EC%A0%95%EB%B3%B4-%ED%9A%8C%EB%B3%B5%EC%A0%9C%EB%8F%84/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/education/%EC%8B%A0%EC%9A%A9%EB%8F%84%ED%8C%90%EB%8B%A8%EC%A0%95%EB%B3%B4-%ED%9A%8C%EB%B3%B5%EC%A0%9C%EB%8F%84/</id>
+    <published>2026-10-11T00:00:00+09:00</published>
+    <updated>2026-10-11T00:00:00+09:00</updated><author><name>한국장학재단</name></author><category term="education"/>
+    <summary type="text">신용도판단정보 회복제도는 한국장학재단 학자금대출을 장기연체한 경우, 신용도에 등록된 연체 정보를 해제·재등록 유예하여 금융거래와 취업에 불이익이 없도록 지원하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">장애입양아동 양육보조금</title>
+    <link href="https://adk24211.github.io/walapp/support/care/%EC%9E%A5%EC%95%A0%EC%9E%85%EC%96%91%EC%95%84%EB%8F%99-%EC%96%91%EC%9C%A1%EB%B3%B4%EC%A1%B0%EA%B8%88/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/%EC%9E%A5%EC%95%A0%EC%9E%85%EC%96%91%EC%95%84%EB%8F%99-%EC%96%91%EC%9C%A1%EB%B3%B4%EC%A1%B0%EA%B8%88/</id>
+    <published>2026-10-11T00:00:00+09:00</published>
+    <updated>2026-10-11T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="care"/>
+    <summary type="text">보건복지부가 복권기금으로 지원하는 장애입양아동 양육보조금은 중증·경증 장애에 따라 월 721천원 또는 634천원을 만 18세까지(재학 중은 졸업 시까지) 지급하는 제도입니다.</summary>
+  </entry>
   <entry>
     <title type="text">천안시 긴급지원 대상자 특별 지원 사업</title>
     <link href="https://adk24211.github.io/walapp/support/living/%EC%B2%9C%EC%95%88%EC%8B%9C-%EA%B8%B4%EA%B8%89%EC%A7%80%EC%9B%90-%EB%8C%80%EC%83%81%EC%9E%90-%ED%8A%B9%EB%B3%84-%EC%A7%80%EC%9B%90-%EC%82%AC%EC%97%85/" rel="alternate" type="text/html"/>
@@ -213,37 +245,5 @@
     <published>2026-10-06T00:00:00+09:00</published>
     <updated>2026-10-06T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="health"/>
     <summary type="text">긴급돌봄 지원은 주 돌봄자 부재·질병·부상 등으로 일시적인 돌봄이 필요하지만 기존 서비스로는 지원받기 어려운 국민에게 재가 방문형 돌봄·가사·이동·방문목욕 서비스를 제공하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">국제청소년성취포상제</title>
-    <link href="https://adk24211.github.io/walapp/support/care/%EA%B5%AD%EC%A0%9C%EC%B2%AD%EC%86%8C%EB%85%84%EC%84%B1%EC%B7%A8%ED%8F%AC%EC%83%81%EC%A0%9C/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/care/%EA%B5%AD%EC%A0%9C%EC%B2%AD%EC%86%8C%EB%85%84%EC%84%B1%EC%B7%A8%ED%8F%AC%EC%83%81%EC%A0%9C/</id>
-    <published>2026-10-06T00:00:00+09:00</published>
-    <updated>2026-10-06T00:00:00+09:00</updated><author><name>한국청소년활동진흥원</name></author><category term="care"/>
-    <summary type="text">국제청소년성취포상제는 양육·돌봄 분야에서 청소년에게 영역별 포상담당관을 배정해 주는 온라인 지원 제도로, 국민기초생활수급자·저소득 한부모·장애인·북한이탈자·법적 차상위계층 등 해당 증명서를 제출할 수 있는 청소년을 대상으로 상시 접수됩니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">태백시 향토 장학금</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%ED%83%9C%EB%B0%B1%EC%8B%9C-%ED%96%A5%ED%86%A0-%EC%9E%A5%ED%95%99%EA%B8%88/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%ED%83%9C%EB%B0%B1%EC%8B%9C-%ED%96%A5%ED%86%A0-%EC%9E%A5%ED%95%99%EA%B8%88/</id>
-    <published>2026-10-05T00:00:00+09:00</published>
-    <updated>2026-10-05T00:00:00+09:00</updated><author><name>태백시민향토장학회</name></author><category term="education"/>
-    <summary type="text">태백시 향토 장학금은 태백시민 및 태백시 거주 고등학교 졸업생을 대상으로 중고등학생에게 20만원, 졸업축하 장학금 100만원, 대학생에게 100만원을 연 1회씩 지원하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">지역우수인재 장학생 선발</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%EC%A7%80%EC%97%AD%EC%9A%B0%EC%88%98%EC%9D%B8%EC%9E%AC-%EC%9E%A5%ED%95%99%EC%83%9D-%EC%84%A0%EB%B0%9C/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%EC%A7%80%EC%97%AD%EC%9A%B0%EC%88%98%EC%9D%B8%EC%9E%AC-%EC%9E%A5%ED%95%99%EC%83%9D-%EC%84%A0%EB%B0%9C/</id>
-    <published>2026-10-05T00:00:00+09:00</published>
-    <updated>2026-10-05T00:00:00+09:00</updated><author><name>(재)전주인재육성재단</name></author><category term="education"/>
-    <summary type="text">전주인재육성재단이 운영하는 지역우수인재 장학생 선발 제도는 전주시민 자녀와 전북·전국의 우수 학생에게 장학금을 지원하는 프로그램입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">전북특별자치도 농촌유학 장학금</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84-%EB%86%8D%EC%B4%8C%EC%9C%A0%ED%95%99-%EC%9E%A5%ED%95%99%EA%B8%88/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84-%EB%86%8D%EC%B4%8C%EC%9C%A0%ED%95%99-%EC%9E%A5%ED%95%99%EA%B8%88/</id>
-    <published>2026-10-05T00:00:00+09:00</published>
-    <updated>2026-10-05T00:00:00+09:00</updated><author><name>재단법인전북특별자치도평생교육장학진흥원</name></author><category term="education"/>
-    <summary type="text">전북특별자치도에서 운영하는 전북사랑 장학금은 도내 농촌유학 학교에 재학 중인 타시도 출신 초·중학생 유학생 20명을 대상으로 1인당 100만원을 지원하는 교육·역량 지원 제도입니다.</summary>
   </entry>
 </feed>
