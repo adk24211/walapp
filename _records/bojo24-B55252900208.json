@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "한국장학재단 학자금대출을 6개월 이상 연체한 경우",
+      "연체 정보가 한국신용정보원에 등록된 경우",
+      "대학(학부) 재학·휴학 중이거나 졸업 후 3년 이내, 혹은 대학원 입학 후 3년 이내인 경우",
+      "중소기업에 재직 중인 경우"
+    ],
+    "faq": [
+      {
+        "a": "지원 대상은 연체 기간이 6개월 이상인 경우에만 해당합니다.",
+        "q": "연체 기간이 6개월 미만이면 지원받을 수 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "신청은 온라인으로 진행합니다. 신청서에 연체 정보와 학적·재직 정보를 입력하면 됩니다. 별도의 구비 서류는 필요하지 않으며, 신청 후 심사가 진행됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "신용도판단정보 회복제도는 한국장학재단 학자금대출을 장기연체한 경우, 신용도에 등록된 연체 정보를 해제·재등록 유예하여 금융거래와 취업에 불이익이 없도록 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.kosaf.go.kr",
+  "audiences": [
+    "youth"
+  ],
+  "benefit_raw": "한국장학재단 학자금대출 연체로 한국신용정보원에 신용도판단정보(연체정보 등)가 등록된 자로서 대학(학부) 재학, 휴학, 졸업 후 3년 이내이거나 대학원 입학 후 3년 이내, 또는 중소기업에 재직 중일 경우 신용도판단정보를 해제하고 재등록을 유예하여 금융거래 및 취업에 불이익이 없도록 지원하는 제도입니다.",
+  "category": "education",
+  "contact_raw": "신용지원부/1599-2250",
+  "content_hash": "sha256:05876e2e675243992b0f04f672b2edc4",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-11",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55252900208",
+  "is_mock": false,
+  "last_checked": "2026-10-11",
+  "last_updated": "2026-10-11",
+  "law_raw": "",
+  "name": "신용도판단정보 회복제도",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252900208",
+  "org": "한국장학재단",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "신용도판단정보-회복제도",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 기타 개인",
+  "source_id": "B55252900208",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "한국장학재단 학자금대출 장기연체자(6개월 이상)",
+  "view_count": 1470
+}
