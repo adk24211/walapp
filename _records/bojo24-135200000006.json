@@ -1,0 +1,64 @@
+{
+  "_prose": {
+    "eligibility": [
+      "국민기초생활보장법에 따라 수급 중인 가구의 가주가 신청할 수 있습니다.",
+      "만 18세 미만(출생일 기준) 아동이 실질적으로 가정을 이끌고 있어야 합니다.",
+      "추가 지정은 원칙적으로 금지되며, 만 15세 이상이고 아동복지법 제19조에 따라 후견인을 선임한 경우에만 가능합니다."
+    ],
+    "faq": [],
+    "note": "지원 대상은 실질적으로 가정을 이끌고 있는 아동에 한합니다.",
+    "steps": [
+      {
+        "body": "온라인 신청은 홈페이지를 통해 진행할 수 있습니다. 방문 신청은 가까운 주민센터에서 하실 수 있습니다. 구비 서류는 필요하지 않습니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "보건복지부가 만든 소년소녀가정 지원은 국민기초생활보장법 수급 가구의 만 18세 미만 아동에게 생계·교육·의료 급여와 부가급여, 전세자금 지원을 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "자세한 날짜는 주민센터에 따라 다를 수 있음",
+    "start": ""
+  },
+  "apply_url": "https://www.bokjiro.go.kr",
+  "audiences": [
+    "parent",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 생계급여, 교육급여, 의료급여\n\n○ 부가급여 : 200천 원 이상/인 월(지방이양) 권고\n\n○ 전세자금 지원 : 임차 전용면적 85제곱 미터 이하인 주택(국토교통부)",
+  "category": "care",
+  "contact_raw": "보건복지상담센터/129",
+  "content_hash": "sha256:24deb9fdc3fd56414d782789020b865d",
+  "criteria_raw": "○ 아동이 만 15세 이상으로 「아동복지법」 제19조에 의해 후견인을 선임하는 경우에 한해 추가지정 가능",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-12",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-135200000006",
+  "is_mock": false,
+  "last_checked": "2026-10-12",
+  "last_updated": "2026-10-12",
+  "law_raw": "",
+  "name": "소년소녀가정 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000006",
+  "org": "보건복지부",
+  "primary_audience": "lowincome",
+  "receiver_raw": "주민센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "소년소녀가정-지원",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금 개인",
+  "source_id": "135200000006",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 국민기초생활보장법에 의한 수급자(가주) 중 만 18세 미만(출생일 기준)의 아동이 실질적으로 가정을 이끌어 가고 있는 세대\n\n○ 소년소녀가정은 가정위탁이나 시설보호에 비해 외부 위험에 노출되어 있는 보호 형태이므로, 추가 지정은 원칙적으로 금지하며, 만 15세 이상으로 아동복지법 제19조에 의해 후견인을 선임하는 경우에 한해 추가 지정 가능",
+  "view_count": 5009
+}
