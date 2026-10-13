@@ -269,5 +269,22 @@
   "near_duplicates": 1,
   "stale_over_30d": 1,
   "checks_failed": []
+ },
+ {
+  "date": "2026-10-13",
+  "thin": {
+   "count": 668,
+   "median_own_chars": 374,
+   "under_400": 367,
+   "under_400_pct": 54,
+   "under_500": 471
+  },
+  "regen_backlog": 31,
+  "ads_on_thin": 43,
+  "audiences_empty": 12,
+  "duplicate_ids": 0,
+  "near_duplicates": 1,
+  "stale_over_30d": 1,
+  "checks_failed": []
  }
 ]
