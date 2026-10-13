@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "만 34세 이하인 청년이어야 합니다.",
+      "한국산업인력공단이 시행하는 국가기술자격 시험에 응시해야 합니다.",
+      "응시료의 50%를 지원받을 수 있습니다."
+    ],
+    "faq": [
+      {
+        "a": "1인당 최대 3회까지 지원받을 수 있습니다. 지원금이 소진될 때까지 신청이 가능합니다.",
+        "q": "1인당 지원 횟수에 제한이 있나요?"
+      }
+    ],
+    "note": "지원금이 소진될 경우 조기 마감될 수 있습니다.",
+    "steps": [
+      {
+        "body": "지원 홈페이지에 접속하여 신청서를 작성합니다. 시험 종목을 선택하고 지원 대상임을 확인합니다. 지원금이 적용된 금액으로 시험 응시료를 결제합니다. 지원금은 소진될 때까지 제공됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "청년 국가기술자격시험 응시료의 50%를 선 지원하는 제도로, 만 34세 이하 청년이 온라인으로 신청하면 시험 응시료를 절반 감면받을 수 있습니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://www.q-net.or.kr",
+  "audiences": [
+    "youth"
+  ],
+  "benefit_raw": "만34세 이하 청년을 대상으로 한국산업인력공단이 시행하는 국가기술자격 시험('26년 기준 491 종목)에 응시하는 경우 응시료의 50%를 선 지원(종목 선택 후 감면된 금액으로 결제)\n- 1인당 총 3회 지원, 지원금 소진 시까지",
+  "category": "jobs",
+  "contact_raw": "박만수/044-202-7290\n변호우/052-714-8806",
+  "content_hash": "sha256:6abd164da86160e81e7bd0e091a43abe",
+  "criteria_raw": "만 34세이하 청년\n한국산업인력공단이 시행하는 국가기술자격 시험('26년 기준 491 종목)의 응시료의 50%를 선 지원",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-13",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-149200005023",
+  "is_mock": false,
+  "last_checked": "2026-10-13",
+  "last_updated": "2026-10-13",
+  "law_raw": "",
+  "name": "청년 국가기술자격시험 응시료 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005023",
+  "org": "고용노동부",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "청년-국가기술자격시험-응시료-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금(감면) 개인",
+  "source_id": "149200005023",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "만 34세이하 청년\n한국산업인력공단이 시행하는 국가기술자격 시험(26년 기준 491 종목)의 응시료의 50%를 선 지원",
+  "view_count": 1452
+}
