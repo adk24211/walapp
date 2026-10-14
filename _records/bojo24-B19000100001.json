@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "창업 7년 이하의 예비창업자",
+      "창업 7년 이하의 기존 창업자",
+      "사회적기업"
+    ],
+    "faq": [],
+    "note": "선정 기준에 대한 별도 안내가 제공되지 않습니다.",
+    "steps": [
+      {
+        "body": "본 사업은 신청 방법에 대한 별도 안내가 없으며, 자세한 내용은 상생협력부에 문의하시기 바랍니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "상생협력센터(KOMBI)에서는 초기창업기업과 사회적기업을 대상으로 창업 7년 이하(예비)창업자에게 창업공간 및 인프라를 제공하는 지원사업을 운영합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "별도 공고게시",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "초기창업기업의 안정화를 위한 창업공간 및 인프라 제공",
+  "category": "jobs",
+  "contact_raw": "상생협력부/042-870-1028",
+  "content_hash": "sha256:7cc5a581d8de631fb45fa0403039b03d",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-14",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-B19000100001",
+  "is_mock": false,
+  "last_checked": "2026-10-14",
+  "last_updated": "2026-10-14",
+  "law_raw": "",
+  "name": "상생협력센터(KOMBI) 창업공간 제공",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B19000100001",
+  "org": "한국조폐공사",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "상생협력센터-kombi-창업공간-제공",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타(교육)\n시설이용\n현물 개인\n소상공인",
+  "source_id": "B19000100001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "창업 7년 이하의 (예비)창업자 및 사회적기업",
+  "view_count": 3207
+}
