@@ -1,0 +1,74 @@
+{
+  "_prose": {
+    "eligibility": [
+      "의상자",
+      "장애인",
+      "북한 이탈 주민",
+      "청년미취업자(만 34세 이하)",
+      "다문화가족 및 한부모가족 지원 대상자"
+    ],
+    "faq": [
+      {
+        "a": "채용 시 지원 대상자에게 5% 가산점이 부여됩니다.",
+        "q": "가산점은 어떻게 적용되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "신청은 방문 신청으로 진행됩니다. 해당 기관에 직접 방문하여 신청서를 제출하시면 됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "고양도시관리공사가 운영하는 채용 우대(사회적약자) 제도는 의상자·장애인·북한 이탈 주민·청년미취업자·다문화·한부모가족 등에게 채용 시 5% 가산점을 부여합니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "youth",
+    "parent",
+    "disabled",
+    "jobseeker",
+    "multicultural"
+  ],
+  "benefit_raw": "○ 채용시 5% 가산점 부여\n- 의상자\n- 장애인\n- 북한 이탈 주민\n- 청년미취업자(만 34세 이하)\n- 다문화가족 및 한부모가족 지원 대상자",
+  "category": "jobs",
+  "contact_raw": "인사노무팀/031-929-4800",
+  "content_hash": "sha256:5e26103dcf90ce0ee013460448935b57",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-15",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-O00004000005",
+  "is_mock": false,
+  "last_checked": "2026-10-15",
+  "last_updated": "2026-10-15",
+  "law_raw": "",
+  "name": "채용 우대(사회적약자)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00004000005",
+  "org": "고양도시관리공사",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "채용-우대-사회적약자",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 서비스(일자리) 개인",
+  "source_id": "O00004000005",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 의상자\n\n○ 장애인\n\n○ 북한 이탈 주민\n\n○ 청년미취업자(만 34세 이하)\n\n○ 다문화가족 및 한부모가족 지원 대상자",
+  "view_count": 1424
+}

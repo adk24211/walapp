@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "청소년(24세 이하, 사실혼 포함) 부부이어야 합니다.",
+      "자녀를 양육하고 있어야 합니다.",
+      "가구의 기준 중위소득이 65% 이하이어야 합니다."
+    ],
+    "faq": [],
+    "note": "지원 대상과 선정 기준이 동일하므로 신청 전에 자격 여부를 반드시 확인하시기 바랍니다.",
+    "steps": [
+      {
+        "body": "청소년부모 아동양육비 지원 신청서를 지참하여 직접 방문하시면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "청소년부모 아동양육비 지원사업은 저소득 청소년부모 가구에 자녀 1인당 월 25만 원을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent",
+    "lowincome"
+  ],
+  "benefit_raw": "저소득 청소년부모 가구 자녀 1인당 월 25만 원 아동양육비 지원",
+  "category": "care",
+  "contact_raw": "성평등가족부 가족지원과/02-2100-6349",
+  "content_hash": "sha256:b9b923057654d33ce3b30dd6a7923b02",
+  "criteria_raw": "① 청소년(24세이하, 사실혼 포함)부부로서, ② 자녀를 양육하고 있는, ③ 기준 중위소득 65% 이하의 가구",
+  "deferred_detail": false,
+  "documents_raw": [
+    "① 청소년부모 아동양육비 지원 신청서(개인정보제공동의서 포함)",
+    "② 사실혼관계 확인서(해당자만 제출)",
+    "③ 소득판별 관련 서류",
+    "④ 가족관계 관련 서류",
+    "⑤ 거주확인 관련 서류",
+    "⑥ 수급계좌 통장 사본"
+  ],
+  "first_published": "2026-10-15",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-138300000051",
+  "is_mock": false,
+  "last_checked": "2026-10-15",
+  "last_updated": "2026-10-15",
+  "law_raw": "",
+  "name": "청소년부모 아동양육비 지원사업",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000051",
+  "org": "성평등가족부",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "청소년부모-아동양육비-지원사업",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금 가구",
+  "source_id": "138300000051",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "① 청소년(24세이하, 사실혼 포함)부부로서, ② 자녀를 양육하고 있는, ③ 기준 중위소득 65% 이하의 가구",
+  "view_count": 2629
+}

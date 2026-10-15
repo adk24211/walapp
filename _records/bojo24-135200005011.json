@@ -1,0 +1,65 @@
+{
+  "_prose": {
+    "eligibility": [
+      "보호대상아동을 국내입양한 가정이어야 합니다.",
+      "입양확정일이 2022년 1월 1일 이후이어야 합니다.",
+      "국내입양에 관한 특별법에 따라 입양한 경우에만 지원됩니다."
+    ],
+    "faq": [],
+    "note": "지원금은 1가정당 1회만 지급됩니다.",
+    "steps": [
+      {
+        "body": "방문 신청이 가능하며, 입양아동 양육보조금 등 신청서 1부와 입양확정증명원 사본 1부, 통장 사본 1부를 지참하셔야 합니다. 제출 후 심사를 거쳐 지원금이 지급됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "보건복지부가 운영하는 입양축하금은 2022년 1월 1일 이후 가정법원에서 입양이 확정된 국내입양 가정에 1회 200만원을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "지급신청분에 대해 매월 20일에 1회 지급",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "1회에 한하여 200만원 입양축하금 지급",
+  "category": "care",
+  "contact_raw": "보건복지상담센터/129",
+  "content_hash": "sha256:a0254099a36b9b78dec26e9381234090",
+  "criteria_raw": "국내입양에 관한 특별법에 따라 보호대상아동을 국내입양한 가정 중에서 가정법원 입양확정일이 2022.1.1. 이후인 가정",
+  "deferred_detail": false,
+  "documents_raw": [
+    "입양아동 양육보조금 등 신청서 1부",
+    "입양확정증명원 사본 1부",
+    "통장사본 1부"
+  ],
+  "first_published": "2026-10-15",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-135200005011",
+  "is_mock": false,
+  "last_checked": "2026-10-15",
+  "last_updated": "2026-10-15",
+  "law_raw": "",
+  "name": "입양축하금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005011",
+  "org": "보건복지부",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "입양축하금",
+  "source": "bojo24",
+  "source_category_raw": "임신·출산 현금 개인",
+  "source_id": "135200005011",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "국내입양에 관한 특별법에 따라 보호대상아동을 국내입양한 가정 중에서 가정법원 입양확정일이 2022.1.1. 이후인 가정",
+  "view_count": 2635
+}
