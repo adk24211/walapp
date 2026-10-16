@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "천안시민",
+      "장애인",
+      "다자녀가정",
+      "기초생활수급자",
+      "다문화가족",
+      "국가보훈대상자"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청 페이지에서 신청서를 작성하고 제출합니다. 별도의 서류는 필요하지 않으며, 신청은 상시 접수됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "천안시민 및 장애인·다자녀가정·기초생활수급자·다문화가족·국가보훈대상자를 대상으로 자연휴양림 이용요금을 감면해 주는 생활·문화 지원 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://www.foresttrip.go.kr/indvz/main.do?hmpgId=ID02030040",
+  "audiences": [
+    "parent",
+    "disabled",
+    "lowincome",
+    "multicultural"
+  ],
+  "benefit_raw": "천안시민, 장애인, 다자녀가정, 기초생활수급자, 다문화가족, 국가보훈대상자 등 감면 혜택",
+  "category": "living",
+  "contact_raw": "공원운영부 자연휴양팀/041-529-5108",
+  "content_hash": "sha256:bd211c0a02631413d3c5958e1f1550a0",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-16",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-O00033300018",
+  "is_mock": false,
+  "last_checked": "2026-10-16",
+  "last_updated": "2026-10-16",
+  "law_raw": "",
+  "name": "문화시설 이용요금 감면(자연휴양림)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00033300018",
+  "org": "천안도시공사",
+  "primary_audience": "disabled",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "문화시설-이용요금-감면-자연휴양림",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 시설이용 개인",
+  "source_id": "O00033300018",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "천안시민, 장애인, 다자녀가정, 기초생활수급자, 다문화가족, 국가보훈대상자 등",
+  "view_count": 2617
+}

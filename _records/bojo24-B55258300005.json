@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "15세 이상이며 등록장애인(취업자 포함)인 경우 디지털능력개발원 과정에 지원 가능합니다.",
+      "국가·지방공무원 임용 기준에 해당하는 등록장애인인 경우 공무원 준비과정에 지원 가능합니다.",
+      "장애인복지법에 따라 등록장애인이며 교원자격증을 소지하거나 다음 해 2월에 취득 예정인 경우 중등교원임용 준비과정에 지원 가능합니다."
+    ],
+    "faq": [
+      {
+        "a": "수어 또는 자막이 포함된 장애친화 콘텐츠로 사이버 훈련이 제공됩니다.",
+        "q": "훈련은 어떤 형태로 제공되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "홈페이지에서 온라인 신청 양식을 작성하여 제출하면 됩니다. 구비 서류는 필요하지 않으며, 신청은 상시 접수됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "디지털능력개발원 및 정부·공공부문 대상 등록장애인을 위한 사이버 직업능력개발훈련으로, 온라인으로 언제든 신청할 수 있는 프로그램입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://digital.kead.or.kr/",
+  "audiences": [
+    "disabled"
+  ],
+  "benefit_raw": "○ 시·공간적 제약 없이 사이버 훈련에 참여함으로써 장애인의 훈련접근성 향상 및 직업생활 안정 도모\n\n○ 디지털능력개발원\n- 훈련기간: 상시\n- 기능계열, 시험대비과정, 직무관리(직업생활) 과정\n- 수어 또는 자막 탑재하여 장애친화 콘텐츠 제공\n\n○ 정부공공부문\n- 훈련기간: 1개월~24개월\n- 공무원, 교원임용준비, 공기업준비 과정\n- 외부 서비스 제공 업체와 연계 운영",
+  "category": "jobs",
+  "contact_raw": "한국장애인고용공단/1588-1519",
+  "content_hash": "sha256:4a52381f810a59275567a5a0c57d043b",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-16",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55258300005",
+  "is_mock": false,
+  "last_checked": "2026-10-16",
+  "last_updated": "2026-10-16",
+  "law_raw": "",
+  "name": "사이버 직업능력개발훈련",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55258300005",
+  "org": "한국장애인고용공단",
+  "primary_audience": "disabled",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "사이버-직업능력개발훈련",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타(교육) 개인",
+  "source_id": "B55258300005",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 디지털능력개발원 : 15세 이상 등록장애인(취업자 포함)\n\n○ 정부·공공부문\n- 공무원 준비과정: 국가 및 지방공무원 임용 기준에 준하는 등록장애인\n- 중등교원임용 준비과정: 「장애인복지법」에 의한 등록장애인으로 교원자격증 소지사 또는 익년 2월 취득예정자",
+  "view_count": 4192
+}
