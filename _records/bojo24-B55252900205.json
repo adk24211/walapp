@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "학자금 대출을 6개월 이상 연체한 사람",
+      "채무상환 의지를 가진 사람"
+    ],
+    "faq": [
+      {
+        "a": "선정 기준에 대한 내용은 제공되지 않았습니다.",
+        "q": "선정 기준이 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청 페이지에서 신청서를 작성합니다. 신청은 상시 접수이며, 구비 서류는 필요하지 않습니다. 신청 후 담당 기관에서 손해금 감면 여부를 검토합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "손해금(지연배상금) 감면은 6개월 이상 학자금 대출을 장기연체하고 채무상환 의지가 있는 경우, 손해금을 감면해 주는 신용회복지원제도이며, 온라인으로 언제든 신청할 수 있고 별도의 구비 서류는 필요하지 않습니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.kosaf.go.kr",
+  "audiences": [
+    "youth"
+  ],
+  "benefit_raw": "상환능력은 부족하지만, 채무상환의지가 있을 때 손해금(지연배상금)을 감면해주어 채무상환 부담을 덜어주는 신용회복지원제도입니다.",
+  "category": "education",
+  "contact_raw": "한국장학재단/1599-2000",
+  "content_hash": "sha256:a5e08f42f55a3c3cf5bc271cb11e3b5b",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-17",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55252900205",
+  "is_mock": false,
+  "last_checked": "2026-10-17",
+  "last_updated": "2026-10-17",
+  "law_raw": "",
+  "name": "손해금(지연배상금) 감면",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252900205",
+  "org": "한국장학재단",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "손해금-지연배상금-감면",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금(감면) 개인",
+  "source_id": "B55252900205",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "6개월 이상 학자금 대출 장기연체자",
+  "view_count": 1350
+}
