@@ -1,0 +1,64 @@
+{
+  "_prose": {
+    "eligibility": [
+      "기준중위소득이 중위소득 120% 이하인 가정입니다.",
+      "동 주민센터에서 추천받은 가정입니다."
+    ],
+    "faq": [],
+    "note": "동 주민센터의 추천을 받지 못한 가정은 지원 대상이 되지 않습니다.",
+    "steps": [
+      {
+        "body": "거주지 동 주민센터에 방문하여 상담을 받고, 신분증을 제출하면 담당자가 구비서류를 작성하여 지원을 진행합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "재단법인구로희망복지재단이 운영하는 저소득가구 긴급생계비 지원(사례지원) 제도는 기준중위소득 120% 이하이며 동 주민센터의 추천을 받은 가구에 1인당 최대 50만원을 지원합니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "○ 긴급생계비 지원 (1인 최대 50만원)\n- 기준중위소득 120% 이하 가정\n- 동주민센터 추천자에 한해 지원",
+  "category": "living",
+  "contact_raw": "복지사업과/02-856-1696",
+  "content_hash": "sha256:615c736bee4a531ae6c36054bcf910d8",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "○ 신청방법 : 거주기 동 주민센터에 방문하여 상담 및 신청",
+    "필수자료 : 신분증",
+    "○ 진행방법 : 상담이후 관련 구비서류는 동 주민센터 담당자가 작성하며 진행"
+  ],
+  "first_published": "2026-10-18",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-O00084600001",
+  "is_mock": false,
+  "last_checked": "2026-10-18",
+  "last_updated": "2026-10-18",
+  "law_raw": "",
+  "name": "저소득가구 긴급생계비 지원(사례지원)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00084600001",
+  "org": "재단법인구로희망복지재단",
+  "primary_audience": "lowincome",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "저소득가구-긴급생계비-지원-사례지원",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금 가구",
+  "source_id": "O00084600001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 기준중위소득 120% 이하 가정\n\n○ 동주민센터에서 추천한 가정",
+  "view_count": 6595
+}

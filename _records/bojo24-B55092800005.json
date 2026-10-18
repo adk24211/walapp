@@ -1,0 +1,64 @@
+{
+  "_prose": {
+    "eligibility": [
+      "건강보험에 가입하고 항암제 또는 희귀질환치료제를 투여받은 경우",
+      "위 대상자의 피부양자도 신청이 가능합니다",
+      "본인부담상한제 환급금이나 국고·지자체 지원을 이미 받은 경우는 지원에서 제외될 수 있습니다",
+      "지원 대상자는 공단에서 별도로 안내받은 경우에 한합니다"
+    ],
+    "faq": [],
+    "note": "이미 국고·지자체 등에서 동일한 약품비 지원을 받은 경우 중복 지원이 제한될 수 있습니다.",
+    "steps": [
+      {
+        "body": "공단 홈페이지에 접속하여 신청 양식을 작성하고 제출하면 됩니다. 별도의 서류는 필요하지 않으며, 신청은 상시 접수됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "항암제·희귀질환치료제 등 신약을 투여받은 건강보험 가입자와 피부양자를 대상으로 약품비 본인부담금 일부를 지원하는 제도이며, 중증질환자의 의료비 부담을 경감하기 위해 운영됩니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.nhis.or.kr",
+  "audiences": [
+    "disabled"
+  ],
+  "benefit_raw": "중증질환자 등의 의료비 부담을 경감하기 위하여 일부 항암제, 희귀질환치료제 등 신약을 투여받은 환자에게 약품비 본인부담금의 일부를 지원하는 제도",
+  "category": "health",
+  "contact_raw": "약제관리실/033-736-3240",
+  "content_hash": "sha256:5e513fa994cb7de0a429153e91bfcfc4",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-18",
+  "how_to_raw": "기타 온라인신청\n직접입력",
+  "id": "bojo24-B55092800005",
+  "is_mock": false,
+  "last_checked": "2026-10-18",
+  "last_updated": "2026-10-18",
+  "law_raw": "",
+  "name": "약품비 본인일부부담차액 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55092800005",
+  "org": "국민건강보험공단",
+  "primary_audience": "disabled",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "약품비-본인일부부담차액-지원",
+  "source": "bojo24",
+  "source_category_raw": "보건·의료 현금 개인",
+  "source_id": "B55092800005",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 항암제, 희귀질환치료제 등을 투여받은 건강보험 가입자 및 피부양자\n※ 본인부담상한제 환급금 및 국고, 지자체(긴급복지지원, 암환자의료비지원 등)에서 지원받은 경우 등 지원이 제외될 수 있습니다.\n※ 약품비 본인일부부담차액 지원 대상자는 공단에서 안내드립니다.",
+  "view_count": 3962
+}
