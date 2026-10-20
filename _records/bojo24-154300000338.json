@@ -1,0 +1,71 @@
+{
+  "_prose": {
+    "eligibility": [
+      "외식 사업자",
+      "외식 사업자 단체",
+      "지자체별 선정 기준에 따름"
+    ],
+    "faq": [
+      {
+        "a": "지원금은 국비와 지방비가 각각 50%씩 부담합니다.",
+        "q": "지원금은 어떤 비율로 국비와 지방비가 부담하나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "농림축산식품부 식품외식산업과를 직접 방문하여 신청합니다. 신청서와 예산집행계획서 등 구비 서류를 제출하면 됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "외식업체와 외식 사업자 단체를 대상으로, 식재료 공동구매 조직 구축·운영에 필요한 인건비·물류비·창고 임차비·교육·컨설팅·현장 점검·운영비 등을 연중 지원합니다. 개소당 최대 10백만원을 지원하며, 공동구매금액이 1억원 이상이면 최대 20백만원까지 지원 가능합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ 지원기간: 연중\n\n○ 지원내용: 식재료 공동구매 조직 구축·운영을 위한 제반 비용 지원\n- 인건비, 물류비, 창고 임차비, 교육·컨설팅비, 현장 점검비, 운영비 등\n\n○ 지원단가: 개소당 최대 10백만원(국비 50%, 지방비 50%)\n* 공동구매금액 1억원 이상인 경우 최대 20백만원까지 지원 가능",
+  "category": "education",
+  "contact_raw": "해당시도별 외식 담당부서/044-201-2158",
+  "content_hash": "sha256:0f4969dd6225a467db98f6cef63f2602",
+  "criteria_raw": "○ 외식 사업자 및 사업자 단체\n* 지자체별 선정 기준에 따름",
+  "deferred_detail": false,
+  "documents_raw": [
+    "○ 신청서 및 예산집행계획서(별도양식)",
+    "○ 단체 대표 사업자등록증",
+    "○ 신규 통장사본",
+    "○ 식재료 공동구매 실적(해당시)"
+  ],
+  "first_published": "2026-10-20",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-154300000338",
+  "is_mock": false,
+  "last_checked": "2026-10-20",
+  "last_updated": "2026-10-20",
+  "law_raw": "",
+  "name": "외식업체 식재료 공동구매 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/154300000338",
+  "org": "농림축산식품부",
+  "primary_audience": "business",
+  "receiver_raw": "농림축산식품부 식품외식산업과",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "외식업체-식재료-공동구매-지원",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 현금 법인/시설/단체",
+  "source_id": "154300000338",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 외식 사업자 및 사업자 단체",
+  "view_count": 3081
+}

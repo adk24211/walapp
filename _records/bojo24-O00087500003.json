@@ -1,0 +1,62 @@
+{
+  "_prose": {
+    "eligibility": [
+      "기준중위소득 120% 이내인 저소득 가구입니다.",
+      "기존 지원 및 연계체계에서 지원받지 못한 위기 가구입니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "별도 신청이 필요하지 않습니다. 대상 가구에게 직접 위문품이 전달됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "명절맞이 위문품 지원은 재단법인용산복지재단이 운영하며, 용산구에 거주하는 기준중위소득 120% 이내 저소득 가구와 기존 지원에서 제외된 위기 가구에게 설 40가구, 추석 40가구에 해당하는 위문품을 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "별도의 신청절차가 없음",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "○ 관내 소외계층 이웃들에게 명절(설 40가구, 추석 40가구) 위문품을 전달하여 지역사회와 함께하는 따뜻한 명절을 보낼 수 있도록 지원",
+  "category": "care",
+  "contact_raw": "재단법인용산복지재단/070-4277-2255",
+  "content_hash": "sha256:2fef699f87d8b63b6a254eb6b3d1f5ad",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-20",
+  "how_to_raw": "신청불필요",
+  "id": "bojo24-O00087500003",
+  "is_mock": false,
+  "last_checked": "2026-10-20",
+  "last_updated": "2026-10-20",
+  "law_raw": "",
+  "name": "명절맞이 위문품 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00087500003",
+  "org": "재단법인용산복지재단",
+  "primary_audience": "lowincome",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "명절맞이-위문품-지원",
+  "source": "bojo24",
+  "source_category_raw": "보호·돌봄 현물 가구",
+  "source_id": "O00087500003",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 기준중위소득 120% 이내 용산구 관내 저소득 가구\n\n○ 기존의 지원 및 연계체계에서 지원되지 못하는 위기가구",
+  "view_count": 6257
+}
