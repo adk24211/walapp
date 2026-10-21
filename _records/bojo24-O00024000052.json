@@ -1,0 +1,71 @@
+{
+  "_prose": {
+    "eligibility": [
+      "두 자녀 이상을 출산하거나 입양한 가정",
+      "자녀 중 18세 이하인 자녀가 최소 1명 이상 있는 가정"
+    ],
+    "faq": [
+      {
+        "a": "지원 내용은 다자녀가정의 객실 요금 감면에 한정됩니다.",
+        "q": "지원 혜택은 객실 요금 외에 다른 비용에도 적용되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "홈페이지에서 신청서를 작성합니다. 주민등록등본을 첨부하여 제출하면 됩니다. 제출 후 심사가 진행됩니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "용산제주유스호스텔을 직접 방문하여 신청서를 작성합니다. 주민등록등본을 지참하여 제출하면 됩니다. 현장에서 바로 접수가 완료됩니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "용산제주유스호스텔에서 다자녀 가정을 대상으로 객실 요금을 감면해 주는 지원 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://yongsanjejuyh.com/kor/main/",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "다자녀가정 객실 요금 감면 - 두 자녀 이상 출산(입양) 양육하고 자녀중 18세 이하 자녀가 1명 이상인 경우 할인 혜택 제공",
+  "category": "care",
+  "contact_raw": "용산제주유스호스텔/064",
+  "content_hash": "sha256:cc158557edcfd2ff6c324a98b2f4526c",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "주민등록 등본"
+  ],
+  "first_published": "2026-10-21",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-O00024000052",
+  "is_mock": false,
+  "last_checked": "2026-10-21",
+  "last_updated": "2026-10-21",
+  "law_raw": "",
+  "name": "용산제주유스호스텔 할인(다자녀)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00024000052",
+  "org": "용산구시설관리공단",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "용산제주유스호스텔-할인-다자녀",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금(감면) 가구",
+  "source_id": "O00024000052",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "둘 이상의 자녀를 출산 또는 입양하여 양육하는 가족(다만 자녀 중 한 명 이상이 18세 이하인 가정",
+  "view_count": 2563
+}

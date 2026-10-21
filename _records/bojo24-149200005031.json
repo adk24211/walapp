@@ -1,0 +1,65 @@
+{
+  "_prose": {
+    "eligibility": [
+      "일·생활균형 관련 제도(유연근무, 근로시간 단축 등)를 도입·개선하려는 기업의 사업주",
+      "우선지원 대상기업·중견기업에 해당하는 사업주",
+      "시스템 설치·사용을 계획하고 있는 경우"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "방문하여 신청서를 제출하시면 됩니다. 신청은 상시 접수이며, 사업계획서와 인프라 구축 견적서 등 필요한 서류를 함께 제출하셔야 합니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "일생활 균형 인프라 구축비 지원은 일·생활균형 제도 도입·개선을 위한 시스템 설치·사용 비용을 지원하는 사업으로, 사업주 투자비용의 80% 이내 최대 1천만원과 30인 미만 사업장의 인사관리시스템 사용료를 연 180만원까지 2년간 전액 지원합니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent",
+    "employer"
+  ],
+  "benefit_raw": "사업주 투자비용(부가세 제외)의 80% 이내의 범위에서 최대 1천만원 지원\n- 30인 미만 소규모 사업장의 출퇴근 및 인사관리시스템 사용료 100% 지원(연 180만원 한도) , 최대 2년 지원",
+  "category": "jobs",
+  "contact_raw": "고용노동부/1350",
+  "content_hash": "sha256:5d0840dd516cae6ff43bd0ffa13bb59f",
+  "criteria_raw": "일‧생활균형을 위한 다양한 제도(유연근무, 근로시간 단축, 시간단위 연차, 육아휴직 및 육아기 근로시간 단축 등)의 도입･개선에 필요한 시스템 설치･사용하려는 우선지원 대상기업·중견기업의 사업주",
+  "deferred_detail": false,
+  "documents_raw": [
+    "(사업승인 단계) 사업계획서 및 인프라 구축과 관련된 견적서 등 일체",
+    "(승인 이후 장려금 신청시) 지급신청서 및 이행보증보험증권"
+  ],
+  "first_published": "2026-10-21",
+  "how_to_raw": "방문신청\n직접입력",
+  "id": "bojo24-149200005031",
+  "is_mock": false,
+  "last_checked": "2026-10-21",
+  "last_updated": "2026-10-21",
+  "law_raw": "",
+  "name": "일생활 균형 인프라 구축비 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005031",
+  "org": "고용노동부",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "일생활-균형-인프라-구축비-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 법인/시설/단체",
+  "source_id": "149200005031",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "일‧생활균형을 위한 다양한 제도(유연근무, 근로시간 단축, 시간단위 연차, 육아휴직 및 육아기 근로시간 단축 등)의 도입･개선에 필요한 시스템 설치･사용하려는 우선지원 대상기업·중견기업의 사업주",
+  "view_count": 2542
+}
