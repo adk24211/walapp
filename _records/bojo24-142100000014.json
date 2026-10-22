@@ -1,0 +1,81 @@
+{
+  "_prose": {
+    "eligibility": [
+      "장애인기업활동촉진법 제2조 제2호에 해당하는 기업",
+      "장애인기업 확인 요령에 따라 확인 기준을 충족한 기업",
+      "확인서를 발급받은 기업"
+    ],
+    "faq": [
+      {
+        "a": "지원 대상 기업이 확인 기준을 충족하고 온라인 신청이 완료되면, 서류 검토 후 확인서를 발급받을 수 있습니다.",
+        "q": "확인서는 언제 발급받을 수 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "홈페이지에서 온라인 신청서를 작성하고 구비 서류를 전자파일 형태로 첨부합니다. 모든 서류가 제출되면 신청이 완료됩니다.",
+        "title": "신청서 제출"
+      },
+      {
+        "body": "접수된 서류는 장애인기업 확인 요령에 따라 검토되며, 기준을 충족한 경우 확인서를 발급받게 됩니다.",
+        "title": "서류 검토 및 확인서 발급"
+      }
+    ],
+    "summary": "장애인기업활동촉진법에 따라 지정된 기업에게 장애인기업 확인서를 발급하는 제도로, 온라인을 통해 언제든 신청할 수 있습니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "연중수시",
+    "start": ""
+  },
+  "apply_url": "https://smpp.go.kr",
+  "audiences": [
+    "disabled"
+  ],
+  "benefit_raw": "장애인기업 확인서 발급",
+  "category": "jobs",
+  "contact_raw": "(재)장애인기업종합지원센터/02-2181-6540",
+  "content_hash": "sha256:ee1708073d89c028f501245102f085ac",
+  "criteria_raw": "장애인기업 확인 요령에 따라 확인기준 충족 및 확인서 발급받은 기업",
+  "deferred_detail": false,
+  "documents_raw": [
+    "주식등변동상황명세서",
+    "소득세법에 따른 원천징수이행상황신고서",
+    "장애인고용 명부",
+    "동업계약서",
+    "조합원명부 및 출자자명부",
+    "법인등기부등본",
+    "국가유공자확인원",
+    "장애인증명서",
+    "사업자등록증명",
+    "부가가치세과세표준증명원"
+  ],
+  "first_published": "2026-10-22",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-142100000014",
+  "is_mock": false,
+  "last_checked": "2026-10-22",
+  "last_updated": "2026-10-22",
+  "law_raw": "",
+  "name": "장애인기업확인서 발급",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/142100000014",
+  "org": "중소벤처기업부",
+  "primary_audience": "disabled",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "장애인기업확인서-발급",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타 법인/시설/단체",
+  "source_id": "142100000014",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 장애인기업활동촉진법 2조 2호 기준 해당 기업",
+  "view_count": 3864
+}

@@ -1,0 +1,62 @@
+{
+  "_prose": {
+    "eligibility": [
+      "중위소득 80% 이하인 저소득층",
+      "선정 기준이 별도로 제시되지 않음"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "제공된 온라인 신청 페이지에서 신청서를 작성하고 제출합니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "K‑water 행복가득수 프로젝트는 저소득층(중위소득 80% 이하)을 대상으로 주방·화장실 수리 등 물 사용 환경을 개선해 주는 주거 분야 지원 사업입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "연 1회 공모",
+    "start": ""
+  },
+  "apply_url": "https://www.kwater.or.kr/danbitoktok/kor.do",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "주방 및 화장실 수리 등 물 사용 환경 개선",
+  "category": "housing",
+  "contact_raw": "경영혁신실/042-629-2432",
+  "content_hash": "sha256:92b5c9de76cd83d6e375053630274f69",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-22",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B50000100001",
+  "is_mock": false,
+  "last_checked": "2026-10-22",
+  "last_updated": "2026-10-22",
+  "law_raw": "",
+  "name": "K-water 행복가득수 프로젝트",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B50000100001",
+  "org": "한국수자원공사",
+  "primary_audience": "lowincome",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "k-water-행복가득수-프로젝트",
+  "source": "bojo24",
+  "source_category_raw": "주거·자립 기타 가구",
+  "source_id": "B50000100001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "저소득층(중위소득 80%이하)",
+  "view_count": 6172
+}

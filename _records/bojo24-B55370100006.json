@@ -1,0 +1,65 @@
+{
+  "_prose": {
+    "eligibility": [
+      "정책서민금융상품 이용자(예: 미소금융, 햇살론 등)",
+      "개인신용평점 하위 100분의 20에 해당하는 저신용 영세자영업자",
+      "연간소득 4,500만원 이하인 영세자영업자",
+      "연간소득 3,500만원 이하인 영세자영업자",
+      "소상공인 정책 자금 지원 제외 업종을 영위하는 경우는 제외"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청하거나 직접 방문하여 신청할 수 있습니다. 신청은 상시 접수이며 구비 서류는 필요하지 않습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "정책서민금융상품을 이용하는 저신용 영세자영업자를 대상으로 전문 컨설턴트가 경영진단과 솔루션을 제공하는 서비스입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://www.kinfa.or.kr/cyber/consultingRequest/introduce.do",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ 정책서민금융상품 이용자 등 금융취약계층 자영업자에게 전문 컨설턴트의 경영진단과 사업 솔루션을 제공하여 경영 개선을 지원\n- 자영업 업종과 분야별로 맞춤 컨설턴트가 방문 경영진단 후 고객에게 점검 결과와 해결방안 등을 보고서와 함께 제공",
+  "category": "jobs",
+  "contact_raw": "서민금융통합콜센터/1397",
+  "content_hash": "sha256:53535bcfc58ec6734c3f17130dc5921c",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-22",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-B55370100006",
+  "is_mock": false,
+  "last_checked": "2026-10-22",
+  "last_updated": "2026-10-22",
+  "law_raw": "",
+  "name": "자영업 컨설팅 서비스",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55370100006",
+  "org": "서민금융진흥원",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "자영업-컨설팅-서비스",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타(상담) 소상공인",
+  "source_id": "B55370100006",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 정책서민금융상품 이용자(미소금융, 햇살론 등)\n\n○ 정책서민금융 이용 자격요건을 갖춘 저신용 영세자영업자(개인신용평점 하위 100분의 20 및 연간소득 4,500만원 이하/연간소득 3,500만원 이하 영세자영업자)\n※ 단, 소상공인 정책 자금 지원 제외 업종을 영위하는 소상공인은 제외",
+  "view_count": 3083
+}

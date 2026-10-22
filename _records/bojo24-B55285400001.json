@@ -1,0 +1,74 @@
+{
+  "_prose": {
+    "eligibility": [
+      "국가유공자증을 소지한 사람",
+      "독립유공자증을 소지한 사람",
+      "참전유공자증을 소지한 사람",
+      "5·18민주유공자증을 소지한 사람",
+      "장애인복지카드를 소지한 사람"
+    ],
+    "faq": [
+      {
+        "a": "지원 내용에 따라 할인율은 공연마다 다르며, 구체적인 할인율은 해당 공연의 안내를 확인하셔야 합니다.",
+        "q": "지원받을 수 있는 공연의 할인율은 어떻게 되나요?"
+      },
+      {
+        "a": "구비 서류는 해당없음으로, 별도의 서류 제출이 필요하지 않습니다.",
+        "q": "신청 시 제출해야 할 서류가 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청은 홈페이지에서, 방문 신청은 직접 방문하여 진행합니다. 신청은 상시 접수이며, 별도의 구비 서류는 필요하지 않습니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "극장 기획공연 관람료 할인을 제공하는 제도로, 국가유공자·독립유공자·참전유공자·5·18민주유공자와 장애인복지카드 소지자를 대상으로 공연 티켓 가격을 할인해 줍니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.nmf.or.kr",
+  "audiences": [
+    "disabled"
+  ],
+  "benefit_raw": "○ 장애인 및 국가유공자의 여가 생활에 기여\n\n○ 공연 티켓 가격 감면(할인율 공연별 상이)\n- 「국가유공자 등 예우 및 지원에 관한 법률」에 의한 국가유공자증을 소지한 사람\n- 「장애인복지법」에 의한 장애인복지카드를 소지한 사람",
+  "category": "living",
+  "contact_raw": "공연예술팀/02-2077-2965",
+  "content_hash": "sha256:da76ce5d1d5f489682d6eff68ae0e832",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-22",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-B55285400001",
+  "is_mock": false,
+  "last_checked": "2026-10-22",
+  "last_updated": "2026-10-22",
+  "law_raw": "",
+  "name": "극장 용 기획공연 관람료 할인",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55285400001",
+  "org": "국립박물관문화재단",
+  "primary_audience": "disabled",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "극장-용-기획공연-관람료-할인",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 현금(감면) 개인",
+  "source_id": "B55285400001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 국가유공자, 독립유공자, 참전유공자, 5·18민주유공자\n\n○ 장애인복지카드소지자",
+  "view_count": 3736
+}
