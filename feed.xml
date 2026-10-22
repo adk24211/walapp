@@ -4,8 +4,56 @@
   <subtitle>정부·지자체 지원금과 복지 제도를 받을 수 있는지부터 신청 방법까지 하나씩 정리합니다. 공공데이터 원문을 토대로 쉬운 말로 풀어 씁니다.</subtitle>
   <link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html"/>
-  <updated>2026-10-21T09:34:58+09:00</updated>
+  <updated>2026-10-22T09:40:49+09:00</updated>
   <id>https://adk24211.github.io/walapp/</id>
+  <entry>
+    <title type="text">극장 용 기획공연 관람료 할인</title>
+    <link href="https://adk24211.github.io/walapp/support/living/%EA%B7%B9%EC%9E%A5-%EC%9A%A9-%EA%B8%B0%ED%9A%8D%EA%B3%B5%EC%97%B0-%EA%B4%80%EB%9E%8C%EB%A3%8C-%ED%95%A0%EC%9D%B8/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/%EA%B7%B9%EC%9E%A5-%EC%9A%A9-%EA%B8%B0%ED%9A%8D%EA%B3%B5%EC%97%B0-%EA%B4%80%EB%9E%8C%EB%A3%8C-%ED%95%A0%EC%9D%B8/</id>
+    <published>2026-10-22T00:00:00+09:00</published>
+    <updated>2026-10-22T00:00:00+09:00</updated><author><name>국립박물관문화재단</name></author><category term="living"/>
+    <summary type="text">극장 기획공연 관람료 할인을 제공하는 제도로, 국가유공자·독립유공자·참전유공자·5·18민주유공자와 장애인복지카드 소지자를 대상으로 공연 티켓 가격을 할인해 줍니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">고효율 터보압축기 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/living/%EA%B3%A0%ED%9A%A8%EC%9C%A8-%ED%84%B0%EB%B3%B4%EC%95%95%EC%B6%95%EA%B8%B0-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/%EA%B3%A0%ED%9A%A8%EC%9C%A8-%ED%84%B0%EB%B3%B4%EC%95%95%EC%B6%95%EA%B8%B0-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-10-22T00:00:00+09:00</published>
+    <updated>2026-10-22T00:00:00+09:00</updated><author><name>한국전력공사</name></author><category term="living"/>
+    <summary type="text">고효율 터보압축기로 기존 루츠·스크루 블로어를 교체하는 고객에게 에너지 효율 향상 및 온실가스 감축을 위한 지원금을 지급하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">장애인기업확인서 발급</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%9E%A5%EC%95%A0%EC%9D%B8%EA%B8%B0%EC%97%85%ED%99%95%EC%9D%B8%EC%84%9C-%EB%B0%9C%EA%B8%89/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%9E%A5%EC%95%A0%EC%9D%B8%EA%B8%B0%EC%97%85%ED%99%95%EC%9D%B8%EC%84%9C-%EB%B0%9C%EA%B8%89/</id>
+    <published>2026-10-22T00:00:00+09:00</published>
+    <updated>2026-10-22T00:00:00+09:00</updated><author><name>중소벤처기업부</name></author><category term="jobs"/>
+    <summary type="text">장애인기업활동촉진법에 따라 지정된 기업에게 장애인기업 확인서를 발급하는 제도로, 온라인을 통해 언제든 신청할 수 있습니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">자영업 컨설팅 서비스</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%9E%90%EC%98%81%EC%97%85-%EC%BB%A8%EC%84%A4%ED%8C%85-%EC%84%9C%EB%B9%84%EC%8A%A4/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%9E%90%EC%98%81%EC%97%85-%EC%BB%A8%EC%84%A4%ED%8C%85-%EC%84%9C%EB%B9%84%EC%8A%A4/</id>
+    <published>2026-10-22T00:00:00+09:00</published>
+    <updated>2026-10-22T00:00:00+09:00</updated><author><name>서민금융진흥원</name></author><category term="jobs"/>
+    <summary type="text">정책서민금융상품을 이용하는 저신용 영세자영업자를 대상으로 전문 컨설턴트가 경영진단과 솔루션을 제공하는 서비스입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">K-water 행복가득수 프로젝트</title>
+    <link href="https://adk24211.github.io/walapp/support/housing/k-water-%ED%96%89%EB%B3%B5%EA%B0%80%EB%93%9D%EC%88%98-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/housing/k-water-%ED%96%89%EB%B3%B5%EA%B0%80%EB%93%9D%EC%88%98-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/</id>
+    <published>2026-10-22T00:00:00+09:00</published>
+    <updated>2026-10-22T00:00:00+09:00</updated><author><name>한국수자원공사</name></author><category term="housing"/>
+    <summary type="text">K‑water 행복가득수 프로젝트는 저소득층(중위소득 80% 이하)을 대상으로 주방·화장실 수리 등 물 사용 환경을 개선해 주는 주거 분야 지원 사업입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">국가보훈대상자 재가복지 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/finance/%EA%B5%AD%EA%B0%80%EB%B3%B4%ED%9B%88%EB%8C%80%EC%83%81%EC%9E%90-%EC%9E%AC%EA%B0%80%EB%B3%B5%EC%A7%80-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/finance/%EA%B5%AD%EA%B0%80%EB%B3%B4%ED%9B%88%EB%8C%80%EC%83%81%EC%9E%90-%EC%9E%AC%EA%B0%80%EB%B3%B5%EC%A7%80-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-10-22T00:00:00+09:00</published>
+    <updated>2026-10-22T00:00:00+09:00</updated><author><name>국가보훈부</name></author><category term="finance"/>
+    <summary type="text">국가보훈대상자를 위한 재가복지 지원으로, 가정방문을 통해 가사·건강·편의 서비스를 제공하며, 65세 이상 거동이 불편한 독거·노인부부세대와 생활수준이 기초생활수급자·의료급여수급자 등에 해당하는 경우 지원받을 수 있는 제도입니다.</summary>
+  </entry>
   <entry>
     <title type="text">일생활 균형 인프라 구축비 지원</title>
     <link href="https://adk24211.github.io/walapp/support/jobs/%EC%9D%BC%EC%83%9D%ED%99%9C-%EA%B7%A0%ED%98%95-%EC%9D%B8%ED%94%84%EB%9D%BC-%EA%B5%AC%EC%B6%95%EB%B9%84-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
@@ -163,7 +211,7 @@
     <link href="https://adk24211.github.io/walapp/support/education/%EC%88%98%EC%82%B0%EC%83%9D%EB%AC%BC-%EB%B0%A9%EC%97%AD%EC%9E%A5%EB%B9%84-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
     <id>https://adk24211.github.io/walapp/support/education/%EC%88%98%EC%82%B0%EC%83%9D%EB%AC%BC-%EB%B0%A9%EC%97%AD%EC%9E%A5%EB%B9%84-%EC%A7%80%EC%9B%90/</id>
     <published>2026-10-18T00:00:00+09:00</published>
-    <updated>2026-10-21T00:00:00+09:00</updated><author><name>해양수산부</name></author><category term="education"/>
+    <updated>2026-10-22T00:00:00+09:00</updated><author><name>해양수산부</name></author><category term="education"/>
     <summary type="text">수산생물 방역장비 지원은 양식어업인·관련 단체·방역기관 등에 방역사업비를 국고와 지방비가 각각 50%씩 지원하는 제도입니다.</summary>
   </entry>
   <entry>
@@ -197,53 +245,5 @@
     <published>2026-10-17T00:00:00+09:00</published>
     <updated>2026-10-17T00:00:00+09:00</updated><author><name>한국장학재단</name></author><category term="education"/>
     <summary type="text">손해금(지연배상금) 감면은 6개월 이상 학자금 대출을 장기연체하고 채무상환 의지가 있는 경우, 손해금을 감면해 주는 신용회복지원제도이며, 온라인으로 언제든 신청할 수 있고 별도의 구비 서류는 필요하지 않습니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">문화시설 이용요금 감면(자연휴양림)</title>
-    <link href="https://adk24211.github.io/walapp/support/living/%EB%AC%B8%ED%99%94%EC%8B%9C%EC%84%A4-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/living/%EB%AC%B8%ED%99%94%EC%8B%9C%EC%84%A4-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC/</id>
-    <published>2026-10-16T00:00:00+09:00</published>
-    <updated>2026-10-16T00:00:00+09:00</updated><author><name>천안도시공사</name></author><category term="living"/>
-    <summary type="text">천안시민 및 장애인·다자녀가정·기초생활수급자·다문화가족·국가보훈대상자를 대상으로 자연휴양림 이용요금을 감면해 주는 생활·문화 지원 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">중소기업자간 경쟁제품 및 공사용자재 직접구매</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%EC%9E%90%EA%B0%84-%EA%B2%BD%EC%9F%81%EC%A0%9C%ED%92%88-%EB%B0%8F-%EA%B3%B5%EC%82%AC%EC%9A%A9%EC%9E%90%EC%9E%AC-%EC%A7%81%EC%A0%91%EA%B5%AC%EB%A7%A4/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%EC%9E%90%EA%B0%84-%EA%B2%BD%EC%9F%81%EC%A0%9C%ED%92%88-%EB%B0%8F-%EA%B3%B5%EC%82%AC%EC%9A%A9%EC%9E%90%EC%9E%AC-%EC%A7%81%EC%A0%91%EA%B5%AC%EB%A7%A4/</id>
-    <published>2026-10-16T00:00:00+09:00</published>
-    <updated>2026-10-16T00:00:00+09:00</updated><author><name>중소벤처기업부</name></author><category term="jobs"/>
-    <summary type="text">중소기업자간 경쟁제품 및 공사용자재 직접구매 제도는 중소기업이 공공기관 입찰 시 경쟁제품을 제한·지명 경쟁으로, 공사용 자재를 분리 발주하여 직접 구매하도록 지원합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">사이버 직업능력개발훈련</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%82%AC%EC%9D%B4%EB%B2%84-%EC%A7%81%EC%97%85%EB%8A%A5%EB%A0%A5%EA%B0%9C%EB%B0%9C%ED%9B%88%EB%A0%A8/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EC%82%AC%EC%9D%B4%EB%B2%84-%EC%A7%81%EC%97%85%EB%8A%A5%EB%A0%A5%EA%B0%9C%EB%B0%9C%ED%9B%88%EB%A0%A8/</id>
-    <published>2026-10-16T00:00:00+09:00</published>
-    <updated>2026-10-16T00:00:00+09:00</updated><author><name>한국장애인고용공단</name></author><category term="jobs"/>
-    <summary type="text">디지털능력개발원 및 정부·공공부문 대상 등록장애인을 위한 사이버 직업능력개발훈련으로, 온라인으로 언제든 신청할 수 있는 프로그램입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">장애인보조기기 교부</title>
-    <link href="https://adk24211.github.io/walapp/support/housing/%EC%9E%A5%EC%95%A0%EC%9D%B8%EB%B3%B4%EC%A1%B0%EA%B8%B0%EA%B8%B0-%EA%B5%90%EB%B6%80/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/housing/%EC%9E%A5%EC%95%A0%EC%9D%B8%EB%B3%B4%EC%A1%B0%EA%B8%B0%EA%B8%B0-%EA%B5%90%EB%B6%80/</id>
-    <published>2026-10-16T00:00:00+09:00</published>
-    <updated>2026-10-16T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="housing"/>
-    <summary type="text">장애인보조기기 교부는 보건복지부가 지정한 장애 유형 및 저소득층을 대상으로, 주민센터에서 방문 신청하면 44가지 보조기구를 상시 제공받을 수 있는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">언어발달지원</title>
-    <link href="https://adk24211.github.io/walapp/support/care/%EC%96%B8%EC%96%B4%EB%B0%9C%EB%8B%AC%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/care/%EC%96%B8%EC%96%B4%EB%B0%9C%EB%8B%AC%EC%A7%80%EC%9B%90/</id>
-    <published>2026-10-16T00:00:00+09:00</published>
-    <updated>2026-10-17T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="care"/>
-    <summary type="text">보건복지부가 시행하는 언어발달지원 제도는 장애를 가진 부모의 12세 미만 비장애아동에게 소득 기준에 따라 바우처를 제공하고, 언어·청능재활 등 서비스를 지원합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">방역사업비 지원(질병 예찰 및 방역, 교육)</title>
-    <link href="https://adk24211.github.io/walapp/support/care/%EB%B0%A9%EC%97%AD%EC%82%AC%EC%97%85%EB%B9%84-%EC%A7%80%EC%9B%90-%EC%A7%88%EB%B3%91-%EC%98%88%EC%B0%B0-%EB%B0%8F-%EB%B0%A9%EC%97%AD-%EA%B5%90%EC%9C%A1/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/care/%EB%B0%A9%EC%97%AD%EC%82%AC%EC%97%85%EB%B9%84-%EC%A7%80%EC%9B%90-%EC%A7%88%EB%B3%91-%EC%98%88%EC%B0%B0-%EB%B0%8F-%EB%B0%A9%EC%97%AD-%EA%B5%90%EC%9C%A1/</id>
-    <published>2026-10-16T00:00:00+09:00</published>
-    <updated>2026-10-18T00:00:00+09:00</updated><author><name>해양수산부</name></author><category term="care"/>
-    <summary type="text">양식업자·양식업 종사자와 수산생물 관련 단체 등을 대상으로 방역교육, 위촉공수산질병관리사 수당 및 방역사업 경비 등을 지원하는 방역사업비 지원(질병 예찰 및 방역, 교육) 제도입니다.</summary>
   </entry>
 </feed>
