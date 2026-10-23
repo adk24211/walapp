@@ -1,0 +1,70 @@
+{
+  "_prose": {
+    "eligibility": [
+      "보호대상아동을 국내입양한 가정",
+      "가정법원 입양확정일이 2026년 1월 1일 이후인 경우",
+      "위 두 조건을 모두 만족하면 지원 대상이 됩니다"
+    ],
+    "faq": [
+      {
+        "a": "지원 대상 가정에 1회, 100만원을 지급합니다. 지급 시기는 별도 안내됩니다.",
+        "q": "지원금은 언제 지급되나요?"
+      }
+    ],
+    "note": "지원금은 1회에 한해 지급됩니다.",
+    "steps": [
+      {
+        "body": "시·군·구청에 직접 방문하여 입양아동 양육보조금 등 신청서와 입양 확정증명원 사본, 통장 사본을 제출하시면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "보건복지부가 마련한 입양비용지원은 국내입양특별법에 따라 보호대상아동을 입양한 가정 중 가정법원 입양확정일이 2026년 1월 1일 이후인 경우에 한해 1회 100만원을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "입양부모가 신청서류를 첨부하여 시군구청에 신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "ㅇ 국내입양에 관한 특별법에 따라 보호대상아동을 국내입양한 가정 중에서 가정법원 입양확정일이 2026.1.1. 이후인 가정에 1회, 100만원 지급\n\n※ 동 사업은 복권기금에서 지원\nㆍ 복권기금 : 2004년 제정된 복권 및 복권기금법에 따라 복권사업으로 조성된 재원을 투명하고 효율적으로 관리, 사용하기 위해 설치한 기금(사용처 : 법정배분사업 35%, 공익사업 65%)",
+  "category": "care",
+  "contact_raw": "보건복지상담센터/129",
+  "content_hash": "sha256:0ab1ab893d3e9b9228ecdf0540ef0fe5",
+  "criteria_raw": "○ 국내입양에 관한 특별법에 따라 보호대상아동을 국내입양한 가정 중에서 가정법원 입양확정일이 2026.1.1. 이후인 가정",
+  "deferred_detail": false,
+  "documents_raw": [
+    "입양아동 양육보조금 등 신청서 1부",
+    "입양 확정증명원 사본 1부",
+    "통장사본 1부"
+  ],
+  "first_published": "2026-10-23",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-SCY000000040",
+  "is_mock": false,
+  "last_checked": "2026-10-23",
+  "last_updated": "2026-10-23",
+  "law_raw": "",
+  "name": "입양비용지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SCY000000040",
+  "org": "보건복지부",
+  "primary_audience": "parent",
+  "receiver_raw": "시·군·구청",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "입양비용지원",
+  "source": "bojo24",
+  "source_category_raw": "임신·출산 현금 개인",
+  "source_id": "SCY000000040",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 국내입양에 관한 특별법에 따라 보호대상아동을 국내입양한 가정 중에서 가정법원 입양확정일이 2026.1.1. 이후인 가정",
+  "view_count": 2454
+}
