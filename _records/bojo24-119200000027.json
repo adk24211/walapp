@@ -1,0 +1,70 @@
+{
+  "_prose": {
+    "eligibility": [
+      "산지위판장, 도매시장 법인, 중도매인 등이어야 합니다.",
+      "전년도 수매 실적이 있으면 선정에 반영됩니다.",
+      "중도매업 종사 경력이 있으면 선정에 반영됩니다.",
+      "신규 사업자이거나 소액 신청자도 검토 대상입니다."
+    ],
+    "faq": [
+      {
+        "a": "지원 금리는 1.5%에서 3% 사이이며, 신청한 융자에 따라 적용됩니다.",
+        "q": "지원 금리 범위는 어떻게 되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "지원 대상자는 수협중앙회·수협은행·aT한국농수산식품유통공사 중 한 곳을 직접 방문하여 신청합니다. 방문 시 신청서와 사업자등록증 등을 제출하시면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "산지 및 소비지 유통자금 융자 지원은 산지위판장·도매시장·중도매인 등을 대상으로 어대금·직거래 자금 등을 연 1.5%~3% 금리로 융자해 주는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "공고일로부터 2주",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ 산지위판장 및 수산물 도매시장 어대금 결제자금, 직거래 자금 등 융자지원(금리 1.5~3%)",
+  "category": "living",
+  "contact_raw": "수협중앙회/02-2240-2466\n수협은행/02-6055-8521\n수협은행/02-6055-8525\n한국농수산식품유통공사/061-931-0586",
+  "content_hash": "sha256:0649a75f79bb26acad1b7139dc7c451f",
+  "criteria_raw": "○ 전년도수매실적, 중도매업 종사경력, 신규사업자, 소액신청자 등을 검토하여 사업자 선정심의회를 거쳐 사업자 선정",
+  "deferred_detail": false,
+  "documents_raw": [
+    "신청서",
+    "사업자등록증 등"
+  ],
+  "first_published": "2026-10-24",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-119200000027",
+  "is_mock": false,
+  "last_checked": "2026-10-24",
+  "last_updated": "2026-10-24",
+  "law_raw": "",
+  "name": "산지 및 소비지 유통자금 융자 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/119200000027",
+  "org": "해양수산부",
+  "primary_audience": "business",
+  "receiver_raw": "수협중앙회, 수협은행, aT한국농수산식품유통공사",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "산지-및-소비지-유통자금-융자-지원",
+  "source": "bojo24",
+  "source_category_raw": "농림축산어업 현금(융자) 법인/시설/단체",
+  "source_id": "119200000027",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 산지위판장, 도매시장 법인, 중도매인 등",
+  "view_count": 3026
+}

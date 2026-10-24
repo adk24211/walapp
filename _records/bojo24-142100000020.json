@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "장애인기업 중 1인 중증장애인 사업주가 지원 대상입니다.",
+      "선정은 평가우수자를 기준으로 이루어집니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "관할 기관을 직접 방문하여 신청합니다. 신청 시 지원금 지급 신청서, 보조공학기기 납품 확인서, 이용 전·후 사진, 구매 관련 서류, 지원금 지급 통장 사본 등을 제출해야 합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "중소벤처기업부에서 운영하는 1인 사업자 보조공학기기 지원은 장애인기업 중 1인 중증장애인 사업주에게 물품가액 5백만원 한도 내 보조공학기기를 10% 자부담으로 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "3~4월",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled",
+    "business",
+    "employer"
+  ],
+  "benefit_raw": "1인 장애인기업 사업주(대표자) 대상 보조공학기기\n(점자단말기, 의사소통보조기기, 사무보조기기 등) 물품가액 5백만원 한도 내 지원(자부담 10%)",
+  "category": "jobs",
+  "contact_raw": "(재)장애인기업종합지원센터/02-2181-6531",
+  "content_hash": "sha256:8309e5ae5e4758b3ccc08e68a665a34c",
+  "criteria_raw": "○ 평가우수자 선정",
+  "deferred_detail": false,
+  "documents_raw": [
+    "1인 장애인 사업주 보조공학기기 지원사업 지원금 지급 신청서",
+    "보조공학기기 납품 확인서",
+    "보조공학기기 이용 전․후 사진",
+    "보조공학기기 구매 관련 서류",
+    "지원금 지급 통장 사본"
+  ],
+  "first_published": "2026-10-24",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-142100000020",
+  "is_mock": false,
+  "last_checked": "2026-10-24",
+  "last_updated": "2026-10-24",
+  "law_raw": "",
+  "name": "1인 사업자 보조공학기기 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/142100000020",
+  "org": "중소벤처기업부",
+  "primary_audience": "disabled",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "1인-사업자-보조공학기기-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 법인/시설/단체",
+  "source_id": "142100000020",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 장애인기업 중 1인 중증장애인 사업주",
+  "view_count": 3180
+}
