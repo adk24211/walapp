@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "경기북부권 지역에 거주하는 사람",
+      "경기북부에 소재한 대학의 재학생 또는 졸업생",
+      "경기북부에 소재한 기업의 대표자 또는 종사자"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청합니다. 지정된 웹사이트에서 신청하며 별도의 서류 제출은 필요하지 않습니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "경기북부권 거주자와 경기북부 소재 대학생·기업인을 대상으로 웹툰·웹소설 작가데뷔, 채색, PD 과정을 멘토링 교육 형태로 제공하는 온라인 신청 지원 사업입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "www.gipa.or.kr",
+  "audiences": [
+    "youth"
+  ],
+  "benefit_raw": "○ 전문교육 : 웹툰,웹소설 작가데뷔 과정, 웹툰 채색전문 과정, PD과정 교육\n(멘토링교육으로 소수인원 선발)",
+  "category": "care",
+  "contact_raw": "콘텐츠산업팀/031-931-3508",
+  "content_hash": "sha256:ebfb4e0c49ca70723d0556d38c59c34f",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-25",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-O00046700012",
+  "is_mock": false,
+  "last_checked": "2026-10-25",
+  "last_updated": "2026-10-25",
+  "law_raw": "",
+  "name": "웹툰 창작 인력 양성",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00046700012",
+  "org": "고양산업진흥원",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "웹툰-창작-인력-양성",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 개인",
+  "source_id": "O00046700012",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 전문교육 : 경기북부권 지역 거주자, 경기북부 소재 대학생(졸업생 또는 재학생), 경기북부 소재 기업인(대표 또는 종사자)",
+  "view_count": 1251
+}
