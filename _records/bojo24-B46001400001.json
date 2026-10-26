@@ -1,0 +1,74 @@
+{
+  "_prose": {
+    "eligibility": [
+      "자원봉사를 원하는 개인 자원봉사자",
+      "자원봉사를 원하는 봉사단체",
+      "선정 기준이 별도로 없으며, 신청은 상시 접수됩니다"
+    ],
+    "faq": [
+      {
+        "a": "전국 사회복지 자원봉사 운영관리, 조사연구·정책 건의·홍보출판, VMS 구축·운영, 자원봉사 종합보험 운영 등 사회복지 자원봉사 활성화를 위한 다양한 지원이 제공됩니다.",
+        "q": "지원 내용에는 어떤 지원이 포함되어 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청합니다. 신청 시 사회복지 자원봉사관리센터 지정신청공문·지정신청서·사회복지시설신고필증·고유번호증 등을 제출해야 합니다. 자원봉사자는 VMS에 회원가입 후 수요처를 방문하여 봉사활동을 수행합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "사회복지 자원봉사는 개인 자원봉사자와 봉사단체를 대상으로 전국 사회복지 자원봉사 운영·관리와 인증시스템 구축, 보험 등 다양한 지원을 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "http://www.vms.or.kr",
+  "audiences": [
+    "disabled",
+    "business"
+  ],
+  "benefit_raw": "○ 전국의 사회복지 자원봉사 운영관리\n\n○ 자원봉사에 관한 조사연구, 정책 건의, 홍보출판\n\n○ 사회복지 자원봉사 인증관리시스템(VMS) 구축/운영(자원봉사자의 봉사활동 실적 관리 등)\n\n○ 자원봉사자에 대한 인정보상 제공 : 자원봉사 종합보험 운영(사망 및 후유 장애, 의료비, 입원비, 타인(수혜자)의 물질 손괴 보상 등)\n\n○기타 사회복지 자원봉사 활성화 사항 등(사기진작 및 동기부여)",
+  "category": "care",
+  "contact_raw": "자원봉사사업단/02-2077-3988",
+  "content_hash": "sha256:00138a0b89dd6c9419668e2adef03efb",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "○ 사회복지 자원봉사관리센터 : 지정신청공문",
+    "지정신청서",
+    "사회복지시설신고필증",
+    "고유번호증 등",
+    "○ 자원봉사자 : VMS에 회원가입 후",
+    "수요처 방문 후 자원봉사활동 수행"
+  ],
+  "first_published": "2026-10-26",
+  "how_to_raw": "기타 온라인신청\n직접입력",
+  "id": "bojo24-B46001400001",
+  "is_mock": false,
+  "last_checked": "2026-10-26",
+  "last_updated": "2026-10-26",
+  "law_raw": "",
+  "name": "사회복지 자원봉사",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B46001400001",
+  "org": "한국사회복지협의회",
+  "primary_audience": "disabled",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "사회복지-자원봉사",
+  "source": "bojo24",
+  "source_category_raw": "보호·돌봄 서비스(돌봄) 개인\n가구\n소상공인\n법인/시설/단체",
+  "source_id": "B46001400001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 자원봉사를 원하는 개인 자원봉사자 및 봉사단체",
+  "view_count": 3110
+}

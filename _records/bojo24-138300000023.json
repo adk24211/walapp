@@ -1,0 +1,66 @@
+{
+  "_prose": {
+    "eligibility": [
+      "폭력예방교육 기회 및 접근성이 부족한 일반국민",
+      "노인",
+      "장애인",
+      "이주민",
+      "학부모·농산어촌·도서·벽지·접적 지역 거주 주민"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "찾아가는 폭력예방교육 지원기관에 전화 또는 온라인으로 교육 신청서를 제출하시면 됩니다. 신청서는 전화 또는 온라인 신청 시 작성합니다. 신청은 상시 접수됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "찾아가는 폭력예방교육 서비스 제공은 폭력예방교육 기회와 접근성이 부족한 일반국민에게 현장 방문형 교육을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "senior",
+    "disabled"
+  ],
+  "benefit_raw": "교육 기회 또는 접근성 부족한 일반국민에게 '찾아가는 폭력예방교육'을 지원",
+  "category": "care",
+  "contact_raw": "성평등가족부 폭력예방교육과/02-2100-6434",
+  "content_hash": "sha256:b9e1256612780316b8a5c9e3e26da0cb",
+  "criteria_raw": "노인, 장애인, 이주민, 학부모, 농산어촌·도서·벽지·접적 지역 거주 주민 등",
+  "deferred_detail": false,
+  "documents_raw": [
+    "교육 신청서(전화 또는 온라인 신청 시 작성)"
+  ],
+  "first_published": "2026-10-26",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-138300000023",
+  "is_mock": false,
+  "last_checked": "2026-10-26",
+  "last_updated": "2026-10-26",
+  "law_raw": "",
+  "name": "찾아가는 폭력예방교육 서비스 제공",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000023",
+  "org": "성평등가족부",
+  "primary_audience": "disabled",
+  "receiver_raw": "찾아가는 폭력예방교육 지원기관(중앙 1개소, 지역 18개소)",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "찾아가는-폭력예방교육-서비스-제공",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 개인",
+  "source_id": "138300000023",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "폭력예방교육 기회 및 접근성이 부족한 일반국민",
+  "view_count": 2766
+}
