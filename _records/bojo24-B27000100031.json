@@ -1,0 +1,74 @@
+{
+  "_prose": {
+    "eligibility": [
+      "한부모가족(미혼 모·부가족)인 경우입니다.",
+      "재혼가족을 포함한 기타 한부모가족인 경우입니다.",
+      "조부모 가족인 경우입니다.",
+      "건강보험료 본인부담금 합산액이 기준중위소득 125% 이하인 경우입니다."
+    ],
+    "faq": [
+      {
+        "a": "양육비 및 양육비 심판청구 중 친권자·양육자 지정(변경) 사건, 인지청구 및 자의 성관 본 계속사용 허가 청구 사건, 아동을 양육하는 조부모의 후견인 선임청구 사건에 적용됩니다.",
+        "q": "무료 소송대리 서비스는 어떤 사건에 적용되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "대한법률구조공단 홈페이지에서 신청 양식을 작성하고 제출하면 됩니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "관할 사무소에 직접 방문하여 신청서를 제출하면 됩니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "무료 소송대리 서비스(한부모가족)는 양육·돌봄 분야에서 한부모가족 및 조부모 가족에게 건강보험료 본인부담금이 기준중위소득 125% 이하인 경우 무료 법률상담과 소송대리를 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.klac.or.kr",
+  "audiences": [
+    "parent",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 사회·경제적 약자에 대한 법률구조서비스 제공으로 법률복지증진\n\n○ 무료 법률상담\n\n○ 무료 소송대리\n- 양육비 및 양육비 심판청구 중 상대방이 제기한 친권자 및 양육자 지정(변경)사건\n- 인지청구 및 자의 성관 본 계속사용 허가 청구사건\n- 아동을 양육하는 조부모의 후견인 선임청구사건",
+  "category": "care",
+  "contact_raw": "(국번없이)132 법률상담 콜센타/132",
+  "content_hash": "sha256:90bbf72a4a4a36a47e7161e4975c5aa3",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-27",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-B27000100031",
+  "is_mock": false,
+  "last_checked": "2026-10-27",
+  "last_updated": "2026-10-27",
+  "law_raw": "",
+  "name": "무료 소송대리 서비스(한부모가족)",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B27000100031",
+  "org": "대한법률구조공단",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "무료-소송대리-서비스-한부모가족",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타(상담) 가구",
+  "source_id": "B27000100031",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 한부모가족(미혼 모·부가족, 기타 한부모가족(재혼가족 포함), 조부모 가족)\n- 건강보험료 본인부담금 합산액이 기준중위소득 125% 이하인 자",
+  "view_count": 2428
+}

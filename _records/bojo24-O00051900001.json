@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "부모 중 1인이 안산시 관내 기업에 1년 이상 재직 중이어야 합니다.",
+      "지원 대상은 해당 노동자의 대학생 자녀입니다.",
+      "지원 금액은 연 200만원 이내이며 수업료에 한합니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "지원에 필요한 서류를 모두 준비한 뒤, 직접 방문하여 제출합니다. 방문 시 구비 서류를 반드시 지참하셔야 합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "산단노동자자녀장학금은 안산시 산업단지 기업에 1년 이상 재직 중인 노동자의 대학생 자녀에게 연 200만원 한도 내에서 수업료를 지원하는 제도이며, 신청은 직접 방문하여 구비 서류를 제출해야 합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "youth"
+  ],
+  "benefit_raw": "안산시 관내 산업단지 기업체에 재직중인 노동자의 복지증진을 위해 노동자의 자녀(대학생) 수업료 지원(연 200만원 이내)",
+  "category": "education",
+  "contact_raw": "안산인재육성재단/031-414-0924",
+  "content_hash": "sha256:63b644d7c2cf82861d70aa4fc95e452f",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "1. 장학생 추천서",
+    "2. 서약서",
+    "3. 개인정보 및 영상정보 수집",
+    "이용동의서",
+    "4. 학생 본인 기준 주민등록표초본 (주소변동이력 전체포함)",
+    "5. 성적증빙서류 : 대학교 직전학기 성적증명서(백분율 표기 )",
+    "성적증명서에 백분위 환산점수가 미 표기된 경우",
+    "☞ 백분율 점수 수기로 기재하여 담당자 도장 및 담당자 성명 날인된 성적증명서 발급 요청",
+    "6. 산단노동자 부모 증 1인의 재직증명서 1부",
+    "7. 가족관계증명서(부모명의 1부)"
+  ],
+  "first_published": "2026-10-27",
+  "how_to_raw": "방문신청\n직접입력",
+  "id": "bojo24-O00051900001",
+  "is_mock": false,
+  "last_checked": "2026-10-27",
+  "last_updated": "2026-10-27",
+  "law_raw": "",
+  "name": "산단노동자자녀장학금",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00051900001",
+  "org": "재단법인안산인재육성재단",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "산단노동자자녀장학금",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "O00051900001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "부모 중 1인이 1년 이상 안산시 관내 기업체에 재직중인 자녀(대학생)의 수업료 지원 (연 200만원 이내)",
+  "view_count": 1245
+}
