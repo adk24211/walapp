@@ -1,0 +1,67 @@
+{
+  "_prose": {
+    "eligibility": [
+      "책임감이 투철하고 계약 기간 중 업무에 전념할 수 있는 자",
+      "저소득층(기초생활수급자·차상위계층·1부모가족 세대주) 우대",
+      "다자녀보육가구(주민등록상 만20세 미만 자녀를 3명 이상 보육하고 있는 자) 우대",
+      "북한이탈주민(북한이탈주민 확인서 보유자) 우대",
+      "장애인(장애인등록증 소지자) 우대 및 국가유공자·민주유공자·특수임무유공자 등 관련 법률에 따라 가점 부여"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청합니다. 신청은 복지통계과에 접수됩니다. 구비 서류는 채용공고에 따릅니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "가계금융복지조사 통계조사원 일자리 제공은 통계조사 수행을 위해 통계조사원을 채용하는 지원 사업입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "나라통계 조사원모집 공고 참고",
+    "start": ""
+  },
+  "apply_url": "https://www.mods.go.kr",
+  "audiences": [
+    "parent",
+    "disabled",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 통계조사 수행을 위한 통계조사원 채용\n- 대상처 방문조사, 응답자 설득, 전화 질의조회 등의 업무 수행",
+  "category": "jobs",
+  "contact_raw": "국가데이터처 복지통계과/042-481-6943",
+  "content_hash": "sha256:dda7e9cc9e3f2581c9a1e12e5149650b",
+  "criteria_raw": "○ 저소득층우대: 기초생활수급자, 차상위계층, 1부모가족 세대주\n\n○ 다자녀보육가구: 주민등록상 만20세미만 자녀를 3명이상 보육하고 있는 자\n\n○ 북한이탈주민 우대(북한이탈주민 확인서 보유자)\n\n○ 장애인 우대: 「장애인고용촉진 및 직업재활법률」에 따른 장애인 우대(장애인등록증소지자)\n\n○ 「국가유공자 등 예우 및 지원에 관한 법률」 및 「5.18 민주유공자 예우에 관한 법률」에 따른 가점 부여\n\n○ 「특수임무유공자 예우 및 단체설립에 관한 법률」 및 「고엽제후유의증 등 환자지원 및 단체설립에 관한 법률」에 따른 가점 부여",
+  "deferred_detail": false,
+  "documents_raw": [
+    "채용공고에 따름"
+  ],
+  "first_published": "2026-10-28",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-999000000065",
+  "is_mock": false,
+  "last_checked": "2026-10-28",
+  "last_updated": "2026-10-28",
+  "law_raw": "",
+  "name": "가계금융복지조사 통계조사원 일자리 제공",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000065",
+  "org": "국가데이터처",
+  "primary_audience": "lowincome",
+  "receiver_raw": "복지통계과",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "가계금융복지조사-통계조사원-일자리-제공",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 서비스(일자리) 개인",
+  "source_id": "999000000065",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 책임감이 투철하고 계약 기간 중 업무에 전념할 수 있는 자",
+  "view_count": 3442
+}

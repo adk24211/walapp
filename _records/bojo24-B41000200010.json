@@ -1,0 +1,64 @@
+{
+  "_prose": {
+    "eligibility": [
+      "엘리베이터 기존 저항제동장치를 회생제동장치로 교체하는 고객",
+      "엘리베이터 기존 저항제동장치를 회생제동 기능이 적용된 제어반으로 교체하는 고객",
+      "교체에 사용하는 회생제동장치는 한전 승인기기 또는 한국에너지공단 고효율 인증제품이어야 함",
+      "교체에 사용하는 회생제동 기능 적용 제어반은 한국승강기안전공단 승인 제품이어야 함"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청은 지정된 웹사이트에서 진행하고, 방문 신청은 직접 방문하여 신청합니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "엘리베이터 기존 저항제동장치를 회생제동장치 또는 회생제동 기능이 적용된 제어반으로 교체하는 고객에게 에너지 효율 향상 및 온실가스 감축을 위한 지원금을 지급하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "2026-12-18",
+    "raw": "2026.01.19~2026.12.18",
+    "start": "2026-01-19"
+  },
+  "apply_url": "https://online.kepco.co.kr/",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "에너지 효율향상 및 온실가스 감축을 위해 고객이 엘리베이터의 기존 저항제동장치를 회생제동장치 또는 회생제동 기능이 적용된 제어반로 교체 시 지원금 지급",
+  "category": "living",
+  "contact_raw": "수요효율처/123",
+  "content_hash": "sha256:aa378de7aae49ccd4115e693a7c2a298",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-28",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-B41000200010",
+  "is_mock": false,
+  "last_checked": "2026-10-28",
+  "last_updated": "2026-10-28",
+  "law_raw": "",
+  "name": "회생제동장치 지원",
+  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B41000200010",
+  "org": "한국전력공사",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "회생제동장치-지원",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금 개인\n소상공인\n법인/시설/단체",
+  "source_id": "B41000200010",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 엘리베이터의 기존 저항제동장치를 회생제동장치 또는 회생제동 기능이 적용된 제어반으로 교체하는 고객\n- (지원기기)\n· 회생제동장치 : 한전 승인기기 또는 한국에너지공단 고효율 인증제품\n· 회생제동 기능 적용 제어반 : 한국승강기안전공단 승인 제품",
+  "view_count": 2580
+}
