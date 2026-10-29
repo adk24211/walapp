@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "조부모·부모·배우자·배우자의 부모·자녀·손자녀 등 가족 중 위에 해당하는 사람이 있는 경우",
+      "그 가족이 질병·사고·노령·또는 자녀 양육으로 긴급히 돌봄이 필요한 경우",
+      "근로자 본인이 위 조건을 충족하는 경우"
+    ],
+    "faq": [
+      {
+        "a": "연간 최장 사용일수는 10일이며, 연장되는 경우 최대 20일, 한부모근로자는 최대 25일까지 사용할 수 있습니다.",
+        "q": "연간 사용일수를 초과해서 신청할 수 있나요?"
+      },
+      {
+        "a": "가족돌봄휴가 기간은 가족돌봄휴직 기간에 포함됩니다.",
+        "q": "가족돌봄휴가와 가족돌봄휴직은 어떻게 연계되나요?"
+      }
+    ],
+    "note": "한부모근로자는 연간 최대 25일까지 사용할 수 있습니다.",
+    "steps": [
+      {
+        "body": "가족돌봄휴가는 별도 신청 없이 바로 사용할 수 있습니다. 사용하고자 하는 기간을 1일 단위로 선택하면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "가족돌봄휴가 제도는 근로자가 가족 중 질병·사고·노령·자녀 양육 등으로 긴급히 돌봄이 필요할 경우 연간 최대 10일(연장 시 20일, 한부모근로자는 25일)까지 1일 단위로 휴가를 사용할 수 있도록 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "○ 사용 기간\n- 연간 최장 10일(연장되는 경우 20일이며, 한부모근로자는 25일), 1일 단위 사용 가능\n- 가족돌봄휴가 기간은 가족돌봄휴직 기간에 포함",
+  "category": "jobs",
+  "contact_raw": "고용노동부 고객상담센터/1350",
+  "content_hash": "sha256:f93ef944a267852d6c53e9b6de923f4d",
+  "criteria_raw": "○ 가족의 질병, 사고, 노령, 또는 자녀의 양육으로 긴급하게 돌봄이 필요한 가족*이 있는 근로자\n* 조부모, 부모, 배우자, 배우자의 부모, 자녀, 손자녀",
+  "deferred_detail": false,
+  "documents_raw": [
+    "신청서"
+  ],
+  "first_published": "2026-10-29",
+  "how_to_raw": "신청불필요",
+  "id": "bojo24-149200005038",
+  "is_mock": false,
+  "last_checked": "2026-10-29",
+  "last_updated": "2026-10-29",
+  "law_raw": "",
+  "name": "가족돌봄휴가 제도",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156117&bnefType=all&svcId=149200005038",
+  "org": "고용노동부",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "가족돌봄휴가-제도",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 서비스(돌봄) 개인",
+  "source_id": "149200005038",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 가족의 질병, 사고, 노령, 또는 자녀의 양육으로 긴급하게 돌봄이 필요한 가족*이 있는 근로자\n* 조부모, 부모, 배우자, 배우자의 부모, 자녀, 손자녀",
+  "view_count": 2357
+}
