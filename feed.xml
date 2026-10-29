@@ -4,8 +4,40 @@
   <subtitle>정부·지자체 지원금과 복지 제도를 받을 수 있는지부터 신청 방법까지 하나씩 정리합니다. 공공데이터 원문을 토대로 쉬운 말로 풀어 씁니다.</subtitle>
   <link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html"/>
-  <updated>2026-10-28T10:17:11+09:00</updated>
+  <updated>2026-10-29T10:53:37+09:00</updated>
   <id>https://adk24211.github.io/walapp/</id>
+  <entry>
+    <title type="text">가족돌봄휴가 제도</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EA%B0%80%EC%A1%B1%EB%8F%8C%EB%B4%84%ED%9C%B4%EA%B0%80-%EC%A0%9C%EB%8F%84/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EA%B0%80%EC%A1%B1%EB%8F%8C%EB%B4%84%ED%9C%B4%EA%B0%80-%EC%A0%9C%EB%8F%84/</id>
+    <published>2026-10-29T00:00:00+09:00</published>
+    <updated>2026-10-29T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
+    <summary type="text">가족돌봄휴가 제도는 근로자가 가족 중 질병·사고·노령·자녀 양육 등으로 긴급히 돌봄이 필요할 경우 연간 최대 10일(연장 시 20일, 한부모근로자는 25일)까지 1일 단위로 휴가를 사용할 수 있도록 지원하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">논산시장학회 장학금</title>
+    <link href="https://adk24211.github.io/walapp/support/education/%EB%85%BC%EC%82%B0%EC%8B%9C%EC%9E%A5%ED%95%99%ED%9A%8C-%EC%9E%A5%ED%95%99%EA%B8%88/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/education/%EB%85%BC%EC%82%B0%EC%8B%9C%EC%9E%A5%ED%95%99%ED%9A%8C-%EC%9E%A5%ED%95%99%EA%B8%88/</id>
+    <published>2026-10-29T00:00:00+09:00</published>
+    <updated>2026-10-29T00:00:00+09:00</updated><author><name>재단법인논산시장학회</name></author><category term="education"/>
+    <summary type="text">논산시장학회에서 운영하는 장학금으로, 논산시 거주 주민 및 그 자녀를 대상으로 학업을 지원합니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">성매매 피해아동 청소년 통합지원 사업</title>
+    <link href="https://adk24211.github.io/walapp/support/care/%EC%84%B1%EB%A7%A4%EB%A7%A4-%ED%94%BC%ED%95%B4%EC%95%84%EB%8F%99-%EC%B2%AD%EC%86%8C%EB%85%84-%ED%86%B5%ED%95%A9%EC%A7%80%EC%9B%90-%EC%82%AC%EC%97%85/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/%EC%84%B1%EB%A7%A4%EB%A7%A4-%ED%94%BC%ED%95%B4%EC%95%84%EB%8F%99-%EC%B2%AD%EC%86%8C%EB%85%84-%ED%86%B5%ED%95%A9%EC%A7%80%EC%9B%90-%EC%82%AC%EC%97%85/</id>
+    <published>2026-10-29T00:00:00+09:00</published>
+    <updated>2026-10-29T00:00:00+09:00</updated><author><name>성평등가족부</name></author><category term="care"/>
+    <summary type="text">성평등가족부가 마련하고 한국여성인권진흥원이 접수하는 ‘성매매 피해아동 청소년 통합지원 사업’은 성매매 피해아동·청소년에게 긴급 구조·상담·보호·자립·치료 등을 통합 지원합니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">경북농민사관학교 교육지원</title>
+    <link href="https://adk24211.github.io/walapp/support/care/%EA%B2%BD%EB%B6%81%EB%86%8D%EB%AF%BC%EC%82%AC%EA%B4%80%ED%95%99%EA%B5%90-%EA%B5%90%EC%9C%A1%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/%EA%B2%BD%EB%B6%81%EB%86%8D%EB%AF%BC%EC%82%AC%EA%B4%80%ED%95%99%EA%B5%90-%EA%B5%90%EC%9C%A1%EC%A7%80%EC%9B%90/</id>
+    <published>2026-10-29T00:00:00+09:00</published>
+    <updated>2026-10-29T00:00:00+09:00</updated><author><name>재단법인경상북도농식품유통교육진흥원</name></author><category term="care"/>
+    <summary type="text">경북농민사관학교 교육지원은 경상북도에 경작지를 둔 농어업인에게 교육 서비스를 제공하는 지원 제도입니다. 온라인 및 방문 신청이 가능하며, 청년·예비농업인 등 특별전형도 포함됩니다.</summary>
+  </entry>
   <entry>
     <title type="text">회생제동장치 지원</title>
     <link href="https://adk24211.github.io/walapp/support/living/%ED%9A%8C%EC%83%9D%EC%A0%9C%EB%8F%99%EC%9E%A5%EC%B9%98-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
@@ -123,8 +155,8 @@
     <link href="https://adk24211.github.io/walapp/support/care/%EC%95%88%EC%A0%84%EB%B3%B5%EC%A7%80%ED%98%95-%EC%97%B0%EA%B7%BC%ED%95%B4%EC%96%B4%EC%84%A0-%EA%B8%B0%EB%B0%98%EA%B5%AC%EC%B6%95/" rel="alternate" type="text/html"/>
     <id>https://adk24211.github.io/walapp/support/care/%EC%95%88%EC%A0%84%EB%B3%B5%EC%A7%80%ED%98%95-%EC%97%B0%EA%B7%BC%ED%95%B4%EC%96%B4%EC%84%A0-%EA%B8%B0%EB%B0%98%EA%B5%AC%EC%B6%95/</id>
     <published>2026-10-26T00:00:00+09:00</published>
-    <updated>2026-10-26T00:00:00+09:00</updated><author><name>해양수산부</name></author><category term="care"/>
-    <summary type="text">안전복지형 연근해어선 기반구축은 연근해어업 허가를 받은 어업인을 대상으로, 선령 15년 이상인 노후 어선을 안전·복지·에너지 절감 기능을 갖춘 현대화 어선으로 대체 건조하도록 지원하는 제도입니다.</summary>
+    <updated>2026-10-29T00:00:00+09:00</updated><author><name>해양수산부</name></author><category term="care"/>
+    <summary type="text">안전복지형 연근해어선 기반구축은 연근해어업 허가를 받은 어업인이 선령 15년 이상 된 노후 어선을 안전복지와 에너지 절감을 고려한 현대화 어선으로 교체하도록 지원하는 제도입니다.</summary>
   </entry>
   <entry>
     <title type="text">사회복지 자원봉사</title>
@@ -179,16 +211,16 @@
     <link href="https://adk24211.github.io/walapp/support/living/%EC%82%B0%EC%A7%80-%EB%B0%8F-%EC%86%8C%EB%B9%84%EC%A7%80-%EC%9C%A0%ED%86%B5%EC%9E%90%EA%B8%88-%EC%9C%B5%EC%9E%90-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
     <id>https://adk24211.github.io/walapp/support/living/%EC%82%B0%EC%A7%80-%EB%B0%8F-%EC%86%8C%EB%B9%84%EC%A7%80-%EC%9C%A0%ED%86%B5%EC%9E%90%EA%B8%88-%EC%9C%B5%EC%9E%90-%EC%A7%80%EC%9B%90/</id>
     <published>2026-10-24T00:00:00+09:00</published>
-    <updated>2026-10-24T00:00:00+09:00</updated><author><name>해양수산부</name></author><category term="living"/>
-    <summary type="text">산지 및 소비지 유통자금 융자 지원은 산지위판장·도매시장·중도매인 등을 대상으로 어대금·직거래 자금 등을 연 1.5%~3% 금리로 융자해 주는 제도입니다.</summary>
+    <updated>2026-10-29T00:00:00+09:00</updated><author><name>해양수산부</name></author><category term="living"/>
+    <summary type="text">산지 및 소비지 유통자금 융자 지원은 산지위판장·도매시장·중도매인 등에게 어대금·직거래 자금 등을 연 1.5~3% 금리로 융자해 주는 제도입니다.</summary>
   </entry>
   <entry>
     <title type="text">국립공원 이용요금 감면(야영장)</title>
     <link href="https://adk24211.github.io/walapp/support/living/%EA%B5%AD%EB%A6%BD%EA%B3%B5%EC%9B%90-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EC%95%BC%EC%98%81%EC%9E%A5/" rel="alternate" type="text/html"/>
     <id>https://adk24211.github.io/walapp/support/living/%EA%B5%AD%EB%A6%BD%EA%B3%B5%EC%9B%90-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EC%95%BC%EC%98%81%EC%9E%A5/</id>
     <published>2026-10-24T00:00:00+09:00</published>
-    <updated>2026-10-28T00:00:00+09:00</updated><author><name>국립공원공단</name></author><category term="living"/>
-    <summary type="text">국립공원 야영장 이용요금을 국가보훈대상자와 장애인에게 감면해 주는 제도이며, 상이등급·심한 장애인에게는 전액, 그 외에는 절반을 면제하고, 신청은 직접 방문으로 진행합니다.</summary>
+    <updated>2026-10-29T00:00:00+09:00</updated><author><name>국립공원공단</name></author><category term="living"/>
+    <summary type="text">국립공원 야영장 이용료를 국가보훈대상자와 장애인에게 감면해 주는 제도로, 상이등급 1~3급 및 중증 장애인은 전액, 그 외 대상은 절반을 면제받을 수 있습니다.</summary>
   </entry>
   <entry>
     <title type="text">1인 사업자 보조공학기기 지원</title>
@@ -213,37 +245,5 @@
     <published>2026-10-24T00:00:00+09:00</published>
     <updated>2026-10-24T00:00:00+09:00</updated><author><name>재단법인의왕시인재육성재단</name></author><category term="care"/>
     <summary type="text">의왕시에서 사업장을 두고 6개월 이상 창업한 소상공인 사업자의 대학생·고등학생 자녀에게 100만원 또는 50만원 장학금을 지원하는 지방자치단체 지원 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">원폭피해자지원</title>
-    <link href="https://adk24211.github.io/walapp/support/health/%EC%9B%90%ED%8F%AD%ED%94%BC%ED%95%B4%EC%9E%90%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/health/%EC%9B%90%ED%8F%AD%ED%94%BC%ED%95%B4%EC%9E%90%EC%A7%80%EC%9B%90/</id>
-    <published>2026-10-23T00:00:00+09:00</published>
-    <updated>2026-10-23T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="health"/>
-    <summary type="text">원폭피해자지원은 보건복지부가 운영하는 건강·의료 지원 제도로, 원자폭탄 피해자에게 월 10만원 진료보조비(합천 입주자는 월 5만원), 진료비 일부 지원, 210만원 장례비, 연 1회 약 35만원 상당 건강검진 등을 제공하며, 대한적십자사에 등록된 피해자를 대상으로 합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">청소년자문단 운영 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/care/%EC%B2%AD%EC%86%8C%EB%85%84%EC%9E%90%EB%AC%B8%EB%8B%A8-%EC%9A%B4%EC%98%81-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/care/%EC%B2%AD%EC%86%8C%EB%85%84%EC%9E%90%EB%AC%B8%EB%8B%A8-%EC%9A%B4%EC%98%81-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-10-23T00:00:00+09:00</published>
-    <updated>2026-10-23T00:00:00+09:00</updated><author><name>한국청소년상담복지개발원</name></author><category term="care"/>
-    <summary type="text">청소년과 대학생을 대상으로 청소년자문단을 운영하여 사업·서비스 개선에 기여하도록 지원하는 제도이며, 활동확인서와 소정의 활동비, 우수자문단 시상 등을 제공합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">전북특별자치도서울장학숙 입사생 수시 모집</title>
-    <link href="https://adk24211.github.io/walapp/support/care/%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%EC%84%9C%EC%9A%B8%EC%9E%A5%ED%95%99%EC%88%99-%EC%9E%85%EC%82%AC%EC%83%9D-%EC%88%98%EC%8B%9C-%EB%AA%A8%EC%A7%91/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/care/%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%EC%84%9C%EC%9A%B8%EC%9E%A5%ED%95%99%EC%88%99-%EC%9E%85%EC%82%AC%EC%83%9D-%EC%88%98%EC%8B%9C-%EB%AA%A8%EC%A7%91/</id>
-    <published>2026-10-23T00:00:00+09:00</published>
-    <updated>2026-10-23T00:00:00+09:00</updated><author><name>재단법인전북특별자치도평생교육장학진흥원</name></author><category term="care"/>
-    <summary type="text">전북특별자치도서울장학숙에 입사하는 수시 모집으로, 수도권 대학 재학생 중 전북특별자치도민 자녀를 대상으로 학업에 전념할 수 있도록 지원합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">입양비용지원</title>
-    <link href="https://adk24211.github.io/walapp/support/care/%EC%9E%85%EC%96%91%EB%B9%84%EC%9A%A9%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/care/%EC%9E%85%EC%96%91%EB%B9%84%EC%9A%A9%EC%A7%80%EC%9B%90/</id>
-    <published>2026-10-23T00:00:00+09:00</published>
-    <updated>2026-10-23T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="care"/>
-    <summary type="text">보건복지부가 마련한 입양비용지원은 국내입양특별법에 따라 보호대상아동을 입양한 가정 중 가정법원 입양확정일이 2026년 1월 1일 이후인 경우에 한해 1회 100만원을 지원하는 제도입니다.</summary>
   </entry>
 </feed>
