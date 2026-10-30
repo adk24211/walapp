@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "초격차 10대 기술에 해당하는 기업이어야 합니다.",
+      "기업 설립 후 10년 이내이어야 합니다.",
+      "서면 평가와 발표 평가를 모두 통과해야 합니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청 페이지에서 신청서를 작성하고 제출합니다. 구비 서류는 필요하지 않습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "초격차 스타트업 1000+ 프로젝트는 초격차 10대 기술을 보유하고 설립 10년 이내인 스타트업을 대상으로 기술사업화·스케일업과 R&D 자금, 정책자금·보증·수출 연계 지원을 제공하는 온라인 신청제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "'25.1월중",
+    "start": ""
+  },
+  "apply_url": "https://www.k-startup.go.kr",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "핵심기술을 보유한 스타트업을 선발하여 기술사업화‧스케일업, R&D 자금 지원 및 정책자금‧보증‧수출 등 연계 지원",
+  "category": "jobs",
+  "contact_raw": "창업진흥원 딥테크육성팀/044-410-1681\n창업진흥원 딥테크육성팀/044-410-1682\n창업진흥원 딥테크육성팀/044-410-1683\n창업진흥원 딥테크육성팀/044-410-1684\n창업진흥원 딥테크육성팀/044-410-1687",
+  "content_hash": "sha256:7547b2fa0dbd828e769c43a6d194dd58",
+  "criteria_raw": "초격차 10대 기술에 해당하는 업력 10년 이내 기업 중 서면 및 발표평가를 통과한 창업기업",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-30",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-999000000077",
+  "is_mock": false,
+  "last_checked": "2026-10-30",
+  "last_updated": "2026-10-30",
+  "law_raw": "",
+  "name": "초격차 스타트업 1000+ 프로젝트",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999244&bnefType=all&svcId=999000000077",
+  "org": "중소벤처기업부",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "초격차-스타트업-1000-프로젝트",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타\n현금 법인/시설/단체",
+  "source_id": "999000000077",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "초격차 10대 기술에 해당하는 업력 10년 이내 기업",
+  "view_count": 2942
+}

@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "대상은 사립학교 교직원입니다.",
+      "대상은 사학연금수급자입니다.",
+      "재직기간이 1년 이상이어야 합니다."
+    ],
+    "faq": [
+      {
+        "a": "생활안정을 위해 필요한 자금으로 사용하시면 됩니다.",
+        "q": "대여받은 자금은 어떤 용도로 사용할 수 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청은 인터넷을 통해, 방문 신청은 직접 방문하여 신청합니다. 별도의 구비 서류는 필요하지 않습니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "사립학교 교직원 및 사학연금수급자를 대상으로 재직기간 1년 이상인 경우 생활안을 위한 자금을 대여해 주는 제도이며, 온라인과 방문 신청이 가능하고 구비 서류는 필요하지 않으며 신청은 상시 접수됩니다. 본 사업은 사립학교교직원연금공단이 운영합니다. 대여금은 생활비 등으로 사용할 수 있습니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.tp.or.kr",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "○ 사립학교교직원 및 연금수급자의 생활안정을 위해 필요한 자금 대여",
+  "category": "finance",
+  "contact_raw": "대여사업팀/061-338-0243",
+  "content_hash": "sha256:e3d1089fa04e3a98df005fb8cb9c9de3",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-10-30",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-B55263500004",
+  "is_mock": false,
+  "last_checked": "2026-10-30",
+  "last_updated": "2026-10-30",
+  "law_raw": "",
+  "name": "사립학교 교직원 생활자금 대여",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000782&bnefType=all&svcId=B55263500004",
+  "org": "사립학교교직원연금공단",
+  "primary_audience": "lowincome",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "사립학교-교직원-생활자금-대여",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금(융자) 개인",
+  "source_id": "B55263500004",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "사립학교교직원 및 사학연금수급자(단, 재직기간 1년 이상)",
+  "view_count": 3921
+}

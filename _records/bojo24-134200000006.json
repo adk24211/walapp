@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "국립특수학교에 재학 중인 특수교육대상자입니다.",
+      "국립대학부설유치원 및 학교에 재학 중인 특수교육대상자입니다.",
+      "시도교육청 교육감(장)이 특수교육대상자로 선정한 학생입니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "관할 국립특수학교 또는 국립대학부설유치원·학교를 직접 방문하여 신청서를 제출하고, 관련 증명 서류를 제출합니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "국립특수학교와 국립대학부설유치원·학교에 배치된 특수교육대상자를 대상으로 방과후학교, 돌봄교실, 통학비·치료지원비 등 교수학습 활동을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled"
+  ],
+  "benefit_raw": "방과후학교, 돌봄교실, 통학비 및 치료지원비 지원 등 교수학습 활동 지원",
+  "category": "care",
+  "contact_raw": "교육부 특수교육정책과/044-203-6569",
+  "content_hash": "sha256:a4875db2fb7a34222dfd3f69ba3c527e",
+  "criteria_raw": "시도교육청 교육감(장)에 의해 선정된 학생\n* 장애인 등에 대한 특수교육법 제15조(특수교육대상자의 선정)",
+  "deferred_detail": false,
+  "documents_raw": [
+    "관련 증명 서류 등"
+  ],
+  "first_published": "2026-10-30",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-134200000006",
+  "is_mock": false,
+  "last_checked": "2026-10-30",
+  "last_updated": "2026-10-30",
+  "law_raw": "",
+  "name": "국립특수학교 및 국립부설학교 특수학급 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=732139&bnefType=all&svcId=134200000006",
+  "org": "교육부",
+  "primary_audience": "disabled",
+  "receiver_raw": "국립특수학교, 국립대학부설유치원 및 학교",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "국립특수학교-및-국립부설학교-특수학급-지원",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타 개인",
+  "source_id": "134200000006",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "국립특수학교, 국립대학부설유치원 및 학교 배치 특수교육대상자",
+  "view_count": 3237
+}
