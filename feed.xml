@@ -4,8 +4,40 @@
   <subtitle>정부·지자체 지원금과 복지 제도를 받을 수 있는지부터 신청 방법까지 하나씩 정리합니다. 공공데이터 원문을 토대로 쉬운 말로 풀어 씁니다.</subtitle>
   <link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html"/>
-  <updated>2026-10-30T11:00:33+09:00</updated>
+  <updated>2026-10-31T10:41:38+09:00</updated>
   <id>https://adk24211.github.io/walapp/</id>
+  <entry>
+    <title type="text">체육시설 이용요금 감면(시흥어울림국민체육센터)</title>
+    <link href="https://adk24211.github.io/walapp/support/living/%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EC%8B%9C%ED%9D%A5%EC%96%B4%EC%9A%B8%EB%A6%BC%EA%B5%AD%EB%AF%BC%EC%B2%B4%EC%9C%A1%EC%84%BC%ED%84%B0/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EC%8B%9C%ED%9D%A5%EC%96%B4%EC%9A%B8%EB%A6%BC%EA%B5%AD%EB%AF%BC%EC%B2%B4%EC%9C%A1%EC%84%BC%ED%84%B0/</id>
+    <published>2026-10-31T00:00:00+09:00</published>
+    <updated>2026-10-31T00:00:00+09:00</updated><author><name>시흥도시공사</name></author><category term="living"/>
+    <summary type="text">시흥어울림국민체육센터에서 이용 요금을 전액 또는 일부 감면받을 수 있는 제도이며, 대상에 따라 감면 비율이 달라집니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">재능키움 장학서비스</title>
+    <link href="https://adk24211.github.io/walapp/support/education/%EC%9E%AC%EB%8A%A5%ED%82%A4%EC%9B%80-%EC%9E%A5%ED%95%99%EC%84%9C%EB%B9%84%EC%8A%A4/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/education/%EC%9E%AC%EB%8A%A5%ED%82%A4%EC%9B%80-%EC%9E%A5%ED%95%99%EC%84%9C%EB%B9%84%EC%8A%A4/</id>
+    <published>2026-10-31T00:00:00+09:00</published>
+    <updated>2026-10-31T00:00:00+09:00</updated><author><name>재단법인충청남도평생교육인재육성진흥원</name></author><category term="education"/>
+    <summary type="text">재능키움 장학서비스는 충청남도에 1년 이상 거주하는 대학생 및 만 50세 이상 방송통신 중·고등학교 재학생에게 각각 2,000천원·1,000천원의 자기개발 지원금을 제공하는 온라인 신청형 장학제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">거창군장학회 장학금</title>
+    <link href="https://adk24211.github.io/walapp/support/education/%EA%B1%B0%EC%B0%BD%EA%B5%B0%EC%9E%A5%ED%95%99%ED%9A%8C-%EC%9E%A5%ED%95%99%EA%B8%88/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/education/%EA%B1%B0%EC%B0%BD%EA%B5%B0%EC%9E%A5%ED%95%99%ED%9A%8C-%EC%9E%A5%ED%95%99%EA%B8%88/</id>
+    <published>2026-10-31T00:00:00+09:00</published>
+    <updated>2026-10-31T00:00:00+09:00</updated><author><name>재단법인거창군장학회</name></author><category term="education"/>
+    <summary type="text">거창군장학회가 제공하는 장학금은 거창군에 거주하는 고등학생 및 대학생을 대상으로 연 1회 차등 지급되는 금액이며, 장학금은 50만원에서 200만원 사이로 매년 약 200명에게 지원됩니다. 신청은 직접 방문하여 진행합니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">입양가정위탁아동 심리치료 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/care/%EC%9E%85%EC%96%91%EA%B0%80%EC%A0%95%EC%9C%84%ED%83%81%EC%95%84%EB%8F%99-%EC%8B%AC%EB%A6%AC%EC%B9%98%EB%A3%8C-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/%EC%9E%85%EC%96%91%EA%B0%80%EC%A0%95%EC%9C%84%ED%83%81%EC%95%84%EB%8F%99-%EC%8B%AC%EB%A6%AC%EC%B9%98%EB%A3%8C-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-10-31T00:00:00+09:00</published>
+    <updated>2026-10-31T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="care"/>
+    <summary type="text">입양·가정위탁 아동의 ADHD·정서불안 등 심리·정서 문제 치료를 위해 심리검사비·치료비·교통비 등을 월 최대 20만 원까지 지원하고, 지원기간은 12개월이며 연장도 가능합니다.</summary>
+  </entry>
   <entry>
     <title type="text">초격차 스타트업 1000+ 프로젝트</title>
     <link href="https://adk24211.github.io/walapp/support/jobs/%EC%B4%88%EA%B2%A9%EC%B0%A8-%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85-1000-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/" rel="alternate" type="text/html"/>
@@ -27,7 +59,7 @@
     <link href="https://adk24211.github.io/walapp/support/health/%EC%B2%9C%EC%95%88%ED%98%95-%EC%B7%A8%EC%95%BD%EA%B3%84%EC%B8%B5-%EC%A7%80%EC%9B%90-%EC%9D%98%EB%A3%8C%EB%B9%84-%EC%B9%98%EA%B3%BC%EC%B9%98%EB%A3%8C%EB%B9%84-%EA%B0%84%EB%B3%91%EB%B9%84-%EA%B2%80%EC%82%AC%EB%B9%84-%EC%8B%AC%EB%A6%AC%EC%A7%80%EC%9B%90%EB%B9%84/" rel="alternate" type="text/html"/>
     <id>https://adk24211.github.io/walapp/support/health/%EC%B2%9C%EC%95%88%ED%98%95-%EC%B7%A8%EC%95%BD%EA%B3%84%EC%B8%B5-%EC%A7%80%EC%9B%90-%EC%9D%98%EB%A3%8C%EB%B9%84-%EC%B9%98%EA%B3%BC%EC%B9%98%EB%A3%8C%EB%B9%84-%EA%B0%84%EB%B3%91%EB%B9%84-%EA%B2%80%EC%82%AC%EB%B9%84-%EC%8B%AC%EB%A6%AC%EC%A7%80%EC%9B%90%EB%B9%84/</id>
     <published>2026-10-30T00:00:00+09:00</published>
-    <updated>2026-10-30T00:00:00+09:00</updated><author><name>천안복지재단</name></author><category term="health"/>
+    <updated>2026-10-31T00:00:00+09:00</updated><author><name>천안복지재단</name></author><category term="health"/>
     <summary type="text">천안형 취약계층 지원은 의료·치과·간병·검사·심리지원비를 각각 정해진 한도 내에서 지원하며, 대상은 기초생활수급자·차상위·한부모가족·건강보험료 기준 110% 이하인 천안시 주민입니다.</summary>
   </entry>
   <entry>
@@ -187,8 +219,8 @@
     <link href="https://adk24211.github.io/walapp/support/finance/%EA%B5%B0%EC%9D%B8-%EC%9E%AC%ED%95%B4%EB%B3%B4%EC%83%81-%EC%9C%A0%EC%A1%B1%EA%B8%89%EC%97%AC-%EC%A7%80%EA%B8%89/" rel="alternate" type="text/html"/>
     <id>https://adk24211.github.io/walapp/support/finance/%EA%B5%B0%EC%9D%B8-%EC%9E%AC%ED%95%B4%EB%B3%B4%EC%83%81-%EC%9C%A0%EC%A1%B1%EA%B8%89%EC%97%AC-%EC%A7%80%EA%B8%89/</id>
     <published>2026-10-26T00:00:00+09:00</published>
-    <updated>2026-10-26T00:00:00+09:00</updated><author><name>국방부</name></author><category term="finance"/>
-    <summary type="text">군인 재해보상 유족급여는 부사관 이상 현역 군인의 유족에게 공무상 재해·사망에 따라 상이유족연금·순직유족연금(일시금)을 지급하는 제도입니다.</summary>
+    <updated>2026-10-31T00:00:00+09:00</updated><author><name>국방부</name></author><category term="finance"/>
+    <summary type="text">군인 재해보상 유족급여 지급은 부사관 이상 현역 군인의 유족에게 공무상 부상·질병 또는 사망에 따른 상이유족연금·순직유족연금을 지급하는 제도입니다.</summary>
   </entry>
   <entry>
     <title type="text">찾아가는 폭력예방교육 서비스 제공</title>
@@ -213,37 +245,5 @@
     <published>2026-10-26T00:00:00+09:00</published>
     <updated>2026-10-26T00:00:00+09:00</updated><author><name>한국사회복지협의회</name></author><category term="care"/>
     <summary type="text">사회복지 자원봉사는 개인 자원봉사자와 봉사단체를 대상으로 전국 사회복지 자원봉사 운영·관리와 인증시스템 구축, 보험 등 다양한 지원을 제공하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">폭력 피해 이주여성 보호시설 운영 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/health/%ED%8F%AD%EB%A0%A5-%ED%94%BC%ED%95%B4-%EC%9D%B4%EC%A3%BC%EC%97%AC%EC%84%B1-%EB%B3%B4%ED%98%B8%EC%8B%9C%EC%84%A4-%EC%9A%B4%EC%98%81-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/health/%ED%8F%AD%EB%A0%A5-%ED%94%BC%ED%95%B4-%EC%9D%B4%EC%A3%BC%EC%97%AC%EC%84%B1-%EB%B3%B4%ED%98%B8%EC%8B%9C%EC%84%A4-%EC%9A%B4%EC%98%81-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-10-25T00:00:00+09:00</published>
-    <updated>2026-10-25T00:00:00+09:00</updated><author><name>성평등가족부</name></author><category term="health"/>
-    <summary type="text">폭력 피해 이주여성을 위한 쉼터 28개소와 그룹 홈·자활 지원센터를 운영하며 숙식·상담·의료·법률·자립 교육 등을 지원하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">전자채무 승인제도 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%EC%A0%84%EC%9E%90%EC%B1%84%EB%AC%B4-%EC%8A%B9%EC%9D%B8%EC%A0%9C%EB%8F%84-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%EC%A0%84%EC%9E%90%EC%B1%84%EB%AC%B4-%EC%8A%B9%EC%9D%B8%EC%A0%9C%EB%8F%84-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-10-25T00:00:00+09:00</published>
-    <updated>2026-10-25T00:00:00+09:00</updated><author><name>한국장학재단</name></author><category term="education"/>
-    <summary type="text">학자금 대출을 6개월 이상 연체한 경우, 채무를 승인하면 소송 비용 부담을 줄일 수 있는 지원 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">웹툰 창작 인력 양성</title>
-    <link href="https://adk24211.github.io/walapp/support/care/%EC%9B%B9%ED%88%B0-%EC%B0%BD%EC%9E%91-%EC%9D%B8%EB%A0%A5-%EC%96%91%EC%84%B1/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/care/%EC%9B%B9%ED%88%B0-%EC%B0%BD%EC%9E%91-%EC%9D%B8%EB%A0%A5-%EC%96%91%EC%84%B1/</id>
-    <published>2026-10-25T00:00:00+09:00</published>
-    <updated>2026-10-25T00:00:00+09:00</updated><author><name>고양산업진흥원</name></author><category term="care"/>
-    <summary type="text">경기북부권 거주자와 경기북부 소재 대학생·기업인을 대상으로 웹툰·웹소설 작가데뷔, 채색, PD 과정을 멘토링 교육 형태로 제공하는 온라인 신청 지원 사업입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">농촌아이돌봄지원</title>
-    <link href="https://adk24211.github.io/walapp/support/care/%EB%86%8D%EC%B4%8C%EC%95%84%EC%9D%B4%EB%8F%8C%EB%B4%84%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/care/%EB%86%8D%EC%B4%8C%EC%95%84%EC%9D%B4%EB%8F%8C%EB%B4%84%EC%A7%80%EC%9B%90/</id>
-    <published>2026-10-25T00:00:00+09:00</published>
-    <updated>2026-10-25T00:00:00+09:00</updated><author><name>농림축산식품부</name></author><category term="care"/>
-    <summary type="text">농촌지역 읍면·도서지역에 위치한 영유아 현원 3~10명 시설을 대상으로, 농촌공동아이돌봄센터와 이동식 놀이교실 등에 최대 152백만원·1,370만원까지 지원하는 제도입니다.</summary>
   </entry>
 </feed>
