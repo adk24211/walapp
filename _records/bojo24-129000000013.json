@@ -1,24 +1,19 @@
 {
   "_prose": {
     "eligibility": [
-      "전역예정장병이어야 합니다.",
-      "전역예정장병이면 별도 조건 없이 지원 가능합니다.",
-      "신청은 온라인으로만 가능합니다."
+      "전역예정장병이면 지원 대상에 해당합니다.",
+      "전역예정장병이면 선정 기준을 충족합니다.",
+      "전역예정장병이면 별도 제한 없이 신청할 수 있습니다."
     ],
-    "faq": [
-      {
-        "a": "지원 사업마다 요구하는 서류가 다르므로 온라인 신청 페이지에서 확인하시면 됩니다.",
-        "q": "구비 서류는 어디에서 확인할 수 있나요?"
-      }
-    ],
+    "faq": [],
     "note": "",
     "steps": [
       {
-        "body": "전역예정장병은 본인 정보를 입력하고, 사업별 구비 서류를 확인하여 온라인으로 제출합니다. 제출이 완료되면 접수 확인 메일을 받게 됩니다.",
+        "body": "국방전직교육원 홈페이지에서 온라인 신청 양식을 작성하여 제출합니다.",
         "title": "온라인 신청"
       }
     ],
-    "summary": "전역예정군인을 대상으로 전직지원교육·상담·취업지원 등을 제공하는 국방부의 재취업 지원 제도이며, 전역예정장병이면 별도 조건 없이 지원 가능하고, 온라인으로 신청합니다. 사업별 구비 서류는 다를 수 있습니다."
+    "summary": "전역예정군인을 대상으로 전직지원교육·상담·그 외 취업지원 등을 제공하는 국방전직교육원의 온라인 재취업 지원 제도입니다."
   },
   "apply_period": {
     "always": false,
@@ -33,7 +28,7 @@
   "benefit_raw": "○ 전직지원교육\n\n○ 전직상담(경력상담 포함)\n\n○ 그 외 취업지원",
   "category": "jobs",
   "contact_raw": "국방전직교육원 일자리지원부/031-760-9343",
-  "content_hash": "sha256:ba46c098eecec22f2da443fbe519d737",
+  "content_hash": "sha256:27ab00460d8c57acd7a53b50f891affc",
   "criteria_raw": "○ 전역예정장병 누구나 지원 가능",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +38,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-129000000013",
   "is_mock": false,
-  "last_checked": "2026-08-30",
-  "last_updated": "2026-08-30",
+  "last_checked": "2026-10-31",
+  "last_updated": "2026-10-31",
   "law_raw": "",
   "name": "전역예정군인 재취업 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/129000000013",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=588929&bnefType=all&svcId=129000000013",
   "org": "국방부",
   "primary_audience": "jobseeker",
   "receiver_raw": "국방전직교육원 각 사업부서",
@@ -56,7 +51,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 2,
+  "revision": 3,
   "slug": "전역예정군인-재취업-지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 상담/법률지원\n서비스(일자리) 개인",
@@ -64,5 +59,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 전역예정장병",
-  "view_count": 3101
+  "view_count": 3424
 }
