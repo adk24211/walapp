@@ -1,0 +1,71 @@
+{
+  "_prose": {
+    "eligibility": [
+      "콘텐츠 창업 아이디어를 보유한 예비 창·제작자",
+      "창업 3년 이내 콘텐츠 분야 초기 창업기업",
+      "콘텐츠 창작에 관심 있는 일반인"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "지원 홈페이지에서 온라인 신청서를 작성하고 구비 서류를 첨부하여 제출합니다. 제출 후 별도의 확인 절차가 진행됩니다. 심사 결과는 온라인을 통해 안내됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "전북콘텐츠코리아랩 창작자 지원은 콘텐츠 아이디어를 보유한 예비 창작자와 창업 3년 이내 초기 기업을 대상으로 시제품 제작 및 사업화 지원을 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.gosims.go.kr",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "1. 창/제작자 시제품 제작지원\n2. 초기 창업자 사업화 제작지원\n- 콘텐츠 창작 아이디어를 보유한 예비 창·제작자부터 초기 창업기업까지를 대상으로 시제품 제작 및 사업화 지원을 통해 창작→창업→사업화까지 단계별 성장 지원\n- 콘텐츠 교육과 전문가 멘토링을 제공하고, 성과전시회·협력 네트워크 운영 및 입주공간·장비·컨설팅 등 사업화 지원을 통해 안정적인 창작 및 창업 생태계 구축",
+  "category": "jobs",
+  "contact_raw": "로컬사업팀/063-282-8781",
+  "content_hash": "sha256:f69e1310bd38b5024adb0b5fd9cdbf1f",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "1. 창제작자 시제품 제작지원",
+    "과제신청서 및 사업계획서 / 개인정보 조회",
+    "수집 이용 동의서 / 참여 서약서 / 참여제한 체크리스트 / 중복지원 여부 확인서 / 심사위원 다빈도 체크지 / 사실증명(사업자등록증 사실여부",
+    "총사업 등록내역) / 지원사업 수혜이력 증빙(협약서",
+    "수료증 등)",
+    "2. 초기 창업자 사업화 제작지원",
+    "참여신청서/ 사업계획서/ 개인정보 조회‧수집 및 이용 동의서/ 참여서약서/ 지원업체 참여제한 체크리스트/ 중복지원 여부 확인서/ 성희롱",
+    "성폭력 방지 등에 관한 서약서/ 국세 및 지방세 완납증명서/ 사실증명(사업자등록사실여부",
+    "총사업자등록내역)"
+  ],
+  "first_published": "2026-11-01",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-O00101100004",
+  "is_mock": false,
+  "last_checked": "2026-11-01",
+  "last_updated": "2026-11-01",
+  "law_raw": "",
+  "name": "전북콘텐츠코리아랩 창작자 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000835&bnefType=all&svcId=O00101100004",
+  "org": "재단법인전북특별자치도콘텐츠융합진흥원",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "전북콘텐츠코리아랩-창작자-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 개인\n소상공인",
+  "source_id": "O00101100004",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "1. 창제작자 시제품 제작지원\n- 콘텐츠 창업 아이디어를 보유한 예비 창·제작자\n\n2. 초기 창업자 사업화 제작지원\n- 창업 3년 이내 콘텐츠 분야 초기 창업기업 및 콘텐츠 창작에 관심 있는 일반인",
+  "view_count": 2922
+}

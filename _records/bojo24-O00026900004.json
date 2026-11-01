@@ -1,0 +1,80 @@
+{
+  "_prose": {
+    "eligibility": [
+      "국민기초생활수급자",
+      "장애인(중증·경증)",
+      "국가유공자와 그 배우자 및 유족 중 선순위자",
+      "애국지사 및 상이등급1급",
+      "의상자 및 의상자의 배우자·자녀",
+      "의사자 유족 중 선순위자",
+      "만65세 이상 어르신"
+    ],
+    "faq": [],
+    "note": "입장료 감면을 받으려면 공연 당일에 증명 서류를 반드시 제출해야 합니다.",
+    "steps": [
+      {
+        "body": "남동문화재단 홈페이지에서 신청서를 작성하고, 지원 대상임을 증명할 수 있는 서류를 첨부하여 제출합니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "공연 당일에 제출한 서류를 확인하고, 증명 서류가 부족할 경우 현장에서 차액을 결제해야 합니다.",
+        "title": "현장 확인"
+      }
+    ],
+    "summary": "남동소래아트홀에서 진행되는 공연을 관람하는 지정 대상자에게 입장료를 20%에서 50%까지 감면해 주는 문화시설 입장료 감면(남동소래아트홀) 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://www.namdongcf.or.kr/",
+  "audiences": [
+    "youth",
+    "senior",
+    "disabled",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 입장료 감면(50%)\n- 저소득층, 장애인, 국가유공자, 만65세이상 어르신\n\n○ 입장료 감면(40%)\n- 초, 중, 고, 대학생\n\n○ 입장료 감면(20%)\n- 4인이상 단체\n\n○ 입장료 감면(20%)\n- 남동구민\n\n○ 릴레이 티켓 감면(20%)\n- 남동문화재단 '2024년도 스포트라이트 시리즈' 기획공연 관람 티켓 소유자\n\n○ 나눔티켓(100%)\n- '나눔티켓' 홈페이지 가입 후 신청자에 한해 예매진행\n\n※ 입장료 감면자는 사유를 증명할 수 있는 서류를 공연 날 제출하여야 하며, 불충분 시 현장에서 차액 결제를 진행한다.",
+  "category": "living",
+  "contact_raw": "(재)남동문화재단/032-439-5001",
+  "content_hash": "sha256:0b78a628428bc659df5acedd75e7be4d",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "수급자 증명서",
+    "장애인 등록증",
+    "유공자증",
+    "유족증",
+    "의상자증",
+    "의사자 유족증",
+    "신분증 등"
+  ],
+  "first_published": "2026-11-01",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-O00026900004",
+  "is_mock": false,
+  "last_checked": "2026-11-01",
+  "last_updated": "2026-11-01",
+  "law_raw": "",
+  "name": "문화시설 입장료 감면(남동소래아트홀)",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001435&bnefType=all&svcId=O00026900004",
+  "org": "(재)남동문화재단",
+  "primary_audience": "disabled",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "문화시설-입장료-감면-남동소래아트홀",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 현금(감면) 개인",
+  "source_id": "O00026900004",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 국민기초생활수급자\n\n○ 장애인(중증/경증)\n\n○ 국가유공자와 그 배우자\n\n○ 유족 중 선순위자\n\n○ 애국지사 및 상이등급1급\n\n○ 의상자\n\n○ 의상자의 배우자 및 자녀\n\n○ 의사자 유족 중 선순위자\n\n○ 만65세이상 어르신",
+  "view_count": 2204
+}
