@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "상시노동자 수가 300인 미만인 사업장에 소속된 노동자",
+      "근로자지원프로그램(EAP) 지원 대상자",
+      "지원 대상과 선정 기준은 동일"
+    ],
+    "faq": [
+      {
+        "a": "온라인에서는 근로복지넷을 통한 게시판·단문·전화·화상 상담을, 오프라인에서는 예약 후 개인 상담 및 기업 대상 교육·특강·특화 프로그램을 제공합니다.",
+        "q": "지원 상담은 어떤 방식으로 제공되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "제공된 온라인 신청 페이지에서 신청서를 작성합니다. 구비 서류는 필요하지 않으며, 상시 접수이므로 언제든 신청이 가능합니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "기업복지활성화 지원은 상시노동자 300인 미만 사업장의 노동자를 대상으로 근로자지원프로그램(EAP) 상담을 온라인·오프라인으로 제공하는 제도이며, 근로복지넷을 통해 다양한 상담을 받을 수 있습니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://welfare.comwel.or.kr",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "○ 근로자지원프로그램(EAP)\n\n- 대상 : 상시노동자 수 300인 미만 사업장 소속 노동자\n-지원내용 : 근로복지넷을 통해 게시판,단문, 전화(화상)상담을 통한 온라인 상담과 근로복지넷을 통해 예약을 하고 노동자 상담(개인), 기업 상담(교육특강 및 특화프로그램)제공을 하는 오프라인 상담\n\n- 상담분야: 직무스트레스, 조직 내 소통, 업무역량강화, 불만고객응대, 일.가정양립, 직장 내 괴롭힘, 성격진단, 스트레스 관리, 정서문제, 건강관리, 대인관계, 자살, 부부갈등, 자녀양육, 기타",
+  "category": "jobs",
+  "contact_raw": "근로복지공단/052-704-7336",
+  "content_hash": "sha256:d32506d0ad218ee6d05c22471086c14d",
+  "criteria_raw": "지원대상과 동일",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-02",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-149200000060",
+  "is_mock": false,
+  "last_checked": "2026-11-02",
+  "last_updated": "2026-11-02",
+  "law_raw": "",
+  "name": "기업복지활성화 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=560572&bnefType=all&svcId=149200000060",
+  "org": "고용노동부",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "기업복지활성화-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타(상담)\n상담/법률지원 법인/시설/단체",
+  "source_id": "149200000060",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 근로자지원프로그램(EAP)\n\n- 상시노동자 수 300인 미만 사업장 소속 노동자",
+  "view_count": 2243
+}

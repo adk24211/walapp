@@ -1,20 +1,19 @@
 {
   "_prose": {
     "eligibility": [
-      "공동생활가정(그룹홈) 시설장 및 종사자",
-      "가정 내 인원이 3인 이상이면 전액 지원",
-      "가정 내 인원이 1~2인 경우 발생일로부터 3개월까지 전액 지원, 4개월째부터는 절반 지원",
-      "선정 기준은 지원 대상과 동일"
+      "공동생활가정(그룹홈) 시설장",
+      "공동생활가정(그룹홈) 종사자",
+      "가구 인원수가 3인 이상인 경우 전액 지원 대상"
     ],
     "faq": [],
-    "note": "지원 대상과 선정 기준이 동일하므로, 대상에 해당하지 않으면 선정되지 않습니다.",
+    "note": "",
     "steps": [
       {
-        "body": "아동담당부서를 직접 방문하여 신청합니다. 신청 시 아동복지시설 설치 신고서, 정관, 재산 목록, 사업계획서 및 예산서 등을 제출해야 합니다.",
-        "title": "신청 절차"
+        "body": "아동담당부서에 직접 방문하여 아동복지시설 설치 신고서, 정관, 재산 목록, 사업계획서 및 예산서 등을 제출합니다. 제출 후 담당자가 서류를 검토합니다.",
+        "title": "방문 신청"
       }
     ],
-    "summary": "아동 공동생활 가정 운영 지원은 공동생활가정(그룹홈) 시설장 및 종사자를 대상으로 인건비와 운영비를 지원하는 양육·돌봄 분야 제도이며, 인당 32,125천원, 개소당 월 470천원 등 금액이 제공되고 인원에 따라 지원 비율이 달라집니다."
+    "summary": "아동 공동생활가정(그룹홈) 운영에 필요한 인건비와 운영비를 지원하는 보건복지부의 양육·돌봄 분야 지원제도이며, 시설장 및 종사자를 대상으로 하고, 가구 인원수가 3인 이상인 경우 전액 지원됩니다."
   },
   "apply_period": {
     "always": false,
@@ -29,7 +28,7 @@
   "benefit_raw": "○ 인건비: 32,125천원/인, 연()\n○ 운영비 : 470천원/개소, 월()\n○ 연장근로수당 : 사회복지생활시설 종사자 지원 기준 따름",
   "category": "care",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:4cd620deec80597ddc03a4465de525cd",
+  "content_hash": "sha256:20d35881ec3f8a74442c153bc5434a2e",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [
@@ -42,11 +41,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-135200000010",
   "is_mock": false,
-  "last_checked": "2026-10-13",
-  "last_updated": "2026-10-13",
+  "last_checked": "2026-11-02",
+  "last_updated": "2026-11-02",
   "law_raw": "",
   "name": "아동 공동생활 가정 운영 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000010",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=584602&bnefType=all&svcId=135200000010",
   "org": "보건복지부",
   "primary_audience": "parent",
   "receiver_raw": "아동담당부서",
@@ -55,7 +54,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "아동-공동생활-가정-운영-지원",
   "source": "bojo24",
   "source_category_raw": "보육·교육 서비스(돌봄) 법인/시설/단체",
@@ -63,5 +62,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 기준 : 3인 이상 전액, 1~2인 전액(발생일로부터 3개월까지) 1/2(4개월째부터)\n\n○ 대상 : 공동생활가정(그룹홈) 시설장 및 종사자",
-  "view_count": 2642
+  "view_count": 2764
 }
