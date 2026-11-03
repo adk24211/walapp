@@ -4,8 +4,56 @@
   <subtitle>정부·지자체 지원금과 복지 제도를 받을 수 있는지부터 신청 방법까지 하나씩 정리합니다. 공공데이터 원문을 토대로 쉬운 말로 풀어 씁니다.</subtitle>
   <link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html"/>
-  <updated>2026-11-02T10:37:13+09:00</updated>
+  <updated>2026-11-03T12:38:22+09:00</updated>
   <id>https://adk24211.github.io/walapp/</id>
+  <entry>
+    <title type="text">PSO(철도 공익서비스) 보상</title>
+    <link href="https://adk24211.github.io/walapp/support/living/pso-%EC%B2%A0%EB%8F%84-%EA%B3%B5%EC%9D%B5%EC%84%9C%EB%B9%84%EC%8A%A4-%EB%B3%B4%EC%83%81/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/pso-%EC%B2%A0%EB%8F%84-%EA%B3%B5%EC%9D%B5%EC%84%9C%EB%B9%84%EC%8A%A4-%EB%B3%B4%EC%83%81/</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated><author><name>국토교통부</name></author><category term="living"/>
+    <summary type="text">PSO(철도 공익서비스) 보상은 한국철도공사가 노인·장애인·유공자에게 제공하는 운임감면액 및 벽지노선 경영 손실을 보전해 주는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">햇살론(자영업자) 신용보증</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%ED%96%87%EC%82%B4%EB%A1%A0-%EC%9E%90%EC%98%81%EC%97%85%EC%9E%90-%EC%8B%A0%EC%9A%A9%EB%B3%B4%EC%A6%9D/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%ED%96%87%EC%82%B4%EB%A1%A0-%EC%9E%90%EC%98%81%EC%97%85%EC%9E%90-%EC%8B%A0%EC%9A%A9%EB%B3%B4%EC%A6%9D/</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated><author><name>중소벤처기업부</name></author><category term="jobs"/>
+    <summary type="text">햇살론(자영업자) 신용보증은 저신용·저소득 자영업자를 대상으로 운영·창업·대환자금을 지원하는 제도이며, 신청은 방문 접수 후 신청서 제출로 진행됩니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">창업어가멘토링지원</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%B0%BD%EC%97%85%EC%96%B4%EA%B0%80%EB%A9%98%ED%86%A0%EB%A7%81%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%B0%BD%EC%97%85%EC%96%B4%EA%B0%80%EB%A9%98%ED%86%A0%EB%A7%81%EC%A7%80%EC%9B%90/</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated><author><name>해양수산부</name></author><category term="jobs"/>
+    <summary type="text">‘창업어가멘토링지원’은 어업인 후계자·귀어 창업자를 대상으로 후견인의 기술·경영 교육을 월 60만원 한도 내에서 지원하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">중소기업 특성화고 인력양성 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85-%ED%8A%B9%EC%84%B1%ED%99%94%EA%B3%A0-%EC%9D%B8%EB%A0%A5%EC%96%91%EC%84%B1-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85-%ED%8A%B9%EC%84%B1%ED%99%94%EA%B3%A0-%EC%9D%B8%EB%A0%A5%EC%96%91%EC%84%B1-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated><author><name>중소벤처기업부</name></author><category term="jobs"/>
+    <summary type="text">중소기업 특성화고 인력양성 지원은 특성화고등학교가 중소기업 맞춤형 교육·취업연계 프로그램을 운영하도록 운영비를 지원하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">보건의료인국가시험 응시수수료 감면</title>
+    <link href="https://adk24211.github.io/walapp/support/housing/%EB%B3%B4%EA%B1%B4%EC%9D%98%EB%A3%8C%EC%9D%B8%EA%B5%AD%EA%B0%80%EC%8B%9C%ED%97%98-%EC%9D%91%EC%8B%9C%EC%88%98%EC%88%98%EB%A3%8C-%EA%B0%90%EB%A9%B4/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/housing/%EB%B3%B4%EA%B1%B4%EC%9D%98%EB%A3%8C%EC%9D%B8%EA%B5%AD%EA%B0%80%EC%8B%9C%ED%97%98-%EC%9D%91%EC%8B%9C%EC%88%98%EC%88%98%EB%A3%8C-%EA%B0%90%EB%A9%B4/</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated><author><name>한국보건의료인국가시험원</name></author><category term="housing"/>
+    <summary type="text">보건의료인국가시험 응시수수료를 전액 감면받을 수 있는 제도로, 국민기초생활수급자·법정차상위계층·한부모가족지원대상자가 신청할 수 있으며, 응시원서 접수 시 자격 확인 또는 증명 서류 제출이 필요합니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">북한이탈주민 의료지원</title>
+    <link href="https://adk24211.github.io/walapp/support/health/%EB%B6%81%ED%95%9C%EC%9D%B4%ED%83%88%EC%A3%BC%EB%AF%BC-%EC%9D%98%EB%A3%8C%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/health/%EB%B6%81%ED%95%9C%EC%9D%B4%ED%83%88%EC%A3%BC%EB%AF%BC-%EC%9D%98%EB%A3%8C%EC%A7%80%EC%9B%90/</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated><author><name>통일부</name></author><category term="health"/>
+    <summary type="text">통일부가 운영하는 북한이탈주민 의료지원 제도는 퇴원일 기준 2026년 치료 대상 질병을 가진 저소득 북한이탈주민에게 민간보험 미보장 치료비를 지원합니다.</summary>
+  </entry>
   <entry>
     <title type="text">북부스포츠센터 체육시설(수영장,헬스장,축구장 등) 이용요금 감면(50%)</title>
     <link href="https://adk24211.github.io/walapp/support/living/%EB%B6%81%EB%B6%80%EC%8A%A4%ED%8F%AC%EC%B8%A0%EC%84%BC%ED%84%B0-%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%EC%88%98%EC%98%81%EC%9E%A5-%ED%97%AC%EC%8A%A4%EC%9E%A5-%EC%B6%95%EA%B5%AC%EC%9E%A5-%EB%93%B1-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-50/" rel="alternate" type="text/html"/>
@@ -75,7 +123,7 @@
     <link href="https://adk24211.github.io/walapp/support/health/%EC%9D%98%EC%95%BD%ED%92%88-%EB%B6%80%EC%9E%91%EC%9A%A9-%ED%94%BC%ED%95%B4%EA%B5%AC%EC%A0%9C/" rel="alternate" type="text/html"/>
     <id>https://adk24211.github.io/walapp/support/health/%EC%9D%98%EC%95%BD%ED%92%88-%EB%B6%80%EC%9E%91%EC%9A%A9-%ED%94%BC%ED%95%B4%EA%B5%AC%EC%A0%9C/</id>
     <published>2026-11-01T00:00:00+09:00</published>
-    <updated>2026-11-02T00:00:00+09:00</updated><author><name>식품의약품안전처</name></author><category term="health"/>
+    <updated>2026-11-03T00:00:00+09:00</updated><author><name>식품의약품안전처</name></author><category term="health"/>
     <summary type="text">의약품을 정상적으로 사용했음에도 예기치 않은 부작용으로 질병·장애·사망이 발생한 경우, 의료비·보상금·장례비 등을 최대 3천만원 한도 내에서 지원하는 제도이며, 식품의약품안전처가 제정하고 한국의약품안전관리원이 온라인으로 접수를 받습니다.</summary>
   </entry>
   <entry>
@@ -139,7 +187,7 @@
     <link href="https://adk24211.github.io/walapp/support/health/%EC%B2%9C%EC%95%88%ED%98%95-%EC%B7%A8%EC%95%BD%EA%B3%84%EC%B8%B5-%EC%A7%80%EC%9B%90-%EC%9D%98%EB%A3%8C%EB%B9%84-%EC%B9%98%EA%B3%BC%EC%B9%98%EB%A3%8C%EB%B9%84-%EA%B0%84%EB%B3%91%EB%B9%84-%EA%B2%80%EC%82%AC%EB%B9%84-%EC%8B%AC%EB%A6%AC%EC%A7%80%EC%9B%90%EB%B9%84/" rel="alternate" type="text/html"/>
     <id>https://adk24211.github.io/walapp/support/health/%EC%B2%9C%EC%95%88%ED%98%95-%EC%B7%A8%EC%95%BD%EA%B3%84%EC%B8%B5-%EC%A7%80%EC%9B%90-%EC%9D%98%EB%A3%8C%EB%B9%84-%EC%B9%98%EA%B3%BC%EC%B9%98%EB%A3%8C%EB%B9%84-%EA%B0%84%EB%B3%91%EB%B9%84-%EA%B2%80%EC%82%AC%EB%B9%84-%EC%8B%AC%EB%A6%AC%EC%A7%80%EC%9B%90%EB%B9%84/</id>
     <published>2026-10-30T00:00:00+09:00</published>
-    <updated>2026-11-02T00:00:00+09:00</updated><author><name>천안복지재단</name></author><category term="health"/>
+    <updated>2026-11-03T00:00:00+09:00</updated><author><name>천안복지재단</name></author><category term="health"/>
     <summary type="text">천안형 취약계층 지원은 의료·치과·간병·검사·심리지원비를 각각 정해진 한도 내에서 지원하며, 대상은 기초생활수급자·차상위·한부모가족·건강보험료 기준 110% 이하인 천안시 주민입니다.</summary>
   </entry>
   <entry>
@@ -197,53 +245,5 @@
     <published>2026-10-29T00:00:00+09:00</published>
     <updated>2026-10-29T00:00:00+09:00</updated><author><name>재단법인경상북도농식품유통교육진흥원</name></author><category term="care"/>
     <summary type="text">경북농민사관학교 교육지원은 경상북도에 경작지를 둔 농어업인에게 교육 서비스를 제공하는 지원 제도입니다. 온라인 및 방문 신청이 가능하며, 청년·예비농업인 등 특별전형도 포함됩니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">회생제동장치 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/living/%ED%9A%8C%EC%83%9D%EC%A0%9C%EB%8F%99%EC%9E%A5%EC%B9%98-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/living/%ED%9A%8C%EC%83%9D%EC%A0%9C%EB%8F%99%EC%9E%A5%EC%B9%98-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-10-28T00:00:00+09:00</published>
-    <updated>2026-10-28T00:00:00+09:00</updated><author><name>한국전력공사</name></author><category term="living"/>
-    <summary type="text">엘리베이터 기존 저항제동장치를 회생제동장치 또는 회생제동 기능이 적용된 제어반으로 교체하는 고객에게 에너지 효율 향상 및 온실가스 감축을 위한 지원금을 지급하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">산림복지진흥원이 운영하는 산림복지시설의 산림복지소외자 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/living/%EC%82%B0%EB%A6%BC%EB%B3%B5%EC%A7%80%EC%A7%84%ED%9D%A5%EC%9B%90%EC%9D%B4-%EC%9A%B4%EC%98%81%ED%95%98%EB%8A%94-%EC%82%B0%EB%A6%BC%EB%B3%B5%EC%A7%80%EC%8B%9C%EC%84%A4%EC%9D%98-%EC%82%B0%EB%A6%BC%EB%B3%B5%EC%A7%80%EC%86%8C%EC%99%B8%EC%9E%90-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/living/%EC%82%B0%EB%A6%BC%EB%B3%B5%EC%A7%80%EC%A7%84%ED%9D%A5%EC%9B%90%EC%9D%B4-%EC%9A%B4%EC%98%81%ED%95%98%EB%8A%94-%EC%82%B0%EB%A6%BC%EB%B3%B5%EC%A7%80%EC%8B%9C%EC%84%A4%EC%9D%98-%EC%82%B0%EB%A6%BC%EB%B3%B5%EC%A7%80%EC%86%8C%EC%99%B8%EC%9E%90-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-10-28T00:00:00+09:00</published>
-    <updated>2026-10-28T00:00:00+09:00</updated><author><name>산림청</name></author><category term="living"/>
-    <summary type="text">산림복지진흥원이 운영하는 산림복지시설에서 사회·경제·정책적 취약계층 및 관심·배려가 필요한 일반인에게 산림교육·치유프로그램을 제공하는 지원 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">청년 창업·취업 학원비 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%B2%AD%EB%85%84-%EC%B0%BD%EC%97%85-%EC%B7%A8%EC%97%85-%ED%95%99%EC%9B%90%EB%B9%84-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EC%B2%AD%EB%85%84-%EC%B0%BD%EC%97%85-%EC%B7%A8%EC%97%85-%ED%95%99%EC%9B%90%EB%B9%84-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-10-28T00:00:00+09:00</published>
-    <updated>2026-10-28T00:00:00+09:00</updated><author><name>재단법인안산인재육성재단</name></author><category term="jobs"/>
-    <summary type="text">청년 창업·취업 학원비 지원은 18세 이상 39세 이하의 미취업 청년·청소년이 직업훈련 학원 수강 시, 본인 부담 수강료의 반값을 최대 200만원까지 지원하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">장애인맞춤형사업화지원</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%9E%A5%EC%95%A0%EC%9D%B8%EB%A7%9E%EC%B6%A4%ED%98%95%EC%82%AC%EC%97%85%ED%99%94%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EC%9E%A5%EC%95%A0%EC%9D%B8%EB%A7%9E%EC%B6%A4%ED%98%95%EC%82%AC%EC%97%85%ED%99%94%EC%A7%80%EC%9B%90/</id>
-    <published>2026-10-28T00:00:00+09:00</published>
-    <updated>2026-10-28T00:00:00+09:00</updated><author><name>중소벤처기업부</name></author><category term="jobs"/>
-    <summary type="text">장애인 맞춤형 사업화 지원은 장애인 예비창업자와 업종전환을 희망하는 장애인기업에게 창업 초기 시설·인테리어·마케팅 비용을 최대 20백만원까지 지원하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">북한이탈주민 정착장려금 지급</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EB%B6%81%ED%95%9C%EC%9D%B4%ED%83%88%EC%A3%BC%EB%AF%BC-%EC%A0%95%EC%B0%A9%EC%9E%A5%EB%A0%A4%EA%B8%88-%EC%A7%80%EA%B8%89/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EB%B6%81%ED%95%9C%EC%9D%B4%ED%83%88%EC%A3%BC%EB%AF%BC-%EC%A0%95%EC%B0%A9%EC%9E%A5%EB%A0%A4%EA%B8%88-%EC%A7%80%EA%B8%89/</id>
-    <published>2026-10-28T00:00:00+09:00</published>
-    <updated>2026-10-28T00:00:00+09:00</updated><author><name>통일부</name></author><category term="jobs"/>
-    <summary type="text">북한이탈주민이 거주지보호기간 중 또는 종료 후 일정 기간 동일 사업장에서 근무하면 고용보험 가입 사업장을 기준으로 취업장려금·새출발장려금을 받을 수 있는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">가계금융복지조사 통계조사원 일자리 제공</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EA%B0%80%EA%B3%84%EA%B8%88%EC%9C%B5%EB%B3%B5%EC%A7%80%EC%A1%B0%EC%82%AC-%ED%86%B5%EA%B3%84%EC%A1%B0%EC%82%AC%EC%9B%90-%EC%9D%BC%EC%9E%90%EB%A6%AC-%EC%A0%9C%EA%B3%B5/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EA%B0%80%EA%B3%84%EA%B8%88%EC%9C%B5%EB%B3%B5%EC%A7%80%EC%A1%B0%EC%82%AC-%ED%86%B5%EA%B3%84%EC%A1%B0%EC%82%AC%EC%9B%90-%EC%9D%BC%EC%9E%90%EB%A6%AC-%EC%A0%9C%EA%B3%B5/</id>
-    <published>2026-10-28T00:00:00+09:00</published>
-    <updated>2026-10-28T00:00:00+09:00</updated><author><name>국가데이터처</name></author><category term="jobs"/>
-    <summary type="text">가계금융복지조사 통계조사원 일자리 제공은 통계조사 수행을 위해 통계조사원을 채용하는 지원 사업입니다.</summary>
   </entry>
 </feed>
