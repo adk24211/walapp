@@ -1,24 +1,24 @@
 {
   "_prose": {
     "eligibility": [
-      "사회·문화·경제적 건강취약계층",
-      "거동불편 65세 이상 독거노인",
-      "어르신"
+      "사회·문화·경제적 건강취약계층에 해당하는 경우 신청이 가능합니다.",
+      "거동이 불편한 65세 이상 독거노인도 대상에 포함됩니다.",
+      "선정 기준이 별도 없으므로 대상이면 바로 신청할 수 있습니다."
     ],
     "faq": [
       {
-        "a": "간호사, 물리치료사, 영양사, 운동전문가 등이 방문하여 건강관리 서비스를 제공합니다.",
-        "q": "전문인력은 어떤 분야의 전문가가 제공하나요?"
+        "a": "간호사, 물리치료사, 영양사, 운동전문가 등 다양한 분야의 전문인력이 방문하여 건강관리 서비스를 제공합니다.",
+        "q": "지원 내용에 포함되는 전문인력은 어떤 분야가 있나요?"
       }
     ],
-    "note": "선정 기준이 없으므로 신청자는 모두 동일하게 서비스를 받을 수 있습니다.",
+    "note": "선정 기준이 별도 없으므로 대상 여부만 확인하면 됩니다.",
     "steps": [
       {
-        "body": "보건소를 직접 방문하여 신청합니다. 방문 시 담당 직원에게 방문 신청 의사를 밝히시면 됩니다. 신청서 작성은 필요하지 않습니다.",
-        "title": "신청 방법"
+        "body": "보건소에 직접 방문 신청을 요청하시기 바랍니다. 신청 시 별도의 서류는 필요하지 않으며, 보건소에서 방문 일정을 조율해 드립니다. 방문 서비스는 신청 후 전문인력이 직접 가정 등을 찾아가 제공됩니다.",
+        "title": "방문 신청"
       }
     ],
-    "summary": "보건복지부에서 전국의 어르신을 대상으로 보건소 전문인력이 가정 등을 방문해 건강문제 평가와 운동·영양 상담 등 맞춤형 관리 서비스를 제공하는 제도입니다."
+    "summary": "보건소 방문건강관리 서비스는 보건소 전문인력이 가정 등을 직접 찾아가 개별 건강문제 평가와 운동·영양 상담 등 맞춤형 건강관리 서비스를 제공하는 제도입니다."
   },
   "apply_period": {
     "always": false,
@@ -33,7 +33,7 @@
   "benefit_raw": "○ 간호사, 물리치료사, 영양사, 운동전문가 등 전문인력이 가정 등을 방문하여 개별 건강문제를 평가하고 운동·영양 상담 등 건강관리서비스 제공",
   "category": "health",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:8a20494c435ae3bb8fcfecf6fa31c629",
+  "content_hash": "sha256:afcd688eb9c835962804a87ae45875c7",
   "criteria_raw": "별도없음",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-135200000082",
   "is_mock": false,
-  "last_checked": "2026-08-20",
-  "last_updated": "2026-08-20",
+  "last_checked": "2026-11-03",
+  "last_updated": "2026-11-03",
   "law_raw": "",
   "name": "보건소 방문건강관리 서비스",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000082",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999137&bnefType=all&svcId=135200000082",
   "org": "보건복지부",
   "primary_audience": "senior",
   "receiver_raw": "보건소",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "보건소-방문건강관리-서비스",
   "source": "bojo24",
   "source_category_raw": "보건·의료 서비스(의료) 개인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "사회·문화·경제적 건강취약계층\n- (예) 거동불편 65세 이상 독거노인",
-  "view_count": 14642
+  "view_count": 15153
 }

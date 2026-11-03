@@ -1,0 +1,70 @@
+{
+  "_prose": {
+    "eligibility": [
+      "어업인 후계자로 선정된 지 5년 이내인 자",
+      "귀어 후 5년 이내인 자",
+      "당년(이월사업 포함) 귀어 창업자금 지원 예정인 자",
+      "가장 최근에 창업한 자",
+      "연령이 낮은 지원자"
+    ],
+    "faq": [
+      {
+        "a": "후견인이 제공하는 기술·경영 교육 등에 대해 창업어가 1인당 월 60만원 한도 내에서 지원됩니다.",
+        "q": "지원 금액은 어떻게 제공되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "시·군·구청을 직접 방문하여 창업어가후견인제 지원대상 신청서를 제출합니다. 신청서는 현장에서 작성하거나 미리 준비할 수 있습니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "‘창업어가멘토링지원’은 어업인 후계자·귀어 창업자를 대상으로 후견인의 기술·경영 교육을 월 60만원 한도 내에서 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "매년 초 지자체별 모집공고",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ 후견인이 창업어가에게 기술, 경영 측면 등에 대한 교육 지도 등 제공(창업어가 1인당 월 60만원 한도 지원)",
+  "category": "jobs",
+  "contact_raw": "지자체 수산기술보급기관/051-773-5464",
+  "content_hash": "sha256:cb8e7f068a5f7f7c0b1abe9fbe082f27",
+  "criteria_raw": "○ 가장 최근에 창업한 자\n\n○ 어업인후계자 육성자금 지원규모가 큰 자\n\n○ 창업어가의 업종 등을 고려하여 지원이 시급하다고 판단되는 자\n\n○ 연령이 낮은 지원자",
+  "deferred_detail": false,
+  "documents_raw": [
+    "창업어가후견인제 지원대상 신청서"
+  ],
+  "first_published": "2026-11-03",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-119200000070",
+  "is_mock": false,
+  "last_checked": "2026-11-03",
+  "last_updated": "2026-11-03",
+  "law_raw": "",
+  "name": "창업어가멘토링지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999218&bnefType=all&svcId=119200000070",
+  "org": "해양수산부",
+  "primary_audience": "business",
+  "receiver_raw": "시·군·구청",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "창업어가멘토링지원",
+  "source": "bojo24",
+  "source_category_raw": "농림축산어업 기타(교육) 개인",
+  "source_id": "119200000070",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 어업인 후계자로 선정된 지 5년 이내인자 또는 귀어 후 5개년 이내인 자\n\n○ 당년(이월사업 포함) 귀어 창업자금 지원(예정) 자",
+  "view_count": 2882
+}

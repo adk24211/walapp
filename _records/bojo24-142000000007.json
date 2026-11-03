@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "초중증교육법시행령 제91조에 해당하는 특성화고 및 중소기업",
+      "중소기업 수요가 있는 모든 산업분야의 인력양성이 가능한 특성화고등학교",
+      "중소기업(단, 유흥·주점업 등은 제외)"
+    ],
+    "faq": [
+      {
+        "a": "지원금은 특성화고등학교에서 취업맞춤반, 중소기업 이해연수 등 교육 프로그램 운영비로 사용됩니다.",
+        "q": "지원금은 어떤 용도로 사용되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "중소벤처기업진흥공단 홈페이지에서 온라인으로 신청서를 작성합니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "신청 시 중소기업 특성화고 인력양성사업 계획서를 함께 제출합니다.",
+        "title": "계획서 제출"
+      }
+    ],
+    "summary": "중소기업 특성화고 인력양성 지원은 특성화고등학교가 중소기업 맞춤형 교육·취업연계 프로그램을 운영하도록 운영비를 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "사업공고에 따름",
+    "start": ""
+  },
+  "apply_url": "https://www.smes.go.kr/sanhakin",
+  "audiences": [
+    "disabled"
+  ],
+  "benefit_raw": "특성화고등학교에 중소기업 맞춤형 교육 및 취업연계에 필요한 취업맞춤반, 중소기업 이해연수 등 교육 프로그램 운영비 지원\n* 교육 프로그램: ①취업(산학)맞춤반 ②1팀 1기업 프로젝트 ③교수학습자료 개발 ④중소기업 이해연수 ⑤진로지도 프로그램 ⑥교원직무 연수 ⑦전공동아리 프로그램 ⑧현장학습 프로그램 ⑨외부전문가활용",
+  "category": "jobs",
+  "contact_raw": "중소벤처기업진흥공단 인력양성팀/055-751-9863\n중소벤처기업진흥공단 인력양성팀/055-751-9865",
+  "content_hash": "sha256:823916e35bd15456353845289ef93945",
+  "criteria_raw": "○ 중소기업 수요가 있는 모든 산업분야의 인력양성이 가능한 특성화고등학교\n○ 중소기업( 단, 중소기업인력지원특별법 시행령 제2조의 유흥 · 주점업 등은 제외 )",
+  "deferred_detail": false,
+  "documents_raw": [
+    "중소기업 특성화고 인력양성사업 계획서"
+  ],
+  "first_published": "2026-11-03",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-142000000007",
+  "is_mock": false,
+  "last_checked": "2026-11-03",
+  "last_updated": "2026-11-03",
+  "law_raw": "",
+  "name": "중소기업 특성화고 인력양성 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=163731&bnefType=all&svcId=142000000007",
+  "org": "중소벤처기업부",
+  "primary_audience": "disabled",
+  "receiver_raw": "중소벤처기업진흥공단",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "중소기업-특성화고-인력양성-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 서비스(일자리) 법인/시설/단체",
+  "source_id": "142000000007",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 초중증교육법시행령 제91조의 특성화고 및 중소기업",
+  "view_count": 3198
+}

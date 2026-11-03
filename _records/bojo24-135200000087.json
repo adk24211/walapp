@@ -1,24 +1,18 @@
 {
   "_prose": {
     "eligibility": [
-      "아동복지시설에 보호되고 있는 아동",
-      "심리·정서적 문제 행동을 보이는 아동",
-      "위 두 조건을 모두 만족하는 아동"
+      "아동복지시설에 보호받는 아동입니다",
+      "심리·정서적 문제 행동을 보이는 아동입니다"
     ],
-    "faq": [
-      {
-        "a": "구비 서류는 해당없음으로 별도의 서류가 필요하지 않습니다.",
-        "q": "지원을 받기 위해 준비해야 할 서류가 있나요?"
-      }
-    ],
-    "note": "",
+    "faq": [],
+    "note": "지원 대상과 선정 기준이 동일하므로, 해당 조건에 맞는 아동만 신청할 수 있습니다.",
     "steps": [
       {
-        "body": "신청은 국가아동권리보장원에 직접 방문하여 할 수 있습니다. 신청 시 별도의 서류는 필요하지 않습니다. 담당 직원에게 지원 대상임을 알려 주시면 됩니다.",
-        "title": "신청 절차"
+        "body": "방문 신청이 가능합니다. 국가아동권리보장원을 직접 방문하여 신청하십시오.",
+        "title": "신청 방법"
       }
     ],
-    "summary": "아동복지시설에 보호되는 아동 중 심리·정서적 문제 행동을 보이는 아동에게 사전·사후 검사와 맞춤형 상담·치료 서비스를 제공하는 지원 제도입니다."
+    "summary": "아동복지시설에 보호받는 아동 중 심리·정서적 문제 행동을 보이는 아동에게 사전·사후 검사와 맞춤형 상담·치료 등을 지원하는 서비스입니다."
   },
   "apply_period": {
     "always": false,
@@ -33,7 +27,7 @@
   "benefit_raw": "○ 사전, 사후 검사\n\n○ 종합심리검사\n\n○ 맞춤형 상담치료서비스 제공\n\n○ 원가족 관계개선 프로그램 등",
   "category": "care",
   "contact_raw": "아동권리보장원/02-6454-8500",
-  "content_hash": "sha256:763198b9a287e4db859ff319ed39f0c2",
+  "content_hash": "sha256:33d179729181c75b0bdfb2066a96697a",
   "criteria_raw": "○ 아동복지시설 보호 아동 중 심리정서적 문제 행동 아동",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +37,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-135200000087",
   "is_mock": false,
-  "last_checked": "2026-10-28",
-  "last_updated": "2026-10-28",
+  "last_checked": "2026-11-03",
+  "last_updated": "2026-11-03",
   "law_raw": "",
   "name": "아동복지시설 아동 맞춤형 서비스 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000087",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=584606&bnefType=all&svcId=135200000087",
   "org": "보건복지부",
   "primary_audience": "parent",
   "receiver_raw": "국가아동권리보장원",
@@ -56,7 +50,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "아동복지시설-아동-맞춤형-서비스-지원",
   "source": "bojo24",
   "source_category_raw": "보건·의료 상담/법률지원\n서비스(돌봄)\n의료지원 개인",
@@ -64,5 +58,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 아동복지시설 보호 아동 중 심리정서적 문제 행동 아동",
-  "view_count": 2577
+  "view_count": 2584
 }

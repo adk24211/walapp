@@ -1,0 +1,64 @@
+{
+  "_prose": {
+    "eligibility": [
+      "지원 대상은 한국철도공사입니다.",
+      "선정 기준은 지원 대상과 동일합니다.",
+      "한국철도공사 이외의 기관은 신청할 수 없습니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "방문으로 신청하시면 됩니다. 구비 서류는 필요하지 않으며, 상시 접수됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "PSO(철도 공익서비스) 보상은 한국철도공사가 노인·장애인·유공자에게 제공하는 운임감면액 및 벽지노선 경영 손실을 보전해 주는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "senior",
+    "disabled"
+  ],
+  "benefit_raw": "○ 철도공사가 노인, 장애인, 유공자에게 제공하는 운임감면액과 벽지노선 경영으로 발생하는 손실 등을 보상",
+  "category": "living",
+  "contact_raw": "한국철도공사/042-615-3466",
+  "content_hash": "sha256:52ad5c29fc86345d2b9b5f0f59dd1fd1",
+  "criteria_raw": "지원대상과 동일",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-03",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-161300000078",
+  "is_mock": false,
+  "last_checked": "2026-11-03",
+  "last_updated": "2026-11-03",
+  "law_raw": "",
+  "name": "PSO(철도 공익서비스) 보상",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=588138&bnefType=all&svcId=161300000078",
+  "org": "국토교통부",
+  "primary_audience": "disabled",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "pso-철도-공익서비스-보상",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 현금 법인/시설/단체",
+  "source_id": "161300000078",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 한국철도공사",
+  "view_count": 2594
+}
