@@ -1,19 +1,24 @@
 {
   "_prose": {
     "eligibility": [
-      "금연치료 지원사업에 참여하는 병·의원(보건소·보건지소 포함)의 금연치료 프로그램에 등록한 흡연자",
+      "금연치료 지원사업에 참여하는 병·의원(보건소·보건지소 포함)의 금연치료 프로그램에 등록한 자",
       "의료급여수급자",
-      "건강보험료 부과 기준 하위 20%에 해당하는 저소득층"
+      "건강보험료 부과 하위 20%에 해당하는 저소득층"
     ],
-    "faq": [],
+    "faq": [
+      {
+        "a": "흡연자를 대상으로 금연성공률이 높은 의사의 진료상담과 금연치료 의약품 및 금연보조제 구입비용이 지원됩니다.",
+        "q": "지원은 어떤 형태로 제공되나요?"
+      }
+    ],
     "note": "",
     "steps": [
       {
-        "body": "국민건강보험공단을 직접 방문하여 신청합니다. 구비 서류는 필요하지 않으며, 금연치료 프로그램에 등록한 후 진행합니다.",
-        "title": "신청 방법"
+        "body": "지원 대상자는 국민건강보험공단을 직접 방문하여 신청합니다. 구비 서류는 필요하지 않습니다.",
+        "title": "방문 신청"
       }
     ],
-    "summary": "저소득층 금연치료 지원은 의료급여수급자와 건강보험료 부과 하위 20%에 해당하는 흡연자를 대상으로, 금연치료 프로그램에 등록한 경우 금연 상담·의약품·보조제 구입비를 지원하는 제도입니다."
+    "summary": "저소득층을 위한 금연치료 지원제도로, 금연치료 프로그램에 등록한 흡연자에게 의사의 상담과 치료 약품·보조제 구입비용을 지원합니다."
   },
   "apply_period": {
     "always": false,
@@ -28,7 +33,7 @@
   "benefit_raw": "○ 흡연자를 대상으로 금연성공률이 높은 의사의 진료상담과 금연치료의약품 및 금연보조제 구입비용 지원",
   "category": "health",
   "contact_raw": "국민건강보험공단 고객센터/1577-1000",
-  "content_hash": "sha256:ac6309ff219003889f99018705db5ebe",
+  "content_hash": "sha256:7540a98ada70f68e011753e1f158cced",
   "criteria_raw": "○ 의료급여수급자, 저소득층(건강보험료 부과 하위 20%)",
   "deferred_detail": false,
   "documents_raw": [
@@ -38,11 +43,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-135200000101",
   "is_mock": false,
-  "last_checked": "2026-09-30",
-  "last_updated": "2026-09-30",
+  "last_checked": "2026-11-04",
+  "last_updated": "2026-11-04",
   "law_raw": "",
   "name": "저소득층 금연치료 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000101",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=588576&bnefType=all&svcId=135200000101",
   "org": "보건복지부",
   "primary_audience": "lowincome",
   "receiver_raw": "국민건강보험공단",
@@ -51,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "저소득층-금연치료-지원",
   "source": "bojo24",
   "source_category_raw": "보건·의료 서비스(의료)\n의료지원\n현금 개인",
@@ -59,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 금연치료 지원사업 참여 병·의원(보건소, 보건지소 포함)의 금연치료 프로그램에 등록한 자",
-  "view_count": 13215
+  "view_count": 13337
 }

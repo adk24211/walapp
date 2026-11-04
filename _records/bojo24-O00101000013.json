@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "전북특별자치도 출신 국내 대학생",
+      "전북특별자치도 출신 국내 대학원생",
+      "팀당 1~2명으로 구성된 15팀(총 30명)까지 참여 가능"
+    ],
+    "faq": [
+      {
+        "a": "구비 서류는 해당없음으로 별도의 서류가 필요하지 않습니다.",
+        "q": "구비 서류가 필요한가요?"
+      },
+      {
+        "a": "선정 기준에 대한 내용은 제공되지 않았습니다.",
+        "q": "선정 기준은 어떻게 되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "지원은 전북특별자치도 평생교육장학진흥원 홈페이지에서 온라인으로 신청합니다. 신청 양식에 따라 필요한 정보를 입력하고 제출하면 됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "전북특별자치도 출신 대학생·대학원생을 대상으로 지역발전 정책제안을 발표하는 대회에 참여할 수 있는 기회를 제공하는 프로그램입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "당해연도 10월~11월중 신청 *2026년도는 사업불가",
+    "start": ""
+  },
+  "apply_url": "https://www.jbiles.or.kr",
+  "audiences": [
+    "youth"
+  ],
+  "benefit_raw": "○ 대학(원)생 지역발전 정책제안 발표대회\n- 추진인원 : 30명(15팀, 팀당 1~2명 구성)\n- 추진대상 : 국내 대학생 및 대학원생\n- 추진방법 : 정책제안 발표 및 시상\n- 주요내용 : 전북특별자치도 지역발전을 위한 국내 대학생 및 대학원생들의 참신한 아이디어 발굴\n1.전북인재양성 2.청년기회도시조성 3. 학령인구 감소 또는 지역소멸 대응방안",
+  "category": "education",
+  "contact_raw": "전북특별자치도평생교육장학진흥원/063-276-8307",
+  "content_hash": "sha256:f15538f1e7d062ed93e2ce8b63cb7dc2",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-04",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-O00101000013",
+  "is_mock": false,
+  "last_checked": "2026-11-04",
+  "last_updated": "2026-11-04",
+  "law_raw": "",
+  "name": "전북특별자치도 대학(원)생 지역발전 정책제안 발표대회",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2109831&bnefType=all&svcId=O00101000013",
+  "org": "재단법인전북특별자치도평생교육장학진흥원",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "전북특별자치도-대학-원-생-지역발전-정책제안-발표대회",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금 개인",
+  "source_id": "O00101000013",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 전북특별자치도 출신 국내 대학생 및 대학원생",
+  "view_count": 965
+}

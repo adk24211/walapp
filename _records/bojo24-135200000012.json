@@ -1,0 +1,70 @@
+{
+  "_prose": {
+    "eligibility": [
+      "만 18세 미만의 학대 피해 아동",
+      "원 가정으로부터 분리된 아동",
+      "심리치료와 보호가 필요하다고 판단된 경우",
+      "보호조치·응급조치·임시 보호명령 등으로 지정된 경우"
+    ],
+    "faq": [
+      {
+        "a": "지원 대상에 해당하지 않으면 신청이 불가능합니다.",
+        "q": "지원 대상이 아닌 경우에도 신청할 수 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "시·군·구청을 직접 방문하여 신청서를 제출하고, 지자체장이 요구하는 증빙자료를 함께 제출합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "학대피해아동쉼터 지원은 만 18세 미만 학대 피해 아동에게 보호·숙식·의복·생필품·심리치료·건강검진·학업지도·문화·체육 등 다양한 서비스를 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "○ 피해 아동 보호 및 숙식 제공\n\n○ 피해 아동 생활지원 : 의복 등 생필품 지원, 일상생활 훈련 및 생활 지원\n\n○ 상담 및 치료 : 심리검사, 개별 심리치료, 집단 심리치료, 건강검진 지원 및 병원 치료\n\n○ 학대 피해 아동 전용쉼터에는 보육사 이외에 심리치료사가 상근하면서 피해 아동의 심리 치료\n\n○ 교육 및 정서 지원 : 학업지도, 안전교육, 문화체험, 체육활동",
+  "category": "health",
+  "contact_raw": "해당지역 시군구청/044-202-3387",
+  "content_hash": "sha256:d946193e0faf5f217f49d891039e1ac0",
+  "criteria_raw": "지원대상과 동일",
+  "deferred_detail": false,
+  "documents_raw": [
+    "신청서",
+    "기타 지자체장이 대상자 선정을 위해 요구하는 증빙자료"
+  ],
+  "first_published": "2026-11-04",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-135200000012",
+  "is_mock": false,
+  "last_checked": "2026-11-04",
+  "last_updated": "2026-11-04",
+  "law_raw": "",
+  "name": "학대피해아동쉼터 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=69948&bnefType=all&svcId=135200000012",
+  "org": "보건복지부",
+  "primary_audience": "parent",
+  "receiver_raw": "시·군·구청",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "학대피해아동쉼터-지원",
+  "source": "bojo24",
+  "source_category_raw": "보호·돌봄 상담/법률지원\n서비스(돌봄)\n의료지원 개인",
+  "source_id": "135200000012",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 만 18세 미만의 학대 피해 아동으로 원 가정으로부터 분리하여 심리치료와 보호가 필요한 경우\n(학대 피해 아동 보호조치, 피해 아동 응급조치, 피해 아동(임시) 보호명령)",
+  "view_count": 2175
+}
