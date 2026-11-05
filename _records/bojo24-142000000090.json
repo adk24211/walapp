@@ -1,0 +1,74 @@
+{
+  "_prose": {
+    "eligibility": [
+      "장애인 예비창업자",
+      "장애인기업",
+      "평가우수자 선정"
+    ],
+    "faq": [],
+    "note": "지원 비율은 기업규모에 따라 70%~90%이며, 지원액은 각각 1,500만원, 2,500만원을 초과할 수 없습니다.",
+    "steps": [
+      {
+        "body": "신청자는 (재)장애인기업종합지원센터를 직접 방문하여 지원신청서를 포함한 구비 서류를 제출합니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "장애인 예비창업자와 장애인기업이 시제품·금형 제작 비용의 70%~90%를 최대 각각 1,500만원·2,500만원까지 지원받을 수 있는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "3월~4월",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled",
+    "business"
+  ],
+  "benefit_raw": "○ (제품디자인 및 시제품모형제작) 기업규모에 따라 70%~90% 이내, 최대 1,500만원\n\n○ (시제품금형제작) 기업규모에 따라 70%~90% 이내, 최대 2,500만원",
+  "category": "jobs",
+  "contact_raw": "(재)장애인기업종합지원센터/02-2181-6535",
+  "content_hash": "sha256:70b9771ecace1d174ee32fc7073509b8",
+  "criteria_raw": "○ 평가우수자 선정",
+  "deferred_detail": false,
+  "documents_raw": [
+    "지원신청서",
+    "장애인증명서",
+    "사업자등록증",
+    "직전년도 재무제표",
+    "국세 지방세 완납 증명서",
+    "제품개발 견적서",
+    "개인정보 수집 및 이용 동의서",
+    "제작기업 참여확인서",
+    "제작기업 사업자등록증",
+    "참여인력 경력확인서",
+    "제작기업 인력증빙서류"
+  ],
+  "first_published": "2026-11-05",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-142000000090",
+  "is_mock": false,
+  "last_checked": "2026-11-05",
+  "last_updated": "2026-11-05",
+  "law_raw": "",
+  "name": "장애인 기업 시제품제작 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=511979&bnefType=all&svcId=142000000090",
+  "org": "중소벤처기업부",
+  "primary_audience": "disabled",
+  "receiver_raw": "(재)장애인기업종합지원센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "장애인-기업-시제품제작-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 소상공인",
+  "source_id": "142000000090",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 장애인 예비창업자, 장애인기업",
+  "view_count": 2801
+}

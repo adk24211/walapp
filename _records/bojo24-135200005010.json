@@ -1,19 +1,19 @@
 {
   "_prose": {
     "eligibility": [
-      "생계·의료수급가구이며 중위소득 40% 이하인 가구",
-      "가구에 일하는 사람이 있어야 합니다",
-      "가구 전체 근로·사업소득이 기준중위소득 40%의 60% 이상이어야 합니다"
+      "생계·의료수급 가구이며, 가구 소득이 기준 중위소득 40% 이하인 경우입니다.",
+      "가구에 일하는 사람이 있어야 합니다.",
+      "가구 전체 근로·사업소득이 기준 중위소득 40%의 60% 이상이어야 합니다."
     ],
     "faq": [],
-    "note": "",
+    "note": "지원금은 탈수급 시에만 지급됩니다.",
     "steps": [
       {
-        "body": "방문 신청이 가능합니다. 신청 시 필요한 서류는 없습니다.",
+        "body": "방문 신청을 통해 접수합니다. 구비 서류는 필요하지 않습니다. 지원금은 탈수급 시에 지급됩니다.",
         "title": "신청 방법"
       }
     ],
-    "summary": "자산형성지원사업(희망저축Ⅰ)은 일하는 생계·의료급여 수급 가구를 대상으로 본인 적립금 10만 원에 정부지원금 30만 원을 매칭해 탈수급 시 지급하는 금융·자산 지원 제도입니다."
+    "summary": "자산형성지원사업(희망저축Ⅰ)은 생계·의료수급 가구 중 일하는 사람이 있는 가구에, 본인 적립금 10만 원에 정부 지원금 30만 원을 매칭하여 탈수급 시 지급하는 지원 제도입니다."
   },
   "apply_period": {
     "always": false,
@@ -28,7 +28,7 @@
   "benefit_raw": "일하는 생계‧의료급여 수급자를 대상으로 본인적립금(10만 원)에 정부지원금(30만 원)을 매칭하여 탈수급 시 지급\n-(지원대상) 생계․의료수급가구(중위 40% 이하) 중, 일하는 사람이 있어야 하며, 가구 전체의 총 근로․사업소득이 기준중위소득 40%의 60% 이상",
   "category": "finance",
   "contact_raw": "보건복지상담센터/129\n자산형성지원콜센터/1522-3690",
-  "content_hash": "sha256:80e22e3f13ebecb2d2993b3707c25472",
+  "content_hash": "sha256:fd1f519f1708bae88b642be9fc0c5d59",
   "criteria_raw": "생계․의료수급가구(중위 40% 이하) 중, 일하는 사람이 있어야 하며, 가구 전체의 총 근로․사업소득이 기준중위소득 40%의 60% 이상",
   "deferred_detail": false,
   "documents_raw": [
@@ -38,11 +38,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-135200005010",
   "is_mock": false,
-  "last_checked": "2026-09-12",
-  "last_updated": "2026-09-12",
+  "last_checked": "2026-11-05",
+  "last_updated": "2026-11-05",
   "law_raw": "",
   "name": "자산형성지원사업(희망저축Ⅰ)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005010",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=805488&bnefType=all&svcId=135200005010",
   "org": "보건복지부",
   "primary_audience": "lowincome",
   "receiver_raw": "",
@@ -51,7 +51,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "자산형성지원사업-희망저축1",
   "source": "bojo24",
   "source_category_raw": "주거·자립 현금 가구",
@@ -59,5 +59,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "생계․의료수급가구(중위 40% 이하) 중, 일하는 사람이 있어야 하며, 가구 전체의 총 근로․사업소득이 기준중위소득 40%의 60% 이상",
-  "view_count": 50282
+  "view_count": 50953
 }

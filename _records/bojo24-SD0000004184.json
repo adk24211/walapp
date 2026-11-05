@@ -1,0 +1,70 @@
+{
+  "_prose": {
+    "eligibility": [
+      "시각장애인용 점자 서류를 발송하는 경우",
+      "시각장애인을 위한 법인·단체·시설(법률에 따라 설치·허가·등록·신고된)에서 발송하는 경우",
+      "시각장애인용 녹음물 및 점·묵자 혼용 서류를 발송하는 경우",
+      "소득과 무관하게 신청 가능"
+    ],
+    "faq": [
+      {
+        "a": "법률에 따라 설치·허가·등록·신고된 기관만 해당되며, 시각장애인복지기관의 법인설립인가 확인서류 등을 제출하면 확인할 수 있습니다.",
+        "q": "지원 대상이 되는 법인·단체·시설는 어떻게 확인하나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "방문 신청은 전국 우체국을 직접 방문하여 진행합니다. 점자 서류는 별도 구비서류가 필요 없으며, 점·묵자 혼용 서류는 시각장애인복지기관의 법인설립인가 확인서류 등을 제출합니다. 신청은 상시 접수됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "시각장애인용 점자·묵자 서류와 녹음물을 전국 우체국에 직접 방문하여 신청하면, 소득과 무관하게 무료로 발송받을 수 있는 지원 제도입니다. 시각장애인을 위한 법인·단체·시설에서도 이용 가능하며, 점·묵자 혼용 서류는 해당 기관의 설립인가 확인서류를 제출하면 됩니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled"
+  ],
+  "benefit_raw": "○ 시각장애인이 점자 및 묵자관련 서류를 발송할 때 무료로 발송할 수 있는 서비스",
+  "category": "living",
+  "contact_raw": "우편콜센터/1588-1300",
+  "content_hash": "sha256:4c1169248e552677340ae0ecf5fa8f75",
+  "criteria_raw": "○ 시각장애인용 점자 또는 시각장애인을 위한 법인 등에서 보내는 시각장애인용 녹음물 및 점묵자 혼용서류를 발송하는 경우",
+  "deferred_detail": false,
+  "documents_raw": [
+    "ㅇ 점자 : 별도 구비서류 없음",
+    "ㅇ 점자º묵자 혼용 : 시각장애인복지기관의 법인설립인가 확인서류 등"
+  ],
+  "first_published": "2026-11-05",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-SD0000004184",
+  "is_mock": false,
+  "last_checked": "2026-11-05",
+  "last_updated": "2026-11-05",
+  "law_raw": "",
+  "name": "시각 장애인용 우편물 무료발송 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=762451&bnefType=all&svcId=SD0000004184",
+  "org": "과학기술정보통신부",
+  "primary_audience": "disabled",
+  "receiver_raw": "전국 우체국",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "시각-장애인용-우편물-무료발송-지원",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 현금(감면) 개인\n법인/시설/단체",
+  "source_id": "SD0000004184",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 시각장애인용 점자 또는 시각장애인을 위한 법인.단체.시설(법률에 따라 설치되거나 허가.등록.신고 등을 한 법인.단체.시설만 해당) 등에서 보내는 시각장애인용 녹음물 및 점묵자 혼용서류\n\n○ 소득과 무관",
+  "view_count": 3004
+}

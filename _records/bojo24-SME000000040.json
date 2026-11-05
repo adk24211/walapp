@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "의료급여수급권자이어야 합니다.",
+      "만 6세 미만 영유아이어야 합니다.",
+      "지원 대상과 선정 기준이 동일하므로 위 두 조건을 충족하면 됩니다."
+    ],
+    "faq": [],
+    "note": "검진 시 건강검진표와 보호자 신분증을 반드시 지참해야 합니다.",
+    "steps": [
+      {
+        "body": "별도 신청이 필요하지 않으며, 검진을 받을 때 국민건강보험공단에서 발송한 건강검진표와 보호자 신분증을 제시하면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "의료급여수급권자 영유아(만 6세 미만)를 대상으로, 생후 14일~66개월까지 총 8차에 걸친 건강검진과 4차 구강검진을 무상으로 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "해당 차수의 영유아 건강검진기간 내",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "○ 영유아 건강검진 서비스\n- 주요 선별 목표 질환 : 성장 이상, 발달 이상, 비만, 안전사고, 영아 급사 증후군, 청각 이상, 시각 이상, 치아우식증 등\n- 영유아 건강검진 항목 : 각 월령에 특화된 문진(시각·청각 문진 포함)과 진찰, 신체계측(신장·체중·주위)이 공통 실시, 9종의 건강교육과 발달평가 및 상담(4개월 제외)으로 구성\n- 검진 주기(총8차) : 생후14~35일, 4개월, 9개월, 18개월, 30개월, 42개월, 54개월, 66개월\n구강검진(총4차) : 18개월, 30개월, 42개월, 54개월",
+  "category": "health",
+  "contact_raw": "국민건강보험공단/1577-1000",
+  "content_hash": "sha256:08d08f62ea61c1b5c0b1587ff324339f",
+  "criteria_raw": "지원대상과 동일",
+  "deferred_detail": false,
+  "documents_raw": [
+    "국민건강보험공단에서 발송한 건강검진표와 보호자 신분증"
+  ],
+  "first_published": "2026-11-05",
+  "how_to_raw": "신청불필요",
+  "id": "bojo24-SME000000040",
+  "is_mock": false,
+  "last_checked": "2026-11-05",
+  "last_updated": "2026-11-05",
+  "law_raw": "",
+  "name": "의료급여수급권자 영유아건강검진비 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=10575&bnefType=all&svcId=SME000000040",
+  "org": "보건복지부",
+  "primary_audience": "lowincome",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "의료급여수급권자-영유아건강검진비-지원",
+  "source": "bojo24",
+  "source_category_raw": "보건·의료 서비스(의료)\n의료지원 개인",
+  "source_id": "SME000000040",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "만 6세 미만 영유아(의료급여수급권자)",
+  "view_count": 3652
+}

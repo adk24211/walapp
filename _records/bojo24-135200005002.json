@@ -1,19 +1,19 @@
 {
   "_prose": {
     "eligibility": [
-      "긴급복지 주지원(생계·의료·주거·복지시설 이용)을 받고 있는 가구의 구성원이어야 합니다.",
-      "출산하거나 출산 예정이어야 합니다.",
-      "가구가 해산비 지원이 필요하다고 인정받아야 합니다."
+      "긴급복지 주지원(생계·의료·주거·복지시설이용 지원)을 받고 있는 가구의 구성원이어야 합니다.",
+      "출산 또는 출산예정인 경우에 해당해야 합니다.",
+      "해산비 지원이 필요하다고 해당 가구가 인정받아야 합니다."
     ],
     "faq": [],
     "note": "",
     "steps": [
       {
-        "body": "신청 시 신분증 및 긴급복지지원 담당공무원과 상담이 필요한 기타 서류를 제출합니다. 공무원이 서류를 확인하고 지원 여부를 판단합니다.",
-        "title": "신청 절차"
+        "body": "시·군·구청을 직접 방문하여 신청합니다. 신청 시 신분증 및 담당 공무원과의 상담을 통해 필요한 서류를 제출합니다.",
+        "title": "신청 방법"
       }
     ],
-    "summary": "긴급복지 주지원(생계·의료·주거·복지시설 이용) 수혜 가구의 출산·출산예정 가구 구성원을 대상으로 1인당 700천원(쌍둥이 1,400천원) 현금 지원하는 제도입니다."
+    "summary": "긴급복지 주지원을 받고 있는 가구가 출산·출산예정인 경우, 1인당 700천원의 해산비를 현금으로 지원하며, 쌍둥이 출산 시에는 1,400천원을 지급하는 제도입니다."
   },
   "apply_period": {
     "always": false,
@@ -28,7 +28,7 @@
   "benefit_raw": "○ 조산 및 분만 후의 필요한 조치와 보호를 위한 지원 : 1인당 700천원 현금 지급(쌍둥이 출산 시 1,400천원 지급)\n* 긴급지원 주지원(생계, 의료, 주거, 복지시설이용 지원)을 받는 가구 중 해산비 지원이 필요하다고 인정되는 가구",
   "category": "care",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:4b28912f3422966abaaed23c0e01616b",
+  "content_hash": "sha256:2b13909f1a2a205cf8d59abd55df7c51",
   "criteria_raw": "○ 긴급지원 주지원(생계, 의료, 주거, 복지시설이용 지원)을 받는 가구 중 해산비 지원이 필요하다고 인정되는 가구",
   "deferred_detail": false,
   "documents_raw": [
@@ -42,11 +42,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-135200005002",
   "is_mock": false,
-  "last_checked": "2026-09-01",
-  "last_updated": "2026-09-01",
+  "last_checked": "2026-11-05",
+  "last_updated": "2026-11-05",
   "law_raw": "",
   "name": "긴급복지 해산비 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005002",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900009&bnefType=all&svcId=135200005002",
   "org": "보건복지부",
   "primary_audience": "parent",
   "receiver_raw": "시·군·구청",
@@ -55,7 +55,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "긴급복지-해산비-지원",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금 개인",
@@ -63,5 +63,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 긴급복지 주지원(생계, 의료, 주거, 복지시설이용 지원)을 받는 대상자(가구구성원 포함)가 출산 또는 출산예정인 경우",
-  "view_count": 7139
+  "view_count": 7494
 }
