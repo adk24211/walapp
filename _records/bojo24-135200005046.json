@@ -2,23 +2,18 @@
   "_prose": {
     "eligibility": [
       "임산부",
-      "임산부(지원 대상)",
-      "임산부(선정 기준)"
+      "임산부는 지원 대상입니다",
+      "임산부는 선정 기준에 해당합니다"
     ],
-    "faq": [
-      {
-        "a": "상급 종합병원은 40%, 종합병원은 30%, 병원은 20%, 의원은 10%가 경감됩니다.",
-        "q": "지원 비율은 어떻게 적용되나요?"
-      }
-    ],
+    "faq": [],
     "note": "",
     "steps": [
       {
-        "body": "별도의 신청 절차가 없으며, 진료 시 자동으로 적용됩니다.",
+        "body": "본 제도는 별도 신청이 필요하지 않습니다. 진료를 받을 때 자동으로 적용되며, 상시 접수가 이루어집니다. 지원 내용은 진료비 청구 시 반영됩니다.",
         "title": "신청 절차"
       }
     ],
-    "summary": "임산부 외래진료비 본인부담률을 임신 기간 동안 진료 과목에 관계없이 경감해 주는 제도이며, 병원 종류에 따라 경감 비율이 다르게 적용됩니다."
+    "summary": "임산부가 임신 기간 중 외래진료를 받을 경우, 진료받는 병원의 등급에 따라 본인부담률이 상급 종합병원은 40%, 종합병원은 30%, 일반 병원은 20%, 의원은 10% 경감되는 제도입니다."
   },
   "apply_period": {
     "always": true,
@@ -33,7 +28,7 @@
   "benefit_raw": "○ 임신 기간 중 진료 과목 상관없이 요양 급여 비용 총액의 일정 비율 경감(상급 종합병원 40%, 종합병원 30%, 병원 20%, 의원 10%)",
   "category": "care",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:6991905a3e85b675e2b5ea641a7ec6f7",
+  "content_hash": "sha256:ef248a4086c8754762f110773242c1cf",
   "criteria_raw": "○ 임산부",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +38,11 @@
   "how_to_raw": "신청불필요",
   "id": "bojo24-135200005046",
   "is_mock": false,
-  "last_checked": "2026-09-25",
-  "last_updated": "2026-09-25",
+  "last_checked": "2026-11-06",
+  "last_updated": "2026-11-06",
   "law_raw": "",
   "name": "임산부 외래진료비 본인부담률 경감",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005046",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156119&bnefType=all&svcId=135200005046",
   "org": "보건복지부",
   "primary_audience": "parent",
   "receiver_raw": "",
@@ -56,7 +51,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "임산부-외래진료비-본인부담률-경감",
   "source": "bojo24",
   "source_category_raw": "임신·출산 현금(보험) 개인",
@@ -64,5 +59,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 임산부",
-  "view_count": 3339
+  "view_count": 3920
 }

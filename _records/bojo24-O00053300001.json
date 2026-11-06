@@ -1,0 +1,64 @@
+{
+  "_prose": {
+    "eligibility": [
+      "대학 재학생 중 선발요건을 충족한 자",
+      "고등학교 3학년생·검정고시 합격생·학교밖 청소년",
+      "선발요건은 2026년 선발공고문을 참고해야 함"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "홈페이지에 접속하여 신청 양식을 다운로드하고 온라인으로 제출하거나, 직접 방문하여 서류를 제출합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "양평군장학재단은 대학생과 고등학교 3학년·검정고시 합격생·학교밖 청소년에게 장학금을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "https://www.ypedc.or.kr",
+  "audiences": [
+    "youth",
+    "parent"
+  ],
+  "benefit_raw": "○ 장학금 지원\n- 대학생에게 1인당 150만원 이내의 장학금 지원\n- 해당연도 고등학교 3학년생 또는 검정고시 합격생에게 1인당 장학금 50만원 지원\n- 특기적성 인재 육성 장학사업",
+  "category": "education",
+  "contact_raw": "(재)양평군장학재단/031-770-2774",
+  "content_hash": "sha256:e8f160a865617ae346ab21c4b65ecc6f",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "홈페이지에 접속하여 다운로드( - https://www.ypedc.or.kr/)"
+  ],
+  "first_published": "2026-11-06",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-O00053300001",
+  "is_mock": false,
+  "last_checked": "2026-11-06",
+  "last_updated": "2026-11-06",
+  "law_raw": "",
+  "name": "양평군장학재단",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001523&bnefType=all&svcId=O00053300001",
+  "org": "양평군교육발전위원회",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "양평군장학재단",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "O00053300001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 대학교 장학생 선발\n- 지원대상 : 대학교 재학생 중 선발요건을 충족하는 자\n- 지원유형 : 성적우수/복지가정/다자녀가정/예체능 특기\n- 선발요건 : 유형별 상이하므로 2026년 선발공고문 참조\n\n○ 가온누리 장학생 선발\n- 지원대상 : 해당연도 고등학교 3학년생 또는 검정고시 합격생 , 학교밖 청소년\n- 선발요건 : 2026년 선발공고문 참조",
+  "view_count": 1897
+}
