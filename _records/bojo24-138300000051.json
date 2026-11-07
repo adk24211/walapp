@@ -5,15 +5,20 @@
       "자녀를 양육하고 있어야 합니다.",
       "가구의 기준 중위소득이 65% 이하이어야 합니다."
     ],
-    "faq": [],
-    "note": "지원 대상과 선정 기준이 동일하므로 신청 전에 자격 여부를 반드시 확인하시기 바랍니다.",
+    "faq": [
+      {
+        "a": "사실혼관계 확인서를 제출하면 됩니다.",
+        "q": "사실혼 관계임을 어떻게 증명하나요?"
+      }
+    ],
+    "note": "",
     "steps": [
       {
-        "body": "청소년부모 아동양육비 지원 신청서를 지참하여 직접 방문하시면 됩니다.",
+        "body": "지원 신청은 방문 신청으로 진행됩니다. 구비 서류를 모두 준비하여 담당 부서에 제출하시기 바랍니다. 제출 후 심사가 이루어집니다.",
         "title": "신청 절차"
       }
     ],
-    "summary": "청소년부모 아동양육비 지원사업은 저소득 청소년부모 가구에 자녀 1인당 월 25만 원을 지원하는 제도입니다."
+    "summary": "청소년부모 아동양육비 지원사업은 24세 이하 청소년부모(사실혼 포함) 가구 중 기준 중위소득 65% 이하인 경우, 자녀 1인당 월 25만 원을 지원하는 상시 접수 제도입니다."
   },
   "apply_period": {
     "always": true,
@@ -29,7 +34,7 @@
   "benefit_raw": "저소득 청소년부모 가구 자녀 1인당 월 25만 원 아동양육비 지원",
   "category": "care",
   "contact_raw": "성평등가족부 가족지원과/02-2100-6349",
-  "content_hash": "sha256:b9b923057654d33ce3b30dd6a7923b02",
+  "content_hash": "sha256:5a4225666a70de59137ecee82840f942",
   "criteria_raw": "① 청소년(24세이하, 사실혼 포함)부부로서, ② 자녀를 양육하고 있는, ③ 기준 중위소득 65% 이하의 가구",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,11 +49,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-138300000051",
   "is_mock": false,
-  "last_checked": "2026-10-15",
-  "last_updated": "2026-10-15",
+  "last_checked": "2026-11-07",
+  "last_updated": "2026-11-07",
   "law_raw": "",
   "name": "청소년부모 아동양육비 지원사업",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000051",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2121703&bnefType=all&svcId=138300000051",
   "org": "성평등가족부",
   "primary_audience": "parent",
   "receiver_raw": "",
@@ -57,7 +62,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "청소년부모-아동양육비-지원사업",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금 가구",
@@ -65,5 +70,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "① 청소년(24세이하, 사실혼 포함)부부로서, ② 자녀를 양육하고 있는, ③ 기준 중위소득 65% 이하의 가구",
-  "view_count": 2629
+  "view_count": 2779
 }

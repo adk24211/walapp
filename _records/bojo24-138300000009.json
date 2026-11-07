@@ -1,24 +1,24 @@
 {
   "_prose": {
     "eligibility": [
-      "결혼이민예정자",
-      "혼인신고자",
-      "비자발급신청자"
+      "결혼이민예정자이어야 합니다.",
+      "혼인신고자를 대상으로 합니다.",
+      "비자 발급 신청자를 대상으로 합니다."
     ],
     "faq": [
       {
-        "a": "한국생활에 필요한 정보를 사전 제공합니다. 구체적인 내용은 현지 사전교육을 통해 안내됩니다.",
-        "q": "교육 내용은 어떤 정보를 제공하나요?"
+        "a": "한국 생활에 필요한 정보를 사전 제공합니다.",
+        "q": "교육은 어떤 형태로 제공되나요?"
       }
     ],
     "note": "",
     "steps": [
       {
-        "body": "관할 기관을 직접 방문하여 신청합니다. 신청 시 결혼이민예정자임을 확인하고, 혼인신고 또는 비자 발급 신청 여부를 확인받습니다. 이후 현지 사전교육을 받을 수 있는 안내를 받게 됩니다.",
+        "body": "성평등가족부에 직접 방문하여 신청서를 제출합니다. 구비 서류는 필요하지 않습니다.",
         "title": "방문 신청"
       }
     ],
-    "summary": "결혼이민예정자를 대상으로 한국 입국 전 한국생활에 필요한 정보를 사전 제공하는 현지사전교육 지원 제도이며, 성평등가족부에서 운영합니다. 해당 교육은 현지에서 진행됩니다."
+    "summary": "결혼이민예정자를 대상으로 한국 입국 전 현지에서 한국 생활에 필요한 정보를 사전 제공하는 지원 제도이며, 성평등가족부에서 방문 신청이 가능합니다. 구비 서류는 필요하지 않으며, 신청 기간은 별도로 안내되지 않습니다."
   },
   "apply_period": {
     "always": false,
@@ -34,7 +34,7 @@
   "benefit_raw": "○ 한국 입국 전 결혼이민예정자에게 한국생활에 필요한 정보를 사전 제공",
   "category": "care",
   "contact_raw": "성평등가족부 청소년가족정책실 다문화가족과/02-2100-6379",
-  "content_hash": "sha256:63a9590a21cfbaac312cb3b00dc4cb6f",
+  "content_hash": "sha256:38fba93b35f5c99cafe6fba19aec37fb",
   "criteria_raw": "○ 혼인신고자 또는 비자발급신청자",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,11 +44,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-138300000009",
   "is_mock": false,
-  "last_checked": "2026-08-30",
-  "last_updated": "2026-08-30",
+  "last_checked": "2026-11-07",
+  "last_updated": "2026-11-07",
   "law_raw": "",
   "name": "결혼이민예정자 현지사전교육 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000009",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999181&bnefType=all&svcId=138300000009",
   "org": "성평등가족부",
   "primary_audience": "newlywed",
   "receiver_raw": "성평등가족부",
@@ -57,7 +57,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "결혼이민예정자-현지사전교육-지원",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 개인",
@@ -65,5 +65,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 결혼이민예정자",
-  "view_count": 2938
+  "view_count": 3194
 }

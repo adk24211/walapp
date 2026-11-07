@@ -1,0 +1,66 @@
+{
+  "_prose": {
+    "eligibility": [
+      "국민기초생활보장법에 따른 수급자 또는 차상위계층",
+      "한부모가족지원법에 따른 보호대상자",
+      "장애인연금법에 따른 수급자",
+      "2명 이상의 미성년 자녀가 있는 사람"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "인사혁신처 홈페이지에서 온라인으로 신청합니다. 별도의 구비 서류는 필요하지 않으며, 상시 접수됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "국가공무원 채용시험에 응시하는 국민기초생활보장법 수급자·차상위계층·한부모가족지원법 보호대상자 등 사회적 취약계층에게 시험 응시수수료를 전액 면제해 주는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "국가공무원 시험 원서접수시",
+    "start": ""
+  },
+  "apply_url": "https://www.gosi.kr",
+  "audiences": [
+    "parent",
+    "disabled",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 국가공무원 채용시험 응시수수료 면제\n- 5급 이상 공무원 채용시험 : 1만원\n- 외교관후보자 선발시험 : 1만원\n- 6·7급 공무원 채용시험: 7천원\n- 8·9급 공무원 채용시험 : 5천원",
+  "category": "jobs",
+  "contact_raw": "인사혁신처 인재채용국 공개채용과/044-201-8255",
+  "content_hash": "sha256:8d3b745cea9c37bc6a8809f3bcb6bd88",
+  "criteria_raw": "○ '국민기초생활보장법'에 따른 수급자 또는 차상위계층\n○ '한부모가족지원법'에 따른 지원대상자\n○ '장애인연금법'에 따른 수급자\n○ 2명 이상의 미성년 자녀가 있는 사람",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-07",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-SD0000005852",
+  "is_mock": false,
+  "last_checked": "2026-11-07",
+  "last_updated": "2026-11-07",
+  "law_raw": "",
+  "name": "국가공무원 채용시험 사회적 취약계층 응시수수료 면제",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=785585&bnefType=all&svcId=SD0000005852",
+  "org": "인사혁신처",
+  "primary_audience": "lowincome",
+  "receiver_raw": "인사혁신처",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "국가공무원-채용시험-사회적-취약계층-응시수수료-면제",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 현금(감면) 개인",
+  "source_id": "SD0000005852",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 공무원 채용시험 응시자 중 국민기초생활보장법에 따른 수급자 또는 차상위계층이거나 한부모가족지원법에 따른 보호대상자",
+  "view_count": 3045
+}
