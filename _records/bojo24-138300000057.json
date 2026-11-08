@@ -1,19 +1,19 @@
 {
   "_prose": {
     "eligibility": [
-      "다문화가족의 7세 이상 18세 이하 자녀",
-      "가구 중위소득이 기준 중위소득 100% 이하",
-      "교육급여(중위소득 50% 이하)를 받지 않는 경우"
+      "다문화가정(결혼이민자·귀화자 포함)의 자녀가 대상입니다.",
+      "가구 중위소득이 기준 중위소득 100% 이하이어야 합니다.",
+      "교육급여(중위소득 50% 이하)를 받지 않는 경우에만 지원됩니다."
     ],
     "faq": [],
-    "note": "연령 기준은 2018년 12월 31일 이전 출생자는 만 7세, 2007년 1월 1일 이후 출생자는 만 18세에 해당합니다.",
+    "note": "",
     "steps": [
       {
-        "body": "지원 대상자는 가까운 가족센터를 직접 방문합니다. 방문 시 다문화가족 자녀 교육활동비 지원 신청서와 구비 서류를 제출해야 합니다. 제출된 서류는 담당자가 검토하여 지원 여부를 결정합니다.",
+        "body": "관할 가족센터를 직접 방문하여 신청서를 제출합니다. 신청 시 필요한 서류를 모두 지참해야 합니다. 제출 후 담당자가 서류를 검토하고 지원 여부를 결정합니다.",
         "title": "신청 절차"
       }
     ],
-    "summary": "저소득 다문화가족의 7세에서 18세 자녀에게 교육급여를 받지 않을 경우, 초·중·고등학생별 연 40~60만원을 농협카드 포인트로 지원하는 제도입니다."
+    "summary": "저소득 다문화 가정의 7세에서 18세 자녀를 대상으로, 교육급여를 받지 않는 경우 연령별로 연 40만원·50만원·60만원을 농협카드 포인트로 지원하는 제도입니다."
   },
   "apply_period": {
     "always": false,
@@ -30,7 +30,7 @@
   "benefit_raw": "ㅇ 교육급여를 받지 않는 기준 중위소득 100% 이하 다문화 가족의 만 7세(2018.12.31. 이전 출생자)~ 18세(2007.1.1. 이후 출생자) 자녀에게 가족센터(전국 231개소)를 통해 초등학생 연 40만원, 중학생 연 50만원, 고등학생 연 60만원을 농협카드의 포인트로 지급.",
   "category": "living",
   "contact_raw": "성평등가족부/02-2100-6376\n성평등가족부/02-2100-6377",
-  "content_hash": "sha256:c6e407728c900be50206c185f5aaabc3",
+  "content_hash": "sha256:ceab63422159ddccf9c28eb5ee723e8c",
   "criteria_raw": "ㅇ 교육급여(중위소득 50% 이하)를 받지 않는 기준중위소득 100% 이하 다문화가족의 7~18세 자녀",
   "deferred_detail": false,
   "documents_raw": [
@@ -51,11 +51,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-138300000057",
   "is_mock": false,
-  "last_checked": "2026-09-17",
-  "last_updated": "2026-09-17",
+  "last_checked": "2026-11-08",
+  "last_updated": "2026-11-08",
   "law_raw": "",
   "name": "저소득 다문화 자녀 교육활동비 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000057",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2147891&bnefType=all&svcId=138300000057",
   "org": "성평등가족부",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -64,7 +64,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "저소득-다문화-자녀-교육활동비-지원",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금 개인",
@@ -72,5 +72,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "ㅇ 교육급여(중위소득 50% 이하)를 받지 않는 기준중위소득 100% 이하 다문화가족의 7~18세 자녀",
-  "view_count": 801
+  "view_count": 1077
 }

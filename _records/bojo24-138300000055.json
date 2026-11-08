@@ -1,23 +1,23 @@
 {
   "_prose": {
     "eligibility": [
-      "경력보유여성 등 구직 희망 여성",
-      "구직을 희망하는 여성"
+      "경력보유여성",
+      "구직을 희망하는 여성",
+      "여성"
     ],
-    "faq": [
-      {
-        "a": "지원은 여성 새로 일하기 센터에서 1:1 상담 후 적합한 취업 지원 서비스 연계 형태로 제공됩니다.",
-        "q": "지원 서비스는 어떤 형태로 제공되나요?"
-      }
-    ],
+    "faq": [],
     "note": "",
     "steps": [
       {
-        "body": "성평등가족부 산하 여성 새로 일하기 센터를 직접 방문하여 신청합니다. 방문 시 구직자 1:1 상담을 받고, 이후 적합한 취업 지원 서비스와 연계됩니다.",
-        "title": "신청 절차"
+        "body": "방문 신청을 하시면 됩니다. 방문 시 구비 서류인 신청서를 제출하시고, 여성새로일하기센터에서 구직자 1:1 상담을 받으실 수 있습니다.",
+        "title": "신청"
+      },
+      {
+        "body": "상담을 통해 개인에 맞는 취업 지원 서비스를 연계받게 됩니다. 연계된 서비스는 여성새로일하기센터에서 제공됩니다.",
+        "title": "지원 연계"
       }
     ],
-    "summary": "경력보유여성 등 구직 희망 여성을 대상으로, 여성 새로 일하기 센터에서 1:1 상담 후 적합한 취업 지원 서비스를 연계해 주는 취업지원 제도입니다."
+    "summary": "경력보유여성 등 구직을 희망하는 여성에게 여성새로일하기센터에서 1:1 상담 후 적합한 취업 지원 서비스를 연계해 주는 취업지원 제도입니다."
   },
   "apply_period": {
     "always": false,
@@ -32,7 +32,7 @@
   "benefit_raw": "○ 여성 새로 일하기 센터에서 구직자 1:1 상담 후 적합한 취업 지원 서비스 연계",
   "category": "jobs",
   "contact_raw": "여성새로일하기센터/1544-1199",
-  "content_hash": "sha256:29c66aa2fe12db5694ee69ef7d4b4b9c",
+  "content_hash": "sha256:c9ce6dc6db914df984ce598bdc754697",
   "criteria_raw": "경력보유여성 등 구직 희망 여성",
   "deferred_detail": false,
   "documents_raw": [
@@ -42,11 +42,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-138300000055",
   "is_mock": false,
-  "last_checked": "2026-08-30",
-  "last_updated": "2026-08-30",
+  "last_checked": "2026-11-08",
+  "last_updated": "2026-11-08",
   "law_raw": "",
   "name": "경력보유여성 등 취업지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000055",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2149016&bnefType=all&svcId=138300000055",
   "org": "성평등가족부",
   "primary_audience": "jobseeker",
   "receiver_raw": "",
@@ -55,7 +55,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "경력보유여성-등-취업지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 서비스(일자리) 개인",
@@ -63,5 +63,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "경력보유여성 등 구직 희망 여성",
-  "view_count": 2165
+  "view_count": 2534
 }
