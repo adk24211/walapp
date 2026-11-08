@@ -4,8 +4,40 @@
   <subtitle>정부·지자체 지원금과 복지 제도를 받을 수 있는지부터 신청 방법까지 하나씩 정리합니다. 공공데이터 원문을 토대로 쉬운 말로 풀어 씁니다.</subtitle>
   <link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html"/>
-  <updated>2026-11-07T11:00:04+09:00</updated>
+  <updated>2026-11-08T10:26:53+09:00</updated>
   <id>https://adk24211.github.io/walapp/</id>
+  <entry>
+    <title type="text">체육시설 이용요금 감면(오산스포츠센터)</title>
+    <link href="https://adk24211.github.io/walapp/support/living/%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EC%98%A4%EC%82%B0%EC%8A%A4%ED%8F%AC%EC%B8%A0%EC%84%BC%ED%84%B0/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EC%98%A4%EC%82%B0%EC%8A%A4%ED%8F%AC%EC%B8%A0%EC%84%BC%ED%84%B0/</id>
+    <published>2026-11-08T00:00:00+09:00</published>
+    <updated>2026-11-08T00:00:00+09:00</updated><author><name>오산시시설관리공단</name></author><category term="living"/>
+    <summary type="text">오산시시설관리공단이 운영하는 오산스포츠센터에서 일정 대상에게 체육시설 이용료를 최대 50%까지 감면해 주는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">청년문화육성지원</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%B2%AD%EB%85%84%EB%AC%B8%ED%99%94%EC%9C%A1%EC%84%B1%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%B2%AD%EB%85%84%EB%AC%B8%ED%99%94%EC%9C%A1%EC%84%B1%EC%A7%80%EC%9B%90/</id>
+    <published>2026-11-08T00:00:00+09:00</published>
+    <updated>2026-11-08T00:00:00+09:00</updated><author><name>(재)부산문화재단</name></author><category term="jobs"/>
+    <summary type="text">부산에서 활동하는 39세 이하 청년예술가를 대상으로 창작·연출·기획 등 다양한 문화활동을 지원하는 제도이며, 지원 내용에는 창작지원, 작품제작지원, 자율기획, 트레이닝센터 운영, 포럼사업, 기업협력형 창작활동지원, 아트페어 운영, 작품 구독 및 문화 홍보 등이 포함됩니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">JB선도산업 육성방안 탐구지원</title>
+    <link href="https://adk24211.github.io/walapp/support/education/jb%EC%84%A0%EB%8F%84%EC%82%B0%EC%97%85-%EC%9C%A1%EC%84%B1%EB%B0%A9%EC%95%88-%ED%83%90%EA%B5%AC%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/education/jb%EC%84%A0%EB%8F%84%EC%82%B0%EC%97%85-%EC%9C%A1%EC%84%B1%EB%B0%A9%EC%95%88-%ED%83%90%EA%B5%AC%EC%A7%80%EC%9B%90/</id>
+    <published>2026-11-08T00:00:00+09:00</published>
+    <updated>2026-11-08T00:00:00+09:00</updated><author><name>재단법인전북특별자치도평생교육장학진흥원</name></author><category term="education"/>
+    <summary type="text">전북 출신 대학생(휴학생 포함)을 대상으로 전북특별자치도 선도산업 탐구활동을 지원하는 프로그램입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">전문아동보호비 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/care/%EC%A0%84%EB%AC%B8%EC%95%84%EB%8F%99%EB%B3%B4%ED%98%B8%EB%B9%84-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/%EC%A0%84%EB%AC%B8%EC%95%84%EB%8F%99%EB%B3%B4%ED%98%B8%EB%B9%84-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-11-08T00:00:00+09:00</published>
+    <updated>2026-11-08T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="care"/>
+    <summary type="text">전문아동보호비 지원은 학대피해아동·2세 이하 영아·장애·경계선지능아동 등을 보호가정에 위탁하거나 일시보호 중일 때 지원하는 제도입니다.</summary>
+  </entry>
   <entry>
     <title type="text">수산물 물류환경 개선</title>
     <link href="https://adk24211.github.io/walapp/support/living/%EC%88%98%EC%82%B0%EB%AC%BC-%EB%AC%BC%EB%A5%98%ED%99%98%EA%B2%BD-%EA%B0%9C%EC%84%A0/" rel="alternate" type="text/html"/>
@@ -213,37 +245,5 @@
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated><author><name>통일부</name></author><category term="health"/>
     <summary type="text">통일부가 운영하는 북한이탈주민 의료지원 제도는 퇴원일 기준 2026년 치료 대상 질병을 가진 저소득 북한이탈주민에게 민간보험 미보장 치료비를 지원합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">북부스포츠센터 체육시설(수영장,헬스장,축구장 등) 이용요금 감면(50%)</title>
-    <link href="https://adk24211.github.io/walapp/support/living/%EB%B6%81%EB%B6%80%EC%8A%A4%ED%8F%AC%EC%B8%A0%EC%84%BC%ED%84%B0-%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%EC%88%98%EC%98%81%EC%9E%A5-%ED%97%AC%EC%8A%A4%EC%9E%A5-%EC%B6%95%EA%B5%AC%EC%9E%A5-%EB%93%B1-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-50/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/living/%EB%B6%81%EB%B6%80%EC%8A%A4%ED%8F%AC%EC%B8%A0%EC%84%BC%ED%84%B0-%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%EC%88%98%EC%98%81%EC%9E%A5-%ED%97%AC%EC%8A%A4%EC%9E%A5-%EC%B6%95%EA%B5%AC%EC%9E%A5-%EB%93%B1-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-50/</id>
-    <published>2026-11-02T00:00:00+09:00</published>
-    <updated>2026-11-02T00:00:00+09:00</updated><author><name>천안도시공사</name></author><category term="living"/>
-    <summary type="text">북부스포츠센터의 수영장·헬스장·축구장 등 체육시설 이용료를 50% 감면해 주는 생활·문화 분야 지원 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">6ㆍ25전사자(미수습) 유가족 유전자 채취 포상금 및 전사자 유해 소재 제보 포상금 지급 안내</title>
-    <link href="https://adk24211.github.io/walapp/support/living/6-25%EC%A0%84%EC%82%AC%EC%9E%90-%EB%AF%B8%EC%88%98%EC%8A%B5-%EC%9C%A0%EA%B0%80%EC%A1%B1-%EC%9C%A0%EC%A0%84%EC%9E%90-%EC%B1%84%EC%B7%A8-%ED%8F%AC%EC%83%81%EA%B8%88-%EB%B0%8F-%EC%A0%84%EC%82%AC%EC%9E%90-%EC%9C%A0%ED%95%B4-%EC%86%8C%EC%9E%AC-%EC%A0%9C/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/living/6-25%EC%A0%84%EC%82%AC%EC%9E%90-%EB%AF%B8%EC%88%98%EC%8A%B5-%EC%9C%A0%EA%B0%80%EC%A1%B1-%EC%9C%A0%EC%A0%84%EC%9E%90-%EC%B1%84%EC%B7%A8-%ED%8F%AC%EC%83%81%EA%B8%88-%EB%B0%8F-%EC%A0%84%EC%82%AC%EC%9E%90-%EC%9C%A0%ED%95%B4-%EC%86%8C%EC%9E%AC-%EC%A0%9C/</id>
-    <published>2026-11-02T00:00:00+09:00</published>
-    <updated>2026-11-02T00:00:00+09:00</updated><author><name>국방부</name></author><category term="living"/>
-    <summary type="text">6·25전쟁 전사자 유가족 및 전사자 유해 매장지역을 알고 있는 국민에게 DNA 시료 채취와 유해 제보에 대한 포상금을 지원하는 제도입니다. 상시 접수로 신청이 가능합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">기업복지활성화 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EA%B8%B0%EC%97%85%EB%B3%B5%EC%A7%80%ED%99%9C%EC%84%B1%ED%99%94-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EA%B8%B0%EC%97%85%EB%B3%B5%EC%A7%80%ED%99%9C%EC%84%B1%ED%99%94-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-11-02T00:00:00+09:00</published>
-    <updated>2026-11-02T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
-    <summary type="text">기업복지활성화 지원은 상시노동자 300인 미만 사업장의 노동자를 대상으로 근로자지원프로그램(EAP) 상담을 온라인·오프라인으로 제공하는 제도이며, 근로복지넷을 통해 다양한 상담을 받을 수 있습니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">인재육성 및 구로장학생등</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%EC%9D%B8%EC%9E%AC%EC%9C%A1%EC%84%B1-%EB%B0%8F-%EA%B5%AC%EB%A1%9C%EC%9E%A5%ED%95%99%EC%83%9D%EB%93%B1/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%EC%9D%B8%EC%9E%AC%EC%9C%A1%EC%84%B1-%EB%B0%8F-%EA%B5%AC%EB%A1%9C%EC%9E%A5%ED%95%99%EC%83%9D%EB%93%B1/</id>
-    <published>2026-11-02T00:00:00+09:00</published>
-    <updated>2026-11-02T00:00:00+09:00</updated><author><name>구로구장학회</name></author><category term="education"/>
-    <summary type="text">인재육성 및 구로장학생등은 구로구에 6개월 이상 거주하는 중·고·대학생 및 특기생을 대상으로, 중학교 평균성적 3% 이내 또는 중위소득 150% 이내인 경우 학교장의 추천을 받아 장학금을 지원하는 제도입니다.</summary>
   </entry>
 </feed>
