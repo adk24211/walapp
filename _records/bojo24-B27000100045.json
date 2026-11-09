@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "차상위 계층확인서를 발급받을 수 있는 경우",
+      "특정급여자격확인서를 발급받을 수 있는 경우",
+      "사회·경제적 약자에 해당하여 법률구조가 필요한 경우"
+    ],
+    "faq": [
+      {
+        "a": "법률구조가 필요한 차상위계층은 무료 소송대리를 받을 수 있습니다.",
+        "q": "무료 소송대리 서비스는 어떤 경우에 이용할 수 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청하거나 직접 방문하여 신청할 수 있습니다. 별도의 서류는 필요하지 않으며, 상시 접수됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "대한법률구조공단이 제공하는 무료 소송대리 서비스(차상위계층)는 차상위 계층확인서 또는 특정급여자격확인서를 가진 사회·경제적 약자에게 법률상담과 소송대리를 무료로 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.klac.or.kr",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "○ 사회·경제적 약자에 대한 법률구조서비스 제공으로 법률복지증진\n\n○ 무료 법률상담\n\n○ 무료 소송대리",
+  "category": "living",
+  "contact_raw": "(국번없이)132 법률상담 콜센타/132",
+  "content_hash": "sha256:ef0096abbb78d5a983955effd51147d0",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-09",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-B27000100045",
+  "is_mock": false,
+  "last_checked": "2026-11-09",
+  "last_updated": "2026-11-09",
+  "law_raw": "",
+  "name": "무료 소송대리 서비스(차상위계층)",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002112&bnefType=all&svcId=B27000100045",
+  "org": "대한법률구조공단",
+  "primary_audience": "lowincome",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "무료-소송대리-서비스-차상위계층",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타(상담) 개인",
+  "source_id": "B27000100045",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "차상위계층- 차상위 계층확인서, 특정급여자격확인서 발급 가능한 자",
+  "view_count": 3252
+}

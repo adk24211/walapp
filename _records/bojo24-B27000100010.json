@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "개인회생 신청 대상자",
+      "건강보험료 본인부담금 합산액이 기준중위소득 125% 이하인 자",
+      "선정 기준이 없습니다"
+    ],
+    "faq": [
+      {
+        "a": "감당할 수 없는 빚으로 고통받는 국민에게 재기 기회를 제공하기 위해 무료 소송대리를 제공합니다.",
+        "q": "무료 소송대리 서비스는 어떤 경우에 제공되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청하거나 직접 방문하여 신청할 수 있습니다. 신청은 상시 접수이며, 별도의 서류는 필요하지 않습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "개인회생 신청 대상자 중 건강보험료 본인부담금 합산액이 기준중위소득 125% 이하인 국민에게 빚 문제 해결을 위한 무료 법률상담과 소송대리를 제공하는 서비스입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.klac.or.kr",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "○ 감당할 수 없는 빚으로 고통받는 국민에게 재기 기회 제공\n\n○ 무료 법률상담\n\n○ 무료 소송대리",
+  "category": "living",
+  "contact_raw": "(국번없이)132 법률상담 콜센타/132",
+  "content_hash": "sha256:42a2f17be671e890d31d35b77f9021eb",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-09",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-B27000100010",
+  "is_mock": false,
+  "last_checked": "2026-11-09",
+  "last_updated": "2026-11-09",
+  "law_raw": "",
+  "name": "무료 소송대리 서비스(개인회생신청대상자)",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001108&bnefType=all&svcId=B27000100010",
+  "org": "대한법률구조공단",
+  "primary_audience": "lowincome",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "무료-소송대리-서비스-개인회생신청대상자",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타(상담) 개인",
+  "source_id": "B27000100010",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 개인회생신청대상자\n- 건강보험료 본인부담금 합산액이 기준중위소득 125% 이하인 자",
+  "view_count": 3356
+}

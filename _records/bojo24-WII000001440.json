@@ -1,0 +1,70 @@
+{
+  "_prose": {
+    "eligibility": [
+      "만 9세 이상 18세 이하의 청소년",
+      "불안·우울 등 정서·행동적 문제를 겪는 청소년",
+      "학대·학교폭력 피해·학교 부적응·ADHD·인터넷·스마트폰 과의존 청소년",
+      "서류심사와 심층 면접을 통과해야 합니다",
+      "입·퇴교 판정위원회 심사를 통과해야 합니다"
+    ],
+    "faq": [
+      {
+        "a": "개인·집단 상담, 음악치료, 모래놀이치료 등 전문 상담·치료와 대안교육, 진로교육·생활자립 지원, 대인관계 기술 습득 등이 제공됩니다.",
+        "q": "지원 프로그램은 어떤 형태로 제공되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "청소년치료재활센터 홈페이지에서 신청서를 작성하여 제출합니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "청소년치료재활센터에서 정서·행동적 문제를 가진 9세~18세 청소년에게 상담·치료·교육·진로·생활자립 등을 지원하는 제도이며, 성평등가족부가 관할합니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "nyhc.or.kr/IndexServlet",
+  "audiences": [
+    "disabled"
+  ],
+  "benefit_raw": "○ 지원내용\n- 상담 및 치료 : 개인‧집단상담, 음악치료, 모래놀이치료 등 전문 상담‧치료 제공\n- 교육 : 학습권 보장을 위한 대안교육 지원\n- 자립 : 개인 관심과 적성에 맞는 진로교육 및 생활자립\n- 보호 : 생활습관 및 사회 적응 행동, 대인관계 기술 습득\n\n○ 대상별 프로그램 종류 : 4개월 디딤과정, 1개월 오름과정, 11박12일 대상 특성화캠프 및 7박 8일 인터넷·스마트폰 과의존치유 과정 등",
+  "category": "health",
+  "contact_raw": "국립중앙청소년디딤센터/031-333-1900\n국립대구청소년디딤센터/053-665-6900",
+  "content_hash": "sha256:6f6d1e8b6354b81289ec287afd51afda",
+  "criteria_raw": "○ 서류심사 및 심층 면접, 입·퇴교 판정위원회 심사를 통해 최종 선정",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-09",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-WII000001440",
+  "is_mock": false,
+  "last_checked": "2026-11-09",
+  "last_updated": "2026-11-09",
+  "law_raw": "",
+  "name": "청소년치료재활센터 운영 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=87866&bnefType=all&svcId=WII000001440",
+  "org": "성평등가족부",
+  "primary_audience": "disabled",
+  "receiver_raw": "청소년치료재활센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "청소년치료재활센터-운영-지원",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 상담/법률지원\n서비스(돌봄)\n의료지원 개인",
+  "source_id": "WII000001440",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 정서·행동적 문제를 가진 청소년(만 9세 ~ 18세)\n- 불안/우울 등 심리 정서 문제, 학대 및 학교폭력 피해, 학교 부적응, 주의력결핍과잉행동장애(ADHD), 인터넷‧스마트폰 과의존 청소년 등",
+  "view_count": 2884
+}
