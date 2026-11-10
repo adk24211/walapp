@@ -1,0 +1,70 @@
+{
+  "_prose": {
+    "eligibility": [
+      "가정폭력 피해자"
+    ],
+    "faq": [
+      {
+        "a": "의료기관에 인도하여 질병치료와 건강관리를 지원합니다.",
+        "q": "지원 내용 중 의료지원은 어떻게 제공되나요?"
+      },
+      {
+        "a": "지원 대상이 가정폭력 피해자 및 동반 가족으로 한정되므로 대상이 아니면 이용이 어렵습니다.",
+        "q": "지원 대상이 아닌 경우에도 시설을 이용할 수 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "방문 신청으로 1366센터에 직접 방문하여 신청합니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "가정폭력 피해자와 동반 가족에게 숙식·상담·의료·법률 등 다양한 보호와 자립 지원을 제공하는 시설 운영 지원 제도이며, 성평등가족부가 주관하고 1366센터에서 접수합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "○ 숙식의 제공\n○ 심리적 안정과 사회적응을 위한 상담 및 치료\n○ 질병치료와 건강관리를 위한 의료기관에의 인도 등 의료지원\n○ 수사･재판과정에 필요한 지원 및 서비스 연계\n○ 법률구조기관 등에 필요한 협조와 지원의 요청\n○ 퇴소 후 자립을 위하여 시설 외 근로를 희망하는 경우 적극지원\n○ 직업/취업 훈련 프로그램 지원(지역사회 자원과 연계)\n○ 입소사실에 대한 비밀보장과 특별보호\n○ 가정폭력행위자와 피해자 면담 주선 시 경찰에 협조 요청\n○ 가정폭력에 따른 아동의 취학지원\n○ 기타 국가 또는 지방자치단체가 정하는 경비지원\n○ 다른 법률에 의하여 보호시설에 위탁된 사항\n○ 그 밖에 피해자 등의 보호를 위하여 필요한 일 등",
+  "category": "care",
+  "contact_raw": "여성긴급전화/1366",
+  "content_hash": "sha256:7f19150c8ce2aea8ea73e6b547bd8c7f",
+  "criteria_raw": "○ 가정폭력 피해자 및 동반 가족",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-10",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-PTR000050697",
+  "is_mock": false,
+  "last_checked": "2026-11-10",
+  "last_updated": "2026-11-10",
+  "law_raw": "",
+  "name": "가정폭력 피해자 보호시설 운영 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=724944&bnefType=all&svcId=PTR000050697",
+  "org": "성평등가족부",
+  "primary_audience": "parent",
+  "receiver_raw": "1366센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "가정폭력-피해자-보호시설-운영-지원",
+  "source": "bojo24",
+  "source_category_raw": "보호·돌봄 기타\n상담/법률지원 개인",
+  "source_id": "PTR000050697",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 가정폭력 피해자 및 동반 가족",
+  "view_count": 1918
+}

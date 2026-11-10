@@ -1,28 +1,18 @@
 {
   "_prose": {
     "eligibility": [
-      "장애인기업활동촉진법 제2조 제2호에 해당하는 기업",
-      "장애인기업 확인 요령에 따라 확인 기준을 충족한 기업",
-      "확인서를 발급받은 기업"
+      "장애인기업활동촉진법 2조 2호에 해당하는 기업이어야 합니다.",
+      "장애인기업 확인 요령에 따라 확인 기준을 충족하고 확인서를 발급받아야 합니다."
     ],
-    "faq": [
-      {
-        "a": "지원 대상 기업이 확인 기준을 충족하고 온라인 신청이 완료되면, 서류 검토 후 확인서를 발급받을 수 있습니다.",
-        "q": "확인서는 언제 발급받을 수 있나요?"
-      }
-    ],
+    "faq": [],
     "note": "",
     "steps": [
       {
-        "body": "홈페이지에서 온라인 신청서를 작성하고 구비 서류를 전자파일 형태로 첨부합니다. 모든 서류가 제출되면 신청이 완료됩니다.",
-        "title": "신청서 제출"
-      },
-      {
-        "body": "접수된 서류는 장애인기업 확인 요령에 따라 검토되며, 기준을 충족한 경우 확인서를 발급받게 됩니다.",
-        "title": "서류 검토 및 확인서 발급"
+        "body": "홈페이지에서 온라인 신청 양식을 작성하고, 요구 서류를 첨부하여 제출합니다. 제출이 완료되면 확인서가 발급됩니다.",
+        "title": "온라인 신청"
       }
     ],
-    "summary": "장애인기업활동촉진법에 따라 지정된 기업에게 장애인기업 확인서를 발급하는 제도로, 온라인을 통해 언제든 신청할 수 있습니다."
+    "summary": "중소벤처기업부에서 운영하는 장애인기업확인서 발급 제도는 장애인기업활동촉진법 2조 2호에 해당하는 기업에게 온라인으로 확인서를 발급해 주는 제도입니다."
   },
   "apply_period": {
     "always": true,
@@ -37,7 +27,7 @@
   "benefit_raw": "장애인기업 확인서 발급",
   "category": "jobs",
   "contact_raw": "(재)장애인기업종합지원센터/02-2181-6540",
-  "content_hash": "sha256:ee1708073d89c028f501245102f085ac",
+  "content_hash": "sha256:6f34c4ab0e200166784357ef43ee7615",
   "criteria_raw": "장애인기업 확인 요령에 따라 확인기준 충족 및 확인서 발급받은 기업",
   "deferred_detail": false,
   "documents_raw": [
@@ -56,11 +46,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-142100000014",
   "is_mock": false,
-  "last_checked": "2026-10-22",
-  "last_updated": "2026-10-22",
+  "last_checked": "2026-11-10",
+  "last_updated": "2026-11-10",
   "law_raw": "",
   "name": "장애인기업확인서 발급",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/142100000014",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=809605&bnefType=all&svcId=142100000014",
   "org": "중소벤처기업부",
   "primary_audience": "disabled",
   "receiver_raw": "",
@@ -69,7 +59,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "장애인기업확인서-발급",
   "source": "bojo24",
   "source_category_raw": "고용·창업 기타 법인/시설/단체",
@@ -77,5 +67,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 장애인기업활동촉진법 2조 2호 기준 해당 기업",
-  "view_count": 3864
+  "view_count": 3870
 }
