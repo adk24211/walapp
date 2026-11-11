@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "소비자",
+      "사업자가 제공한 물품·용역 이용 과정에서 발생한 피해가 있는 경우",
+      "민사소송이 진행 중이 아닌 경우",
+      "사업자가 연락 가능한 경우(부도·폐업 등으로 연락이 불가능하지 않은 경우)"
+    ],
+    "faq": [],
+    "note": "사업자가 부도·폐업 등으로 연락이 불가능한 경우는 피해구제를 받을 수 없습니다.",
+    "steps": [
+      {
+        "body": "소비자는 홈페이지에서 신청서를 작성하여 온라인으로 신청할 수 있습니다. 신청 시 필요한 정보만 입력하면 됩니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "방문이 가능한 경우 직접 방문하여 신청서를 제출할 수 있습니다. 방문 시 담당 직원이 안내해 드립니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "소비자 피해구제는 소비자가 물품·용역 이용 중 겪은 피해를 한국소비자원이 사실 조사와 전문가 자문을 거쳐 공정하게 합의를 권고하는 제도이며, 소비자와 사업자 사이에 발생한 분쟁을 비용 부담 없이 신속히 해결하도록 돕습니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.ccn.go.kr",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ 소비자 피해구제\n- 소비자가 사업자가 제공하는 물품 또는 용역을 사용하거나 이용하는 과정에서 발생하는 피해를 구제하기 위하여 사실 조사, 전문가 자문 등을 거쳐 관련 법률 및 규정에 따라 양 당사자에게 공정하고 객관적으로 합의를 권고하는 제도\n- 분쟁의 해결은 원칙적으로 민사소송을 통해 해결하여야 하나 소송은 비용, 기간, 절차 등의 번거로움이 발생할 수 있는 반면, 한국소비자원 피해구제는 법원 판결과 달리 강제력은 없지만 비용 없이 신속하게 분쟁해결 가능\n\n○ 피해구제 제외 대상\n- 사업자의 부도, 폐업 등으로 연락이 불가능하거나 소재파악이 안 되는 경우\n- 신청인(소비자)의 주장을 입증(입증서류 미제출 포함)할 수 없는 경우\n- 영리활동과 관련하여 발생한 분쟁, 임금 등 근로자와 고용인 사이의 분쟁, 개인 간 거래 등 소비자와 사업자 사이의 분쟁이 아닌 경우\n- 국가 또는 지방자치단체가 제공한 물품 등으로 인하여 발생한 피해인 경우\n- 소비자 분쟁조정위원회에 준하는 분쟁조정기구에 피해구제가 신청되어 있거나 피해구제절차를 거친 경우\n- 법원에 소송 진행 중인 경우 등",
+  "category": "care",
+  "contact_raw": "피해구제국/043-880-5777",
+  "content_hash": "sha256:d6c06d968db7e50a33a7ade8df11d463",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-11",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-B55191900006",
+  "is_mock": false,
+  "last_checked": "2026-11-11",
+  "last_updated": "2026-11-11",
+  "law_raw": "",
+  "name": "소비자 피해구제",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002232&bnefType=all&svcId=B55191900006",
+  "org": "한국소비자원",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "소비자-피해구제",
+  "source": "bojo24",
+  "source_category_raw": "보호·돌봄 기타 개인",
+  "source_id": "B55191900006",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "소비자",
+  "view_count": 2753
+}

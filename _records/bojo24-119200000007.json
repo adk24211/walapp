@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "사회적 약자(연령·장애·빈곤·교육정도 등)에 해당하는 해양사고 관련자",
+      "해양사고 관련자가 미성년자인 경우",
+      "해양사고 관련자가 70세 이상인 경우",
+      "중위소득 60% 이하이거나 국민기초생활수급권자인 경우",
+      "학력이 고졸 이하이거나 국가유공자·그 유족·가족인 경우"
+    ],
+    "faq": [],
+    "note": "심판변론인이 이미 지정된 경우에는 지원 대상이 되지 않습니다.",
+    "steps": [
+      {
+        "body": "관할지방해양안전심판원 심판관실을 직접 방문하여 신청합니다. 선정 대상임을 증명하는 서류와 관련 법령 사유를 제출하면 심판변론인 지원을 받을 수 있습니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "해양사고 피해자 중 연령·장애·빈곤·학력 등 사회적 약자에게 심판 절차 대리·기술 자문을 제공하는 국선 심판변론인 지원 제도이며, 관할지방해양안전심판원에 방문 신청하면 선정 대상임을 증명하는 서류와 관련 법령 사유를 제출하여 지원받을 수 있습니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "해당사건 접수후",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled",
+    "lowincome",
+    "student"
+  ],
+  "benefit_raw": "○ 해양사고관련자가 심판원에 대하여 하는 신청ㆍ청구ㆍ진술 등의 대리 또는 대행\n\n○ 해양사고관련자에 대하여 하는 해양사고와 관련된 기술적 자문",
+  "category": "living",
+  "contact_raw": "해양수산부 중앙해양안전심판원/044-200-6117",
+  "content_hash": "sha256:9fa811f64c28a6187cc33680aa6b55c5",
+  "criteria_raw": "○ 다음 각각 호의 어느 하나에 해당하는 경우로서 심판변론인이 없는 때\n○ 국선 심판변론인 선정 기준\n- 해양사고관련자가 미성년자인 경우\n- 해양사고관련자가 70세 이상인 경우\n- 해양사고관련자가 청각 또는 언어장애 및 심신장애의 의심이 있는 경우\n- 중위소득(4인가구 기준) 60%이하, 국민기초생활 수급권자\n- 교육정도(고졸 이하)\n- 국가유공자, 그유족 또는 가족",
+  "deferred_detail": false,
+  "documents_raw": [
+    "○ 선정대상임을 증명하는 서류",
+    "「해양사고의 조사 및 심판에 관한 법률 시행규칙」 제17조제1항에 따른 사유"
+  ],
+  "first_published": "2026-11-11",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-119200000007",
+  "is_mock": false,
+  "last_checked": "2026-11-11",
+  "last_updated": "2026-11-11",
+  "law_raw": "",
+  "name": "해양사고 국선 심판변론인 선정 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=547098&bnefType=all&svcId=119200000007",
+  "org": "해양수산부",
+  "primary_audience": "lowincome",
+  "receiver_raw": "관할지방해양안전심판원 심판관실",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "해양사고-국선-심판변론인-선정-지원",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타\n상담/법률지원 개인",
+  "source_id": "119200000007",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 사회적 약자(연령, 장애, 빈곤, 교육정도 등)에 해당하는 해양사고관련자",
+  "view_count": 3241
+}

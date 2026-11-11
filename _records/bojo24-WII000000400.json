@@ -1,0 +1,71 @@
+{
+  "_prose": {
+    "eligibility": [
+      "실종아동",
+      "실종 지적 장애인",
+      "실종 자폐성 장애인",
+      "실종 정신 장애인",
+      "실종아동·장애인의 가족"
+    ],
+    "faq": [
+      {
+        "a": "지원은 실종아동·실종 장애인 및 그 가족에게만 제공됩니다.",
+        "q": "지원 대상이 아닌 경우에도 서비스를 받을 수 있나요?"
+      }
+    ],
+    "note": "지원은 실종아동·실종 장애인 및 그 가족에게만 한정됩니다.",
+    "steps": [
+      {
+        "body": "아동권리보장원(실종아동전문팀)에 문의하여 신청 방법과 필요한 절차를 안내받으시면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "보건복지부가 마련한 실종아동 보호 및 지원 제도는 실종아동 및 실종 장애인(지적·자폐성·정신)과 그 가족에게 실종·유괴 예방 교육 등 다양한 서비스를 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent",
+    "disabled"
+  ],
+  "benefit_raw": "○ 실종아동등 가족지원, 실종·유괴예방 교육 등의 서비스를 제공",
+  "category": "care",
+  "contact_raw": "아동권리보장원(실종아동전문팀)/02-777-0182",
+  "content_hash": "sha256:f06f3b9111d7ae286687fbe7960e1421",
+  "criteria_raw": "지원대상과 동일",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-11",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-WII000000400",
+  "is_mock": false,
+  "last_checked": "2026-11-11",
+  "last_updated": "2026-11-11",
+  "law_raw": "",
+  "name": "실종아동 보호 및 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=680933&bnefType=all&svcId=WII000000400",
+  "org": "보건복지부",
+  "primary_audience": "disabled",
+  "receiver_raw": "아동권리보장원(실종아동전문팀)",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "실종아동-보호-및-지원",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 현금 개인",
+  "source_id": "WII000000400",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 실종아동, 실종 장애인(지적·자폐성·정신)과 그 가족",
+  "view_count": 2170
+}

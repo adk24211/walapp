@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "장애인",
+      "임대주택 등에 거주하는 집단",
+      "금연취약 사업장 등 흡연자"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 또는 방문으로 한국건강증진개발원에 신청합니다. 신청 후 6개월 동안 9회에 걸쳐 방문·전화 상담이 진행되며, 호기 일산화탄소 측정, 금연보조제(위기청소년 제외), 행동강화 물품이 제공됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "보건복지부가 마련한 생활터 금연환경조성 사업은 장애인·임대주택 거주자·금연취약 사업장 등 흡연자를 대상으로 6개월 동안 9회에 걸친 방문·전화 상담과 일산화탄소 측정, 금연보조제·행동강화 물품을 지원합니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "연중신청가능",
+    "start": ""
+  },
+  "apply_url": "https://nosmk.khealth.or.kr/nsk/user/extra/ntcc/68/services/nosmokeService/jsp/LayOutPage.do",
+  "audiences": [
+    "disabled"
+  ],
+  "benefit_raw": "○ 흡연자가 있는 단체나 기관에 정기적으로 방문해 6개월 간 9회에 걸쳐 방문 및 전화 상담이 이루어지며, 호기 일산화탄소(CO)측정, 금연보조제(위기청소년은 제외), 행동강화 물품 등을 제공",
+  "category": "housing",
+  "contact_raw": "한국건강증진개발원 국가금연지원센터 금연사업팀/02-3781-2221",
+  "content_hash": "sha256:60ce9d9381a607cce0310c2036d978d1",
+  "criteria_raw": "○ 장애인, 임대주택 등에 거주하는집단, 금연취약 사업장 등 흡연자",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당 지역금연지원센터로 문의"
+  ],
+  "first_published": "2026-11-11",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-135200000112",
+  "is_mock": false,
+  "last_checked": "2026-11-11",
+  "last_updated": "2026-11-11",
+  "law_raw": "",
+  "name": "생활터 금연환경조성",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999164&bnefType=all&svcId=135200000112",
+  "org": "보건복지부",
+  "primary_audience": "disabled",
+  "receiver_raw": "한국건강증진개발원",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "생활터-금연환경조성",
+  "source": "bojo24",
+  "source_category_raw": "보건·의료 현물 개인",
+  "source_id": "135200000112",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 장애인, 임대주택 등에 거주하는집단, 금연취약 사업장 등 흡연자",
+  "view_count": 2853
+}
