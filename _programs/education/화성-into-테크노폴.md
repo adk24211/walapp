@@ -21,7 +21,7 @@ status_label: "시행중"
 apply_always: false
 apply_period_raw: "공고별 상이(공고문 참조)"
 apply_methods: ["온라인 신청"]
-apply_url: "http://www.hstree.org"
+apply_url: "https://www.hstree.org"
 official_url: "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00058400001"
 first_published: "2026-10-01"
 last_updated: "2026-10-01"

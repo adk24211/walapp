@@ -21,7 +21,7 @@
     "raw": "공고별 상이(공고문 참조)",
     "start": ""
   },
-  "apply_url": "http://www.hstree.org",
+  "apply_url": "https://www.hstree.org",
   "audiences": [
     "youth",
     "student"
@@ -29,7 +29,7 @@
   "benefit_raw": "○ 화성 into 테크노폴\n- 대상: 고등학생 및 대학생\n- 탐방국가: 싱가포르, 유럽, 미국 등\n- 내용: 국제교류 및 4차산업 기술 탐방을 통해 글로벌 역량을 갖춘 인재육성\n- 지원내용: 해외탐방 활동 비용 지원(일부 자부담) 및 사전, 사후 역량강화 활동 지원",
   "category": "education",
   "contact_raw": "장학사업팀/031-898-5573",
-  "content_hash": "sha256:97436828c4897d3395aae0662100f7cb",
+  "content_hash": "sha256:51c128e5d1ef08f484c384fa1a4c4a2c",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [

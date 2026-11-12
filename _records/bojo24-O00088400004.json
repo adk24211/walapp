@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "세종시 거주 1년 이상인 대학생",
+      "한국장학재단 소득분위 6구간 이하"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "홈페이지에 공고된 온라인 신청 양식을 작성합니다. 작성한 양식을 제출하면 신청이 완료됩니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "세종시 거주 1년 이상이며 한국장학재단 소득분위 6구간 이하인 대학생에게 1인당 100만원을 생활비성 장학금으로 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "상,하반기 각 1회",
+    "start": ""
+  },
+  "apply_url": "www.sjhle.or.kr",
+  "audiences": [
+    "youth",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 저소득 세종시 거주 대학생의 교육기회 평등을 위한 장학금 지원\n- 1인당 100만원 장학금 지급(생활비성)",
+  "category": "education",
+  "contact_raw": "인재개발팀/044-865-9685",
+  "content_hash": "sha256:584ad265166ceaca9cd90dac5c4d3512",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "홈페이지 공고문 참고"
+  ],
+  "first_published": "2026-11-12",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-O00088400004",
+  "is_mock": false,
+  "last_checked": "2026-11-12",
+  "last_updated": "2026-11-12",
+  "law_raw": "",
+  "name": "모범(대학생) 장학금",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000433&bnefType=all&svcId=O00088400004",
+  "org": "재단법인세종특별자치시인재육성평생교육진흥원",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "모범-대학생-장학금",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "O00088400004",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "한국장학재단 최근 소득분위 6구간 이하의 세종시 거주 1년 이상 대학생",
+  "view_count": 878
+}

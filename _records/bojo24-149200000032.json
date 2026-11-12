@@ -1,19 +1,19 @@
 {
   "_prose": {
     "eligibility": [
-      "15세 이상이어야 합니다.",
-      "등록 구직 장애인이어야 합니다.",
-      "직업훈련을 희망해야 합니다."
+      "15세 이상인 등록 구직 장애인",
+      "직업훈련을 희망하는 장애인",
+      "지원 대상과 동일한 선정 기준 적용"
     ],
     "faq": [],
     "note": "",
     "steps": [
       {
-        "body": "신청서와 구비 서류를 제출하면 접수가 완료됩니다. 담당자가 서류를 검토하여 지원 대상 여부를 확인합니다.",
+        "body": "한국장애인고용공단을 직접 방문하여 장애인 직업 능력 개발훈련비용 신청서와 필요한 서류를 제출하면 됩니다. 서류 검토 후 지원이 결정됩니다.",
         "title": "신청 절차"
       }
     ],
-    "summary": "장애인 직업 능력 개발 지원은 15세 이상 등록 구직 장애인을 대상으로 직업훈련 시 훈련수당 및 교사·기관 수당을 지원하는 제도이며, 고용노동부에서 방문 신청을 받아 상시 접수합니다."
+    "summary": "장애인 직업 능력 개발 지원은 15세 이상 등록 구직 장애인을 대상으로 직업훈련 시 훈련수당 및 교사·기관 비용을 지원하는 제도이며, 한국장애인고용공단에서 방문 신청을 받아 상시 접수합니다."
   },
   "apply_period": {
     "always": true,
@@ -29,7 +29,7 @@
   "benefit_raw": "○ 장애인공단 훈련 : 훈련생 훈련수당 지원\n○ 공공훈련 기관: 훈련생 훈련수당 및 교사 수당 지원\n○ 민간훈련 기관: 훈련생 훈련수당 및 훈련 기관 훈련비 지원",
   "category": "jobs",
   "contact_raw": "한국장애인고용공단/1588-1519",
-  "content_hash": "sha256:13a3e8f3088b0fd0e09d7cd8c43eb231",
+  "content_hash": "sha256:87c3972b21376562b2023a4b31d704d2",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [
@@ -42,11 +42,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-149200000032",
   "is_mock": false,
-  "last_checked": "2026-08-31",
-  "last_updated": "2026-08-31",
+  "last_checked": "2026-11-12",
+  "last_updated": "2026-11-12",
   "law_raw": "",
   "name": "장애인 직업 능력 개발 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000032",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=718084&bnefType=all&svcId=149200000032",
   "org": "고용노동부",
   "primary_audience": "disabled",
   "receiver_raw": "한국장애인고용공단",
@@ -55,7 +55,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "장애인-직업-능력-개발-지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금 개인",
@@ -63,5 +63,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 직업훈련을 희망하는 15세 이상 등록 구직 장애인",
-  "view_count": 6569
+  "view_count": 6760
 }
