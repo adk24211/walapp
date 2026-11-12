@@ -4,8 +4,40 @@
   <subtitle>정부·지자체 지원금과 복지 제도를 받을 수 있는지부터 신청 방법까지 하나씩 정리합니다. 공공데이터 원문을 토대로 쉬운 말로 풀어 씁니다.</subtitle>
   <link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html"/>
-  <updated>2026-11-11T11:01:30+09:00</updated>
+  <updated>2026-11-12T12:01:06+09:00</updated>
   <id>https://adk24211.github.io/walapp/</id>
+  <entry>
+    <title type="text">맞춤형농지지원사업</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EB%A7%9E%EC%B6%A4%ED%98%95%EB%86%8D%EC%A7%80%EC%A7%80%EC%9B%90%EC%82%AC%EC%97%85/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EB%A7%9E%EC%B6%A4%ED%98%95%EB%86%8D%EC%A7%80%EC%A7%80%EC%9B%90%EC%82%AC%EC%97%85/</id>
+    <published>2026-11-12T00:00:00+09:00</published>
+    <updated>2026-11-12T00:00:00+09:00</updated><author><name>농림축산식품부</name></author><category term="jobs"/>
+    <summary type="text">맞춤형농지지원사업은 농업인에게 농지 매입 자금 융자와 저렴한 임대료로 장기 임대를 지원하는 제도이며, 신청은 온라인 또는 방문으로 할 수 있습니다. 지원 대상은 청년창업형후계농업경영인 등으로 연령·경력 요건을 충족한 농업인에 한정됩니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">모범(대학생) 장학금</title>
+    <link href="https://adk24211.github.io/walapp/support/education/%EB%AA%A8%EB%B2%94-%EB%8C%80%ED%95%99%EC%83%9D-%EC%9E%A5%ED%95%99%EA%B8%88/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/education/%EB%AA%A8%EB%B2%94-%EB%8C%80%ED%95%99%EC%83%9D-%EC%9E%A5%ED%95%99%EA%B8%88/</id>
+    <published>2026-11-12T00:00:00+09:00</published>
+    <updated>2026-11-12T00:00:00+09:00</updated><author><name>재단법인세종특별자치시인재육성평생교육진흥원</name></author><category term="education"/>
+    <summary type="text">세종시 거주 1년 이상이며 한국장학재단 소득분위 6구간 이하인 대학생에게 1인당 100만원을 생활비성 장학금으로 지원하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">유아교육비·보육료 추가지원</title>
+    <link href="https://adk24211.github.io/walapp/support/care/%EC%9C%A0%EC%95%84%EA%B5%90%EC%9C%A1%EB%B9%84-%EB%B3%B4%EC%9C%A1%EB%A3%8C-%EC%B6%94%EA%B0%80%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/%EC%9C%A0%EC%95%84%EA%B5%90%EC%9C%A1%EB%B9%84-%EB%B3%B4%EC%9C%A1%EB%A3%8C-%EC%B6%94%EA%B0%80%EC%A7%80%EC%9B%90/</id>
+    <published>2026-11-12T00:00:00+09:00</published>
+    <updated>2026-11-12T00:00:00+09:00</updated><author><name>교육부</name></author><category term="care"/>
+    <summary type="text">취학을 유예한 유아에게 월 5만원을 추가 지원하는 제도로, 온라인을 통해 신청할 수 있습니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">사회적 취약계층 및 교육 지원 대상자 이용료 면제</title>
+    <link href="https://adk24211.github.io/walapp/support/care/%EC%82%AC%ED%9A%8C%EC%A0%81-%EC%B7%A8%EC%95%BD%EA%B3%84%EC%B8%B5-%EB%B0%8F-%EA%B5%90%EC%9C%A1-%EC%A7%80%EC%9B%90-%EB%8C%80%EC%83%81%EC%9E%90-%EC%9D%B4%EC%9A%A9%EB%A3%8C-%EB%A9%B4%EC%A0%9C/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/%EC%82%AC%ED%9A%8C%EC%A0%81-%EC%B7%A8%EC%95%BD%EA%B3%84%EC%B8%B5-%EB%B0%8F-%EA%B5%90%EC%9C%A1-%EC%A7%80%EC%9B%90-%EB%8C%80%EC%83%81%EC%9E%90-%EC%9D%B4%EC%9A%A9%EB%A3%8C-%EB%A9%B4%EC%A0%9C/</id>
+    <published>2026-11-12T00:00:00+09:00</published>
+    <updated>2026-11-12T00:00:00+09:00</updated><author><name>안양시청소년재단</name></author><category term="care"/>
+    <summary type="text">안양시청소년재단이 운영하는 사회적 취약계층 및 교육 지원 대상자 이용료 면제 제도는 지정된 현장에서 강좌 수강료와 놀이치료·심리검사 비용을 1인 1강좌씩 무상으로 제공하는 제도입니다.</summary>
+  </entry>
   <entry>
     <title type="text">해양사고 국선 심판변론인 선정 지원</title>
     <link href="https://adk24211.github.io/walapp/support/living/%ED%95%B4%EC%96%91%EC%82%AC%EA%B3%A0-%EA%B5%AD%EC%84%A0-%EC%8B%AC%ED%8C%90%EB%B3%80%EB%A1%A0%EC%9D%B8-%EC%84%A0%EC%A0%95-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
@@ -213,37 +245,5 @@
     <published>2026-11-07T00:00:00+09:00</published>
     <updated>2026-11-07T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="health"/>
     <summary type="text">산재근로자를 위한 경기·태백 케어센터는 만 60세 이상 중증 장애인에게 주거와 간병·건강·여가 서비스를 제공하는 지원 제도이며, 각 센터는 1인실 및 다인실을 보유하고 있어 직접 방문하여 입소 신청을 해야 합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">고속도로 다자녀가구 통행료 할인</title>
-    <link href="https://adk24211.github.io/walapp/support/living/%EA%B3%A0%EC%86%8D%EB%8F%84%EB%A1%9C-%EB%8B%A4%EC%9E%90%EB%85%80%EA%B0%80%EA%B5%AC-%ED%86%B5%ED%96%89%EB%A3%8C-%ED%95%A0%EC%9D%B8/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/living/%EA%B3%A0%EC%86%8D%EB%8F%84%EB%A1%9C-%EB%8B%A4%EC%9E%90%EB%85%80%EA%B0%80%EA%B5%AC-%ED%86%B5%ED%96%89%EB%A3%8C-%ED%95%A0%EC%9D%B8/</id>
-    <published>2026-11-06T00:00:00+09:00</published>
-    <updated>2026-11-06T00:00:00+09:00</updated><author><name>한국도로공사</name></author><category term="living"/>
-    <summary type="text">고속도로 다자녀가구 통행료 할인은 부·모와 만 19세 미만 자녀 2명 이상이 같은 가구가 비영업용 차량으로 고속도로를 이용할 때, 주말·공휴일 재정고속도로에서 2자녀는 10%, 3자녀 이상은 20%를 할인받을 수 있는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">양평군장학재단</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%EC%96%91%ED%8F%89%EA%B5%B0%EC%9E%A5%ED%95%99%EC%9E%AC%EB%8B%A8/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%EC%96%91%ED%8F%89%EA%B5%B0%EC%9E%A5%ED%95%99%EC%9E%AC%EB%8B%A8/</id>
-    <published>2026-11-06T00:00:00+09:00</published>
-    <updated>2026-11-06T00:00:00+09:00</updated><author><name>양평군교육발전위원회</name></author><category term="education"/>
-    <summary type="text">양평군장학재단은 대학생과 고등학교 3학년·검정고시 합격생·학교밖 청소년에게 장학금을 지원하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">긴급복지지원 장학금</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%EA%B8%B4%EA%B8%89%EB%B3%B5%EC%A7%80%EC%A7%80%EC%9B%90-%EC%9E%A5%ED%95%99%EA%B8%88/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%EA%B8%B4%EA%B8%89%EB%B3%B5%EC%A7%80%EC%A7%80%EC%9B%90-%EC%9E%A5%ED%95%99%EA%B8%88/</id>
-    <published>2026-11-06T00:00:00+09:00</published>
-    <updated>2026-11-06T00:00:00+09:00</updated><author><name>재단법인세종특별자치시인재육성평생교육진흥원</name></author><category term="education"/>
-    <summary type="text">세종시 위기가구에 속한 초·중·고·대학생에게 1인당 200만원을 지원하는 긴급복지지원 장학금이며, 상시 접수로 언제든 신청이 가능합니다. 세종특별자치시인재육성평생교육진흥원이 운영합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">사회적취약계층 강좌 수강료 감면</title>
-    <link href="https://adk24211.github.io/walapp/support/care/%EC%82%AC%ED%9A%8C%EC%A0%81%EC%B7%A8%EC%95%BD%EA%B3%84%EC%B8%B5-%EA%B0%95%EC%A2%8C-%EC%88%98%EA%B0%95%EB%A3%8C-%EA%B0%90%EB%A9%B4/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/care/%EC%82%AC%ED%9A%8C%EC%A0%81%EC%B7%A8%EC%95%BD%EA%B3%84%EC%B8%B5-%EA%B0%95%EC%A2%8C-%EC%88%98%EA%B0%95%EB%A3%8C-%EA%B0%90%EB%A9%B4/</id>
-    <published>2026-11-06T00:00:00+09:00</published>
-    <updated>2026-11-06T00:00:00+09:00</updated><author><name>재단법인시흥시청소년청년재단</name></author><category term="care"/>
-    <summary type="text">시흥시청소년청년재단이 운영하는 사회적취약계층 강좌 수강료 감면 제도는 등록장애인·국가유공자·기초생활수급자·보호대상자·그린카드 소지자 등에게 강좌 수강료를 일정 비율 감면해 주는 지원사업입니다.</summary>
   </entry>
 </feed>
