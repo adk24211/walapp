@@ -1,0 +1,73 @@
+{
+  "_prose": {
+    "eligibility": [
+      "치매 어르신",
+      "자기 결정 능력이 저하된 치매 환자",
+      "저소득 치매 환자(기초생활수급자, 차상위자, 기초연금수급자 우선)"
+    ],
+    "faq": [
+      {
+        "a": "우선순위는 기초생활수급자, 차상위자, 기초연금수급자 순으로 적용됩니다.",
+        "q": "선정 시 우선순위는 어떻게 결정되나요?"
+      },
+      {
+        "a": "민법의 성년후견제도 이용을 위한 신청 및 선정 절차를 지원합니다.",
+        "q": "공공후견인 신청 지원은 어떤 내용으로 이루어지나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "치매안심센터 또는 치매상담콜센터를 직접 방문하여 신청합니다. 구비 서류는 필요하지 않으며, 담당자가 공공후견인 신청 및 선정을 지원합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "치매 환자 공공후견 지원은 치매 어르신 중 자기 결정 능력이 저하되고 저소득인 경우, 공공후견인 신청과 선정을 도와주는 제도이며, 보건복지부가 주관하고 치매안심센터에서 방문 신청이 가능합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "senior",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 자기 결정 능력이 저하되고, 가족을 통한 지원도 곤란한 저소득 치매환자에게 민법의 성년후견제도 이용 지원\n- 공공후견인 신청 및 선정 지원(특정후견 원칙)",
+  "category": "care",
+  "contact_raw": "치매안심센터/1899-9988",
+  "content_hash": "sha256:93917cef4578ac0b9fa6133b57fb1fc5",
+  "criteria_raw": "○ 치매환자 (기초생활수급자, 차상위자, 기초연금수급자 우선)",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-13",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-999000000047",
+  "is_mock": false,
+  "last_checked": "2026-11-13",
+  "last_updated": "2026-11-13",
+  "law_raw": "",
+  "name": "치매 환자 공공후견 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999167&bnefType=all&svcId=999000000047",
+  "org": "보건복지부",
+  "primary_audience": "lowincome",
+  "receiver_raw": "치매안심센터 및 치매상담콜센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "치매-환자-공공후견-지원",
+  "source": "bojo24",
+  "source_category_raw": "보건·의료 서비스(돌봄) 개인",
+  "source_id": "999000000047",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 치매어르신",
+  "view_count": 2945
+}

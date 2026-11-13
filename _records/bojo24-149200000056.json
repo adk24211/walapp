@@ -2,27 +2,27 @@
   "_prose": {
     "eligibility": [
       "중증 장애인 근로자",
-      "장애인 공무원(사업주의 동의 필요)",
-      "사업주의 동의가 있어야 지원 가능합니다"
+      "사업주의 동의가 있는 장애인 공무원",
+      "사업주의 동의가 필요합니다"
     ],
     "faq": [
       {
-        "a": "지원 시간은 주 40시간, 하루 최대 8시간 이내이며, 구체적인 배정은 한국장애인고용공단의 평가를 통해 결정됩니다.",
+        "a": "지원 시간은 주 40시간, 하루 8시간 이내이며, 구체적인 지원 시간은 공단 평가를 통해 결정됩니다.",
         "q": "지원 시간은 어떻게 결정되나요?"
       }
     ],
-    "note": "시간당 본인부담금은 최대 300원이며, 이를 납부해야 합니다.",
+    "note": "사업주의 동의가 없으면 신청이 불가능합니다.",
     "steps": [
       {
-        "body": "한국장애인고용공단 홈페이지에서 근로지원인 서비스 신청서를 작성하고, 필요 서류를 첨부하여 제출합니다.",
+        "body": "한국장애인고용공단 홈페이지에서 온라인으로 신청할 수 있습니다. 신청서와 필요한 서류를 전자형태로 제출하면 됩니다.",
         "title": "온라인 신청"
       },
       {
-        "body": "한국장애인고용공단을 직접 방문하여 신청서와 증빙 서류를 제출합니다.",
+        "body": "한국장애인고용공단을 직접 방문하여 신청서를 제출할 수 있습니다. 방문 시 구비 서류를 지참하시기 바랍니다.",
         "title": "방문 신청"
       }
     ],
-    "summary": "근로지원인 지원은 중증 장애인 근로자와 장애인 공무원을 대상으로, 주 40시간·하루 최대 8시간까지 근로시간을 지원하고, 시간당 최대 300원의 본인부담금을 납부하도록 하는 고용노동부 산하 고용지원 제도입니다."
+    "summary": "근로지원인 지원은 중증 장애인 근로자와 사업주의 동의가 있는 장애인 공무원을 대상으로, 주 40시간·하루 8시간 이하 근로시간을 지원하고, 시간당 최대 300원 본인부담금을 납부해야 하는 제도입니다."
   },
   "apply_period": {
     "always": true,
@@ -38,7 +38,7 @@
   "benefit_raw": "○ 지원 시간 : 주 40시간, 1일 최대 8시간 이내(공단 평가를 통하여 결정)\n* 장애인근로자 시간당 최대 300원 본인부담금 납부 필요",
   "category": "jobs",
   "contact_raw": "한국장애인고용공단/1588-1519",
-  "content_hash": "sha256:af9469f190dcfa730447d8a731962c9a",
+  "content_hash": "sha256:45abfa137e752caf3d1588667ca57092",
   "criteria_raw": "○ 중증 장애인 근로자, 장애인 공무원(사업주의 동의 필요)",
   "deferred_detail": false,
   "documents_raw": [
@@ -52,11 +52,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-149200000056",
   "is_mock": false,
-  "last_checked": "2026-09-26",
-  "last_updated": "2026-09-26",
+  "last_checked": "2026-11-13",
+  "last_updated": "2026-11-13",
   "law_raw": "",
   "name": "근로지원인 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000056",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=515326&bnefType=all&svcId=149200000056",
   "org": "고용노동부",
   "primary_audience": "disabled",
   "receiver_raw": "한국장애인고용공단",
@@ -65,7 +65,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "근로지원인-지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 서비스(일자리) 개인",
@@ -73,5 +73,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 중증 장애인 근로자, 장애인 공무원(사업주의 동의 필요)",
-  "view_count": 7119
+  "view_count": 7304
 }

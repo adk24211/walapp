@@ -1,0 +1,78 @@
+{
+  "_prose": {
+    "eligibility": [
+      "장애인 예비창업자",
+      "설립 3년 미만 장애인기업",
+      "평가우수자 선정"
+    ],
+    "faq": [
+      {
+        "a": "입주공간 지원은 최대 3년까지 제공됩니다.",
+        "q": "입주공간 지원 기간은 어떻게 되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "지원 신청서는 (재)장애인기업종합지원센터에 직접 방문하여 제출합니다. 구비 서류를 모두 지참하시기 바랍니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "장애인 예비창업자와 설립 3년 미만 장애인기업을 대상으로 16개 지역센터 입주공간을 최대 3년간 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "연중 수시(공실발생 시)",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled",
+    "business"
+  ],
+  "benefit_raw": "○ 16개 지역센터 내 입주공간 지원(사무기기 및 집기류, 인터넷 전용선 등 인프라 지원, 최대 3년)",
+  "category": "jobs",
+  "contact_raw": "(재)장애인기업종합지원센터/02-2181-6540",
+  "content_hash": "sha256:6d7b4bda90064d44bdc84487b88bed91",
+  "criteria_raw": "○ 평가우수자 선정",
+  "deferred_detail": false,
+  "documents_raw": [
+    "지원 신청서",
+    "장애인증명서",
+    "사업자등록증",
+    "법인등기부 등본",
+    "전년도 재무제표",
+    "국세 지방세 완납 증명서",
+    "산업재산 보유권 및 인증 증빙서류",
+    "대표자 이력서",
+    "개인정보 수집 및 이용 동의서",
+    "신용정보 제공 동의서"
+  ],
+  "first_published": "2026-11-13",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-WII000000870",
+  "is_mock": false,
+  "last_checked": "2026-11-13",
+  "last_updated": "2026-11-13",
+  "law_raw": "",
+  "name": "장애인기업 창업보육센터 운영",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=38588&bnefType=all&svcId=WII000000870",
+  "org": "중소벤처기업부",
+  "primary_audience": "disabled",
+  "receiver_raw": "(재)장애인기업종합지원센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "장애인기업-창업보육센터-운영",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 기타 소상공인",
+  "source_id": "WII000000870",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 장애인 예비창업자, 3년 미만 장애인기업",
+  "view_count": 2528
+}

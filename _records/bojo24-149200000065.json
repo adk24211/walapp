@@ -1,19 +1,19 @@
 {
   "_prose": {
     "eligibility": [
-      "중소기업 등과 협약을 체결한 기업이 지원 대상입니다.",
-      "사업주단체 등 공동훈련센터로 선정된 기관이 지원 대상입니다.",
-      "국가인적자원개발컨소시엄운영규정 제4조에 해당하는 기업·사업주단체 등이 선정 기준에 포함됩니다."
+      "중소기업 등과 협약을 체결한 기업",
+      "사업주단체 등",
+      "공동훈련센터로 선정된 기관"
     ],
     "faq": [],
     "note": "",
     "steps": [
       {
-        "body": "지원 신청을 위해서는 사업계획서 양식(A권, B권, 지원금 신청내역) 각 1부를 작성합니다. 작성 가이드는 공고문에 첨부되어 있으니 참고하시기 바랍니다.",
+        "body": "사업계획서 양식(A권, B권, 지원금 신청내역) 각 1부를 작성하여 한국산업인력공단에 제출합니다. 제출 후 심사 절차에 따라 선정 여부가 통보됩니다.",
         "title": "신청 절차"
       }
     ],
-    "summary": "국가인적자원개발컨소시엄지원은 고용노동부가 운영하며, 중소기업·사업주단체 등이 훈련시설·장비구매비 등 최대 20억원까지 지원받을 수 있는 제도입니다."
+    "summary": "국가인적자원개발컨소시엄지원은 고용노동부가 마련하고 한국산업인력공단이 접수하는 일자리·창업 분야 지원 제도로, 중소기업·사업주단체 등과 협약을 체결한 기업 및 공동훈련센터 선정 기관에게 연간 20억원 한도 내에서 훈련시설·장비구매비, 일반운영비, 프로그램개발비 등을 지원합니다."
   },
   "apply_period": {
     "always": false,
@@ -28,7 +28,7 @@
   "benefit_raw": "○ 훈련시설·장비구매비 등 연간 20억원 한도에서 지원\n- 훈련시설·장비구매비 15억원 한도(20% 대응투자 필요)\n- 일반운영비 4억원 한도(인건비의 경우 20% 대응투자 필요)\n- 프로그램개발비 1억원 한도",
   "category": "jobs",
   "contact_raw": "한국산업인력공단/052-714-8259",
-  "content_hash": "sha256:67cb103f20a2aa0c189e1b3506b842b6",
+  "content_hash": "sha256:7a75920cbb68a6bb6a2812fd3692fe02",
   "criteria_raw": "○ 국가인적자원개발컨소시엄운영규정 제4조에 따른 기업, 사업주단체 등",
   "deferred_detail": false,
   "documents_raw": [
@@ -41,11 +41,11 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-149200000065",
   "is_mock": false,
-  "last_checked": "2026-09-02",
-  "last_updated": "2026-09-02",
+  "last_checked": "2026-11-13",
+  "last_updated": "2026-11-13",
   "law_raw": "",
   "name": "국가인적자원개발컨소시엄지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000065",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=516538&bnefType=all&svcId=149200000065",
   "org": "고용노동부",
   "primary_audience": "employer",
   "receiver_raw": "한국산업인력공단",
@@ -54,7 +54,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "국가인적자원개발컨소시엄지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 서비스(일자리) 법인/시설/단체",
@@ -62,5 +62,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 중소기업 등과 협약을 체결한 기업, 사업주단체 등 공동훈련센터로 선정된 기관",
-  "view_count": 3997
+  "view_count": 4242
 }

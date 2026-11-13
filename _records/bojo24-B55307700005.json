@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "소상공인이어야 합니다.",
+      "기준 중위소득이 125% 이하이어야 합니다.",
+      "최근 1년 연 매출액이 2억원 이하이어야 합니다."
+    ],
+    "faq": [
+      {
+        "a": "승소가액이 3억원 이상인 사건은 지원 대상에서 제외됩니다.",
+        "q": "승소가액이 3억원 이상인 사건도 지원받을 수 있나요?"
+      }
+    ],
+    "note": "승소가액이 3억원 이상이거나 근로관계 대응사건은 지원 대상에서 제외됩니다.",
+    "steps": [
+      {
+        "body": "방문하여 신청서를 제출하시면 됩니다. 구비 서류는 필요하지 않습니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "소상공인을 대상으로 중위소득 125% 이하이거나 연 매출액 2억원 이하인 경우, 상행위 관련 민사소송 및 변호사 비용을 무료로 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "lowincome",
+    "business"
+  ],
+  "benefit_raw": "소상공인의 상행위 관련 민사사건(개인회생 및 파산·면책사건 포함)에 대한 제반 소송비용 및 변호사 비용 지원(단, 승소가액 3억원 이상 및 근로관계 대응사건은 제외)",
+  "category": "living",
+  "contact_raw": "창업성장실/042-363-7732",
+  "content_hash": "sha256:7c5436bb94b23196edfa4689d1f266a5",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-13",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-B55307700005",
+  "is_mock": false,
+  "last_checked": "2026-11-13",
+  "last_updated": "2026-11-13",
+  "law_raw": "",
+  "name": "소상공인 무료법률구조",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001066&bnefType=all&svcId=B55307700005",
+  "org": "소상공인시장진흥공단",
+  "primary_audience": "lowincome",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "소상공인-무료법률구조",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타(상담)\n현금 소상공인",
+  "source_id": "B55307700005",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "기준 중위소득 125% 이하 소상공인 또는 최근 1년 연 매출액 2억원 이하 소상공인",
+  "view_count": 3065
+}

@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "재해로 피해를 입은 중소기업이 신청할 수 있습니다.",
+      "재해로 피해를 입은 소상공인이 신청할 수 있습니다.",
+      "정부·지자체가 발급한 재해중소기업 확인증 또는 피해사실 확인서를 보유한 경우에 신청할 수 있습니다."
+    ],
+    "faq": [
+      {
+        "a": "보증한도는 기존 기보증금액에 관계없이 300백만원과 재해피해액 중 적은 금액으로 정해집니다.",
+        "q": "보증한도는 어떻게 결정되나요?"
+      },
+      {
+        "a": "보증비율은 100% 전액 보증이며, 보증료율은 특별재해는 연 0.1%, 일반재해는 연 0.5%입니다.",
+        "q": "보증비율과 보증료율은 어떻게 되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "신청은 직접 방문하여 진행합니다. 별도의 구비 서류는 필요하지 않습니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "재해중소기업 특례보증은 재해 피해를 입은 중소기업·소상공인에게 최대 300백만원(또는 재해피해액) 중 적은 금액까지 전액 보증을 제공하고, 보증료는 특별재해 연 0.1%, 일반재해 연 0.5%입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ 보증한도\n- 기보증금액에 불구하고 다음 1) 과 2) 중 적은 금액\n1) 300백만원\n2) 재해관련 피해금액 또는 재해복구 소요자금\n\n○ 보증금액 사정\n- 운전자금 : 피해금액(또는 재해복구 소요자금) 범위내에서 사정 생략\n- 시설자금 : 피해금액 범위내에서 당해 시설소요자금 범위내\n* 대상채무 : 재해중소기업이 금융회사 등으로부터 지원받은 재해복구자금\n\n○ 보증비율 : 100% 전액보증 / 보증료율 : (특별재해) 연 0.1%, (일반재해) : 연 0.5%",
+  "category": "jobs",
+  "contact_raw": "신용보증재단중앙회/1588-7365",
+  "content_hash": "sha256:2c8d25b263b9bbc250ad944b6f28fac0",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-13",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-B55247300004",
+  "is_mock": false,
+  "last_checked": "2026-11-13",
+  "last_updated": "2026-11-13",
+  "law_raw": "",
+  "name": "재해중소기업 특례보증",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000689&bnefType=all&svcId=B55247300004",
+  "org": "신용보증재단중앙회",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "재해중소기업-특례보증",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금(융자) 소상공인",
+  "source_id": "B55247300004",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "재해로 인하여 피해를 입은 중소기업 및 소상공인 중 정부, 지자체로부터 “재해중소기업 확인증” 또는 “피해사실 확인서” 등을 발급받은 기업",
+  "view_count": 2753
+}
