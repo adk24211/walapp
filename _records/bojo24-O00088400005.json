@@ -1,0 +1,64 @@
+{
+  "_prose": {
+    "eligibility": [
+      "세종시 거주자",
+      "거주 기간 1년 이상",
+      "한국장학재단 6구간 이하",
+      "대학생"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "제공된 홈페이지에서 신청서를 작성하고 제출합니다.",
+        "title": "온라인 신청"
+      }
+    ],
+    "summary": "학자금 대출 원금을 대신 상환해 주는 지원으로, 세종시 거주 1년 이상이며 한국장학재단 6구간 이하인 대학생을 대상으로 합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "상,하반기 각 1회",
+    "start": ""
+  },
+  "apply_url": "www.sjhle.or.kr",
+  "audiences": [
+    "youth"
+  ],
+  "benefit_raw": "한국장학재단 학자금 대출에 따른 원금 대리상환 지원",
+  "category": "education",
+  "contact_raw": "인재개발팀/044-865-9685",
+  "content_hash": "sha256:543c3f5103c0c37bc1169115656755cf",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-14",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-O00088400005",
+  "is_mock": false,
+  "last_checked": "2026-11-14",
+  "last_updated": "2026-11-14",
+  "law_raw": "",
+  "name": "학자금 원금상환 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000434&bnefType=all&svcId=O00088400005",
+  "org": "재단법인세종특별자치시인재육성평생교육진흥원",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "학자금-원금상환-지원",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금(융자) 개인",
+  "source_id": "O00088400005",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "한국장학재단 6구간 이하의 세종시 거주 1년 이상 대학생",
+  "view_count": 834
+}

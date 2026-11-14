@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "화성시에 거주하는 가구",
+      "자녀가 2명 이상인 가구",
+      "그 중 최소 1명은 미성년자"
+    ],
+    "faq": [
+      {
+        "a": "화성로컬푸드직매장에서 결제 시 자동으로 5.5% 포인트가 적립되며, 해당 매장의 포인트 확인 시스템에서 확인할 수 있습니다.",
+        "q": "포인트 적립 내역은 어디서 확인할 수 있나요?"
+      }
+    ],
+    "note": "다자녀가정 포인트 추가 적립은 화성로컬푸드직매장 이용 시에만 적용됩니다.",
+    "steps": [
+      {
+        "body": "온라인으로는 지정된 웹사이트에 로그인 후 신청하고, 방문 신청도 가능합니다.",
+        "title": "신청 방법"
+      },
+      {
+        "body": "주민등록등본 및 신분증 사본 또는 경기도 똑D 어플의 다자녀 인증 화면을 제출해야 합니다.",
+        "title": "제출 서류"
+      }
+    ],
+    "summary": "화성시 거주 가구 중 자녀가 2명 이상이며 최소 1명이 미성년자인 다자녀가정에게 화성로컬푸드직매장 이용 시 포인트를 5.5% 적립해 주는 지원 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://consumer.localeats.kr/hs/auth/login",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "○ 화성로컬푸드직매장 이용 시 포인트 5.5% 적립\n- 마일리지 5.5% 적립(일반회원 0.5% 적립 + 다자녀가정 5% 추가적립)",
+  "category": "living",
+  "contact_raw": "직매장사업팀/031-5180-7873",
+  "content_hash": "sha256:03f39b61f52b40249a0cc03ef78d2f44",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "주민등록등복 및 신분증 사본 또는 경기도 똑D 어플 다자녀 인증 화면"
+  ],
+  "first_published": "2026-11-14",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-O00058200001",
+  "is_mock": false,
+  "last_checked": "2026-11-14",
+  "last_updated": "2026-11-14",
+  "law_raw": "",
+  "name": "다자녀가정 포인트 추가 적립 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001876&bnefType=all&svcId=O00058200001",
+  "org": "재단법인화성푸드통합지원센터",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "다자녀가정-포인트-추가-적립-지원",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 이용권 개인",
+  "source_id": "O00058200001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "미성년자인 자녀 1명을 포함한 2명 이상의 자녀를 둔 주민등록표상 세대를 같이 하는 가족(화성시 거주자)",
+  "view_count": 1748
+}
