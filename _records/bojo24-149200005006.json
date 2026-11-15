@@ -1,23 +1,23 @@
 {
   "_prose": {
     "eligibility": [
-      "15세 이상",
-      "34세 이하",
-      "미취업 청년"
+      "미취업 청년이어야 합니다.",
+      "청년(만 34세 이하)이어야 합니다."
     ],
-    "faq": [],
+    "faq": [
+      {
+        "a": "인턴형 일경험은 1~5개월, 프로젝트형 일경험은 2개월, ESG지원형 일경험은 6개월 이내, 사회적가치형 일경험은 3개월 이내로 제공됩니다.",
+        "q": "각 일경험 유형별 제공 기간은 어떻게 되나요?"
+      }
+    ],
     "note": "",
     "steps": [
       {
-        "body": "청년 일경험 지원은 온라인으로 신청합니다. 신청서 작성 후 제출하면 됩니다.",
-        "title": "온라인 신청"
-      },
-      {
-        "body": "제출한 신청서는 청년 일경험 상담센터와 운영기관을 통해 확인합니다. 확인이 완료되면 지원 절차가 진행됩니다.",
-        "title": "서류 확인"
+        "body": "청년 일경험 지원은 온라인으로 신청합니다. 신청 전 청년 일경험 상담센터와 운영기관을 통해 필요한 서류를 확인하시기 바랍니다.",
+        "title": "신청 방법"
       }
     ],
-    "summary": "청년 일경험 지원은 15세 이상 34세 이하의 미취업 청년에게 인턴형, 프로젝트형, ESG지원형, 사회적가치형 등 다양한 형태의 일경험을 제공하는 고용노동부 주관 프로그램입니다."
+    "summary": "청년 일경험 지원은 15세 이상 34세 이하의 미취업 청년에게 인턴형, 프로젝트형, ESG지원형, 사회적가치형 등 다양한 형태의 일경험 기회를 제공하는 제도입니다."
   },
   "apply_period": {
     "always": false,
@@ -33,7 +33,7 @@
   "benefit_raw": "ㅇ 인턴형 일경험: 기업에서 과업을 수행하면서 직무역량 강화(1~5개월 내외)\nㅇ 프로젝트형 일경험: 기업이 제안하는 실전형 프로젝트 수행(2개월 내외)\nㅇ ESG지원형 일경험: 청년의 취업역량 향상을 위해 기업이 ESG 경영 차원에서 편성한 일경험, 훈련 등 참여(6개월 이내)\nㅇ 사회적가치형 일경험: 정책적으로 필요한 분야(사회서비스, 지역, 환경 등) 관련 사회적 기업에서의 일경험 제공(3개월 이내)",
   "category": "jobs",
   "contact_raw": "고용노동부 통합고용정책국 청년고용정책관 청년취업지원과/044-202-7492\n청년 일경험 상담센터/1811-8447",
-  "content_hash": "sha256:a9809927c49f1dd5976a36cc5abfb986",
+  "content_hash": "sha256:3e57978700df4cce0770b77b89e4e4de",
   "criteria_raw": "15세 이상 34세 이하 미취업 청년",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "기타 온라인신청\n직접입력",
   "id": "bojo24-149200005006",
   "is_mock": false,
-  "last_checked": "2026-09-01",
-  "last_updated": "2026-09-01",
+  "last_checked": "2026-11-15",
+  "last_updated": "2026-11-15",
   "law_raw": "",
   "name": "청년 일경험 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005006",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=797590&bnefType=all&svcId=149200005006",
   "org": "고용노동부",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "청년-일경험-지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금 개인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "15세 이상 34세 이하 미취업 청년",
-  "view_count": 9096
+  "view_count": 9910
 }

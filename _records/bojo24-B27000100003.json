@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "장애인 등록 시 종전 1~3급에 해당하는 경우",
+      "건강보험료 본인부담금 합산액이 기준중위소득 125% 이하인 경우",
+      "선정 기준이 별도로 없습니다"
+    ],
+    "faq": [
+      {
+        "a": "장애인 등록 시 종전 1~3급에 해당하면 지원 대상에 포함됩니다.",
+        "q": "지원 대상이 되는 장애 등급은 어떻게 확인하나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청하거나 직접 방문하여 신청할 수 있습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "무료 소송대리 서비스(장애인1~3급)는 생활·문화 분야에서 장애 정도가 심한 1~3급 장애인에게 건강보험료 본인부담금이 기준중위소득 125% 이하인 경우 무료 법률상담과 소송대리를 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.klac.or.kr",
+  "audiences": [
+    "disabled",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 장애인의 기본적 인권을 옹호하고 법률복지의 증진\n\n○ 무료 법률상담\n\n○ 무료 소송대리",
+  "category": "living",
+  "contact_raw": "(국번없이)132 법률상담 콜센타/132",
+  "content_hash": "sha256:863ca6b2bbc26b55207dc4110044cb97",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-15",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-B27000100003",
+  "is_mock": false,
+  "last_checked": "2026-11-15",
+  "last_updated": "2026-11-15",
+  "law_raw": "",
+  "name": "무료 소송대리 서비스(장애인1~3급)",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000507&bnefType=all&svcId=B27000100003",
+  "org": "대한법률구조공단",
+  "primary_audience": "disabled",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "무료-소송대리-서비스-장애인1-3급",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타(상담) 개인",
+  "source_id": "B27000100003",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 장애인(장애의 정도가 심한, 종전 1~3급)\n- 건강보험료 본인부담금 합산액이 기준중위소득 125% 이하인 자",
+  "view_count": 2185
+}

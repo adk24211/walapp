@@ -1,0 +1,61 @@
+{
+  "_prose": {
+    "eligibility": [
+      "소득인정액이 기준중위소득 120% 이하인 가구"
+    ],
+    "faq": [],
+    "note": "내부 심의를 거쳐 최종 선정되므로 모든 신청자가 지원받는 것은 아닙니다.",
+    "steps": [
+      {
+        "body": "방문하여 신청서를 제출하시면 됩니다. 구비 서류는 필요하지 않으며, 상시 접수됩니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "마포형 위기가구 지원은 마포복지재단이 운영하는 건강·의료 분야 지원 제도로, 소득인정액이 기준중위소득 120% 이하인 저소득 주민에게 긴급생계비·의료비·주거지원비 등 다양한 지원을 제공합니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "○ 경제적 위기를 겪는 저소득 주민 지원\n- 긴급생계비\n- 의료비\n- 단전·단수/가스끊김/건강보험체납비\n- 주거지원비\n- 주거환경개선 지원비\n- 재난재해 긴급지원비\n\n※별도의 내부 심의를 거쳐 지원 대상자 최종 선정",
+  "category": "health",
+  "contact_raw": "복지사업팀/02-3276-1894",
+  "content_hash": "sha256:74e6e69ad340b7962f7a629e6b589651",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-15",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-O00012200001",
+  "is_mock": false,
+  "last_checked": "2026-11-15",
+  "last_updated": "2026-11-15",
+  "law_raw": "",
+  "name": "마포형 위기가구 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000204&bnefType=all&svcId=O00012200001",
+  "org": "마포복지재단",
+  "primary_audience": "lowincome",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "마포형-위기가구-지원",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금 개인",
+  "source_id": "O00012200001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "소득인정액이 기준중위소득 120% 이하",
+  "view_count": 2923
+}
