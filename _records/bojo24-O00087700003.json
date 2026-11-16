@@ -1,0 +1,75 @@
+{
+  "_prose": {
+    "eligibility": [
+      "은평구에 거주하는 서울·경기 소재 대학 재학생 또는 휴학생이어야 합니다.",
+      "학업성적이 4.5점 만점에 3.0점 이상이어야 합니다.",
+      "청소년·교육·봉사활동에 관심이 있어야 합니다.",
+      "멘토링 활동 기간 동안 꾸준히 활동할 수 있어야 합니다."
+    ],
+    "faq": [
+      {
+        "a": "선정 기준에 대한 내용은 제공되지 않았습니다.",
+        "q": "선정 기준은 어떻게 되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "방문 신청이 가능합니다. 필요한 서류를 지참하여 재단법인은평구민장학재단을 직접 방문하시기 바랍니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "은평구에 거주하는 대학 재학생·휴학생을 대상으로 정서지원 활동을 수행하며, 최대 200만원을 지원하는 지역사회기여 장학금입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "youth",
+    "parent"
+  ],
+  "benefit_raw": "은평구에 거주하고 있는 대학생이 관내 지역아동센터 및 학교밖청소년지원센터의 청소년들에게 교고목 학습 등의 정서지원 활동을 하는 장학사업\n대상 : 서울 및 인근 수도권 소재 대학교 재학생 및 휴학생\n시간 및 장학금액 : 약 10개월 최대 133시간 (최대 200만원내외)",
+  "category": "education",
+  "contact_raw": "재단법인은평구민장학재단/02-351-8512",
+  "content_hash": "sha256:d66b7c483ce29ad9e08b03732246a625",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "1. 장학생신청서 및 자기소개서",
+    "2. 개인정보수집이용제공및조회동의서",
+    "3. 주민등록초본",
+    "4. 재학(휴학)증명서",
+    "5. 성적증명서",
+    "6. 통장사본"
+  ],
+  "first_published": "2026-11-16",
+  "how_to_raw": "방문신청\n직접입력",
+  "id": "bojo24-O00087700003",
+  "is_mock": false,
+  "last_checked": "2026-11-16",
+  "last_updated": "2026-11-16",
+  "law_raw": "",
+  "name": "지역사회기여 장학금",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2100621&bnefType=all&svcId=O00087700003",
+  "org": "재단법인은평구민장학재단",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "지역사회기여-장학금",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금(장학금) 개인",
+  "source_id": "O00087700003",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "1. 은평구에 거주하는 서울/경기 소재 대학 재학생 및 휴학생\n2. 학업성적이 평점 4.5점 만점에 3.0점 이상인 학생\n3. 청소년, 교육, 봉사활동에 관심이 있는 학생\n4. 멘토링 활동기간동안 꾸준히 활동 가능한 학생",
+  "view_count": 761
+}

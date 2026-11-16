@@ -1,19 +1,19 @@
 {
   "_prose": {
     "eligibility": [
-      "농림축산식품업종분류에 해당하는 기술·노하우를 보유하고 있어야 합니다",
-      "실용·사업화를 목표로 해야 합니다",
-      "농업법인 또는 중소기업이어야 합니다"
+      "농업법인 또는 중소기업으로, 농림축산식품업종분류에 해당하는 기술·노하우를 보유하고 있는 경우",
+      "보유한 기술·노하우를 실용·사업화하고자 하는 경우",
+      "예산이 소진될 때까지 신청 후 평가가 진행되는 경우"
     ],
     "faq": [],
     "note": "예산이 소진될 경우 조기 마감될 수 있습니다.",
     "steps": [
       {
-        "body": "홈페이지에서 온라인 신청 양식을 작성하고, 구비 서류를 첨부하여 제출합니다. 제출 후 예산 소진 시까지 평가가 진행됩니다.",
+        "body": "온라인 신청 페이지에서 신청서를 작성하고, 금융기관 사전상담 확인서·지원사업 신청서·기술사업 계획서·법인등기부등본 등을 첨부하여 제출합니다. 제출 후 예산 소진 여부에 따라 평가가 진행됩니다.",
         "title": "온라인 신청"
       }
     ],
-    "summary": "농림축산식품업종에 보유한 기술·노하우를 실용·사업화하려는 농업법인·중소기업에 저리 융자로 자금을 지원하는 제도이며, 예산이 소진될 때까지 신청 후 평가가 진행됩니다."
+    "summary": "기술창업자금 지원은 농업법인·중소기업이 보유한 농림축산식품업종 기술·노하우를 실용·사업화하기 위해 저리 융자를 제공하는 제도이며, 예산 소진 시까지 온라인으로 신청할 수 있습니다."
   },
   "apply_period": {
     "always": false,
@@ -28,7 +28,7 @@
   "benefit_raw": "○ 우수기술 사업화에 필요한 소요자금 규모를 평가하여 저리 융자로 자금 지원",
   "category": "jobs",
   "contact_raw": "한국농업기술진흥원 기술평가팀/063-919-1478",
-  "content_hash": "sha256:10980cf9e385c140c2817dcdba0c27c6",
+  "content_hash": "sha256:2a2562b87a9118238d63aa8ff3f3de03",
   "criteria_raw": "○ 예산 소진 시까지 신청 후 평가 추진",
   "deferred_detail": false,
   "documents_raw": [
@@ -41,11 +41,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-154300000005",
   "is_mock": false,
-  "last_checked": "2026-09-06",
-  "last_updated": "2026-09-06",
+  "last_checked": "2026-11-16",
+  "last_updated": "2026-11-16",
   "law_raw": "",
   "name": "기술창업자금 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/154300000005",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999105&bnefType=all&svcId=154300000005",
   "org": "농림축산식품부",
   "primary_audience": "business",
   "receiver_raw": "",
@@ -54,7 +54,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "기술창업자금-지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금(융자) 법인/시설/단체",
@@ -62,5 +62,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 농림축산식품업종분류에 해당하는 기술 및 노하우를 보유하고 이를 실용, 사업화하고자 하는 농업법인 또는 중소기업",
-  "view_count": 6610
+  "view_count": 6977
 }
