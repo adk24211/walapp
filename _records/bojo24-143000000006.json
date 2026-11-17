@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "대한민국 여성이어야 합니다.",
+      "발명 아이디어를 통한 창업에 관심이 있어야 합니다.",
+      "온라인으로 신청할 수 있어야 합니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "특허청 온라인 신청 페이지에서 아이디어를 접수합니다. 접수 후 멘토링과 특허출원 지원 절차가 진행됩니다.",
+        "title": "신청 및 접수"
+      }
+    ],
+    "summary": "생활발명 코리아는 대한민국 여성의 발명 아이디어를 멘토링·특허출원 등으로 지원하여 창업을 돕는 사업입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "https://www.womanidea.net/",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ 아이디어 접수 후 멘토링 및 특허출원 지원\n- (교육 및 상담회) 지원 대상작으로 선정된 제안자 대상 지식 재산권 기초 및 신제품 마케팅 전략 교육 상품 전문가 멘토단을 통해 개별 상담\n- (멘토링) 아이디어 1건당 2명의 멘토 매칭, 제안자와 공동연구개발\n- (결과물 산출) 완성된 아이디어와 지식 재산권 출원 및 시제품 제작\n- (공개 평가 및 시상식) 결과물의 온·오프라인 공개, 예비 소비자 평가(온라인)와 전문가 평가(오프라인)를 합산하여 대통령상 등 정부시상",
+  "category": "jobs",
+  "contact_raw": "지식재산처/042-481-5763",
+  "content_hash": "sha256:5261e677c59ed54d3cf7c106493c67d2",
+  "criteria_raw": "○ 발명 아이디어를 통한 창업에 관심있는 여성",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-17",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-143000000006",
+  "is_mock": false,
+  "last_checked": "2026-11-17",
+  "last_updated": "2026-11-17",
+  "law_raw": "",
+  "name": "생활발명 발굴 지원(생활발명 코리아)",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=557989&bnefType=all&svcId=143000000006",
+  "org": "지식재산처",
+  "primary_audience": "business",
+  "receiver_raw": "특허청",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "생활발명-발굴-지원-생활발명-코리아",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타 개인",
+  "source_id": "143000000006",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 대한민국 여성",
+  "view_count": 2711
+}

@@ -1,0 +1,74 @@
+{
+  "_prose": {
+    "eligibility": [
+      "저소득가정 청소년(기초생활수급, 차상위계층)",
+      "소년·소녀가장",
+      "한부모가족자격(조손가정), 주민등록상 부모 없이, 조부모와 손자녀로 구성된 가정",
+      "모자한부모, 부자한부모, 조손한부모, 청소년한부모",
+      "입양가정 청소년",
+      "다문화가족 청소년",
+      "탈북청소년(제3국 출생 포함)"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "청소년 성장 지원 서비스 신청은 온라인으로만 진행됩니다. 지정된 신청 웹사이트에 접속하여 신청서를 작성합니다. 별도의 서류 제출은 필요하지 않습니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "작성한 신청서를 확인 후 전송하면 접수가 완료됩니다. 신청은 상시 접수되며, 별도의 접수 기간 제한이 없습니다.",
+        "title": "신청서 제출"
+      }
+    ],
+    "summary": "청소년 성장 지원 서비스는 저소득·한부모·입양·다문화·탈북 등 사회적 배려가 필요한 청소년에게 국립청소년시설에서 청소년활동 체험 기회를 제공하는 지원 사업입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "booking.kywa.or.kr",
+  "audiences": [
+    "parent",
+    "disabled",
+    "lowincome",
+    "multicultural"
+  ],
+  "benefit_raw": "○ 사회적 배려가 필요한 청소년에게 국립청소년시설의 청소년활동 체험 기회 제공\n\n○ 농·산·어촌 청소년, 저소득 가정 청소년, 이주 배경 청소년, 기타 사회적 배려계층 청소년 등에게 청소년활동 참여 제공 서비스",
+  "category": "care",
+  "contact_raw": "활동운영기획부/041-620-7743",
+  "content_hash": "sha256:238635dd04ab2bc482ed87df2065e241",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-17",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-B55271300007",
+  "is_mock": false,
+  "last_checked": "2026-11-17",
+  "last_updated": "2026-11-17",
+  "law_raw": "",
+  "name": "청소년 성장 지원 서비스",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001209&bnefType=all&svcId=B55271300007",
+  "org": "한국청소년활동진흥원",
+  "primary_audience": "lowincome",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "청소년-성장-지원-서비스",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 시설이용 개인",
+  "source_id": "B55271300007",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 저소득가정 청소년(기초생활수급, 차상위계층)\n\n○ 소년 소녀가장\n\n○ 한부모가족자격(조손가정), 주민등록상 부모 없이, 조부모와 손자녀로 구성된 가정\n\n○ 모자한부모, 부자한부모, 조손한부모, 청소년한부모\n\n○ 입양가정 청소년\n\n○ 다문화가족 청소년\n\n○ 탈북청소년(제3국 출생 포함)\n\n○ 학교 밖 청소년\n\n○ 교육복지학교 청소년\n\n○ 농산어촌지역 소규모 학교 청소년(읍, 면 소재 전교생200명 이하 학교)\n\n○ 장애청소년\n\n○ 경계성지적장애청소년\n\n○ 학교폭력 피해 청소년\n\n○ 학교부적응 청소년\n\n○ 가정학대 피해 청소년\n\n○ 성폭력 피해 청소년\n\n○ 수능 후 고3 청소년\n\n○ 군복무 후기 청소년\n\n○ 인구감소지역 청소년(행정안전부 고시 전국 89개 지역)",
+  "view_count": 2589
+}

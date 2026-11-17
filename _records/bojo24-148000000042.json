@@ -1,18 +1,17 @@
 {
   "_prose": {
     "eligibility": [
-      "상수원보호구역 내에서 농림업에 종사하는 사람(수계기금 지원지역 제외)",
-      "주민지원사업계획이 수립된 시·군·구에 해당하는 경우"
+      "수계기금 지원지역을 제외한 상수원 보호구역 내 농림업 종사자입니다."
     ],
     "faq": [],
-    "note": "",
+    "note": "구비 서류가 필요하지 않으니 준비물을 걱정하지 않으셔도 됩니다.",
     "steps": [
       {
-        "body": "관할 시·군·구청을 직접 방문하여 신청서를 제출하시면 됩니다. 별도의 구비 서류는 필요하지 않습니다.",
-        "title": "신청 방법"
+        "body": "관할 시·군·구청을 직접 방문하여 신청합니다. 구비 서류는 필요하지 않습니다.",
+        "title": "신청 절차"
       }
     ],
-    "summary": "수도법 상수원 보호구역에 거주하는 주민 및 농림업 종사자를 대상으로 소득 증대, 복지 증진, 장학 지원 등을 제공하는 주민지원 제도이며, 기후에너지환경부가 주관하고 시·군·구청에 방문 신청할 수 있습니다."
+    "summary": "수도법 상수원 보호구역에 거주하는 주민 및 농림업 종사자를 대상으로 소득증대(농기계·농자재·비료 구입 등), 복지증진(생필품·마을회관 보수 등), 학자금·장학기금 지원 등을 제공하며, 시·군·구청에 직접 방문하여 신청할 수 있는 제도입니다."
   },
   "apply_period": {
     "always": false,
@@ -26,8 +25,8 @@
   ],
   "benefit_raw": "○ 소득증대사업(농기계·농자재 구입, 비료구입 등), 복지증진사업(생필품·구입, 마을회관 보수 등), 육영사업(장학기금, 학자금 지원 등) 등",
   "category": "education",
-  "contact_raw": "기후에너지환경부 물이용정책과/044-201-7154",
-  "content_hash": "sha256:fdd5d5dca3c9fee9114c31a50eb1ec6a",
+  "contact_raw": "기후에너지환경부 물이용정책과/044-201-7150",
+  "content_hash": "sha256:1d32b822ddcf7e205c1adc6b2e7e7ed3",
   "criteria_raw": "○ 주민지원사업계획이 수립된 시군구",
   "deferred_detail": false,
   "documents_raw": [
@@ -37,8 +36,8 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-148000000042",
   "is_mock": false,
-  "last_checked": "2026-11-11",
-  "last_updated": "2026-11-11",
+  "last_checked": "2026-11-17",
+  "last_updated": "2026-11-17",
   "law_raw": "",
   "name": "수도법 상수원 보호구역 주민지원",
   "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=588749&bnefType=all&svcId=148000000042",
@@ -50,7 +49,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "수도법-상수원-보호구역-주민지원",
   "source": "bojo24",
   "source_category_raw": "문화·환경 현물 개인",
@@ -58,5 +57,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 상수원보호구역 주민 또는 농림업종사자(수계기금 지원지역 제외)",
-  "view_count": 2672
+  "view_count": 2685
 }
