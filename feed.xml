@@ -4,8 +4,32 @@
   <subtitle>정부·지자체 지원금과 복지 제도를 받을 수 있는지부터 신청 방법까지 하나씩 정리합니다. 공공데이터 원문을 토대로 쉬운 말로 풀어 씁니다.</subtitle>
   <link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html"/>
-  <updated>2026-11-17T13:38:42+09:00</updated>
+  <updated>2026-11-18T12:42:24+09:00</updated>
   <id>https://adk24211.github.io/walapp/</id>
+  <entry>
+    <title type="text">체육시설 이용요금 감면(국민체육센터)</title>
+    <link href="https://adk24211.github.io/walapp/support/living/%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EA%B5%AD%EB%AF%BC%EC%B2%B4%EC%9C%A1%EC%84%BC%ED%84%B0/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EA%B5%AD%EB%AF%BC%EC%B2%B4%EC%9C%A1%EC%84%BC%ED%84%B0/</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated><author><name>시흥도시공사</name></author><category term="living"/>
+    <summary type="text">시흥시 국민체육센터 이용요금 감면 제도는 행사·경기·훈련 등 지정된 경우 전액 또는 일정 비율을 감면해 주는 지원입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">팁스</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%ED%8C%81%EC%8A%A4/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%ED%8C%81%EC%8A%A4/</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated><author><name>창업진흥원</name></author><category term="jobs"/>
+    <summary type="text">팁스는 창업진흥원이 운영하는 일자리·창업 지원 제도로, 창업 초기 기업에게 투자·보육·추천을 연계해 정부 R&amp;D·사업화 자금을 매칭 지원합니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">청년일자리도약장려금</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%B2%AD%EB%85%84%EC%9D%BC%EC%9E%90%EB%A6%AC%EB%8F%84%EC%95%BD%EC%9E%A5%EB%A0%A4%EA%B8%88/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%B2%AD%EB%85%84%EC%9D%BC%EC%9E%90%EB%A6%AC%EB%8F%84%EC%95%BD%EC%9E%A5%EB%A0%A4%EA%B8%88/</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
+    <summary type="text">청년일자리도약장려금은 청년을 신규 채용한 중소·중견기업에 최대 720만원을 지원하고, 채용된 청년에게도 2년간 최대 720만원을 추가로 지원하여 청년 일자리 창출을 촉진하는 정부 지원 제도입니다.</summary>
+  </entry>
   <entry>
     <title type="text">한국마사회 문화센터 수강 서비스</title>
     <link href="https://adk24211.github.io/walapp/support/living/%ED%95%9C%EA%B5%AD%EB%A7%88%EC%82%AC%ED%9A%8C-%EB%AC%B8%ED%99%94%EC%84%BC%ED%84%B0-%EC%88%98%EA%B0%95-%EC%84%9C%EB%B9%84%EC%8A%A4/" rel="alternate" type="text/html"/>
@@ -221,29 +245,5 @@
     <published>2026-11-12T00:00:00+09:00</published>
     <updated>2026-11-12T00:00:00+09:00</updated><author><name>농림축산식품부</name></author><category term="jobs"/>
     <summary type="text">맞춤형농지지원사업은 농업인에게 농지 매입 자금 융자와 저렴한 임대료로 장기 임대를 지원하는 제도이며, 신청은 온라인 또는 방문으로 할 수 있습니다. 지원 대상은 청년창업형후계농업경영인 등으로 연령·경력 요건을 충족한 농업인에 한정됩니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">모범(대학생) 장학금</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%EB%AA%A8%EB%B2%94-%EB%8C%80%ED%95%99%EC%83%9D-%EC%9E%A5%ED%95%99%EA%B8%88/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%EB%AA%A8%EB%B2%94-%EB%8C%80%ED%95%99%EC%83%9D-%EC%9E%A5%ED%95%99%EA%B8%88/</id>
-    <published>2026-11-12T00:00:00+09:00</published>
-    <updated>2026-11-12T00:00:00+09:00</updated><author><name>재단법인세종특별자치시인재육성평생교육진흥원</name></author><category term="education"/>
-    <summary type="text">세종시 거주 1년 이상이며 한국장학재단 소득분위 6구간 이하인 대학생에게 1인당 100만원을 생활비성 장학금으로 지원하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">유아교육비·보육료 추가지원</title>
-    <link href="https://adk24211.github.io/walapp/support/care/%EC%9C%A0%EC%95%84%EA%B5%90%EC%9C%A1%EB%B9%84-%EB%B3%B4%EC%9C%A1%EB%A3%8C-%EC%B6%94%EA%B0%80%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/care/%EC%9C%A0%EC%95%84%EA%B5%90%EC%9C%A1%EB%B9%84-%EB%B3%B4%EC%9C%A1%EB%A3%8C-%EC%B6%94%EA%B0%80%EC%A7%80%EC%9B%90/</id>
-    <published>2026-11-12T00:00:00+09:00</published>
-    <updated>2026-11-12T00:00:00+09:00</updated><author><name>교육부</name></author><category term="care"/>
-    <summary type="text">취학을 유예한 유아에게 월 5만원을 추가 지원하는 제도로, 온라인을 통해 신청할 수 있습니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">사회적 취약계층 및 교육 지원 대상자 이용료 면제</title>
-    <link href="https://adk24211.github.io/walapp/support/care/%EC%82%AC%ED%9A%8C%EC%A0%81-%EC%B7%A8%EC%95%BD%EA%B3%84%EC%B8%B5-%EB%B0%8F-%EA%B5%90%EC%9C%A1-%EC%A7%80%EC%9B%90-%EB%8C%80%EC%83%81%EC%9E%90-%EC%9D%B4%EC%9A%A9%EB%A3%8C-%EB%A9%B4%EC%A0%9C/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/care/%EC%82%AC%ED%9A%8C%EC%A0%81-%EC%B7%A8%EC%95%BD%EA%B3%84%EC%B8%B5-%EB%B0%8F-%EA%B5%90%EC%9C%A1-%EC%A7%80%EC%9B%90-%EB%8C%80%EC%83%81%EC%9E%90-%EC%9D%B4%EC%9A%A9%EB%A3%8C-%EB%A9%B4%EC%A0%9C/</id>
-    <published>2026-11-12T00:00:00+09:00</published>
-    <updated>2026-11-12T00:00:00+09:00</updated><author><name>안양시청소년재단</name></author><category term="care"/>
-    <summary type="text">안양시청소년재단이 운영하는 사회적 취약계층 및 교육 지원 대상자 이용료 면제 제도는 지정된 현장에서 강좌 수강료와 놀이치료·심리검사 비용을 1인 1강좌씩 무상으로 제공하는 제도입니다.</summary>
   </entry>
 </feed>
