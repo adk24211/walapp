@@ -1,24 +1,19 @@
 {
   "_prose": {
     "eligibility": [
-      "만 3~5세 영유아와 학부모",
-      "20~30대 청년 1인 가구",
-      "청소년",
-      "노인 및 취약계층 등 지역 주민"
+      "만 3세에서 5세 사이 영유아와 학부모",
+      "20세에서 30세 사이 청년 1인 가구",
+      "청소년·노인·취약계층 등 각 지역주민"
     ],
     "faq": [],
-    "note": "",
+    "note": "신청 기간이 명시되지 않아 언제든지 방문 신청이 가능합니다.",
     "steps": [
       {
-        "body": "지원신청서를 작성합니다.",
-        "title": "신청 준비"
-      },
-      {
-        "body": "작성한 지원신청서를 시·군·구청에 직접 방문하여 제출합니다.",
-        "title": "신청 제출"
+        "body": "지원신청서를 작성한 뒤 관할 시·군·구청을 직접 방문하여 제출합니다. 방문 시 담당 부서에 문의하면 자세한 안내를 받을 수 있습니다.",
+        "title": "신청 절차"
       }
     ],
-    "summary": "바른 식생활교육 지원(지자체사업)은 시·군·구청을 통해 지역 주민에게 식생활교육 워크숍·체험활동·프로그램 등을 제공하는 지원사업입니다."
+    "summary": "바른 식생활교육 지원(지자체사업)은 영유아·청소년·청년·노인·취약계층 등 지역 주민을 대상으로 식생활교육 프로그램을 제공하고, 지역민관 협력 워크숍 등 다양한 교육 활동을 지원합니다."
   },
   "apply_period": {
     "always": false,
@@ -35,7 +30,7 @@
   "benefit_raw": "○ (식생활교육 관계자) 지역단위 민관협력 워크숍\n\n○ (초등학교) 바른 식생활교육 창의적 체험활동 또는 방과 후 교실 학습지원\n\n○ (어린이집, 유치원, 초중고등학교) 농업, 농촌 체험과 연계한 바른 식생활교육 프로그램\n\n○ (학교교사 및 영양교사) 학교교사, 영양(교)사 및 학교 조리사 식생활교육\n\n○ (어린이집, 유치원, 초중고등학교) 텃밭 연계 식생활교육 프로그램\n\n○ (지자체 및 위탁기관 담당자) 지자체 식생활교육 담당자 역량강화\n\n○ (고령자) 고령자 식생활 건강 개선사업\n\n○ 학교급식 또는 전통음식 활성화와 연계된 바른식생활 교육사업 등",
   "category": "care",
   "contact_raw": "식생활소비정책과/044-201-2273",
-  "content_hash": "sha256:302faa7e5d1a913934deb9988b0fed7f",
+  "content_hash": "sha256:2eb21ed19bc00b40d508608bac0676c0",
   "criteria_raw": "○ 만3~5세유아와 학부모, 20~30대 청년 1인가구 및 전국민",
   "deferred_detail": false,
   "documents_raw": [
@@ -45,11 +40,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-154300000330",
   "is_mock": false,
-  "last_checked": "2026-09-04",
-  "last_updated": "2026-09-04",
+  "last_checked": "2026-11-18",
+  "last_updated": "2026-11-18",
   "law_raw": "",
   "name": "바른 식생활교육 지원(지자체사업)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/154300000330",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=727798&bnefType=all&svcId=154300000330",
   "org": "농림축산식품부",
   "primary_audience": "senior",
   "receiver_raw": "시·군·구청",
@@ -58,7 +53,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 2,
+  "revision": 3,
   "slug": "바른-식생활교육-지원-지자체사업",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 개인",
@@ -66,5 +61,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 영유아, 청소년, 청년, 노인, 취약계층 등 각 지역주민",
-  "view_count": 2916
+  "view_count": 3229
 }
