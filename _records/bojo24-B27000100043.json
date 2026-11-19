@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "미혼모·부가 지원 대상입니다.",
+      "건강보험료 본인부담금 합산액이 기준중위소득 125% 이하인 경우에 해당합니다.",
+      "선정 기준이 별도로 제시되지 않았습니다."
+    ],
+    "faq": [
+      {
+        "a": "출생증명서 등이 없는 경우나 친생자 출생신고 확인 신청 사건 등 법률구조서비스가 필요한 경우에 무료 소송대리를 받을 수 있습니다.",
+        "q": "어떤 경우에 소송대리를 받을 수 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "무료 소송대리 서비스는 온라인으로 신청하거나 직접 방문하여 신청할 수 있습니다. 신청은 상시 접수이며, 별도의 서류 제출이 필요하지 않습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "미혼모·부를 대상으로 건강보험료 본인부담금이 기준중위소득 125% 이하인 경우, 무료 법률상담 및 소송대리를 제공하는 서비스입니다. 사회·경제적 약자를 위한 법률구조서비스로, 온라인 및 방문 신청이 가능합니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "www.klac.or.kr",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "○ 사회·경제적 약자에 대한 법률구조서비스 제공으로 법률복지증진\n\n○ 무료 법률상담\n\n○ 무료 소송대리\n- 출생증명서 등이 없는 경우(「가족관계의 등록 등에 관한 법률」제44조의 2) 또는 친생자 출생신고를 위한 확인 신청사건(동법 제57조)",
+  "category": "living",
+  "contact_raw": "(국번없이)132 법률상담 콜센타/132",
+  "content_hash": "sha256:6ed15c9171427a3f7bc4665869067431",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-19",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-B27000100043",
+  "is_mock": false,
+  "last_checked": "2026-11-19",
+  "last_updated": "2026-11-19",
+  "law_raw": "",
+  "name": "무료 소송대리 서비스(미혼모·부)",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001576&bnefType=all&svcId=B27000100043",
+  "org": "대한법률구조공단",
+  "primary_audience": "lowincome",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "무료-소송대리-서비스-미혼모-부",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타(상담) 개인",
+  "source_id": "B27000100043",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 미혼모·부\n- 건강보험료 본인부담금 합산액이 기준중위소득 125% 이하인 자",
+  "view_count": 2689
+}
