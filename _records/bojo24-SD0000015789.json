@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "국민기초생활보장법에 따른 수급권자는 면제 대상입니다.",
+      "국가유공자·유족·가족 및 5.18민주유공자·유족·가족은 면제 대상입니다.",
+      "고엽제 후유증 환자·가족은 면제 대상입니다.",
+      "특수임무·독립·참전 유공자·가족은 면제 대상입니다.",
+      "장애인(장애인복지법에 따른 등록)은 면제 대상입니다."
+    ],
+    "faq": [],
+    "note": "제도는 제출 서류 검토 후 면제 여부를 결정합니다.",
+    "steps": [
+      {
+        "body": "농림축산식품부 국립종자원을 직접 방문하여 면제 신청서를 제출합니다. 제출 시 면제 신청서와 면제 대상임을 증명하는 서류, 대리인 제출 시 대리권 증명 서류를 함께 지참하셔야 합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "식물신품종 보호법에 따라 국가유공자·장애인·기초생활수급자 등에게 식물 품종보호 수수료를 면제하고 반환해 주는 제도이며, 농림축산식품부 국립종자원에서 직접 방문 신청이 가능합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "수수료 납부기한",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled",
+    "lowincome"
+  ],
+  "benefit_raw": "○ 식물신품종 보호법 제50조, 제126조 및 징수규칙에 따라 국가유공자, 장애인, 기초생활수급자 등에게 수수료를 면제",
+  "category": "care",
+  "contact_raw": "국립종자원 품종보호과/054-912-0113",
+  "content_hash": "sha256:5da7bb1476a94f6f0d0bc9cec1d493a4",
+  "criteria_raw": "○ 식물신품종 보호법에 따른 품종보호료 및 수수료 징수규칙 제6조(품종보호료의 면제 및 반환)에 따라 해당하는 자",
+  "deferred_detail": false,
+  "documents_raw": [
+    "○ 제출서류",
+    "면제 신청서(식물신품종 보호법에 따른 품종보호료 및 수수료 징수규칙 별지 제2호 서식)",
+    "면제 대상임을 증명하는 서류",
+    "대리권을 증명하는 서류(대리인을 통하여 제출하는 경우만 해당)"
+  ],
+  "first_published": "2026-11-21",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-SD0000015789",
+  "is_mock": false,
+  "last_checked": "2026-11-21",
+  "last_updated": "2026-11-21",
+  "law_raw": "",
+  "name": "식물 품종보호 수수료의 면제 및 반환",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=745030&bnefType=all&svcId=SD0000015789",
+  "org": "농림축산식품부",
+  "primary_audience": "lowincome",
+  "receiver_raw": "농림축산식품부 국립종자원",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "식물-품종보호-수수료의-면제-및-반환",
+  "source": "bojo24",
+  "source_category_raw": "농림축산어업 현금(감면) 개인",
+  "source_id": "SD0000015789",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 국민기초생활보장법에 따른 수급권자\n\n○ 식물신품종 보호법에 따른 품종보호료 및 수수료 징수 규칙 제6조에 따른 자격\n- 국가유공자 및 유족 또는 가족\n- 5.18민주유공자 및 유족 또는 가족\n- 고엽제 후유증 환자, 고엽제 후유의증 환자 및 3세 환자\n- 특수임무유공자, 유족 또는 가족\n- 독립유공자, 유족 또는 가족\n- 참전 유공자\n- 장애인(장애인복지법에 따른 등록)",
+  "view_count": 2631
+}

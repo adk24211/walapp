@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "전국규모대회에서 입상한 장애 학생 선수",
+      "해당 대회가 체육회 또는 경기단체가 주관한 경우",
+      "현재 재학 중인 교육기관에 소속된 경우"
+    ],
+    "faq": [
+      {
+        "a": "선정 후 재학 중인 교육기관별로 차등 지급됩니다.",
+        "q": "지원금은 언제 지급되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "국민체육진흥공단 체육인복지팀을 직접 방문하여 신청합니다. 경기실적증명서 등 공고문에 명시된 서류를 제출하면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "문화체육관광부가 마련한 장애 체육인 장학금 지원은 전국규모대회에서 입상한 장애 학생 선수를 대상으로, 1인당 최대 200만원을 재학 중인 교육기관에 차등 지급하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "모집공고 시 제공",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled"
+  ],
+  "benefit_raw": "우수한 장애 학생 선수 대상 1인당 최대 200만원 범위 내 장학금 1회 지원(재학 중인 교육기관별 차등 지급)",
+  "category": "education",
+  "contact_raw": "국민체육진흥공단 체육인복지팀/02-410-1623",
+  "content_hash": "sha256:04d150296f50215709712124664a632c",
+  "criteria_raw": "예산 범위 내 실적 평가 결과에 따라 선정",
+  "deferred_detail": false,
+  "documents_raw": [
+    "경기실적증명서 등 공고문에 명시된 서류"
+  ],
+  "first_published": "2026-11-21",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-137100000035",
+  "is_mock": false,
+  "last_checked": "2026-11-21",
+  "last_updated": "2026-11-21",
+  "law_raw": "",
+  "name": "장애 체육인 장학금 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=87020&bnefType=all&svcId=137100000035",
+  "org": "문화체육관광부",
+  "primary_audience": "disabled",
+  "receiver_raw": "국민체육진흥공단 체육인복지팀",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "장애-체육인-장학금-지원",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 현금(장학금) 개인",
+  "source_id": "137100000035",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "체육회 또는 경기단체가 주관하는 전국규모대회에서 입상한 장애 학생 선수",
+  "view_count": 2569
+}

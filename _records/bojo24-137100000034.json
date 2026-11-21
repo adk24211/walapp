@@ -1,0 +1,69 @@
+{
+  "_prose": {
+    "eligibility": [
+      "전·현직 장애 국가대표 선수 또는 지도자이어야 합니다.",
+      "국민기초생활법에 따른 수급자이거나 차상위계층 등 경제적으로 어려운 사람이어야 합니다.",
+      "지원 대상 규정에 부합하는지 확인해야 합니다."
+    ],
+    "faq": [
+      {
+        "a": "선정 후 매월 50만원씩 12개월 동안 지급됩니다.",
+        "q": "지원금은 언제부터 지급되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "지원은 방문 신청으로 진행됩니다. 필요한 서류는 체육인 복지 지원사업 시행지침 운영규정 별지 22호 서식 등 공고문에 명시된 서류를 지참하셔야 합니다. 방문하실 때 국민체육진흥공단 체육인복지팀에 신청하시면 됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "문화체육관광부가 마련한 장애 국가대표 선수·지도자 대상 생활지원금으로, 국민기초생활법 수급자 등 경제적으로 어려운 분들에게 월 50만원을 12개월간 지원합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "모집공고 시 제공",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled",
+    "lowincome"
+  ],
+  "benefit_raw": "장애 국가대표 선수, 지도자 중 경제적으로 어려운 자(국민기초생활법에 따른 수급자, 차상위계층 등)에게 월 50만원씩 12개월 지급",
+  "category": "living",
+  "contact_raw": "국민체육진흥공단 체육인복지팀/02-410-1624",
+  "content_hash": "sha256:87c6ddb270e1529709ee8aae19502687",
+  "criteria_raw": "예산 범위 내에서 규정 요건에 적합한 사람 중 소득 수준이 낮은 순으로 선정",
+  "deferred_detail": false,
+  "documents_raw": [
+    "체육인 복지 지원사업 시행지침 운영규정 별지 22호 서식 등 공고문 내 명시된 필요 서류"
+  ],
+  "first_published": "2026-11-21",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-137100000034",
+  "is_mock": false,
+  "last_checked": "2026-11-21",
+  "last_updated": "2026-11-21",
+  "law_raw": "",
+  "name": "장애 체육인 생활지원금 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999120&bnefType=all&svcId=137100000034",
+  "org": "문화체육관광부",
+  "primary_audience": "lowincome",
+  "receiver_raw": "국민체육진흥공단 체육인복지팀",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "장애-체육인-생활지원금-지원",
+  "source": "bojo24",
+  "source_category_raw": "문화·환경 현금 개인",
+  "source_id": "137100000034",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "전·현직 장애 국가대표 선수, 지도자 중 에 따른 수급자 등 경제적으로 어려운 자",
+  "view_count": 2657
+}

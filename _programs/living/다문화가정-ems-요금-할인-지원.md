@@ -8,12 +8,12 @@ audiences:
   - newlywed
   - multicultural
 primary_audience: multicultural
-view_count: 16788
+view_count: 17161
 region_scope: national
 region_label: "전국"
 org: "과학기술정보통신부"
-summary: "다문화가정 EMS 요금 할인 지원은 내국인과 결혼한 다문화 가족이 국제 특급(EMS) 우편물을 발송할 경우, 2025년 현재 요금을 10% 감액받을 수 있도록 제공되는 제도이며, 별도 신청 없이 상시 접수됩니다."
-description: "다문화가정 EMS 요금 할인 지원은 내국인과 결혼한 다문화 가족이 국제 특급(EMS) 우편물을 발송할 경우, 2025년 현재 요금을 10% 감액받을 수 있도록 제공되는 제도이며, 별도 신청 없이 상시 접수됩니다."
+summary: "다문화가정이 국제 특급(EMS) 우편물을 보낼 때 요금이 10% 감액되는 지원 제도입니다."
+description: "다문화가정이 국제 특급(EMS) 우편물을 보낼 때 요금이 10% 감액되는 지원 제도입니다."
 seo:
   type: WebPage
 status: active
@@ -22,14 +22,14 @@ apply_always: true
 receiver: "국제사업과"
 apply_methods: ["별도 신청 불필요"]
 apply_not_needed: true
-official_url: "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/171000000008"
+official_url: "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=581554&bnefType=all&svcId=171000000008"
 first_published: "2026-08-19"
-last_updated: "2026-08-22"
-last_checked: "2026-08-22"
+last_updated: "2026-11-21"
+last_checked: "2026-11-21"
 date: "2026-08-19"
-last_modified_at: "2026-08-22"
-revision: 1
-own_chars: 361
+last_modified_at: "2026-11-21"
+revision: 2
+own_chars: 282
 source_parts: ["신청 기간", "지원 내용", "준비 서류", "지원 대상", "선정 기준", "소관 기관", "지원 지역", "신청 방법", "접수 기관", "문의처"]
 own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 신청하나요"]
 ---
@@ -56,10 +56,10 @@ own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 
   </div>
   <div class="cn-sec-body">
 <ul class="cn cn-check" data-cat="living">
-  <li>내국인과 결혼한 다문화 가족입니다.</li>
-  <li>외국인 등록증에 체류자격 F-6-1, F-6-2, F-6-3이 기재된 자입니다.</li>
-  <li>다문화 가족지원법 제2조 제2호에 따른 결혼이민자 또는 귀화 허가를 받은 자입니다.</li>
-  <li>국적 취득자는 주민등록증 및 가족관계증명서 등으로 확인 가능한 자입니다.</li>
+  <li>내국인과 결혼한 다문화 가족</li>
+  <li>외국인 등록증에 체류자격 F-6-1, F-6-2, F-6-3이 기재된 자</li>
+  <li>다문화 가족지원법 제2조 제2호에 따라 결혼이민자 또는 귀화 허가를 받은 자를 증빙할 수 있는 자</li>
+  <li>국적 취득자는 주민등록증 및 가족관계증명서 등으로 확인 가능한 자</li>
 </ul>
   </div>
 </section>
@@ -76,7 +76,7 @@ own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 
     <span class="cn-step-no">1</span>
     <div class="cn-step-body">
       <h4>신청 절차</h4>
-      <p>다문화가정임을 증명할 수 있는 신분증을 준비하시면 됩니다. 별도 신청 절차가 없으며, 상시 접수됩니다. EMS를 발송하실 때 자동으로 10% 요금이 감액됩니다.</p>
+      <p>별도 신청 절차가 없습니다. 다문화가정임을 증명할 수 있는 신분증을 준비하시면 됩니다. EMS를 발송하실 때 해당 할인 혜택이 자동으로 적용됩니다.</p>
     </div>
   </div>
 </div>
@@ -132,7 +132,7 @@ own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 
 </table>
 </div>
 <div class="cn cn-links" data-cat="living">
-  <a href="https://www.gov.kr/portal/rcvfvrSvc/dtlEx/171000000008" target="_blank" rel="noopener nofollow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external-link"></use></svg> 소관 기관에서 자세히 보기 <span class="cn-link-ext">↗</span></a>
+  <a href="https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=581554&amp;bnefType=all&amp;svcId=171000000008" target="_blank" rel="noopener nofollow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external-link"></use></svg> 소관 기관에서 자세히 보기 <span class="cn-link-ext">↗</span></a>
 </div>
   </div>
 </section>
