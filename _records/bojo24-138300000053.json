@@ -1,0 +1,65 @@
+{
+  "_prose": {
+    "eligibility": [
+      "가정폭력 피해자와 동반아동이 대상입니다.",
+      "피해자와 동반아동이 보호시설에 4개월 이상 입소했으며 자립 준비가 필요할 경우",
+      "보호시설 입소 후 주거지원시설로 연계되어 입주한 뒤 퇴거 시 자립계획에 따라 지원금이 필요할 경우",
+      "보호시설 입소기간을 합산해 총 4개월이 되는 경우(단, 직전 퇴소일과 재입소일 간 간격이 15일 미만)"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "지자체 가정폭력 담당부서에 직접 방문합니다. 자립지원금 신청서와 구비 서류를 제출합니다. 제출 후 담당자가 심사하여 지원금을 지급합니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "가정폭력 피해자와 동반아동이 보호시설 퇴소 시 자립을 돕기 위해 피해자에게 500만원, 동반아동에게 250만원을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "가정폭력 피해자 보호시설 퇴소 시 자립지원금 지급 (피해자 500만원, 동반아동 250만원)",
+  "category": "care",
+  "contact_raw": "지자체 가정폭력 담당부서/120",
+  "content_hash": "sha256:6f0245fa677e2e1bf439f62c11964ec5",
+  "criteria_raw": "o 요건\n- 피해자 및 동반아동의 입소기간이 4개월 이상(원칙)이고 자립을 위한 준비가 필요한 경우\n- 가정폭력피해자가 보호시설 4개월 이상 입소 이후 주거지원시설로 연계된 주거지원 입주자가 퇴거 시 자립계획에 따른 자립지원금이 필요한 경우\n- 보호시설의 입소기간을 합쳐서 4개월이 되는 경우 (단, 직전 보호시설 퇴소일과 재입소일 간의 간격이 15일 미만)",
+  "deferred_detail": false,
+  "documents_raw": [
+    "자립지원금 신청서",
+    "보호시설 퇴소 및 주거지원 퇴거 후 사후관리 동의 여부 등"
+  ],
+  "first_published": "2026-11-22",
+  "how_to_raw": "방문신청\n직접입력",
+  "id": "bojo24-138300000053",
+  "is_mock": false,
+  "last_checked": "2026-11-22",
+  "last_updated": "2026-11-22",
+  "law_raw": "",
+  "name": "가정폭력 피해자 보호시설 퇴소자 자립지원금",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2147817&bnefType=all&svcId=138300000053",
+  "org": "성평등가족부",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "가정폭력-피해자-보호시설-퇴소자-자립지원금",
+  "source": "bojo24",
+  "source_category_raw": "주거·자립 현금 개인",
+  "source_id": "138300000053",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "o 요건\n- 피해자 및 동반아동의 입소기간이 4개월 이상(원칙)이고 자립을 위한 준비가 필요한 경우\n- 가정폭력 피해자가 보호시설 4개월 이상 입소 이후 주거지원시설로 연계된 주거지원 입주자가 퇴거 시 자립계획에 따른 자립지원금이 필요한 경우\n- 보호시설의 입소기간을 합쳐서 4개월이 되는 경우 (단, 직전 보호시설 퇴소일과 재입소일 간의 간격이 15일 미만)",
+  "view_count": 1606
+}

@@ -1,0 +1,64 @@
+{
+  "_prose": {
+    "eligibility": [
+      "전국대회에서 3위 이내에 입상한 사람",
+      "세종시에 거주하거나 재학 중인 초·중·고·대학생",
+      "위 두 조건을 모두 만족하는 경우 신청 가능"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인 신청 페이지에서 신청서를 작성합니다. 신청 시 홈페이지에 공고된 서류를 확인하여 제출합니다. 제출 후 별도의 안내가 제공됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "특기적성 장학금은 세종시에 거주하거나 재학 중인 초·중·고·대학생 중 전국대회에서 3위 이내에 입상한 경우 1인당 100만원을 지원하는 장학금이며, 신청은 온라인으로 진행되고 필요한 서류는 홈페이지 공고문을 통해 확인할 수 있습니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "상,하반기 각 1회",
+    "start": ""
+  },
+  "apply_url": "www.sjhle.or.kr",
+  "audiences": [
+    "youth",
+    "student"
+  ],
+  "benefit_raw": "세종시 거주 전국대회 3위 이상 입상자(초,중,고,대) 대상 1인당 100만원 장학금 지급",
+  "category": "education",
+  "contact_raw": "인재개발팀/044-865-9685",
+  "content_hash": "sha256:e8d88eb25bf8a0c6d463766586bfacb3",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "홈페이지 공고문 참고"
+  ],
+  "first_published": "2026-11-22",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-O00088400009",
+  "is_mock": false,
+  "last_checked": "2026-11-22",
+  "last_updated": "2026-11-22",
+  "law_raw": "",
+  "name": "특기적성 장학금",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000439&bnefType=all&svcId=O00088400009",
+  "org": "재단법인세종특별자치시인재육성평생교육진흥원",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "특기적성-장학금",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금(장학금) 개인",
+  "source_id": "O00088400009",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "전국대회 3위이내 입상자 중 세종시 초·중·고·대학생(거주 또는 재학)",
+  "view_count": 760
+}

@@ -8,12 +8,12 @@ audiences:
   - disabled
   - lowincome
 primary_audience: lowincome
-view_count: 11360
+view_count: 12114
 region_scope: national
 region_label: "전국"
 org: "질병관리청"
-summary: "HPV 국가예방접종사업은 12세 남성·청소년, 12~17세 여성 청소년, 그리고 18~26세 저소득층 여성을 대상으로 HPV 4가 백신(가다실) 예방접종비를 전액 지원하는 제도입니다."
-description: "HPV 국가예방접종사업은 12세 남성·청소년, 12~17세 여성 청소년, 그리고 18~26세 저소득층 여성을 대상으로 HPV 4가 백신(가다실) 예방접종비를 전액 지원하는 제도입니다."
+summary: "HPV 국가예방접종사업은 12세 남성·청소년, 12~17세 여성 청소년, 그리고 18~26세 저소득층 여성을 대상으로 가다실 4가 백신을 전액 지원하는 제도입니다."
+description: "HPV 국가예방접종사업은 12세 남성·청소년, 12~17세 여성 청소년, 그리고 18~26세 저소득층 여성을 대상으로 가다실 4가 백신을 전액 지원하는 제도입니다."
 seo:
   type: WebPage
 status: active
@@ -21,16 +21,16 @@ status_label: "시행중"
 apply_always: true
 apply_methods: ["별도 신청 불필요"]
 apply_not_needed: true
-official_url: "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/179038700004"
+official_url: "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2103203&bnefType=all&svcId=179038700004"
 first_published: "2026-10-02"
-last_updated: "2026-10-02"
-last_checked: "2026-10-02"
+last_updated: "2026-11-22"
+last_checked: "2026-11-22"
 date: "2026-10-02"
-last_modified_at: "2026-10-02"
-revision: 0
-own_chars: 670
+last_modified_at: "2026-11-22"
+revision: 1
+own_chars: 570
 source_parts: ["신청 기간", "지원 내용", "준비 서류", "지원 대상", "선정 기준", "소관 기관", "지원 지역", "신청 방법", "문의처"]
-own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 신청하나요", "자주 묻는 질문"]
+own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 신청하나요"]
 ---
 
 <section class="cn-sec" data-cat="health">
@@ -65,12 +65,13 @@ own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 
   </div>
   <div class="cn-sec-body">
 <ul class="cn cn-check" data-cat="health">
-  <li>주민등록상 생년월일이 2014년인 남성 청소년(12세)입니다.</li>
-  <li>주민등록상 생년월일이 2008년 1월 1일부터 2014년 12월 31일 사이인 여성 청소년입니다.</li>
-  <li>주민등록상 생년월일이 1999년 1월 1일부터 2007년 12월 31일 사이인 저소득층 여성입니다.</li>
-  <li>저소득층은 국민기초생활보장법상 기초생활보장수급자 및 차상위계층(기준중위소득 50% 이하)입니다.</li>
-  <li>12세에서 17세 사이의 여성 청소년이 지원 대상입니다.</li>
-  <li>18세에서 26세 사이의 저소득층 여성이 지원 대상입니다.</li>
+  <li>주민등록상 생년월일이 2014년 1월 1일부터 2014년 12월 31일 사이인 남성 청소년</li>
+  <li>주민등록상 생년월일이 2008년 1월 1일부터 2014년 12월 31일 사이인 여성 청소년</li>
+  <li>주민등록상 생년월일이 1999년 1월 1일부터 2007년 12월 31일 사이이며 국민기초생활보장법상 기초생활보장수급자 또는 차상위계층인 여성</li>
+  <li>12세 남성 청소년(2026년 5월 6일 시행, 2014년생)</li>
+  <li>12세에서 17세 사이의 여성 청소년</li>
+  <li>18세에서 26세 사이의 저소득층 여성</li>
+  <li>신분증을 소지하고 있어야 하며, 저소득층 여성은 접종 당일 기초생활보장·차상위계층 확인 서류가 필요</li>
 </ul>
   </div>
 </section>
@@ -86,22 +87,8 @@ own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 
   <div class="cn-step">
     <span class="cn-step-no">1</span>
     <div class="cn-step-body">
-      <h4>신청 방법</h4>
-      <p>별도 신청 절차가 없으며, 접수는 상시 진행됩니다. 지원 대상자는 주민등록상 생년월일을 기준으로 자동 확인됩니다.</p>
-    </div>
-  </div>
-  <div class="cn-step">
-    <span class="cn-step-no">2</span>
-    <div class="cn-step-body">
-      <h4>준비 서류</h4>
-      <p>신분증(주민등록증 등)을 지참해야 합니다. 18세~26세 저소득층 여성은 접종 당일에 기초생활보장수급자 및 차상위계층 자격 확인 서류를 추가로 제출해야 합니다.</p>
-    </div>
-  </div>
-  <div class="cn-step">
-    <span class="cn-step-no">3</span>
-    <div class="cn-step-body">
-      <h4>접종 및 상담</h4>
-      <p>첫 접종 연령이 14세 이전이면 총 2회, 15세 이후이면 총 3회 예방접종을 받게 됩니다. 12세 여성 청소년은 사춘기 성장발달 관련 건강상담을 추가로 지원받을 수 있습니다.</p>
+      <h4>신청 및 접종 절차</h4>
+      <p>별도 신청 없이 상시 접수됩니다. 접종을 원하는 경우 지정 접종기관에 신분증을 제시하면 됩니다. 저소득층 여성은 접종 당일 기초생활보장·차상위계층 확인 서류를 함께 제출해야 합니다.</p>
     </div>
   </div>
 </div>
@@ -173,27 +160,13 @@ own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 
 </table>
 </div>
 <div class="cn cn-links" data-cat="health">
-  <a href="https://www.gov.kr/portal/rcvfvrSvc/dtlEx/179038700004" target="_blank" rel="noopener nofollow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external-link"></use></svg> 소관 기관에서 자세히 보기 <span class="cn-link-ext">↗</span></a>
+  <a href="https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2103203&amp;bnefType=all&amp;svcId=179038700004" target="_blank" rel="noopener nofollow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external-link"></use></svg> 소관 기관에서 자세히 보기 <span class="cn-link-ext">↗</span></a>
 </div>
   </div>
 </section>
 
-<section class="cn-sec" data-cat="health">
-  <div class="cn-sec-head">
-    <span class="cn-sec-no">06</span>
-    <h2 class="cn-h">자주 묻는 질문</h2>
-    <span class="cn-sec-tag is-prose">본 사이트가 쓴 문장</span>
-  </div>
-  <div class="cn-sec-body">
-<div class="cn cn-faq" data-cat="health">
-  <details>
-    <summary>지원되는 백신은 무엇인가요?</summary>
-    <div class="cn-faq-body">지원되는 백신은 HPV 4가 백신(가다실)입니다.</div>
-  </details>
+<div class="cn cn-note" data-cat="health">
+  <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-alert-triangle"></use></svg>
+  <p>지원 대상은 국민기초생활보장법에 따른 기초생활보장수급자 및 차상위계층(중위소득 50% 이하)으로 제한됩니다.</p>
 </div>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "지원되는 백신은 무엇인가요?", "acceptedAnswer": {"@type": "Answer", "text": "지원되는 백신은 HPV 4가 백신(가다실)입니다."}}]}
-</script>
-  </div>
-</section>
 

@@ -1,19 +1,19 @@
 {
   "_prose": {
     "eligibility": [
-      "달성군에 등록기준지 및 주소지를 2년 이상 두고 있는 군민이거나 그 자녀여야 합니다.",
-      "전국대회에서 3위 이내에 입상했거나 시도대회에서 1위에 입상한 초·중·고학생이어야 합니다.",
-      "예체능·기능 특기생으로서 위 입상 실적이 있는 경우에 지원 가능합니다."
+      "달성군에 등록기준지와 주소지를 2년 이상 두고 있는 군민",
+      "전국단위 대회에서 3위 이내 입상한 초중고학생",
+      "시도대회에서 1위 입상한 초중고학생"
     ],
     "faq": [],
-    "note": "선정 기준이 별도로 제시되지 않았습니다.",
+    "note": "선정 기준이 별도로 명시되어 있지 않으니, 지원 여부는 서류 심사 결과에 따라 결정됩니다.",
     "steps": [
       {
-        "body": "지원자는 직접 방문하여 장학금 신청서를 제출합니다. 구비 서류를 함께 제출하셔야 합니다.",
+        "body": "관할 기관을 직접 방문하여 신청서를 제출합니다. 구비 서류를 모두 지참하시기 바랍니다.",
         "title": "방문 신청"
       }
     ],
-    "summary": "달성군 주민 및 그 자녀 중 예체능·기능 특기생으로, 전국대회 3위 이내 또는 시도대회 1위 입상자를 대상으로 50만원 장학금을 지원하는 제도입니다."
+    "summary": "달성군에 2년 이상 거주하거나 그 자녀이며, 전국·시도 대회에서 입상한 초중고학생을 대상으로 예체능·기능특기 장학생에게 50만원을 지원하는 장학금 제도입니다."
   },
   "apply_period": {
     "always": false,
@@ -28,7 +28,7 @@
   "benefit_raw": "○ 예체기능 특기생에게 장학금 지급(50만원)",
   "category": "education",
   "contact_raw": "달성교육재단/053-644-9687",
-  "content_hash": "sha256:999e9efa1d5a6a98cf46a240c8c634c6",
+  "content_hash": "sha256:184c4d32fa42685f8e0e01419f1101d7",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -65,11 +65,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-348000000350",
   "is_mock": false,
-  "last_checked": "2026-09-13",
-  "last_updated": "2026-09-13",
+  "last_checked": "2026-11-22",
+  "last_updated": "2026-11-22",
   "law_raw": "",
   "name": "달성 장학금(예·체·기능특기)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/348000000350",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002305&bnefType=all&svcId=348000000350",
   "org": "(재)달성교육재단",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -78,7 +78,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "달성-장학금-예-체-기능특기",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -86,5 +86,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 공고일 기준 달성군에 등록기준지 및 주소지를 2년이상 두고 있는 군민 또는 그의 자녀\n- 전국단위 대회 3위 이내 입상, 시도대회 1위 입상자(초중고학생) 중 선발하여 지원",
-  "view_count": 1328
+  "view_count": 1419
 }
