@@ -1,0 +1,62 @@
+{
+  "_prose": {
+    "eligibility": [
+      "청각·언어장애인",
+      "장애 여부(장애가 있어야 함)"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "한국지능정보화사회진흥원 손말이음센터(107) 홈페이지에서 온라인으로 신청합니다. 별도의 구비 서류는 필요하지 않으며, 신청은 상시 접수됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "통신중계 서비스 제공은 청각·언어장애인 및 이와 통화를 원하는 국민에게 365일 24시간 수어(영상)와 문자 중계 서비스를 온라인으로 신청해 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "연중",
+    "start": ""
+  },
+  "apply_url": "http://107.kr",
+  "audiences": [
+    "disabled"
+  ],
+  "benefit_raw": "○ 지원기간 : 연중 무휴(365일 24시간)\n\n○ 지원내용 : 수어(영상)중계서비스, 문자중계서비스",
+  "category": "living",
+  "contact_raw": "한국지능정보사회진흥원/1588-2670\n손말이음센터/107",
+  "content_hash": "sha256:cbac38a8a15a9d5b92427b34df10dd1c",
+  "criteria_raw": "○ 장애 여부",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-23",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-WII000001190",
+  "is_mock": false,
+  "last_checked": "2026-11-23",
+  "last_updated": "2026-11-23",
+  "law_raw": "",
+  "name": "통신중계 서비스 제공",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=751555&bnefType=all&svcId=WII000001190",
+  "org": "과학기술정보통신부",
+  "primary_audience": "disabled",
+  "receiver_raw": "한국지능정보화사회진흥원(107 손말이음센터)",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "통신중계-서비스-제공",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타 개인",
+  "source_id": "WII000001190",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 청각․언어장애인, 청각․언어장애인과 통화를 원하는 국민",
+  "view_count": 2462
+}

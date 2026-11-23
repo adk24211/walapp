@@ -1,24 +1,28 @@
 {
   "_prose": {
     "eligibility": [
-      "안산에 거주하고 있습니다.",
-      "학생(초·중·고·대학생) 신분이어야 합니다.",
-      "가족이 4대 이상이 함께 거주하고 있어야 합니다."
+      "안산에 4대 이상이 함께 거주하는 초·중·고·대학생이어야 합니다.",
+      "지원 대상은 초등학생, 중학생, 고등학생 및 대학생으로 제한됩니다.",
+      "선정 기준은 별도로 제시되지 않았습니다."
     ],
     "faq": [
       {
-        "a": "학생 및 해당 4대 가족의 주민등록등본·가족관계증명서 등을 제출하면 확인할 수 있습니다.",
-        "q": "가족이 4대 이상인지 어떻게 증명하나요?"
+        "a": "초본은 신청자와 해당 4대 가족의 주민등록 초본을 말하며, 주소변동 이력이 포함된 3년 이상 지속 또는 합산 10년 이상 거주 여부를 확인할 수 있습니다.",
+        "q": "초본은 어떤 서류를 의미하나요?"
       }
     ],
-    "note": "제출 서류는 최신 자료여야 합니다.",
+    "note": "",
     "steps": [
       {
-        "body": "온라인으로 신청하거나 직접 방문하여 신청할 수 있습니다. 필요한 구비 서류를 모두 제출하면 됩니다.",
+        "body": "온라인으로 신청하려면 안산인재육성재단 홈페이지에서 신청서를 작성하고, 방문 신청을 원할 경우 재단을 직접 방문하여 제출하면 됩니다.",
         "title": "신청 방법"
+      },
+      {
+        "body": "장학생 신청서, 서약서, 개인정보 수집·이용 동의서, 주민등록 등본·초본, 4대 확인 증명서, 본인 통장 사본 등을 온라인 또는 방문 시 함께 제출해야 합니다.",
+        "title": "제출 서류"
       }
     ],
-    "summary": "안산에 4대 이상이 함께 거주하는 초·중·고·대학생에게 50만원을 지원하는 행복이음 장학금입니다."
+    "summary": "안산에 4대 이상이 함께 거주하는 초·중·고·대학생을 대상으로 매년 50만원을 지원하는 행복이음 장학금으로, 교육·역량 향상을 목표로 하며 신청은 온라인 및 방문으로 할 수 있습니다."
   },
   "apply_period": {
     "always": false,
@@ -34,7 +38,7 @@
   "benefit_raw": "○ 4대 이상이 함께 안산에 거주하는 초·중·고·대학생(50만원)",
   "category": "education",
   "contact_raw": "안산인재육성재단/070-4455-4546\n안산인재육성재단/031-414-0924",
-  "content_hash": "sha256:00395311f10f722eeef1cbf5f3ec0e52",
+  "content_hash": "sha256:7c4c1ed0a64237bf6956630d4a830dcb",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -55,11 +59,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-393000000123",
   "is_mock": false,
-  "last_checked": "2026-10-07",
-  "last_updated": "2026-10-07",
+  "last_checked": "2026-11-23",
+  "last_updated": "2026-11-23",
   "law_raw": "",
   "name": "행복이음 장학금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/393000000123",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003803&bnefType=all&svcId=393000000123",
   "org": "재단법인안산인재육성재단",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -68,7 +72,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "행복이음-장학금",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금 개인",
@@ -76,5 +80,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 4대 이상이 함께 안산에 거주하는 학생(초, 중, 고, 대학생)",
-  "view_count": 1541
+  "view_count": 1614
 }

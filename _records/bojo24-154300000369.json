@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "농식품 수출업체는 지원 대상에 포함됩니다.",
+      "일반국민은 지원 대상에 포함됩니다.",
+      "지원 대상과 선정 기준은 농식품 수출업체와 일반국민으로 동일합니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "별도의 신청 절차가 없습니다. 농식품수출정보(KATI) 누리집을 통해 언제든지 정보를 확인하실 수 있습니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "농림축산식품부가 제공하는 농식품 수출 해외정보 제공 제도는 농식품 수출업체와 일반국민에게 해외 시장동향·비관세장벽·수출 통계를 무료로 제공하는 서비스입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "연중",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "'농식품수출정보(KATI)' 누리집 운영을 통해 농식품 해외 시장동향, 비관세장벽 정보 및 수출 통계 제공\nhttp://kati.net",
+  "category": "living",
+  "contact_raw": "aT 수출정보분석부/061-931-0875",
+  "content_hash": "sha256:2df7385bdff17c5c919031b51395ba2f",
+  "criteria_raw": "농식품 수출업체, 일반국민",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-23",
+  "how_to_raw": "신청불필요",
+  "id": "bojo24-154300000369",
+  "is_mock": false,
+  "last_checked": "2026-11-23",
+  "last_updated": "2026-11-23",
+  "law_raw": "",
+  "name": "농식품 수출 해외정보 제공",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=702226&bnefType=all&svcId=154300000369",
+  "org": "농림축산식품부",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "농식품-수출-해외정보-제공",
+  "source": "bojo24",
+  "source_category_raw": "농림축산어업 기타 개인\n가구\n소상공인\n법인/시설/단체",
+  "source_id": "154300000369",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "농식품 수출업체, 일반국민",
+  "view_count": 2607
+}

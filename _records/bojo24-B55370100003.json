@@ -1,0 +1,66 @@
+{
+  "_prose": {
+    "eligibility": [
+      "자영업자 또는 무등록사업자이어야 합니다.",
+      "차상위계층 이하이어야 합니다.",
+      "개인신용평점이 하위 100분의 20 이내이어야 합니다.",
+      "근로장려금 신청자격 요건에 해당해야 합니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "가까운 미소금융지점을 직접 방문하여 신청합니다. 신청 시 별도의 서류는 필요하지 않습니다. 대출 심사는 현장에서 진행됩니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "미소금융 운영자금 지원은 차상위계층 이하의 자영업자·무등록사업자를 대상으로 무담보·무보증으로 최대 2천만원(청년은 최대 3천만원)까지 연 4.5% 내외 금리로 대출해 주는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "youth",
+    "lowincome",
+    "business"
+  ],
+  "benefit_raw": "○ 저소득‧저신용 계층이 사회 경제적으로 자립할 수 있도록 운영자금 등을 무담보‧무보증으로 대출 지원\n- (대출한도) 최대 2천만원*\n* 운영자금(청년)의 경우 예외적으로 최대 3천만원\n- (대출금리) 4.5% 내외\n※ 자세한 사항은 가까운 미소금융지점에 문의 및 신청",
+  "category": "finance",
+  "contact_raw": "서민금융콜센터/1397",
+  "content_hash": "sha256:ce3569d4c9265128bcedb86529c0bf73",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-23",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-B55370100003",
+  "is_mock": false,
+  "last_checked": "2026-11-23",
+  "last_updated": "2026-11-23",
+  "law_raw": "",
+  "name": "미소금융 운영자금 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000600&bnefType=all&svcId=B55370100003",
+  "org": "서민금융진흥원",
+  "primary_audience": "lowincome",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "미소금융-운영자금-지원",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금(융자) 법인/시설/단체",
+  "source_id": "B55370100003",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 아래의 한가지 기준을 충족하는 자영업자 또는 무등록사업자\n- 차상위계층 이하인자\n- 개인신용평점이 하위 100분의 20에 해당하는 자\n- 근로장려금 신청자격 요건에 해당하는 자",
+  "view_count": 2209
+}

@@ -1,18 +1,19 @@
 {
   "_prose": {
     "eligibility": [
-      "경기과학기술대, 안산대, 신안산대, 한국공학대 중 하나에 재학 중인 산업체 노동자",
-      "경기도 내 산업체에 6개월 이상 근무하고 있는 사람"
+      "협약대학(경기과학기술대, 안산대, 신안산대, 한국공학대) 재학 중인 산업체 노동자",
+      "경기도 내 산업체에 6개월 이상 근무한 사람",
+      "34세 이하"
     ],
     "faq": [],
     "note": "",
     "steps": [
       {
-        "body": "지원자는 직접 방문하여 신청합니다. 구비 서류를 모두 준비한 뒤 담당자에게 제출하면 됩니다.",
+        "body": "방문 신청으로, 구비 서류를 제출하면 신청이 완료됩니다.",
         "title": "신청 절차"
       }
     ],
-    "summary": "산업체 노동자를 대상으로 경기과학기술대·안산대·신안산대·한국공학대에 재학 중인 34세 이하 학생에게 연간 200만원 이내 수업료를 지원하는 장학금 제도입니다."
+    "summary": "산업체 노동자를 대상으로 경기과학기술대·안산대·신안산대·한국공학대 등 협약대학에 재학 중이며, 경기도 내 산업체에 6개월 이상 근무하고 34세 이하인 경우 연간 200만원 이내의 수업료를 지원받을 수 있는 장학금 제도입니다."
   },
   "apply_period": {
     "always": false,
@@ -27,7 +28,7 @@
   "benefit_raw": "○ 산업체 위탁교육학과 대학생의 수업료 지원(연간 200만원 이내)\n○ 협약대학에 재학 중인 산업체 노동자 대학생\n*협약대학 : 경기과학기술대, 신안산대, 안산대, 한국공학대\n○ 경기도내 산업체에 6개월 이상 근무자\n○ 34세 이하",
   "category": "care",
   "contact_raw": "안산인재육성재단/031-414-0924",
-  "content_hash": "sha256:308e9f2b6a41cb2cadc16ef545eea61c",
+  "content_hash": "sha256:376e436db360d18bbadcd599ec69da9b",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -52,11 +53,11 @@
   "how_to_raw": "방문신청\n직접입력",
   "id": "bojo24-393000000129",
   "is_mock": false,
-  "last_checked": "2026-10-27",
-  "last_updated": "2026-10-27",
+  "last_checked": "2026-11-23",
+  "last_updated": "2026-11-23",
   "law_raw": "",
   "name": "산업체노동자 장학금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/393000000129",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004048&bnefType=all&svcId=393000000129",
   "org": "재단법인안산인재육성재단",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -65,7 +66,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "산업체노동자-장학금",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -73,5 +74,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 협약대학(경기과기대,안산대, 신안산대, 한국공학대학교) 재학 중인 산업체 노동자 34세 이하",
-  "view_count": 1222
+  "view_count": 1233
 }
