@@ -4,8 +4,56 @@
   <subtitle>정부·지자체 지원금과 복지 제도를 받을 수 있는지부터 신청 방법까지 하나씩 정리합니다. 공공데이터 원문을 토대로 쉬운 말로 풀어 씁니다.</subtitle>
   <link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html"/>
-  <updated>2026-11-22T11:12:37+09:00</updated>
+  <updated>2026-11-23T11:40:33+09:00</updated>
   <id>https://adk24211.github.io/walapp/</id>
+  <entry>
+    <title type="text">통신중계 서비스 제공</title>
+    <link href="https://adk24211.github.io/walapp/support/living/%ED%86%B5%EC%8B%A0%EC%A4%91%EA%B3%84-%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%A0%9C%EA%B3%B5/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/%ED%86%B5%EC%8B%A0%EC%A4%91%EA%B3%84-%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%A0%9C%EA%B3%B5/</id>
+    <published>2026-11-23T00:00:00+09:00</published>
+    <updated>2026-11-23T00:00:00+09:00</updated><author><name>과학기술정보통신부</name></author><category term="living"/>
+    <summary type="text">통신중계 서비스 제공은 청각·언어장애인 및 이와 통화를 원하는 국민에게 365일 24시간 수어(영상)와 문자 중계 서비스를 온라인으로 신청해 제공하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">농식품 수출 해외정보 제공</title>
+    <link href="https://adk24211.github.io/walapp/support/living/%EB%86%8D%EC%8B%9D%ED%92%88-%EC%88%98%EC%B6%9C-%ED%95%B4%EC%99%B8%EC%A0%95%EB%B3%B4-%EC%A0%9C%EA%B3%B5/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/%EB%86%8D%EC%8B%9D%ED%92%88-%EC%88%98%EC%B6%9C-%ED%95%B4%EC%99%B8%EC%A0%95%EB%B3%B4-%EC%A0%9C%EA%B3%B5/</id>
+    <published>2026-11-23T00:00:00+09:00</published>
+    <updated>2026-11-23T00:00:00+09:00</updated><author><name>농림축산식품부</name></author><category term="living"/>
+    <summary type="text">농림축산식품부가 제공하는 농식품 수출 해외정보 제공 제도는 농식품 수출업체와 일반국민에게 해외 시장동향·비관세장벽·수출 통계를 무료로 제공하는 서비스입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">스타트업 파크</title>
+    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85-%ED%8C%8C%ED%81%AC/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/jobs/%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85-%ED%8C%8C%ED%81%AC/</id>
+    <published>2026-11-23T00:00:00+09:00</published>
+    <updated>2026-11-23T00:00:00+09:00</updated><author><name>중소벤처기업부</name></author><category term="jobs"/>
+    <summary type="text">스타트업 파크는 중소벤처기업부가 추진하는 사업으로, 광역자치단체가 민간과 컨소시엄을 구성해 혁신창업 클러스터를 조성하도록 설계용역비와 건립비를 지원합니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">권역 재활병원 공공재활 프로그램 운영 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/health/%EA%B6%8C%EC%97%AD-%EC%9E%AC%ED%99%9C%EB%B3%91%EC%9B%90-%EA%B3%B5%EA%B3%B5%EC%9E%AC%ED%99%9C-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EC%9A%B4%EC%98%81-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/health/%EA%B6%8C%EC%97%AD-%EC%9E%AC%ED%99%9C%EB%B3%91%EC%9B%90-%EA%B3%B5%EA%B3%B5%EC%9E%AC%ED%99%9C-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EC%9A%B4%EC%98%81-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-11-23T00:00:00+09:00</published>
+    <updated>2026-11-23T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="health"/>
+    <summary type="text">권역 재활병원에서 공공재활 프로그램을 필요로 하는 환자와 지역사회 장애인에게 재활치료·검사·조기 복귀 지원 등을 제공하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">미소금융 운영자금 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/finance/%EB%AF%B8%EC%86%8C%EA%B8%88%EC%9C%B5-%EC%9A%B4%EC%98%81%EC%9E%90%EA%B8%88-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/finance/%EB%AF%B8%EC%86%8C%EA%B8%88%EC%9C%B5-%EC%9A%B4%EC%98%81%EC%9E%90%EA%B8%88-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-11-23T00:00:00+09:00</published>
+    <updated>2026-11-23T00:00:00+09:00</updated><author><name>서민금융진흥원</name></author><category term="finance"/>
+    <summary type="text">미소금융 운영자금 지원은 차상위계층 이하의 자영업자·무등록사업자를 대상으로 무담보·무보증으로 최대 2천만원(청년은 최대 3천만원)까지 연 4.5% 내외 금리로 대출해 주는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">성폭력 피해자 통합지원센터(해바라기센터) 운영 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/care/%EC%84%B1%ED%8F%AD%EB%A0%A5-%ED%94%BC%ED%95%B4%EC%9E%90-%ED%86%B5%ED%95%A9%EC%A7%80%EC%9B%90%EC%84%BC%ED%84%B0-%ED%95%B4%EB%B0%94%EB%9D%BC%EA%B8%B0%EC%84%BC%ED%84%B0-%EC%9A%B4%EC%98%81-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/%EC%84%B1%ED%8F%AD%EB%A0%A5-%ED%94%BC%ED%95%B4%EC%9E%90-%ED%86%B5%ED%95%A9%EC%A7%80%EC%9B%90%EC%84%BC%ED%84%B0-%ED%95%B4%EB%B0%94%EB%9D%BC%EA%B8%B0%EC%84%BC%ED%84%B0-%EC%9A%B4%EC%98%81-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-11-23T00:00:00+09:00</published>
+    <updated>2026-11-23T00:00:00+09:00</updated><author><name>성평등가족부</name></author><category term="care"/>
+    <summary type="text">성폭력·가정폭력·성매매 피해자를 대상으로 365일 24시간 상담·의료·법률·수사 등을 원스톱으로 지원하는 해바라기센터(위기지원형·아동형·통합형) 운영을 지원하는 제도입니다.</summary>
+  </entry>
   <entry>
     <title type="text">특기적성 장학금</title>
     <link href="https://adk24211.github.io/walapp/support/education/%ED%8A%B9%EA%B8%B0%EC%A0%81%EC%84%B1-%EC%9E%A5%ED%95%99%EA%B8%88/" rel="alternate" type="text/html"/>
@@ -197,53 +245,5 @@
     <published>2026-11-17T00:00:00+09:00</published>
     <updated>2026-11-17T00:00:00+09:00</updated><author><name>한국마사회</name></author><category term="living"/>
     <summary type="text">한국마사회 문화센터에서는 장외발매소 인근 주민 및 국가유공자·장애인·국민기초생활수급자·다자녀 부모에게 문화 강좌 수강료를 50% 할인해 주는 서비스를 제공합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">공영주차장 이용요금 감면 안내</title>
-    <link href="https://adk24211.github.io/walapp/support/living/%EA%B3%B5%EC%98%81%EC%A3%BC%EC%B0%A8%EC%9E%A5-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EC%95%88%EB%82%B4/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/living/%EA%B3%B5%EC%98%81%EC%A3%BC%EC%B0%A8%EC%9E%A5-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EC%95%88%EB%82%B4/</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated><author><name>이천시시설관리공단</name></author><category term="living"/>
-    <summary type="text">이천시시설관리공단이 운영하는 공영주차장에서 지정된 자격을 갖춘 이용자는 주차요금을 전액 또는 일부 감면받을 수 있는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">생활발명 발굴 지원(생활발명 코리아)</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%83%9D%ED%99%9C%EB%B0%9C%EB%AA%85-%EB%B0%9C%EA%B5%B4-%EC%A7%80%EC%9B%90-%EC%83%9D%ED%99%9C%EB%B0%9C%EB%AA%85-%EC%BD%94%EB%A6%AC%EC%95%84/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EC%83%9D%ED%99%9C%EB%B0%9C%EB%AA%85-%EB%B0%9C%EA%B5%B4-%EC%A7%80%EC%9B%90-%EC%83%9D%ED%99%9C%EB%B0%9C%EB%AA%85-%EC%BD%94%EB%A6%AC%EC%95%84/</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated><author><name>지식재산처</name></author><category term="jobs"/>
-    <summary type="text">생활발명 코리아는 대한민국 여성의 발명 아이디어를 멘토링·특허출원 등으로 지원하여 창업을 돕는 사업입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">사회복지시설 급식관리 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/health/%EC%82%AC%ED%9A%8C%EB%B3%B5%EC%A7%80%EC%8B%9C%EC%84%A4-%EA%B8%89%EC%8B%9D%EA%B4%80%EB%A6%AC-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/health/%EC%82%AC%ED%9A%8C%EB%B3%B5%EC%A7%80%EC%8B%9C%EC%84%A4-%EA%B8%89%EC%8B%9D%EA%B4%80%EB%A6%AC-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated><author><name>식품의약품안전처</name></author><category term="health"/>
-    <summary type="text">사회복지시설 급식관리 지원은 노인·장애인에게 단체급식을 제공하는 50인 미만 소규모 급식소에 맞춤형 영양관리 카드, 위생·안전 컨설팅, 식단·레시피 제공 및 교육 프로그램을 지원하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">국유재산 사용부담 완화를 위한 사용료 경감 지원(2026.12.31 )</title>
-    <link href="https://adk24211.github.io/walapp/support/finance/%EA%B5%AD%EC%9C%A0%EC%9E%AC%EC%82%B0-%EC%82%AC%EC%9A%A9%EB%B6%80%EB%8B%B4-%EC%99%84%ED%99%94%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%82%AC%EC%9A%A9%EB%A3%8C-%EA%B2%BD%EA%B0%90-%EC%A7%80%EC%9B%90-2026-12-31/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/finance/%EA%B5%AD%EC%9C%A0%EC%9E%AC%EC%82%B0-%EC%82%AC%EC%9A%A9%EB%B6%80%EB%8B%B4-%EC%99%84%ED%99%94%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%82%AC%EC%9A%A9%EB%A3%8C-%EA%B2%BD%EA%B0%90-%EC%A7%80%EC%9B%90-2026-12-31/</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated><author><name>한국자산관리공사</name></author><category term="finance"/>
-    <summary type="text">국유재산을 경영에 사용하는 소상공인 및 중소기업에게 대부료율 경감·납부기한 연장·연체료 경감 등을 지원하는 제도이며, 신청은 방문으로 진행하고 2026년 12월 31일까지 연장됩니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">청소년 성장 지원 서비스</title>
-    <link href="https://adk24211.github.io/walapp/support/care/%EC%B2%AD%EC%86%8C%EB%85%84-%EC%84%B1%EC%9E%A5-%EC%A7%80%EC%9B%90-%EC%84%9C%EB%B9%84%EC%8A%A4/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/care/%EC%B2%AD%EC%86%8C%EB%85%84-%EC%84%B1%EC%9E%A5-%EC%A7%80%EC%9B%90-%EC%84%9C%EB%B9%84%EC%8A%A4/</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated><author><name>한국청소년활동진흥원</name></author><category term="care"/>
-    <summary type="text">청소년 성장 지원 서비스는 저소득·한부모·입양·다문화·탈북 등 사회적 배려가 필요한 청소년에게 국립청소년시설에서 청소년활동 체험 기회를 제공하는 지원 사업입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">지역사회기여 장학금</title>
-    <link href="https://adk24211.github.io/walapp/support/education/%EC%A7%80%EC%97%AD%EC%82%AC%ED%9A%8C%EA%B8%B0%EC%97%AC-%EC%9E%A5%ED%95%99%EA%B8%88/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/education/%EC%A7%80%EC%97%AD%EC%82%AC%ED%9A%8C%EA%B8%B0%EC%97%AC-%EC%9E%A5%ED%95%99%EA%B8%88/</id>
-    <published>2026-11-16T00:00:00+09:00</published>
-    <updated>2026-11-16T00:00:00+09:00</updated><author><name>재단법인은평구민장학재단</name></author><category term="education"/>
-    <summary type="text">은평구에 거주하는 대학 재학생·휴학생을 대상으로 정서지원 활동을 수행하며, 최대 200만원을 지원하는 지역사회기여 장학금입니다.</summary>
   </entry>
 </feed>
