@@ -4,8 +4,40 @@
   <subtitle>정부·지자체 지원금과 복지 제도를 받을 수 있는지부터 신청 방법까지 하나씩 정리합니다. 공공데이터 원문을 토대로 쉬운 말로 풀어 씁니다.</subtitle>
   <link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html"/>
-  <updated>2026-11-23T11:40:33+09:00</updated>
+  <updated>2026-11-24T15:02:16+09:00</updated>
   <id>https://adk24211.github.io/walapp/</id>
+  <entry>
+    <title type="text">체육시설 사용 이용료 감면</title>
+    <link href="https://adk24211.github.io/walapp/support/living/%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%EC%82%AC%EC%9A%A9-%EC%9D%B4%EC%9A%A9%EB%A3%8C-%EA%B0%90%EB%A9%B4/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%EC%82%AC%EC%9A%A9-%EC%9D%B4%EC%9A%A9%EB%A3%8C-%EA%B0%90%EB%A9%B4/</id>
+    <published>2026-11-24T00:00:00+09:00</published>
+    <updated>2026-11-24T00:00:00+09:00</updated><author><name>김포도시관리공사</name></author><category term="living"/>
+    <summary type="text">김포시에서 체육시설 이용료를 일정 비율 감면해 주는 제도이며, 대상자는 국가보훈대상자·노인·장애인·기초생활수급자·청소년·어린이·다자녀·한부모·병역명문가·의사상자·등록포로·장기복무 제대군인·장기등·인체조직기증자·그린카드 소지자 등입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">공익발전기여 장학금</title>
+    <link href="https://adk24211.github.io/walapp/support/education/%EA%B3%B5%EC%9D%B5%EB%B0%9C%EC%A0%84%EA%B8%B0%EC%97%AC-%EC%9E%A5%ED%95%99%EA%B8%88/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/education/%EA%B3%B5%EC%9D%B5%EB%B0%9C%EC%A0%84%EA%B8%B0%EC%97%AC-%EC%9E%A5%ED%95%99%EA%B8%88/</id>
+    <published>2026-11-24T00:00:00+09:00</published>
+    <updated>2026-11-24T00:00:00+09:00</updated><author><name>재단법인세종특별자치시인재육성평생교육진흥원</name></author><category term="education"/>
+    <summary type="text">공익발전기여 장학금은 국가유공자·의사상자 본인 및 자녀로서 세종시에 거주하거나 재학 중인 중·고·대학생에게 학년별로 60만원에서 100만원까지 지원하는 교육·역량 분야 장학금입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">청소년 미디어 과의존 예방 및 치유를 위한 보호자 교육</title>
+    <link href="https://adk24211.github.io/walapp/support/care/%EC%B2%AD%EC%86%8C%EB%85%84-%EB%AF%B8%EB%94%94%EC%96%B4-%EA%B3%BC%EC%9D%98%EC%A1%B4-%EC%98%88%EB%B0%A9-%EB%B0%8F-%EC%B9%98%EC%9C%A0%EB%A5%BC-%EC%9C%84%ED%95%9C-%EB%B3%B4%ED%98%B8%EC%9E%90-%EA%B5%90%EC%9C%A1/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/%EC%B2%AD%EC%86%8C%EB%85%84-%EB%AF%B8%EB%94%94%EC%96%B4-%EA%B3%BC%EC%9D%98%EC%A1%B4-%EC%98%88%EB%B0%A9-%EB%B0%8F-%EC%B9%98%EC%9C%A0%EB%A5%BC-%EC%9C%84%ED%95%9C-%EB%B3%B4%ED%98%B8%EC%9E%90-%EA%B5%90%EC%9C%A1/</id>
+    <published>2026-11-24T00:00:00+09:00</published>
+    <updated>2026-11-24T00:00:00+09:00</updated><author><name>한국청소년상담복지개발원</name></author><category term="care"/>
+    <summary type="text">청소년 미디어 과의존 예방과 치유를 위해 보호자를 대상으로 하는 교육 프로그램이며, 연중 상시 각 지역 청소년상담복지센터에서 진행됩니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">곡성군 장학·격려사업</title>
+    <link href="https://adk24211.github.io/walapp/support/care/%EA%B3%A1%EC%84%B1%EA%B5%B0-%EC%9E%A5%ED%95%99-%EA%B2%A9%EB%A0%A4%EC%82%AC%EC%97%85/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/care/%EA%B3%A1%EC%84%B1%EA%B5%B0-%EC%9E%A5%ED%95%99-%EA%B2%A9%EB%A0%A4%EC%82%AC%EC%97%85/</id>
+    <published>2026-11-24T00:00:00+09:00</published>
+    <updated>2026-11-24T00:00:00+09:00</updated><author><name>재단법인곡성군미래교육재단</name></author><category term="care"/>
+    <summary type="text">곡성군 장학·격려사업은 곡성군민을 대상으로 대학생 장학금과 예술·체육·기능 분야 격려금을 지원하는 제도입니다.</summary>
+  </entry>
   <entry>
     <title type="text">통신중계 서비스 제공</title>
     <link href="https://adk24211.github.io/walapp/support/living/%ED%86%B5%EC%8B%A0%EC%A4%91%EA%B3%84-%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%A0%9C%EA%B3%B5/" rel="alternate" type="text/html"/>
@@ -213,37 +245,5 @@
     <published>2026-11-19T00:00:00+09:00</published>
     <updated>2026-11-19T00:00:00+09:00</updated><author><name>해양수산부</name></author><category term="finance"/>
     <summary type="text">양식수산물재해보험 보험료 지원은 양식어업인 및 양식업 관련 법인이 보험료의 50%와 운영사업비 전액을 지원받는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">체육시설 이용요금 감면(국민체육센터)</title>
-    <link href="https://adk24211.github.io/walapp/support/living/%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EA%B5%AD%EB%AF%BC%EC%B2%B4%EC%9C%A1%EC%84%BC%ED%84%B0/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/living/%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4-%EA%B5%AD%EB%AF%BC%EC%B2%B4%EC%9C%A1%EC%84%BC%ED%84%B0/</id>
-    <published>2026-11-18T00:00:00+09:00</published>
-    <updated>2026-11-18T00:00:00+09:00</updated><author><name>시흥도시공사</name></author><category term="living"/>
-    <summary type="text">시흥시 국민체육센터 이용요금 감면 제도는 행사·경기·훈련 등 지정된 경우 전액 또는 일정 비율을 감면해 주는 지원입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">팁스</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%ED%8C%81%EC%8A%A4/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%ED%8C%81%EC%8A%A4/</id>
-    <published>2026-11-18T00:00:00+09:00</published>
-    <updated>2026-11-18T00:00:00+09:00</updated><author><name>창업진흥원</name></author><category term="jobs"/>
-    <summary type="text">팁스는 창업진흥원이 운영하는 일자리·창업 지원 제도로, 창업 초기 기업에게 투자·보육·추천을 연계해 정부 R&amp;D·사업화 자금을 매칭 지원합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">청년일자리도약장려금</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%B2%AD%EB%85%84%EC%9D%BC%EC%9E%90%EB%A6%AC%EB%8F%84%EC%95%BD%EC%9E%A5%EB%A0%A4%EA%B8%88/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EC%B2%AD%EB%85%84%EC%9D%BC%EC%9E%90%EB%A6%AC%EB%8F%84%EC%95%BD%EC%9E%A5%EB%A0%A4%EA%B8%88/</id>
-    <published>2026-11-18T00:00:00+09:00</published>
-    <updated>2026-11-18T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
-    <summary type="text">청년일자리도약장려금은 청년을 신규 채용한 중소·중견기업에 최대 720만원을 지원하고, 채용된 청년에게도 2년간 최대 720만원을 추가로 지원하여 청년 일자리 창출을 촉진하는 정부 지원 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">한국마사회 문화센터 수강 서비스</title>
-    <link href="https://adk24211.github.io/walapp/support/living/%ED%95%9C%EA%B5%AD%EB%A7%88%EC%82%AC%ED%9A%8C-%EB%AC%B8%ED%99%94%EC%84%BC%ED%84%B0-%EC%88%98%EA%B0%95-%EC%84%9C%EB%B9%84%EC%8A%A4/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/living/%ED%95%9C%EA%B5%AD%EB%A7%88%EC%82%AC%ED%9A%8C-%EB%AC%B8%ED%99%94%EC%84%BC%ED%84%B0-%EC%88%98%EA%B0%95-%EC%84%9C%EB%B9%84%EC%8A%A4/</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated><author><name>한국마사회</name></author><category term="living"/>
-    <summary type="text">한국마사회 문화센터에서는 장외발매소 인근 주민 및 국가유공자·장애인·국민기초생활수급자·다자녀 부모에게 문화 강좌 수강료를 50% 할인해 주는 서비스를 제공합니다.</summary>
   </entry>
 </feed>
