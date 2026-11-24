@@ -1,24 +1,28 @@
 {
   "_prose": {
     "eligibility": [
-      "실업신고를 한 사람",
-      "질병·부상·출산 등으로 취업이 불가능한 경우",
-      "구직급여를 받고 있는 수급자격자"
+      "실업신고를 한 사람이어야 합니다.",
+      "실업신고 후 질병·부상·출산으로 인해 취업이 불가능해야 합니다.",
+      "구직급여를 수급 중이며 실업인정을 받지 못한 경우에 해당해야 합니다."
     ],
     "faq": [
       {
-        "a": "구직급여 수급 중 발생한 질병·부상·출산으로 실업인정을 받지 못한 날에 지급됩니다.",
+        "a": "구직급여 수급 중 실업인정을 받지 못한 날에 대해 지급됩니다.",
         "q": "지원금은 언제 지급되나요?"
       }
     ],
     "note": "",
     "steps": [
       {
-        "body": "온라인으로 신청하실 수 있습니다. 방문 신청도 가능합니다. 신청 시에는 실업인정신청서와 해당 증명서를 제출하셔야 합니다.",
-        "title": "신청 방법"
+        "body": "고용노동부 각 지역 관할 고용센터 홈페이지에서 온라인으로 신청할 수 있습니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "관할 고용센터를 직접 방문하여 실업인정신청서와 질병·부상·출산 관련 증명서를 제출합니다.",
+        "title": "방문 신청"
       }
     ],
-    "summary": "상병급여는 실업신고 후 질병·부상·출산 등으로 취업이 어려워 실업인정이 되지 않은 구직급여 수급자를 대상으로, 해당 기간에 발생한 급여를 지급하는 제도입니다."
+    "summary": "상병급여는 실업신고 후 질병·부상·출산 등으로 취업이 어려워 실업인정을 받지 못한 구직급여 수급자를 대상으로, 해당 기간에 급여를 지급하는 제도입니다."
   },
   "apply_period": {
     "always": false,
@@ -33,7 +37,7 @@
   "benefit_raw": "○ 구직급여 수급 중 발생한 질병, 부상, 출산으로 취업이 불가능하여 실업인정을 받지 못한 날에 지급",
   "category": "jobs",
   "contact_raw": "고용노동부 고객상담센터/1350",
-  "content_hash": "sha256:306a0fdfc70711e05e77fb49559c1916",
+  "content_hash": "sha256:134d6780d573d8fd93a5a0019b3bf4e8",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [
@@ -46,11 +50,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-999000000005",
   "is_mock": false,
-  "last_checked": "2026-09-02",
-  "last_updated": "2026-09-02",
+  "last_checked": "2026-11-24",
+  "last_updated": "2026-11-24",
   "law_raw": "",
   "name": "상병급여",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000005",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999024&bnefType=all&svcId=999000000005",
   "org": "고용노동부",
   "primary_audience": "jobseeker",
   "receiver_raw": "고용노동부 각 지역 관할 고용센터",
@@ -59,7 +63,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 3,
+  "revision": 4,
   "slug": "상병급여",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금 개인",
@@ -67,5 +71,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 실업신고를 한 이후 발생한 질병, 부상, 출산으로 취업이 불가능하여 실업의 인정을 받지 못한 수급자격자",
-  "view_count": 31185
+  "view_count": 31738
 }

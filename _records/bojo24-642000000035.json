@@ -1,23 +1,19 @@
 {
   "_prose": {
     "eligibility": [
-      "한부모가족 지원법 제5조·제5조의2에 따른 지원 대상 가구에 속한 고등학교 재학 학생",
-      "교육급여를 받고 있는 학생은 지원 대상에서 제외됩니다",
-      "지원 대상은 고등학교에 재학 중인 학생에 한정됩니다"
+      "한부모가족 지원법 제5조 및 제5조의2에 해당하는 가구에 속한 고등학교 재학 학생이어야 합니다.",
+      "교육급여 지급 대상자는 지원 대상에서 제외됩니다.",
+      "지원 대상은 한부모가족 지원법에 정의된 한부모가족이어야 합니다."
     ],
     "faq": [],
     "note": "",
     "steps": [
       {
-        "body": "주민센터에서 안내하는 온라인 신청 시스템을 통해 신청서를 작성하고 제출합니다.",
-        "title": "온라인 신청"
-      },
-      {
-        "body": "거주지 관할 주민센터에 직접 방문하여 신청서와 구비 서류를 제출합니다.",
-        "title": "방문 신청"
+        "body": "온라인 신청은 주민센터에서 제공하는 전자 신청 시스템을 이용합니다. 방문 신청은 가까운 주민센터에 직접 방문하여 구비 서류를 제출합니다.",
+        "title": "신청 방법"
       }
     ],
-    "summary": "한부모가족 자녀를 대상으로 고등학교 입학금 및 수업료 등을 지원하는 교육비 지원 제도이며, 교육급여 수급자는 제외됩니다."
+    "summary": "한부모가족 자녀를 대상으로 고등학교 입학금 및 수업료 등을 지원하는 제도로, 지원 대상 가구의 고등학생에게 교육비를 제공하며 신청은 주민센터에서 온라인·방문으로 가능합니다."
   },
   "apply_period": {
     "always": true,
@@ -32,7 +28,7 @@
   "benefit_raw": "○ 고등학교 입학금 및 수업료 등",
   "category": "care",
   "contact_raw": "교육비원클릭 신청시스템 상담센터/1544-9654",
-  "content_hash": "sha256:4e4ab116d2babd993cd2a32d45993cc1",
+  "content_hash": "sha256:0e2cf946669bb142b6386f7c7f16d2ea",
   "criteria_raw": "○ 한부모가족 지원법 제5조, 제5조의2에 따른 지원 대상자",
   "deferred_detail": false,
   "documents_raw": [
@@ -47,11 +43,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-642000000035",
   "is_mock": false,
-  "last_checked": "2026-09-15",
-  "last_updated": "2026-09-15",
+  "last_checked": "2026-11-24",
+  "last_updated": "2026-11-24",
   "law_raw": "",
   "name": "한부모가족자녀 교육비 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/642000000035",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999063&bnefType=all&svcId=642000000035",
   "org": "교육부",
   "primary_audience": "parent",
   "receiver_raw": "주민센터",
@@ -60,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "한부모가족자녀-교육비-지원",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(감면) 개인",
@@ -68,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 한부모가족 지원법 제5조, 제5조의2에 따른 지원 대상 가구의 고등학교 학생(교육급여 지급 대상자 제외)",
-  "view_count": 7947
+  "view_count": 8188
 }

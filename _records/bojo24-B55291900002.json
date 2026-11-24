@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "만 19세 미만 청소년의 보호자(미디어 과의존 위험군)",
+      "청소년 미디어 과의존 문제에 관심 있는 보호자"
+    ],
+    "faq": [],
+    "note": "교육은 지역 청소년상담복지센터에서만 제공되며, 신청 절차가 별도 안내되지 않았습니다.",
+    "steps": [
+      {
+        "body": "신청 절차는 별도로 안내되지 않았습니다. 교육은 연중 상시 각 지역 청소년상담복지센터(서울은 시립인터넷중독예방상담센터)에서 진행됩니다. 자세한 내용은 해당 센터에 문의하시기 바랍니다.",
+        "title": "신청 및 참여 방법"
+      }
+    ],
+    "summary": "청소년 미디어 과의존 예방과 치유를 위해 보호자를 대상으로 하는 교육 프로그램이며, 연중 상시 각 지역 청소년상담복지센터에서 진행됩니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "youth",
+    "parent"
+  ],
+  "benefit_raw": "○ 올바른 인터넷·스마트폰 사용습관 지도를 위한 보호자 교육\n- 기간 : 연중 상시\n- 교육기관 : 각 지역 청소년상담복지센터(서울지역의 경우 시립인터넷중독예방상담센터)\n- 내용 :\n① 청소년 미디어 과의존 예방 및 해소에 대한 인식 공유\n② 자녀의 인터넷·스마트폰 사용습관 지도방법, 자녀와 소통하는 방법 등 양육원리 소개",
+  "category": "care",
+  "contact_raw": "미디어중독대응부/051-662-3195",
+  "content_hash": "sha256:4bd2e8864c1fdb39362b1327bc89d297",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-24",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-B55291900002",
+  "is_mock": false,
+  "last_checked": "2026-11-24",
+  "last_updated": "2026-11-24",
+  "law_raw": "",
+  "name": "청소년 미디어 과의존 예방 및 치유를 위한 보호자 교육",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000886&bnefType=all&svcId=B55291900002",
+  "org": "한국청소년상담복지개발원",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "청소년-미디어-과의존-예방-및-치유를-위한-보호자-교육",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육) 개인",
+  "source_id": "B55291900002",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "1. 미디어 과의존 위험군인 만 19세 미만 청소년의 보호자\n2. 청소년 미디어 과의존 문제에 관심있는 보호자",
+  "view_count": 1479
+}

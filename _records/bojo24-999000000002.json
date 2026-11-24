@@ -1,24 +1,24 @@
 {
   "_prose": {
     "eligibility": [
-      "취업이 특히 곤란한 수급자",
-      "생활이 어려운 수급자",
-      "대통령령으로 정하는 요건을 모두 충족하는 수급자"
+      "취업이 특히 곤란하고 생활이 어려운 수급자",
+      "대통령령이 정하는 요건(시행령 제73조 제1항 각 호)을 모두 충족하는 수급자",
+      "구직급여를 현재 수급 중인 사람"
     ],
     "faq": [
       {
-        "a": "구직급여일액의 70%를 최대 60일간 연장하여 지급합니다. 지급 시점은 신청 후 심사 결과에 따라 결정됩니다.",
-        "q": "지원금은 언제 지급되나요?"
+        "a": "연장은 최대 60일 동안 구직급여 일액의 70%가 추가로 지급됩니다.",
+        "q": "연장 급여는 언제까지 받을 수 있나요?"
       }
     ],
-    "note": "",
+    "note": "지원 대상자는 대통령령에 따라 선정되므로, 요건을 충족하지 않으면 신청이 제한됩니다.",
     "steps": [
       {
-        "body": "온라인으로 신청서를 작성하여 제출하시면 됩니다. 방문 신청을 원하실 경우 고용노동부 관할 사무소에 직접 방문하여 서류를 제출하시면 됩니다.",
+        "body": "온라인으로 신청하거나, 고용노동부 구직급여 수급중인 관할 고용센터를 직접 방문하여 신청합니다.",
         "title": "신청 방법"
       }
     ],
-    "summary": "개별연장급여는 취업이 어려워 생활이 곤란한 수급자를 대상으로, 구직급여 일액의 70%를 최대 60일간 연장 지급하는 고용노동부 지원 제도입니다."
+    "summary": "개별연장급여는 취업이 어려워 생활이 곤란한 구직급여 수급자를 대상으로, 구직급여 일액의 70%를 최대 60일간 추가로 지급하는 지원제도입니다."
   },
   "apply_period": {
     "always": false,
@@ -34,7 +34,7 @@
   "benefit_raw": "○ 구직급여일액의 70%를 최대 60일간 연장하여 지급",
   "category": "jobs",
   "contact_raw": "고용노동부 고객상담센터/1350",
-  "content_hash": "sha256:f77c0f6150b129cd82e69de35c66d35d",
+  "content_hash": "sha256:a9e1e973e64be237d0065715c72260eb",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [
@@ -50,11 +50,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-999000000002",
   "is_mock": false,
-  "last_checked": "2026-09-02",
-  "last_updated": "2026-09-02",
+  "last_checked": "2026-11-24",
+  "last_updated": "2026-11-24",
   "law_raw": "",
   "name": "개별연장급여",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000002",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999008&bnefType=all&svcId=999000000002",
   "org": "고용노동부",
   "primary_audience": "jobseeker",
   "receiver_raw": "고용노동부 구직급여 수급중인 관할 고용센터",
@@ -63,7 +63,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "개별연장급여",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금 개인",
@@ -71,5 +71,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 취업이 특히 곤란하고 생활이 어려운 수급자로서 대통령령으로 정하는 요건(시행령 제 73조 제1항 각 호)을 모두 충족하는 수급자",
-  "view_count": 31993
+  "view_count": 32304
 }
