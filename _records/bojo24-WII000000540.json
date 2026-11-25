@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "모든 유형의 장애인",
+      "사업 내용에 따라 장애 정도가 심한 장애인 우선",
+      "지원 대상과 동일한 기준으로 선정"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "보건복지부 장애인권익지원과를 직접 방문하여 지원신청서를 제출합니다. 제출 후 담당자가 신청 내용을 검토합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "보건복지부 장애인권익지원과에서 운영하는 장애인 자립생활 지원센터는 장애인에게 자립생활 정보·권익옹호·동료상담·기술훈련 등을 제공하여 지역사회 참여와 생활 역량 강화를 지원합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled"
+  ],
+  "benefit_raw": "○ 장애인을 대상으로 포괄적인 자립생활 정보제공, 권익옹호 활동, 동료상담, 자립생활 기술 훈련 등의 서비스를 통하여 장애인의 자립생활 역량 강화와 지역사회에서의 다양한 사회참여 활동 지원",
+  "category": "education",
+  "contact_raw": "보건복지부 장애인정책과/044-202-3183\n보건복지부 장애인정책과/044-202-3184",
+  "content_hash": "sha256:b0d6ef885a6655bda05d35644facb2d2",
+  "criteria_raw": "지원대상과 동일",
+  "deferred_detail": false,
+  "documents_raw": [
+    "지원신청서"
+  ],
+  "first_published": "2026-11-25",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-WII000000540",
+  "is_mock": false,
+  "last_checked": "2026-11-25",
+  "last_updated": "2026-11-25",
+  "law_raw": "",
+  "name": "장애인 자립생활 지원센터 운영 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=16191&bnefType=all&svcId=WII000000540",
+  "org": "보건복지부",
+  "primary_audience": "disabled",
+  "receiver_raw": "보건복지부 장애인권익지원과",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "장애인-자립생활-지원센터-운영-지원",
+  "source": "bojo24",
+  "source_category_raw": "주거·자립 기타\n문화/여가지원 개인",
+  "source_id": "WII000000540",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 모든 유형의 장애인으로 하되, 사업내용에 따라 장애정도가 심한 장애인을 우선 대상",
+  "view_count": 2410
+}

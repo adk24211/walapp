@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "중도 시각장애인이어야 합니다.",
+      "산업재해·교통사고·질병 등 후천적 요인으로 중도에 실명한 경우에 해당합니다.",
+      "지원 대상과 동일한 기준을 충족해야 합니다."
+    ],
+    "faq": [
+      {
+        "a": "맞춤형 재활 및 교육 프로그램을 제공하여 사회적 적응을 지원하고 삶의 질을 향상시킵니다.",
+        "q": "재활 프로그램은 어떤 내용으로 구성되어 있나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "한국시각장애인연합회를 직접 방문하여 지원신청서를 제출하시면 됩니다. 방문 신청만 가능합니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "중도시각장애인 재활훈련 지원은 후천적 요인으로 중도에 실명한 시각장애인을 대상으로 맞춤형 재활·교육 프로그램을 제공해 사회 적응과 삶의 질 향상을 돕는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled"
+  ],
+  "benefit_raw": "○ 시각장애인이 대부분 후천적 요인(산업재해, 교통사고, 질병 등)으로 중도에 실명하고 있으므로 이들에게 맞춤형 재활 및 교육 프로그램을 실시하여 사회적 적응 지원을 통한 삶의 질 향상",
+  "category": "health",
+  "contact_raw": "한국시각장애인연합회/02-6925-1114",
+  "content_hash": "sha256:b2130f44ecec446d7fa646d48416f871",
+  "criteria_raw": "지원대상과 동일",
+  "deferred_detail": false,
+  "documents_raw": [
+    "지원신청서"
+  ],
+  "first_published": "2026-11-25",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-WII000000520",
+  "is_mock": false,
+  "last_checked": "2026-11-25",
+  "last_updated": "2026-11-25",
+  "law_raw": "",
+  "name": "중도시각장애인 재활훈련 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=16192&bnefType=all&svcId=WII000000520",
+  "org": "보건복지부",
+  "primary_audience": "disabled",
+  "receiver_raw": "한국시각장애인연합회",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "중도시각장애인-재활훈련-지원",
+  "source": "bojo24",
+  "source_category_raw": "보건·의료 기타 개인",
+  "source_id": "WII000000520",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 중도 시각장애인",
+  "view_count": 2459
+}

@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "사회공헌형 산림탄소상쇄사업에 참여하고자 하는 사람",
+      "공고일 기준 산림탄소상쇄사업에 등록된 사업자",
+      "선정 기준은 개별공고에 따릅니다"
+    ],
+    "faq": [
+      {
+        "a": "지원 금액은 사업면적·사업유형 등 개별공고에 따라 달라집니다.",
+        "q": "지원 금액은 어떻게 결정되나요?"
+      }
+    ],
+    "note": "지원 금액은 개별공고에 따라 다르므로 공고문을 반드시 확인하시기 바랍니다.",
+    "steps": [
+      {
+        "body": "한국임업진흥원 산림기후산업실을 직접 방문하여 신청합니다. 필요한 서류는 개별공고에 명시된 내용에 따릅니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "산림청이 만든 산림탄소상쇄사업 지원은 생활·문화 분야에서 사회공헌형 산림탄소상쇄사업 참여 희망자와 기존 사업자를 대상으로 사업계획서·모니터링·검증 보고서 컨설팅 비용을 지원합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "개별공고에 따름",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ 사회공헌형 산림탄소상쇄 공모사업의 사업계획서, 모니터링보고서 및 검증보고서 컨설팅 비용 지원\n- 공모사업 선정된 사업신청자에게 비용지원을 하며, 지원 금액은 사업면적, 사업유형 등 조건에 따라 상이하므로 공모사업 개별공고문을 참조",
+  "category": "living",
+  "contact_raw": "한국임업진흥원 산림기후산업실/02-6393-2746",
+  "content_hash": "sha256:99767ab1d75a18939da8076e3bc8e02f",
+  "criteria_raw": "○ 개별공고에 따름",
+  "deferred_detail": false,
+  "documents_raw": [
+    "개별공고에 따름"
+  ],
+  "first_published": "2026-11-25",
+  "how_to_raw": "방문신청\n직접입력",
+  "id": "bojo24-140000000174",
+  "is_mock": false,
+  "last_checked": "2026-11-25",
+  "last_updated": "2026-11-25",
+  "law_raw": "",
+  "name": "산림탄소상쇄사업 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=589108&bnefType=all&svcId=140000000174",
+  "org": "산림청",
+  "primary_audience": "business",
+  "receiver_raw": "한국임업진흥원 산림기후산업실",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "산림탄소상쇄사업-지원",
+  "source": "bojo24",
+  "source_category_raw": "농림축산어업 현금 개인\n법인/시설/단체",
+  "source_id": "140000000174",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "ㅇ (사업계획서) 사회공헌형 산림탄소상쇄사업 참여 희망자\nㅇ (모니터링, 검증) 공고일 기준 산림탄소상쇄사업에 등록된 사업자",
+  "view_count": 2539
+}

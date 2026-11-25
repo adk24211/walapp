@@ -1,18 +1,24 @@
 {
   "_prose": {
     "eligibility": [
-      "주 근로시간이 30시간 미만이며 사업자등록이 되어 있지 않은 미취업자이어야 합니다.",
-      "창업·취업을 위해 직업훈련(학원) 과정을 수강 중이어야 합니다."
+      "만 18세 이상 39세 이하인 청년",
+      "창업·취업을 위해 학원에 다니는 미취업자",
+      "주 근로시간이 30시간 미만이며 사업자등록이 되어 있지 않은 자"
     ],
-    "faq": [],
+    "faq": [
+      {
+        "a": "선정 기준에 대한 내용은 제공되지 않았습니다.",
+        "q": "선정 기준이 있나요?"
+      }
+    ],
     "note": "",
     "steps": [
       {
-        "body": "온라인으로 신청하거나 직접 방문하여 신청할 수 있습니다. 신청 시에는 재단 누리집에서 제공하는 장학생 신청서와 관련 서류를 제출해야 합니다.",
+        "body": "재단 누리집에서 온라인으로 신청하거나 직접 방문하여 신청할 수 있습니다. 신청 시에는 장학생 신청서 등 구비 서류를 제출해야 합니다. 온라인·오프라인 모두 동일한 서류가 필요합니다.",
         "title": "신청 방법"
       }
     ],
-    "summary": "청년 창업·취업 학원비 지원은 18세 이상 39세 이하의 미취업 청년·청소년이 직업훈련 학원 수강 시, 본인 부담 수강료의 반값을 최대 200만원까지 지원하는 제도입니다."
+    "summary": "청년 창업·취업 학원비 지원은 18세 이상 39세 이하의 미취업 청년이 창업·취업을 위한 직업훈련 학원 수강 시, 본인부담 수강료의 절반을 최대 200만원까지 지원하는 제도입니다."
   },
   "apply_period": {
     "always": false,
@@ -30,7 +36,7 @@
   "benefit_raw": "○ 창·취업을 위한 훈련(학원)수강 중인 미취업 청년에게 수강료 중 본인부담의 반값 지원(200만원 이내)\n※ 직업훈련 : 고용노동부가 지원하는 교육과정\n- 18세 이상 ~ 39세 이하\n※ 저소득층 또는 세 자녀 이상 가정의 경우 직업훈련 수강료 국가지원금 등을 제외한 본인부담금 지원",
   "category": "jobs",
   "contact_raw": "안산인재육성재단/070-4455-4546\n안산인재육성재단/031-414-0924",
-  "content_hash": "sha256:fb822443b90a9778ab410f88b45f7f87",
+  "content_hash": "sha256:50b44452bddc9a86f5905261c69bf413",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -57,11 +63,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-393000000135",
   "is_mock": false,
-  "last_checked": "2026-10-28",
-  "last_updated": "2026-10-28",
+  "last_checked": "2026-11-25",
+  "last_updated": "2026-11-25",
   "law_raw": "",
   "name": "청년 창업·취업 학원비 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/393000000135",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005432&bnefType=all&svcId=393000000135",
   "org": "재단법인안산인재육성재단",
   "primary_audience": "business",
   "receiver_raw": "",
@@ -70,7 +76,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "청년-창업-취업-학원비-지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금(장학금) 개인",
@@ -78,5 +84,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 창업, 취업을 위해 학원에 다니고 있는 18~39세 미취업 청소년·청년\n○ 미취업(주 근로시간이 30시간 미만이며 사업자등록이 되어있지 않은 자",
-  "view_count": 2235
+  "view_count": 2284
 }
