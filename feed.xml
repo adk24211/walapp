@@ -4,8 +4,56 @@
   <subtitle>정부·지자체 지원금과 복지 제도를 받을 수 있는지부터 신청 방법까지 하나씩 정리합니다. 공공데이터 원문을 토대로 쉬운 말로 풀어 씁니다.</subtitle>
   <link href="https://adk24211.github.io/walapp/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://adk24211.github.io/walapp/" rel="alternate" type="text/html"/>
-  <updated>2026-11-24T15:02:16+09:00</updated>
+  <updated>2026-11-25T14:05:22+09:00</updated>
   <id>https://adk24211.github.io/walapp/</id>
+  <entry>
+    <title type="text">체육시설 프로그램 이용요금 감면</title>
+    <link href="https://adk24211.github.io/walapp/support/living/%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EC%9D%B4%EC%9A%A9%EC%9A%94%EA%B8%88-%EA%B0%90%EB%A9%B4/</id>
+    <published>2026-11-25T00:00:00+09:00</published>
+    <updated>2026-11-25T00:00:00+09:00</updated><author><name>성남도시개발공사</name></author><category term="living"/>
+    <summary type="text">성남도시개발공사가 운영하는 체육시설 프로그램 이용요금 감면은 대상자에게 월 사용료를 최대 50%까지 할인해 주는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">산림탄소상쇄사업 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/living/%EC%82%B0%EB%A6%BC%ED%83%84%EC%86%8C%EC%83%81%EC%87%84%EC%82%AC%EC%97%85-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/living/%EC%82%B0%EB%A6%BC%ED%83%84%EC%86%8C%EC%83%81%EC%87%84%EC%82%AC%EC%97%85-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-11-25T00:00:00+09:00</published>
+    <updated>2026-11-25T00:00:00+09:00</updated><author><name>산림청</name></author><category term="living"/>
+    <summary type="text">산림청이 만든 산림탄소상쇄사업 지원은 생활·문화 분야에서 사회공헌형 산림탄소상쇄사업 참여 희망자와 기존 사업자를 대상으로 사업계획서·모니터링·검증 보고서 컨설팅 비용을 지원합니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">특수건강진단 비용 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/health/%ED%8A%B9%EC%88%98%EA%B1%B4%EA%B0%95%EC%A7%84%EB%8B%A8-%EB%B9%84%EC%9A%A9-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/health/%ED%8A%B9%EC%88%98%EA%B1%B4%EA%B0%95%EC%A7%84%EB%8B%A8-%EB%B9%84%EC%9A%A9-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-11-25T00:00:00+09:00</published>
+    <updated>2026-11-25T00:00:00+09:00</updated><author><name>한국산업안전보건공단</name></author><category term="health"/>
+    <summary type="text">특수건강진단 비용 지원은 산업재해보상보험에 가입한 30인 미만 소규모 사업장·건설일용직 사용 사업장·공동주택 경비·청소원을 대상으로 배치전건강진단 및 특수건강진단에 소요되는 비용을 전액 지원하는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">중도시각장애인 재활훈련 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/health/%EC%A4%91%EB%8F%84%EC%8B%9C%EA%B0%81%EC%9E%A5%EC%95%A0%EC%9D%B8-%EC%9E%AC%ED%99%9C%ED%9B%88%EB%A0%A8-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/health/%EC%A4%91%EB%8F%84%EC%8B%9C%EA%B0%81%EC%9E%A5%EC%95%A0%EC%9D%B8-%EC%9E%AC%ED%99%9C%ED%9B%88%EB%A0%A8-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-11-25T00:00:00+09:00</published>
+    <updated>2026-11-25T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="health"/>
+    <summary type="text">중도시각장애인 재활훈련 지원은 후천적 요인으로 중도에 실명한 시각장애인을 대상으로 맞춤형 재활·교육 프로그램을 제공해 사회 적응과 삶의 질 향상을 돕는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">국가유공자 등의 종자 관련 수수료 면제 및 반환</title>
+    <link href="https://adk24211.github.io/walapp/support/health/%EA%B5%AD%EA%B0%80%EC%9C%A0%EA%B3%B5%EC%9E%90-%EB%93%B1%EC%9D%98-%EC%A2%85%EC%9E%90-%EA%B4%80%EB%A0%A8-%EC%88%98%EC%88%98%EB%A3%8C-%EB%A9%B4%EC%A0%9C-%EB%B0%8F-%EB%B0%98%ED%99%98/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/health/%EA%B5%AD%EA%B0%80%EC%9C%A0%EA%B3%B5%EC%9E%90-%EB%93%B1%EC%9D%98-%EC%A2%85%EC%9E%90-%EA%B4%80%EB%A0%A8-%EC%88%98%EC%88%98%EB%A3%8C-%EB%A9%B4%EC%A0%9C-%EB%B0%8F-%EB%B0%98%ED%99%98/</id>
+    <published>2026-11-25T00:00:00+09:00</published>
+    <updated>2026-11-25T00:00:00+09:00</updated><author><name>산림청</name></author><category term="health"/>
+    <summary type="text">국가유공자·의료급여수급자·고엽제후유증환자·특수임무유공자·독립유공자·참전유공자·장애인 등에게 종자 관련 각종 수수료를 면제하고 반환해 주는 제도입니다.</summary>
+  </entry>
+  <entry>
+    <title type="text">장애인 자립생활 지원센터 운영 지원</title>
+    <link href="https://adk24211.github.io/walapp/support/education/%EC%9E%A5%EC%95%A0%EC%9D%B8-%EC%9E%90%EB%A6%BD%EC%83%9D%ED%99%9C-%EC%A7%80%EC%9B%90%EC%84%BC%ED%84%B0-%EC%9A%B4%EC%98%81-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
+    <id>https://adk24211.github.io/walapp/support/education/%EC%9E%A5%EC%95%A0%EC%9D%B8-%EC%9E%90%EB%A6%BD%EC%83%9D%ED%99%9C-%EC%A7%80%EC%9B%90%EC%84%BC%ED%84%B0-%EC%9A%B4%EC%98%81-%EC%A7%80%EC%9B%90/</id>
+    <published>2026-11-25T00:00:00+09:00</published>
+    <updated>2026-11-25T00:00:00+09:00</updated><author><name>보건복지부</name></author><category term="education"/>
+    <summary type="text">보건복지부 장애인권익지원과에서 운영하는 장애인 자립생활 지원센터는 장애인에게 자립생활 정보·권익옹호·동료상담·기술훈련 등을 제공하여 지역사회 참여와 생활 역량 강화를 지원합니다.</summary>
+  </entry>
   <entry>
     <title type="text">체육시설 사용 이용료 감면</title>
     <link href="https://adk24211.github.io/walapp/support/living/%EC%B2%B4%EC%9C%A1%EC%8B%9C%EC%84%A4-%EC%82%AC%EC%9A%A9-%EC%9D%B4%EC%9A%A9%EB%A3%8C-%EA%B0%90%EB%A9%B4/" rel="alternate" type="text/html"/>
@@ -197,53 +245,5 @@
     <published>2026-11-20T00:00:00+09:00</published>
     <updated>2026-11-20T00:00:00+09:00</updated><author><name>재단법인경상북도농식품유통교육진흥원</name></author><category term="care"/>
     <summary type="text">경상북도 농업인을 대상으로 농업마이스터대학 운영지원 제도는 해당 품목 교육 서비스를 제공하는 지원 사업이며, 방문 신청을 통해 신청할 수 있습니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">무료 소송대리 서비스(미혼모·부)</title>
-    <link href="https://adk24211.github.io/walapp/support/living/%EB%AC%B4%EB%A3%8C-%EC%86%8C%EC%86%A1%EB%8C%80%EB%A6%AC-%EC%84%9C%EB%B9%84%EC%8A%A4-%EB%AF%B8%ED%98%BC%EB%AA%A8-%EB%B6%80/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/living/%EB%AC%B4%EB%A3%8C-%EC%86%8C%EC%86%A1%EB%8C%80%EB%A6%AC-%EC%84%9C%EB%B9%84%EC%8A%A4-%EB%AF%B8%ED%98%BC%EB%AA%A8-%EB%B6%80/</id>
-    <published>2026-11-19T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated><author><name>대한법률구조공단</name></author><category term="living"/>
-    <summary type="text">미혼모·부를 대상으로 건강보험료 본인부담금이 기준중위소득 125% 이하인 경우, 무료 법률상담 및 소송대리를 제공하는 서비스입니다. 사회·경제적 약자를 위한 법률구조서비스로, 온라인 및 방문 신청이 가능합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">국가지정문화유산 및 천연기념물 등의 관람료 감면</title>
-    <link href="https://adk24211.github.io/walapp/support/living/%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A0%95%EB%AC%B8%ED%99%94%EC%9C%A0%EC%82%B0-%EB%B0%8F-%EC%B2%9C%EC%97%B0%EA%B8%B0%EB%85%90%EB%AC%BC-%EB%93%B1%EC%9D%98-%EA%B4%80%EB%9E%8C%EB%A3%8C-%EA%B0%90%EB%A9%B4/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/living/%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A0%95%EB%AC%B8%ED%99%94%EC%9C%A0%EC%82%B0-%EB%B0%8F-%EC%B2%9C%EC%97%B0%EA%B8%B0%EB%85%90%EB%AC%BC-%EB%93%B1%EC%9D%98-%EA%B4%80%EB%9E%8C%EB%A3%8C-%EA%B0%90%EB%A9%B4/</id>
-    <published>2026-11-19T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated><author><name>국가유산청</name></author><category term="living"/>
-    <summary type="text">국가·지방자치단체가 관리하는 지정문화유산·천연기념물에 대해 장애인·국가유공자·해당 지역 주민이 신분증을 지참해 방문 신청하면 관람료를 감면받을 수 있는 제도이며, 감면 대상은 문화유산법 제49조 제3항에 따라 공개되는 경우에 적용됩니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">산재근로자 직장 복귀 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/jobs/%EC%82%B0%EC%9E%AC%EA%B7%BC%EB%A1%9C%EC%9E%90-%EC%A7%81%EC%9E%A5-%EB%B3%B5%EA%B7%80-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/jobs/%EC%82%B0%EC%9E%AC%EA%B7%BC%EB%A1%9C%EC%9E%90-%EC%A7%81%EC%9E%A5-%EB%B3%B5%EA%B7%80-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-11-19T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated><author><name>고용노동부</name></author><category term="jobs"/>
-    <summary type="text">산재장해등급 제1~12급 근로자를 원직장에 복귀시켜 고용을 유지한 사업주에게 최대 12개월 동안 월별 지원금을 제공하고, 직장적응 훈련·재활 운동 비용을 실비로 지원하는 제도입니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">지방공무원 신규 임용시험 응시 수수료 면제</title>
-    <link href="https://adk24211.github.io/walapp/support/finance/%EC%A7%80%EB%B0%A9%EA%B3%B5%EB%AC%B4%EC%9B%90-%EC%8B%A0%EA%B7%9C-%EC%9E%84%EC%9A%A9%EC%8B%9C%ED%97%98-%EC%9D%91%EC%8B%9C-%EC%88%98%EC%88%98%EB%A3%8C-%EB%A9%B4%EC%A0%9C/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/finance/%EC%A7%80%EB%B0%A9%EA%B3%B5%EB%AC%B4%EC%9B%90-%EC%8B%A0%EA%B7%9C-%EC%9E%84%EC%9A%A9%EC%8B%9C%ED%97%98-%EC%9D%91%EC%8B%9C-%EC%88%98%EC%88%98%EB%A3%8C-%EB%A9%B4%EC%A0%9C/</id>
-    <published>2026-11-19T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated><author><name>행정안전부</name></author><category term="finance"/>
-    <summary type="text">지방공무원 신규 임용시험에 응시하는 저소득층·장애인·두 자녀 이상을 둔 가구는 응시수수료를 면제받을 수 있습니다. 이 제도는 행정안전부가 마련했으며, 지방자치단체 인터넷원서접수센터에서 온라인으로 신청할 수 있습니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">인증부표 교체비용 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/finance/%EC%9D%B8%EC%A6%9D%EB%B6%80%ED%91%9C-%EA%B5%90%EC%B2%B4%EB%B9%84%EC%9A%A9-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/finance/%EC%9D%B8%EC%A6%9D%EB%B6%80%ED%91%9C-%EA%B5%90%EC%B2%B4%EB%B9%84%EC%9A%A9-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-11-19T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated><author><name>해양수산부</name></author><category term="finance"/>
-    <summary type="text">해양수산부가 시행하는 인증부표 교체비용 지원은 스티로폼 부표를 인증부표로 교체하려는 양식어업·어장시설 이용자를 대상으로 국비·지방비 각각 35%와 신청자 30% 자부담으로 지원합니다.</summary>
-  </entry>
-  <entry>
-    <title type="text">양식수산물재해보험 보험료 지원</title>
-    <link href="https://adk24211.github.io/walapp/support/finance/%EC%96%91%EC%8B%9D%EC%88%98%EC%82%B0%EB%AC%BC%EC%9E%AC%ED%95%B4%EB%B3%B4%ED%97%98-%EB%B3%B4%ED%97%98%EB%A3%8C-%EC%A7%80%EC%9B%90/" rel="alternate" type="text/html"/>
-    <id>https://adk24211.github.io/walapp/support/finance/%EC%96%91%EC%8B%9D%EC%88%98%EC%82%B0%EB%AC%BC%EC%9E%AC%ED%95%B4%EB%B3%B4%ED%97%98-%EB%B3%B4%ED%97%98%EB%A3%8C-%EC%A7%80%EC%9B%90/</id>
-    <published>2026-11-19T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated><author><name>해양수산부</name></author><category term="finance"/>
-    <summary type="text">양식수산물재해보험 보험료 지원은 양식어업인 및 양식업 관련 법인이 보험료의 50%와 운영사업비 전액을 지원받는 제도입니다.</summary>
   </entry>
 </feed>
