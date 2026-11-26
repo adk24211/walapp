@@ -1,21 +1,5 @@
 [
  {
-  "date": "2026-09-16",
-  "thin": {
-   "count": 506,
-   "median_own_chars": 392,
-   "under_400": 260,
-   "under_400_pct": 51,
-   "under_500": 359
-  },
-  "regen_backlog": 43,
-  "ads_on_thin": 34,
-  "audiences_empty": 12,
-  "near_duplicates": 1,
-  "stale_over_30d": 9,
-  "checks_failed": []
- },
- {
   "date": "2026-09-28",
   "thin": {
    "count": 585,
@@ -1011,6 +995,23 @@
    "under_500": 622
   },
   "regen_backlog": 38,
+  "ads_on_thin": 44,
+  "audiences_empty": 14,
+  "duplicate_ids": 0,
+  "near_duplicates": 3,
+  "stale_over_30d": 4,
+  "checks_failed": []
+ },
+ {
+  "date": "2026-11-26",
+  "thin": {
+   "count": 887,
+   "median_own_chars": 369,
+   "under_400": 505,
+   "under_400_pct": 56,
+   "under_500": 625
+  },
+  "regen_backlog": 37,
   "ads_on_thin": 44,
   "audiences_empty": 14,
   "duplicate_ids": 0,
