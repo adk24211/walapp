@@ -2,15 +2,19 @@
   "_prose": {
     "eligibility": [
       "무주택세대구성원이어야 합니다.",
-      "공공주택특별법 시행규칙 제18조에 따라 입주자 선정 기준을 충족해야 합니다.",
-      "주택면적이 85㎡ 이하인 경우 소득요건을 사업주체가 정한 50% 범위 내에서 충족하면 됩니다."
+      "입주자 선정 기준은 공공주택특별법 시행규칙 제18조에 따릅니다.",
+      "단, 85㎡ 이하인 경우 소득요건의 50% 범위에서 사업주체가 별도로 정할 수 있습니다."
     ],
     "faq": [],
-    "note": "",
+    "note": "지원 대상과 선정 기준이 동일하므로 신청 전 본인이 무주택세대구성원인지 반드시 확인하시기 바랍니다.",
     "steps": [
       {
-        "body": "온라인 신청은 해당 기관 홈페이지에서 진행할 수 있습니다. 방문 신청은 한국토지주택공사와 SH공사 콜센터를 이용해 직접 방문합니다. 신청 시 주민등록등본·가족관계증명서·신분증(주민등록증·운전면허증·여권 중 하나) 등을 제출해야 합니다.",
-        "title": "신청 방법"
+        "body": "공식 홈페이지에서 신청서를 작성하고 제출합니다. 제출 시 주민등록등본·가족관계증명서·신분증(주민등록증·운전면허증·여권) 등을 첨부해야 합니다.",
+        "title": "온라인 신청"
+      },
+      {
+        "body": "한국토지주택공사 또는 SH공사 방문 창구에서 신청서를 제출합니다. 필요한 서류는 온라인 신청과 동일합니다.",
+        "title": "방문 신청"
       }
     ],
     "summary": "시세의 80% 수준으로 저렴한 임대보증금을 제공하는 장기전세 주택을 무주택세대구성원에게 공급하는 제도입니다."
@@ -26,7 +30,7 @@
   "benefit_raw": "○ 시세의 80% 수준의 저렴한 임대보증금의 장기전세주택 공급",
   "category": "housing",
   "contact_raw": "서울주택도시공사/1600-3456",
-  "content_hash": "sha256:cd586b9b961f034af203a06b4fc90637",
+  "content_hash": "sha256:f965e29ba2a07d192f114777d014ba92",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [
@@ -40,11 +44,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-999000000024",
   "is_mock": false,
-  "last_checked": "2026-09-05",
-  "last_updated": "2026-09-05",
+  "last_checked": "2026-11-26",
+  "last_updated": "2026-11-26",
   "law_raw": "",
   "name": "장기전세 주택공급",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000024",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999075&bnefType=all&svcId=999000000024",
   "org": "국토교통부",
   "primary_audience": "",
   "receiver_raw": "한국토지주택공사;1600-1004, SH공사 홈페이지;1600-3456, LH콜센터;1600-1004, SH콜센터;1600-3456",
@@ -53,7 +57,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "장기전세-주택공급",
   "source": "bojo24",
   "source_category_raw": "주거·자립 기타 개인",
@@ -61,5 +65,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ (공통) 무주택세대구성원\n\n○ 공공주택특별법 시행규칙 제18조에 따라 입주자 선정(단, 85㎡ 이하인 경우 소득요건의 50%범위에서 사업주체가 별도로 정할 수 있음)",
-  "view_count": 669699
+  "view_count": 674800
 }

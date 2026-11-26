@@ -1,0 +1,73 @@
+{
+  "_prose": {
+    "eligibility": [
+      "입학 후 3개월 이상 결석하거나 취학 의무를 유예한 청소년입니다",
+      "제적·퇴학처분을 받거나 자퇴한 청소년입니다",
+      "상급학교에 진학하지 않은 청소년입니다",
+      "학업중단 숙려대상 등 잠재적 학교 밖 청소년입니다"
+    ],
+    "faq": [
+      {
+        "a": "선정 기준은 별도로 정해져 있지 않습니다.",
+        "q": "선정 기준이 있나요?"
+      },
+      {
+        "a": "구비 서류는 해당없음으로 별도 제출 서류가 없습니다.",
+        "q": "구비 서류가 필요합니까?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청하거나 직접 방문하여 신청합니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "논산시학교밖청소년지원센터는 학교 밖 청소년에게 상담·교육·자립·직업·건강 등 다양한 서비스를 제공하는 지원센터입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://nsyouth.or.kr",
+  "audiences": [
+    "youth"
+  ],
+  "benefit_raw": "○ 서비스 내용\n- 상담지원(개인상담, 학업중단숙려제 등)\n- 교육지원(검정고시 지원, 검정고시 대비 스마트교실 등)\n- 자립지원(자기계발, 문화체험 등)\n- 직업체험 및 취업지원(직업체험, 자격증취득 등)\n- 건강지원(무료 건강검진, 급식지원 등)\n- 세상소통카드(교통비, 문화체험 및 진로개발지원 )",
+  "category": "living",
+  "contact_raw": "논산시학교밖청소년지원센터/041-730-6051",
+  "content_hash": "sha256:7e6cb7f3f37869b59dd7a3a3ef8ec6d3",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-26",
+  "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
+  "id": "bojo24-O00110100001",
+  "is_mock": false,
+  "last_checked": "2026-11-26",
+  "last_updated": "2026-11-26",
+  "law_raw": "",
+  "name": "논산시학교밖청소년지원센터 운영",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2110256&bnefType=all&svcId=O00110100001",
+  "org": "재단법인논산시청소년청년재단",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "논산시학교밖청소년지원센터-운영",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 기타 개인",
+  "source_id": "O00110100001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 학교 밖 청소년\n- 입학 후 3개월 이상 결석하거나 취학 의무를 유예한 청소년\n- 제적, 퇴학처분을 받거나 자퇴한 청소년\n- 상급학교에 진학하지 아니한 청소년\n- 학업중단 숙려대상 등 잠재적 학교 밖 청소년 포함",
+  "view_count": 680
+}

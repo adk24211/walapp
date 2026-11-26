@@ -1,0 +1,68 @@
+{
+  "_prose": {
+    "eligibility": [
+      "위탁가정",
+      "위탁가정(선정 기준)",
+      "위탁가정에 아동이 있는 경우"
+    ],
+    "faq": [
+      {
+        "a": "지원 금액은 가정위탁아동 1인당 월 30만원~50만원이며, 연령에 따라 최소 금액이 정해집니다. 만 7세 미만은 월 34만원 이상, 만 7세~만 13세 미만은 월 45만원 이상, 만 13세 이상은 월 56만원 이상이 지급됩니다.",
+        "q": "지원 금액은 어떻게 결정되나요?"
+      }
+    ],
+    "note": "연령 도달 시점에 따라 지원액이 변경됩니다.",
+    "steps": [
+      {
+        "body": "온라인으로 신청하거나 직접 방문하여 신청할 수 있습니다. 신청은 상시 접수됩니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "보건복지부에서 운영하는 가정위탁 아동양육보조금 지원은 위탁가정에 거주하는 아동에게 연령별 최소 월 34만원부터 56만원까지 보조금을 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/index.do",
+  "audiences": [
+    "parent"
+  ],
+  "benefit_raw": "○ 가정위탁아동 1인당 양육보조금 월 30만원∼50만원 이상 차등 지원\n- 만7세 미만(83개월까지) : 월 34만원 이상\n- 만7세부터 만13세 미만(84∼155개월) : 월 45만원 이상\n- 만13세 이상(156개월부터)*연장보호아동 포함 : 월 56만원 이상\n※ 연령 도달 시점(해당 월)에 지원액 변경",
+  "category": "care",
+  "contact_raw": "아동권리보장원/02-6454-8500",
+  "content_hash": "sha256:a605e32a4f777d678b4fa6a1287d103e",
+  "criteria_raw": "○ 위탁가정",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-26",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-135200005055",
+  "is_mock": false,
+  "last_checked": "2026-11-26",
+  "last_updated": "2026-11-26",
+  "law_raw": "",
+  "name": "가정위탁 아동양육보조금 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2156128&bnefType=all&svcId=135200005055",
+  "org": "보건복지부",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "가정위탁-아동양육보조금-지원",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 현금 개인\n가구",
+  "source_id": "135200005055",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 위탁가정",
+  "view_count": 1596
+}
