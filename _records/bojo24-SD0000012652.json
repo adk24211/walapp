@@ -1,0 +1,70 @@
+{
+  "_prose": {
+    "eligibility": [
+      "의료급여 수급권자",
+      "장애인",
+      "학생",
+      "소기업",
+      "만 6세 이상 만 19세 미만"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "공익변리사 특허상담센터 홈페이지에서 지원신청서를 작성하여 온라인으로 제출하거나, 직접 센터를 방문하여 지원신청서를 제출합니다. 제출 후 무료 변리서비스를 받을 수 있습니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "발명진흥법이 정의하는 사회적 약자를 대상으로, 지식재산권에 관한 상담·서류작성·심판·소송대리·민사소송 비용 지원 등 무료 변리서비스를 제공하며, 온라인 또는 공익변리사 특허상담센터 방문을 통해 상시 접수할 수 있는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "https://www.pcc.or.kr/pcc/",
+  "audiences": [
+    "youth",
+    "parent",
+    "disabled",
+    "lowincome",
+    "business",
+    "multicultural"
+  ],
+  "benefit_raw": "사회적 약자의 지식재산권에 대한 상담, 서류작성 지원, 심판 및 심결취소소송 대리, 침해관련 민사소송 비용지원 등 무료 변리서비스 제공",
+  "category": "living",
+  "contact_raw": "공익변리사 특허상담센터/02-6006-4300",
+  "content_hash": "sha256:b60c6d6261ad4029ced102ca2bae9db5",
+  "criteria_raw": "의료급여 수급권자\n국가유공자 및 유가족\n장애인\n학생\n소기업\n만 6세 이상 만 19세 미만\n대기업과 분쟁 중인 중기업\n5.18 민주유공자 및 유가족\n고엽제후유(의)증 환자\n특수임무유공자 및 유가족\n병() 또는 사회복무요원\n독립유공자 및 유가족\n참전유공자\n다문화가족\n한부모가족\n(예비)청년창업자\n차상위계층\n중위소득125% 이하인 국민 등 사회적약자",
+  "deferred_detail": false,
+  "documents_raw": [
+    "신청인 제출 서류 : 지원신청서"
+  ],
+  "first_published": "2026-11-27",
+  "how_to_raw": "기타 온라인신청\n방문신청",
+  "id": "bojo24-SD0000012652",
+  "is_mock": false,
+  "last_checked": "2026-11-27",
+  "last_updated": "2026-11-27",
+  "law_raw": "",
+  "name": "사회적 약자의 지재권 보호 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=512413&bnefType=all&svcId=SD0000012652",
+  "org": "지식재산처",
+  "primary_audience": "lowincome",
+  "receiver_raw": "공익변리사 특허상담센터",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "사회적-약자의-지재권-보호-지원",
+  "source": "bojo24",
+  "source_category_raw": "행정·안전 기타(상담)\n상담/법률지원 개인\n소상공인\n법인/시설/단체",
+  "source_id": "SD0000012652",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "발명진흥법에서 정하는 사회적 약자",
+  "view_count": 2150
+}

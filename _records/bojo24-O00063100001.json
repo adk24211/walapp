@@ -1,0 +1,71 @@
+{
+  "_prose": {
+    "eligibility": [
+      "국민기초생활수급자이며 무주택인 경우 신청할 수 있습니다.",
+      "자립 의욕이 강한 경우 신청 자격이 있습니다.",
+      "구체적인 상환계획과 상환 의지·능력이 있는 경우 지원 대상에 포함됩니다."
+    ],
+    "faq": [
+      {
+        "a": "금리는 연 1%이며, 연체가 발생할 경우 연 4%의 연체이율이 적용됩니다.",
+        "q": "융자금의 금리는 어떻게 적용되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "재단을 직접 방문하여 상담 후 신청서를 작성합니다. 이후 심의위원회에서 심사를 진행하고, 선정이 결정되면 채권양도양수계약서 또는 부동산임대차계약서를 공증합니다. 마지막으로 집주인 계좌로 융자금이 지급됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "저소득주민 생활안정자금 지원사업(전세자금)은 무주택 국민기초생활수급자에게 최대 10,000천원까지 연 1% 금리로 2년 만기 일시상환 전세자금을 융자해 주는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "예산 소진 시 신청 불가",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "lowincome"
+  ],
+  "benefit_raw": "○ 사업내용\n- 전세 또는 임대보증금이 없어 주거환경을 갖추지 못한 저소득주민에게 저리의 전세자금 융자\n\n○ 융자한도\n- 가구당 최대 10,000천원 이하\n- 연 1%(단, 연체이율 연 4%)\n- 2년 만기 일시상환\n\n○ 융자대상\n- 국민기초생활보장법에 의한 수급자 중 자립의욕이 강한 자\n- 무주택자에 대한 전세금 또는 임대보증금 중 일부\n\n○ 절차\n1. 재단 방문하여 상담, 신청서 작성\n2. 심의위원회 심의\n3. (선정결정 후)채권양도양수계약서 또는 부동산임대차계약서 작성하여 공증\n4. 집주인 계좌로 융자금 지급",
+  "category": "housing",
+  "contact_raw": "복지사업팀/055-756-7560",
+  "content_hash": "sha256:0670a5df232d066c3273e7a509d8dcb3",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "수급자증명서",
+    "인감증명서 3부",
+    "인감도장",
+    "임대차계약서"
+  ],
+  "first_published": "2026-11-27",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-O00063100001",
+  "is_mock": false,
+  "last_checked": "2026-11-27",
+  "last_updated": "2026-11-27",
+  "law_raw": "",
+  "name": "저소득주민 생활안정자금 지원사업(전세자금)",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000192&bnefType=all&svcId=O00063100001",
+  "org": "재단법인진주시복지재단",
+  "primary_audience": "lowincome",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "저소득주민-생활안정자금-지원사업-전세자금",
+  "source": "bojo24",
+  "source_category_raw": "주거·자립 현금(융자) 개인",
+  "source_id": "O00063100001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "- 국민기초생활수급자 중 자립의욕이 강한 무주택자\n- 상환계획이 구체적이고 상환의지 및 능력이 높은 자",
+  "view_count": 2396
+}

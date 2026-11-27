@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "중소기업이 신청 대상입니다.",
+      "중견기업이 신청 대상입니다.",
+      "가치창출능력과 미래성장 가능성이 높은 기업이 신청 대상입니다."
+    ],
+    "faq": [
+      {
+        "a": "보증연계투자는 신용보증과 투자를 연계한 복합금융상품으로, 중소기업의 원활한 자금조달 및 재무구조 개선을 지원합니다.",
+        "q": "보증연계투자란 무엇인가요?"
+      },
+      {
+        "a": "필요 서류는 홈페이지를 참고하시기 바랍니다.",
+        "q": "필요 서류는 어디에서 확인할 수 있나요?"
+      }
+    ],
+    "note": "선정 기준이 별도로 제시되지 않으므로, 지원 대상 여부만 확인하면 됩니다.",
+    "steps": [
+      {
+        "body": "신청은 직접 방문하여 진행합니다. 필요한 서류는 홈페이지에서 확인하시기 바랍니다. 신청은 상시 접수됩니다.",
+        "title": "방문 신청"
+      }
+    ],
+    "summary": "투·융자복합금융 지원은 중소·중견기업을 대상으로 가치창출능력과 미래성장 가능성이 높은 기업에 금융·비금융 복합지원과 보증연계투자·투자옵션부보증·M&A보증을 제공하는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ 가치창출능력과 미래성장 가능성이 높은 중소기업에 금융·비금융 복합지원을 통해 기업가치 제고\n\n○ (보증연계투자) 신용보증과 투자를 연계한 복합금융상품으로 중소기업의 원활한 자금조달 및 재무구조 개선을 지원\n\n○ (투자옵션부보증) 미래성장성이 높은 창업초기 기업에 대하여, 기업의 자본증자에 참여할 수 있는 권리가 부여된 보증을 지원한 후, 기업의 경영성과 등에 따라 투자전환을 결정\n\n○ (M&A보증) 중소기업의 성장과 구조조정을 지원하고 「창업→회수→재투자」로 활발하게 순환할 수 있는 건강한 성장 생태계 조성을 유도하기 위하여 합병, 주식인수 및 영업양수에 소요되는 자금을 지원",
+  "category": "jobs",
+  "contact_raw": "미래전략실/053-430-4177",
+  "content_hash": "sha256:c1d4c5dfd6bd368344821c1edd461bbb",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "홈페이지 참조"
+  ],
+  "first_published": "2026-11-27",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-B19001600005",
+  "is_mock": false,
+  "last_checked": "2026-11-27",
+  "last_updated": "2026-11-27",
+  "law_raw": "",
+  "name": "투·융자복합금융 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000186&bnefType=all&svcId=B19001600005",
+  "org": "신용보증기금",
+  "primary_audience": "business",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "투-융자복합금융-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 법인/시설/단체",
+  "source_id": "B19001600005",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 중소, 중견기업",
+  "view_count": 2532
+}

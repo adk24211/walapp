@@ -1,0 +1,63 @@
+{
+  "_prose": {
+    "eligibility": [
+      "장애인복지법에 따라 등록된 시각·청각장애인 가정",
+      "해당 가정이 TV수상기를 소지하고 있는 경우",
+      "TV수상기 소지자는 면제 대상에 한함"
+    ],
+    "faq": [],
+    "note": "면제는 신청한 달부터 적용되며, 자격취득일부터 자동 적용되지 않습니다.",
+    "steps": [
+      {
+        "body": "방문 신청을 하시고, 면제 자격을 증명할 수 있는 서류를 제출하시면 됩니다. 신청한 달부터 월 2,500원 TV수신료가 면제됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "시청각 장애인이 TV수상기를 보유한 경우, 월 2,500원 TV수신료를 면제받을 수 있는 제도이며, 신청은 방문 접수 후 해당 달부터 적용됩니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled"
+  ],
+  "benefit_raw": "○ TV수신료 면제\n\n- 방송법시행령 제44조 제1항에 규정된 면제 대상자가 접수기관에 TV수신료 면제를 신청한 달부터 면제 적용 (자격취득일부터 적용되는 것이 아님에 주의)\n\n- TV수신료 월 2,500원 면제",
+  "category": "living",
+  "contact_raw": "KBS수신료콜센터/1588-1801",
+  "content_hash": "sha256:6abc6b2d83259d2821423b26971c9618",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "면제자격을 증명할 수 있는 증빙서류"
+  ],
+  "first_published": "2026-11-27",
+  "how_to_raw": "방문신청\n직접입력",
+  "id": "bojo24-B11005300004",
+  "is_mock": false,
+  "last_checked": "2026-11-27",
+  "last_updated": "2026-11-27",
+  "law_raw": "",
+  "name": "시청각 장애인 TV수신료 면제",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2111004&bnefType=all&svcId=B11005300004",
+  "org": "한국방송공사",
+  "primary_audience": "disabled",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "시청각-장애인-tv수신료-면제",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금(감면) 개인",
+  "source_id": "B11005300004",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 면제대상 (TV수상기 소지자에 한함)\n\n- 장애인복지법에 따라 등록된 시각·청각장애인이 생활하는 가정의 수상기",
+  "view_count": 2358
+}

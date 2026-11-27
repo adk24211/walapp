@@ -1,0 +1,64 @@
+{
+  "_prose": {
+    "eligibility": [
+      "기술보증관계가 성립한 기업",
+      "창업을 진행 중인 중소기업",
+      "기술혁신을 진행 중인 중소기업"
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [
+      {
+        "body": "기술보증기금을 방문하여 지원 대상 확인 서류와 기술사업계획서·IR자료를 제출하면 신청이 완료됩니다. 제출 서류가 검토된 후 지원 여부가 결정됩니다.",
+        "title": "신청 절차"
+      }
+    ],
+    "summary": "보증연계투자 지원은 기술보증관계가 성립한 창업·기술혁신 중소기업을 대상으로 보증금액 최대 30억원과 보증·투자 합산 200억원 이내의 자금을 지원하는 제도입니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "business"
+  ],
+  "benefit_raw": "○ 최고한도 30억원\n\n○ 보증금액과 투자금액 합산 200억원 이내",
+  "category": "jobs",
+  "contact_raw": "기술보증기금 벤처혁신금융부/051-606-7648",
+  "content_hash": "sha256:64c47388e08328e5c1cb60f1c57af020",
+  "criteria_raw": "지원대상과 동일",
+  "deferred_detail": false,
+  "documents_raw": [
+    "1. 기술사업계획서",
+    "2. IR자료 등"
+  ],
+  "first_published": "2026-11-27",
+  "how_to_raw": "방문신청",
+  "id": "bojo24-142100000008",
+  "is_mock": false,
+  "last_checked": "2026-11-27",
+  "last_updated": "2026-11-27",
+  "law_raw": "",
+  "name": "보증연계투자 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=716519&bnefType=all&svcId=142100000008",
+  "org": "중소벤처기업부",
+  "primary_audience": "business",
+  "receiver_raw": "기술보증기금",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "보증연계투자-지원",
+  "source": "bojo24",
+  "source_category_raw": "고용·창업 현금 법인/시설/단체",
+  "source_id": "142100000008",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 기술보증관계가 성립한 창업·기술혁신 중소기업",
+  "view_count": 2546
+}

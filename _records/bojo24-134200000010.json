@@ -1,0 +1,61 @@
+{
+  "_prose": {
+    "eligibility": [
+      "특수교육대상 고등학생이 지원 대상입니다.",
+      "해당 학생의 보호자 1명이 지원 대상입니다.",
+      "특수교사 등이 지원 대상에 포함됩니다.",
+      "시도교육청에서 학생·보호자·특수교사를 추천받은 경우에 한합니다."
+    ],
+    "faq": [],
+    "note": "",
+    "steps": [],
+    "summary": "특수교육대상 고등학생과 그 보호자, 특수교사를 대상으로 국외체험연수 기회를 제공하는 지원 사업입니다. 교육부가 관할하며, 시도교육청의 추천을 통해 선발됩니다. 신청 시 신청서와 동의서를 제출해야 합니다."
+  },
+  "apply_period": {
+    "always": false,
+    "end": "",
+    "raw": "접수기관 별 상이",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "disabled",
+    "student"
+  ],
+  "benefit_raw": "○ 특수교육대상 고등학생과 가족, 특수교사에게 국외체험연수의 기회 제공",
+  "category": "care",
+  "contact_raw": "교육부 국립특수교육원 연수과/041-537-1462",
+  "content_hash": "sha256:cb01570a0cc7dcef0bfb673c368567f3",
+  "criteria_raw": "○ 시도교육청에서 대상 학생, 보호자, 특수교사 추천",
+  "deferred_detail": false,
+  "documents_raw": [
+    "신청서",
+    "동의서"
+  ],
+  "first_published": "2026-11-27",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-134200000010",
+  "is_mock": false,
+  "last_checked": "2026-11-27",
+  "last_updated": "2026-11-27",
+  "law_raw": "",
+  "name": "장애학생 가족 참여 국외체험 연수 지원",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=104083&bnefType=all&svcId=134200000010",
+  "org": "교육부",
+  "primary_audience": "disabled",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "장애학생-가족-참여-국외체험-연수-지원",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 기타(교육)\n문화/여가지원 개인",
+  "source_id": "134200000010",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 특수교육대상 고등학생 및 학생의 보호자(1명), 특수교사 등",
+  "view_count": 2368
+}
