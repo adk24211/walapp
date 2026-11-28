@@ -157,22 +157,28 @@ class Adapter(BaseAdapter):
         log.info("보조금24 수집 완료: %d건 (HTTP %d회)", len(records), self.calls)
         return records
 
-    def enrich(self, record) -> None:
-        """발행 직전에 이 제도의 상세만 1건 조회한다.
+    def enrich(self, record) -> bool:
+        """발행 직전에 이 제도의 상세만 1건 조회한다. 확인했으면 True.
 
         ⚠️ `content_hash` 를 다시 계산하지 않는다. 해시는 목록 응답만으로 만들며,
         여기서 채우는 구비서류·신청URL 을 해시에 넣으면 다음 날 전부 '변경됨' 으로
         잡힌다. (collect/adapters/base.py 의 enrich 주석 참고)
+
+        ⚠️ 요청이 실패하거나 상세가 비어 오면 False 를 돌려준다. 예전에는 조용히
+           return 했고, 호출부는 그걸 '확인했다' 로 받아 목록 값(구비서류·신청URL
+           빈 칸)으로 페이지와 레코드를 덮어썼다. 상태만 바뀐 날 9번 지워진 것과
+           같은 손실이 해설을 새로 만드는 경로에도 열려 있었다(아직 일어난 적은
+           없다 — 2026-11-28 리뷰에서 찾았다).
         """
         payload = self._request(
             DETAIL_ENDPOINT, 1, {f"cond[{ID_FIELD}::EQ]": record.source_id}, per_page=1
         )
         if payload is None:
-            return
+            return False
         rows = payload.get("data") or []
         if not rows:
-            log.info("상세 없음 [%s] — 목록 정보만으로 발행합니다.", record.id)
-            return
+            log.info("상세 없음 [%s] — 저장된 상세 값이 있으면 그것을 이어 씁니다.", record.id)
+            return False
         detail = rows[0]
 
         # 구비서류: 본 서류가 비면 본인확인/공무원확인 서류로 대체 (수집 때와 같은 순서)
@@ -185,6 +191,7 @@ class Adapter(BaseAdapter):
         apply_url = str(detail.get("온라인신청사이트URL") or "").strip()
         if apply_url:
             record.apply_url = apply_url
+        return True
 
     # ── 내부 ──
     def _fetch_all(

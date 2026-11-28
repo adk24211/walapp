@@ -117,9 +117,15 @@ def _write_one(
     adapter = adapters.get(record.source)
     if adapter is not None:
         try:
-            adapter.enrich(record)
+            confirmed = adapter.enrich(record)
         except Exception as e:
-            log.warning("상세 보강 실패 [%s]: %s — 목록 정보만으로 진행합니다.", record.id, e)
+            log.warning("상세 보강 실패 [%s]: %s — 저장된 상세 값을 이어 씁니다.", record.id, e)
+            confirmed = False
+        # 상세를 확인하지 못했으면 목록 값(빈 칸)으로 덮어쓰지 않는다.
+        # 확인했는데 비어 있는 칸은 원천에도 없는 것이므로 그대로 둔다 — 무조건
+        # 이어 쓰면 원천이 실제로 지운 서류를 되살리게 된다.
+        if confirmed is False:
+            _carry_enriched(record, registry.load_record(record.id))
 
     # 보강 뒤에도 필수 필드가 비면 발행하지 않는다. 지원대상 없는 빈 페이지를
     # 양산하느니 다음 실행에 다시 시도하는 편이 낫다.
@@ -203,6 +209,9 @@ def _carry_enriched(record: ProgramRecord, stored: ProgramRecord | None) -> None
        상태만 바뀐 제도를 다시 찍는 경로는 부르지 않고 **목록 값 그대로** 저장·
        렌더했다. 예정 → 시행중, 시행중 → 종료로 바뀐 날 그 제도의 구비서류 절이
        통째로 사라졌다 — 9건 모두 상태가 바뀐 날이었다.
+
+    _write_one 도 상세 조회가 **실패했을 때** 여기를 부른다(enrich 가 False).
+    성공했을 때는 부르지 않는다 — 그때 빈 칸은 원천이 실제로 비운 것이다.
 
     여기서 enrich 를 다시 부르지 않는 이유: 상세 조회는 한 건마다 HTTP 한 번이고,
     상태·링크만 바뀐 경로는 하루 수백 건이 될 수 있다(링크 교체 첫날 449건).
@@ -300,12 +309,21 @@ def _relink_one(
     그래도 없으면 False — 호출부는 **LLM 경로로 넘기지 않는다**(하루 갱신 상한을
     우회하게 되므로). 다음 실행에서 '변경' 으로 다시 잡힌다.
     """
+    entry = reg.get(record.id)
+    prev_status = entry.status if entry is not None else None
     if _rerender_stored(record, reg, today, dry_run, result) is None:
         return False
     # revision·last_updated 는 올리지 않는다. 원천이 링크 주소를 옮긴 것뿐이다.
     # 해시는 맞춰 둔다 — 안 그러면 내일 또 '변경' 으로 잡힌다.
     reg.mark_relinked(record, today.isoformat())
     result.relinked.append(record.id)
+    # 상태는 해시 대상이 아니라서, 링크와 마감이 같은 날 바뀐 제도는 상태변경이
+    # 아니라 여기로 온다. 페이지·원장은 새 상태로 맞지만 기록에서 빠지면 "오늘
+    # 종료된 제도 0건" 으로 보인다 — 링크 교체 첫날 대기열 459건 중 8건이 그랬다.
+    if prev_status is not None and prev_status != record.status:
+        result.restatused.append(record.id)
+        log.info("상태 갱신: %s → %s (링크 갱신과 함께)", record.name,
+                 schema.STATUS_LABELS.get(record.status, record.status))
     return True
 
 

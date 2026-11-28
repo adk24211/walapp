@@ -26,12 +26,29 @@
   · 링크와 내용이 함께 바뀐 제도, 해설이 없는 제도는 '변경' 으로 남는다
     (해설 없는 것을 저장분 경로로 보내면 하루 갱신 상한을 우회하게 된다).
   · 마감일이 지나 상태만 바뀐 제도는 다시 찍은 뒤에도 구비서류·신청URL 이 남는다.
+  · 해설을 새로 만드는 경로에서 상세 조회가 **실패하면** 저장된 상세 값을 이어
+    쓰고, 조회에 **성공했는데** 비어 있으면 되살리지 않는다.
+
+처음 만든 판에서 고친 것 (2026-11-28 리뷰)
+──────────────────────────────────────────
+  · 표본을 '저장 레코드와 원장 해시가 맞는 것' 에서만 뽑는다. reclassify_audiences
+    ·upgrade_urls 는 일부러 원장 해시를 안 맞춰 다음 동기화가 재생성하게 하는데,
+    그런 제도가 표본에 들면 진짜 코드는 바르게 '변경' 으로 잡는데도 이 검사가
+    실패하고 배포를 막았다. 그리고 엉뚱하게 mark_relinked 를 탓했다.
+  · 상태만 바뀐 절은 실제 마감일에 기대지 않는다. 데이터의 날짜는 전부 2026년이라
+    2027-01-01 부터는 후보가 없어 이 절이 조용히 건너뛰고 ✅ 를 냈을 것이다.
+    복사본 안에서 마감일을 만들어 넣고, 후보가 없으면 실패로 본다.
+  · 페이지에 '새 링크가 있다' 는 정확한 주소로 본다. 'plus.gov.kr' 이 들어 있는지만
+    보던 판은 표본 40건 중 39건이 이미 그 주소라 아무것도 확인하지 않았다.
+  · --inside 를 손으로 실제 저장소에서 돌리면 진짜 레코드를 망가뜨린다. 복사본
+    안에서만 돌도록 막았고, 실패하면 오류 전문을 보여 줘서 손으로 돌릴 일이 없게 했다.
 
     python3 scripts/check_rerender.py
 """
 from __future__ import annotations
 
 import copy
+import os
 import re
 import shutil
 import subprocess
@@ -44,6 +61,7 @@ ROOT = Path(__file__).parent.parent
 NEW_LINK = ("https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl"
             "?svcSeq=1&bnefType=all&svcId={}")
 SAMPLE = 40   # 링크 시험에 쓸 제도 수. 전량(수백 건)은 몇십 초가 걸려 표본으로 본다.
+SANDBOX_ENV = "WALAPP_RERENDER_SANDBOX"
 
 
 def outer() -> int:
@@ -53,16 +71,28 @@ def outer() -> int:
         for name in ("scripts", "_records", "_programs", "_data"):
             shutil.copytree(ROOT / name, tmp / name,
                             ignore=shutil.ignore_patterns("__pycache__"))
+        env = dict(os.environ, **{SANDBOX_ENV: str(tmp.resolve())})
         proc = subprocess.run([sys.executable, "-I", str(tmp / "scripts" / Path(__file__).name),
-                               "--inside"], cwd=tmp, capture_output=True, text=True)
+                               "--inside"], cwd=tmp, capture_output=True, text=True, env=env)
         out = [l for l in proc.stdout.splitlines() if l.strip()]
         print("\n".join(out))
         if proc.returncode != 0 and proc.stderr.strip():
-            print(proc.stderr.strip().splitlines()[-1])
+            # 전문을 보여 준다. 마지막 한 줄만 보여 줬더니 원인을 보려고 --inside 를
+            # 손으로 돌리고 싶어지는데, 그건 실제 저장소를 망가뜨린다(inside 의 가드).
+            print(proc.stderr.rstrip())
         return proc.returncode
 
 
 def inside() -> int:
+    # ⚠️ 복사본 안에서만 돈다. 이 함수는 레코드를 지우고 가짜 링크와 미래 날짜를
+    #    써 넣는다 — 실제 저장소에서 돌면 진짜 해설 하나가 지워지고 원장 확인일이
+    #    2030년이 된다(리뷰에서 재현됐다).
+    sandbox = os.environ.get(SANDBOX_ENV)
+    here = Path(__file__).resolve()
+    if not sandbox or Path(sandbox) not in here.parents:
+        print("✗ --inside 는 임시 복사본 안에서만 돕니다. 인자 없이 실행하세요:\n"
+              "    python3 scripts/check_rerender.py")
+        return 2
     sys.path.insert(0, str(Path(__file__).parent))
     import logging
     logging.disable(logging.CRITICAL)
@@ -87,10 +117,19 @@ def inside() -> int:
                 return [copy.copy(x) for x in rows]
         adapters.load_adapters = lambda mock=None: [Fake()]
 
+    reg0 = registry.Registry()
+
+    def consistent(pid, r) -> bool:
+        """저장 레코드(상세분을 비운 것)의 해시가 원장 해시와 같은가."""
+        e = reg0.get(pid)
+        return e is not None and schema.compute_hash(as_list_row(r)) == e.content_hash
+
     # ── ① 링크만 바뀐 날 ──
-    pool = [pid for pid, r in sorted(recs.items())
-            if registry.load_prose(pid) is not None and r.official_url
-            and (r.documents_raw or r.apply_url)]
+    eligible = [pid for pid, r in sorted(recs.items())
+                if registry.load_prose(pid) is not None and r.official_url
+                and any(getattr(r, f) for f in adapters.enriched_fields(r.source))]
+    pool = [pid for pid in eligible if consistent(pid, recs[pid])]
+    skipped = len(eligible) - len(pool)
     linked = pool[:SAMPLE]
     if len(linked) < 3:
         print("시험할 레코드가 모자랍니다.")
@@ -105,7 +144,8 @@ def inside() -> int:
             x.benefit_raw += " (금액 인상)"
         x.content_hash = schema.compute_hash(x)
         rows.append(x)
-    # 해설 없는 제도를 만든다 (복사본 안에서만)
+    # 해설 없는 제도를 만든다 (복사본 안에서만). ② 전에 되돌린다.
+    no_prose_text = registry.load_prose(no_prose)
     registry.save_record(recs[no_prose], None)
 
     reg = registry.Registry()
@@ -144,52 +184,119 @@ def inside() -> int:
         if registry.load_prose(pid) != prose_before[pid]:
             failures.append(f"{name}: 해설이 달라졌습니다")
         page = (registry.PROGRAMS_DIR / s.path()).read_text(encoding="utf-8")
-        if "plus.gov.kr" not in page:
-            failures.append(f"{name}: 페이지에 새 링크가 없습니다")
+        if f'official_url: "{NEW_LINK.format(s.source_id)}"' not in page:
+            failures.append(f"{name}: 페이지에 새 링크가 찍히지 않았습니다")
 
     feed(rows)
     res2 = sync.run(reg, today + timedelta(days=1))
-    again = {r.id for r in res2.relinked} | ({r.id for r in res2.changed} & expect)
+    # 첫날 링크 갱신을 거친 것만 본다. 첫날 '변경' 이었던 것은 mark_relinked 를
+    # 거치지 않았으니 이튿날 또 '변경' 인 게 맞다 — 그걸 세면 엉뚱한 함수를 탓한다.
+    again = relinked & ({r.id for r in res2.relinked} | {r.id for r in res2.changed})
     if again:
-        failures.append(f"이튿날 같은 목록인데 {len(again)}건이 또 바뀐 것으로 잡힙니다 — 원장 해시를 안 맞췄습니다")
+        failures.append(f"이튿날 같은 목록인데 링크 갱신분 {len(again)}건이 또 바뀐 것으로 "
+                        f"잡힙니다 — mark_relinked 가 원장 해시를 안 맞췄습니다")
     print(f"링크만 바뀐 날: 표본 {len(linked)}건 · 링크만변경 {len(relinked)} · 변경 {len(changed)} "
-          f"· 이튿날 다시 잡힘 {len(again)}")
+          f"· 이튿날 다시 잡힘 {len(again)}"
+          + (f" (원장과 해시가 안 맞아 표본에서 뺀 것 {skipped}건 — 다음 동기화가 재생성할 것들)"
+             if skipped else ""))
 
     # ── ② 상태만 바뀐 날 ──
+    # 실제 마감일에 기대지 않는다(데이터의 날짜가 다 지나면 후보가 사라진다).
+    # 복사본 안에서 몇 건에 2029년 기간을 넣고 원장 해시·상태를 맞춘 뒤, 2030-01-01
+    # 에 동기화한다. 그날 그 제도들은 내용 그대로 '종료' 로 바뀌어야 한다.
+    registry.save_record(registry.load_record(no_prose), no_prose_text)
+    reg = registry.Registry()
     recs = registry.load_all_records()
-    cands = sorted((r.apply_period.end, pid) for pid, r in recs.items()
-                   if r.status == "active" and r.apply_period.end
-                   and re.match(r"\d{4}-\d{2}-\d{2}$", r.apply_period.end)
-                   and registry.load_prose(pid) is not None
-                   and any(getattr(r, f) for f in adapters.enriched_fields(r.source)))
-    if not cands:
-        print("상태가 바뀔 시험 대상이 없습니다 — 이 절은 건너뜁니다.")
-    else:
-        end, _ = cands[-1]   # 가장 늦게 끝나는 것 — 그날이 지나면 앞의 것들도 함께 바뀐다
-        day = date.fromisoformat(end) + timedelta(days=1)
-        rows = []
-        for pid, r in sorted(recs.items()):
-            x = as_list_row(r)
-            x.content_hash = schema.compute_hash(x)
-            rows.append(x)
-        reg = registry.Registry()
-        feed(rows)
-        res = sync.run(reg, day)
-        ids = [r.id for r in res.restatused]
-        before = {pid: registry.load_record(pid) for pid in ids}
-        publish.run([], [], reg, day, client=None, restatused_records=res.restatused)
-        lost = []
-        for pid in ids:
-            s, b = registry.load_record(pid), before[pid]
-            for f in adapters.enriched_fields(s.source):
-                if getattr(b, f) and not getattr(s, f):
-                    lost.append(f"{s.name[:24]} ({f})")
-        if not ids:
-            failures.append("마감일을 넘겼는데 상태만 바뀐 제도가 하나도 잡히지 않았습니다")
-        if lost:
-            failures.append(f"상태만 바뀌어 다시 찍은 {len(ids)}건 중 {len(lost)}곳에서 상세분이 "
-                            f"지워졌습니다: {', '.join(lost[:4])}")
-        print(f"상태만 바뀐 날({day}): {len(ids)}건 다시 찍음 · 상세분 사라짐 {len(lost)}")
+    controls = {both, no_prose} | set(linked)
+    planted = [pid for pid in pool if pid not in controls][:3]
+    for pid in planted:
+        r = recs[pid]
+        r.apply_period.always = False
+        r.apply_period.start, r.apply_period.end = "2029-01-01", "2029-12-31"
+        r.status = schema.resolve_status(r, date(2029, 6, 1))
+        registry.save_record(r, registry.load_prose(pid))
+        e = reg.get(pid)
+        e.content_hash = schema.compute_hash(as_list_row(r))
+        e.status = r.status
+    reg.save()
+    day = date(2030, 1, 1)
+    rows = []
+    for pid, r in sorted(registry.load_all_records().items()):
+        x = as_list_row(r)
+        x.content_hash = schema.compute_hash(x)
+        rows.append(x)
+    reg = registry.Registry()
+    feed(rows)
+    res = sync.run(reg, day)
+    ids = [r.id for r in res.restatused]
+    before = {pid: registry.load_record(pid) for pid in ids}
+    publish.run([], [], reg, day, client=None, restatused_records=res.restatused)
+    lost = []
+    for pid in ids:
+        s, b = registry.load_record(pid), before[pid]
+        for f in adapters.enriched_fields(s.source):
+            if getattr(b, f) and not getattr(s, f):
+                lost.append(f"{s.name[:24]} ({f})")
+    missing = [pid for pid in planted if pid not in ids]
+    if len(planted) < 3:
+        failures.append(f"상태 시험에 쓸 제도가 모자랍니다 ({len(planted)}건)")
+    if missing:
+        failures.append(f"기간을 넣어 둔 {len(missing)}건이 마감 다음 날 '상태변경' 으로 잡히지 않았습니다")
+    if lost:
+        failures.append(f"상태만 바뀌어 다시 찍은 {len(ids)}건 중 {len(lost)}곳에서 상세분이 "
+                        f"지워졌습니다: {', '.join(lost[:4])}")
+    print(f"상태만 바뀐 날({day}): {len(ids)}건 다시 찍음(심어 둔 {len(planted)}건 포함) "
+          f"· 상세분 사라짐 {len(lost)}")
+
+    # ── ③ 해설을 새로 만드는데 상세 조회가 실패한 날 ──
+    # 진짜 _write_one 을 오프라인 생성기(client=None)로 돌린다. 상세 조회만 가짜로
+    # 바꿔 끼운다: 실패(False) · 예외 · 성공했는데 비어 있음(True).
+    reg = registry.Registry()
+    recs = registry.load_all_records()
+    trio = [pid for pid in pool if pid not in controls and pid not in planted][:3]
+    outcomes = {}
+    for pid, mode in zip(trio, ("fail", "raise", "empty")):
+        stored = recs[pid]
+        # ⚠️ 가짜 어댑터도 진짜와 같은 enriched_fields 를 가져야 한다. 활성 인스턴스가
+        #    있으면 enriched_fields() 가 그걸 읽으므로, 빠뜨리면 빈 튜플이 되어 아래
+        #    비교가 전부 '아무것도 안 봄 = 통과' 가 된다(처음 짰을 때 그랬다).
+        fields = adapters.enriched_fields(stored.source)
+        class Enricher:
+            source = stored.source
+            enriched_fields = fields
+            def enrich(self, record, _mode=mode):  # noqa: E306
+                if _mode == "raise":
+                    raise TimeoutError("상세 조회 시간 초과(시험)")
+                return _mode == "empty"
+        adapters._ACTIVE[stored.source] = Enricher()
+        x = as_list_row(stored)
+        x.benefit_raw += " (내용 변경 — 시험)"
+        x.content_hash = schema.compute_hash(x)
+        wr = publish.WriteResult()
+        publish._write_one(x, reg, day, None, True, False, wr)
+        if pid not in wr.updated:
+            # 저장하지 않고 반려됐다면 아래 비교는 아무것도 확인하지 않는다.
+            failures.append(f"상세 조회 시험({mode}): _write_one 이 갱신하지 않았습니다 — "
+                            f"{(wr.rejected or [{}])[0].get('reason', '이유 없음')}")
+            continue
+        after = registry.load_record(pid)
+        compared = [f for f in fields if getattr(stored, f)]
+        if not compared:
+            failures.append(f"상세 조회 시험({mode}): 비교할 상세분이 없는 제도를 골랐습니다")
+            continue
+        outcomes[mode] = all(getattr(after, f) == getattr(stored, f) for f in compared)
+    adapters._ACTIVE.clear()
+    if len(outcomes) < 3:
+        failures.append(f"상세 조회 시험에 쓸 제도가 모자랍니다 ({len(outcomes)}건)")
+    if not outcomes.get("fail", True):
+        failures.append("상세 조회가 실패(False)했는데 저장된 구비서류·신청URL 이 지워졌습니다")
+    if not outcomes.get("raise", True):
+        failures.append("상세 조회가 예외를 냈는데 저장된 구비서류·신청URL 이 지워졌습니다")
+    if outcomes.get("empty", False):
+        failures.append("상세 조회에 성공했고 비어 있었는데 저장된 값을 되살렸습니다 — "
+                        "원천이 실제로 지운 서류가 다시 나옵니다")
+    print("상세 조회 실패한 날: " + " · ".join(
+        f"{m} → {'이어 씀' if k else '비움'}" for m, k in outcomes.items()))
 
     if failures:
         print()
@@ -197,7 +304,7 @@ def inside() -> int:
             print(f"  ✗ {f}")
         print(f"\n저장분으로 다시 찍는 경로에 문제가 있습니다 — {len(failures)}건.")
         return 1
-    print("\n✅ 저장분으로 다시 찍는 두 경로가 링크·상세분·판·확인일을 바르게 다룹니다.")
+    print("\n✅ 저장분으로 다시 찍는 경로와 상세 조회 실패 처리가 링크·상세분·판·확인일을 바르게 다룹니다.")
     return 0
 
 
