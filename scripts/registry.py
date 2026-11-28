@@ -161,6 +161,24 @@ class Registry:
     # 그건 피할 수 없는 비용이고, mark_updated 가 원장을 수집 시점 해시로
     # 되돌려 놓으므로 한 번으로 끝난다.
 
+    def mark_relinked(self, record: ProgramRecord, today: str) -> None:
+        """상세 링크만 바뀌어 저장분으로 다시 찍었을 때.
+
+        revision·last_updated·경로는 그대로 둔다. 제도 내용이 바뀐 게 아니라 원천이
+        링크 주소를 옮긴 것이다(sync._link_only 주석 참고).
+
+        ⚠️ 아래 경고의 '원장 해시만 맞추는 함수' 와 다르다. 그 함수는 **저장된
+           레코드에서 다시 계산한** 해시를 썼다. 여기서 쓰는 record.content_hash
+           는 오늘 수집 단계가 원천 값으로 계산한 해시다 — mark_updated 가 쓰는
+           것과 같은 값이다. 이걸 맞춰 두지 않으면 다음 날 또 '변경' 으로 잡힌다.
+        """
+        entry = self.entries.get(record.id)
+        if entry is None:
+            return
+        entry.content_hash = record.content_hash
+        entry.last_checked = today
+        entry.status = record.status
+
     def mark_checked(self, program_id: str, today: str, status: str | None = None) -> None:
         """내용은 그대로고 확인만 했을 때. revision 은 올리지 않는다."""
         entry = self.entries.get(program_id)

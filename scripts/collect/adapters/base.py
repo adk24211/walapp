@@ -23,6 +23,11 @@ class BaseAdapter:
     """
 
     source: str = "unknown"
+    # enrich() 가 상세 조회로 채우는 필드. 목록만 받은 레코드에는 이 값들이 비어
+    # 있으므로, 해설을 다시 만들지 않고 저장분으로 다시 찍는 경로(상태만 바뀜 ·
+    # 링크만 바뀜)는 이 필드들을 **저장된 레코드에서** 가져와야 한다.
+    # (publish._carry_enriched 주석 참고 — 이걸 몰라 구비서류가 9번 지워졌다)
+    enriched_fields: tuple[str, ...] = ()
 
     def fetch(self, limit: int | None = None) -> list[ProgramRecord]:
         raise NotImplementedError

@@ -272,6 +272,13 @@ jobs:
       - name: Check pages against the registry
         run: python scripts/check_pages.py --site _site_check
 
+      # 해설을 다시 만들지 않고 저장분으로 다시 찍는 두 경로(상태만 바뀜 · 상세
+      # 링크만 바뀜). 앞의 것은 구비서류·신청 링크를 9번 지웠고, 뒤의 것이 없어서
+      # 원천의 링크 교체 한 번에 확인일 449건이 30일을 넘겼다. 실제 레코드 복사본에서
+      # 진짜 코드로 돌린다 — API·LLM 은 부르지 않는다. 1초 안팎.
+      - name: Check stored re-render paths
+        run: python scripts/check_rerender.py
+
       - name: Check fact verification
         run: python scripts/check_verify.py
 

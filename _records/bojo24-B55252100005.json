@@ -28,12 +28,14 @@
   "content_hash": "sha256:400705cf309401ade0ec8b7774539d49",
   "criteria_raw": "",
   "deferred_detail": false,
-  "documents_raw": [],
+  "documents_raw": [
+    "한국중부발전 홈페이지 내 홍보자료 및 홍보 현수막 참고"
+  ],
   "first_published": "2026-08-13",
   "how_to_raw": "방문신청",
   "id": "bojo24-B55252100005",
   "is_mock": false,
-  "last_checked": "2026-09-30",
+  "last_checked": "2026-10-28",
   "last_updated": "2026-09-06",
   "law_raw": "",
   "name": "발전소주변지역 장학금 지원(보령발전본부)",

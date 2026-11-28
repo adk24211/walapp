@@ -40,12 +40,14 @@
   "content_hash": "sha256:268a5d82eb716bfa37bbc46df1a6b4f5",
   "criteria_raw": "",
   "deferred_detail": false,
-  "documents_raw": [],
+  "documents_raw": [
+    "해당없음"
+  ],
   "first_published": "2026-08-14",
   "how_to_raw": "신청불필요",
   "id": "bojo24-O00096800006",
   "is_mock": false,
-  "last_checked": "2026-10-01",
+  "last_checked": "2026-10-28",
   "last_updated": "2026-09-09",
   "law_raw": "",
   "name": "고교 진학 후 성적우수 학생 장학금",

@@ -113,6 +113,8 @@ CONDITION_CODE_LABELS: dict[str, str] = {}
 
 class Adapter(BaseAdapter):
     source = "bojo24"
+    # enrich() 가 채우는 것과 정확히 같아야 한다. 하나를 더 채우게 되면 여기도 늘릴 것.
+    enriched_fields = ("documents_raw", "apply_url")
 
     def __init__(self, api_key: str | None = None, since: str | None = None):
         self.api_key = api_key or os.environ.get("DATA_GO_KR_API_KEY", "")
