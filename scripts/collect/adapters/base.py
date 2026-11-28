@@ -23,6 +23,11 @@ class BaseAdapter:
     """
 
     source: str = "unknown"
+    # enrich() 가 상세 조회로 채우는 필드. 목록만 받은 레코드에는 이 값들이 비어
+    # 있으므로, 해설을 다시 만들지 않고 저장분으로 다시 찍는 경로(상태만 바뀜 ·
+    # 링크만 바뀜)는 이 필드들을 **저장된 레코드에서** 가져와야 한다.
+    # (publish._carry_enriched 주석 참고 — 이걸 몰라 구비서류가 9번 지워졌다)
+    enriched_fields: tuple[str, ...] = ()
 
     def fetch(self, limit: int | None = None) -> list[ProgramRecord]:
         raise NotImplementedError
@@ -35,6 +40,13 @@ class BaseAdapter:
 
         ⚠️ 구현할 때 `content_hash` 를 다시 계산하지 말 것. 동기화는 목록 응답만으로
         해시를 만들므로, 보강분을 해시에 넣으면 다음 날 전부 '변경됨'으로 잡힌다.
+
+        돌려주는 값:
+          True  — 상세를 확인했다. 비어 있는 칸은 원천에도 없는 것이다.
+          False — 상세를 **확인하지 못했다**(요청 실패·응답 없음). 호출부는 저장된
+                  레코드의 값을 이어 쓴다(publish._carry_enriched). 안 그러면 목록
+                  값(빈 칸)으로 저장돼 구비서류·신청 링크가 지워진다.
+          None  — 보강할 것이 없는 원천(기본).
         """
         return None
 

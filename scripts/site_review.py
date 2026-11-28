@@ -278,6 +278,7 @@ def run_checks() -> list[dict]:
         ("대상 덮어쓰기", [sys.executable, "scripts/check_overrides.py"]),
         ("사실 검증", [sys.executable, "scripts/check_verify.py"]),
         ("공개 주장", [sys.executable, "scripts/check_claims.py"]),
+        ("저장분 재렌더", [sys.executable, "scripts/check_rerender.py"]),
         ("신청기한 파서", [sys.executable, "scripts/check_period.py"]),
     ]
     built = (ROOT / "_site_check").exists() or (ROOT / "_site").exists()

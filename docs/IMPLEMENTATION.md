@@ -260,7 +260,7 @@ scripts/
 ├── schema.py             ProgramRecord 표준 스키마 + content_hash + slug
 ├── taxonomy.py           분야 7 · 대상 8 · 지역 18 (Liquid 로 내보냄)
 ├── registry.py           발행 원장 · 레코드 저장소 · 유사도 판정      ★ 중복 방지의 뿌리
-├── sync.py               ① 원천 → 원장 대조 → 신규/변경/동일/격리
+├── sync.py               ① 원천 → 원장 대조 → 신규/변경/링크만변경/상태변경/동일/격리
 ├── queueing.py           ② 우선순위 점수 (지역·대상·마감·신설·제도명)
 ├── generate_program.py   ③ 해설 프롬프트 + 오프라인 폴백
 ├── verify.py             ③ 수치 후검증                                ★ 환각 차단
@@ -281,6 +281,7 @@ scripts/
 ├── scripts/check_audience.py  대상 분류 회귀 케이스 38건 ★ 키워드를 만지면 먼저 돌린다 (CI)
 ├── scripts/check_overrides.py 손으로 적은 대상 덮어쓰기가 아직 근거와 맞는지 (CI)
 ├── scripts/check_pages.py     페이지와 원장이 같은 말을 하는지 — 중복 주소·보이지 않는 제도·화면의 확인일 (CI)
+├── scripts/check_rerender.py  저장분으로 다시 찍는 경로(상태만·링크만 바뀜)가 상세분·판·확인일을 지키는지 (CI)
 ├── scripts/site_review.py     사이트를 훑어 고칠 거리를 우선순위대로 ★ 매일 06시 루틴이 이걸로 시작한다
 ├── scripts/restore_thinner.py 재생성이 오히려 얇게 만든 페이지를 되살린다 (토큰 0)
 ├── scripts/reslug.py          slug 규칙을 고친 뒤 저장된 레코드에 반영한다 (토큰 0 · 주소가 바뀐다)
@@ -290,7 +291,7 @@ scripts/
 (데일리 워크플로는 내용 동기화라 매일 크로미움을 받을 일이 없습니다). **CSS 를
 고치면 두 개를 로컬에서 돌리고 머지합니다.** CI 가 도는 것은 브라우저가 필요 없는
 것들입니다 — `check_inline_js` · `check_seo` · `check_verify` · `check_claims` ·
-`check_overrides` · `check_audience` · `check_pages`.
+`check_overrides` · `check_audience` · `check_pages` · `check_rerender`.
 
 `_data/review_history.json` 은 매일 07:00 동기화 워크플로가 남깁니다. 매일 아침
 점검 루틴은 컨테이너가 매번 새로 뜨는 일회성 세션이라 이력을 커밋하지 못해,
@@ -451,7 +452,11 @@ odcloud 를 흉내내는 로컬 서버로 세 경우를 검증했습니다.
 
 매일 KST 07:00 에 돕니다. 로그에서 볼 항목입니다.
 
-- **`동기화 결과`** — `필드누락` 이 크면 `신청기한` 파싱이나 복지로 `enrich()` 문제
+- **`동기화 결과`** — `필드누락` 이 크면 `신청기한` 파싱이나 복지로 `enrich()` 문제.
+  `변경` 이 수백 건으로 튀면 원천이 무언가를 일괄로 바꾼 것이다 — 2026-10-28 에
+  상세 링크(gov.kr → plus.gov.kr)가 그랬다. 링크만 바뀐 것은 `링크만변경` 으로
+  따로 잡혀 저장된 해설로 다시 찍히므로(토큰 0) `변경` 에 남지 않아야 한다.
+  `변경` 이 계속 크면 링크 말고 다른 필드가 일괄로 바뀐 것이니 원인부터 볼 것
 - **`반려 N`** — 복지로는 상세 조회가 하루 100회 제한이라, 후보에 복지로 제도가
   몰리면 일부가 반려됩니다
 - **`예정` 건수** — 0건일 수 있습니다. 보조금24 `신청기한` 은 "상시", "예산 소진

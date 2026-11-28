@@ -3,6 +3,7 @@
 레코드를 4개 통으로 나눈다:
   new       — 원장에 없음                    → 발행 후보
   changed   — 있는데 content_hash 다름        → 갱신 후보
+  relinked  — 해시가 다른 이유가 상세 링크뿐  → 저장된 해설로 다시 찍기 (토큰 0)
   unchanged — 있고 해시도 같음                → last_checked 만 갱신
   blocked   — 필수 필드 누락 / 유사 제도 의심 → 격리, 발행하지 않음
 
@@ -12,6 +13,7 @@
 """
 from __future__ import annotations
 
+import copy
 import logging
 from collections import Counter
 from dataclasses import dataclass, field
@@ -65,6 +67,66 @@ def _keep_verified_https(record: ProgramRecord, stored: ProgramRecord | None) ->
             restored = True
     if restored:
         record.content_hash = schema.compute_hash(record)
+
+
+# 원천이 바꿔도 해설을 다시 만들 필요가 없는 필드.
+#
+# ⚠️ official_url 하나뿐이다. apply_url 을 넣고 싶어지겠지만 안 된다 —
+#    보조금24 는 신청 URL 을 목록이 아니라 상세 조회(enrich)에서 채우므로,
+#    저장된 레코드의 apply_url 은 '지난번 목록 값' 이 아니라 '상세 값' 이다.
+#    그걸로 아래의 반사실 해시를 만들면 원장 해시(목록 값으로 만든 것)와 절대
+#    맞지 않아, 판정이 조용히 늘 거짓이 된다. official_url 은 목록에 있고
+#    enrich 가 건드리지 않으므로 저장값이 곧 지난번 목록 값이다.
+LINK_ONLY_FIELDS = ("official_url",)
+
+
+def _link_only(record: ProgramRecord, existing_hash: str,
+               stored: ProgramRecord | None) -> bool:
+    """해시가 달라진 이유가 **상세 링크뿐인가.**
+
+    왜 필요했나
+    ───────────
+    2026-10-28 에 보조금24 가 모든 제도의 상세조회URL 을 바꿨다.
+
+        www.gov.kr/portal/rcvfvrSvc/dtlEx/<id>
+      → plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=…&svcId=<id>
+
+    official_url 은 해시 대상이라 그날부터 발행된 제도 788건 중 650건이 '변경' 으로
+    잡혔다. 변경은 해설을 다시 만드는 경로라 하루 10건(REFRESH_LIMIT)씩 LLM 을
+    태웠고, 남은 것을 다 치우려면 64일·토큰 약 290만이 들 판이었다. 그동안:
+
+      · 대기 중인 제도는 확인일이 10-28 에 멈췄다(변경을 알았지만 반영 못 했으니
+        '오늘 대조했다' 고 적을 수 없다). 11-27 에 449건이 한꺼번에 30일을 넘겼다.
+      · 화면에는 옛 gov.kr 링크가 그대로 나갔다.
+      · 하루 10건의 갱신 몫을 링크 교체가 다 먹어, **진짜 내용이 바뀐 제도**가
+        같은 줄 뒤에서 기다렸다.
+
+    링크는 템플릿이 찍는 값이고 해설(LLM 이 쓴 문장)에는 들어가지 않는다.
+    (저장된 해설 893건 중 gov.kr 이 나오는 것 0건 — 2026-11-28 확인)
+    그러니 해설을 다시 만들 이유가 없다. 상태만 바뀐 제도처럼 저장분으로 다시 찍는다.
+
+    어떻게 가리나
+    ─────────────
+    필드를 하나씩 비교하지 않는다. 저장된 레코드에는 상세 조회로 채운 값
+    (구비서류·신청URL)이 들어 있어 목록만 받은 오늘 레코드와 늘 다르다.
+    대신 **오늘 레코드의 링크만 저장된 링크로 되돌려 해시를 다시 만든다.**
+    그 해시가 원장 해시와 같으면, 지난번 수집과 오늘 수집의 차이는 링크뿐이다.
+    다른 필드가 하나라도 바뀌었으면 해시가 안 맞아 원래대로 '변경' 이 된다.
+
+    저장된 해설이 없으면 다시 찍을 수 없으므로 거짓을 돌려준다 — 그 제도는
+    '변경' 으로 남아 REFRESH_LIMIT 안에서 처리된다. 여기서 LLM 경로로 넘기면
+    하루 상한을 우회하게 된다.
+    """
+    if stored is None or not existing_hash:
+        return False
+    if all(getattr(record, f) == getattr(stored, f) for f in LINK_ONLY_FIELDS):
+        return False  # 링크는 그대로인데 해시가 다르다 — 다른 무언가가 바뀌었다
+    counterfactual = copy.copy(record)
+    for f in LINK_ONLY_FIELDS:
+        setattr(counterfactual, f, getattr(stored, f))
+    if schema.compute_hash(counterfactual) != existing_hash:
+        return False
+    return registry.load_prose(record.id) is not None
 
 
 @dataclass
@@ -126,6 +188,8 @@ class SyncResult:
     # 내용은 그대로인데 상태만 바뀐 것 (시행중 → 종료 / 예정 → 시행중).
     # 해설을 다시 만들지 않고 저장분으로 페이지만 다시 찍는다.
     restatused: list[ProgramRecord] = field(default_factory=list)
+    # 해시가 다른 이유가 상세 링크뿐인 것. 역시 저장분으로 다시 찍는다(_link_only).
+    relinked: list[ProgramRecord] = field(default_factory=list)
     unchanged: list[ProgramRecord] = field(default_factory=list)
     incomplete: list[dict] = field(default_factory=list)
     review_needed: list[dict] = field(default_factory=list)
@@ -136,11 +200,12 @@ class SyncResult:
     @property
     def total(self) -> int:
         return (len(self.new) + len(self.changed) + len(self.restatused)
-                + len(self.unchanged) + len(self.incomplete)
+                + len(self.relinked) + len(self.unchanged) + len(self.incomplete)
                 + len(self.review_needed) + self.out_of_scope)
 
     def summary(self) -> str:
         text = (f"신규 {len(self.new)} · 변경 {len(self.changed)} "
+                f"· 링크만변경 {len(self.relinked)} "
                 f"· 상태변경 {len(self.restatused)} · 동일 {len(self.unchanged)} "
                 f"· 필드누락 {len(self.incomplete)} · 유사검토 {len(self.review_needed)}")
         if self.out_of_scope:
@@ -220,9 +285,14 @@ def run(
                 record.revision = existing.revision
                 # ⚠️ 원장 항목(existing)이 아니라 저장된 레코드를 넘긴다.
                 #    원장에는 주소 필드가 없다 — 자세한 이유는 함수 주석.
-                _keep_verified_https(record, registry.load_record(record.id))
+                stored = registry.load_record(record.id)
+                _keep_verified_https(record, stored)
                 if existing.content_hash != record.content_hash:
-                    result.changed.append(record)
+                    if _link_only(record, existing.content_hash, stored):
+                        record.last_updated = existing.last_updated
+                        result.relinked.append(record)
+                    else:
+                        result.changed.append(record)
                 elif existing.status != record.status:
                     # 내용은 그대로인데 날짜가 지나 상태만 바뀐 경우
                     # (예: 어제까지 시행중 → 오늘부터 종료).

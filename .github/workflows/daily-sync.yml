@@ -133,6 +133,17 @@ jobs:
       #    되돌리고 PER_THEME_LIMIT 을 5 로 올릴 것. 지금 값이면 하루
       #    발행 10~12건 + 재생성 8건 ≈ 20건으로, 한 실행 몫 안에 들어간다.
       #    밀린 51건은 대략 일주일이면 없어진다.
+      # 해설을 다시 만들지 않고 저장분으로 다시 찍는 경로(상태만 바뀜 · 상세 링크만
+      # 바뀜)와, 상세 조회가 실패했을 때의 처리. 앞의 것은 구비서류·신청 링크를 9번
+      # 지웠고, 링크 경로가 없어서 원천의 링크 교체 한 번에 확인일 449건이 30일을
+      # 넘겼다. 실제 레코드 복사본에서 진짜 코드로 돌린다 — API·LLM 은 부르지 않는다.
+      #
+      # ⚠️ 파이프라인보다 **앞에** 둔다. 빌드 뒤에 두면 이 경로가 망가진 날 동기화가
+      #    먼저 돌아 진짜 레코드의 상세분을 지우고 커밋·푸시까지 한 뒤에야 걸린다.
+      #    그러면 고친 뒤에도 되가져올 저장값이 이미 비어 있다.
+      - name: Check stored re-render paths
+        run: python scripts/check_rerender.py
+
       - name: Regenerate a few thin pages first
         if: ${{ github.event.inputs.mode != 'regenerate' && github.event.inputs.dry_run != 'true' }}
         continue-on-error: true

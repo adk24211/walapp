@@ -52,6 +52,33 @@ def get(source: str):
     return _ACTIVE.get(source)
 
 
+def enriched_fields(source: str) -> tuple[str, ...]:
+    """그 원천의 enrich() 가 상세 조회로 채우는 필드. 없으면 빈 튜플.
+
+    ⚠️ get() 처럼 '이번 실행에 켜진 인스턴스' 에 기대지 않는다. 그러면 어댑터를
+       불러오지 않은 프로세스(점검 스크립트·시험)에서 조용히 빈 튜플이 되고,
+       저장분으로 다시 찍는 경로가 구비서류·신청 링크를 또 지운다 — 처음 이
+       장치를 시험할 때 정확히 그렇게 됐다. 그래서 인스턴스가 없으면 모듈의
+       클래스 속성을 읽는다(인스턴스를 만들지 않으므로 API 키가 없어도 된다).
+    """
+    from importlib import import_module
+
+    instance = _ACTIVE.get(source)
+    if instance is not None:
+        return tuple(getattr(instance, "enriched_fields", ()))
+    module_path = (REAL_ADAPTERS.get(source)
+                   or (OPTIONAL_ADAPTERS.get(source) or (None,))[0]
+                   or MOCK_ADAPTERS.get(source))
+    if not module_path:
+        return ()
+    try:
+        cls = import_module(module_path).Adapter
+    except Exception as e:
+        log.error("어댑터 모듈을 읽지 못했습니다 [%s]: %s", source, e)
+        return ()
+    return tuple(getattr(cls, "enriched_fields", ()))
+
+
 def load_adapters(mock: bool | None = None) -> list:
     """활성 어댑터 인스턴스 목록."""
     from importlib import import_module

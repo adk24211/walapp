@@ -31,12 +31,14 @@
   "content_hash": "sha256:febfeef1dee593e810b875666dfba5eb",
   "criteria_raw": "",
   "deferred_detail": false,
-  "documents_raw": [],
+  "documents_raw": [
+    "해당없음"
+  ],
   "first_published": "2026-08-14",
   "how_to_raw": "신청불필요",
   "id": "bojo24-O00096800004",
   "is_mock": false,
-  "last_checked": "2026-10-01",
+  "last_checked": "2026-10-28",
   "last_updated": "2026-09-09",
   "law_raw": "",
   "name": "학업성취도 향상 고등학생 장학금",

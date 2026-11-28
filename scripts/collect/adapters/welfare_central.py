@@ -125,6 +125,9 @@ def _pick(row: dict, aliases: tuple[str, ...]) -> str:
 
 class Adapter(BaseAdapter):
     source = "welfare-central"
+    # enrich() 가 채우는 것과 정확히 같아야 한다.
+    enriched_fields = ("target_raw", "benefit_raw", "criteria_raw", "how_to_raw",
+                       "contact_raw", "law_raw", "documents_raw")
 
     def __init__(self, api_key: str | None = None):
         self.api_key = api_key or os.environ.get("DATA_GO_KR_API_KEY", "")

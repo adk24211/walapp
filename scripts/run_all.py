@@ -233,7 +233,7 @@ def main() -> int:
 
     to_refresh = result.changed[:refresh_limit]
 
-    if not to_publish and not to_refresh and not result.restatused:
+    if not to_publish and not to_refresh and not result.restatused and not result.relinked:
         log.info("발행할 것도 갱신할 것도 없습니다. 오늘은 아무것도 쓰지 않습니다.")
         _export_taxonomy()
         if not dry_run:
@@ -253,11 +253,17 @@ def main() -> int:
     if result.restatused:
         log.info("상태 변경 %d건 — 저장된 해설로 다시 찍습니다 (LLM 미사용).",
                  len(result.restatused))
+    # 상세 링크만 바뀐 것도 상한을 두지 않는다. 같은 이유다 — LLM 을 쓰지 않고,
+    # 밀려 있는 동안 화면은 옛 링크와 멈춘 확인일을 보여 준다(sync._link_only).
+    if result.relinked:
+        log.info("상세 링크만 바뀐 것 %d건 — 저장된 해설로 다시 찍습니다 (LLM 미사용).",
+                 len(result.relinked))
 
     client = _groq_client()
     try:
         write_result = publish.run(to_publish, to_refresh, reg, today, client, dry_run,
-                                   restatused_records=result.restatused)
+                                   restatused_records=result.restatused,
+                                   relinked_records=result.relinked)
     except generate_program.ModelUnavailable as e:
         # 제도 하나의 문제가 아니라 설정이 깨진 것이다. 조용히 넘어가면 오늘
         # 후보 전부가 반려로만 남고, 아무도 모르는 채 며칠이 지난다.
