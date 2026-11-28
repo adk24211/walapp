@@ -29,7 +29,7 @@
   "benefit_raw": "발전소주변지역 지역주민 자녀 대상 취약계층 및 성적우수자 장학금 지원",
   "category": "education",
   "contact_raw": "경영기획부/070-7511-4122",
-  "content_hash": "sha256:7c11b8327b536c4e3544b06b0ff42500",
+  "content_hash": "sha256:51a6f77f3c00b2316ef0c0aa85710823",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -53,11 +53,11 @@
   "how_to_raw": "신청불필요",
   "id": "bojo24-B55252100003",
   "is_mock": false,
-  "last_checked": "2026-10-28",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-06",
   "law_raw": "",
   "name": "발전소 주변지역 장학금 지원(인천)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252100003",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001304&bnefType=all&svcId=B55252100003",
   "org": "한국중부발전(주)",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -72,7 +72,7 @@
   "source_category_raw": "보육·교육 현금(장학금) 개인",
   "source_id": "B55252100003",
   "source_registered": "",
-  "status": "active",
+  "status": "closed",
   "target_raw": "인천발전본부 반경 5km 이내 중고등학교에 재학중인 인천시 실거주 1년 이상인 자의 자녀 및 본인으로 취약계층 및 모범학생",
-  "view_count": 838
+  "view_count": 1007
 }

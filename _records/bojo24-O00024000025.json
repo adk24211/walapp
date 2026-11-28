@@ -26,7 +26,7 @@
   "benefit_raw": "「노인복지법」에 따른 만 65세 이상의 자 20% 할인",
   "category": "living",
   "contact_raw": "용산 제주유스호스텔/064-738-9502",
-  "content_hash": "sha256:8818256f91c5de8d3d227281129ee657",
+  "content_hash": "sha256:b2430c287cc0d98d59eaf6b9618a0032",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -36,11 +36,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-O00024000025",
   "is_mock": false,
-  "last_checked": "2026-09-15",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-15",
   "law_raw": "",
   "name": "용산제주유스호스텔 할인(경로)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00024000025",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000523&bnefType=all&svcId=O00024000025",
   "org": "용산구시설관리공단",
   "primary_audience": "senior",
   "receiver_raw": "",
@@ -49,7 +49,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "용산제주유스호스텔-할인-경로",
   "source": "bojo24",
   "source_category_raw": "문화·환경 시설이용 개인",
@@ -57,5 +57,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "주민등록 등본 상 만 65세 이상 어르신",
-  "view_count": 708
+  "view_count": 774
 }

@@ -37,7 +37,7 @@
   "benefit_raw": "주차시설 이용료 감면(50%)",
   "category": "living",
   "contact_raw": "안전시설팀/031-230-3251",
-  "content_hash": "sha256:dae551d2e0aed334111986e539887ab5",
+  "content_hash": "sha256:47bfbb91ed4ace9fee984f2410863ca9",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -47,11 +47,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-O00045000004",
   "is_mock": false,
-  "last_checked": "2026-09-02",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-02",
   "law_raw": "",
   "name": "경기아트센터 주차장 이용요금 감면",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045000004",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001584&bnefType=all&svcId=O00045000004",
   "org": "재단법인경기아트센터",
   "primary_audience": "disabled",
   "receiver_raw": "",
@@ -60,7 +60,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "경기아트센터-주차장-이용요금-감면",
   "source": "bojo24",
   "source_category_raw": "생활안정 시설이용 개인",
@@ -68,5 +68,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 장애인 차량(장애인 사용 자동차등표지 부착차량 및 장애인 등록증 제시 차량)\n\n○ 경차(배기량 1,000cc 미만 소형자동차)\n\n○ 국가유공자 차량(국가유공자증 또는 국가유공자유족증 제시 차량)\n\n○ 저공해자동차(저공해자동차 표지부착 차량)\n\n○ 원자폭탄 피해자 차량(원폭피해자 등록증 및 원폭피해자 후손 등록증 제시 차량)\n\n○ 다자녀가구 차량(다자녀가구 우대카드 소지자 또는 다자녀가구임을 증명할 수 있는 서류를 제시한 차량)",
-  "view_count": 3798
+  "view_count": 4047
 }

@@ -40,7 +40,7 @@
   "benefit_raw": "○ 기저귀(월 9만원) ･ 조제분유(월 11만원) 구매비용을 국민행복카드에 바우처 포인트로 지급",
   "category": "care",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:bc2fdd62b914efbf85beb37856982d32",
+  "content_hash": "sha256:fb087bccba363db4be751a3d7ee11e8f",
   "criteria_raw": "○ 기저귀는 만2세 미만의 영아를 둔 기초생활보장, 차상위계층, 한부모가족 수급 가구, 기중중위80%이하 다자녀(2인이상) 및 장애인 가구를 대상으로 영아별로 지원\n\n○ 조제분유는 기저귀 지원대상 중 산모의 사망,특정질병,의식 기능의 현저한 저하 등으로 모유수유가 불가능하다고 의사가 판단하는 경우, 아동복지시설,공동생활가정,가정위탁보호,입양대상 아동,한부모 및 영아 입양 가정의 아동인 경우 지원",
   "deferred_detail": false,
   "documents_raw": [
@@ -80,11 +80,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-WII000000500",
   "is_mock": false,
-  "last_checked": "2026-09-05",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-05",
   "law_raw": "",
   "name": "저소득층 기저귀·조제분유 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000500",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=165908&bnefType=all&svcId=WII000000500",
   "org": "보건복지부",
   "primary_audience": "parent",
   "receiver_raw": "주민센터",
@@ -93,7 +93,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 2,
+  "revision": 3,
   "slug": "저소득층-기저귀-조제분유-지원",
   "source": "bojo24",
   "source_category_raw": "보육·교육 이용권 개인",
@@ -101,5 +101,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ (기저귀)\n- 만 2세 미만의 영아를 둔 아래 기초생활보장, 차상위계층, 한부모가족 수급 가구 대상으로 영아별로 지원\nㆍ 국민기초생활보장법 상 생계⋅의료⋅주거⋅교육급여 수급 가구\nㆍ 차상위 본인부담경감 대상 가구\nㆍ 자활사업에 참여하는 차상위 가구\nㆍ 차상위 장애인 수당⋅연금 수급 가구\nㆍ 차상위계층확인서 발급 대상 가구\nㆍ 한부모가족지원법에 의한 지원 대상 가구(청소년한부모가족 포함)\n- 만 2세 미만의 영아를 둔 기준중위소득 80% 이하의 장애인 가구\nㆍ 부 또는 모 또는 영아가 일반장애인으로 등록된 가구 대상 영아별로 지원\n- 만 2세 미만의 영아를 둔 기준중위소득 80% 이하의 다자녀 (2인 이상) 가구\nㆍ 2인 이상 다자녀 가구 내 2세 미만 영아별로 지원\n\n○ (조제분유) 기저귀 지원대상 중 아래 사유에 해당 시 지원\n- 아동복지시설･공동생활가정･가정위탁보호･입양대상 아동, 한부모(부자･조손) 및 영아 입양 가정의 아동\n- 산모의 사망･질병으로 모유수유가 불가능한 경우\n- 산모의 방사성 요오드 치료, 의식불명 등으로 모유수유가 불가능하다고 의사가 판단하는 경우",
-  "view_count": 36801
+  "view_count": 38402
 }

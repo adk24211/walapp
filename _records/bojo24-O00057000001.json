@@ -31,7 +31,7 @@
   "benefit_raw": "○ 평택시민의 자녀에게 장학금(현금) 지원\n- 성적우수 장학생\n- 다자녀가구를 위한 행복 장학생\n- 저소득층 가구의 학생을 위한 희망 장학생\n- 읍면동장의 추천으로 선발되는 자립 장학생\n- 예체능 우수자를 위한 특기 장학생",
   "category": "education",
   "contact_raw": "평택시 장학재단/031-651-5520",
-  "content_hash": "sha256:2ffab9f3b6bb88f8a70cc1a2eec41040",
+  "content_hash": "sha256:b3bf6207b3cebc32229506ee60fbce98",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "방문신청\n직접입력",
   "id": "bojo24-O00057000001",
   "is_mock": false,
-  "last_checked": "2026-09-15",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-15",
   "law_raw": "",
   "name": "평택시 장학금 지급",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00057000001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001782&bnefType=all&svcId=O00057000001",
   "org": "재단법인평택시장학재단",
   "primary_audience": "parent",
   "receiver_raw": "",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "평택시-장학금-지급",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 우수장학생 : 성적 우수장학생\n\n○ 행복장학생 : 2자녀 이상 가구의 자녀\n\n○ 희망장학생 : 저소득(소득구간) 가구의 자녀\n\n○ 자립장학생 : 읍면동장 추천자\n\n○ 특기장학생 : 예체능 특기생",
-  "view_count": 3933
+  "view_count": 4052
 }

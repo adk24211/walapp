@@ -37,7 +37,7 @@
   "benefit_raw": "○ 척수장애인들에게 재활 프로그램 실시\n- 종합상담실 운영, 동료상담가 파견 사업, 지역사회복귀 코디네이터 파견 사업 등 상담사업 전개\n- 동료상담가 및 지역사회복귀 코디네이터 양성 등 교육사업 전개\n- 지역사회복귀훈련, 가족기능 강화 등 재활지원 사업 전개\n- 생활체육활동, 문화. 여가생활지원 등 문화 체육활동 지원 사업 전개 등",
   "category": "living",
   "contact_raw": "한국척수장애인협회/02-786-8483",
-  "content_hash": "sha256:113cd91e0979b5fc0d400e3edea13b4f",
+  "content_hash": "sha256:56a9d5ac5835a73aef82731f0c497cb4",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [
@@ -47,11 +47,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-WII000000570",
   "is_mock": false,
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-12",
   "law_raw": "",
   "name": "척수장애인 재활훈련 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000570",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=16195&bnefType=all&svcId=WII000000570",
   "org": "보건복지부",
   "primary_audience": "disabled",
   "receiver_raw": "한국척수장애인협회",
@@ -60,7 +60,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "척수장애인-재활훈련-지원",
   "source": "bojo24",
   "source_category_raw": "보건·의료 이용권 개인",
@@ -68,5 +68,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 척수장애인",
-  "view_count": 4660
+  "view_count": 4749
 }

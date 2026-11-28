@@ -36,7 +36,7 @@
   "benefit_raw": "화성시 출신 수도권 소재 대학생(신입생/재학생)에게 주거 및 면학의 제반 편의 제공\n동작나래관 1년 거주(219명) - 서울특별시 동작구 성대로 11길 60\n도봉나래관 1년 거주(219명) - 서울특별시 도봉구 도봉로 106길 30",
   "category": "housing",
   "contact_raw": "안지혜/02-584-1082",
-  "content_hash": "sha256:6c85c7f91d56ab402d170392f68add7e",
+  "content_hash": "sha256:a19ba224fa1034f746c3d59d74452b14",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -58,11 +58,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-O00058400003",
   "is_mock": false,
-  "last_checked": "2026-09-25",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-25",
   "law_raw": "",
   "name": "화성시장학관지원사업",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00058400003",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2117113&bnefType=all&svcId=O00058400003",
   "org": "화성시인재육성재단",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -71,7 +71,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "화성시장학관지원사업",
   "source": "bojo24",
   "source_category_raw": "주거·자립 시설이용 개인",
@@ -79,5 +79,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "공고일 현재 본인 또는 부모 ․ 친권자의 주민등록이 화성시에 계속하여 1년 이상 되어 있는 자로서 다음 각 호의 1에 해당하는 자\n\n① 수도권 소재 대학(교) 입학(예정)생 또는 재학생 (단, 대학원생 제외)\n※ 신입생의 경우 수시‧정시 최종합격 전이라도 지원가능\n(지원한 대학 수험표 또는 접수증 제출 후, 추후 합격증명서 보완 제출)\n② 5급 공채(행정, 기술, 외교, 입법, 법원)를 준비하는 고시생\n(전년도 1차 시험 합격자에 한함)\n※ 입사선발 이후에도 본인 또는 부모 ․ 친권자의 주민등록이 화성시로 유지되어야 함\n※ 단, 재학생의 경우 정규학기 기간만 인정함\n(졸업유예, 학점 미달 및 추가 학점 이수 등으로 인한 초과학기 재학생 지원 불가)\n\n※ 해당 내용은 화성시 장학관(대학생 기숙사) 입사생 선발 기준으로 지원년도 공고 확인바랍니다.",
-  "view_count": 2015
+  "view_count": 2095
 }

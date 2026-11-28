@@ -31,7 +31,7 @@
   "benefit_raw": "○ 진료보조비 : 월 10만원(단, 합천 원폭 피해자복지회관 입주자 월 5만원)\n\n○ 진료비(피폭자건강 수첩 미소지자 대상) : 의료비 요양급여 항목의 일부 본인부담금, 처방전에 의한 약제비\n- 급여 항목의 전액 본인부담금, 비급여 항목의 본인부담금 제외\n- 피폭자건강 수첩 소지자는 일본 정부에서 지원(상세내용은 한국 원폭 피해자협회 및 대한적십자사로 문의)\n\n○ 장례비(피폭자건강수첩 미소지자 대상) : 210만원\n- 피폭자건강 수첩 소지자는 일본 정부에서 지원\n\n○ 건강검진 : 매년 1회 약 35만원 상당의 검진 지원 (검진 시기 및 검진 병원은 대한적십자사에서 개별 안내, 02-3705-3792)\n\n○ 합천 원폭 피해자복지회관 운영 지원 등",
   "category": "health",
   "contact_raw": "보건복지부/129",
-  "content_hash": "sha256:ac85b5a8d4bd9e7376ca18c0b639d7cc",
+  "content_hash": "sha256:4d0770eb0ecf005976b2abe2fbc95e45",
   "criteria_raw": "○ 대한적십자사에 등록된 원폭피해자를 지원\n\n○ 일본정부에서 인정한 원폭피해자 등록증 소지자(건강수첩 소지)와 대한적십자사에서 관리하는 원폭피해자(건강수첩 미소지자)를 지원",
   "deferred_detail": false,
   "documents_raw": [
@@ -47,11 +47,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-WII000001510",
   "is_mock": false,
-  "last_checked": "2026-10-23",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-23",
   "law_raw": "",
   "name": "원폭피해자지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000001510",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=46708&bnefType=all&svcId=WII000001510",
   "org": "보건복지부",
   "primary_audience": "parent",
   "receiver_raw": "보건복지부 콜센터, 대한적십자사 고객센터",
@@ -60,7 +60,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "원폭피해자지원",
   "source": "bojo24",
   "source_category_raw": "보건·의료 의료지원\n현금 개인",
@@ -68,5 +68,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 등록된 원폭 피해자(「한국인 원자폭탄 피해자 지원을 위한 특별법」 제2조)\n- 원자폭탄이 투하된 때 일본의 히로시마 지역, 나가사키 지역에 있었던 사람\n- 원자폭탄이 투하된 때부터 2주 이내에 투하 중심지역 3.5㎞ 이내에 있었던 사람\n- 원자폭탄이 투하된 때 또는 그 후에 사체처리 및 구호에 종사하는 등의 사유로 원자폭탄으로 인한 방사능의 영향을 받은 사람\n- 위의 3가지의 사유에 해당하는 사람이 당시에 임신 중인 태아\n- 대한적십자사에 원자폭탄 피해자로 등록되어 대한민국 정부로부터 진료비 또는 진료보조비를 받은 사람",
-  "view_count": 2477
+  "view_count": 2498
 }

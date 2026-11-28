@@ -36,7 +36,7 @@
   "benefit_raw": "다자녀가정 객실 요금 감면 - 두 자녀 이상 출산(입양) 양육하고 자녀중 18세 이하 자녀가 1명 이상인 경우 할인 혜택 제공",
   "category": "care",
   "contact_raw": "용산제주유스호스텔/064",
-  "content_hash": "sha256:cc158557edcfd2ff6c324a98b2f4526c",
+  "content_hash": "sha256:c99f9bf174333f228221cc92f51921d7",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -46,11 +46,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-O00024000052",
   "is_mock": false,
-  "last_checked": "2026-10-21",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-21",
   "law_raw": "",
   "name": "용산제주유스호스텔 할인(다자녀)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00024000052",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2123419&bnefType=all&svcId=O00024000052",
   "org": "용산구시설관리공단",
   "primary_audience": "parent",
   "receiver_raw": "",
@@ -59,7 +59,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "용산제주유스호스텔-할인-다자녀",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금(감면) 가구",
@@ -67,5 +67,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "둘 이상의 자녀를 출산 또는 입양하여 양육하는 가족(다만 자녀 중 한 명 이상이 18세 이하인 가정",
-  "view_count": 2563
+  "view_count": 2590
 }

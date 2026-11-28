@@ -35,7 +35,7 @@
   "benefit_raw": "ㅇ 국민행복기금 채무조정 약정 후, 규정에 정해진 상황으로 인해 채무불이행이 예상되는 경우 일정 기간동안 채무 상환을 유예",
   "category": "jobs",
   "contact_raw": "기금관리처/1588-3570",
-  "content_hash": "sha256:1a3bb8cc197e29c85dc29db0dd5792c0",
+  "content_hash": "sha256:9c0223a9e6b34f7d69114cee21f10ea7",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -45,11 +45,11 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-B01000300004",
   "is_mock": false,
-  "last_checked": "2026-09-17",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-17",
   "law_raw": "",
   "name": "국민행복기금 채무상환 유예 및 연장",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B01000300004",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001131&bnefType=all&svcId=B01000300004",
   "org": "한국자산관리공사",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -58,7 +58,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "국민행복기금-채무상환-유예-및-연장",
   "source": "bojo24",
   "source_category_raw": "생활안정 기타 개인",
@@ -66,5 +66,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "ㅇ 국민행복기금 채무조정 약정 채무자중 다음과 같은 상황에 처한 경우\n- (기초수급자, 수감, 입영, 미취업청년 등) 채무금액 상환을 유예(연장)",
-  "view_count": 2406
+  "view_count": 2578
 }

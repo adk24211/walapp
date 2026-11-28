@@ -32,7 +32,7 @@
   "benefit_raw": "○ 2040 및 가족고객에게 여가공간 제공 및 말산업 홍보\n- 초보경마교실 및 야외데크 장소 제공",
   "category": "living",
   "contact_raw": "서울고객안전부/1566-3333",
-  "content_hash": "sha256:307fd373f4b5c057ac2581156c1dea88",
+  "content_hash": "sha256:9d68e222d06dfc4c7d3eecab775e6c30",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -42,11 +42,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-B55101500004",
   "is_mock": false,
-  "last_checked": "2026-08-24",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-24",
   "law_raw": "",
   "name": "렛츠런파크 서울 놀라운지 체험",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55101500004",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002142&bnefType=all&svcId=B55101500004",
   "org": "한국마사회",
   "primary_audience": "senior",
   "receiver_raw": "",
@@ -55,7 +55,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "렛츠런파크-서울-놀라운지-체험",
   "source": "bojo24",
   "source_category_raw": "문화·환경 시설이용 가구",
@@ -63,5 +63,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "20-40대 가족고객(어린이 동반 가능)\n2040 고객을 동반한 고령자 가족 입장 가능(가족관계증명서 확인)",
-  "view_count": 3772
+  "view_count": 3995
 }

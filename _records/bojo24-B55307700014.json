@@ -29,7 +29,7 @@
   "benefit_raw": "주문(배리어프리 키오스크), 로봇(조리, 서빙), 경영(매출분석) 등 지원",
   "category": "jobs",
   "contact_raw": "권역별 전문기관 문의처/1600-6185\n스마트상점팀/042-363-7802\n스마트상점팀/042-363-7804\n스마트상점팀/042-363-7806\n스마트상점팀/042-363-7807\n스마트상점팀/042-363-7808\n스마트상점팀/042-363-7809",
-  "content_hash": "sha256:8b3e0ea843f5e51e24fbe8f70d363859",
+  "content_hash": "sha256:b89e8dc918e2b9c480355661e4b7abb6",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55307700014",
   "is_mock": false,
-  "last_checked": "2026-09-02",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-02",
   "law_raw": "",
   "name": "소상공인 스마트상점 기술보급",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55307700014",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001096&bnefType=all&svcId=B55307700014",
   "org": "소상공인시장진흥공단",
   "primary_audience": "business",
   "receiver_raw": "",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "소상공인-스마트상점-기술보급",
   "source": "bojo24",
   "source_category_raw": "고용·창업 기술지원 소상공인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "소상공인 기본법 제2조에 따른 소상공인",
-  "view_count": 6979
+  "view_count": 8211
 }

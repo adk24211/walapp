@@ -35,7 +35,7 @@
   "benefit_raw": "○ 의료급여 수급권자 중 등록 장애인에 대해 장애인 보조기기 구입 비용 지원",
   "category": "health",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:d3a1a959827c99e49a1b51b0701dc14c",
+  "content_hash": "sha256:5f7e7a4f68753d425a3c0a4e68417115",
   "criteria_raw": "○ 장애인 보조기기 유형별 필요한 보조기기급여신청서, 보조기기 처방전, 검사 결과지 제출하여 지자체의 수급적격여부 판정 이후 구입 및 청구\n- 동일 보조기기 유형별로 1명당 내구연한의 기간 내에 1회만 인정",
   "deferred_detail": false,
   "documents_raw": [
@@ -48,11 +48,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SHE000000060",
   "is_mock": false,
-  "last_checked": "2026-09-15",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-15",
   "law_raw": "",
   "name": "의료급여 장애인보조기기 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SHE000000060",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=680384&bnefType=all&svcId=SHE000000060",
   "org": "보건복지부",
   "primary_audience": "disabled",
   "receiver_raw": "주민센터",
@@ -61,7 +61,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "의료급여-장애인보조기기-지원",
   "source": "bojo24",
   "source_category_raw": "보건·의료 의료지원\n현금 개인",
@@ -69,5 +69,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 의료급여 수급권자 중 ‘장애인복지법’에 따라 등록한 장애인",
-  "view_count": 6890
+  "view_count": 7057
 }

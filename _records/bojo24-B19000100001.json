@@ -28,7 +28,7 @@
   "benefit_raw": "초기창업기업의 안정화를 위한 창업공간 및 인프라 제공",
   "category": "jobs",
   "contact_raw": "상생협력부/042-870-1028",
-  "content_hash": "sha256:7cc5a581d8de631fb45fa0403039b03d",
+  "content_hash": "sha256:9f36d48e1e7e7c0a46c7bc10830df271",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -38,11 +38,11 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-B19000100001",
   "is_mock": false,
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-14",
   "law_raw": "",
   "name": "상생협력센터(KOMBI) 창업공간 제공",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B19000100001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000942&bnefType=all&svcId=B19000100001",
   "org": "한국조폐공사",
   "primary_audience": "business",
   "receiver_raw": "",
@@ -51,7 +51,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "상생협력센터-kombi-창업공간-제공",
   "source": "bojo24",
   "source_category_raw": "고용·창업 기타(교육)\n시설이용\n현물 개인\n소상공인",
@@ -59,5 +59,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "창업 7년 이하의 (예비)창업자 및 사회적기업",
-  "view_count": 3207
+  "view_count": 3270
 }

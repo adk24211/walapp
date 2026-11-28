@@ -31,7 +31,7 @@
   "benefit_raw": "○ 사례관리, 상담, 교육, 자원연계 등을 통하여 가족기능회복 및 정서,경제적 자립역량 강화 도모\n- 가족상담 및 전문상담기관 연계\n- 가족기능 회복, 역량 강화를 위한 지속적인 사례관리(학습정서지원, 생활도움지원, 출산·양육지원, 법률지원, 지역사회 자원 활용·연계 등)\n- 부모교육, 가족관계, 자녀 양육 교육 등 프로그램 및 자조모임\n- 긴급위기지원(1인가구 병원동행, 긴급돌봄 등)",
   "category": "care",
   "contact_raw": "시·군·구 가족센터/1577-9337",
-  "content_hash": "sha256:955d7cc8cf6549f2e25a14f972d63e0d",
+  "content_hash": "sha256:136eecddfad7a24c2c5160508a476dae",
   "criteria_raw": "지원대상 : 다문화가족, 1인가구, 맞벌이가족, 한부모, 조손가족 등 다양한 모든 가족",
   "deferred_detail": false,
   "documents_raw": [
@@ -41,11 +41,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SD0000003474",
   "is_mock": false,
-  "last_checked": "2026-08-26",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-26",
   "law_raw": "",
   "name": "온가족보듬사업",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000003474",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=549102&bnefType=all&svcId=SD0000003474",
   "org": "성평등가족부",
   "primary_audience": "parent",
   "receiver_raw": "시·군·구 가족센터",
@@ -54,7 +54,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "온가족보듬사업",
   "source": "bojo24",
   "source_category_raw": "보호·돌봄 서비스(돌봄) 개인\n가구",
@@ -62,5 +62,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "지원대상 : 다문화가족, 1인가구, 맞벌이가족, 한부모, 조손가족 등 다양한 모든 가족",
-  "view_count": 25754
+  "view_count": 26157
 }

@@ -30,7 +30,7 @@
   "benefit_raw": "○ 노후준비에 필요한 재무,건강,여가,대인관계 등의 분야에 대한 종합적인 노후준비 진단, 상담, 교육, 관계기관 연계, 사후관리 서비스 제공",
   "category": "care",
   "contact_raw": "국민연금공단(중앙노후준비지원센터)/1355",
-  "content_hash": "sha256:e6d9e633201d2fc778bfd890129d3b12",
+  "content_hash": "sha256:3b9f85bd155d3849c9ef5d53a2390d6a",
   "criteria_raw": "○ 전 국민",
   "deferred_detail": false,
   "documents_raw": [
@@ -40,11 +40,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
   "id": "bojo24-WII000000310",
   "is_mock": false,
-  "last_checked": "2026-10-28",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-28",
   "law_raw": "",
   "name": "노후준비서비스제공",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000310",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999132&bnefType=all&svcId=WII000000310",
   "org": "보건복지부",
   "primary_audience": "",
   "receiver_raw": "국민연금공단 거점지사 또는 지자체 노후준비지원센터",
@@ -53,7 +53,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 2,
+  "revision": 3,
   "slug": "노후준비서비스제공",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 개인",
@@ -61,5 +61,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 전 국민",
-  "view_count": 550591
+  "view_count": 551793
 }

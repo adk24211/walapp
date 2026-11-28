@@ -29,7 +29,7 @@
   "benefit_raw": "○ 대기업 교육 인프라를 활용하여 청년 구직자에게 직무교육을 실시하고, 대기업(중견기업) 협력사에 취업연계\n- 교육과정 개발 및 운영비, 교육생 훈련수당(주당 10만원)",
   "category": "jobs",
   "contact_raw": "인력지원처/055-751-9881",
-  "content_hash": "sha256:5d7d0474d328c0062fa898e6c2296929",
+  "content_hash": "sha256:378839fe0fe39e2c818d43ee78db0a9c",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -39,11 +39,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55400900001",
   "is_mock": false,
-  "last_checked": "2026-09-08",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-08",
   "law_raw": "",
   "name": "대‧중소기업 상생일자리 프로그램",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55400900001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002003&bnefType=all&svcId=B55400900001",
   "org": "중소벤처기업진흥공단",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -52,7 +52,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "대-중소기업-상생일자리-프로그램",
   "source": "bojo24",
   "source_category_raw": "고용·창업 서비스(일자리) 개인",
@@ -60,5 +60,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "대·중견기업 협력사, 만 34세 이하 청년 구직자",
-  "view_count": 15334
+  "view_count": 15828
 }

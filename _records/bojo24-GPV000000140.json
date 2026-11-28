@@ -35,7 +35,7 @@
   "benefit_raw": "○ 가사활동, 건강관리, 편의지원 등 가정방문 서비스 제공",
   "category": "finance",
   "contact_raw": "국가보훈부 보훈상담센터/1577-0606\n주소지 관할 보훈지(방)청/1577-0606",
-  "content_hash": "sha256:42107fcd9016966b091d9a866b579e7b",
+  "content_hash": "sha256:4625f62273b65c2973377d97aba8e89e",
   "criteria_raw": "○ 65세 이상으로 노인성 질환 또는 상이처 등으로 거동이 불편하여 정상적 일상생활 수행이 곤란하고, 독거 또는 노인부부세대로 생활정도가 국가보훈부장관이 정한 생활수준에 해당하는 분\n- (생활정도) 기초생활수급자, 의료급여수급자, 차상위계층해당자, 75세이상 기초연금수급자, 생활조정수당 대상자",
   "deferred_detail": false,
   "documents_raw": [
@@ -47,11 +47,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-GPV000000140",
   "is_mock": false,
-  "last_checked": "2026-10-22",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-22",
   "law_raw": "",
   "name": "국가보훈대상자 재가복지 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GPV000000140",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=46097&bnefType=all&svcId=GPV000000140",
   "org": "국가보훈부",
   "primary_audience": "lowincome",
   "receiver_raw": "지방보훈청 및 보훈지청",
@@ -60,7 +60,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "국가보훈대상자-재가복지-지원",
   "source": "bojo24",
   "source_category_raw": "생활안정 서비스(돌봄)\n의료지원 개인",
@@ -68,5 +68,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ (본인) 독립유공자, 국가유공자, 보훈보상대상자, 5.18민주유공자, 특수임무유공자, 참전유공자, 고엽제후유의증환자\n\n○ (유족) 국가유공자(보훈보상대상자, 5.18민주유공자, 특수임무유공자 포함)의 수권유족으로서 배우자 또는 부모, 독립유공자 자녀 또는 손자녀, 참전유공자 및 고엽제후유의중환자의 유족 중 배우자",
-  "view_count": 5741
+  "view_count": 5850
 }

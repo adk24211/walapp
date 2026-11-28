@@ -29,7 +29,7 @@
   "benefit_raw": "○ 저소득 세종시 초·중·고등학생의 교육기회 평등을 위한 장학금 지원\n\n○ 1인당 30~90만원 장학금 지급\n- 초 : 30만원 / 중 : 60만원 / 고 : 90만원",
   "category": "education",
   "contact_raw": "인재개발팀/044-865-9685",
-  "content_hash": "sha256:40a646ed7fe991ae8dea1dea58af6e68",
+  "content_hash": "sha256:c7a824ad2512dab48a65ea6564f193cd",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -39,11 +39,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-O00088400011",
   "is_mock": false,
-  "last_checked": "2026-09-15",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-15",
   "law_raw": "",
   "name": "모범(초중고) 장학금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00088400011",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000534&bnefType=all&svcId=O00088400011",
   "org": "재단법인세종특별자치시인재육성평생교육진흥원",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -52,7 +52,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "모범-초중고-장학금",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -60,5 +60,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "기준중위소득 이하의 가정 세종시 초·중·고등학생(거주 또는 재학)",
-  "view_count": 902
+  "view_count": 978
 }

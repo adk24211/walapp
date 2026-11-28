@@ -35,7 +35,7 @@
   "benefit_raw": "○ 다문화 가족 자녀의 언어발달 상태를 평가하고, 의사소통에 어려움을 가진 아동에게 적절한 언어교육 실시",
   "category": "care",
   "contact_raw": "다누리콜센터/1577-1366",
-  "content_hash": "sha256:df754e936c7535efd99e4df049bd6c86",
+  "content_hash": "sha256:3900d816e182050eb5ba34712da86477",
   "criteria_raw": "○ 언어발달 평가 결과 교육이 필요한 다문화 가족 자녀\n\n○ 중복수혜불가 조건\n- 중앙 및 지자체가 실시하는 유사 사업 대상자로 선정되어 지원받고 있는 다문화 가족 자녀\n\n- 국비 및 지방비 지원으로 언어치료 바우처를 받고 있는 자\n\n- 기타 서비스의 목표가 언어 촉진 및 교육에 있는 자\n\n- 다문화 가족 방문교육서비스 중 자녀생활서비스와 중복지원 불가\n* 서비스 의뢰 아동 중 적절한 서비스 구분을 위해 언어평가 실시 가능",
   "deferred_detail": false,
   "documents_raw": [
@@ -53,11 +53,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-WII000001250",
   "is_mock": false,
-  "last_checked": "2026-09-11",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-11",
   "law_raw": "",
   "name": "다문화가족 자녀 언어발달 지원서비스",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000001250",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999185&bnefType=all&svcId=WII000001250",
   "org": "성평등가족부",
   "primary_audience": "parent",
   "receiver_raw": "가족센터, 다문화가족지원센터",
@@ -66,7 +66,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "다문화가족-자녀-언어발달-지원서비스",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타\n기타(교육)\n기타(상담) 개인",
@@ -74,5 +74,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 언어평가 및 언어교육이 필요한 만 12세 이하 다문화 가족 자녀\n- 초등학교 재학 중인 아동의 경우 만 12세를 초과하여도 사업 대상에 포함",
-  "view_count": 4828
+  "view_count": 5052
 }

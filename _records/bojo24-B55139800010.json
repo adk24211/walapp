@@ -1,24 +1,19 @@
 {
   "_prose": {
     "eligibility": [
-      "전기산업에 종사하고 있는 사람",
-      "전기 분야에 진입하려는 대학생",
-      "전기 분야에 진입하려는 고등학생"
+      "전기산업종사자",
+      "예비전기인(대학생)",
+      "예비전기인(고등학생)"
     ],
-    "faq": [
-      {
-        "a": "교육 일정에 대한 구체적인 내용은 제공되지 않았습니다.",
-        "q": "교육 일정은 언제인가요?"
-      }
-    ],
-    "note": "",
+    "faq": [],
+    "note": "구비 서류가 필요하지 않습니다.",
     "steps": [
       {
-        "body": "전기안전기술교육은 온라인으로 신청합니다. 신청은 상시 접수이며, 별도의 서류는 필요하지 않습니다. 신청 후 전기산업종사자와 예비전기인을 대상으로 전기안전 전문교육이 제공됩니다.",
-        "title": "온라인 신청"
+        "body": "전기안전교육 홈페이지에서 온라인으로 신청합니다. 구비 서류는 필요하지 않으며, 상시 접수됩니다.",
+        "title": "신청 방법"
       }
     ],
-    "summary": "전기안전기술교육은 전기산업 종사자와 대학·고등학생 등 예비전기인을 대상으로 전기안전 전문교육을 온라인으로 상시 접수받는 제도이며, 신청은 별도 서류 없이 진행되고 교육은 한국전기안전공사가 주관합니다."
+    "summary": "전기안전교육은 한국전기안전공사가 제공하는 전기산업 종사자와 대학·고등학생 등 예비전기인을 대상으로 하는 전기안전 전문 교육 프로그램입니다."
   },
   "apply_period": {
     "always": true,
@@ -34,7 +29,7 @@
   "benefit_raw": "전기산업종사자 및 예비전기인 전기안전 전문교육 실시",
   "category": "education",
   "contact_raw": "전기안전인재개발원/063-928-3222",
-  "content_hash": "sha256:0065969f2e17ea5237b0f4d48673a02a",
+  "content_hash": "sha256:dcd2418923593a34d04eb4cd05088354",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,11 +39,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55139800010",
   "is_mock": false,
-  "last_checked": "2026-10-17",
-  "last_updated": "2026-10-17",
+  "last_checked": "2026-11-28",
+  "last_updated": "2026-11-28",
   "law_raw": "",
-  "name": "전기안전기술교육",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55139800010",
+  "name": "전기안전교육",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001143&bnefType=all&svcId=B55139800010",
   "org": "한국전기안전공사",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -57,13 +52,13 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
-  "slug": "전기안전기술교육",
+  "revision": 1,
+  "slug": "전기안전교육",
   "source": "bojo24",
   "source_category_raw": "행정·안전 기타(교육) 개인",
   "source_id": "B55139800010",
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 전기산업종사자\n\n○ 예비전기인(대학생, 고등학생)",
-  "view_count": 1359
+  "view_count": 1514
 }

@@ -38,7 +38,7 @@
   "benefit_raw": "○ 영등포구스포츠센터 이용료 감면(50%)\n- 「장애인복지법」에 따른 장애인(장애정도가 심한 장애인과 동반하는 보호자 1인 포함)\n- 「국가유공자 등 예우 및 지원에 관한 법률」에 의한 상이자로서 국가보훈처장이 발행한 국가유공자증서를 소지한자\n- 「5.18민주유공자예우에 관한 법률」에 따른 5.18민주유공자 증서를 소지한 자\n\n○ 영등포구스포츠센터 이용료 감면(30%)\n- 「노인복지법」에 의한 경로우대를 받는 65세 이상 노인\n- 「국민기초생활보장법」에 의한 수급자\n- 서울특별시에서 발급한 영등포구 거주 다둥이행복카드 소지자(세자녀)",
   "category": "living",
   "contact_raw": "제1스포츠센터부/02-2650-1512",
-  "content_hash": "sha256:a2f47c61b19f58ed54aea6554edce255",
+  "content_hash": "sha256:7afd1c99aabd3ac13e62883fe60ac00f",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -48,11 +48,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-O00023900001",
   "is_mock": false,
-  "last_checked": "2026-09-01",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-01",
   "law_raw": "",
   "name": "체육시설 이용요금 감면(영등포구스포츠센터)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00023900001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000158&bnefType=all&svcId=O00023900001",
   "org": "영등포구시설관리공단",
   "primary_audience": "senior",
   "receiver_raw": "",
@@ -61,7 +61,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "체육시설-이용요금-감면-영등포구스포츠센터",
   "source": "bojo24",
   "source_category_raw": "문화·환경 시설이용 개인",
@@ -69,5 +69,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 장애인 : 장애인(장애정도가 심한 장애인과 동반하는 보호자 1인 포함)\n\n○ 국가유공자 : 국가보훈처장이 발행한 국가유공자증서를 소지한자\n\n○ 5.18민주유공자 : 5.18민주유공자로서 5.18민주유공자증을 제시한 자\n\n○ 경로우대자 : 경로우대를 받는 65세 이상 노인\n\n○ 수급자 : 기초생활수급자\n\n○ 다둥이 : 다둥이행복카드 소지자(세자녀)",
-  "view_count": 1088
+  "view_count": 1176
 }

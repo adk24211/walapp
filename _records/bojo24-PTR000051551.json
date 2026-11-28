@@ -34,7 +34,7 @@
   "benefit_raw": "○ 대출 금리\n- 연 2.8% (디딤돌 자격에 부합할 경우 디딤돌 금리 적용)\n\n○ 대출 기간 : 20년 (디딤돌 자격에 부합할 경우 디딤돌 만기 적용)\n- 1년 이자만 납부하는 기간 후 19년 또는 3년 이자만 납부하는 기간 후 17년 원리금 균등분할상환\n\n○ 대출 한도 : 사업 주체에게 세대별로 지원된 사업자 대출 호당 대출 잔액 범위 내\n- 기존 대출금의 보유 여부와 관계없이 대환할 수 있나 기금의 전세자금 대출이 있을 경우는 상환 후 취급 가능\n- 대환 대상자의 연 소득에 관계없이 대환대출 가능\n- 대출 신청자가 내 집 마련 디딤돌 대출 대상자에 해당할 경우 대출금리 및 대출 기간은 내 집 마련 디딤돌 대출의 대출조건으로 지원 가능",
   "category": "housing",
   "contact_raw": "우리은행/1588-5000",
-  "content_hash": "sha256:dd1d251c67f91cfeb306fe8a91d6917e",
+  "content_hash": "sha256:9ff6452a8a4e36fb4c6bf271f22e68e0",
   "criteria_raw": "○ 기금 대출이 지원된 주택 건설 사업 주체로부터 대환 대상자로 통보받은 자로 우선 분양자, 일반 분양자, 선착순 분양자 등",
   "deferred_detail": false,
   "documents_raw": [
@@ -49,11 +49,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-PTR000051551",
   "is_mock": false,
-  "last_checked": "2026-09-02",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-02",
   "law_raw": "",
   "name": "사업자 대출 입주자 앞 대환",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/PTR000051551",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=739255&bnefType=all&svcId=PTR000051551",
   "org": "국토교통부",
   "primary_audience": "business",
   "receiver_raw": "우리은행",
@@ -62,7 +62,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "사업자-대출-입주자-앞-대환",
   "source": "bojo24",
   "source_category_raw": "주거·자립 현금(융자) 개인",
@@ -70,5 +70,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 해당 주택의 적법한 분양계약자",
-  "view_count": 8063
+  "view_count": 8296
 }

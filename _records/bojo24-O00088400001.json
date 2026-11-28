@@ -30,7 +30,7 @@
   "benefit_raw": "○ 다문화 가정 및 북한이탈주민의 자녀 대상 지급 장학금\n○ 1인당 30~100만원 장학금 지급\n- 초 : 30만원 / 중 : 60만원 / 고 : 90만원 / 대 : 100만원",
   "category": "education",
   "contact_raw": "인재개발팀/044-865-9686",
-  "content_hash": "sha256:1ec4cbc3c96f171cc690b208c4104e9d",
+  "content_hash": "sha256:dbad23ef61618c89772bcbbfcbc8580b",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -40,11 +40,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-O00088400001",
   "is_mock": false,
-  "last_checked": "2026-09-09",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-09",
   "law_raw": "",
   "name": "다문화가정·북한이탈주민 장학금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00088400001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000211&bnefType=all&svcId=O00088400001",
   "org": "재단법인세종특별자치시인재육성평생교육진흥원",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -53,7 +53,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "다문화가정-북한이탈주민-장학금",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -61,5 +61,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "다문화가정 및 북한이탈주민 중 세종시 초·중·고·대학생(거주 또는 재학)",
-  "view_count": 2953
+  "view_count": 3135
 }

@@ -31,7 +31,7 @@
   "benefit_raw": "○ 임신·출산 진료비 태아당 100만원 지원\n- 임신과 출산에 관련된 진료를 용이하게 받기 어려운 지역에 계속하여 30일 이상 거주하는 경우 20만 원 추가 지원('16.7.1. 시행)\n* '16. 7. 1 이후 임신 출산 진료비를 신청하는 경우부터 적용\n- 임산부 및 2세 미만 자녀의 진료비 및 약제,치료재료 구입에 대한 본인부담금(급여,비급여) 결제 비용\n* 단, 수급권자의 2세 미만 자녀는 처방된 약제,치료재료만 가능\n\n○ 임신·출산 진료비 추가금 지급 대상 지역(분만취약지, '25년 기준)\n- 인천 : 옹진군\n- 경기 : 연천군, 가평군, 양평군\n- 강원 : 홍천군, 평창군, 정선군, 화천군, 인제군\n- 충북 : 보은군, 괴산군, 단양군\n- 전북 : 진안군, 무주군, 장수군\n- 전남 : 보성군, 완도군, 진도군, 신안군\n- 대구 : 군위군\n- 경북 : 청도군, 의성군, 청송군, 영양군, 영덕군, 울릉군, 봉화군\n- 경남 : 의령군, 남해군, 합천군",
   "category": "health",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:454098f5d20ea0354a503bb557027563",
+  "content_hash": "sha256:07e80bae83ab041e009aa718fd2d1cbc",
   "criteria_raw": "○ 의료급여 수급자 중 임신 중이거나 출산(유산 및 사산 포함)한 수급권자 및 출생일로부터 2세 미만의 자녀\n- 2019.7.1.부터 자궁 외 임신도 포함(자궁 외 임신의 판단은 의사의 소견서로 갈음)",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SD0000012326",
   "is_mock": false,
-  "last_checked": "2026-10-01",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-01",
   "law_raw": "",
   "name": "의료급여 (임신·출산진료비)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000012326",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999151&bnefType=all&svcId=SD0000012326",
   "org": "보건복지부",
   "primary_audience": "parent",
   "receiver_raw": "시·군·구청",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 12,
+  "revision": 13,
   "slug": "의료급여-임신-출산진료비",
   "source": "bojo24",
   "source_category_raw": "임신·출산 현금 개인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 의료급여 수급자 중 임신 중이거나 출산(유산 및 사산 포함)한 수급권자 및 출생일로부터 2세 미만의 자녀\n- 2019.7.1.부터 자궁 외 임신도 포함(자궁 외 임신의 판단은 의사의 소견서로 갈음)",
-  "view_count": 18616
+  "view_count": 19261
 }

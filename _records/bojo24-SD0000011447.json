@@ -47,7 +47,7 @@
   "benefit_raw": "○ 장애인 운전 여부 측정 및 평가\n\n○ 장애인, 국가유공상이자, 한부모가족, 기초생활수급자 등 무료 운전교육\n\n○ 운전면허 시험(수수료는 민원인 부담)\n\n○ 장애인 차량 개조 상담",
   "category": "living",
   "contact_raw": "도로교통공단 안전운전 통합민원/1577-1120",
-  "content_hash": "sha256:f802c4f3e986986506b88ed2e42e0078",
+  "content_hash": "sha256:8d92035cce749ff7179d70f6a0b018c4",
   "criteria_raw": "○ 지원 대상\n- 한국도로교통공단법 시행령 제9조에 해당하는 등록장애인, 국가유공상이자, 기초생활수급자, 한부모 가족\n- 국민기초생활 보장법 제2조 제2호에 따른 수급자\n- 한부모가족지원법 제5조 및 제5조의2에 따른 지원대상자\n- 장애인복지법 제32조 제1항에 따른 장애인등록증을 받은 장애인\n- 국가유공자 등 예우 및 지원에 관한 법률 제6조의 4에 따른 상이등급 판정을 받은 사람\n\n○ 연령 기준\n- 18세 이상(원동기장치자전거 면허는 16세 이상)\n\n○ 기타 기준\n- 등록장애인 중 지체, 뇌병변장애, 지적, 자폐성, 정신장애는 운전적성판정위원회의 합격판정을 받은 자에 한하여 교육 지원",
   "deferred_detail": false,
   "documents_raw": [
@@ -57,11 +57,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SD0000011447",
   "is_mock": false,
-  "last_checked": "2026-10-22",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-22",
   "law_raw": "",
   "name": "디딤돌 운전면허 지원센터",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000011447",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=761845&bnefType=all&svcId=SD0000011447",
   "org": "경찰청",
   "primary_audience": "disabled",
   "receiver_raw": "한국도로교통공단 디딤돌 운전면허 지원센터",
@@ -70,7 +70,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 22,
+  "revision": 23,
   "slug": "디딤돌-운전면허-지원센터",
   "source": "bojo24",
   "source_category_raw": "행정·안전 현금(감면) 개인",
@@ -78,5 +78,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 지원 대상\n- 한국도로교통공단법 시행령 제9조에 해당하는 등록장애인, 국가유공상이자, 기초생활수급자, 한부모 가족\n- 국민기초생활 보장법 제2조 제2호에 따른 수급자\n- 한부모가족지원법 제5조 및 제5조의2에 따른 지원대상자\n- 장애인복지법 제32조 제1항에 따른 장애인등록증을 받은 장애인\n- 국가유공자 등 예우 및 지원에 관한 법률 제6조의 4에 따른 상이등급 판정을 받은 사람\n\n○ 연령 기준\n- 18세 이상(원동기장치자전거 면허는 16세 이상)\n\n○ 기타 기준\n- 등록장애인 중 지체, 뇌병변장애, 지적, 자폐성, 정신장애는 운전적성판정위원회의 합격판정을 받은 자에 한하여 교육 지원",
-  "view_count": 7465
+  "view_count": 8604
 }

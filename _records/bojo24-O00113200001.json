@@ -30,7 +30,7 @@
   "benefit_raw": "○ 태안군에 3년이상 주소를 둔 관내 중고등학교 학생 및 대학생에 각 기준에따라 심의하여 장학금 지급\n- 성적우수, 특기생, 복지 등 각분야의 선발기준에 따라 선발심의하여 장학금 지급",
   "category": "education",
   "contact_raw": "교육체육과/041-670-2498",
-  "content_hash": "sha256:cbb9d2170e871246c5786f0907de99be",
+  "content_hash": "sha256:1ada69998e0d281fa08646d2499ed890",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -40,11 +40,11 @@
   "how_to_raw": "방문신청\n직접입력",
   "id": "bojo24-O00113200001",
   "is_mock": false,
-  "last_checked": "2026-09-09",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-09",
   "law_raw": "",
   "name": "태안군사랑장학회 장학금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00113200001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001659&bnefType=all&svcId=O00113200001",
   "org": "태안군사랑장학회",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -53,7 +53,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "태안군사랑장학회-장학금",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -61,5 +61,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "태안군에 3년이상 주소를 둔 관내 초중고등학교 학생 및 대학생",
-  "view_count": 1000
+  "view_count": 1086
 }

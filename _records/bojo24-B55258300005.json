@@ -33,7 +33,7 @@
   "benefit_raw": "○ 시·공간적 제약 없이 사이버 훈련에 참여함으로써 장애인의 훈련접근성 향상 및 직업생활 안정 도모\n\n○ 디지털능력개발원\n- 훈련기간: 상시\n- 기능계열, 시험대비과정, 직무관리(직업생활) 과정\n- 수어 또는 자막 탑재하여 장애친화 콘텐츠 제공\n\n○ 정부공공부문\n- 훈련기간: 1개월~24개월\n- 공무원, 교원임용준비, 공기업준비 과정\n- 외부 서비스 제공 업체와 연계 운영",
   "category": "jobs",
   "contact_raw": "한국장애인고용공단/1588-1519",
-  "content_hash": "sha256:4a52381f810a59275567a5a0c57d043b",
+  "content_hash": "sha256:679a8d8f03a517f397ddaa45f7b7154a",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55258300005",
   "is_mock": false,
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-16",
   "law_raw": "",
   "name": "사이버 직업능력개발훈련",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55258300005",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001229&bnefType=all&svcId=B55258300005",
   "org": "한국장애인고용공단",
   "primary_audience": "disabled",
   "receiver_raw": "",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "사이버-직업능력개발훈련",
   "source": "bojo24",
   "source_category_raw": "고용·창업 기타(교육) 개인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 디지털능력개발원 : 15세 이상 등록장애인(취업자 포함)\n\n○ 정부·공공부문\n- 공무원 준비과정: 국가 및 지방공무원 임용 기준에 준하는 등록장애인\n- 중등교원임용 준비과정: 「장애인복지법」에 의한 등록장애인으로 교원자격증 소지사 또는 익년 2월 취득예정자",
-  "view_count": 4192
+  "view_count": 4246
 }

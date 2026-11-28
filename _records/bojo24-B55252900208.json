@@ -34,7 +34,7 @@
   "benefit_raw": "한국장학재단 학자금대출 연체로 한국신용정보원에 신용도판단정보(연체정보 등)가 등록된 자로서 대학(학부) 재학, 휴학, 졸업 후 3년 이내이거나 대학원 입학 후 3년 이내, 또는 중소기업에 재직 중일 경우 신용도판단정보를 해제하고 재등록을 유예하여 금융거래 및 취업에 불이익이 없도록 지원하는 제도입니다.",
   "category": "education",
   "contact_raw": "신용지원부/1599-2250",
-  "content_hash": "sha256:05876e2e675243992b0f04f672b2edc4",
+  "content_hash": "sha256:a6bfc5ace161512f05c220b6cd869fbd",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,11 +44,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55252900208",
   "is_mock": false,
-  "last_checked": "2026-10-11",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-11",
   "law_raw": "",
   "name": "신용도판단정보 회복제도",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252900208",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001350&bnefType=all&svcId=B55252900208",
   "org": "한국장학재단",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -57,7 +57,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "신용도판단정보-회복제도",
   "source": "bojo24",
   "source_category_raw": "생활안정 기타 개인",
@@ -65,5 +65,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "한국장학재단 학자금대출 장기연체자(6개월 이상)",
-  "view_count": 1470
+  "view_count": 1526
 }

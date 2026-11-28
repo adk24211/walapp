@@ -49,7 +49,7 @@
   "benefit_raw": "○ 취업장려금\n- 거주지보호기간 중 6개월 이상 동일한 업체에서 근무한 경우 최대 3년까지 취업장려금을 지급(고용보험 가입사업장 대상)\n\n○ 새출발장려금\n- 취업장려금을 1년6개월 이하로 받고 거주지보호기간이 종료 된 북한이탈주민이 종료 후 취업하여 6개월 동일한 업체에서 근무한 경우 200만원씩, 최대 1년6개월(200만원X3회)까지 새출발장려금 지급(고용보험 가입사업장 대상)",
   "category": "jobs",
   "contact_raw": "고용노동부 고객상담센터/1350",
-  "content_hash": "sha256:ffd6771543ffb3dc90f70bcaa77260e9",
+  "content_hash": "sha256:ce07cf338211b0b33191cbd232555240",
   "criteria_raw": "○ 취업장려금\n- 거주지보호기간 중 6개월 이상 동일한 업체에서 근무한 경우 최대 3년까지 취업장려금을 지급(고용보험 가입사업장 대상)\n6개월 동일업체 고용보험 취업 / 수도권 200만원 / 지방 250만원\n1년(1년차) / 수도권 500만원 / 지방 600만원\n1년(2년차) / 수도권 600만원 / 지방 700만원\n1년(3년차) / 수도권 700만원 / 지방 800만원\n(2021.1.1. 신청자부터)\n\n○ 새출발장려금\n- 거주지보호기간 종료 후 취업하여 6개월 이상 동일한 업체에서 근무한 경우 200만원씩, 최대 1년6개월(200만원X3회)까지 지급(고용보험 가입사업장 대상)\n취업장려금 1년 이하 수급자 : 3회, 600만원\n취업장려금 1년 6개월 수급자 : 2회, 400만원\n취업장려금 2년 이상 수급자 : 해당없음\n(2005.1.1. 이후 입국한자 및 2024.1.1. 이후 신규 취업자에 한함)",
   "deferred_detail": false,
   "documents_raw": [
@@ -65,11 +65,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-999000000069",
   "is_mock": false,
-  "last_checked": "2026-10-28",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-28",
   "law_raw": "",
   "name": "북한이탈주민 정착장려금 지급",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000069",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999236&bnefType=all&svcId=999000000069",
   "org": "통일부",
   "primary_audience": "lowincome",
   "receiver_raw": "고용노동부 각 지역 관할 고용센터 및 고객상담센터",
@@ -78,7 +78,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "북한이탈주민-정착장려금-지급",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금 개인",
@@ -86,5 +86,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 취업장려금\n- 거주지보호기간 중 6개월 이상 동일한 업체에서 근무한 북한이탈주민\n\n○ 새출발장려금\n- 취업장려금을 1년6개월 이하로 지급받고 거주지보호기간이 종료된 북한이탈주민이 종료 후 취업하여 6개월 이상 동일한 업체에서 근무한 경우\n* 2005.1.1. 이후 입국자 및 2024.1.1. 이후 신규 취업자에 한함",
-  "view_count": 4071
+  "view_count": 4149
 }

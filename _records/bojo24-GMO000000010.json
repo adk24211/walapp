@@ -18,7 +18,7 @@
   "apply_period": {
     "always": false,
     "end": "",
-    "raw": "",
+    "raw": "매년 수혜자 선정을 위해 5월초~6월중 약 1.5개월간 지정된 접수처에서 신청접수 실시(※ 자세한 내용은 홈페이지(www.at4u.or.kr) 참조)",
     "start": ""
   },
   "apply_url": "",
@@ -29,7 +29,7 @@
   "benefit_raw": "○ 지원 대상\n- 장애인복지법 제32조의 규정에 의하여 등록한 장애인\n- 국가유공자 등 예우 및 지원에 관한 법률 제6조의 규정에 의하여 등록된 자 중 1급부터 7급까지의 상이등급 판정을 받은 자\n\n○ 지원 내용\n- 정보통신 보조기기 구매 비용의 80% 지원(단, 기초생활수급권자 및 차상위장애인은 90%까지 지원)\n\n※ 지원 품목\n- 시각장애 : 화면낭독 소프트웨어, 독서확대기 등\n- 청각·언어장애 : 영상 전화기, 의사소통 보조기기 등\n- 지체·뇌 병변 장애 : 특수 마우스, 특수 키보드 등",
   "category": "living",
   "contact_raw": "한국지능정보사회진흥원/1588-2670",
-  "content_hash": "sha256:2a06fea1343c2e0aeb9545a33b4d66fa",
+  "content_hash": "sha256:adc1c6c57d7ce2213b6555a2c69f8143",
   "criteria_raw": "서류심사, 심층상담, 심사평가 등을 통해 장애정도, 경제적 여건 등을 종합적으로 고려하여 보급대상자 선정",
   "deferred_detail": false,
   "documents_raw": [
@@ -48,26 +48,26 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-GMO000000010",
   "is_mock": false,
-  "last_checked": "2026-08-17",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-17",
   "law_raw": "",
   "name": "정보통신 보조기기 보급",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GMO000000010",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=728849&bnefType=all&svcId=GMO000000010",
   "org": "과학기술정보통신부",
-  "primary_audience": "disabled",
+  "primary_audience": "lowincome",
   "receiver_raw": "시·군·구청",
   "region": {
     "scope": "national",
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "정보통신-보조기기-보급",
   "source": "bojo24",
   "source_category_raw": "생활안정 현물 개인",
   "source_id": "GMO000000010",
-  "source_registered": "2020-12-17",
+  "source_registered": "",
   "status": "active",
   "target_raw": "- 장애인복지법 제32조의 규정에 의하여 등록한 장애인\n- 국가유공자 등 예우 및 지원에 관한 법률 제6조의 규정에 의하여 등록된 자 중 1급부터 7급까지의 상이등급 판정을 받은 자",
-  "view_count": 157485
+  "view_count": 157976
 }

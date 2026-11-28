@@ -35,7 +35,7 @@
   "benefit_raw": "발전소주변지역 중고등학생 장학금 지급(취약계층, 성적우수, 예체능특기자, 모범학생 등)",
   "category": "education",
   "contact_raw": "제주발전본부 경영기획부/070-7511-7133",
-  "content_hash": "sha256:727ec05b88e4e22fc71845040410cfe9",
+  "content_hash": "sha256:a1853379829e246794a89e4f56898e4a",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -63,11 +63,11 @@
   "how_to_raw": "방문신청\n직접입력",
   "id": "bojo24-B55252100007",
   "is_mock": false,
-  "last_checked": "2026-09-23",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-23",
   "law_raw": "",
   "name": "발전소 주변지역 장학금 지원(제주발전본부)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252100007",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002213&bnefType=all&svcId=B55252100007",
   "org": "한국중부발전(주)",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -76,7 +76,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "발전소-주변지역-장학금-지원-제주발전본부",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -84,5 +84,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "발전소주변지역에 1년이상 거주 중인 주민의 자녀(중·고등학생)로 사회적 취약계층, 예체능 특기자, 성적우수자, 모범학생 등",
-  "view_count": 874
+  "view_count": 953
 }

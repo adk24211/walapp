@@ -30,7 +30,7 @@
   "benefit_raw": "○ 시설 기능보강 지원, 시설 아이돌봄서비스 지원, 입소자 상담 의료치료 지원, 사회복무요원 인력경비 지원",
   "category": "care",
   "contact_raw": "해당지역 시군구청/-",
-  "content_hash": "sha256:2f51b17d4ec517467e4026c9605c5c00",
+  "content_hash": "sha256:05022fba1a07534aa58b816772e864e2",
   "criteria_raw": "○ 소득 인정액 = 소득평가액 + 재산의 소득환산액\n○ 소득 인정이 기준 중위소득의 100% 이하\n\n※ 24세 이하의 청소년한부모는 소득 수준 관계없이 출산지원시설에 입소 가능\n※「위기임신보호출산법」상의 위기임산는 소득 수준에 관계없이 한부모가족복지시설 입소 가능",
   "deferred_detail": false,
   "documents_raw": [
@@ -41,11 +41,11 @@
   "how_to_raw": "방문신청\n직접입력",
   "id": "bojo24-WII000000820",
   "is_mock": false,
-  "last_checked": "2026-08-24",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-24",
   "law_raw": "",
   "name": "한부모가족복지시설 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000820",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999192&bnefType=all&svcId=WII000000820",
   "org": "성평등가족부",
   "primary_audience": "parent",
   "receiver_raw": "시·군·구청",
@@ -54,7 +54,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "한부모가족복지시설-지원",
   "source": "bojo24",
   "source_category_raw": "보육·교육 시설이용 개인",
@@ -62,5 +62,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 저소득 무주택 한부모가족(부자.모자.미혼모자.조손 가족. 미혼모)",
-  "view_count": 28691
+  "view_count": 28908
 }

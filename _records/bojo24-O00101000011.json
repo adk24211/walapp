@@ -39,7 +39,7 @@
   "benefit_raw": "○ 전북 미래인재 육성\n- 지원내용 : 재능개발비 지급 (1인당 250만원 지원)\n- 다양한 분야의 잠재력 있는 인재를 발굴하여 지역의 중추적 역할을 하는 인재로 성장할 수 있도록 지속적 재능개발 지원\n- 주요내용 : 학술, 예술, 체육, 기능 등 다양한 분야의 인재들이 해당분야의 학습 및 대회참여, 작품활동에 활용할 수 있도록 다년간 재능개발비 지원(최장 3년간 지원)",
   "category": "education",
   "contact_raw": "전북특별자치도평생교육장학진흥원/063-276-8307",
-  "content_hash": "sha256:68ad193fba97910c0935ca30088db2b2",
+  "content_hash": "sha256:630f5a2f70ad116b3d044c3bcc0ba1bd",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -57,11 +57,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-O00101000011",
   "is_mock": false,
-  "last_checked": "2026-10-05",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-05",
   "law_raw": "",
   "name": "전북 미래인재 육성지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00101000011",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2109829&bnefType=all&svcId=O00101000011",
   "org": "재단법인전북특별자치도평생교육장학진흥원",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -70,7 +70,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "전북-미래인재-육성지원",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -78,5 +78,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 전북특별자치도 내 중‧고등학생 25명(26년 계속지원 14명, 26년 신규지원 11명)\n- 공고일기준 본인 또는 보호자(부 또는 모)가 전북특별자치도에 주민등록을 두고 거주\n- 전북특별자치도 소재 중·고등학교에 재학 중인 학생\n- 분야별 공인 국내 전국대회 또는 국제대회 입상자\nㆍ공인 국내대회, 국제대회\n국내대회 : 중앙 및 지방정부, 시·도 교육감 및 관련 중앙단체, 대학 등에서 주최 또는 주관하는 인문·사회, 수학·과학, 문화·예술, 기술·기능, 체육 등 각 분야의 국내 전국대회에서 공고일 기준 1년 이내에 개인분야 3위, 단체분야 4위 이내의 성적을 득한 자\n국제대회 : 국제단체에서 주최 또는 주관하는 인문·사회, 수학·과학, 문화·예술, 기술·기능, 체육 등 각 분야의 대회에서 공고일 기준 1년 이내에 개인분야 3위, 단체분야 4위 이내의 성적을 득한자",
-  "view_count": 388
+  "view_count": 437
 }

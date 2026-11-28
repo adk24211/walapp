@@ -43,7 +43,7 @@
   "benefit_raw": "○ 지원내용\n- 임신 1회당 100만원(다태아 임신부의 경우 140만원 기본지급)\n* 분만취약지의 경우 20만원 추가지원\n* 다태아 임산부의 경우 태아당 100만원이 되도록 추가지원\n\n○ 사용 기간\n- 사용 시작일: 이용권 발급일(포인트 생성일)\n- 사용 종료일: 분만예정일(출산일, 유산일, 사산일)로부터 2년\n※ 사용 기간 내 사용하지 못한 임신·출산 진료비 지원금 잔액은 자동 소멸\n\n○ 지원 범위\n- 임산부의 진료비 및 약제·치료재료 구입에 대한 본인부담금(급여·비급여)\n- 2세 미만 영유아의 진료비 및 처방된 약제·치료재료 구입에 대한 본인부담금(급여·비급여)\n\n○ 유의사항\n- 사용 시작일 이전 진료비는 소급적용 불가\n- 질병·건강증진 등 의료 목적에 부합하게 사용(미용 목적의 성형외과 진료 등에는 사용 불가)\n- 의약외품(예: 건강보조식품), 소모성 재료(예: 당뇨소모성재료), 서류 발급비용 결제 불가",
   "category": "health",
   "contact_raw": "국민건강보험공단/1577-1000",
-  "content_hash": "sha256:6cdc0ef749529c9747d78006cff4986e",
+  "content_hash": "sha256:323d0f1d55ee399424fd4053f5a002a7",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -60,11 +60,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-SD0000007672",
   "is_mock": false,
-  "last_checked": "2026-09-11",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-11",
   "law_raw": "",
   "name": "건강보험 임신·출산 진료비 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000007672",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999124&bnefType=all&svcId=SD0000007672",
   "org": "보건복지부",
   "primary_audience": "parent",
   "receiver_raw": "국민건강보험공단(방문, 유선, 홈페이지, 앱), 전담 금융기관, 지자체(행정복지센터·보건소), 정부24 ※행정복지센터, 보건소, 정부24의 경우 '임신'으로 신청하는 경우에 가능",
@@ -73,7 +73,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 3,
+  "revision": 4,
   "slug": "건강보험-임신-출산-진료비-지원",
   "source": "bojo24",
   "source_category_raw": "보건·의료 현금 개인",
@@ -81,5 +81,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 임신‧출산(유산·사산 포함)이 확인된 건강보험 가입자 또는 피부양자\n○ 2세 미만인 가입자 또는 피부양자의 법정대리인(출산한 가입자 또는 피부양자가 사망한 경우)\n* 제외 대상 : (의료급여법)에 따라 의료급여를 받는 자(수급권자), 건강보험 적용배제 신청자, 건강보험 자격상실자, 급여정지자",
-  "view_count": 120460
+  "view_count": 124286
 }

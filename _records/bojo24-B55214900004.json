@@ -37,7 +37,7 @@
   "benefit_raw": "○ 농지소유자의 농지를 농지은행에게 장기 임차(5년이상)\n- 해당지역 임차료 수준 협의 결정, 단,임대료에서 수수료 5%를 공제하고 소유자에게 임차료 지급하고, 사용대수탁수수료는 1회 10만원으로 소유자가 지급\n('26년~: 농업인 소유농지 임대수탁 및 사용대수탁 수수료 면제)\n\n○ 해당 농지를 청년농 등 농업인에게 장기 임대(5년이상)\n- 해당지역 임차료 수준 임대료 협의 결정",
   "category": "housing",
   "contact_raw": "농지은행 고객상담/1577-7770",
-  "content_hash": "sha256:d25afcdfff292b01f68f7d988bf4f171",
+  "content_hash": "sha256:17919e821197c6cb02f6f82cfeddc1da",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -47,11 +47,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-B55214900004",
   "is_mock": false,
-  "last_checked": "2026-09-03",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-03",
   "law_raw": "",
   "name": "농지 임대 수탁 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55214900004",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000530&bnefType=all&svcId=B55214900004",
   "org": "한국농어촌공사",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -60,7 +60,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "농지-임대-수탁-지원",
   "source": "bojo24",
   "source_category_raw": "농림축산어업 현금 개인",
@@ -68,5 +68,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 임대수탁대상\n- 대상자 : 농지소유자\n- 대상농지 : 공부상지목에 관계없이 실제 경작에 이용되는 사실상 농지이나 도시지역(주거,상업,공업지역) 및 개발예정지 등은 제외\n\n○ 임대대상\n- 대상자 : 청년후계농, 2030세대, 후계농업인, 일반농업인, 귀농인 등",
-  "view_count": 3286
+  "view_count": 4074
 }

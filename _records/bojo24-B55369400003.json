@@ -1,19 +1,20 @@
 {
   "_prose": {
     "eligibility": [
-      "창업 후 3년 이내인 기업",
-      "혁신창업기업",
-      "예비창업자도 포함"
+      "창업 후 3년 이내인 혁신창업기업이어야 합니다.",
+      "예비창업자도 지원 대상에 포함됩니다.",
+      "선정 기준은 별도로 제시되지 않았습니다.",
+      "구비 서류는 필요하지 않습니다."
     ],
     "faq": [],
     "note": "",
     "steps": [
       {
-        "body": "제공된 웹사이트에서 온라인으로 신청서를 작성하고 제출합니다.",
-        "title": "온라인 신청"
+        "body": "온라인 신청 페이지에서 신청서를 작성하고 제출하면 됩니다. 별도의 서류 제출은 요구되지 않으며, 신청은 상시 접수됩니다.",
+        "title": "신청 절차"
       }
     ],
-    "summary": "기보벤처캠프는 기술보증기금이 운영하는 일자리·창업 지원 제도로, 창업 후 3년 이내 혁신창업기업 및 예비창업자를 대상으로 보증·투자 등 종합 금융·비금융 서비스를 제공합니다."
+    "summary": "기보벤처캠프는 창업 후 3년 이내 혁신창업기업과 예비창업자를 대상으로 보증·투자 등 금융지원과 교육·컨설팅·기술이전 등 비금융지원까지 제공하는 종합지원 서비스입니다."
   },
   "apply_period": {
     "always": true,
@@ -21,14 +22,14 @@
     "raw": "상시신청",
     "start": ""
   },
-  "apply_url": "www.kibo.or.kr",
+  "apply_url": "http://kibo.or.kr/dbranch",
   "audiences": [
     "business"
   ],
-  "benefit_raw": "보증, 투자 등 금융지원 및 교육, 컨설팅, 기술이전 등 비금융지원을 망라한 종합서비스 제공",
+  "benefit_raw": "○ 보증, 투자 등 금융지원 및 교육, 컨설팅, 기술이전 등 비금융지원을 망라한 종합서비스 제공",
   "category": "jobs",
-  "contact_raw": "벤처혁신금융부/051-606-7651",
-  "content_hash": "sha256:fd8b4759ba264252dadf197b7980ecd3",
+  "contact_raw": "기술보증기금/1544-1120",
+  "content_hash": "sha256:ba86c0d6db68a1c5b035187d46c80a04",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -38,11 +39,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55369400003",
   "is_mock": false,
-  "last_checked": "2026-10-10",
-  "last_updated": "2026-10-10",
+  "last_checked": "2026-11-28",
+  "last_updated": "2026-11-28",
   "law_raw": "",
   "name": "기보벤처캠프",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55369400003",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000526&bnefType=all&svcId=B55369400003",
   "org": "기술보증기금",
   "primary_audience": "business",
   "receiver_raw": "",
@@ -51,13 +52,13 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "기보벤처캠프",
   "source": "bojo24",
-  "source_category_raw": "고용·창업 기술지원\n기타(교육) 개인\n법인/시설/단체",
+  "source_category_raw": "고용·창업 기타(교육) 개인\n법인/시설/단체",
   "source_id": "B55369400003",
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 창업 후 3년 이내 혁신창업기업(예비창업자 포함)",
-  "view_count": 3335
+  "view_count": 3459
 }

@@ -41,7 +41,7 @@
   "benefit_raw": "○ 장사시설 사용료 전액 감면(100%)\n- 국가보훈 기본법에 따른 희생ㆍ공헌자\n- 김포시 기초생활수급자(주거급여, 교육급여 제외)\n- 무연고 행려자(시청 공문 필수)\n- 장기등 인체조직 기증자(최초 안치에 한하여 사용료 면제)\n* 연장시 사용료 감면 여부 미정\n(연장시 감면혜택 적용 여부 추후 조례 개정에 따라 결정 예정)",
   "category": "housing",
   "contact_raw": "무지개뜨는언덕/031-997-1641\n무지개뜨는언덕/031-997-1642",
-  "content_hash": "sha256:129dce71cf18770db49dcf8340163d4a",
+  "content_hash": "sha256:88c1af304c01b3b4264a7f24fc739c80",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -52,11 +52,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-O00005600006",
   "is_mock": false,
-  "last_checked": "2026-10-17",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-17",
   "law_raw": "",
   "name": "장사시설 사용료 전액 감면",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00005600006",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2105827&bnefType=all&svcId=O00005600006",
   "org": "김포도시관리공사",
   "primary_audience": "parent",
   "receiver_raw": "",
@@ -65,7 +65,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "장사시설-사용료-전액-감면",
   "source": "bojo24",
   "source_category_raw": "문화·환경 현금(감면) 개인",
@@ -73,5 +73,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 국민기초생활수급자\n○ 한부모가족지원법에의한 보호대상자\n○ 장애인복지카드소지자\n○ 국가유공자카드 소지자\n○ 김포시 거주지 등록되어 있는 다자녀가정\n○ 의사자 유족증 또는 의사자증 소지자\n○ 등록포로 및 억류지출신 가족\n○ 김포시 병역명문가 예 조례에 따른 예우대상자",
-  "view_count": 2633
+  "view_count": 2678
 }

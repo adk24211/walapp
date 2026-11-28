@@ -32,7 +32,7 @@
   "benefit_raw": "○ 지원내용\n- 복귀 인력의 연구비 지원(정부 지원금 2천2백만 원 내외)\n- 경력단절 여성과학기술인의 연구역량 강화 및 경력개발을 위한 교육 멘토링\n\n○ 지원 기간 : 최대 3년(12개월 단위로 연차평가 실시하여 계속지원 여부 평가)",
   "category": "jobs",
   "contact_raw": "한국여성과학기술인육성재단/02-6411-1010",
-  "content_hash": "sha256:807f527e8f898cc964a114a68dca0868",
+  "content_hash": "sha256:c61b9da396d79db9ef722d580125c6bc",
   "criteria_raw": "○ 개인\n- 이공계 학위 소지 또는 연구개발 관련 경력 보유한 여성\n- 경력단절 사유 및 현황, 향후 경력개발 계획, 기존 경력 등을 평가하여 60점 이상 획득한 자\n\n○ 기관\n- 과학기술 분야 연구기관 및 대학, 민간기업 연구소\n- 복귀 여성인력에 기준연봉 3,000만원 이상 지급 가능한 기관\n- 근무환경, 재무건전성, 연구개발현황 등을 평가하여 60점 이상 획득한 기관",
   "deferred_detail": false,
   "documents_raw": [
@@ -59,11 +59,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-PTR000052170",
   "is_mock": false,
-  "last_checked": "2026-10-01",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-01",
   "law_raw": "",
   "name": "경력단절 여성과학기술인 복귀 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/PTR000052170",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=173728&bnefType=all&svcId=PTR000052170",
   "org": "과학기술정보통신부",
   "primary_audience": "parent",
   "receiver_raw": "한국여성과학기술인육성재단",
@@ -72,7 +72,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "경력단절-여성과학기술인-복귀-지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 상담/법률지원\n서비스(일자리) 개인",
@@ -80,5 +80,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 개인\n- 과학기술 분야에 취업하였으나, 임신, 출산, 육아, 가족 구성원 돌봄 등의 이유로 경력이 단절된 여성과학기술인\n- 학위 취득 후, 임신, 출산, 육아, 가족 구성원 돌봄 등의 이유로 미취업 중인 여성과학기술인\n- 이공계 학사이상 학위 소지자(학사 학위자의 경우, 6개월 이상 경력이 있는 자)\n\n○ 기관\n- 경력단절 여성과학기술인을 활용하고자 하는 기관\n- 과학기술 분야 연구기관 및 대학, 민간기업 연구소",
-  "view_count": 3038
+  "view_count": 3132
 }

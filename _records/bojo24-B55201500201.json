@@ -29,7 +29,7 @@
   "benefit_raw": "본인이 부담할 연금보험료의 1/2를 초과하지 않는 범위 내에서 지원\n- 생애 최대 12개월까지 지원",
   "category": "finance",
   "contact_raw": "가입지원실 보험료지원부/063-713-5669\n국민연금공단고객센터/1355",
-  "content_hash": "sha256:0421187bf73a2dfc72cdeb9844ecacd9",
+  "content_hash": "sha256:f05f5ffada8690654af98e59d2e6bd50",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -39,11 +39,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-B55201500201",
   "is_mock": false,
-  "last_checked": "2026-09-18",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-18",
   "law_raw": "",
   "name": "저소득 지역가입자 국민연금 보험료 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55201500201",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000505&bnefType=all&svcId=B55201500201",
   "org": "국민연금공단",
   "primary_audience": "lowincome",
   "receiver_raw": "",
@@ -52,7 +52,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "저소득-지역가입자-국민연금-보험료-지원",
   "source": "bojo24",
   "source_category_raw": "보건·의료 현금(보험) 개인",
@@ -60,5 +60,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "일정 수준의 재산 및 소득 기준*을 모두 충족한 국민연금 지역가입자\n* 기준소득월액 80만원 미만, 재산세 과세표준의 합이 6억원 미만, 사업 및 근로소득을 제외한 종합소득금액이 1,680만원 미만",
-  "view_count": 20979
+  "view_count": 21833
 }

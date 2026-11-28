@@ -36,7 +36,7 @@
   "benefit_raw": "국내 체류 외국인근로자 애로사항, 사업주와 외국인근로자간 고용 및 노무관리에 대한 갈등 해소 지원 등을 목적으로 서비스 수혜가 필요한 사업장에서 한국산업인력공단 지부지사로 지원요청을 하면, 공단에서는 통역원의 가능한 일자와 요청 사업장과의 일정을 조율하여 현장(또는 전화)에서 애로사항 해소 지원",
   "category": "jobs",
   "contact_raw": "고용체류지원부/052-714-8593",
-  "content_hash": "sha256:435a36450aa1687af70531a4b79230c9",
+  "content_hash": "sha256:142002db3c4a8a39c6be57aa1d0ee8ab",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -46,11 +46,11 @@
   "how_to_raw": "방문신청\n직접입력",
   "id": "bojo24-B49000700205",
   "is_mock": false,
-  "last_checked": "2026-09-10",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-10",
   "law_raw": "",
   "name": "외국인 근로자 지원 서비스",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B49000700205",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002029&bnefType=all&svcId=B49000700205",
   "org": "한국산업인력공단",
   "primary_audience": "employer",
   "receiver_raw": "",
@@ -59,7 +59,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "외국인-근로자-지원-서비스",
   "source": "bojo24",
   "source_category_raw": "고용·창업 기타(상담) 개인\n법인/시설/단체",
@@ -67,5 +67,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "외국인근로자와 그 사업주(담당자)",
-  "view_count": 1971
+  "view_count": 2087
 }

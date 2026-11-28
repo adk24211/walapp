@@ -45,7 +45,7 @@
   "benefit_raw": "○ 다문화·탈북학생과 대학생 간의 1:1 멘토링을 통해 다문화·탈북학생 기초학습 및 학교생활 적응을 지원하고 대학생 국가장학금 지원\n\n○ 활동시간 : 1일 8시간, 주당 20시간(단, 방학 40시간), 학기당 520시간 이하(농·어촌 멘토링은 학기당 520시간 이상)",
   "category": "education",
   "contact_raw": "한국장학재단 상담센터/1599-2000",
-  "content_hash": "sha256:0fefc3c9b144e71f0aef0676061dbf4d",
+  "content_hash": "sha256:d6c91ac598ebe88079c28c53a7c54106",
   "criteria_raw": "○ 멘티 : 학교에서 참가 희망 학생을 추천\n\n○ 멘토 :지도교수 1인 추천을 받은 멘토링 참여 대학 재학생\n\n○ 희망 시간대·과목 등을 고려하여 대학생과 다문화학생을 매칭\n- 저소득층·한부모가정, 기초학력 부족학생 등 취약계층 다문화학생이 멘토링 혜택을 누릴 수 있도록 우선 매칭",
   "deferred_detail": false,
   "documents_raw": [
@@ -55,11 +55,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-WII000000230",
   "is_mock": false,
-  "last_checked": "2026-09-13",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-13",
   "law_raw": "",
   "name": "다문화·탈북학생 멘토링",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000230",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999055&bnefType=all&svcId=WII000000230",
   "org": "교육부",
   "primary_audience": "parent",
   "receiver_raw": "한국장학재단",
@@ -68,7 +68,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "다문화-탈북학생-멘토링",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 개인",
@@ -76,5 +76,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 국공립유치원, 초·중·고등학교에 재학 또는 지역아동센터에 소속된 다문화 학생\n\n○ 국공립유치원, 초·중·고등학교에 재학 중이거나 남북하나재단에 소속된 탈북학생",
-  "view_count": 3930
+  "view_count": 4148
 }

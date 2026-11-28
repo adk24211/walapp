@@ -31,7 +31,7 @@
   "benefit_raw": "○ 제조소기업의 혁신역량 강화, 저탄소 경영체계 구축 및 재기지원\n\n○ 일반바우처: 혁신역량진단 및 평가를 통한 기업별 특성에 맞는 맞춤형 지원(컨설팅, 기술지원, 마케팅)\n- (컨설팅) 경영기술전략, AX·DX컨설팅, 중대재해예방 컨설팅\n- (기술지원) 시제품제작, 시스템 및 시설구축, IP기반 기술사업화, 인증/연구장비 활용시험\n- (마케팅) 디자인 및 브랜드 지원, 홍보 및 광고 지원\n\n○ 탄소바우처: 탄소역량평가를 통한 탄소중립 컨설팅 및 맞춤형 패키지 지원\n- (컨설팅) 탄소중립 경영혁신 컨설팅\n- (기술지원) 시제품 제작, 에너지 효율향상시스템 및 시설구축, 저탄소 인증 및 연구장비 활용 시험",
   "category": "jobs",
   "contact_raw": "제조AI지원처/055-751-9847\n제조AI지원처/055-751-9851\n제조AI지원처/055-751-9523",
-  "content_hash": "sha256:8543933e839aea89e97db6239bf534f9",
+  "content_hash": "sha256:3fa34cf273507ec9aa4f7ccde17c317f",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -41,11 +41,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55400900008",
   "is_mock": false,
-  "last_checked": "2026-09-08",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-08",
   "law_raw": "",
   "name": "중소기업 혁신바우처",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55400900008",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002013&bnefType=all&svcId=B55400900008",
   "org": "중소벤처기업진흥공단",
   "primary_audience": "",
   "receiver_raw": "",
@@ -54,7 +54,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "중소기업-혁신바우처",
   "source": "bojo24",
   "source_category_raw": "고용·창업 이용권 법인/시설/단체",
@@ -62,5 +62,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "최근 3개년 평균 매출액 140억원 이하 제조 소기업\n최근 3개년 평균 매출액 1800억원 이하 제조 중기업(탄소바우처, 중대재해예방 바우처)",
-  "view_count": 14615
+  "view_count": 15641
 }

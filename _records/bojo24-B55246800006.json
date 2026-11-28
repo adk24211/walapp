@@ -45,7 +45,7 @@
   "benefit_raw": "○ 직종별 유해요인 파악 및 전문 건강상담을 통한 직업적요인 개선\n\n○ 특수건강진단 결과 위험군 사후관리지원\n\n○ 「산업안전보건법」에서 정한 안전보건교육 실시\n\n○ 작업환경으로 인해 발생 가능한 건강장해 예방상담 지원\n\n○ 중대재해 발생 사업장 산재 트라우마 관리\n\n○ 지역 특성에 맞는 특성화사업 추진\n\n○ 산업보건 사각지대 건강지킴이 역할 수행",
   "category": "health",
   "contact_raw": "산업보건실/052-703-0672",
-  "content_hash": "sha256:59463cd8ceb810fb8d8526e92c02fcb7",
+  "content_hash": "sha256:4c5d479146e51d8026a82585eb462739",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -56,11 +56,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-B55246800006",
   "is_mock": false,
-  "last_checked": "2026-08-30",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-30",
   "law_raw": "",
   "name": "근로자 건강센터 운영",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55246800006",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002080&bnefType=all&svcId=B55246800006",
   "org": "한국산업안전보건공단",
   "primary_audience": "senior",
   "receiver_raw": "",
@@ -69,7 +69,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "근로자-건강센터-운영",
   "source": "bojo24",
   "source_category_raw": "보건·의료 기타(상담) 법인/시설/단체",
@@ -77,5 +77,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 50인 미만 사업장\n\n○ 필수노동자, 특수형태근로종사자 등 제도적 취약계층 근로자\n\n○ 외국인, 고령, 여성, 비정규직 등 사회적 취약계층 근로자",
-  "view_count": 1339
+  "view_count": 1702
 }

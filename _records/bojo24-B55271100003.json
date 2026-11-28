@@ -43,7 +43,7 @@
   "benefit_raw": "○ 퇴직공제 적립일수가 252일 이상이고 공제회에서 정한 7가지 신청사유에 해당사항이 있는 경우, 적립된 공제부금의 50%까지 대부금 신청 가능",
   "category": "housing",
   "contact_raw": "고객상담센터/1666-1122",
-  "content_hash": "sha256:9eb065d6d0242a7854e2dc85014f2e4c",
+  "content_hash": "sha256:b7afcab1d77625626e8f7096fa60d75b",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -54,11 +54,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
   "id": "bojo24-B55271100003",
   "is_mock": false,
-  "last_checked": "2026-08-20",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-20",
   "law_raw": "",
   "name": "건설노동자 대부금 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55271100003",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000917&bnefType=all&svcId=B55271100003",
   "org": "건설근로자공제회",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -67,7 +67,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "건설노동자-대부금-지원",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금(융자) 개인",
@@ -75,5 +75,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "퇴직공제 적립일수 252일 이상인 건설노동자가 공제회가 정한 대부금 신청사유(7가지)*에 해당하는 경우\n* 본인 또는 자녀 결혼자금, 대학생 자녀 학자금, 본인 또는 가족의 입원·수술비, 본인 또는 배우자 명의 주택구입 및 전·월세 보증금, 파산선고(최근 5년 내), 개인회생절차개시 결정(최근5년 내) 또는 신용회복위원회의 채무조정(개인워크아웃 등)을 받은 경우, 재해(태풍·호우·침수·강풍·지진·폭설·화재 등)로 인하여 생계 곤란 또는 피해를 입은 경우(최근1년 내)",
-  "view_count": 22087
+  "view_count": 22409
 }

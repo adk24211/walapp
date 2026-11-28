@@ -32,7 +32,7 @@
   "benefit_raw": "○ 교육 서비스 지원 : 신중년 및 노인의 생애재설계를 위한 다양한 교육 진행\n- 인생 재설계 과정\n- (민간)자격증 취득 과정\n- 취미/여가 증진 과정\n- 웰다잉 관련 강의\n- 전문가, 지도사 과정\n- 1인가구 특화 과정\n- 디지털 교육, ICT 강사양성 등",
   "category": "education",
   "contact_raw": "신중년사업팀/033-242-5060",
-  "content_hash": "sha256:b35f3bd43bf3da487a20f1e6bc6a8f26",
+  "content_hash": "sha256:17b334bce34f53aee53102fc772a68f9",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -42,11 +42,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-O00041400001",
   "is_mock": false,
-  "last_checked": "2026-08-30",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-30",
   "law_raw": "",
   "name": "춘천 시니어 아카데미",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00041400001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000907&bnefType=all&svcId=O00041400001",
   "org": "재단법인춘천지혜의숲",
   "primary_audience": "senior",
   "receiver_raw": "",
@@ -55,7 +55,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "춘천-시니어-아카데미",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 개인",
@@ -63,5 +63,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "50세 이후 춘천시민 누구나",
-  "view_count": 1462
+  "view_count": 1570
 }

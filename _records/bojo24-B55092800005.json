@@ -29,7 +29,7 @@
   "benefit_raw": "중증질환자 등의 의료비 부담을 경감하기 위하여 일부 항암제, 희귀질환치료제 등 신약을 투여받은 환자에게 약품비 본인부담금의 일부를 지원하는 제도",
   "category": "health",
   "contact_raw": "약제관리실/033-736-3240",
-  "content_hash": "sha256:5e513fa994cb7de0a429153e91bfcfc4",
+  "content_hash": "sha256:9cfa01bf01f7e66a64dc551f254e6c94",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -39,11 +39,11 @@
   "how_to_raw": "기타 온라인신청\n직접입력",
   "id": "bojo24-B55092800005",
   "is_mock": false,
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-18",
   "law_raw": "",
   "name": "약품비 본인일부부담차액 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55092800005",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002171&bnefType=all&svcId=B55092800005",
   "org": "국민건강보험공단",
   "primary_audience": "disabled",
   "receiver_raw": "",
@@ -52,7 +52,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "약품비-본인일부부담차액-지원",
   "source": "bojo24",
   "source_category_raw": "보건·의료 현금 개인",
@@ -60,5 +60,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 항암제, 희귀질환치료제 등을 투여받은 건강보험 가입자 및 피부양자\n※ 본인부담상한제 환급금 및 국고, 지자체(긴급복지지원, 암환자의료비지원 등)에서 지원받은 경우 등 지원이 제외될 수 있습니다.\n※ 약품비 본인일부부담차액 지원 대상자는 공단에서 안내드립니다.",
-  "view_count": 3962
+  "view_count": 4031
 }

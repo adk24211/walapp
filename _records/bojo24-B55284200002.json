@@ -28,7 +28,7 @@
   "benefit_raw": "○ 장학금 지급\n- 북한이탈주민 중(고등)학생,대학(원)생에게 심사를 통해 장학금 지급\nㆍ중(고등)학생 100만원 / 대학(원)생 200만원",
   "category": "education",
   "contact_raw": "교육지원부/02-3215-5853",
-  "content_hash": "sha256:a363900cb6fea9361e41e066fab426fa",
+  "content_hash": "sha256:948ca7efc5f507530abdd8117d94c582",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -38,11 +38,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55284200002",
   "is_mock": false,
-  "last_checked": "2026-09-03",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-03",
   "law_raw": "",
   "name": "북한이탈주민 장학금 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55284200002",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000164&bnefType=all&svcId=B55284200002",
   "org": "북한이탈주민지원재단",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -51,7 +51,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "북한이탈주민-장학금-지원",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금 개인",
@@ -59,5 +59,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 북한이탈주민 재학생(중고등학생, 대학(원)생)",
-  "view_count": 1306
+  "view_count": 1425
 }

@@ -43,7 +43,7 @@
   "benefit_raw": "□ 사망·심신장애인 학자금대출 채무면제\n○ 학자금대출을 받은 자가 사망하거나 심신장애로 인하여 본인이 학자금을 상환할 수 없게 되었을 때 그 학자금의 전부 또는 일부의 상환을 면제하는 제도\n○ 지원 절차: 신청 ⇒ 재산조사 ⇒ 면체채무액(면제자격) 확정 ⇒ 비면제채무액 상환 ⇒ 면제채무액 상환 면제",
   "category": "education",
   "contact_raw": "한국장학재단/1599-2000",
-  "content_hash": "sha256:5e84f101938455ba1502719c4bbebb18",
+  "content_hash": "sha256:8d6805838f9fe0ff73d2b585ca6cf7fb",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -68,11 +68,11 @@
   "how_to_raw": "기타 온라인신청\n직접입력",
   "id": "bojo24-B55252900225",
   "is_mock": false,
-  "last_checked": "2026-09-02",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-02",
   "law_raw": "",
   "name": "사망·심신장애인 학자금대출 채무면제",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252900225",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2105512&bnefType=all&svcId=B55252900225",
   "org": "한국장학재단",
   "primary_audience": "disabled",
   "receiver_raw": "",
@@ -81,7 +81,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "사망-심신장애인-학자금대출-채무면제",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금(융자) 개인",
@@ -89,5 +89,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "□ 다음 조건을 충족하는 채무자\n○ 사망 또는 최초장애(정도)판정일 전 실행한 학자금대출채권 또는 구상채권을 보유한 자\n* 채무면제 대상 학자금대출: 사망 또는 최초장애판정일 전 발생한 학자금대출채권 또는 구상채권\n* (학자금대출채권) 일반 상환 학자금대출, 취업 후 상환 학자금대출, 학자금 유예대출(일반 상환 학자금 특별상환유예, 대졸 미취업자 원리금상환 유예, 군복무 중 이자\n납부 유예)\n* (구상채권) 재단에서 보증채무를 이행한 정부보증학자금대출",
-  "view_count": 3395
+  "view_count": 3533
 }

@@ -29,7 +29,7 @@
   "benefit_raw": "○ 후견 심판청구 : 실비(1인당 최대 50만 원)\n\n○ 공공 후견인 활동 : 월 15만 원(월 최대 40만 원)",
   "category": "housing",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:9bfaed4103a1151c7c4ac2ee26f0f683",
+  "content_hash": "sha256:e298784dced82c55b950c36a368e4604",
   "criteria_raw": "○ 만 19세 이상 발달장애인(지적·자폐성 장애인)",
   "deferred_detail": false,
   "documents_raw": [
@@ -56,11 +56,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SD0000002255",
   "is_mock": false,
-  "last_checked": "2026-08-25",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-25",
   "law_raw": "",
   "name": "발달장애인 공공후견 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000002255",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=582886&bnefType=all&svcId=SD0000002255",
   "org": "보건복지부",
   "primary_audience": "disabled",
   "receiver_raw": "주민센터",
@@ -69,7 +69,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "발달장애인-공공후견-지원",
   "source": "bojo24",
   "source_category_raw": "주거·자립 상담/법률지원\n현금 개인",
@@ -77,5 +77,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 등록 기준\n- 성인(만 19세 이상) 발달장애인(장애인복지법상 지적·자폐성 장애인)\n\n○ 욕구 기준\n- 의사결정 지원이 필요한 사람",
-  "view_count": 5911
+  "view_count": 6340
 }

@@ -35,7 +35,7 @@
   "benefit_raw": "○ 디지털 융합(AI) 웹 & 앱 전문개발자 양성과정\n- Programming Foundmental\n- Mobile Programming\n- 수치최적화와 딥러닝\n- Project 실무\n○ 디지털 영상기술 전문인력 양성과정\n- Premiere Pro\n- Flanl Cut pro\n- 크리에이터 교육(유튜브)\n- 카메라 촬영 및 조명\n- 디지털 마스터링\n- After Effect(모션그래픽) 심화과정\n- 취업연계 지원",
   "category": "living",
   "contact_raw": "(재)전주정보문화산업진흥원/063-281-4136",
-  "content_hash": "sha256:3c6e012f33d423dee3eaa631d552bb6c",
+  "content_hash": "sha256:fd4e0d12bed20727cbae629fac604951",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -47,11 +47,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-O00105400004",
   "is_mock": false,
-  "last_checked": "2026-09-01",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-01",
   "law_raw": "",
   "name": "디지털 융합(AI) 웹 & 앱 전문개발자 양성과정 및 디지털 영상기술 전문인력 양성과정",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00105400004",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2100921&bnefType=all&svcId=O00105400004",
   "org": "전주정보문화산업진흥원",
   "primary_audience": "jobseeker",
   "receiver_raw": "",
@@ -60,7 +60,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "디지털-융합-ai-웹-앱-전문개발자-양성과정-및-디지털-영상기술-전문인력",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 개인",
@@ -68,5 +68,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 만15세 이상 40세 미만의 미취업자\n\n○ 전북지역 디지털 관련학과 졸업자 및 졸업예정자\n\n○ 관련분야 유경험자 및 취업희망자\n\n○ 방송통신대, 사이버대, 야간대 및 야간대학원 재학생\n\n○ 비전공자 가능",
-  "view_count": 766
+  "view_count": 845
 }

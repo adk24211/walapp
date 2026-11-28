@@ -35,7 +35,7 @@
   "benefit_raw": "방학 기간 중 대학생(멘토)가 청소년(멘티)를 대상으로 멘토링 활동(학습지도, 창의적 체험활동, 진로 및 고민상담 등)을 진행",
   "category": "education",
   "contact_raw": "대학생 재능봉사 캠프 사무국/053-238-2993\n대학생 재능봉사 캠프 사무국/053-238-2994",
-  "content_hash": "sha256:f2cd495ac2c0872d5a5752f28275dae0",
+  "content_hash": "sha256:b8059d9b0ff1e9c4f5003d062d5efe5a",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -45,11 +45,11 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-B55252900221",
   "is_mock": false,
-  "last_checked": "2026-09-07",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-07",
   "law_raw": "",
   "name": "대학생 재능봉사 캠프",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252900221",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2103704&bnefType=all&svcId=B55252900221",
   "org": "한국장학재단",
   "primary_audience": "parent",
   "receiver_raw": "",
@@ -58,7 +58,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "대학생-재능봉사-캠프",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 개인",
@@ -66,5 +66,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "1. (멘토) 사업 참여대학 소속 대학(원)생\n2. (멘티) 초중고교, 지역아동센터, 학교밖청소년지원센터 등 소속 학생",
-  "view_count": 14687
+  "view_count": 14909
 }

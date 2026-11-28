@@ -31,7 +31,7 @@
   "benefit_raw": "우수 아이디어 시상 및 후속연계지원 등",
   "category": "jobs",
   "contact_raw": "창업진흥원 글로벌협력실/044-410-1714\n창업진흥원 글로벌협력실/044-410-1783",
-  "content_hash": "sha256:3d87f8072934e0a31073083fcb65aa10",
+  "content_hash": "sha256:7e822e5ed6db257242950520e6d9457b",
   "criteria_raw": "○ 문제인식, 해결방안, 성장전략, 팀구성",
   "deferred_detail": false,
   "documents_raw": [
@@ -42,11 +42,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-999000000085",
   "is_mock": false,
-  "last_checked": "2026-08-31",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-31",
   "law_raw": "",
   "name": "올해의 K-스타트업",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000085",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999252&bnefType=all&svcId=999000000085",
   "org": "중소벤처기업부",
   "primary_audience": "business",
   "receiver_raw": "",
@@ -55,7 +55,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "올해의-k-스타트업",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금 개인\n법인/시설/단체",
@@ -63,5 +63,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 창업 후 3년 이내 초기창업자(팀)\n* 누적 투자유치 금액 30억원 초과한 기업은 지원 불가",
-  "view_count": 9086
+  "view_count": 9458
 }

@@ -28,7 +28,7 @@
   "benefit_raw": "○ TV수신료 면제\n\n- 방송법시행령 제44조 제1항 1호에 규정된 면제 대상자가 접수기관에 TV수신료 면제를 신청한 달부터 면제 적용\n\n(자격취득일부터 적용되는 것이 아님에 주의)\n\n- TV수신료 월 2,500원 면제",
   "category": "health",
   "contact_raw": "KBS수신료콜센터/1588-1801",
-  "content_hash": "sha256:6809e6d3738791ce1c5c96401d331238",
+  "content_hash": "sha256:5c2f26a8b0b54a5686f6188a37440bb9",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -38,11 +38,11 @@
   "how_to_raw": "방문신청\n직접입력",
   "id": "bojo24-B11005300003",
   "is_mock": false,
-  "last_checked": "2026-10-04",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-04",
   "law_raw": "",
   "name": "기초생활(생계·의료)수급자 TV수신료 면제",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B11005300003",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2111003&bnefType=all&svcId=B11005300003",
   "org": "한국방송공사",
   "primary_audience": "lowincome",
   "receiver_raw": "",
@@ -51,7 +51,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "기초생활-생계-의료-수급자-tv수신료-면제",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금(감면) 개인",
@@ -59,5 +59,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 면제대상 (TV수상기 소지자에 한하며, 영업을 목적으로 한 공간에 설치한 수상기는 제외)\n\n- 국민기초생활 보장법 제7조제1항제1호에 따른 생계급여의 수급자 또는 같은 항 제3호에 따른 의료급여 수급자",
-  "view_count": 10721
+  "view_count": 11078
 }

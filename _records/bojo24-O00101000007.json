@@ -32,7 +32,7 @@
   "benefit_raw": "○ SOS 장학금\n- 갑작스런 경제악화로 어려움을 겪고 있는 학생들에게 장학금을 지급함으로써 면학에\n힘쓰도록 지원\n- 도내 긴급 구호대상 가정의 초, 중, 고등학생\n- 지원금액 : 1인당 100만원",
   "category": "education",
   "contact_raw": "전북특별자치도평생교육장학진흥원/063-276-8307",
-  "content_hash": "sha256:799fb0035a31f3b86007ceebe95c28f7",
+  "content_hash": "sha256:45c8e607c5240108655c20e311978a3d",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -42,11 +42,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-O00101000007",
   "is_mock": false,
-  "last_checked": "2026-10-01",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-01",
   "law_raw": "",
   "name": "전북특별자치도 SOS 장학금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00101000007",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2109823&bnefType=all&svcId=O00101000007",
   "org": "재단법인전북특별자치도평생교육장학진흥원",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -55,7 +55,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "전북특별자치도-sos-장학금",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -63,5 +63,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "도내 소재 초, 중, 고등학생으로 갑작스런 경제악화 (실직, 사망, 사고)등으로 어려움을 겪고 있는 가정의 자녀로서 장학생으로서 자격을 갖추었다고 시·군·구청장이 판단하는 자",
-  "view_count": 531
+  "view_count": 574
 }

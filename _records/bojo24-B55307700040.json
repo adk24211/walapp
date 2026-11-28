@@ -34,7 +34,7 @@
   "benefit_raw": "소상공인이 납부한 자영업자 고용보험료의 50~80%를 최대5년간 환급 지원",
   "category": "finance",
   "contact_raw": "통합콜센터/1533-0100\n소상공인시장진흥공단 경영안정실/042-363-6888\n소상공인시장진흥공단 경영안정실/042-363-7712",
-  "content_hash": "sha256:40f6cd0c5add18303ea035671dc636db",
+  "content_hash": "sha256:7e050d049834b2c7473a55469519507c",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -54,11 +54,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55307700040",
   "is_mock": false,
-  "last_checked": "2026-09-30",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-30",
   "law_raw": "",
   "name": "소상공인 고용보험료 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55307700040",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2147840&bnefType=all&svcId=B55307700040",
   "org": "소상공인시장진흥공단",
   "primary_audience": "business",
   "receiver_raw": "",
@@ -67,7 +67,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "소상공인-고용보험료-지원",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금 소상공인",
@@ -75,5 +75,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "'자영업자 고용보험'에 가입한 소상공인(사업주)\n\n소상공인 기준 : 소상공인기본법 시행령 제3조(소상공인의 범위 등)\n1) 상시근로자 수 : 5명 미만 (단, 광업, 제조업, 건설업 및 운수업은 10명 미만)\n2) 연간매출액 : 숙박, 음식점, 교육, 복지, 수리, 기타서비스업 15억원 이하,\n도매업, 소매업 60억원 이하,\n농업, 임업, 어업, 광업, 건설업 80억 이하,\n식료품, 의복, 장비 가구제조업 120억원 이하 등",
-  "view_count": 3820
+  "view_count": 4680
 }

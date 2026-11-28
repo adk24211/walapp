@@ -30,7 +30,7 @@
   "benefit_raw": "○ 여성장애인에게 출산비용지원(태아 1인 기준 120만 원)",
   "category": "care",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:3e1dd7c0cddff853a221f5352c0e656a",
+  "content_hash": "sha256:d8001749b2a988eff199c4fd7ceaa660",
   "criteria_raw": "○ 장애인복지법 제32조(장애인 등록)에 의한 등록 여성장애인 중\n- 출산한 자\n- 임신기간 4개월(16주) 이상의 태아를 유산·사산한 자\n* 인공 임신중절 수술은 지원 불가(모자보건법 제14조제1항의 경우 제외)",
   "deferred_detail": false,
   "documents_raw": [
@@ -45,11 +45,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-GMW000000260",
   "is_mock": false,
-  "last_checked": "2026-09-03",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-03",
   "law_raw": "",
   "name": "여성장애인 출산비용지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GMW000000260",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=717971&bnefType=all&svcId=GMW000000260",
   "org": "보건복지부",
   "primary_audience": "parent",
   "receiver_raw": "주민센터",
@@ -58,7 +58,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "여성장애인-출산비용지원",
   "source": "bojo24",
   "source_category_raw": "임신·출산 의료지원\n현금 개인",
@@ -66,5 +66,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 장애인복지법 제32조(장애인 등록)에 의한 등록 여성장애인 중\n- 출산한 자\n- 임신기간 4개월(16주) 이상의 태아를 유산·사산한 자\n* 인공 임신중절 수술은 지원 불가(모자보건법 제14조제1항의 경우 제외)",
-  "view_count": 6850
+  "view_count": 7198
 }

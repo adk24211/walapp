@@ -7,7 +7,7 @@ category: jobs
 audiences:
   - business
 primary_audience: business
-view_count: 3441
+view_count: 3497
 region_scope: national
 region_label: "전국"
 org: "주식회사공영홈쇼핑"
@@ -20,13 +20,13 @@ status_label: "시행중"
 apply_always: true
 apply_methods: ["온라인 신청"]
 apply_url: "https://www.gongyoungshop.kr/etc/instore/selectInstoreTab1.do"
-official_url: "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55391700003"
+official_url: "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2110304&bnefType=all&svcId=B55391700003"
 first_published: "2026-10-08"
 last_updated: "2026-10-08"
-last_checked: "2026-10-08"
+last_checked: "2026-11-28"
 date: "2026-10-08"
 last_modified_at: "2026-10-08"
-revision: 0
+revision: 1
 own_chars: 167
 source_parts: ["신청 기간", "지원 내용", "준비 서류", "지원 대상", "소관 기관", "지원 지역", "신청 방법", "문의처"]
 own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 신청하나요"]
@@ -117,7 +117,7 @@ own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 
 </table>
 </div>
 <div class="cn cn-links" data-cat="jobs">
-  <a href="https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55391700003" target="_blank" rel="noopener nofollow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external-link"></use></svg> 소관 기관에서 자세히 보기 <span class="cn-link-ext">↗</span></a>
+  <a href="https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2110304&amp;bnefType=all&amp;svcId=B55391700003" target="_blank" rel="noopener nofollow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external-link"></use></svg> 소관 기관에서 자세히 보기 <span class="cn-link-ext">↗</span></a>
 </div>
   </div>
 </section>

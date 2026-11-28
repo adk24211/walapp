@@ -29,7 +29,7 @@
   "benefit_raw": "○ 급여비용에 대한 본인 부담 면제(중증 및 희귀·중증난치질환자)\n○ 1종 수급권자 자격 부여\n○ 의료급여 절차 예외\n○ 질환군별 의료급여일수 산정",
   "category": "health",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:7ac1c356410e902184d1589f45ca15c8",
+  "content_hash": "sha256:027594a452a89b2ff05b5793bc43221e",
   "criteria_raw": "○ 의료급여 기관에서 '의료급여 산정특례등록 신청서'를 발급 받아 건강보험공단 요양기관 정보마당에 등록 또는 거주지 관할 시군구청 또는 읍면동에 신청서를 제출 하고 등록한 경우",
   "deferred_detail": false,
   "documents_raw": [
@@ -39,11 +39,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-SHE000000180",
   "is_mock": false,
-  "last_checked": "2026-09-04",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-04",
   "law_raw": "",
   "name": "의료급여 중증질환, 희귀질환 및 중증난치질환자 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SHE000000180",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=725407&bnefType=all&svcId=SHE000000180",
   "org": "보건복지부",
   "primary_audience": "disabled",
   "receiver_raw": "시·군·구청",
@@ -52,7 +52,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "의료급여-중증질환-희귀질환-및-중증난치질환자-지원",
   "source": "bojo24",
   "source_category_raw": "보건·의료 서비스(의료)\n의료지원 개인",
@@ -60,5 +60,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "의료급여 수급권자 중 고가, 고난이도 시술이 필요한 중증질환 및 희귀･중증난치질환자(중증암환자, 중증화상환자, 뇌혈관질환자, 심장질환자, 중증외상환자)",
-  "view_count": 15738
+  "view_count": 16392
 }

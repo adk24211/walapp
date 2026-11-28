@@ -37,7 +37,7 @@
   "benefit_raw": "○ 시설입소 장애인에 대한 서비스 제공",
   "category": "care",
   "contact_raw": "해당지역 시군구청/129",
-  "content_hash": "sha256:844ce122f36085151e16429d385a4f94",
+  "content_hash": "sha256:d576c0738a308798f655f71ee34a9a31",
   "criteria_raw": "○ 장애인 중 국민기초생활보장수급자 및 부양자가 없거나 부양을 받을 수 없는 자로서 서비스지원 종합조사 결과 충족 및 지자체의 시설 입소 적격성 심사를 거쳐 시설 입소 결정을 받은 자\n\n* 서비스 지원 종합조사 결과\n- 중증장애인거주시설 : 성인- 240점 이상, 아동 - 190점 이상\n- 장애유형별 거주시설 : 성인-120점 이상, 아동 - 110점 이상\n- 독립형주거서비스 제공기관 : 성인-120점 이상, 아동 - 110점 이상\n○ (장애영유아거주시설, 장애인단기거주시설, 장애인공동생활가정은 서비스 지원 종합조사 결과에 관계없이 입소 가능)",
   "deferred_detail": false,
   "documents_raw": [
@@ -47,11 +47,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SD0000001088",
   "is_mock": false,
-  "last_checked": "2026-10-02",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-02",
   "law_raw": "",
   "name": "시설입소 장애인 서비스제공",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000001088",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999144&bnefType=all&svcId=SD0000001088",
   "org": "보건복지부",
   "primary_audience": "disabled",
   "receiver_raw": "시·군·구청",
@@ -60,7 +60,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "시설입소-장애인-서비스제공",
   "source": "bojo24",
   "source_category_raw": "주거·자립 서비스(돌봄) 개인",
@@ -68,5 +68,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 장애인거주시설 입소 장애인 및 종사자",
-  "view_count": 2954
+  "view_count": 3055
 }

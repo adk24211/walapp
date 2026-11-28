@@ -28,7 +28,7 @@
   "benefit_raw": "안산시 관내 산업단지 기업체에 재직중인 노동자의 복지증진을 위해 노동자의 자녀(대학생) 수업료 지원(연 200만원 이내)",
   "category": "education",
   "contact_raw": "안산인재육성재단/031-414-0924",
-  "content_hash": "sha256:63b644d7c2cf82861d70aa4fc95e452f",
+  "content_hash": "sha256:472fc37f30ef0290d0d03a22087386ef",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -47,11 +47,11 @@
   "how_to_raw": "방문신청\n직접입력",
   "id": "bojo24-O00051900001",
   "is_mock": false,
-  "last_checked": "2026-10-27",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-27",
   "law_raw": "",
   "name": "산단노동자자녀장학금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00051900001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2109811&bnefType=all&svcId=O00051900001",
   "org": "재단법인안산인재육성재단",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -60,7 +60,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "산단노동자자녀장학금",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -68,5 +68,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "부모 중 1인이 1년 이상 안산시 관내 기업체에 재직중인 자녀(대학생)의 수업료 지원 (연 200만원 이내)",
-  "view_count": 1245
+  "view_count": 1263
 }

@@ -33,7 +33,7 @@
   "benefit_raw": "1. 할인율\n- KTX (KTX-산천/청룡): 30% 할인(토, 일, 공휴일은 제외)\n- 새마을호(ITX-새마을/마음) : 30% 할인(토, 일, 공휴일은 제외)\n- 무궁화호(누리로) : 30% 할인",
   "category": "living",
   "contact_raw": "한국철도공사/1588-7788",
-  "content_hash": "sha256:7aae2f376739b9b77661fe2ed9692880",
+  "content_hash": "sha256:e5bb6d3b70bb0846916c6f9d5822dbc4",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "기타 온라인신청\n직접입력",
   "id": "bojo24-B55145700001",
   "is_mock": false,
-  "last_checked": "2026-10-28",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-28",
   "law_raw": "",
   "name": "철도 공공할인 서비스(경로)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55145700001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000946&bnefType=all&svcId=B55145700001",
   "org": "한국철도공사",
   "primary_audience": "senior",
   "receiver_raw": "",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 2,
+  "revision": 3,
   "slug": "철도-공공할인-서비스-경로",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금(감면) 개인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "노인복지법에 정한 만 65세 이상 노인",
-  "view_count": 14376
+  "view_count": 14882
 }

@@ -31,7 +31,7 @@
   "benefit_raw": "○ (노인보호전문기관) 노인학대행위 신고접수, 현장조사 및 판정, 노인인권보호, 노인학대예방, 노인인식개선 서비스 제공\n\n○ (학대피해노인 전용쉼터) 학대받는 노인에게 일시 보호, 법률 지원, 전문 상담 등의 서비스 제공",
   "category": "care",
   "contact_raw": "노인보호전문기관/1577-1389",
-  "content_hash": "sha256:c613b29b20c4cba79e6d622cafefbd7f",
+  "content_hash": "sha256:c621731c85a26b6bed898e672d270fbd",
   "criteria_raw": "○ 학대피해노인 및 그 가족",
   "deferred_detail": false,
   "documents_raw": [
@@ -41,11 +41,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-WII000000290",
   "is_mock": false,
-  "last_checked": "2026-08-26",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-26",
   "law_raw": "",
   "name": "노인보호전문기관 및 학대피해노인 전용쉼터 운영 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000290",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=729581&bnefType=all&svcId=WII000000290",
   "org": "보건복지부",
   "primary_audience": "senior",
   "receiver_raw": "노인보호전문기관",
@@ -54,7 +54,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "노인보호전문기관-및-학대피해노인-전용쉼터-운영-지원",
   "source": "bojo24",
   "source_category_raw": "보호·돌봄 상담/법률지원\n서비스(돌봄)\n서비스(일자리)\n시설이용\n현물 개인",
@@ -62,5 +62,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 학대피해노인 및 그 가족",
-  "view_count": 2465
+  "view_count": 2652
 }

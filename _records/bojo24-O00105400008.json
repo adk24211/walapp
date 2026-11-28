@@ -30,7 +30,7 @@
   "benefit_raw": "전주ICT이노베이션스퀘어 블록체인(BC) 전문인력양성과정(160시간)\n- 통합 블록체인 기본과정, NFT/Wed 3.0, 블록체인과 가상화페 De-Fi 개발 및 실습과정\n전주ICT이노베이션스퀘어 데이터 전문인력양성과정(160시간)\n- 빅데이터의 이해 및 데이터 활용 실습, 인공지능 활용 빅데이터 분석 전문가 양성 과정\n전주ICT이노베이션스퀘어 IoT 전문인력양성과정(160시간)\n- IoT, 농업 데이터 활용 스마트팜 설계 및 제작 과정",
   "category": "jobs",
   "contact_raw": "(재)전주정보문화산업진흥원/063-281-4185",
-  "content_hash": "sha256:6dfc3552c4e23b5b2e379a2821a9d641",
+  "content_hash": "sha256:dfb8d341b50969a12d009ed085760ac8",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -41,11 +41,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-O00105400008",
   "is_mock": false,
-  "last_checked": "2026-08-30",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-30",
   "law_raw": "",
   "name": "전주ICT이노베이션스퀘어 블록체인, 데이터, IoT 전문인력양성과정",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00105400008",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2101000&bnefType=all&svcId=O00105400008",
   "org": "전주정보문화산업진흥원",
   "primary_audience": "jobseeker",
   "receiver_raw": "",
@@ -54,7 +54,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "전주ict이노베이션스퀘어-블록체인-데이터-iot-전문인력양성과정",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 개인",
@@ -62,5 +62,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "전라북도 도내 학생, 구직자, 창업자, 재직자 등",
-  "view_count": 1296
+  "view_count": 1473
 }

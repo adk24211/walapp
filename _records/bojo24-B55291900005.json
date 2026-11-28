@@ -33,7 +33,7 @@
   "benefit_raw": "○ 주요 활동 내용: 청소년의 눈높이에 맞게 사업(서비스) 및 기관 운영을 개선하기 위한 자문단 운영\n\n○ 참여혜택: 활동확인서, 소정의 활동비, 우수자문단 시상 등",
   "category": "care",
   "contact_raw": "기획조정부/051-662-3024",
-  "content_hash": "sha256:2f034062d93c7127ce89f8c8b9a82eed",
+  "content_hash": "sha256:51af4cc31f4dfa3e7a37b2c54d3458ad",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-B55291900005",
   "is_mock": false,
-  "last_checked": "2026-10-23",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-23",
   "law_raw": "",
   "name": "청소년자문단 운영 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55291900005",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000889&bnefType=all&svcId=B55291900005",
   "org": "한국청소년상담복지개발원",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "청소년자문단-운영-지원",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타 개인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "청소년 및 대학생(청소년자문단 20명)",
-  "view_count": 1259
+  "view_count": 1284
 }

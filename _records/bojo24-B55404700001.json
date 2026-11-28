@@ -27,7 +27,7 @@
   "benefit_raw": "○ 보육교직원으로서의 가치와 덕목을 내면화하고 직무역량강화 및 스트레스 경감 지원\n\n○ 지원내용\n- 다양한 교육과정(소양, 놀이, 미래가치, 인문학) 제공\n- 심리정서 지원 프로그램(문화예술, 신체활동, 체험활동, 심리건강검사도구 등) 제공",
   "category": "health",
   "contact_raw": "권리정서지원부/02-6901-0271\n권리정서지원부/02-6901-0271",
-  "content_hash": "sha256:a8bef951fc82e0073f1aac9ff0c1e5a3",
+  "content_hash": "sha256:4791d5fe7c35c8bf64dbae73a61a8fbb",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -37,11 +37,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55404700001",
   "is_mock": false,
-  "last_checked": "2026-09-21",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-21",
   "law_raw": "",
   "name": "보육교직원 마음성장 프로젝트",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55404700001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002026&bnefType=all&svcId=B55404700001",
   "org": "한국영유아보육교육진흥원",
   "primary_audience": "parent",
   "receiver_raw": "",
@@ -50,7 +50,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "보육교직원-마음성장-프로젝트",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 개인",
@@ -58,5 +58,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "현직 보육교직원 중 참여를 희망하는 25,000명",
-  "view_count": 3665
+  "view_count": 5291
 }

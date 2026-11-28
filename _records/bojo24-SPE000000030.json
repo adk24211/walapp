@@ -37,7 +37,7 @@
   "benefit_raw": "○ 진단서 발급비 지원 한도\n- 지적, 자폐성, 정신 장애 : 4만 원 그 외의 장애 : 1만 5천 원\n\n○ 검사비 지원 한도 : 10만원 범위 내에서 실비 지원\n\n(신청장소) 읍·면·동 주민센터에 신청",
   "category": "health",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:964ed383667be68d9804a87fbd7d6b79",
+  "content_hash": "sha256:ba0d700b7b02eaf2b8b8dc3eea1ff91e",
   "criteria_raw": "○ 진단서 발급일 또는 장애정도 결정일 당시에 수급자/차상위 계층이면 지원 가능\n\n※ 장애정도 심사 완료 후에 수급자 등으로 선정된 경우는 지원 불가",
   "deferred_detail": false,
   "documents_raw": [
@@ -49,11 +49,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SPE000000030",
   "is_mock": false,
-  "last_checked": "2026-09-26",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-26",
   "law_raw": "",
   "name": "저소득장애인 장애심사용 진단서 발급비 및 검사비 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SPE000000030",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=680425&bnefType=all&svcId=SPE000000030",
   "org": "보건복지부",
   "primary_audience": "lowincome",
   "receiver_raw": "주민센터",
@@ -62,7 +62,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "저소득장애인-장애심사용-진단서-발급비-및-검사비-지원",
   "source": "bojo24",
   "source_category_raw": "보건·의료 의료지원\n현금 개인",
@@ -70,5 +70,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 신규등록의 경우 지원대상 : 기초생활수급자 장애인\n\n○ 재판정의 경우 지원대상 : 기초생활수급자 및 차상위 계층 장애인\n\n※ 기초생활수급자 또는 차상위계층이면서 국가유공상이자인 경우는 보훈보상·지원대상자만 지원 가능\n※ 장애정도 조정신청, 이의신청의 경우는 지원대상에서 제외\n※ 직권재판정인경우 기초생활수급자 또는 차상위 외 일반인의 경우도 지원대상에 해당함",
-  "view_count": 14271
+  "view_count": 14423
 }

@@ -34,7 +34,7 @@
   "benefit_raw": "○ 18세 이상 중증장애인에게 매월 일정액의 장애인연금 지급\n\n○ 지원금액\n- 기초급여 월 349,700원\n- 부가급여 월 30,000~439,700원(소득, 연령에 따라 차등)",
   "category": "finance",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:0c51b2dbc873a7bfea418fa489caed41",
+  "content_hash": "sha256:58d984c55fdc827601a92fce31b07eaa",
   "criteria_raw": "○ 배우자가 없는 가구(단독가구) : 140만원 이하\n○ 배우자가 있는 가구(부부 가구) : 224만원 이하",
   "deferred_detail": false,
   "documents_raw": [
@@ -53,11 +53,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-SD0000016119",
   "is_mock": false,
-  "last_checked": "2026-08-29",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-29",
   "law_raw": "",
   "name": "장애인연금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000016119",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=756537&bnefType=all&svcId=SD0000016119",
   "org": "보건복지부",
   "primary_audience": "disabled",
   "receiver_raw": "주민센터",
@@ -66,7 +66,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "장애인연금",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금 개인",
@@ -74,5 +74,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 18세 이상의 등록한 중증장애인* 중 본인과 배우자의 소득인정액이 선정기준액 이하인 자\n*'중증'이란 등록한 장애인 중 '장애인연금법 상의 중증장애인'을 의미하고 '경증'이란 '장애인연금법상 중증이 아닌 등록장애인'을 의미함\n\n○ 신청일 현재, 장애인연금법 제2조제1호에 따른 중증장애인 (종전 1급, 2급, 3급 중복에 해당하는 자)",
-  "view_count": 47573
+  "view_count": 48938
 }

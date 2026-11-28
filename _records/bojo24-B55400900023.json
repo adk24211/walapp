@@ -31,7 +31,7 @@
   "benefit_raw": "○ 사업화 지원금\n- 최대 1억원 이내(총 사업비의 70%) 이하\n\n○ 창업 인프라\n- 사업화에 필요한 창업 사무 공간\n- 설계 및 제작, 3D프린팅 및 시제작 장비 등 지원\n\n○ 교육 및 코칭\n- (교육) 기업가정신, 경영 일반분야 등 창업 교육\n- (코칭) 1:1 사업화 코칭, 분야별 특화코칭 및 단계별 진도관리 등\n\n○ 판로개척 지원\n- 국내외 전시회 참가 지원 등\n\n○ 해외진출 지원\n- 글로벌 멘토링, 해외 IR 및 펀딩 등 지원\n\n○ 후속연계지원\n- 졸업 후 5년간 제품 고도화, 홍보, 마케팅 등 후속연계 지원",
   "category": "jobs",
   "contact_raw": "창업지원처/055-751-9241",
-  "content_hash": "sha256:0e4808789c68406b0ee43c97e56fbf83",
+  "content_hash": "sha256:b7160b951ecd3ada39fe5582f88b3bd2",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -48,11 +48,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55400900023",
   "is_mock": false,
-  "last_checked": "2026-08-28",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-28",
   "law_raw": "",
   "name": "청년창업사관학교",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55400900023",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002250&bnefType=all&svcId=B55400900023",
   "org": "중소벤처기업진흥공단",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -61,7 +61,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "청년창업사관학교",
   "source": "bojo24",
   "source_category_raw": "고용·창업 기술지원\n기타\n기타(교육)\n기타(상담)\n시설이용\n현금\n현물 법인/시설/단체",
@@ -69,5 +69,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "39세 이하인 자로서, 창업 후 3년 이내 창업기업의 대표자",
-  "view_count": 4095
+  "view_count": 4660
 }

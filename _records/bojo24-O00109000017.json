@@ -28,7 +28,7 @@
   "benefit_raw": "구직자 면접수당 지원금 1인당 50,000원 지급",
   "category": "jobs",
   "contact_raw": "충남경제진흥원 일자리추진팀/041-404-1412",
-  "content_hash": "sha256:bcc40ebad811716e10f213fe68f3cabf",
+  "content_hash": "sha256:f2183248452f491fcc1beec06a6072c1",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,11 +44,11 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-O00109000017",
   "is_mock": false,
-  "last_checked": "2026-09-07",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-07",
   "law_raw": "",
   "name": "구직자 면접수당 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00109000017",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001666&bnefType=all&svcId=O00109000017",
   "org": "재단법인충남경제진흥원",
   "primary_audience": "jobseeker",
   "receiver_raw": "",
@@ -57,7 +57,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "구직자-면접수당-지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 서비스(일자리) 개인",
@@ -65,5 +65,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "(기업) 충남 소재 기업 및 기관\n(면접자) 선정된 기업 및 기관의 면접 참여 구직자",
-  "view_count": 1226
+  "view_count": 1457
 }

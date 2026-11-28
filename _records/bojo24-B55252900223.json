@@ -33,7 +33,7 @@
   "benefit_raw": "□ 분할상환약정 조건변경 제도\n○ 재단과 분할상환약정을 체결하여 상환하고 있는 채무자 중, 경제적 사정으로 월납입금액 또는 납입일 변경이 필요한 경우, 해당 조건을 변경할 수 있는 제도\n\n□ 조건 변경 대상\n○ 납입금액 변경\n- 상환능력 변동에 맞게 매월 납입금 증액(감액)을 통한 상환기간 단축(연장)\n○ 납입일 변경\n- 급여일 변경 등에 따라 매월 납입일 변경",
   "category": "education",
   "contact_raw": "한국장학재단/1599-2000",
-  "content_hash": "sha256:e01f575b8cf9dfe64ec238e6e7b7fd21",
+  "content_hash": "sha256:8535a49f983fe370357dc1641bb69e7c",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55252900223",
   "is_mock": false,
-  "last_checked": "2026-09-03",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-03",
   "law_raw": "",
   "name": "분할상환약정 조건변경 제도",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252900223",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2105510&bnefType=all&svcId=B55252900223",
   "org": "한국장학재단",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "분할상환약정-조건변경-제도",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금(융자) 개인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "□ 아래 조건을 모두 충족하는 채무자\n○ 신청일 기준 분할상환약정을 체결한 채무자 중 미납액이 없는 자\n○ 6개월 이상 장기연체 등 학자금대출 구상채권 또는 기한이익상실채권 등을 보유한 자\n○ 조건변경 이용가능 잔여횟수 있어야 함(대출상품별 분할상환약정 건당 2회로 제한)",
-  "view_count": 3220
+  "view_count": 3347
 }

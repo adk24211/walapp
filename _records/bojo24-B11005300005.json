@@ -27,7 +27,7 @@
   "benefit_raw": "○ TV수신료 면제\n\n- 방송법시행령 제44조 제1항 8호에 규정된 면제 대상자가 접수기관에 TV수신료 면제를 신청한 달부터 면제 적용 (휴업일부터 적용되는 것이 아님에 주의)\n\n- 휴업기간 중 '영업을 목적으로 설치한 TV수상기 대수 X 2,500원' 에 해당하는 월 TV수신료 면제",
   "category": "living",
   "contact_raw": "KBS수신료콜센터/1588-1801",
-  "content_hash": "sha256:071e20820a387b79ebd8abb83705b0b9",
+  "content_hash": "sha256:505c29bf80b4e704724997109c78e6ce",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -37,11 +37,11 @@
   "how_to_raw": "방문신청\n직접입력",
   "id": "bojo24-B11005300005",
   "is_mock": false,
-  "last_checked": "2026-10-06",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-06",
   "law_raw": "",
   "name": "영업 휴업 사업자 대상 TV수신료 면제",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B11005300005",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2111007&bnefType=all&svcId=B11005300005",
   "org": "한국방송공사",
   "primary_audience": "business",
   "receiver_raw": "",
@@ -50,7 +50,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "영업-휴업-사업자-대상-tv수신료-면제",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금(감면) 소상공인\n법인/시설/단체",
@@ -58,5 +58,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 면제대상\n\n- 영업을 목적으로 설치한 수상기 중 1개월 이상의 휴업으로 시청하지 않는 수상기 소지자",
-  "view_count": 3540
+  "view_count": 3670
 }

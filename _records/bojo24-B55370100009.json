@@ -37,7 +37,7 @@
   "benefit_raw": "○ 제도권 금융 이용이 어려운 청년층 지원\n\n○ 대출한도 : 1인당 총 1,200만원 내에서 용도에 따라 보증\n\n○ 대출금리 : 4.0% 고정(단, 사회적배려대상자의 경우 1.9%)\n\n○ 보증료율 : 0.5~1.0% 별도\n\n○ 대출기간 : 거치기간(최장 8년)과 상환기간(최장 7년)을 신청인이 선택\n\n○ 상환방식 : 원금균등분할상환",
   "category": "finance",
   "contact_raw": "서민금융통합콜센터/1397",
-  "content_hash": "sha256:4c49deea03f23d9936e8e9ce499b43ae",
+  "content_hash": "sha256:9489d9137098355801b576ed173864ea",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -47,11 +47,11 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-B55370100009",
   "is_mock": false,
-  "last_checked": "2026-08-20",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-20",
   "law_raw": "",
   "name": "햇살론유스",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55370100009",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000802&bnefType=all&svcId=B55370100009",
   "org": "서민금융진흥원",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -60,7 +60,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "햇살론유스",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금(융자) 개인",
@@ -68,5 +68,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 보증신청일 현재 연령이 만 19세 이상~ 만 34세 이하이면서 연소득이 35백만원 이하인 청년\n- 취업준비생(대학생, 미취업청년 등)\n- 사회초년생(중소기업에 재직한 지 1년 이하인 자)\n- 청년사업자(창업 1년 이내 개인사업자)\n\n※ 취업준비생은 직접보증만 가능",
-  "view_count": 19494
+  "view_count": 24432
 }

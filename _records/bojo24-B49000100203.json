@@ -38,7 +38,7 @@
   "benefit_raw": "○ 사업주의 임금체불로 인해 생계에 어려움을 겪는 근로자에게 저금리로 생계비를 융자하여 체불 근로자의 생활 안정을 지원\n\n○ 지원요건\n- 가동중인 체불 사업장에 재직 중이거나, 퇴직 후 6개월 이내일 것\n\n○ 체불요건\n- 신청일 이전 1년 동안 1개월분 이상 임금(휴업수당 등 포함)이 체불되었을 것\n\n○ 융자금액\n- 최대 1천만원(단, 고용위기지역 및 특별고용지원업종 사업장에 재직중인 근로자는 2천만원 한도, 고용위기 선제대응지역에 재직중인 근로자는 1.5천만원 한도)\n\n○ 이자율 : 연 1.5% (신용보증료 연 1% 별도)\n\n○ 상환방법 : 1년 또는 2년 거치 후 3년 또는 4년 원금균등분할상환 중 선택(단, 고용위기지역 및 특별고용지원업종 근로자는 1년거치 3년 또는 1년거치 4년, 2년거치 4년, 3년거치 5년중 선택 가능)",
   "category": "finance",
   "contact_raw": "근로복지공단/1588-0075",
-  "content_hash": "sha256:2b19442b3dfc6b45f14fa37c421eedb0",
+  "content_hash": "sha256:607bd873fb108e74cbb0f279e7cc1067",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -54,11 +54,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
   "id": "bojo24-B49000100203",
   "is_mock": false,
-  "last_checked": "2026-09-02",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-02",
   "law_raw": "",
   "name": "임금등 체불 근로자 생계비 융자",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B49000100203",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001158&bnefType=all&svcId=B49000100203",
   "org": "근로복지공단",
   "primary_audience": "employer",
   "receiver_raw": "",
@@ -67,7 +67,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "임금등-체불-근로자-생계비-융자",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금(융자) 개인\n법인/시설/단체",
@@ -75,5 +75,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 가동중인 체불 사업장에 재직 중이거나, 퇴직 후 6개월 이내 근로자\n※ (건설일용) 신청일 이전 180일 이내에 고용보험 근로내용확인신고서상 근로일수 30일 이상",
-  "view_count": 2896
+  "view_count": 3207
 }

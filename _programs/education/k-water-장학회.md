@@ -7,7 +7,7 @@ category: education
 audiences:
   - student
 primary_audience: student
-view_count: 2396
+view_count: 2569
 region_scope: national
 region_label: "전국"
 org: "한국수자원공사"
@@ -21,13 +21,13 @@ apply_always: false
 apply_period_raw: "연 1회 공모"
 apply_methods: ["온라인 신청"]
 apply_url: "https://www.kwater.or.kr/danbitoktok/kor.do"
-official_url: "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B50000100002"
+official_url: "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000180&bnefType=all&svcId=B50000100002"
 first_published: "2026-09-01"
 last_updated: "2026-09-01"
-last_checked: "2026-09-01"
+last_checked: "2026-11-28"
 date: "2026-09-01"
 last_modified_at: "2026-09-01"
-revision: 0
+revision: 1
 own_chars: 252
 source_parts: ["신청 기간", "지원 내용", "지원 대상", "소관 기관", "지원 지역", "신청 방법", "문의처"]
 own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 신청하나요", "자주 묻는 질문"]
@@ -112,7 +112,7 @@ own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 
 </table>
 </div>
 <div class="cn cn-links" data-cat="education">
-  <a href="https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B50000100002" target="_blank" rel="noopener nofollow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external-link"></use></svg> 소관 기관에서 자세히 보기 <span class="cn-link-ext">↗</span></a>
+  <a href="https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000180&amp;bnefType=all&amp;svcId=B50000100002" target="_blank" rel="noopener nofollow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external-link"></use></svg> 소관 기관에서 자세히 보기 <span class="cn-link-ext">↗</span></a>
 </div>
   </div>
 </section>

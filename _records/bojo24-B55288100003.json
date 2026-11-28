@@ -34,7 +34,7 @@
   "benefit_raw": "○ 교육정책 및 학부모교육 정보 제공\n○ 학부모회, 학교운영위원회 등 학부모의 학교참여 교육(학부모회, 학교운영위원회 온라인 연수)\n○ 학교폭력예방, 교육활동보호, 선행학습예방을 위한 학부모교육 프로그램 운영(학부모 필수 교육과정)\n○ 마음바우처 발급을 위한 보호자 필수교육 운영\n○ 지역 학부모교육 정보 제공\n○ 자녀 영·유아기부터 성인초기까지 단계별 학부모 교육",
   "category": "care",
   "contact_raw": "전국학부모지원센터/02-3780-9936",
-  "content_hash": "sha256:127a117e514368a90aee415da721432d",
+  "content_hash": "sha256:df1889f9c9272a48a70f3cbca9588ac8",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,11 +44,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55288100003",
   "is_mock": false,
-  "last_checked": "2026-10-27",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-27",
   "law_raw": "",
   "name": "학부모온누리",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55288100003",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002089&bnefType=all&svcId=B55288100003",
   "org": "국가평생교육진흥원",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -57,7 +57,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "학부모온누리",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 개인",
@@ -65,5 +65,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "교육기관(어린이집, 유치원, 유·초·중·고등학교, 특수학교, 각종학교 등) 에 재학중인 자녀를 둔 보호자와 모든 국민(연령 관계 없음)",
-  "view_count": 13782
+  "view_count": 14467
 }

@@ -29,7 +29,7 @@
   "benefit_raw": "○ 만 60세 이상의 국민연금 수급자\n- 전·월세보증금, 의료비(배우자 포함), 배우자 장제비, 재해복구비 용도의 긴급생활자금으로 본인의 연간 연금수령액의 2배(최대 1,000만원)이내로 실소요액 대부",
   "category": "housing",
   "contact_raw": "국민연금공단 콜센터/1355",
-  "content_hash": "sha256:5e89d7f498a3566f6cd9190ac6a74bd6",
+  "content_hash": "sha256:6a3bcf44cd26abba074117a0f7856d42",
   "criteria_raw": "○ 만 60세 이상의 국민연금 수급자 중 전·월세보증금, 의료비(배우자 포함), 배우자 장제비, 재해복구비를 관련 서류를 근거로 실제 소요되는 비용에 한해 대부(연간 연금 수령액의 2배 이내에서 최대 1천만원까지 대부)",
   "deferred_detail": false,
   "documents_raw": [
@@ -52,11 +52,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-WII000000300",
   "is_mock": false,
-  "last_checked": "2026-08-29",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-29",
   "law_raw": "",
   "name": "노후긴급자금 대부지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000300",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=760851&bnefType=all&svcId=WII000000300",
   "org": "보건복지부",
   "primary_audience": "lowincome",
   "receiver_raw": "국민연금공단 지사",
@@ -65,7 +65,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "노후긴급자금-대부지원",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금(융자) 개인",
@@ -73,5 +73,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 만 60세 이상의 국민연금 수급자",
-  "view_count": 170861
+  "view_count": 172103
 }

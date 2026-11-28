@@ -28,7 +28,7 @@
   "benefit_raw": "발전소주변지역 중고등학생 중 취약계층 장학금 지원",
   "category": "education",
   "contact_raw": "경영기획부 김승주/070-7511-6623",
-  "content_hash": "sha256:c7d9db5025bb1418a6342ac14a5f4de1",
+  "content_hash": "sha256:2ea90c6fad35cf222747e77d2ecb2da4",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -46,11 +46,11 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-B55252100009",
   "is_mock": false,
-  "last_checked": "2026-10-27",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-27",
   "law_raw": "",
   "name": "발전소주변지역 장학금 지원(세종발전본부)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252100009",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002215&bnefType=all&svcId=B55252100009",
   "org": "한국중부발전(주)",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -59,13 +59,13 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 2,
+  "revision": 3,
   "slug": "발전소주변지역-장학금-지원-세종발전본부",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
   "source_id": "B55252100009",
   "source_registered": "",
-  "status": "active",
+  "status": "closed",
   "target_raw": "세종발전본부 반경 5km 이내 중고등학교에 재학중인 세종시 실거주 1년 이상인 자의 자녀 및 본인으로 취약계층 및 모범학생",
-  "view_count": 885
+  "view_count": 917
 }

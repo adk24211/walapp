@@ -31,7 +31,7 @@
   "benefit_raw": "○ 출산(출산 예정 포함)한 경우 1인당 700천 원 지급",
   "category": "care",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:fce85ae15a13e707b7a888c3c82e00d0",
+  "content_hash": "sha256:f956a07d3a8f10cbdb20d3c3eaea3271",
   "criteria_raw": "○ 생계, 의료, 주거급여 수급자가 출산(출산 예정 포함)인 경우\n- 교육급여만 받는 수급자는 해산급여 대상이 아님\n- 의료기관의 진단서 등으로 증명된 사산 또는 유산한 경우도 출산에 포함\n- 모자보건법 제14조에 따른 합법적인 인공임신중절수술의 경우는 지급 대상이며, 그 외의 인공임신중절수술의 경우에는 지급 불가",
   "deferred_detail": false,
   "documents_raw": [
@@ -47,11 +47,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SD0000002014",
   "is_mock": false,
-  "last_checked": "2026-08-26",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-26",
   "law_raw": "",
   "name": "해산급여",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000002014",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=575762&bnefType=all&svcId=SD0000002014",
   "org": "보건복지부",
   "primary_audience": "parent",
   "receiver_raw": "읍면동 주민센터",
@@ -60,7 +60,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "해산급여",
   "source": "bojo24",
   "source_category_raw": "임신·출산 의료지원\n현금 개인\n가구",
@@ -68,5 +68,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 생계, 의료, 주거급여 수급자가 출산(출산 예정 포함)인 경우\n- 교육급여만 받는 수급자는 해산급여 대상이 아님\n- 의료기관의 진단서 등으로 증명된 사산 또는 유산한 경우도 출산에 포함\n- 모자보건법 제14조에 따른 합법적인 인공임신중절수술의 경우는 지급 대상이며, 그 외의 인공임신중절수술의 경우에는 지급 불가",
-  "view_count": 21513
+  "view_count": 22164
 }

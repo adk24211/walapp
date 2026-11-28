@@ -30,7 +30,7 @@
   "benefit_raw": "○ 보험계약자가 부담하여야 하는 보험료의 일부를 국가 및 지자체에서 보조\n- 지원금액 : 총 보험료의 55~100% 정부 지원\n※ 계층별 지원율 : ① (주택) 일반 55%~, 차상위계층 78%~, 기초생활수급자 등 87%~, 재해취약지역 내 주택에 실거주 중인 경제취약계층\n(기초, 차상위, 한부모가족) 100%, ② (소상공인 상가·공장) 일반 55%~, ③ (온실) 일반 70%~",
   "category": "housing",
   "contact_raw": "행정안전부 재난보험과/044-205-5359",
-  "content_hash": "sha256:2c22ae8902599e80e8b77bcd799fc66d",
+  "content_hash": "sha256:a65df5dfe1d87a7f6cbccb43b834b777",
   "criteria_raw": "○ 지원대상 목적물 : 주택(동산 포함), 온실, 소상공인 상가·공장\n\n○ 대상재해 : 태풍, 홍수, 호우, 강풍, 풍랑, 해일, 대설, 지진(지진해일 포함)",
   "deferred_detail": false,
   "documents_raw": [
@@ -50,11 +50,11 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-WII000001130",
   "is_mock": false,
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-18",
   "law_raw": "",
   "name": "풍수해·지진재해보험료 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000001130",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=92833&bnefType=all&svcId=WII000001130",
   "org": "행정안전부",
   "primary_audience": "lowincome",
   "receiver_raw": "시·군·구청",
@@ -63,7 +63,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "풍수해-지진재해보험료-지원",
   "source": "bojo24",
   "source_category_raw": "행정·안전 현금(보험) 개인\n가구\n소상공인",
@@ -71,5 +71,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 지원대상 목적물 : 주택(동산 포함), 온실, 소상공인 상가·공장\n\n○ 대상재해 : 태풍, 홍수, 호우, 강풍, 풍랑, 해일, 대설, 지진(지진해일 포함)",
-  "view_count": 4736
+  "view_count": 4900
 }

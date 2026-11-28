@@ -33,7 +33,7 @@
   "benefit_raw": "○ 경기도 거주 노인 및 노인가족 대상 심리/위기/복지정보제공 상담\n- 평일 전화상담 08시~22시\n- 상담번호 : 1833-2255(이리오오)",
   "category": "care",
   "contact_raw": "노인온상담팀/1833-2255",
-  "content_hash": "sha256:ece943787887ea776fbd3cd6e2890c3d",
+  "content_hash": "sha256:7463a8c1794b37d17674fe43b6d65bf9",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-O00045800002",
   "is_mock": false,
-  "last_checked": "2026-08-28",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-28",
   "law_raw": "",
   "name": "노인 및 노인가족 대상 전화상담",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00045800002",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001379&bnefType=all&svcId=O00045800002",
   "org": "재단법인경기도사회서비스원",
   "primary_audience": "senior",
   "receiver_raw": "",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "노인-및-노인가족-대상-전화상담",
   "source": "bojo24",
   "source_category_raw": "보호·돌봄 기타(상담) 개인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "경기도 내 노인(60세 이상) 및 노인가족, 노인복지 종사자",
-  "view_count": 1425
+  "view_count": 1542
 }

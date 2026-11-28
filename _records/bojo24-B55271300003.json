@@ -45,7 +45,7 @@
   "benefit_raw": "○ 국제청소년성취포상제 서비스 - 영역별 포상담당관 배정",
   "category": "care",
   "contact_raw": "미래활동부/02-330-2877",
-  "content_hash": "sha256:3232c43bc124fc49a44ccaad37544381",
+  "content_hash": "sha256:b46b38f6f9c451aa129110d114172111",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -55,11 +55,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55271300003",
   "is_mock": false,
-  "last_checked": "2026-10-06",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-06",
   "law_raw": "",
   "name": "국제청소년성취포상제",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55271300003",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001181&bnefType=all&svcId=B55271300003",
   "org": "한국청소년활동진흥원",
   "primary_audience": "lowincome",
   "receiver_raw": "",
@@ -68,7 +68,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "국제청소년성취포상제",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금 개인",
@@ -76,5 +76,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 국민기초생활수급자로서 기초생활수급자 증명서 제출가능한 청소년\n\n○ 저소득한부모가족으로서 한부모가족 증명서 제출가능한 청소년\n\n○ 장애인으로서 장애인증명서 제출가능한 청소년\n\n○ 북한이탈자로서 북한이탈주민증명서 제출가능한 청소년\n\n○ 법적차상위계층으로 장애(아동)수당 대상자 확인서 및 차상위 본인부담 경감대상자 확인서, 자활근로자확인서, 우선 돌봄차상위 증명서 중 제출 가능한 청소년\n\n○ 농어촌 및 도서산간벽지 청소년으로 본인과 친권자(부모)가 농어촌(읍면지역)에 3년이상 거주했다는 주민증록초본을 제출할 수 있는 청소년",
-  "view_count": 5682
+  "view_count": 5834
 }

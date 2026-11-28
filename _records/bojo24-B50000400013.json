@@ -36,7 +36,7 @@
   "benefit_raw": "○ 지역 고교·대학 창업동아리 활동지원을 통한 청년 창업 기회제공 및 지역경제 활성화에 기여\n\n○ 창업활동비 지원\n- 사업계획서 심사를 통한 서면 평가 후 창업활동비 지급(4백만원/팀)\n\n○ 창업활동 지원\n- 시제품 제작비, 특허 등 지식재산권 등록비용 지원, 교육훈련비 제공",
   "category": "jobs",
   "contact_raw": "미래전략처/054-811-3322",
-  "content_hash": "sha256:31b5bf9c8e3200189d988850bd34ddb4",
+  "content_hash": "sha256:d9b4e1503ac2b7e73564e08ae4e71b20",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -46,11 +46,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-B50000400013",
   "is_mock": false,
-  "last_checked": "2026-09-06",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-06",
   "law_raw": "",
   "name": "청년 창업 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B50000400013",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002154&bnefType=all&svcId=B50000400013",
   "org": "한국도로공사",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -59,7 +59,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "청년-창업-지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금 법인/시설/단체",
@@ -67,5 +67,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 대구·경북지역 대학 창업동아리\n- 4차 산업혁명분야 및 고속도로* 관련 창업아이템\n* 도로교통기술(자율주행, 드론, 스마트건설, 물류, 공간정보) 또는 고속도로관련 사회문제(교통안전, 환경, 기타)해결, 휴게소관련 아이템 가능",
-  "view_count": 6276
+  "view_count": 6575
 }

@@ -41,7 +41,7 @@
   "benefit_raw": "사회 각 분야 리더(멘토)와 대학생(멘티)의 멘토링 지원, 역량개발 프로그램 운영 등",
   "category": "education",
   "contact_raw": "멘토링 운영사무국/02-2259-2640\n멘토링 운영사무국/02-2259-2641\n멘토링 운영사무국/02-2259-2642\n멘토링 운영사무국/02-2259-2643",
-  "content_hash": "sha256:116e03a17e1adc25d3b8d51f005f339a",
+  "content_hash": "sha256:908378b55ffc95956a13c3e03dd73297",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -57,11 +57,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55252900204",
   "is_mock": false,
-  "last_checked": "2026-09-07",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-07",
   "law_raw": "",
   "name": "사회리더 대학생 멘토링",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252900204",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001054&bnefType=all&svcId=B55252900204",
   "org": "한국장학재단",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -70,7 +70,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "사회리더-대학생-멘토링",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 개인",
@@ -78,5 +78,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "전국 대학(원) 재학생 및 휴학생",
-  "view_count": 12505
+  "view_count": 12707
 }

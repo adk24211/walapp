@@ -32,7 +32,7 @@
   "benefit_raw": "○ 중장년 생애경력설계 및 취·창업 지원 등 중장년의 고용안정과 전직을 위한 종합고용지원서비스 제공\n- 재직자 과정: 생애조망하기, 직업역량 도출하기, 경력대안 개발하기, 평생경력계획 수립하기 및 재무, 건강 관리 등\n- 구직자 과정: 제2의 인생 들여다보기, 나의 인생 되돌아보기 생애설계 짜보기, 제2의 인생계획 실행 등\n\n○ 40세 이상 중장년 재직자 및 구직자를 대상으로 생애경력설계 지원",
   "category": "jobs",
   "contact_raw": "중장년고용촉진팀 (최성희 책임컨설턴트)/02-6021-1164",
-  "content_hash": "sha256:082503dd10e9e11d05ee5a2bb8619ca4",
+  "content_hash": "sha256:c12a55bba3d9b9b67c52fe5c7a661327",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,11 +44,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-B55214600001",
   "is_mock": false,
-  "last_checked": "2026-08-20",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-20",
   "law_raw": "",
   "name": "중장년 생애경력설계서비스",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55214600001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001488&bnefType=all&svcId=B55214600001",
   "org": "노사발전재단",
   "primary_audience": "jobseeker",
   "receiver_raw": "",
@@ -57,7 +57,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "중장년-생애경력설계서비스",
   "source": "bojo24",
   "source_category_raw": "고용·창업 기타(교육)\n기타(상담)\n서비스(일자리)\n시설이용 개인\n법인/시설/단체",
@@ -65,5 +65,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "40세 이상 중장년 재직자 및 구직자",
-  "view_count": 26895
+  "view_count": 27404
 }

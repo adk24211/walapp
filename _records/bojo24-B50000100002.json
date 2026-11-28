@@ -31,7 +31,7 @@
   "benefit_raw": "□ 장학금 지급 및 성장 지원 활동 진행\n○ 1:1 멘토링, 진로 및 취업 특강 등 성장 지원",
   "category": "education",
   "contact_raw": "경영혁신실/042-629-2434",
-  "content_hash": "sha256:2283f8b35dfc613b9086cf98048392b3",
+  "content_hash": "sha256:68e5eb3234ed6211f1b3019ba90fddc1",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -41,11 +41,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B50000100002",
   "is_mock": false,
-  "last_checked": "2026-09-01",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-01",
   "law_raw": "",
   "name": "K-water 장학회",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B50000100002",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000180&bnefType=all&svcId=B50000100002",
   "org": "한국수자원공사",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -54,7 +54,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "k-water-장학회",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -62,5 +62,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "댐주변지역 및 K-water 지사 소재지의 중·고등학생",
-  "view_count": 2396
+  "view_count": 2569
 }

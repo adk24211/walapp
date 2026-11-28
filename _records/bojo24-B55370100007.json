@@ -32,7 +32,7 @@
   "benefit_raw": "○ 서민생활 안정에 기여를 목적으로 취업지원 사업실시\n- 서민, 취약계층 대상 구인구직 상담 및 알선\n- 정부 취업지원프로그램 연계",
   "category": "jobs",
   "contact_raw": "서민금융콜센터/1397",
-  "content_hash": "sha256:9af9dee5b136728536c9b3fc15f2af48",
+  "content_hash": "sha256:4a62a128055a86e910fc172879d9573d",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -42,11 +42,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-B55370100007",
   "is_mock": false,
-  "last_checked": "2026-09-08",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-08",
   "law_raw": "",
   "name": "취약계층 취업 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55370100007",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000785&bnefType=all&svcId=B55370100007",
   "org": "서민금융진흥원",
   "primary_audience": "jobseeker",
   "receiver_raw": "",
@@ -55,7 +55,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "취약계층-취업-지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 기타(상담) 개인",
@@ -63,5 +63,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "서민, 취약계층 등 취업서비스를 원하는 성인",
-  "view_count": 1950
+  "view_count": 2061
 }

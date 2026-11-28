@@ -32,7 +32,7 @@
   "benefit_raw": "○ 서울학, 미래탐색, 지식충전 등 인문교양 강좌 제공\n\n○ 수강료 면제/감면\n- (수강료 면제) 기초생활수급권자, 장애인, 국가유공자, 5.18 민주유공자, 의사자유가족\n- (수강료 감면(50%)) 경로우대자, 청소년, 한부모가족, 북한이탈주민, 다문화가족, 다둥이카드 소지자, 외국인근로자\n\n※ 수강료를 면제 또는 감면 받고자 하는 자는 면제나 감면사유를 증명할 수 있는 서류 등을 제출하여야 한다.",
   "category": "care",
   "contact_raw": "서울시민대학/02-442-6827",
-  "content_hash": "sha256:4a0f7b087b6ecea2ffcca553f05ec878",
+  "content_hash": "sha256:ee096a04002718d8f4336e61abc4ddba",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -42,11 +42,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-O00081600001",
   "is_mock": false,
-  "last_checked": "2026-08-28",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-28",
   "law_raw": "",
   "name": "서울시민대학",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00081600001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000378&bnefType=all&svcId=O00081600001",
   "org": "(재)서울특별시평생교육진흥원",
   "primary_audience": "parent",
   "receiver_raw": "",
@@ -55,7 +55,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "서울시민대학",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육)\n현금(감면) 개인",
@@ -63,5 +63,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 서울시민 누구나\n- (수강료 면제) 기초생활수급권자, 장애인, 국가유공자, 5.18 민주유공자, 의사자유가족\n- (수강료 감면(50%)) 경로우대자, 청소년, 한부모가족, 북한이탈주민, 다문화가족, 다둥이카드 소지자, 외국인근로자",
-  "view_count": 19924
+  "view_count": 22105
 }

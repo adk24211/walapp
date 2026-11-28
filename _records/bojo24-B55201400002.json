@@ -38,7 +38,7 @@
   "benefit_raw": "○ 뿌리산업, 첨단산업 등 산업현장 수요를 반영한 전문기술 습득을 위한 직업훈련(취업지원) 및 훈련장려금 지급\n* 기계/금형/산업설비/전기/전자/정보통신(IT)/인공지능(AI)/바이오/반도체/이차전지 등\n\n- 1개월~1년간의 실무중심 기술교육 후 취업지도\n- 교육훈련비 전액 지원\n- 훈련장려금 지급(단위기간(1개월) 출석률 80%이상인 경우)\n※ 지급 자격을 충족하는 경우에 한하여 지급(실업급여수급자, 공공근로참여자 등 미지급)\n\n- 만 15세 이상 구직자 대상 산업현장 맞춤형 기술인력 양성 과정\n\n- 2년제대학 이상 졸업(예정) 구직자 대상 신산업·신기술 직종 고급기술과정\n\n- 만 40세 이상 중장년 대상 전직, 재취업, 창업 등 안정적인 노후 준비와 인생3모작 지원 과정\n\n- 경력단절여성의 재취업을 위한 맞춤형 직업훈련\n\n- 이주배경 구직자(다문화청년, 결혼이민자 등) 대상 자립역량강화 및 안정적인 사회정착 지원을 위한 맞춤형 교육과정",
   "category": "jobs",
   "contact_raw": "한국폴리텍 학사운영부 입학담당/032-650-6672\n학사담당/032-650-6674",
-  "content_hash": "sha256:13196db41a534a19d4ffdb110a2b5bd1",
+  "content_hash": "sha256:6ad068e647880b1dc4f6b640b3efa9ca",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -49,11 +49,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55201400002",
   "is_mock": false,
-  "last_checked": "2026-08-24",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-24",
   "law_raw": "",
   "name": "구직자 직업훈련(취업지원) 및 훈련장려금 지급(한국폴리텍대학)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55201400002",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002237&bnefType=all&svcId=B55201400002",
   "org": "학교법인한국폴리텍",
   "primary_audience": "jobseeker",
   "receiver_raw": "",
@@ -62,7 +62,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "구직자-직업훈련-취업지원-및-훈련장려금-지급-한국폴리텍대학",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금 개인",
@@ -70,5 +70,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "취업을 희망하는 만15세 이상 구직자 등\n※ 과정별 지원자격이 상이하므로, 홈페이지 모집요강 참고",
-  "view_count": 3819
+  "view_count": 4054
 }

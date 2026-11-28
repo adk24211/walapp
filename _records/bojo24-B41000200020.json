@@ -34,7 +34,7 @@
   "benefit_raw": "에너지 효율향상 및 온실가스 감축을 위해 고객이 고효율 기기 교체 시 지원금 지급",
   "category": "living",
   "contact_raw": "수요효율처/123",
-  "content_hash": "sha256:b3d38b896991121620f9d0b7e55b5970",
+  "content_hash": "sha256:34006d85c360d32a4cc3893a84f7c0d8",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,11 +44,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
   "id": "bojo24-B41000200020",
   "is_mock": false,
-  "last_checked": "2026-09-30",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-30",
   "law_raw": "",
   "name": "김건조기 EHP 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B41000200020",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2106514&bnefType=all&svcId=B41000200020",
   "org": "한국전력공사",
   "primary_audience": "business",
   "receiver_raw": "",
@@ -57,7 +57,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "김건조기-ehp-지원",
   "source": "bojo24",
   "source_category_raw": "농림축산어업 현금 개인\n소상공인\n법인/시설/단체",
@@ -65,5 +65,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 농사용전력을 사용하며 에너지진단을 통해 전열히터 김건조기를 김건조기 EHP로 교체하는 고객 또는 ESCO사업자 등\n- (지원기기) 히트펌프와 급기팬 등 전 건조설비\n※ 세부 구성품(삼상유도전동기, 원심식송풍기) 중 한국에너지공단효율관리제도, 고효율에너지기자재 대상인 경우 반드시 등록제품 설치",
-  "view_count": 3149
+  "view_count": 3236
 }

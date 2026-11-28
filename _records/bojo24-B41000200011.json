@@ -28,7 +28,7 @@
   "benefit_raw": "에너지 효율향상 및 온실가스 감축을 위해 고객이 고효율기기 교체 시 지원금 지급",
   "category": "living",
   "contact_raw": "수요효율처/123",
-  "content_hash": "sha256:3e316242d297b6b9f098570f2f5c524f",
+  "content_hash": "sha256:e06ce34ed15547c550de7bd60b5e3496",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -38,11 +38,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
   "id": "bojo24-B41000200011",
   "is_mock": false,
-  "last_checked": "2026-09-24",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-24",
   "law_raw": "",
   "name": "인버터제어형 공기압축기 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B41000200011",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2106512&bnefType=all&svcId=B41000200011",
   "org": "한국전력공사",
   "primary_audience": "business",
   "receiver_raw": "",
@@ -51,7 +51,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "인버터제어형-공기압축기-지원",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금 개인\n가구\n소상공인\n법인/시설/단체",
@@ -59,5 +59,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 정속형 공기압축기를 인버터제어형 공기압축기로 교체하는 고객, 사업자 등\n- 인버터제어형 공기압축기 동력이 정속형 공기압축기 동력과 같거나 작은 경우 지원",
-  "view_count": 3349
+  "view_count": 3509
 }

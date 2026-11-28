@@ -26,7 +26,7 @@
   "benefit_raw": "이동식 세탁 차량을 활용한 방문 세탁 서비스 제공(지역 내 기관 연계 필수)",
   "category": "care",
   "contact_raw": "경영혁신실/042-629-2433",
-  "content_hash": "sha256:8edaaf804d54977c05a90d18298f824b",
+  "content_hash": "sha256:bbcf879afa8bf26347e9eea5e09477d0",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -36,11 +36,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B50000100003",
   "is_mock": false,
-  "last_checked": "2026-08-26",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-26",
   "law_raw": "",
   "name": "K-water 사랑샘터",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B50000100003",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000181&bnefType=all&svcId=B50000100003",
   "org": "한국수자원공사",
   "primary_audience": "senior",
   "receiver_raw": "",
@@ -49,7 +49,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "k-water-사랑샘터",
   "source": "bojo24",
   "source_category_raw": "보호·돌봄 서비스(돌봄) 가구",
@@ -57,5 +57,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "소외지역 독거노인 등 취약계층",
-  "view_count": 2317
+  "view_count": 2596
 }

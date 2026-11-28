@@ -28,7 +28,7 @@
   "benefit_raw": "만65세 이상 회원 꿈나무종합타운(문화, 체육 ) 프로그램 이용시 20%할인",
   "category": "living",
   "contact_raw": "용산꿈나무종합타운/02-707-0704",
-  "content_hash": "sha256:0642cade724722c48e11c5aa83ac7db0",
+  "content_hash": "sha256:647971ef97e77711a9188879bf88e955",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -38,11 +38,11 @@
   "how_to_raw": "신청불필요",
   "id": "bojo24-O00024000047",
   "is_mock": false,
-  "last_checked": "2026-09-21",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-21",
   "law_raw": "",
   "name": "용산꿈나무종합타운 프로그램 할인(경로)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00024000047",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2100940&bnefType=all&svcId=O00024000047",
   "org": "용산구시설관리공단",
   "primary_audience": "senior",
   "receiver_raw": "",
@@ -51,7 +51,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "용산꿈나무종합타운-프로그램-할인-경로",
   "source": "bojo24",
   "source_category_raw": "문화·환경 시설이용 개인",
@@ -59,5 +59,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "신분증 및 경로우대증에 생년월일이 만65세 이상인 회원",
-  "view_count": 672
+  "view_count": 745
 }

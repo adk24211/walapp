@@ -30,7 +30,7 @@
   "benefit_raw": "○ 지역 문화계를 이끌어갈 차세대 청년예술가 발굴 및 육성\n- 충북 연고의 청년 예술가 대상 문학, 시각, 공연, 다원예술 분야 창작활동비 지원",
   "category": "living",
   "contact_raw": "예술진흥팀/043-299-9255",
-  "content_hash": "sha256:29f98b2ff68d6837fda0187bf45108d8",
+  "content_hash": "sha256:89597017206918f5ab44c49d39af6a1f",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-O00113600007",
   "is_mock": false,
-  "last_checked": "2026-10-09",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-09",
   "law_raw": "",
   "name": "청년예술지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00113600007",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001932&bnefType=all&svcId=O00113600007",
   "org": "(재)충북문화재단",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "청년예술지원",
   "source": "bojo24",
   "source_category_raw": "문화·환경 현금 개인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 일반지원\n1. 공고일 이전 충청북도에 거주하고 있는 자\n2. 충북출생자\n3. 충북에 1년 이상 거주 경험자\n4. 충북 소재 학교(초, 중, 고, 대 중 1개 이상) 졸업생\n→ 상기 4가지 중 1개 조건에 부합하는 자\n\n※ 1~4 중 1개 조건에 부합하는 자\n\n○ 연속지원\n- 작년도 청년예슬가창작지원사업 선정자",
-  "view_count": 1510
+  "view_count": 1576
 }

@@ -24,6 +24,7 @@
   "apply_period": {
     "always": false,
     "end": "",
+    "raw": "접수기관 별 상이",
     "start": ""
   },
   "apply_url": "",
@@ -35,7 +36,7 @@
   "benefit_raw": "○ 지원내용 : 서비스별 정부지원금 차등 지원\n\n○ 지원방법 : 매월 말일 바우처 지원금액 생성되어 서비스 제공 후 결제\n\n※ 지자체별 서비스 운영이 상이함으로 반드시 지자체(읍·면·동 및 시·군·구) 문의 바랍니다.",
   "category": "health",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:35a4ded8d84ad89156c38b6f035e780a",
+  "content_hash": "sha256:28d78401dea90cc8ae4b334f461c4797",
   "criteria_raw": "○ 지원 대상 : 기준 중위소득 140% 이하(단, 지자체 및 서비스에 따라 상이)\n- 소득 예외기준 : 아동･청소년 심리지원사업(기준 중위소득160%이하), 보완대체의사소통기기활용 중재서비스(기준 중위소득 170%이하), 장애인보조기기렌탈･ 비만아동건강관리서비스(소득기준없음)\n※ 시･도 또는 시･군･구에서 소득기준 및 소득구간별 본인 부담금 차등적용 가능\n○ 연령 기준 : 서비스별 상이",
   "deferred_detail": false,
   "documents_raw": [
@@ -48,11 +49,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SD0000016138",
   "is_mock": false,
-  "last_checked": "2026-08-13",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-13",
   "law_raw": "",
   "name": "지역사회서비스",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000016138",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=75100&bnefType=all&svcId=SD0000016138",
   "org": "보건복지부",
   "primary_audience": "disabled",
   "receiver_raw": "주민센터",
@@ -61,13 +62,13 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "지역사회서비스",
   "source": "bojo24",
   "source_category_raw": "보건·의료 이용권 개인",
   "source_id": "SD0000016138",
-  "source_registered": "2020-12-17",
+  "source_registered": "",
   "status": "active",
   "target_raw": "○ 지원 대상 : 기준 중위소득 140% 이하(단, 지자체 및 서비스에 따라 상이)\n- 소득 예외기준 : 아동･청소년 심리지원사업(기준 중위소득160%이하), 보완대체의사소통기기활용 중재서비스(기준 중위소득 170%이하), 장애인보조기기렌탈･ 비만아동건강관리서비스(소득기준없음)\n※ 시･도 또는 시･군･구에서 소득기준 및 소득구간별 본인 부담금 차등적용 가능\n○ 연령 기준 : 서비스별 상이",
-  "view_count": 301500
+  "view_count": 304579
 }

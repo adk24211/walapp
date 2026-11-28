@@ -33,7 +33,7 @@
   "benefit_raw": "○ 자유학기(학년)제 연계프로그램으로, 학예연구사 진로탐색 및 직업체험을 주제로 한 청소년 진로체험프로그램(연 17회)",
   "category": "care",
   "contact_raw": "교육부/041-560-0268",
-  "content_hash": "sha256:6ac41578a48e0455148b7ff521fa2d2f",
+  "content_hash": "sha256:8ae562209808988058d2e2ec6ff41c2d",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55100100004",
   "is_mock": false,
-  "last_checked": "2026-09-21",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-21",
   "law_raw": "",
   "name": "독립기념관 진로체험교육",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55100100004",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000971&bnefType=all&svcId=B55100100004",
   "org": "독립기념관",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "독립기념관-진로체험교육",
   "source": "bojo24",
   "source_category_raw": "보육·교육 시설이용 개인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "중·고등학교 학생(학급별 교육)",
-  "view_count": 1060
+  "view_count": 1207
 }

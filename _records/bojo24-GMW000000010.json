@@ -33,7 +33,7 @@
   "benefit_raw": "○ 임산부수첩 및 아기수첩 제공",
   "category": "care",
   "contact_raw": "해당지역 보건소/-",
-  "content_hash": "sha256:2ad4b0c219748409d1417c7921f75b2d",
+  "content_hash": "sha256:5e58dc18cb793d31114eac0b094265f1",
   "criteria_raw": "○ 보건소 등록 임산부",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-GMW000000010",
   "is_mock": false,
-  "last_checked": "2026-08-28",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-28",
   "law_raw": "",
   "name": "표준 모자보건수첩 제공",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GMW000000010",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=104657&bnefType=all&svcId=GMW000000010",
   "org": "보건복지부",
   "primary_audience": "parent",
   "receiver_raw": "보건소",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "표준-모자보건수첩-제공",
   "source": "bojo24",
   "source_category_raw": "임신·출산 현물 개인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 임신부 또는 출생 사실 확인된 영유아",
-  "view_count": 14458
+  "view_count": 14980
 }

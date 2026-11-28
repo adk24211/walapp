@@ -51,7 +51,7 @@
   "benefit_raw": "1. 목 적 : 다양한 사유로 갑작스러운 위기 상황에 놓여 도움이 필요한 천안시 지역 내 취약계층 이웃들의 위기 극복 및 생활 안정에 도움을 주기 위함.\n2. 지원기준 : 기초 생활 수급자 / 차상위 계층 대상자 / 한부모 가족 대상자 / 2026년 건강보험료 납부기준 110% 이하 [1인 120%]\n3. 지원내용 : 생계비 / 주거비 / 주거환경개선비\n4. 지원제한 : 생계 수급자 생계비 지원 불가 / 주거 수급자 주거비 지원 불가 / 교육 수급자 교육비 지원 불가 / 시설 수급자 지원 불가\n생계비 및 주거비 중복 지원 불가 / 단, 주거환경개선비 심사를 통한 별도 지원 가능\n5. 지원기간 : 2026년 예산 소진시까지\n6. 지원금액 :\n- 생계비 : 1인 70만원 / 2인 100만원 / 3인 이상 130만원 일시 지원\n- 주거비 : 긴급 주거 확보 및 월세, 관리비 체납 3개월 이상 증빙시 최대 100만원 지원\n- 주거환경개선비 : 최대 100만원 지원\n\n* 본 재단은 직접 신청을 받지 않습니다!! 천안시 읍/면/동 행정복지센터(동사무소) 또는 사회복지기관을 통하여 신청 부탁 드립니다!! *",
   "category": "housing",
   "contact_raw": "김진영/041-903-4488",
-  "content_hash": "sha256:bb451cb946328bf58bbdb3cce300a0f2",
+  "content_hash": "sha256:f728099b1b1cbe2fe04ac65083c81c36",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -67,11 +67,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-O00112500004",
   "is_mock": false,
-  "last_checked": "2026-10-24",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-24",
   "law_raw": "",
   "name": "천안형 취약계층 지원 [생계 및 주거]",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00112500004",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2105810&bnefType=all&svcId=O00112500004",
   "org": "천안복지재단",
   "primary_audience": "lowincome",
   "receiver_raw": "",
@@ -80,7 +80,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "천안형-취약계층-지원-생계-및-주거",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금 개인",
@@ -88,5 +88,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "1. 지원 대상 : 다양한 사유로 생계 및 주거 관련 위기상황에 놓여 도움이 필요한 천안시 취약계층\n\n2. 지원 기준 : 기초 생활 수급자 / 차상위 계층 대상자 / 한부모가족 대상자 / 2026년 건강보험료 납부기준 110% 이하 [1인 120% 이하]\n\n3. 지원 제한 : 생계 수급자 생계비 지원 불가 / 주거 수급자 주거비 지원 불가 / 교육 수급자 교육비 지원 불가 / 시설 수급자 지원 불가\n생계비 및 주거비 중복 지원 불가 / 단, 주거환경개선비 심사를 통한 별도 지원 가능\n본 재단 지원 이력이 있는 경우, 동일 항목 및 사유 등으로 만 2년 지원 불가",
-  "view_count": 4098
+  "view_count": 4176
 }

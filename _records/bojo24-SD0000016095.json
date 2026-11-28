@@ -28,7 +28,7 @@
   "benefit_raw": "○ 의료급여수급권자, 차상위계층 : 최대 40만 원\n\n○ 그외 건강보험가입자 : 최대 20만 원",
   "category": "health",
   "contact_raw": "보건복지상담센터/129\n국민건강보험공단/1577-1000",
-  "content_hash": "sha256:ae267bb05a5a88fafa19a44993165fa0",
+  "content_hash": "sha256:42cfbe0d1aed55891b24e0fc57a73aa3",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [
@@ -45,11 +45,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SD0000016095",
   "is_mock": false,
-  "last_checked": "2026-09-28",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-28",
   "law_raw": "",
   "name": "영유아 발달 정밀검사비 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000016095",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=16095&bnefType=all&svcId=SD0000016095",
   "org": "보건복지부",
   "primary_audience": "lowincome",
   "receiver_raw": "보건소",
@@ -58,7 +58,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "영유아-발달-정밀검사비-지원",
   "source": "bojo24",
   "source_category_raw": "보건·의료 서비스(의료)\n의료지원 개인",
@@ -66,5 +66,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 영유아 건강검진 발달평가 결과 '심화평가 권고'로 평가된 대상",
-  "view_count": 13906
+  "view_count": 14369
 }

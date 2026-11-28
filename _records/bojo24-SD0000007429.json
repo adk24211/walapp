@@ -36,7 +36,7 @@
   "benefit_raw": "○ 정책목적에 따라 일반경영안정자금, 특별경영안정자금, 성장기반자금 등 지원",
   "category": "jobs",
   "contact_raw": "소상공인시장진흥공단 금융지원실/042-363-7203",
-  "content_hash": "sha256:942be23b7ee6e02208ae0069e27ffa8b",
+  "content_hash": "sha256:cf8c2a41f8bbcfbe2e9a1cc85d43630e",
   "criteria_raw": "매출, 사업성 등을 고려하여 종합적으로 평가",
   "deferred_detail": false,
   "documents_raw": [
@@ -47,11 +47,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-SD0000007429",
   "is_mock": false,
-  "last_checked": "2026-08-21",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-21",
   "law_raw": "",
   "name": "소상공인 정책자금 융자 지원(일반경영안정자금, 특별경영안정자금, 성장기반자금 등)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000007429",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=39748&bnefType=all&svcId=SD0000007429",
   "org": "중소벤처기업부",
   "primary_audience": "business",
   "receiver_raw": "금융지원실",
@@ -60,7 +60,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "소상공인-정책자금-융자-지원-일반경영안정자금-특별경영안정자금-성장기반자금",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금 소상공인",
@@ -68,5 +68,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 「소상공인 기본법」에 따른 소상공인\n※ 단, 소상공인 정책자금 융자공고에 따른 융자제외업종은 지원 불가",
-  "view_count": 72197
+  "view_count": 73880
 }

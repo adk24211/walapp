@@ -35,7 +35,7 @@
   "benefit_raw": "○ 장애수당\n- 국민기초생활 보장 생계 또는 의료급여수급자 : 60,000원/월\n- 보장시설 수급자(생계, 의료) : 30,000원/월\n- 국민기초생활 보장 주거 또는 교육급여수급자(단, 생계 또는 의료급여수급자 제외), 차상위계층 : 60,000원/월",
   "category": "finance",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:927657303205417181f8b265bbc282e1",
+  "content_hash": "sha256:5b08fbe480023cb9ae283d9fe65c76b2",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [
@@ -50,11 +50,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-SPE000000010",
   "is_mock": false,
-  "last_checked": "2026-09-24",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-24",
   "law_raw": "",
   "name": "장애수당",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SPE000000010",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=681344&bnefType=all&svcId=SPE000000010",
   "org": "보건복지부",
   "primary_audience": "disabled",
   "receiver_raw": "주민센터",
@@ -63,7 +63,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 21,
+  "revision": 22,
   "slug": "장애수당",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금 개인",
@@ -71,5 +71,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 지원 대상\n- 18세 이상의 등록한 장애인 중 장애인연금법*상 중증장애인에 해당하지 않는 자로 국민기초생활보장수급자 및 차상위계층(종전 3~6급인 자)\n*장애인연금법 제2조 제1호, 같은 법 시행령 제2조, 장애 정도 판정 기준 제5장\n\n○ 수급자격 : 생계· 의료·주거·교육급여수급자, 차상위계층\n\n○ 연령 기준\n- 연령 : 신청 월 현재 18세 이상인 자, 다만 18세~20세로서 초·중등교육법 제2조에 따른 학교*에 재학(휴학도 포함됨) 중인 자는 제외\n* 신청일이 속하는 월의 말일까지 18세가 되는 자는 포함\n* 장애인 등에 대한 특수교육법에 따른 학교도 포함\n\n○ 기타 기준\n- 등록한 장애인\n- 신청일 현재, 장애인복지법 제32조에 따라 등록한 장애인\n- 장애정도 : 장애인연금법* 상 중증장애인에 해당하지 않는 자\n*장애인연금법 제2조 제1호, 같은 법 시행령 제2조, 장애정도판정기준 제5장",
-  "view_count": 32332
+  "view_count": 32967
 }

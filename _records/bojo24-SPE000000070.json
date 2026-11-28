@@ -31,7 +31,7 @@
   "benefit_raw": "○ 의료급여 2종, 차상위 본인 부담 경감대상자인 등록 장애인의 의료기관 이용 시 발생하는 본인 부담금에 대해 일부 또는 전액 지원\n- 1차 외래 진료 : 750원 지원\n- 2,3차 외래 및 1,2,3차 입원 전액 지원",
   "category": "health",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:d5900c4294e3c9ba18085dd96d65416a",
+  "content_hash": "sha256:d5efe4c70d1ba5941fa528de3c942287",
   "criteria_raw": "○ 소득 조사 결과",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SPE000000070",
   "is_mock": false,
-  "last_checked": "2026-09-16",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-16",
   "law_raw": "",
   "name": "장애인 의료비 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SPE000000070",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=681329&bnefType=all&svcId=SPE000000070",
   "org": "보건복지부",
   "primary_audience": "lowincome",
   "receiver_raw": "주민센터",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "장애인-의료비-지원",
   "source": "bojo24",
   "source_category_raw": "보건·의료 서비스(의료)\n의료지원 개인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 의료급여법에 의한 의료급여 2종 수급권자인 등록장애인\n- 국민기초생활 보장법에 의한 수급자 중 근로 능력 세대의 등록장애인\n- 장애인 의료비는 장애인에게만 지원되므로 당해 장애인과 세대를 같이 하는 비장애인인 가족원은 지원 대상 아님\n\n○ 차상위 본인 부담 경감대상자인 등록장애인(만성질환자 및 18세 미만 등록장애인)",
-  "view_count": 22914
+  "view_count": 23211
 }

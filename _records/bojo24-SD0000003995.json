@@ -32,7 +32,7 @@
   "benefit_raw": "○ 송금 및 현금인출 수수료 면제",
   "category": "living",
   "contact_raw": "우체국/1599-1900",
-  "content_hash": "sha256:b64c2cf1008194724efc68ae5460df31",
+  "content_hash": "sha256:dc2354ba31a577a9f34bac489c48409c",
   "criteria_raw": "○ 관련서류 제출",
   "deferred_detail": false,
   "documents_raw": [
@@ -42,11 +42,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SD0000003995",
   "is_mock": false,
-  "last_checked": "2026-10-06",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-06",
   "law_raw": "",
   "name": "사회 소외계층 대상 금융수수료 면제",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000003995",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=751450&bnefType=all&svcId=SD0000003995",
   "org": "과학기술정보통신부",
   "primary_audience": "lowincome",
   "receiver_raw": "전국우체국",
@@ -55,7 +55,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "사회-소외계층-대상-금융수수료-면제",
   "source": "bojo24",
   "source_category_raw": "행정·안전 현금(감면) 개인",
@@ -63,5 +63,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 우체국예금고객 중 기초생활수급자, 소년소녀가장, 차상위계층, 장애인, 국가유공자, 독립유공자, 대학생, 고령자",
-  "view_count": 4536
+  "view_count": 4598
 }

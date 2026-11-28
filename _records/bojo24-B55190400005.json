@@ -36,7 +36,7 @@
   "benefit_raw": "○ 수급자격 신청자 온라인 교육 서비스 (실업급여 신청 시 필수 교육)\n- 실업급여(구직급여)에 대한 전반적인 신청 및 제도 안내\nㆍ실업급여 정의\nㆍ구직급여 수급요건 및 관련 용어 안내\nㆍ수급자격 인정 신청 및 구직신청 절차 안내\nㆍ실업인정 및 조기재취업수당 안내\nㆍ실업급여 부정수급 안내",
   "category": "jobs",
   "contact_raw": "고용노동부/1350",
-  "content_hash": "sha256:30afe9c15f5f882ad60e03e489e1fdd9",
+  "content_hash": "sha256:5540ef2b7d6e0ef389f6284e4021bf52",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -49,11 +49,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55190400005",
   "is_mock": false,
-  "last_checked": "2026-09-06",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-06",
   "law_raw": "",
   "name": "실업급여(구직급여) 수급자격 온라인 교육 서비스",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55190400005",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2100960&bnefType=all&svcId=B55190400005",
   "org": "한국고용정보원",
   "primary_audience": "jobseeker",
   "receiver_raw": "",
@@ -62,7 +62,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "실업급여-구직급여-수급자격-온라인-교육-서비스",
   "source": "bojo24",
   "source_category_raw": "고용·창업 기타(교육) 개인",
@@ -70,5 +70,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 고용보험 가입자가 실직하여 아래 실업급여 수급 요건을 충족하는 자\n- 이직일 이전 18개월간(예술인·노무제공자: 24개월) 피보험단위기간이 통산하여 180일(예술인: 9개월, 노무제공자: 12개월) 이상일 것\n- 근로의 의사와 능력이 있음에도 불구하고 취업(영리를 목적으로 사업을 영위하는 경우 포함)하지 못한 상태에 있을 것\n- 재취업을 위한 노력을 적극적으로 할 것\n- 이직사유가 비자발적인 사유일 것(이직 사유가 법 제 58조에 따른 수급자격의 제한사유에 해당하지 아니할 것)",
-  "view_count": 34923
+  "view_count": 37498
 }

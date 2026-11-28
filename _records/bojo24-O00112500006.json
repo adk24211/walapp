@@ -40,7 +40,7 @@
   "benefit_raw": "1. 지원목적 : 재해 재난 및 기타 다양한 사유로 매우 긴급한 위기에 처한 위기 취약계층 지원\n2. 지원기준 : 기초 생활 수급자 / 차상위 계층 대상자 / 한부모가족 대상자 / 2026년 건강보험료 납부기준 130% 이하\n3. 지원금액 : 천안시 취약계층 지원사업 배분 기준 및 본 재단 심의 결정 금액",
   "category": "living",
   "contact_raw": "김현정/0419034488",
-  "content_hash": "sha256:1d55a1913140cced5e1af53398dc96ca",
+  "content_hash": "sha256:8d5d969cfd7f881e7f98598e7d2f3f5f",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -53,11 +53,11 @@
   "how_to_raw": "방문신청\n직접입력",
   "id": "bojo24-O00112500006",
   "is_mock": false,
-  "last_checked": "2026-10-10",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-10",
   "law_raw": "",
   "name": "천안시 긴급지원 대상자 특별 지원 사업",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00112500006",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2105711&bnefType=all&svcId=O00112500006",
   "org": "천안복지재단",
   "primary_audience": "lowincome",
   "receiver_raw": "",
@@ -66,7 +66,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "천안시-긴급지원-대상자-특별-지원-사업",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금 개인",
@@ -74,5 +74,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "o 기초 생활 수급자 / 차상위 계층 대상자 / 한부모가족 대상자 / 2026년 건강보험료 납부기준 130% 이하\n\no 천안시청 및 읍면동 행정복지센터, 사회복지기관, 시설 및 단체에서 발굴 및 추천한 복지 사각지대 중 재단 심의 의결 통과 대상",
-  "view_count": 5218
+  "view_count": 5616
 }

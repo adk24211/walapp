@@ -30,7 +30,7 @@
   "benefit_raw": "(재무설계) 재무설계 필요성, 재무설계 방법, 연령대별 재무설계 등\n(저축과 소비) 금융상품 선택법과 합리적인 소비관리\n(부채관리) 대출상품 선택방법, 부채수준 판단 등\n(신용관리) 신용관리의 필요성 및 신용관리 방법\n(금융사기예방) 불법추심, 불법사금융, 금융사기 예방\n※ (체험형 교육) 고령층 대상 금융사기예방 게임북(노다지)\n(서민금융제도 이해) 서민금융제도 및 채무자 지원제도\n(생활·복지) 주택 및 일자리 지원제도, 생활위기와 생계유지 문제 지원제도\n(창업금융) 창업지원 금융서비스 지원제도 등\n(금융생활) 청소년 진로·금융생활 보드게임(초·중학생)\n(디지털 금융교육) 고령층 대상 키오스크, 은행업무, 페이결제 등",
   "category": "finance",
   "contact_raw": "서민금융콜센터/1397",
-  "content_hash": "sha256:fa78974d629ec72f5ae375482cabdaef",
+  "content_hash": "sha256:2752a824110a34c0cbd7a85689cfb5e7",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -40,11 +40,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55370100033",
   "is_mock": false,
-  "last_checked": "2026-09-08",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-08",
   "law_raw": "",
   "name": "서민금융진흥원 금융교육",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55370100033",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2149520&bnefType=all&svcId=B55370100033",
   "org": "서민금융진흥원",
   "primary_audience": "senior",
   "receiver_raw": "",
@@ -53,7 +53,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "서민금융진흥원-금융교육",
   "source": "bojo24",
   "source_category_raw": "생활안정 기타(교육) 개인",
@@ -61,5 +61,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "전국민",
-  "view_count": 39756
+  "view_count": 40498
 }

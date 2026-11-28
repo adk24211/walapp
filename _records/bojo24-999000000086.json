@@ -47,7 +47,7 @@
   "benefit_raw": "창업기업을 선발하여 창업존 공간, 인프라 및 네트워킹 등 지원",
   "category": "jobs",
   "contact_raw": "창업진흥원 지역창업실/044-410-1888",
-  "content_hash": "sha256:840c3253a5490fbedaa5eb71f03e16ef",
+  "content_hash": "sha256:917012fad1706058e45a73c254684804",
   "criteria_raw": "사업계획서, 사업아이템 기술성, 창업자 역량 및 의지, 시장성, 사업성 등",
   "deferred_detail": false,
   "documents_raw": [
@@ -61,11 +61,11 @@
   "how_to_raw": "기타 온라인신청\n직접입력",
   "id": "bojo24-999000000086",
   "is_mock": false,
-  "last_checked": "2026-09-02",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-02",
   "law_raw": "",
   "name": "창업존 운영",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000086",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999253&bnefType=all&svcId=999000000086",
   "org": "중소벤처기업부",
   "primary_audience": "business",
   "receiver_raw": "창업진흥원 지역창업실",
@@ -74,7 +74,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "창업존-운영",
   "source": "bojo24",
   "source_category_raw": "고용·창업 기타(교육) 법인/시설/단체",
@@ -82,5 +82,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "예비창업자 및 창업 7년 이내 기업",
-  "view_count": 7116
+  "view_count": 7531
 }

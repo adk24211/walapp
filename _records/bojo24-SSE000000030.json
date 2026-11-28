@@ -31,7 +31,7 @@
   "benefit_raw": "○ 노인의료복지시설 등에 장기간 동안 입소하여 신체활동 지원 및 심신기능의 유지 향상을 위한 교육훈련 등을 제공하는 장기 요양급여",
   "category": "care",
   "contact_raw": "국민건강보험공단/1577-1000",
-  "content_hash": "sha256:e3caba734d72002cba560b8aa5583120",
+  "content_hash": "sha256:37ffa53e7809d605dea0adc3442b5fcf",
   "criteria_raw": "○ 65세 이상 노인 및 노인성 질병을 가진 65세 미만의 국민으로서 혼자서 일상생활을 수행하기 어려워 장기 요양 등급을 받은 수급자",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,11 +44,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SSE000000030",
   "is_mock": false,
-  "last_checked": "2026-08-24",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-24",
   "law_raw": "",
   "name": "기타재가급여 (장기요양보험 복지용구)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SSE000000030",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=716766&bnefType=all&svcId=SSE000000030",
   "org": "보건복지부",
   "primary_audience": "senior",
   "receiver_raw": "국민건강보험공단 지사",
@@ -57,7 +57,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "기타재가급여-장기요양보험-복지용구",
   "source": "bojo24",
   "source_category_raw": "보호·돌봄 서비스(의료)\n의료지원 개인",
@@ -65,5 +65,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 65세 이상 노인 및 노인성 질병을 가진 65세 미만의 국민으로서 혼자서 일상생활을 수행하기 어려워 장기 요양 1~2등급을 받은 수급자 및 3~5등급 수급자 중 시설급여 가능한 수급자",
-  "view_count": 4667
+  "view_count": 5131
 }

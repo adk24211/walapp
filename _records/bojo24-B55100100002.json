@@ -27,7 +27,7 @@
   "benefit_raw": "○ 대한민국 임시정부의 수립 배경과 활동을 학습하고, 임시정부가 추구한 가치를 이해하기 위한 전시연계 체험교육 프로그램(연 2회)",
   "category": "education",
   "contact_raw": "교육부/041-560-0267",
-  "content_hash": "sha256:d50f565bf94b778c83d33d4598065678",
+  "content_hash": "sha256:465e96c4b45d9d4cd0e201c12964a957",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -37,11 +37,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-B55100100002",
   "is_mock": false,
-  "last_checked": "2026-09-29",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-29",
   "law_raw": "",
   "name": "독립기념관 임시정부 초등단체 교육",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55100100002",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000969&bnefType=all&svcId=B55100100002",
   "org": "독립기념관",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -50,7 +50,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "독립기념관-임시정부-초등단체-교육",
   "source": "bojo24",
   "source_category_raw": "보육·교육 시설이용 개인",
@@ -58,5 +58,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "초등학생 포함 가족 관람객",
-  "view_count": 647
+  "view_count": 712
 }

@@ -35,7 +35,7 @@
   "benefit_raw": "○ 천안시민, 장애인, 다자녀가정, 국가유공자 감면 혜택",
   "category": "living",
   "contact_raw": "공원운영부 자연휴양팀/041-529-5113",
-  "content_hash": "sha256:bcd47328eb64f782bf81de2e9c1e6dc2",
+  "content_hash": "sha256:142588dfb478869df3844a61bbda9347",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -45,11 +45,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-O00033300020",
   "is_mock": false,
-  "last_checked": "2026-10-06",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-06",
   "law_raw": "",
   "name": "국민여가캠핑장 이용요금 감면",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00033300020",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001950&bnefType=all&svcId=O00033300020",
   "org": "천안도시공사",
   "primary_audience": "disabled",
   "receiver_raw": "",
@@ -58,7 +58,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "국민여가캠핑장-이용요금-감면",
   "source": "bojo24",
   "source_category_raw": "문화·환경 현금(감면) 개인",
@@ -66,5 +66,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "천안시민, 장애인, 다자녀가정, 국가유공자",
-  "view_count": 2811
+  "view_count": 2866
 }

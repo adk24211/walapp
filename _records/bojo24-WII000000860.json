@@ -37,7 +37,7 @@
   "benefit_raw": "여성전용 창업보육시설 등을 갖춘 여성기업종합지원센터 운영, 여성창업 액셀러레이팅(여성창업경진대회 개최 및 사업화 지원, 글로벌 액셀러레이팅)",
   "category": "jobs",
   "contact_raw": "(재)여성기업종합지원센터(여성창업보육센터 문의)/02-369-0993\n(재)여성기업종합지원센터(여성창업액셀러레이팅 문의)/02-369-0943",
-  "content_hash": "sha256:70fcb5073bb8f8545eee5a614e8d5e15",
+  "content_hash": "sha256:fd3eb1ac9bab330b1acf4cc8c1956aea",
   "criteria_raw": "○ 여성(예비)창업자",
   "deferred_detail": false,
   "documents_raw": [
@@ -47,11 +47,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-WII000000860",
   "is_mock": false,
-  "last_checked": "2026-08-25",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-25",
   "law_raw": "",
   "name": "여성 창업 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000860",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=591823&bnefType=all&svcId=WII000000860",
   "org": "중소벤처기업부",
   "primary_audience": "business",
   "receiver_raw": "(재)여성기업종합지원센터",
@@ -60,7 +60,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "여성-창업-지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 기타\n기타(교육)\n기타(상담)\n시설이용 법인/시설/단체",
@@ -68,5 +68,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 여성(예비)창업자",
-  "view_count": 16754
+  "view_count": 17329
 }

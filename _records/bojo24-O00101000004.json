@@ -35,7 +35,7 @@
   "benefit_raw": "○ 학업장려 생활비 지원 서비스\n- 성적이 우수하고 가정형편이 어려운 전북특별자치도 고등학생\n- 지원대상 : 도내소재 고등학교 재학생\n- 선발인원 : 100명\n- 1인당지원금액 : 50만원\n- 신청요건 : 전북특별자치도 소재 고등학교 재학생으로 다음 어느 하나에 해당하는 자\nㆍ전북도민자녀(보호자의 주민등록이 공고일 6개월 전부터 전북에 등록)\nㆍ 보호자의 등록기준지가 전북이고 신청 학생이 전북소재 중학교 졸업한 자\n- 선발기준 : 성적우수 10%(10명), 생활정도 하위 20%(20명), 성적 40+생활정도60 (70명)",
   "category": "care",
   "contact_raw": "전북특별자치도평생교육장학진흥원/063-276-8307",
-  "content_hash": "sha256:f62c6ddb3f63a127ba101098bef36952",
+  "content_hash": "sha256:34e25bf7b10623cc2b85f50ca62fabd5",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -45,11 +45,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-O00101000004",
   "is_mock": false,
-  "last_checked": "2026-10-03",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-03",
   "law_raw": "",
   "name": "전북특별자치도 희망 장학금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00101000004",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2109820&bnefType=all&svcId=O00101000004",
   "org": "재단법인전북특별자치도평생교육장학진흥원",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -58,7 +58,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "전북특별자치도-희망-장학금",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -66,5 +66,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 신청요건 : 전북특별자치도 소재 고등학교 재학생으로 다음 어느 하나에 해당하는 자\n- 전북도민자녀(보호자 또는 학생의 주민등록이 공고일6개월전부터 전북자치도에 등록)\n- 보호자의 등록기준지가 전북자치도이고 신청학생이 전북자치도 소재 중학교 졸업한 자",
-  "view_count": 466
+  "view_count": 507
 }

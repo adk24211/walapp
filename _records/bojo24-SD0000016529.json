@@ -39,7 +39,7 @@
   "benefit_raw": "○ 시설자금 : 신·재생에너지 설비를 설치하는 데 필요한 자금\n\n○ 생산자금 : 신·재생에너지 설비의 제조·생산에 필요한 자금과 동 제조·생산 설비의 기술 사업화에 소요되는 자금\n\n○ 운전자금 : 생산자금에 해당하는 사업자의 사업운영에 필요한 자금(단, 전년도에 관련 제품 매출실적이 있는 중소기업에 한하여 지원)\n\n○ 주민참여자금 : 태양광발전소와 풍력발전소 주변 주민이 발전사업에 지분투자를 하거나 채권 또는 펀드를 통해 참여하는데 소요되는 자금(시설용량 500kW이상 태양광발전소와 3,000kW 이상 풍력발전소 대상)",
   "category": "jobs",
   "contact_raw": "한국에너지공단 신재생에너지센터 신재생에너지보급실/052-920-0784",
-  "content_hash": "sha256:724c854973c02d65984ed4a5b193142f",
+  "content_hash": "sha256:89a1f1eab2e1ddda58052c5d575366d7",
   "criteria_raw": "○ (1차) 서류심사 : 사업 심사를 위한 구비서류 등을 모두 갖추었는지 등 심사 대상 여부 검토\n\n○ (2차) '신재생에너지 설비의 지원 등에 관한 지침 ’(신재생센터 공고 제2014-1호) 중 [별지 제59호 서식]의 평가표에 따라 보급 효과, 사업 준비성 등을 심사",
   "deferred_detail": false,
   "documents_raw": [
@@ -59,11 +59,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-SD0000016529",
   "is_mock": false,
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-12",
   "law_raw": "",
   "name": "신재생에너지금융지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000016529",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999176&bnefType=all&svcId=SD0000016529",
   "org": "기후에너지환경부",
   "primary_audience": "business",
   "receiver_raw": "한국에너지공단 신재생에너지센터",
@@ -72,7 +72,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "신재생에너지금융지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금(융자) 법인/시설/단체",
@@ -80,5 +80,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○신에너지 및 재생에너지 개발·이용·보급 촉진법 제2조에 규정된 신·재생에너지 관련 시설물을 제조·생산 또는 설치하려는 개인, 중소, 중견 기업\n* 중소기업 :「중소기업기본법」제2조 및 같은법 시행령 제3조에 따른 중소기업\n** 중견기업 :「중견기업 성장촉진 및 경쟁력 강화에 관한 특별법」제2조에 따른 중견기업",
-  "view_count": 3254
+  "view_count": 3355
 }

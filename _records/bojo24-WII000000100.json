@@ -27,7 +27,7 @@
   "benefit_raw": "○ 탈북청소년 특성화학교(한겨레중고등학교) 및 학력인정 대안학교(여명학교, 하늘꿈중고등학교, 드림학교, 장대현중고등학교)의 운영비 지원",
   "category": "care",
   "contact_raw": "통일부 자립지원과/2100-5806",
-  "content_hash": "sha256:97c2a6f793aff24437b4e88f846118db",
+  "content_hash": "sha256:532108a25a3ad10e5a6da5e5ceb54214",
   "criteria_raw": "○ 만13세~만24세(초과연령자는 학교장 판단) 북한이탈청소년 및 북한이탈주민의 자녀",
   "deferred_detail": false,
   "documents_raw": [
@@ -38,11 +38,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-WII000000100",
   "is_mock": false,
-  "last_checked": "2026-09-07",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-07",
   "law_raw": "",
   "name": "북한이탈주민 청소년 교육 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000100",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=546362&bnefType=all&svcId=WII000000100",
   "org": "통일부",
   "primary_audience": "student",
   "receiver_raw": "통일부",
@@ -51,7 +51,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "북한이탈주민-청소년-교육-지원",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 개인\n법인/시설/단체",
@@ -59,5 +59,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 북한이탈주민 및 북한이탈주민의 자녀",
-  "view_count": 2500
+  "view_count": 2677
 }

@@ -32,7 +32,7 @@
   "benefit_raw": "○ 성취장학금\n- 학업성적이 우수한 국내 대학(원)생 등록금 지원 장학금\n\n○ 희망장학금\n- 학업환경이 어려운 도내 고등학생 및 국내 대학생 대상 생활비 지원 장학금 지급\n\n○ 재능장학금\n- 문화.예술,체육,과학 분야 우수자 수상실적 순으로 도내 고등학교 및 국내 대학생 대상 생활비 지원 장학금 지급\n\n○ 전략사업 트랙 장학금\n- 제주특별자치도 전략산업 관련 도내 협약형 특성화고등학교 졸업자로 관련 전공학과 대학 신입생 및 재학생 생활비 지원 장학금 지급\n- 제주특별자치도 전략산업 관련 전공학과 졸업자로 관련 전공 대학원 석사.박사과정 신입생 및 재학생 생활비 지원 장학금 지급\n\n○ 미래이음장학금\n- 제주4.3유족 및 독립유공자 후손 중 국내 대학생 대상 주거.생활비 지원 장학금 지급\n\n○ 특별지정장학금\n- 기부자의 기탁 목적에 따른 장학금",
   "category": "education",
   "contact_raw": "인재육성부/064-744-9810",
-  "content_hash": "sha256:ab091da16c8cfae85f6cb0b79b461554",
+  "content_hash": "sha256:5e042a84b376de0f178a0e482e5cd831",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -42,11 +42,11 @@
   "how_to_raw": "기타 온라인신청\n직접입력",
   "id": "bojo24-O00107000001",
   "is_mock": false,
-  "last_checked": "2026-10-28",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-28",
   "law_raw": "",
   "name": "제주인재육성 장학금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00107000001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001508&bnefType=all&svcId=O00107000001",
   "org": "(재)제주평생교육장학진흥원",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -55,7 +55,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 2,
+  "revision": 3,
   "slug": "제주인재육성-장학금",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -63,5 +63,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 제주인재육성장학금 신청자격에 부합하는 자(제주평생교육장학진흥원 홈페이지 공고문 참조)",
-  "view_count": 4314
+  "view_count": 4350
 }

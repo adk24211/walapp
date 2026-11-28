@@ -29,7 +29,7 @@
   "benefit_raw": "○ 청소년 과학활동 프로그램 소개 및 운영\n- 회원 및 신청자 모집\n- 프로그램 등록 및 진행\n- 이벤트 및 행사 안내 등",
   "category": "care",
   "contact_raw": "창의교육실/042-865-3936",
-  "content_hash": "sha256:597417fab65bbe5e277b0c55a9804b10",
+  "content_hash": "sha256:6cba018241f0192ce10dc31352137b37",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -39,11 +39,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55136400002",
   "is_mock": false,
-  "last_checked": "2026-10-09",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-09",
   "law_raw": "",
   "name": "엑스사이언스 프로그램",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55136400002",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001472&bnefType=all&svcId=B55136400002",
   "org": "한국기초과학지원연구원",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -52,7 +52,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "엑스사이언스-프로그램",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 개인",
@@ -60,5 +60,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "초등, 중등, 고등, 대학생",
-  "view_count": 1544
+  "view_count": 1631
 }

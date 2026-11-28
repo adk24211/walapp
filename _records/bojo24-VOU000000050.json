@@ -37,7 +37,7 @@
   "benefit_raw": "○ 급여액\n- 기초생활보장 수급자: 26만원 지원(본인 부담금 면제)\n- 차상위계층: 24만원(본인 부담금 2만원)\n- 기준 중위소득 65% 이하: 22만원(본인 부담금 4만원)\n- 기준 중위소득 120% 이하: 20만원(본인 부담금 6만원)\n- 기준 중위소득 180% 이하: 18만원(본인 부담금 8만원)\n\n○ 서비스 내용: 언어·청능, 미술·음악, 행동·놀이·심리운동 재활서비스 등",
   "category": "health",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:52c5393c5c297d1c42cf477c720a44a9",
+  "content_hash": "sha256:fe7e9c35d7214ee43632493e8452b727",
   "criteria_raw": "○ 지원대상\n- 만 18세 미만의 등록한 장애인(뇌 병변, 지적, 자폐성, 시각, 청각, 언어)으로 국민 기초 생활 보장 수급자 및 차상위계층\n* 다만 만 9세 미만 장애가 예견되는 아동의 경우 '발달재활서비스 의뢰서'와 '전문의에 의한 검사 자료'를 토대로 서비스 신청 가능\n\n○ 연령기준\n- 신청일 현재 만 18세 미만 인자\n\n○ 소득기준\n- 기준 중위소득 180% 이하 가구별 차등 지원",
   "deferred_detail": false,
   "documents_raw": [
@@ -50,11 +50,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-VOU000000050",
   "is_mock": false,
-  "last_checked": "2026-09-29",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-29",
   "law_raw": "",
   "name": "발달재활서비스 바우처 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/VOU000000050",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=686408&bnefType=all&svcId=VOU000000050",
   "org": "보건복지부",
   "primary_audience": "lowincome",
   "receiver_raw": "주민센터",
@@ -63,7 +63,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 18,
+  "revision": 19,
   "slug": "발달재활서비스-바우처-지원",
   "source": "bojo24",
   "source_category_raw": "보건·의료 의료지원\n이용권 개인",
@@ -71,5 +71,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 지원 대상\n- 만 18세 미만의 등록한 장애인(뇌 병변, 지적, 자폐성, 시각, 청각, 언어)으로 국민 기초 생활 보장 수급자 및 차상위계층, 기준 중위소득 180% 이하의 가구\n\n○ 연령 기준\n- 신청일 현재 만 18세 미만 인자\n\n○ 기타 기준\n- 신청일 현재, 장애인복지법 제33조에 따라 등록한 장애인(뇌병변 병, 지적, 자폐성, 시각, 청각, 언어), 다만 만 9세 미만의 경우 '발달재활서비스 의뢰서'와 검사 자료로 대체 가능",
-  "view_count": 19888
+  "view_count": 20348
 }

@@ -29,7 +29,7 @@
   "benefit_raw": "○ 장학금지급\n- 관내 중고등학생 장학금 지급\n- 태백시민의 자녀 대학생 장학금 지급",
   "category": "education",
   "contact_raw": "(재)태백시민향토장학회/033-550-2250",
-  "content_hash": "sha256:303c6190bd2ace32a0928e06b1162980",
+  "content_hash": "sha256:f9ece4e29adc39b19aa52e5097191eb8",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -45,11 +45,11 @@
   "how_to_raw": "방문신청\n직접입력",
   "id": "bojo24-O00042800001",
   "is_mock": false,
-  "last_checked": "2026-10-05",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-05",
   "law_raw": "",
   "name": "태백시 향토 장학금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00042800001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2101701&bnefType=all&svcId=O00042800001",
   "org": "태백시민향토장학회",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -58,7 +58,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "태백시-향토-장학금",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타 개인",
@@ -66,5 +66,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 중고등학생 장학금 지급\n- 학교장 추천 장학생\n- 1인 20만원 연1회\n\n○ 졸업축하장학금\n- 태백시에 주소를 두고 있는 고등학교 졸업생\n- 1인 100만원 연1회\n\n○ 대학생 장학금\n- 태백시민의 자녀로 대학 신입생 및 재학생\n- 1인 100만원 연1회",
-  "view_count": 1598
+  "view_count": 1673
 }

@@ -34,7 +34,7 @@
   "benefit_raw": "○ 장학금 지급\n- 관내초·중·고등학교 재학생으로 추천권자의 추천을 받은 학생들에게 장학금 지급(30~150만원)\n- 국내 대학 재학생으로 장학금별 신청자격 판단하여 개별 신청(180만원)\n\n○ (유의사항)\n- 대학생의 경우, 우수장학금을 제외한 장학금은 생활비 지원 성격의 장학금으로 학자금 범위를 넘는 중복수혜 가능",
   "category": "education",
   "contact_raw": "천안사랑장학재단사무국/041-521-5769",
-  "content_hash": "sha256:8c9d67138cab8fd051cb98ea5fa66036",
+  "content_hash": "sha256:4a4eb48f162c09d7810754001ce68523",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -66,11 +66,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-O00112300001",
   "is_mock": false,
-  "last_checked": "2026-09-09",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-09",
   "law_raw": "",
   "name": "초·중·고·대학생 장학금 지원(학자금 지원 등)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00112300001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000748&bnefType=all&svcId=O00112300001",
   "org": "(재)천안사랑장학재단",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -79,7 +79,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "초-중-고-대학생-장학금-지원-학자금-지원-등",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -87,5 +87,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "천안시민 또는 천안시민의 자녀로 관내 초·중·고등학교 재학생 및 국내 대학 재학생",
-  "view_count": 2929
+  "view_count": 3090
 }

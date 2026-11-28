@@ -40,7 +40,7 @@
   "benefit_raw": "○ 다문화 가족 입국 초기상담, 통역 및 번역 지원, 가족 간 의사소통 및 생활상담, 행정·사법·공공기관 이용 중 통번역 위기 상황 시 긴급 지원 등\n\n○ 한국말이 서툰 결혼이민자의 가족·사회생활에 필요한 의사소통을 지원하기 위한 통·번역 서비스 제공\n- 제공 언어 : 결혼이민자 주요 출신국 언어",
   "category": "living",
   "contact_raw": "다누리콜센터/1577-1366",
-  "content_hash": "sha256:8664fe7bb113ac36b9e6c7e56178e13a",
+  "content_hash": "sha256:dfbb8e62aeeda20cca2de843845694c9",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [
@@ -59,11 +59,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-WII000001240",
   "is_mock": false,
-  "last_checked": "2026-08-25",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-25",
   "law_raw": "",
   "name": "결혼이민자 통번역서비스",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000001240",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=725006&bnefType=all&svcId=WII000001240",
   "org": "성평등가족부",
   "primary_audience": "multicultural",
   "receiver_raw": "가족센터, 다문화가족지원센터",
@@ -72,7 +72,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "결혼이민자-통번역서비스",
   "source": "bojo24",
   "source_category_raw": "행정·안전 기타\n상담/법률지원\n서비스(돌봄)\n서비스(의료) 개인",
@@ -80,5 +80,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 다문화 가족 및 다문화 가족을 직·간접적으로 지원하는 개인 또는 기관",
-  "view_count": 6642
+  "view_count": 7018
 }

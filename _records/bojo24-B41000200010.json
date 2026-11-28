@@ -29,7 +29,7 @@
   "benefit_raw": "에너지 효율향상 및 온실가스 감축을 위해 고객이 엘리베이터의 기존 저항제동장치를 회생제동장치 또는 회생제동 기능이 적용된 제어반로 교체 시 지원금 지급",
   "category": "living",
   "contact_raw": "수요효율처/123",
-  "content_hash": "sha256:aa378de7aae49ccd4115e693a7c2a298",
+  "content_hash": "sha256:98fa8644756c923dbc5429354bfb47cf",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -39,11 +39,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
   "id": "bojo24-B41000200010",
   "is_mock": false,
-  "last_checked": "2026-10-28",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-28",
   "law_raw": "",
   "name": "회생제동장치 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B41000200010",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002037&bnefType=all&svcId=B41000200010",
   "org": "한국전력공사",
   "primary_audience": "business",
   "receiver_raw": "",
@@ -52,7 +52,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "회생제동장치-지원",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금 개인\n소상공인\n법인/시설/단체",
@@ -60,5 +60,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 엘리베이터의 기존 저항제동장치를 회생제동장치 또는 회생제동 기능이 적용된 제어반으로 교체하는 고객\n- (지원기기)\n· 회생제동장치 : 한전 승인기기 또는 한국에너지공단 고효율 인증제품\n· 회생제동 기능 적용 제어반 : 한국승강기안전공단 승인 제품",
-  "view_count": 2580
+  "view_count": 2637
 }

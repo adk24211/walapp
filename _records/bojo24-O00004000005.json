@@ -39,7 +39,7 @@
   "benefit_raw": "○ 채용시 5% 가산점 부여\n- 의상자\n- 장애인\n- 북한 이탈 주민\n- 청년미취업자(만 34세 이하)\n- 다문화가족 및 한부모가족 지원 대상자",
   "category": "jobs",
   "contact_raw": "인사노무팀/031-929-4800",
-  "content_hash": "sha256:5e26103dcf90ce0ee013460448935b57",
+  "content_hash": "sha256:07aca63a9c2ed3e3463e4bfc797c27bd",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -49,11 +49,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-O00004000005",
   "is_mock": false,
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-15",
   "law_raw": "",
   "name": "채용 우대(사회적약자)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00004000005",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002101&bnefType=all&svcId=O00004000005",
   "org": "고양도시관리공사",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -62,7 +62,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "채용-우대-사회적약자",
   "source": "bojo24",
   "source_category_raw": "고용·창업 서비스(일자리) 개인",
@@ -70,5 +70,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 의상자\n\n○ 장애인\n\n○ 북한 이탈 주민\n\n○ 청년미취업자(만 34세 이하)\n\n○ 다문화가족 및 한부모가족 지원 대상자",
-  "view_count": 1424
+  "view_count": 1486
 }

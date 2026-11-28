@@ -33,7 +33,7 @@
   "benefit_raw": "○ 글로벌 5G 프로그램\n(G-멘토링, G-Lab, G-캠프, G-라운드, G-써포트)\n\n○ 사업화 지원금\n- 최대 200백만원 이내(총 사업비의 70% 이하, 인센티브 포함)\n\n○ 창업 인프라\n- 사업화에 필요한 창업 공간 등 지원\n\n○ 사업화 지원\n- 기업별 KPI 기반 1:1 코칭 등",
   "category": "jobs",
   "contact_raw": "글로벌창업사관학교/02-2130-1462\n글로벌창업사관학교/02-2130-1465\n글로벌창업사관학교/02-2130-1466\n글로벌창업사관학교/02-2130-1468",
-  "content_hash": "sha256:82d6c3d1d73ecbf979362b404f26f576",
+  "content_hash": "sha256:f3c18b8da0c7b189202805e3a742963a",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -51,11 +51,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55400900016",
   "is_mock": false,
-  "last_checked": "2026-10-03",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-03",
   "law_raw": "",
   "name": "글로벌창업사관학교",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55400900016",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002063&bnefType=all&svcId=B55400900016",
   "org": "중소벤처기업진흥공단",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -64,7 +64,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "글로벌창업사관학교",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금 법인/시설/단체",
@@ -72,5 +72,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "창업 7년 이내(공고일 기준) 창업기업으로 아래 중 하나에 해당하는 기업\n1) 글로벌 확장성이 높은 초격차, 신산업 분야 스타트업\n2) 청년창업사관학교 또는 글로벌창업사관학교('20~'23) 졸업기업",
-  "view_count": 1721
+  "view_count": 1801
 }

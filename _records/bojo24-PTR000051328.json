@@ -33,7 +33,7 @@
   "benefit_raw": "○ 체불근로자가 사업주를 상대로 민사절차를 통해 임금채권을 확보할 수 있도록 대한법률구조공단에서 체불근로자에 대하여 무료로 소송을 지원하는 제도\n\n○ 무료법률구조 범위 : 체불임금등 임금채권 청구 관련 소송대리, 소장 작성 등\n- 단, 소송에서 패소한 경우에는 상대방의 소송비용(변호사비용 등)은 지원하지 않음\n\n○ 지원 기관 : 고용노동부 및 대한법률구조공단",
   "category": "living",
   "contact_raw": "무료법률상담센터/132",
-  "content_hash": "sha256:9d586ba7aa83363b7ef2680d6e865d08",
+  "content_hash": "sha256:06e2db127d865e709b926a4658ec7cf0",
   "criteria_raw": "○ 임금 및 퇴직금 체불 당시 최종 3개월분의 월평균 임금이 400만원 미만인 자",
   "deferred_detail": false,
   "documents_raw": [
@@ -52,11 +52,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-PTR000051328",
   "is_mock": false,
-  "last_checked": "2026-09-04",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-04",
   "law_raw": "",
   "name": "체불근로자 무료법률구조지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/PTR000051328",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=594453&bnefType=all&svcId=PTR000051328",
   "org": "고용노동부",
   "primary_audience": "employer",
   "receiver_raw": "대한법률구조공단 법률상담",
@@ -65,7 +65,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "체불근로자-무료법률구조지원",
   "source": "bojo24",
   "source_category_raw": "행정·안전 상담/법률지원\n이용권 개인",
@@ -73,5 +73,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 임금 및 퇴직금 체불로 인한 피해 근로자(국내 거주 외국인 포함)\n- 임금 및 퇴직금 체불 당시 최종 3개월분의 월평균 임금이 400만원 미만인 자에 한함",
-  "view_count": 2744
+  "view_count": 2910
 }

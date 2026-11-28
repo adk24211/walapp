@@ -34,7 +34,7 @@
   "benefit_raw": "○ 국민 누구나 국립공원이 주는 자연의 혜택을 누릴 수 있도록 생태체험 서비스 제공\n- 취약계층을 대상으로 운영하며, 국립공원을 방문하여 자연물 만들기, 자연해설, 자연놀이 등을 즐기는 프로그램",
   "category": "care",
   "contact_raw": "국립공원공단 탐방시설처/033-769-9624",
-  "content_hash": "sha256:ae7600edfa940afe0ca717bd8a742a3f",
+  "content_hash": "sha256:89e601d601db2edf5e7d1f4d36ecb648",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,11 +44,11 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-B55399100003",
   "is_mock": false,
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-13",
   "law_raw": "",
   "name": "생태 나누리 서비스",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55399100003",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001715&bnefType=all&svcId=B55399100003",
   "org": "국립공원공단",
   "primary_audience": "parent",
   "receiver_raw": "",
@@ -57,7 +57,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "생태-나누리-서비스",
   "source": "bojo24",
   "source_category_raw": "문화·환경 기타 개인\n법인/시설/단체",
@@ -65,5 +65,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "소년소녀가장, 기초생활 수급자(노인, 아동), 사회복지법인 생활자(아동, 노인), 다문화가족, 장애인, 한부모가족",
-  "view_count": 2644
+  "view_count": 2693
 }

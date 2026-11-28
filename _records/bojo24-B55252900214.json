@@ -29,7 +29,7 @@
   "benefit_raw": "○ 고졸 후학습자 장학사업(희망사다리2유형)\n- (지원대상) 대한민국 국적자로 최종학력이 고졸이며, 재직요건을 충족한 학생 중 직전학기 성적이 100점 만점의 70점 이상인 자\n- (지원내용) 현 재직기업의 유형 및 규모에 따라 등록금 차등지원(중소중견 등록금 전액, 대기업비영리 등록금의 50%)",
   "category": "education",
   "contact_raw": "한국장학재단/1800-0499",
-  "content_hash": "sha256:c102c42c893b0d478716b94f85a765f3",
+  "content_hash": "sha256:56a880e9a1b7ef3ee1513459c80c7962",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -39,11 +39,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55252900214",
   "is_mock": false,
-  "last_checked": "2026-08-30",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-30",
   "law_raw": "",
   "name": "고졸 후학습자 장학생 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252900214",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2101513&bnefType=all&svcId=B55252900214",
   "org": "한국장학재단",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -52,7 +52,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "고졸-후학습자-장학생-지원",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -60,5 +60,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ (기본요건) 대한민국 국적자로 최종학력이 고졸이며, 재직요건을 충족한 학생 중 직전학기 성적이 100점 만점의 70점 이상인 자\n\n○ (재직요건) 선발학기 심사개시일 기준 산업체 재직기간이 2년 이상(단, 심사개일 기준 중소중견기업 재직자는 1년 이상)이며, 현재 재단이 인정하는 기업체에 재직 중인 자",
-  "view_count": 5651
+  "view_count": 5906
 }

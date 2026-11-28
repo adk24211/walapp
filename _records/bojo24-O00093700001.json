@@ -43,7 +43,7 @@
   "benefit_raw": "○ 균등한 교육기회 보장 및 재능있는 미래인재의 도약을 지원하기 위한 장학금 지급\n- (전남인재 장학금) 성적우수, 수급자 및 사회적 배려계층, 다자녀, 학교 밖 청소년, 만학도, 특별한 공적, 긴급한 지원 등\n- (전남정착 장학금) 전남지역 취업 준비생, 벤처창업자, 외국인유학생, 산학협력 취업패키지 과정, 중소기업, 농업경영인\n- (특별지정 장학금) 기부자가 지역 및 수혜자를 특정",
   "category": "jobs",
   "contact_raw": "인재육성팀/061-285-9432\n인재육성팀/061-285-9484",
-  "content_hash": "sha256:48d50ccef67cea8764a4a2e4e362782d",
+  "content_hash": "sha256:96fc51ea8f23ec9514deb444c687280b",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -53,11 +53,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-O00093700001",
   "is_mock": false,
-  "last_checked": "2026-08-30",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-30",
   "law_raw": "",
   "name": "전남인재육성 장학금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00093700001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000746&bnefType=all&svcId=O00093700001",
   "org": "재단법인전남인재평생교육진흥원",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -66,7 +66,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "전남인재육성-장학금",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -74,5 +74,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "※ 자세한 사항은 누리집(www.jntle.kr) 공고 예정으로 기관 사정에 따라 향후 변경 될 수 있음\n\n○ 신청자격 : 공고일 기준으로 아래 어느 하나에 해당하는 경우\n- 학생 본인 또는 보호자(부 또는 모, 후견인)가 1년 이상 전라남도에 주소를 두고 있는 초‧중‧고‧대학생 (특별격려 장학금과 외국인 장학금은 대학원생 가능)\n\n※ 참고\n- ｢초중등교육법｣ 제2조에 따른 도내 소재 초‧중‧고등학교 재학생\n- ｢학교밖청소년법｣ 제2조에 따른 도내 소재 청소년\n- ｢고등교육법｣ 제2조 및 그밖에 다른 법률에 따른 국내 대학 재학생\n- ｢평생교육법｣ 제31조에 따라 지정된 도내 학력인정평생교육시설 재학생",
-  "view_count": 6405
+  "view_count": 7305
 }

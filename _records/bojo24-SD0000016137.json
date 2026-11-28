@@ -29,7 +29,7 @@
   "benefit_raw": "○ 지원기준\n- 초등학생 : 127,900원\n- 중학생 : 180,000원\n- 고등학생 : 214,000원 및 수업료와 입학금(해당 학교장이 고지한 금액)\n* 고등학생이 수업료 및 입학금을 지원받은 경우도 전액 지원",
   "category": "housing",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:581d2f245bd7e3acbc75c531553125d9",
+  "content_hash": "sha256:0792dad4c5d39c4acc583c0a8866e809",
   "criteria_raw": "○ 지원대상 : 긴급복지 주지원(생계,주거,복지시설이용 지원)을 받는 가구 중 초중고등학교 입학생 또는 재학생에 대해 학비 지원이 필요하다고 인정되는 사람",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SD0000016137",
   "is_mock": false,
-  "last_checked": "2026-08-30",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-30",
   "law_raw": "",
   "name": "긴급복지 교육지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000016137",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=760820&bnefType=all&svcId=SD0000016137",
   "org": "보건복지부",
   "primary_audience": "student",
   "receiver_raw": "시·군·구청",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "긴급복지-교육지원",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금 개인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 긴급복지 주지원(생계, 주거, 복지시설이용 지원)을 받는 가구 중 초중고 입학생 또는 재학생\n* 지원제외대상 : 긴급지원대상자로서 국가 또는 지방자치단체 등으로부터 타 교육지원을 받고 있는 사람(국가보훈대상자 지원(수업료 면제), 교육급여(맞춤형 급여) 등)",
-  "view_count": 22071
+  "view_count": 22437
 }

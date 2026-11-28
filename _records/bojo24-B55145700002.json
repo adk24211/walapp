@@ -33,7 +33,7 @@
   "benefit_raw": "1. 할인율\n\n1-1. 장애의 정도가 심한 장애인: 50% 할인\n\n1-2. 장애의 정도가 심하지 않은 장애인\n- KTX, KTX-산천/청룡, ITX-마음/새마을, 새마을호 : 30% 할인(토, 일, 공휴일 제외)\n- 무궁화호, 누리로 : 50% 할인",
   "category": "living",
   "contact_raw": "한국철도공사/1588-7788",
-  "content_hash": "sha256:75bd193da8c6302062fa74afd1a7bd94",
+  "content_hash": "sha256:190c7a492a738cbabada14bfd3a82704",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
   "id": "bojo24-B55145700002",
   "is_mock": false,
-  "last_checked": "2026-10-28",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-28",
   "law_raw": "",
   "name": "철도 공공할인 서비스(장애인)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55145700002",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000960&bnefType=all&svcId=B55145700002",
   "org": "한국철도공사",
   "primary_audience": "disabled",
   "receiver_raw": "",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 2,
+  "revision": 3,
   "slug": "철도-공공할인-서비스-장애인",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금(감면) 개인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "장애인복지법에 정한 장애인(장애의 정도가 심한 장애인 : 보호자 1인 포함)",
-  "view_count": 5882
+  "view_count": 5959
 }

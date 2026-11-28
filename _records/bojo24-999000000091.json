@@ -35,7 +35,7 @@
   "benefit_raw": "○ 자녀 연령에 따라 영유아기(9세 미만), 성인전환기(12~18세), 성인기(전연령)에 적합한 양육·진로상담·성인권 내용에 대한 부모교육 실시",
   "category": "care",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:a97fe438a15fffa953e73189da128eb0",
+  "content_hash": "sha256:5c13611d79104fbe726178bbd41164c2",
   "criteria_raw": "지원대상과 동일(신청자가 많은 경우 우선순위 적용 가능)",
   "deferred_detail": false,
   "documents_raw": [
@@ -51,11 +51,11 @@
   "how_to_raw": "방문신청\n직접입력",
   "id": "bojo24-999000000091",
   "is_mock": false,
-  "last_checked": "2026-09-25",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-25",
   "law_raw": "",
   "name": "발달장애인 부모교육지원사업",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000091",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999258&bnefType=all&svcId=999000000091",
   "org": "보건복지부",
   "primary_audience": "parent",
   "receiver_raw": "",
@@ -64,7 +64,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "발달장애인-부모교육지원사업",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 개인",
@@ -72,5 +72,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 발달장애인(｢발달장애인 권리보장 및 지원에 관한 법률｣ 제2조)\n-｢장애인복지법｣상 지적･자폐성 장애인으로 등록된 자로서 지적장애 또는 자폐성장애를 부장애로 가진 경우도 포함\n\n○ 발달장애인의 부모 및 보호자, 가족\n- 자녀가 영유아(9세 미만)의 경우, 장애등록이 되어 있지 않더라도 발달장애(지적, 자폐성)가 의심되는 경우, 발달장애인 영유아기･성인권 부모교육지원 이용 가능\n* 9세 연령 도래 이후도 장애인 등록이 안 된 경우 읍면동에서 장애인 등록 유도\n\n○ 발달장애인 관련 분야 종사자 등 부모교육 사업상 교육이 필요한 자",
-  "view_count": 3389
+  "view_count": 3528
 }

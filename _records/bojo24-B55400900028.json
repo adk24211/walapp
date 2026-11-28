@@ -28,7 +28,7 @@
   "benefit_raw": "○ 기업인력애로센터를 활용하여 우수 구인기업 및 구직자 발굴, 구직자 대상 취업컨설팅 및 취업연계 등을 통해 중소기업 구인난 해소\n- 구직자 대상 취업컨설팅, 온라인 인적성검사 등의 취업서비스 제공",
   "category": "jobs",
   "contact_raw": "인력지원처/055-751-9792",
-  "content_hash": "sha256:b76e6d1ffbbe99504807e52869a86b0c",
+  "content_hash": "sha256:fcc0499c8a3ec9b4a50b692af3794883",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -38,11 +38,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55400900028",
   "is_mock": false,
-  "last_checked": "2026-09-08",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-08",
   "law_raw": "",
   "name": "기업인력애로센터 활용 취업지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55400900028",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002270&bnefType=all&svcId=B55400900028",
   "org": "중소벤처기업진흥공단",
   "primary_audience": "jobseeker",
   "receiver_raw": "",
@@ -51,7 +51,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "기업인력애로센터-활용-취업지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 서비스(일자리) 개인\n법인/시설/단체",
@@ -59,5 +59,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "중소기업 취업희망 구직자, 직원 채용을 원하는 중소기업",
-  "view_count": 1966
+  "view_count": 2177
 }

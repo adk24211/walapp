@@ -42,7 +42,7 @@
   "benefit_raw": "○ 기획공연·전시 관람료 할인 (프로그램별 할인율, 할인대상 상이)\n\n- 복지할인 100% : 장애인, 국가유공자, 상이군경\n- 복지할인 50% : 장애인, 국가유공자, 기초생활수급자, 장기기증자, 상이군경, 병역명문가\n- 경로우대할인 50% : 만 65세 이상\n- 다자녀가정 20% : 다자녀카드 소지자\n- 문화누리카드 20% : 문화누리카드 소지자\n- 예술인패스 20% : 예술인패스 소지자\n- 장기기증희망등록자 20% : 장기기증 희망 등록자\n- 시민할인(공연별 할인율 상이) : 과천시민\n- 과천문화재단 홈페이지 할인 20% : 재단 홈페이지를 통해 예매한 예매자",
   "category": "living",
   "contact_raw": "공연전시팀/02-2009-9743",
-  "content_hash": "sha256:6fbfadff87153cd0d9f4e99732fb5469",
+  "content_hash": "sha256:b2c65fb9458bab619a633a3ad81a32af",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -53,11 +53,11 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-O00047000001",
   "is_mock": false,
-  "last_checked": "2026-08-30",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-30",
   "law_raw": "",
   "name": "기획공연·전시 관람료 할인",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00047000001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2105733&bnefType=all&svcId=O00047000001",
   "org": "재단법인과천문화재단",
   "primary_audience": "senior",
   "receiver_raw": "",
@@ -66,7 +66,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "기획공연-전시-관람료-할인",
   "source": "bojo24",
   "source_category_raw": "문화·환경 현금(감면) 개인",
@@ -74,5 +74,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 복지할인 100% : 장애인, 국가유공자, 상이군경\n○ 복지할인 50% : 장애인, 국가유공자, 기초생활수급자, 장기기증자, 상이군경, 병역명문가\n○ 경로우대할인 50% : 만 65세 이상\n○ 다자녀가정 20% : 다자녀카드 소지자\n○ 문화누리카드 20% : 문화누리카드 소지자\n○ 예술인패스 20% : 예술인패스 소지자\n○ 장기기증희망등록자 20% : 장기기증 희망 등록자\n○ 시민할인(공연별 할인율 상이) : 과천시민\n○ 과천문화재단 홈페이지 할인 20% : 재단 홈페이지를 통해 예매한 예매자",
-  "view_count": 1198
+  "view_count": 1347
 }

@@ -35,7 +35,7 @@
   "benefit_raw": "○ 두 자녀 이상의 다자녀 가정(세 자녀 이상 가정 우선 선발함)\n○ 고등학생 : 직전학기 전 과목 내신 평균 등급이 6등급 이내\n○ 대학생 : 직전학기 성적이 학점 4.5만점 기준 2.5이상",
   "category": "education",
   "contact_raw": "장학사업부/032-722-7253",
-  "content_hash": "sha256:0840a4e0623efe346285d03ed3b6bc1b",
+  "content_hash": "sha256:7c585bfd91ecc0ff5b27821b0c7ce189",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -45,11 +45,11 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-O00091000007",
   "is_mock": false,
-  "last_checked": "2026-09-17",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-17",
   "law_raw": "",
   "name": "다자녀 가정지원 장학금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00091000007",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2117001&bnefType=all&svcId=O00091000007",
   "org": "(재)인천인재평생교육진흥원",
   "primary_audience": "parent",
   "receiver_raw": "",
@@ -58,7 +58,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "다자녀-가정지원-장학금",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -66,5 +66,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 두 자녀 이상의 다자녀 가정(세 자녀 이상 가정 우선 선발함)\n○ 고등학생 : 직전학기 전 과목 내신 평균 등급이 6등급 이내\n○ 대학생 : 직전학기 성적이 학점 4.5만점 기준 2.5이상\n(4.3만점 기준 2.3이상)",
-  "view_count": 3435
+  "view_count": 3558
 }

@@ -40,7 +40,7 @@
   "benefit_raw": "○ 학생 1인당 연간 60만원 내외 방과후학교 수강료(강사료,도서구입비,재료구입비,수용비 포함) 지원",
   "category": "housing",
   "contact_raw": "교육비원클릭 신청시스템 상담센터/1544-9654",
-  "content_hash": "sha256:6ea83c9d98c74473bdd62b6b80729429",
+  "content_hash": "sha256:6057adc0b60958ca32b422899191cdd3",
   "criteria_raw": "○ 우선지원 대상자, 소득에 따른 지원, 학교장의 추천을 받은 자, 기타의 순으로 지원",
   "deferred_detail": false,
   "documents_raw": [
@@ -54,11 +54,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-GES000000150",
   "is_mock": false,
-  "last_checked": "2026-08-29",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-29",
   "law_raw": "",
   "name": "방과후학교 자유수강권",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GES000000150",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=592721&bnefType=all&svcId=GES000000150",
   "org": "교육부",
   "primary_audience": "lowincome",
   "receiver_raw": "주민센터",
@@ -67,7 +67,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "방과후학교-자유수강권",
   "source": "bojo24",
   "source_category_raw": "보육·교육 이용권 개인",
@@ -75,5 +75,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ [1순위] 우선 지원 대상자 : 기초생활보장 수급자(생계·의료·주거·교육급여), 한부모 가정, 법정 차상위 대상자\n\n○ [2순위] 소득에 따른 지원 : 가구의 소득재산이 시도교육감이 정하는 기준에 해당하는 학생*\n* 시도교육청별로 다르나 통상 중위소득 80~100% 이하\n\n○ [3순위] 학교장 추천 :교육비 지원을 신청*하고 소득‧재산 조사 후 탈락하였으나 증빙이 곤란한 경제적 어려움으로 교육비 지원이 필요한 경우에는 담임교사가 교육비 지원 신청자로 추천\n* 단, 교육비 지원을 신청할 수 없는 경우는 예외적으로 교육비 신청 없이 학교장 추천 가능\n\n○ [기타] 법무부 장관이 추천하는 난민인정자 또는 그 자녀 및 기타\n\n※ 선정기준은 시도교육청 자유수강권 운영 계획에 따라 지역별로 상이하므로 반드시 해당 시도교육청에 문의하여 확인",
-  "view_count": 24207
+  "view_count": 24623
 }

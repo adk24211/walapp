@@ -44,7 +44,7 @@
   "benefit_raw": "에너지 효율향상 및 온실가스 감축을 위해 고객이 고효율기기 교체 시 지원금 지급",
   "category": "care",
   "contact_raw": "수요효율처/123",
-  "content_hash": "sha256:5944d6c7e244b0db010ac70ced2a21bc",
+  "content_hash": "sha256:5f09d500c9a0312e6aed5d545103f85a",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -54,11 +54,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
   "id": "bojo24-B41000200001",
   "is_mock": false,
-  "last_checked": "2026-10-03",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-03",
   "law_raw": "",
   "name": "복지시설냉난방기 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B41000200001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000926&bnefType=all&svcId=B41000200001",
   "org": "한국전력공사",
   "primary_audience": "parent",
   "receiver_raw": "",
@@ -67,7 +67,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "복지시설냉난방기-지원",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금 법인/시설/단체",
@@ -75,5 +75,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 고효율 냉난방기를 설치하는 노인복지법, 아동복지법, 장애인복지법, 국민기초생활보장법, 한부모가족지원법에 의한 사회복지시설\n- 에너지소비효율 1등급 제품(냉방기, 냉난방기, EHP 실외기)",
-  "view_count": 2625
+  "view_count": 2831
 }

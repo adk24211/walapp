@@ -43,7 +43,7 @@
   "benefit_raw": "정의) 학자금대출 상환전용 카드 출시를 통해 '카드 사용실적에 따라 적립된 포인트* 로 학자금대출 원리금을 상환'하는 방식\n* 전 월 카드 사용실적에 따른 포인트가 1,000P 이상 시 매 월 해당되는 금액 중도 상환\n목적) 학자금대출 이용자의 상환부담 경감 상환방식 다양화 및 편의성 제고로 학자금대출 건전성 강화\n시행) 재단 및 3개 금융기관(신한카드, 우리은행, 하나은행)과 협약체결을 통해 학자금대출 이용자의 체크카드 사용실적에 따라 포인트 적립 후 해당 포인트로 학자금대출 원리금 상환",
   "category": "education",
   "contact_raw": "한국장학재단/1599-2000",
-  "content_hash": "sha256:b6827d4e28e3e75857d3aa06fbd2f978",
+  "content_hash": "sha256:3fe17530ea04af819c9df6469b5cced4",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -53,11 +53,11 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-B55252900219",
   "is_mock": false,
-  "last_checked": "2026-09-07",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-07",
   "law_raw": "",
   "name": "학자금대출 체크카드 포인트 상환",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252900219",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2101630&bnefType=all&svcId=B55252900219",
   "org": "한국장학재단",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -66,7 +66,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "학자금대출-체크카드-포인트-상환",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타 개인",
@@ -74,5 +74,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 일반상환학자금대출(등록금, 생활비, WEST, 전환대출), 특별상환유예대출, 취업후상환학자금대출(등록금, 생활비)\n※ 정부보증학자금대출 및 농어촌학자금융자를 제외한 재단 내 대출 상품\n※ 연체계좌보유자, 의무상환체납자 등 상환대상 제외",
-  "view_count": 20169
+  "view_count": 20391
 }

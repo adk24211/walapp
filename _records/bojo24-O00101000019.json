@@ -28,7 +28,7 @@
   "benefit_raw": "○ 전북특별자치도서울장학숙 입사생 수시 모집\n- 수도권 소재 대학생 중 전북특별자치도민의 자녀로서 학업성적이 우수하고 생활이 어려운 대학생을 선발하여 학업에 전념할 수 있도록 제반 편의를 제공하여 장차 국가와 지역사회 발전에 중추적 역할을 담당할 향토 인재 양성을 목적으로 함",
   "category": "care",
   "contact_raw": "전북특별자치도서울장학숙/02-580-6600",
-  "content_hash": "sha256:85ab77da739c7495d09f554fe8f39c24",
+  "content_hash": "sha256:962634ac41859faf09815bce6bfdbf5b",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -38,11 +38,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-O00101000019",
   "is_mock": false,
-  "last_checked": "2026-10-23",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-23",
   "law_raw": "",
   "name": "전북특별자치도서울장학숙 입사생 수시 모집",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00101000019",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2109925&bnefType=all&svcId=O00101000019",
   "org": "재단법인전북특별자치도평생교육장학진흥원",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -51,13 +51,13 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "전북특별자치도서울장학숙-입사생-수시-모집",
   "source": "bojo24",
   "source_category_raw": "보육·교육 시설이용 개인",
   "source_id": "O00101000019",
   "source_registered": "",
-  "status": "active",
+  "status": "closed",
   "target_raw": "○ 자격 기준\n1. 「고등교육법」 제2조 1~4호에 해당하는 수도권(서울, 경기, 인천) 소재 대학, 산업대학, 교육대학, 전문대학 재학생으로 선발 공고일 기준 다음 각호의 어느 하나에 해당하는 사람\n가. 전북특별자치도에 1년 이상 계속하여 보호자의 주민등록이 되어 있는 사람\n나. 보호자의 등록기준지가 전북특별자치도이면서 학생이 도내 고등학교를 졸업한 사람\n※ 세부내용은 공고문 참조",
-  "view_count": 966
+  "view_count": 1026
 }

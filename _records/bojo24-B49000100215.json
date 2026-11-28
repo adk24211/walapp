@@ -29,7 +29,7 @@
   "benefit_raw": "O 수수료 0원(3년간 면제)\n. '26년 중소기업퇴직연금기금제도 신규 가입시\n\nO 사업주 및 근로자 지원금(3년)\n. 전년도 고용보험 월평균보수액 281만원 미만 근로자 1인당 최대 28만 1천원('26년 기준 최저임금 130% 수준)",
   "category": "jobs",
   "contact_raw": "근로복지공단 퇴직연금 고객센터/1661-0075",
-  "content_hash": "sha256:ab3002589f4bfd4a77a0afa250d7941a",
+  "content_hash": "sha256:6e66fb22b305b032dfe4754fc4d7057a",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -39,11 +39,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B49000100215",
   "is_mock": false,
-  "last_checked": "2026-09-05",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-05",
   "law_raw": "",
   "name": "중소기업퇴직연금기금제도(푸른씨앗) 사업주 및 근로자 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B49000100215",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2112703&bnefType=all&svcId=B49000100215",
   "org": "근로복지공단",
   "primary_audience": "business",
   "receiver_raw": "",
@@ -52,7 +52,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "중소기업퇴직연금기금제도-푸른씨앗-사업주-및-근로자-지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금 소상공인",
@@ -60,5 +60,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "중소기업퇴직연금기금제도에 가입한 상시근로자수 30명 이하 사업주 및 근로자",
-  "view_count": 10086
+  "view_count": 15788
 }

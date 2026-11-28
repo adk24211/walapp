@@ -25,7 +25,7 @@
   "apply_period": {
     "always": false,
     "end": "",
-    "raw": "",
+    "raw": "만 65세 생일이 속하는 달의 1개월 전부터 신청 가능",
     "start": ""
   },
   "apply_url": "",
@@ -35,7 +35,7 @@
   "benefit_raw": "○ 단독가구 최고 349,700원(2026년)\n\n○ 부부가구 최고 559,520원(2026년)\n\n○ 국민연금 가입기간 및 급여액, 가구 유형, 소득 인정액 수준에 따라 감액될 수 있음",
   "category": "finance",
   "contact_raw": "보건복지상담센터/129\n국민연금공단 콜센터/1355",
-  "content_hash": "sha256:f4524a1ddfe09ead9b18d8109ee31989",
+  "content_hash": "sha256:755dd043d824e6ddad3520e27d71fdcd",
   "criteria_raw": "○ 연령 요건 : 만 65세 이상\n\n○ 소득 인정액 기준\n\n- 가구의 소득 인정액이 선정기준액 이하일 것\n\n- 2026년도 선정기준액\n\n· 단독 가구 : 247만 원\n\n· 부부 가구 : 395.2만 원\n\n○ 소득 인정액 = ①월 소득평가액 + ②재산의 월 소득환산액\n\n① 월 소득평가액 = {0.7 x (근로소득 - 116만 원)}* + 기타 소득**\n\n- 상시 근로소득에서 116만 원 공제 후 30% 추가공제\n\n- 기타소득 : 사업소득, 재산소득, 공적이전소득, 무료 임차 소득\n\n② 재산의 월 소득환산액\n\n= [ {(일반재산 - 기본재산액) + (금융 재산 - 2,000만 원) - 부채} × 재산의 소득환산율 ÷ 12월] + P\n\n- 기본재산 : 대도시 1억 3천5백만 원, 중소도시 8천5백만 원, 농어촌 7천2.5백만 원\n\n- P : 고급 자동차 및 회원권의 가액\n\n※ 고급 자동차 및 회원권은 일반재산에서 제외한 후 계산\n\n○ 직역연금 요건\n\n- 공무원연금, 사립학교교직원연금, 군인연금, 별정우체국직원연금의 수급권자 및 배우자는 원칙적으로 제외 대상\n※단, 퇴직일시금을 수령한 자, 퇴직유족(연금) 일시금 수령 후 5년 경과한 자 등 일부 예외적으로 수급 가능",
   "deferred_detail": false,
   "documents_raw": [
@@ -53,11 +53,11 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-SSE000000170",
   "is_mock": false,
-  "last_checked": "2026-09-02",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-02",
   "law_raw": "",
   "name": "기초연금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SSE000000170",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=72548&bnefType=all&svcId=SSE000000170",
   "org": "보건복지부",
   "primary_audience": "senior",
   "receiver_raw": "주민센터",
@@ -66,13 +66,13 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "기초연금",
   "source": "bojo24",
   "source_category_raw": "행정·안전 현금 개인",
   "source_id": "SSE000000170",
-  "source_registered": "2020-12-17",
+  "source_registered": "",
   "status": "active",
   "target_raw": "○ 만 65세 이상 노인으로 소득 인정액이 선정기준액(보건복지부 장관이 매년 결정·고시하는 금액) 이하인 자\n\n○ 대상자 : 만 65세 이상 노인인구의 70% 수준",
-  "view_count": 182791
+  "view_count": 191735
 }

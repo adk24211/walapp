@@ -28,7 +28,7 @@
   "benefit_raw": "○ 열병합 발전방식에 관심이 있는 학생 등 일반인을 대상으로 발전설비 소개 및 안내\n※ 유의사항\n- 발전소 정비일정 등에 따라 견학이 제한될 수 있습니다.\n- 견학 신청 및 출입 시 보안 관련 절차를 준수하여야 합니다.",
   "category": "jobs",
   "contact_raw": "홍보협력팀/070-5000-7163",
-  "content_hash": "sha256:cbc65b093bca93d989c7685519b8e3c9",
+  "content_hash": "sha256:a95ef859a8da1e2f212a46138869fce4",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -38,11 +38,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55207000006",
   "is_mock": false,
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-19",
   "law_raw": "",
   "name": "발전소 시설 견학(일산)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55207000006",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000616&bnefType=all&svcId=B55207000006",
   "org": "한국동서발전(주)",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -51,7 +51,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "발전소-시설-견학-일산",
   "source": "bojo24",
   "source_category_raw": "보육·교육 시설이용 개인",
@@ -59,5 +59,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "발전산업에 관심이 있는 취업준비생 등 일반인",
-  "view_count": 1324
+  "view_count": 1350
 }

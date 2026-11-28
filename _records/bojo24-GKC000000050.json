@@ -34,7 +34,7 @@
   "benefit_raw": "○ 시각·청각장애인용 TV 지급",
   "category": "living",
   "contact_raw": "시청자미디어재단/1688-4596",
-  "content_hash": "sha256:196ccda78bb3ce12dfe4f6db83c751f7",
+  "content_hash": "sha256:7a5e12e67b0ae5914d755f6099fe00ea",
   "criteria_raw": "장애 정도와 소득, 연령 등을 고려해 선정 후 보급",
   "deferred_detail": false,
   "documents_raw": [
@@ -56,11 +56,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-GKC000000050",
   "is_mock": false,
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-08",
   "law_raw": "",
   "name": "시각·청각장애인용 TV 보급",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GKC000000050",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=753176&bnefType=all&svcId=GKC000000050",
   "org": "방송미디어통신위원회",
   "primary_audience": "lowincome",
   "receiver_raw": "주민센터",
@@ -69,7 +69,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "시각-청각장애인용-tv-보급",
   "source": "bojo24",
   "source_category_raw": "문화·환경 문화/여가지원\n현물 개인",
@@ -77,5 +77,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "주민등록상 국내에 거주 중인 보건복지부 등록 시각·청각장애인 또는 국가보훈처 등록 눈·귀 상이자\n\n- 저소득층(기초생활수급자, 차상위계층): 무상보급/ 비저소득층: 자부담비 10만원 유상보급\n- 소득 구분, 장애 정도, 연령 등을 고려하여 선정 후 보급(선착순 보급 아님)\n- 2020~2025년 시각·청각장애인용 TV를 받은 분은 신청 불가",
-  "view_count": 10109
+  "view_count": 10507
 }

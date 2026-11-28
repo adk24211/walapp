@@ -32,7 +32,7 @@
   "benefit_raw": "○ 수출 보험\n\n○ 수입 보험\n\n○ 수출신용보증\n\n○ 기타 보험(환변동보험, 부품·소재 신뢰성 보험 등)",
   "category": "jobs",
   "contact_raw": "무역보험공사 고객센터/1588-3884",
-  "content_hash": "sha256:3210ad313a2f8001498eff8c11194157",
+  "content_hash": "sha256:bd5fb25fdcd64b5efb940d58480cdf7a",
   "criteria_raw": "○ 수출입자 신용도 및 국가위험 등을 종합적으로 검토",
   "deferred_detail": false,
   "documents_raw": [
@@ -52,11 +52,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-SD0000016528",
   "is_mock": false,
-  "last_checked": "2026-09-14",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-14",
   "law_raw": "",
   "name": "소상공인, 중소기업, 중견기업, 대기업등 무역 보험 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000016528",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=608639&bnefType=all&svcId=SD0000016528",
   "org": "산업통상부",
   "primary_audience": "business",
   "receiver_raw": "무역보험공사 고객센터",
@@ -65,7 +65,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "소상공인-중소기업-중견기업-대기업등-무역-보험-지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금(보험)\n현금(융자) 소상공인",
@@ -73,5 +73,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 소상공인, 중소기업, 중견기업, 대기업을 대상으로 수출 입자 신용도 및 국가위험 등을 종합적으로 검토하여 선발",
-  "view_count": 4875
+  "view_count": 5010
 }

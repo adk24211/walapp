@@ -7,7 +7,7 @@ category: living
 audiences:
   - business
 primary_audience: business
-view_count: 8222
+view_count: 9065
 region_scope: national
 region_label: "전국"
 org: "한국전력공사"
@@ -22,13 +22,13 @@ apply_start: "2026-01-19"
 apply_end: "2026-12-18"
 apply_methods: ["온라인 신청", "방문 신청"]
 apply_url: "https://online.kepco.co.kr/"
-official_url: "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B41000200008"
+official_url: "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002035&bnefType=all&svcId=B41000200008"
 first_published: "2026-09-10"
 last_updated: "2026-09-10"
-last_checked: "2026-09-10"
+last_checked: "2026-11-28"
 date: "2026-09-10"
 last_modified_at: "2026-09-10"
-revision: 0
+revision: 1
 own_chars: 474
 source_parts: ["신청 기간", "지원 내용", "지원 대상", "소관 기관", "지원 지역", "신청 방법", "문의처"]
 own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 신청하나요"]
@@ -124,7 +124,7 @@ own_parts: ["맨 위 한 줄 요약", "나도 받을 수 있나요", "어떻게 
 </table>
 </div>
 <div class="cn cn-links" data-cat="living">
-  <a href="https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B41000200008" target="_blank" rel="noopener nofollow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external-link"></use></svg> 소관 기관에서 자세히 보기 <span class="cn-link-ext">↗</span></a>
+  <a href="https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002035&amp;bnefType=all&amp;svcId=B41000200008" target="_blank" rel="noopener nofollow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external-link"></use></svg> 소관 기관에서 자세히 보기 <span class="cn-link-ext">↗</span></a>
 </div>
   </div>
 </section>

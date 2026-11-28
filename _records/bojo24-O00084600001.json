@@ -27,7 +27,7 @@
   "benefit_raw": "○ 긴급생계비 지원 (1인 최대 50만원)\n- 기준중위소득 120% 이하 가정\n- 동주민센터 추천자에 한해 지원",
   "category": "living",
   "contact_raw": "복지사업과/02-856-1696",
-  "content_hash": "sha256:615c736bee4a531ae6c36054bcf910d8",
+  "content_hash": "sha256:bcb66bdc60c341aabb19a806edc0e7a9",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -39,11 +39,11 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-O00084600001",
   "is_mock": false,
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-18",
   "law_raw": "",
   "name": "저소득가구 긴급생계비 지원(사례지원)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00084600001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000542&bnefType=all&svcId=O00084600001",
   "org": "재단법인구로희망복지재단",
   "primary_audience": "lowincome",
   "receiver_raw": "",
@@ -52,7 +52,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "저소득가구-긴급생계비-지원-사례지원",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금 가구",
@@ -60,5 +60,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 기준중위소득 120% 이하 가정\n\n○ 동주민센터에서 추천한 가정",
-  "view_count": 6595
+  "view_count": 6692
 }

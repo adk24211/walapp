@@ -27,7 +27,7 @@
   "benefit_raw": "- H/W : 스마트화 장비 · 기계 구매비용\n- S/W : 스마트화를 위한 소프트웨어 임차비용",
   "category": "jobs",
   "contact_raw": "소공인지원실/042-363-7912\n소공인지원실/042-363-7914\n소공인지원실/042-363-7915\n소공인지원실/042-363-7916\n소공인지원실/042-363-7919\n소공인지원실/042-363-7920",
-  "content_hash": "sha256:295de8b62c27b5935dc9407bb7e6f209",
+  "content_hash": "sha256:b5f42e92bc0da7bcbc20e4165efce905",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -37,11 +37,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55307700015",
   "is_mock": false,
-  "last_checked": "2026-09-18",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-18",
   "law_raw": "",
   "name": "스마트 제조지원사업",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55307700015",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001098&bnefType=all&svcId=B55307700015",
   "org": "소상공인시장진흥공단",
   "primary_audience": "business",
   "receiver_raw": "",
@@ -50,7 +50,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "스마트-제조지원사업",
   "source": "bojo24",
   "source_category_raw": "고용·창업 기술지원 소상공인",
@@ -58,5 +58,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "도시형 소공인 지원에 관한 특별법에 따른 소공인",
-  "view_count": 4351
+  "view_count": 4539
 }

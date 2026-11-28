@@ -28,7 +28,7 @@
   "benefit_raw": "원자력연료 제조공정 견학을 통한 안정성 체험 및 에너지 이해 증진",
   "category": "care",
   "contact_raw": "소통협력실/042-868-1144",
-  "content_hash": "sha256:bcc1414316cc6ef3867e8f5c175e2425",
+  "content_hash": "sha256:4724451975105fde82838f214c4f7e64",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -40,11 +40,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55209300002",
   "is_mock": false,
-  "last_checked": "2026-09-03",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-03",
   "law_raw": "",
   "name": "안전에너지 원자력연료 체험",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55209300002",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001044&bnefType=all&svcId=B55209300002",
   "org": "한전원자력연료(주)",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -53,7 +53,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "안전에너지-원자력연료-체험",
   "source": "bojo24",
   "source_category_raw": "보육·교육 시설이용 개인",
@@ -61,5 +61,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "중·고등학생",
-  "view_count": 1146
+  "view_count": 1350
 }

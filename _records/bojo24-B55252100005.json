@@ -17,7 +17,7 @@
   "apply_period": {
     "always": false,
     "end": "2026-09-29",
-    "raw": "2026-09-15~2026-09-29(미확정,변동가능)",
+    "raw": "2026-09-15~2026-09-29",
     "start": "2026-09-15"
   },
   "apply_url": "",
@@ -25,7 +25,7 @@
   "benefit_raw": "보령시 오천면, 천북면, 주교면, 주포면, 웅천읍 성동리 2년 이상 거주한 주민 또는 주민 자녀 장학금 지원",
   "category": "education",
   "contact_raw": "지역협력부/070-7511-2177",
-  "content_hash": "sha256:400705cf309401ade0ec8b7774539d49",
+  "content_hash": "sha256:31a2eb722f5a8779217d80a792db827b",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -35,11 +35,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-B55252100005",
   "is_mock": false,
-  "last_checked": "2026-10-28",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-06",
   "law_raw": "",
   "name": "발전소주변지역 장학금 지원(보령발전본부)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252100005",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002199&bnefType=all&svcId=B55252100005",
   "org": "한국중부발전(주)",
   "primary_audience": "",
   "receiver_raw": "",
@@ -56,5 +56,5 @@
   "source_registered": "",
   "status": "closed",
   "target_raw": "보령시 오천면, 천북면, 주교면, 주포면, 웅천읍 성동리 2년 이상 거주한 주민 또는 주민 자녀",
-  "view_count": 1279
+  "view_count": 1362
 }

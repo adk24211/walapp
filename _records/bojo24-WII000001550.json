@@ -34,7 +34,7 @@
   "benefit_raw": "○ (연령 조건) 부 또는 모가 24세 이하인 한 부모 가구\n\n○ (소득 조건) 기준 중위소득 65% 이하인 가구\n\n○ (세부 내용) 아동양육비(월 37만원 또는 월 40만원*), 검정고시학습비 등(연 154만원 이내), 자립촉진수당(월 10만원)\n* 생계급여 지원 한부모가족도 동일하게 지원, 0~1세 자녀 양육일 경우 월 40만원 지원",
   "category": "care",
   "contact_raw": "한부모상담전화/1577-4206",
-  "content_hash": "sha256:cf76fd7d7720c78f9194ed4856a74cb6",
+  "content_hash": "sha256:43ffac8077e409c041ef3858e4196abc",
   "criteria_raw": "○ 부 또는 모가 24세 이하이면서 아동을 양육하는 기준 중위소득 65% 이하인 청소년한부모 가구",
   "deferred_detail": false,
   "documents_raw": [
@@ -46,11 +46,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-WII000001550",
   "is_mock": false,
-  "last_checked": "2026-09-03",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-03",
   "law_raw": "",
   "name": "청소년한부모 아동양육 및 자립지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000001550",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=87901&bnefType=all&svcId=WII000001550",
   "org": "성평등가족부",
   "primary_audience": "parent",
   "receiver_raw": "주민센터",
@@ -59,7 +59,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "청소년한부모-아동양육-및-자립지원",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금 가구",
@@ -67,5 +67,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 부 또는 모가 24세 이하이면서 아동을 양육하는 기준 중위소득 65% 이하인 청소년한부모 가구",
-  "view_count": 7069
+  "view_count": 7398
 }

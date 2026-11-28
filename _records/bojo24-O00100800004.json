@@ -33,7 +33,7 @@
   "benefit_raw": "○ 참여기업에 인턴 기간(3개월) 매월 80만원씩 지급\n- 인턴 종료 후 상용직 또는 정규직으로 채용하고 6개월 이상 고용을 유지한 경우 기업에 80만원, 개인에 60만원 지급",
   "category": "jobs",
   "contact_raw": "취업지원팀/063-254-3610",
-  "content_hash": "sha256:bbfabf0d000dc1a5eb3f5df1ab60f456",
+  "content_hash": "sha256:5b1a1f116330afbf2da2bd45e548290d",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-O00100800004",
   "is_mock": false,
-  "last_checked": "2026-09-10",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-10",
   "law_raw": "",
   "name": "새일여성인턴",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00100800004",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002150&bnefType=all&svcId=O00100800004",
   "org": "(재)전북여성가족재단",
   "primary_audience": "jobseeker",
   "receiver_raw": "",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "새일여성인턴",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금 개인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "구직을 희망하는 경력단절여성 및 취업취약계층(결혼이민자, 여성가장 등) 여성",
-  "view_count": 2842
+  "view_count": 3069
 }

@@ -34,7 +34,7 @@
   "benefit_raw": "○ 농지소유자의 농지를 감정평가 가격으로 매입\n- 단 지역별 매입상한 단가 이내에서 매입(28,000원/㎡~130,000원/㎡ 이내)\n\n○ 매입농지를 청년창업형후계농업인 등에게 장기 임대(5년이상)\n- 해당지역 관행임대차료 등을 고려하여 결정하고, 타작물 재배시 임대료 80% 감면",
   "category": "housing",
   "contact_raw": "농지은행 고객상담/1577-7770",
-  "content_hash": "sha256:0511f9fe20296d38a0e8de1382855812",
+  "content_hash": "sha256:8766135e6799606d5265b0fd9064fa0c",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,11 +44,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-B55214900005",
   "is_mock": false,
-  "last_checked": "2026-09-03",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-03",
   "law_raw": "",
   "name": "농지 매입 비축 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55214900005",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002091&bnefType=all&svcId=B55214900005",
   "org": "한국농어촌공사",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -57,7 +57,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "농지-매입-비축-지원",
   "source": "bojo24",
   "source_category_raw": "농림축산어업 현금\n현물 개인",
@@ -65,5 +65,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 매입대상\n- 대상자 : 은퇴(예정)농업인, 이농,상속농지 소유자\n- 대상농지 : 농업진흥지역 안, 진흥밖 경지정리 완료된 농지로 필지별 1,000 이상(농업생산기반정비사업이 완료된 농지 등)\n\n○ 임대대상\n- 대상자 : 청년후계농, 2030세대, 후계농업인, 일반농업인, 귀농인 등",
-  "view_count": 3439
+  "view_count": 4097
 }

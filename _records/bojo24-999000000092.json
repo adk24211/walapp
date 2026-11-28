@@ -43,7 +43,7 @@
   "benefit_raw": "○ 정부 양곡 구매 시 약 90% 할인된 가격으로 지원(생계,의료수급자)\n\n○ 정부 양곡 구매 시 약 60% 할인된 가격으로 지원(주거,교육수급자 및 차상위계층)\n\n○ 양곡공제 급여액 차감은 생계급여만 가능하며, 주거급여에서는 공제 불가\n\n○ 양곡신청가구원 1명당 최대 월 10kg 신청 가능",
   "category": "finance",
   "contact_raw": "전국 읍면동/주민센터",
-  "content_hash": "sha256:61ff741d6954c8dbd37fe7865f3e75fe",
+  "content_hash": "sha256:a9283ac5701db1f20226131f49d7f7b1",
   "criteria_raw": "○ 수급자 및 차상위 계층\n\n○ 중복수혜 불가 조건\n- 긴급복지 사회복지시설 이용 지원",
   "deferred_detail": false,
   "documents_raw": [
@@ -53,11 +53,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-999000000092",
   "is_mock": false,
-  "last_checked": "2026-08-19",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-19",
   "law_raw": "",
   "name": "양곡할인",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000092",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999259&bnefType=all&svcId=999000000092",
   "org": "농림축산식품부",
   "primary_audience": "lowincome",
   "receiver_raw": "주민센터",
@@ -66,7 +66,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "양곡할인",
   "source": "bojo24",
   "source_category_raw": "농림축산어업 현물 가구",
@@ -74,5 +74,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 정부 양곡 구매를 희망하는 수급자 및 차상위 계층 가구\n\n○ 다음에 해당하는 국민기초생활보장수급자 가구 중 신청가구에 양곡가액의 약 90% 할인 지원\n- 기초생계급여 수급자가구\n- 기초의료급여 수급자가구\n\n○ 다음에 해당하는 차상위 복지수급자 가구로서 정부 양곡 구매를 희망하여 시군구(읍면동) 사회복지담당 부서에 신청하는 자에게 정부 양곡 약 60% 할인지원\n- 기초주거, 교육급여 가구\n- 한부모가족 지원법 제5조 및 제5조의2에 따른 지원 대상 가구\n- 법정 차상위계층(차상위계층 건강보험 본인부담 경감, 차상위 장애(아동) 수당, 차상위\n장애인연금, 차상위 자활근로, 차상위계층 자격확인)",
-  "view_count": 95125
+  "view_count": 96866
 }

@@ -29,7 +29,7 @@
   "benefit_raw": "○ 시설, 인테리어, 마케팅 등 창업초기비용 지원(최대 20백만원)",
   "category": "jobs",
   "contact_raw": "(재)장애인기업종합지원센터/02-2181-6534",
-  "content_hash": "sha256:a060be098029409f7c7d32237aa01649",
+  "content_hash": "sha256:ef865ecede74771525bc7598cfc1c0f8",
   "criteria_raw": "○ 평가우수자 선정",
   "deferred_detail": false,
   "documents_raw": [
@@ -42,11 +42,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-999000000071",
   "is_mock": false,
-  "last_checked": "2026-10-28",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-28",
   "law_raw": "",
   "name": "장애인맞춤형사업화지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000071",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999238&bnefType=all&svcId=999000000071",
   "org": "중소벤처기업부",
   "primary_audience": "disabled",
   "receiver_raw": "(재)장애인기업종합지원센터",
@@ -55,7 +55,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "장애인맞춤형사업화지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금 소상공인",
@@ -63,5 +63,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 장애인 예비창업자, 업종전환 희망 장애인기업",
-  "view_count": 3007
+  "view_count": 3044
 }

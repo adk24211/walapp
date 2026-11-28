@@ -26,7 +26,7 @@
   "benefit_raw": "○ 자격증 취득 개수 등을 고려하여 추천된 고등학생 장학금 지원",
   "category": "education",
   "contact_raw": "영등포구미래교육재단/02-2670-3072",
-  "content_hash": "sha256:9a2c6d564af48623389c1f401d1b0719",
+  "content_hash": "sha256:def3dd5ea3780cbd1f149ce2c078736e",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -36,11 +36,11 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-O00368400004",
   "is_mock": false,
-  "last_checked": "2026-10-03",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-03",
   "law_raw": "",
   "name": "특성화고 자격증 취득 장학금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00368400004",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2131625&bnefType=all&svcId=O00368400004",
   "org": "재단법인영등포구미래교육재단",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -49,7 +49,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "특성화고-자격증-취득-장학금",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -57,5 +57,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 영등포구 관내 고등학교 학생",
-  "view_count": 394
+  "view_count": 440
 }

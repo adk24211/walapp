@@ -42,7 +42,7 @@
   "benefit_raw": "ㅇ 새출발기금 대상자\n- 1. 2020.4월 ~ 2025.6월 중 사업을 영위한(휴업 및 폐업 포함) 2. 개인사업자 또는 법인 소상공인으로서 3.부실이 발생(3개월 이상 장기연체)했거나, 부실발생 우려가 있는 차주\n* 부실차주(3개월 이상 대출 상환금을 연체한 차주)\n* 부실우려차주(근시일 내 장기연체에 빠질 위험이 큰 차주)\n\nㅇ 대상채무\n- '새출발기금 협약'에 가입한 협약 금융회사가 보유한 대출(코로나19 피해와 무관한 일부 채권제외)을 대상으로 채무조정 지원(법인사업자의 경우, 대표자의 가계대출 제외)\n- 최대 15억원(담보 10억원 + 무담보 5억원)\n※ 고액재산가, 고의 연제자 등 프로그램 운영 취지와 맞지 않거나, 채무조정 불가한 대출(주택구입 등 자산형성 목적 대출, 전세 보증 등)은 제외\n\nㅇ 지원내용\n- 상환기간 조정 : 채무조정 약정 후 거치기간 최대 3년(신용대출 1년), 최장 20년 분할상환(신용대출 10년)\n- 원금조정 : 부실차주(신용·보증)에 대하여 보유재산을 반영해 원금조정(0~80%)\n* 기초수급자 등 상환능력이 거의 없는 취약계층은 순부채의 최대 90%까지 조정\n- 금리조정 : 부실우려차주(신용·보증·담보) 또는 부실담보채권\n- 채무조정 신청 즉시(익일부터) 추심중단, 강제집행 중지\n※ 부실차주는 채무조정 플랫폼(새출발기금.kr), 부실우려차주는 신용회복위원회를 통해 채무조정 절차 진행",
   "category": "finance",
   "contact_raw": "새출발기금 고객지원센터/1660-1378",
-  "content_hash": "sha256:4ca42cad3420a30a583cea5e4b967b9e",
+  "content_hash": "sha256:45f52874b3766f4d362523babe0793b9",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -59,11 +59,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-B01000300013",
   "is_mock": false,
-  "last_checked": "2026-08-21",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-21",
   "law_raw": "",
   "name": "소상공인·자영업자 새출발기금 채무조정 프로그램",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B01000300013",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2105847&bnefType=all&svcId=B01000300013",
   "org": "한국자산관리공사",
   "primary_audience": "business",
   "receiver_raw": "",
@@ -72,7 +72,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "소상공인-자영업자-새출발기금-채무조정-프로그램",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금(감면) 소상공인",
@@ -80,5 +80,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "새출발기금은 코로나 기간(2020.4월 ~ 2025.6월) 중 사업을 영위한(휴업 및 폐업 포함) 법인 소상공인과 자영업자가 보유한 협약 금융회사의 대출을 상환능력 회복 속도에 맞추어 조정",
-  "view_count": 33518
+  "view_count": 34330
 }

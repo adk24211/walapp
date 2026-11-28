@@ -33,7 +33,7 @@
   "benefit_raw": "○ 서비스 내용 : 교통약자에게 휠체어 탑승설비 등을 장착한 차량을 이용하여 이동지원서비스 제공(특별교통수단)\n\n○서비스 대상 : 교통약자(중증장애인, 일시적장애)",
   "category": "living",
   "contact_raw": "용인시 교통약자이동지원센터/031-526-7755",
-  "content_hash": "sha256:b69ce04f9eacdd59ad140307161c9301",
+  "content_hash": "sha256:2573e05adbd49986120dad0bca59c9ef",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -55,11 +55,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-O00009400001",
   "is_mock": false,
-  "last_checked": "2026-10-20",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-20",
   "law_raw": "",
   "name": "용인시 교통약자 이동지원센터",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00009400001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2109508&bnefType=all&svcId=O00009400001",
   "org": "용인도시공사",
   "primary_audience": "disabled",
   "receiver_raw": "",
@@ -68,7 +68,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "용인시-교통약자-이동지원센터",
   "source": "bojo24",
   "source_category_raw": "행정·안전 기타 개인",
@@ -76,5 +76,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 특별교통수단 이용대상자 : 보행상 장애(휠체어 사용 및 독립보행 불가)로 대중교통 이용이 어려운 사람 중 아래에 해당하는 경우\n- 중증장애인, 진단서(종합병원 발급)를 제출한 대중교통 이용이 어려운 휠체어 이용자",
-  "view_count": 3900
+  "view_count": 4062
 }

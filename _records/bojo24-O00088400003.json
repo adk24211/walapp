@@ -34,7 +34,7 @@
   "benefit_raw": "한국장학재단 학자금 대출에 따른 이자 대리상환 지원",
   "category": "education",
   "contact_raw": "인재개발팀/044-865-9685",
-  "content_hash": "sha256:379308d439213cfc899805e7b54a7bdd",
+  "content_hash": "sha256:857668f984f1576d5fcd6bf37df362d7",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,11 +44,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-O00088400003",
   "is_mock": false,
-  "last_checked": "2026-09-09",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-09",
   "law_raw": "",
   "name": "학자금 대출이자 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00088400003",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000386&bnefType=all&svcId=O00088400003",
   "org": "재단법인세종특별자치시인재육성평생교육진흥원",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -57,7 +57,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "학자금-대출이자-지원",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금(융자) 개인",
@@ -65,5 +65,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "국내 대학교 및 대학원 학생(재학,휴학) 또는 대학교 졸업(수료) 후 2년 이내 미취업자 중 공고일 기준 세종시 1년 이상 계속 거주자",
-  "view_count": 4072
+  "view_count": 4216
 }

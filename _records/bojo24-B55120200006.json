@@ -44,7 +44,7 @@
   "benefit_raw": "지원내용\n\n○ 장기요양(입소)시설로 신체활동지원, 인지관리 및 의사소통, 건강 및 간호관리, 기능회복훈련, 시설환경관리 등의 장기요양서비스를 제공합니다.\n○ 이용료는 보건복지부 고시 장기요양보험 급여수가·비급여수가에 따르며, 국민기초생활수급자는 본인부담금 전액, 의료급여수급자·감경대상자는 규정에서 정한 비율만큼 감면됩니다.\n○ 국가유공자 및 유족 등은 규정에서 정한 본인부담금 감면요율을 적용받아 그 차액을 국비(보훈기금)로 지원받을 수 있으며, 국가유공자 상이등급 1급 해당자와 생존 애국지사 및 그 배우자는 별도 감면율(애국지사 배우자 60% 등)을 적용받습니다.\n○ 입소보증금은 원칙적으로 수납하지 않습니다.",
   "category": "health",
   "contact_raw": "복지과/053-606-3000",
-  "content_hash": "sha256:424b159b169b101f4aaa8e372d602b4d",
+  "content_hash": "sha256:faca2bef680d0426c7dc1b5e15deca16",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -66,11 +66,11 @@
   "how_to_raw": "방문신청\n직접입력",
   "id": "bojo24-B55120200006",
   "is_mock": false,
-  "last_checked": "2026-09-11",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-11",
   "law_raw": "",
   "name": "입소 이용서비스(대구보훈요양원)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55120200006",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000634&bnefType=all&svcId=B55120200006",
   "org": "한국보훈복지의료공단",
   "primary_audience": "lowincome",
   "receiver_raw": "",
@@ -79,7 +79,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "입소-이용서비스-대구보훈요양원",
   "source": "bojo24",
   "source_category_raw": "보건·의료 현금(감면) 개인",
@@ -87,5 +87,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 「노인장기요양보험법」에 따라 장기요양급여 대상자로 인정받은 사람 중,\n- 장기요양(입소)시설: 시설급여를 인정받은 사람\n○ 국가유공자 및 유족과 일반노인 등 대상별 입소비율 범위 내에서 운영합니다.\n\n유의사항\n\n○ 법정전염성·감염성 질환자는 입소가 제한됩니다.\n○ 계약기간은 장기요양등급 인정 유효기간이며, 만료 1개월 전 재계약 여부를 확인해야 하고, 통보일부터 15일 이내에 회신하여야 합니다.\n○ 이용료를 3회 이상 연체하거나 시설규칙 위반, 타 입소자·직원에 대한 폭언·폭행 등 문제행동이 있는 경우 운영위원회 심의를 거쳐 계약이 해지될 수 있습니다.\n○ 요양지원에 대한 국비(보훈기금) 감면을 받으려는 경우 주소지 관할 보훈(지)청에 별도의 요양지원 보조금 신청 절차가 필요합니다(단, 국가유공자 상이등급 1급 해당자와 생존 애국지사 및 그 배우자는 신청 절차 없이 감면 적용).\n○ 자세한 사항은 대구보훈요양원(복지부)으로 문의 바랍니다.",
-  "view_count": 1126
+  "view_count": 1242
 }

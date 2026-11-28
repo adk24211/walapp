@@ -1,0 +1,72 @@
+{
+  "_prose": {
+    "eligibility": [
+      "전북특별자치도에 소재한 대학·산업대학·교육대학·전문대학 재학생이어야 합니다.",
+      "신청 마감일까지 본인과 보호자의 주민등록이 전북특별자치도에 있어야 합니다.",
+      "보호자의 등록기준지가 전북특별자치도이며, 학생이 도내 고등학교를 졸업한 경우에도 지원 가능합니다."
+    ],
+    "faq": [
+      {
+        "a": "지원 대상은 전북특별자치도에 소재한 대학 등 재학생으로 제한됩니다.",
+        "q": "전북특별자치도 외 지역 학생도 지원할 수 있나요?"
+      },
+      {
+        "a": "선정 기준에 대한 별도 내용은 제공되지 않았습니다.",
+        "q": "선정 기준은 어떻게 되나요?"
+      }
+    ],
+    "note": "",
+    "steps": [
+      {
+        "body": "온라인으로 신청합니다. 홈페이지에 공고된 양식을 작성하여 제출합니다.",
+        "title": "신청 방법"
+      }
+    ],
+    "summary": "전북특별자치도 전주장학숙에 입사하고자 하는 전북 소재 대학 재학생을 대상으로 학업에 전념할 수 있도록 지원하는 수시 모집 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "결원 발생 시 수시 모집",
+    "start": ""
+  },
+  "apply_url": "https://jeonju.jbiles.or.kr/index.php",
+  "audiences": [
+    "youth"
+  ],
+  "benefit_raw": "○ 전북특별자치도전주장학숙 입사생 수시 모집\n- 전북특별자치도민의 자녀로서 학업성적이 우수하고 생활이 어려운 학생을 선발, 학업에 전념할 수 있도록 제반 편의를 제공함으로써 애향심과 자긍심을 갖고 국가와 지역사회 발전에 중추적 역할을 담당할 향토인재를 양성하고자 함\n- 전북특별자치도민의 자녀들(대학생)이 학업에 전념할 수 있는 여건 제공",
+  "category": "care",
+  "contact_raw": "전북특별자치도 전주장학숙/063-240-4800",
+  "content_hash": "sha256:e0c8516d3bae5df93efff8577918b14a",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "○ 홈페이지 공고 고시 참조 (https://jeonju.jbiles.or.kr/index.php)"
+  ],
+  "first_published": "2026-11-28",
+  "how_to_raw": "기타 온라인신청",
+  "id": "bojo24-O00101000017",
+  "is_mock": false,
+  "last_checked": "2026-11-28",
+  "last_updated": "2026-11-28",
+  "law_raw": "",
+  "name": "전북특별자치도 전주장학숙 입사생 수시 모집",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2109923&bnefType=all&svcId=O00101000017",
+  "org": "재단법인전북특별자치도평생교육장학진흥원",
+  "primary_audience": "youth",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "전북특별자치도-전주장학숙-입사생-수시-모집",
+  "source": "bojo24",
+  "source_category_raw": "보육·교육 시설이용 개인",
+  "source_id": "O00101000017",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 전북특별자치도에 소재한 대학, 산업대학, 교육대학, 전문대학 재학생으로\n- 선발공고일 기준 다음 각호의 어느 하나에 해당되는 자\n1. 입사 신청 마감일까지 본인과 보호자의 주민등록이 전북특별자치도에 되어있는 자\n2. 보호자의 등록기준지가 전북특별자치도이면서 학생이 도내 고등학교를 졸업한 자\n※ 세부내용은 공고문 참고",
+  "view_count": 494
+}

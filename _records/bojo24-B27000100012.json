@@ -33,7 +33,7 @@
   "benefit_raw": "○ 사회·경제적 약자에 대한 법률구조서비스 제공으로 법률복지증진\n\n○ 무료 법률상담\n\n○ 무료 소송대리",
   "category": "living",
   "contact_raw": "(국번없이)132 법률상담 콜센타/132",
-  "content_hash": "sha256:17319b081052915c4b5cc079bec6598b",
+  "content_hash": "sha256:6233afb13d327a21292540e0c7d410eb",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
   "id": "bojo24-B27000100012",
   "is_mock": false,
-  "last_checked": "2026-10-01",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-01",
   "law_raw": "",
   "name": "무료 소송대리 서비스(취약계층 한부모가족)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B27000100012",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001127&bnefType=all&svcId=B27000100012",
   "org": "대한법률구조공단",
   "primary_audience": "parent",
   "receiver_raw": "",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "무료-소송대리-서비스-취약계층-한부모가족",
   "source": "bojo24",
   "source_category_raw": "행정·안전 기타(상담) 개인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 한부모가족\n- 건강보험료 본인부담금 합산액이 기준중위소득 125% 이하인 자\n- 취약계층 한부모가족",
-  "view_count": 3039
+  "view_count": 3100
 }

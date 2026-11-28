@@ -40,7 +40,7 @@
   "benefit_raw": "○ 가입대상 : 개인소득 및 가구소득 기준을 모두 충족하는 19~34세 청년\n- (개인소득) 총급여 7,500만원(종합소득 6,300만원) 이하 또는 연매출 3억원 이하\n- (가구소득) 기준중위소득 200% 이하\n○ 정부기여금 지급 대상\n- (일반형) 연매출 3억원 이하 소상공인 또는 총급여 6,000만원 이하 소득자 중 가구 중위소득 200% 이하인 청년\n- (우대형) 연매출 1억원 이하 소상공인 또는 총급여 3,600만원 이하 중소기업 재직자 중 가구 중위소득 150% 이하인 청년\n※ 일반형 소득요건 충족자 중 중소기업 신규 취업자는 우대형으로 분류\n※ (기여금 미대상) 총급여 6,000~7,500만원 구간은 정부기여금은 지급되지 않으나 세제혜택 부여\n○ 적금이율 : 취급기관에서 자율적으로 결정\n○ 가입기간 및 납입한도 : 3년, 월 최대 50만원(자유적립식)\n○ 기여금 지급비율 : 월 납입금액의 6%(일반형), 월 납입금액의 12%(우대형)\n○ 세제혜택 : 이자소득 비과세 특례 부여",
   "category": "finance",
   "contact_raw": "서민금융콜센터/1397",
-  "content_hash": "sha256:a7d133cd86bf5ac554d4796d17283d8c",
+  "content_hash": "sha256:9535385771707d15a07b8740164432bd",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -50,11 +50,11 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-B55370100044",
   "is_mock": false,
-  "last_checked": "2026-08-20",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-20",
   "law_raw": "",
   "name": "청년미래적금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55370100044",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2182516&bnefType=all&svcId=B55370100044",
   "org": "서민금융진흥원",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -63,7 +63,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "청년미래적금",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금 개인",
@@ -71,5 +71,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 가입대상 : 개인소득 및 가구소득 기준을 모두 충족하는 19~34세 청년\n- (개인소득) 총급여 7,500만원(종합소득 6,300만원) 이하 또는 연매출 3억원 이하\n- (가구소득) 기준중위소득 200% 이하",
-  "view_count": 58224
+  "view_count": 89373
 }

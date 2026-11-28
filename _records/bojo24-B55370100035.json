@@ -33,7 +33,7 @@
   "benefit_raw": "고용보조금 최대 360만원 지금(채용일로부터 1년 동안 3개월 단위로 90만원씩 지급)",
   "category": "finance",
   "contact_raw": "서민금융콜센터/1397",
-  "content_hash": "sha256:f3e4fdda4e368953d90f49f2d5e8c971",
+  "content_hash": "sha256:32302dd4abf20aa04132d30eda7e41b1",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -52,11 +52,11 @@
   "how_to_raw": "방문신청\n직접입력",
   "id": "bojo24-B55370100035",
   "is_mock": false,
-  "last_checked": "2026-09-10",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-10",
   "law_raw": "",
   "name": "서민금융진흥원 고용보조금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55370100035",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2155016&bnefType=all&svcId=B55370100035",
   "org": "서민금융진흥원",
   "primary_audience": "employer",
   "receiver_raw": "",
@@ -65,7 +65,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "서민금융진흥원-고용보조금",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금 법인/시설/단체",
@@ -73,5 +73,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "① 신용회복지원자(서민금융진흥원, 신용회복위원회, 한국자산관리공사의 채무조정 약정자)를 직업안정 기관으로부터 알선 받아 1개월 이내 채용한 사업주 또는\n② 신용회복지원자를 채용하여 고용노동부 고용촉진장려금을 수령한 사업주",
-  "view_count": 584
+  "view_count": 681
 }

@@ -1,19 +1,19 @@
 {
   "_prose": {
     "eligibility": [
-      "초등학교",
-      "중학교",
-      "고등학교"
+      "직업계고 전기관련 학과에 재학 중인 고등학생",
+      "지원 대상 외에는 신청할 수 없습니다",
+      "선정 기준은 별도로 제시되지 않았습니다"
     ],
     "faq": [],
-    "note": "선정 기준이 별도로 없으므로 신청 후 별도의 심사 절차가 진행되지 않습니다.",
+    "note": "",
     "steps": [
       {
-        "body": "온라인 신청 페이지에서 교육요청 공문을 첨부하여 제출하면 됩니다. 신청은 상시 접수이며, 별도의 방문 절차는 없습니다.",
-        "title": "온라인 신청"
+        "body": "온라인 신청 페이지에서 신청서를 작성하고, 교육요청 공문을 첨부하여 제출합니다. 별도의 방문 신청은 필요하지 않습니다.",
+        "title": "신청 절차"
       }
     ],
-    "summary": "자유 학기제 교육 서비스는 초·중·고등학교 등 단위학교를 대상으로 직업체험 및 진로특강을 온라인으로 신청해 지원받을 수 있는 교육 서비스입니다."
+    "summary": "전기관련 직업계고 학생을 대상으로 현장 체험과 진로 특강을 제공하는 직업계고 취업역량 강화교육 프로그램입니다. 한국전기안전공사가 주관하고, 온라인으로 신청하며 교육요청 공문을 제출해야 합니다."
   },
   "apply_period": {
     "always": true,
@@ -26,9 +26,9 @@
     "student"
   ],
   "benefit_raw": "○ (직업체험) 학생이 직업 현장을 방문하여 직업인과의 대화, 견학 및 체험 지원\n\n○ (진로특강) 학교 내외의 진로교육 프로그램 진행",
-  "category": "care",
+  "category": "education",
   "contact_raw": "전기안전인재개발원/063-928-3222\n전기안전인재개발원/063-928-3250",
-  "content_hash": "sha256:582fb3a9003f19121814757f5761d21a",
+  "content_hash": "sha256:e4e0fc483ee5ba3a90253c8c5dfbeaf7",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -38,11 +38,11 @@
   "how_to_raw": "기타 온라인신청\n직접입력",
   "id": "bojo24-B55139800006",
   "is_mock": false,
-  "last_checked": "2026-09-25",
-  "last_updated": "2026-09-25",
+  "last_checked": "2026-11-28",
+  "last_updated": "2026-11-28",
   "law_raw": "",
-  "name": "자유 학기제 교육 서비스",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55139800006",
+  "name": "직업계고 취업역량 강화교육",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000884&bnefType=all&svcId=B55139800006",
   "org": "한국전기안전공사",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -51,13 +51,13 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
-  "slug": "자유-학기제-교육-서비스",
+  "revision": 1,
+  "slug": "직업계고-취업역량-강화교육",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 법인/시설/단체",
   "source_id": "B55139800006",
   "source_registered": "",
   "status": "active",
-  "target_raw": "초·중·고등학교 등 단위학교",
-  "view_count": 857
+  "target_raw": "직업계고 전기관련 학과 고등학생",
+  "view_count": 918
 }

@@ -32,7 +32,7 @@
   "benefit_raw": "체육시설 이용료 감면(50%)",
   "category": "living",
   "contact_raw": "체육공익사업팀/02-749-5314",
-  "content_hash": "sha256:e8148caea0d63dcce4fda2c33150c45b",
+  "content_hash": "sha256:49e6f889a58052fb29e3006c3bd7aad6",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -42,11 +42,11 @@
   "how_to_raw": "정부24온라인신청\n방문신청",
   "id": "bojo24-O00024000031",
   "is_mock": false,
-  "last_checked": "2026-09-13",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-13",
   "law_raw": "",
   "name": "체육시설 이용요금 감면(경로)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00024000031",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001502&bnefType=all&svcId=O00024000031",
   "org": "용산구시설관리공단",
   "primary_audience": "senior",
   "receiver_raw": "",
@@ -55,7 +55,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "체육시설-이용요금-감면-경로",
   "source": "bojo24",
   "source_category_raw": "문화·환경 시설이용 개인",
@@ -63,5 +63,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "노인복지법 제26조",
-  "view_count": 723
+  "view_count": 790
 }

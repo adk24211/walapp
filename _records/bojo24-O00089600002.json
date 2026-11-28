@@ -40,7 +40,7 @@
   "benefit_raw": "○ 순환형 코스\n- 울산시민 : 30% 할인(성인 및 소인 2,000원 할인)\n- 준고속열차 연계 승차권 소지자 : 20% 할인 (성인 1,200원 할인 및 소인 800원 할인)\n- 다자녀가정, 장애인 및 동반자 1인, 국가유공자, 경로자, 기초생활수급자 : 50% 할인(성인 3,000원 할인 및 소인 2,000원 할인)\n\n○ 테마형 코스\n- 울산시민 : 30% 할인(성인 3,000원 할인 및 소인 2,400원 할인)\n- 다자녀가정, 장애인 및 동반자 1인, 국가유공자, 경로자, 기초생활수급자 : 50% 할인(성인 5,000원 할인 및 소인 4,000원 할인)",
   "category": "living",
   "contact_raw": "관광마케팅팀/052-255-1826",
-  "content_hash": "sha256:6564bfc23e0efe090fe033d2b3493f05",
+  "content_hash": "sha256:481d7bce70793114bb7b2b33a122ee4b",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -50,11 +50,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-O00089600002",
   "is_mock": false,
-  "last_checked": "2026-09-24",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-24",
   "law_raw": "",
   "name": "시티투어 탑승권 감면",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00089600002",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000820&bnefType=all&svcId=O00089600002",
   "org": "재단법인울산문화관광재단",
   "primary_audience": "disabled",
   "receiver_raw": "",
@@ -63,7 +63,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "시티투어-탑승권-감면",
   "source": "bojo24",
   "source_category_raw": "문화·환경 현금(감면) 개인",
@@ -71,5 +71,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 울산시민\n\n○ 준고속열차 연계 승차권 소지자(KTX이음, ITX마음)\n\n○ 다자녀가정, 장애인 및 동반자 1인, 국가유공자, 경로자, 기초생활수급자",
-  "view_count": 3179
+  "view_count": 3247
 }

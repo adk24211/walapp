@@ -28,7 +28,7 @@
   "benefit_raw": "○ 일본의 독도 영유권 주장에 대응한 역사체험학습으로, 중고등학생들이 독도가 우리 영토인 근거를 알고 영토주권의식과 나라사랑정신 함양할 수 있도록 운영되는 교육 프로그램(연 15회)",
   "category": "education",
   "contact_raw": "교육부/041-560-0268",
-  "content_hash": "sha256:e9e524f8334472891d52a80c766d0f2b",
+  "content_hash": "sha256:55af1957c848a483a88edda11734c524",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -38,11 +38,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55100100001",
   "is_mock": false,
-  "last_checked": "2026-09-23",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-23",
   "law_raw": "",
   "name": "독립기념관 독도학교 중등 대상 교육",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55100100001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000910&bnefType=all&svcId=B55100100001",
   "org": "독립기념관",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -51,7 +51,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "독립기념관-독도학교-중등-대상-교육",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 법인/시설/단체",
@@ -59,5 +59,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "중 고등학교 학생(학급별 교육)",
-  "view_count": 994
+  "view_count": 1053
 }

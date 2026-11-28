@@ -35,7 +35,7 @@
   "benefit_raw": "○ 사회·경제적 약자에 대한 법률구조서비스 제공으로 법률복지증진\n\n○ 무료 법률상담\n\n○ 무료 소송대리",
   "category": "living",
   "contact_raw": "(국번없이)132 법률상담 콜센타/132",
-  "content_hash": "sha256:4d694e5c287624f95103c4be799f757c",
+  "content_hash": "sha256:136bd6cb835d08a00a5a95f832e670f0",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -45,11 +45,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
   "id": "bojo24-B27000100029",
   "is_mock": false,
-  "last_checked": "2026-08-26",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-26",
   "law_raw": "",
   "name": "무료 소송대리 서비스(청년미취업자 및 대학생)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B27000100029",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001196&bnefType=all&svcId=B27000100029",
   "org": "대한법률구조공단",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -58,7 +58,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "무료-소송대리-서비스-청년미취업자-및-대학생",
   "source": "bojo24",
   "source_category_raw": "행정·안전 기타(상담) 개인",
@@ -66,5 +66,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 청년미취업자 및 대학생\n- 건강보험료 본인부담금 합산액이 기준중위소득 125% 이하인 자",
-  "view_count": 4410
+  "view_count": 4716
 }

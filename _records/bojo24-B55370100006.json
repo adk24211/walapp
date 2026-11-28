@@ -30,7 +30,7 @@
   "benefit_raw": "○ 정책서민금융상품 이용자 등 금융취약계층 자영업자에게 전문 컨설턴트의 경영진단과 사업 솔루션을 제공하여 경영 개선을 지원\n- 자영업 업종과 분야별로 맞춤 컨설턴트가 방문 경영진단 후 고객에게 점검 결과와 해결방안 등을 보고서와 함께 제공",
   "category": "jobs",
   "contact_raw": "서민금융통합콜센터/1397",
-  "content_hash": "sha256:53535bcfc58ec6734c3f17130dc5921c",
+  "content_hash": "sha256:27517ea3e179d4cb92169525f1002a5d",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -40,11 +40,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-B55370100006",
   "is_mock": false,
-  "last_checked": "2026-10-22",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-22",
   "law_raw": "",
   "name": "자영업 컨설팅 서비스",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55370100006",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000784&bnefType=all&svcId=B55370100006",
   "org": "서민금융진흥원",
   "primary_audience": "business",
   "receiver_raw": "",
@@ -53,7 +53,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "자영업-컨설팅-서비스",
   "source": "bojo24",
   "source_category_raw": "고용·창업 기타(상담) 소상공인",
@@ -61,5 +61,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 정책서민금융상품 이용자(미소금융, 햇살론 등)\n\n○ 정책서민금융 이용 자격요건을 갖춘 저신용 영세자영업자(개인신용평점 하위 100분의 20 및 연간소득 4,500만원 이하/연간소득 3,500만원 이하 영세자영업자)\n※ 단, 소상공인 정책 자금 지원 제외 업종을 영위하는 소상공인은 제외",
-  "view_count": 3083
+  "view_count": 3145
 }

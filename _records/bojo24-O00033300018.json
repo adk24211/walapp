@@ -34,7 +34,7 @@
   "benefit_raw": "천안시민, 장애인, 다자녀가정, 기초생활수급자, 다문화가족, 국가보훈대상자 등 감면 혜택",
   "category": "living",
   "contact_raw": "공원운영부 자연휴양팀/041-529-5108",
-  "content_hash": "sha256:bd211c0a02631413d3c5958e1f1550a0",
+  "content_hash": "sha256:548487530eb70c3115e3a40335871cce",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,11 +44,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-O00033300018",
   "is_mock": false,
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-16",
   "law_raw": "",
   "name": "문화시설 이용요금 감면(자연휴양림)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00033300018",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001922&bnefType=all&svcId=O00033300018",
   "org": "천안도시공사",
   "primary_audience": "disabled",
   "receiver_raw": "",
@@ -57,7 +57,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "문화시설-이용요금-감면-자연휴양림",
   "source": "bojo24",
   "source_category_raw": "문화·환경 시설이용 개인",
@@ -65,5 +65,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "천안시민, 장애인, 다자녀가정, 기초생활수급자, 다문화가족, 국가보훈대상자 등",
-  "view_count": 2617
+  "view_count": 2662
 }

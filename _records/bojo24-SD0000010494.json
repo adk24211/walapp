@@ -34,7 +34,7 @@
   "benefit_raw": "○ 교육지원인력을 통해 장애대학생에게 이동, 편의 등 대학 내 생활지원 및 수어통역, 속기 등 학습지원",
   "category": "education",
   "contact_raw": "교육부 평생직업교육기획과/044-203-6379",
-  "content_hash": "sha256:a76ee234418426d8cb063d83067014ee",
+  "content_hash": "sha256:ff146303c386fa3bcf8456536a85f847",
   "criteria_raw": "○ 대학에 재학 중인 장애대학(원)생\n\n○ 장애정도가 심하지 않은 장애학생 또는 기준 외 학생은 지원 필요가 있다고 판단되는 경우 대학별 특별지원위원회의 사전심의를 거쳐 지원 가능",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,11 +44,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SD0000010494",
   "is_mock": false,
-  "last_checked": "2026-09-01",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-01",
   "law_raw": "",
   "name": "대학의 장애학생지원센터 운영지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000010494",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=718938&bnefType=all&svcId=SD0000010494",
   "org": "교육부",
   "primary_audience": "youth",
   "receiver_raw": "대학내장애학생지원센터 또는 장애학생지원부서, 사업 전담기관",
@@ -57,7 +57,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "대학의-장애학생지원센터-운영지원",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 개인",
@@ -65,5 +65,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 대학에 재학 중인 장애대학(원)생",
-  "view_count": 3620
+  "view_count": 3728
 }

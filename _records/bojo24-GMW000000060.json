@@ -33,7 +33,7 @@
   "benefit_raw": "노인복지 민간단체에 공모 심사 후 국고보조금 지원",
   "category": "living",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:646a744bb9a32836428c3af3455ab820",
+  "content_hash": "sha256:31ea0dde2e7dd9e6618ccaced1184e30",
   "criteria_raw": "민법상 비영리법인, 비영리민간단체 등 행정기관 허가 및 등록단체로 노인복지관련 전국사업 수행이 가능한 단체",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-GMW000000060",
   "is_mock": false,
-  "last_checked": "2026-08-26",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-26",
   "law_raw": "",
   "name": "노인복지 민간단체 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GMW000000060",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=173719&bnefType=all&svcId=GMW000000060",
   "org": "보건복지부",
   "primary_audience": "senior",
   "receiver_raw": "",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "노인복지-민간단체-지원",
   "source": "bojo24",
   "source_category_raw": "행정·안전 현금 법인/시설/단체",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "세대 간 이해증진 및 갈등 완화, 노인권익 향상 및 인식개선, 건전한 장례문화 진흥, 독거·학대피해노인 보호 등 돌봄체계 지원, 노인건강관리 예방교육 프로그램 개발·지원, 노인여가활성화, 효행장려 등",
-  "view_count": 3761
+  "view_count": 3908
 }

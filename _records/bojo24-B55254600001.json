@@ -39,7 +39,7 @@
   "benefit_raw": "○ 경제적, 사회적으로 어려움을 겪고 있는 국민(창작자)의 저작권 보호 및 거래의 안전 도모\n\n○ 저작권등록 수수료 감면(1인당 최대 연 10건)\n- 면제대상\n(1) 「국민기초생활 보장법」 제7조제1항제1호부터 제4호까지에 따른 급여의 수급자\n(2) 「국가유공자 등 예우 및 지원에 관한 법률」 제4조제1항에 따른 국가유공자\n(3) 「5ㆍ18민주유공자예우 및 단체설립에 관한 법률」 제4조에 따른 5ㆍ18민주유공자\n(4) 「장애인복지법」제32조에 따라 등록된 장애인",
   "category": "living",
   "contact_raw": "등록임치팀/1800-5455",
-  "content_hash": "sha256:6d4a965d4db2d1d9290d80e05b4e642d",
+  "content_hash": "sha256:1cd3a880c07edded1281d8a21184bb60",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -49,11 +49,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
   "id": "bojo24-B55254600001",
   "is_mock": false,
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-14",
   "law_raw": "",
   "name": "저작권등록 수수료 감면",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55254600001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001028&bnefType=all&svcId=B55254600001",
   "org": "한국저작권위원회",
   "primary_audience": "disabled",
   "receiver_raw": "",
@@ -62,7 +62,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "저작권등록-수수료-감면",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금(감면) 개인",
@@ -70,5 +70,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "(1) 「국민기초생활 보장법」 제7조제1항제1호부터 제4호까지에 따른 급여의 수급자\n(2) 「국가유공자 등 예우 및 지원에 관한 법률」 제4조제1항에 따른 국가유공자\n(3) 「5ㆍ18민주유공자예우 및 단체설립에 관한 법률」 제4조에 따른 5ㆍ18민주유공자\n(4) 「장애인복지법」제32조에 따라 등록된 장애인",
-  "view_count": 2919
+  "view_count": 2997
 }

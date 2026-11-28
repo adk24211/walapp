@@ -28,7 +28,7 @@
   "benefit_raw": "에너지 효율향상 및 온실가스 감축을 위해 고객이 루츠블로어, 스크루블로어, 링블로어를 고효율 터보압축기로 교체 시 지원금 지급",
   "category": "living",
   "contact_raw": "수요효율처/123",
-  "content_hash": "sha256:77a34d789594d64dfb1a87611281fa33",
+  "content_hash": "sha256:1e3f9a467d4f1ba776cac5b86b0e61fc",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -38,11 +38,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
   "id": "bojo24-B41000200005",
   "is_mock": false,
-  "last_checked": "2026-10-22",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-22",
   "law_raw": "",
   "name": "고효율 터보압축기 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B41000200005",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001145&bnefType=all&svcId=B41000200005",
   "org": "한국전력공사",
   "primary_audience": "business",
   "receiver_raw": "",
@@ -51,7 +51,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "고효율-터보압축기-지원",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금 개인\n소상공인\n법인/시설/단체",
@@ -59,5 +59,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 기존 루츠블로어, 스크루블로어를 고효율 터보압축기로 교체하는 고객\n- 한국에너지공단에 등록된 고효율 터보압축기",
-  "view_count": 2646
+  "view_count": 2694
 }

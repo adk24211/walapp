@@ -26,7 +26,7 @@
   "benefit_raw": "○ 자신에 대한 흥미 특성에 대한 이해를 돕고 개인의 특성에 보다 적합한 진로분야를 선택할 수 있도록 지원\n- 좋아하는 활동, 관심있는 직업, 선호하는 분야를 탐색하여 자신의 직업흥미유형을 파악하고, 직업흥미유형에 적합한 직업을 탐색할 수 있도록 검사 결과 제공",
   "category": "jobs",
   "contact_raw": "한국고용정보원/1577-7114",
-  "content_hash": "sha256:7666e857a5cf056b238cf9b30298c81c",
+  "content_hash": "sha256:80cd50ab534346f4fc90626d96b4c69a",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -36,11 +36,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55190400002",
   "is_mock": false,
-  "last_checked": "2026-09-06",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-06",
   "law_raw": "",
   "name": "준고령자 직업선호도검사 서비스",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55190400002",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001463&bnefType=all&svcId=B55190400002",
   "org": "한국고용정보원",
   "primary_audience": "",
   "receiver_raw": "",
@@ -49,7 +49,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "준고령자-직업선호도검사-서비스",
   "source": "bojo24",
   "source_category_raw": "고용·창업 서비스(일자리) 개인",
@@ -57,5 +57,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "만 50세 이상 준고령자",
-  "view_count": 3630
+  "view_count": 3784
 }

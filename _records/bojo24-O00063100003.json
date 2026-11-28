@@ -45,7 +45,7 @@
   "benefit_raw": "○ 재단법인 진주시복지재단에서는 경제적 어려움으로 인하여 운전면허 취득 기회가 부족한 취업준비생 및 구직자에게 운전면허 취득에 따른 학원비를 지원합니다.\n\n○ 지원대상 : 진주시 거주하는 기초수급자(주거,생계, 의료 등 모두 해당자) 등, 취업희망자 대학생(재학생 및 휴학생 55세 이하 일반구직자 중 운전면허 취득 의지가 높은 자) 단, 운전면허 신규 취득 대상자에 한함, 1인 1회 지원가능함\n\n○ 지원내용 : 운전면허 취득 후 운전면허 학원비를 지원한도 금액 범위내 지원\n\n○ 지원기간 : 2026년 1월 ~ 11월 (11개월) ※예산 소진시 조기종료될 수 있음\n\n○ 지원절차 : 대상자(신청)-읍면동(대상여부확인 및 접수)-재단(제출서류 확인후 학원통보)-학원(교육 및 금액 청구)-재단(사업비 지급)\n\n○ 구비서류\n- 신청서 1부(신청기관 비치)\n- 서약서 1부 (신청기관 비치)\n- 개인정보동의서 1부 (신청기관 비치)\n- 학원등록 확인서류(등록증 및 영수증 등) 1부\n- 합격 후 합격증 및 운전면허증 사본 1부\n\n○ 문의처 : 진주시복지재단 (756-7560), 주소지 읍면동사무소 및 행정복지센터",
   "category": "jobs",
   "contact_raw": "복지사업팀/055-756-7560",
-  "content_hash": "sha256:103ec95d8e475150028355fdc9ea3a5b",
+  "content_hash": "sha256:14afa49f842748791bb83b0d92504a58",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -55,11 +55,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-O00063100003",
   "is_mock": false,
-  "last_checked": "2026-10-09",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-09",
   "law_raw": "",
   "name": "저소득층 운전면허 취득비 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00063100003",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000198&bnefType=all&svcId=O00063100003",
   "org": "재단법인진주시복지재단",
   "primary_audience": "lowincome",
   "receiver_raw": "",
@@ -68,7 +68,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 12,
+  "revision": 13,
   "slug": "저소득층-운전면허-취득비-지원",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금 개인",
@@ -76,5 +76,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "국민기초생활수급자 (주거, 생계, 의료 등 모두 해당자)",
-  "view_count": 9816
+  "view_count": 14223
 }

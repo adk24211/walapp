@@ -36,7 +36,7 @@
   "benefit_raw": "○ 전라남도에 거주 중인 만 18세 ~ 39세 청년 대상 인건비 지원 (최대 24개월)\n\n○ 인건비\n- 청년근로자 1인 160만원~190만원 지원\n\n○ 기업 매칭 및 교육 네트워킹\n- 멘토링 지원(멘토링 비용 1인 20만원, 최대 2개월)\n- 자율교육비 지원(교육비 최대 30만원 지원)\n- 역량강화 직무교육운영(수요조사 후 전공반 개설)\n- 워크숍 진행(네트워킹 지원)\n\n※ 지역주도형 청년일자리 사업 운영지침에 의거 지원대상 및 지원금액 변동 가능",
   "category": "jobs",
   "contact_raw": "일자리지원센터/061-331-9325\n일자리지원센터/070-4169-1654\n일자리지원센터/070-4169-1653",
-  "content_hash": "sha256:3a98db3352980603d30ff92cbe00209e",
+  "content_hash": "sha256:262af2190a283ea6084fba2b85553437",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -52,11 +52,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-O00094000002",
   "is_mock": false,
-  "last_checked": "2026-09-05",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-05",
   "law_raw": "",
   "name": "청년 일자리 매칭 및 인건비 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00094000002",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000764&bnefType=all&svcId=O00094000002",
   "org": "(재)녹색에너지연구원",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -65,7 +65,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "청년-일자리-매칭-및-인건비-지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 기타(교육)\n서비스(일자리) 개인",
@@ -73,5 +73,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "전라남도에 거주 중인 만 18세 ~ 39세 청년(거주예정자 가능)",
-  "view_count": 3080
+  "view_count": 3292
 }

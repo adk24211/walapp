@@ -35,7 +35,7 @@
   "benefit_raw": "□ 전공탐색유형\nㅇ 지원내용 : 대학 예술체육계열 학과(부) 1학년 신입생 장학금 지원\n- (Ⅰ유형) 등록금 전액, 생활비 학기당 250만원\n- (Ⅱ유형) 등록금 전액\n※ 기초생활수급자 생활비 250만원 추가 지원(Ⅰ·Ⅱ유형 공통)\nㅇ 지원기간 : 대학 재학 중 최대 4년(정규학기 내 최대 8학기)\n\n□ 전공확립유형\nㅇ 지원내용 : 대학 예술체육계열 학과(부) 3학년 재학생 장학금 지원\n- (Ⅰ유형) 등록금 전액, 생활비 학기당 250만원\n- (Ⅱ유형) 등록금 전액\n※ 기초생활수급자 생활비 250만원 추가 지원(Ⅰ·Ⅱ유형 공통)\nㅇ 지원기간 : 대학 재학 중 최대 2년(정규학기 내 최대 4학기)",
   "category": "education",
   "contact_raw": "한국장학재단 상담센터/1599-2290",
-  "content_hash": "sha256:fc11ceb7965962f74877f4cf99d50e48",
+  "content_hash": "sha256:a8ae1e5d814d46428adce3b3c7aa92fa",
   "criteria_raw": "ㅇ 선발방법 : 대학별 배정인원 범위 내에서 선발기준에 따라 대학별 자체 선발\nㅇ 선발기준 : 학업성적 및 학생역량, 경제적 수준 등을 고려\n- 전공탐색유형(4년 지원) : 경제적 수준, 학업성적, 전공분야 우수성, 성장가능성 등을 평가\n- 전공확립유형(2년 지원) : 기본자격 요건(성적 및 이수학점)* 충족 + 학업성적, 경제적 수준, 학생역량 등을 평가\n* 직전학기까지의 총 평균성적 백분위 90점 이상 또는 평점 3.6점 이상/4.5점 만점(3.4점 이상/4.3점 만점), 취득 이수학점이 소속대학 졸업이수학점의 40% 이상",
   "deferred_detail": false,
   "documents_raw": [
@@ -48,11 +48,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55252900018",
   "is_mock": false,
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-14",
   "law_raw": "",
   "name": "예술체육비전장학금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252900018",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999057&bnefType=all&svcId=B55252900018",
   "org": "교육부",
   "primary_audience": "lowincome",
   "receiver_raw": "한국장학재단",
@@ -61,7 +61,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "예술체육비전장학금",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -69,5 +69,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "ㅇ 대한민국 국적 소지자로서 사업 참여대학의 예술 및 체육계열 학과(부) 재학생 중 선발기준을 충족한 우수학생",
-  "view_count": 7410
+  "view_count": 7491
 }

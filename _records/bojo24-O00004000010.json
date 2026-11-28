@@ -34,7 +34,7 @@
   "benefit_raw": "○ 킨텍스 캠핑장 이용료 감면\n- 기초생활보장 수급자 50% 감면\n- 한부모가족 50% 감면\n- 고양시민 사용료 30% 감면\n- 장애인 50% 감면\n- 보훈대상자 사용료 50% 감면\n- 고양시 초·중·고등학생의 수련활동 참여자 50% 감면",
   "category": "living",
   "contact_raw": "킨텍스캠핑장/031-913-1700(203)",
-  "content_hash": "sha256:bc055752e2c4315d0958a664b75e5cd2",
+  "content_hash": "sha256:8d106816ece966860a4f8e25dc13c81e",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,11 +44,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-O00004000010",
   "is_mock": false,
-  "last_checked": "2026-08-31",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-31",
   "law_raw": "",
   "name": "킨텍스 캠핑장 이용요금 감면",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00004000010",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002256&bnefType=all&svcId=O00004000010",
   "org": "고양도시관리공사",
   "primary_audience": "disabled",
   "receiver_raw": "",
@@ -57,7 +57,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "킨텍스-캠핑장-이용요금-감면",
   "source": "bojo24",
   "source_category_raw": "문화·환경 시설이용 개인",
@@ -65,5 +65,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 국민기초생활 보장법 제2조에 따른 수급자\n\n○ 한부모가족 지원법 제4조에 따른 한부모가족\n\n○ 주민등록상 고양시 거주자\n\n○ 장애인복지법에 따른 장애인\n\n○ 보훈대상자\n\n○ 고양시 초·중·고등학생",
-  "view_count": 4355
+  "view_count": 4476
 }

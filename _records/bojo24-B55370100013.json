@@ -39,7 +39,7 @@
   "benefit_raw": "○ 저소득‧저신용 계층이 사회 경제적으로 자립할 수 있도록 창업‧운영‧생계자금 등을 무담보‧무보증으로 대출 지원\n- (대출한도) 최대 5백만원\n- (대출금리) 4.5% 이내\n※ 자세한 사항은 가까운 미소금융지점에 문의 및 신청",
   "category": "finance",
   "contact_raw": "서민금융콜센터/1397",
-  "content_hash": "sha256:4bbbf06f29e86de2aa36356e11e0cbd3",
+  "content_hash": "sha256:23b9582f019f33e7d7f007bfb809888e",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -49,11 +49,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-B55370100013",
   "is_mock": false,
-  "last_checked": "2026-08-25",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-25",
   "law_raw": "",
   "name": "미소금융 금융취약계층 생계자금 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55370100013",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000864&bnefType=all&svcId=B55370100013",
   "org": "서민금융진흥원",
   "primary_audience": "lowincome",
   "receiver_raw": "",
@@ -62,7 +62,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "미소금융-금융취약계층-생계자금-지원",
   "source": "bojo24",
   "source_category_raw": "주거·자립 현금(융자) 개인",
@@ -70,5 +70,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 아래의 한가지 기준을 충족하는 동시에 아래의 추가요건 중 하나에 충족하는 자\n- 차상위계층 이하인자\n- 개인신용평점이 하위 100분의 20에 해당하는 자\n- 근로장려금 신청자격 요건에 해당하는 자\n- 개인신용평점이 하위 100분의 50에 해당하면서 연 소득 3,500만원 이하인 자\n\n○ 추가요건\n1. 불법사금융예방대출을 완제한 자\n2. 미소금융(창업·운영·시설)을 12회차 이상 성실상환한 자\n3. 사회적 배려 대상자*\n4. 특별 취약계층**\n(*한부모가족 가구, 조손가족 가구, 다문화가족 가구, 북한이탈주민, 등록 장애인, 국민기초생활수급자, 차상위계층, 자활근로자, 근로장려금 신청자격 요건 대상자)\n(**특별재난지역 거주자, 전세사기피해자, 불법사금융피해자, 보이스피싱 피해자)",
-  "view_count": 28703
+  "view_count": 30935
 }

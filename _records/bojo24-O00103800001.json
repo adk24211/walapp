@@ -36,7 +36,7 @@
   "benefit_raw": "○ 일반장학생 : 대학생 대상으로 년 2회 각 150만원\n\n○ 특별-생활 : 부모합계 건강보험료 10만원 미만의 대학생 대상으로 연1회 100만원\n\n○ 특별-지역대학입학 : 지역 고등학교 졸업하고 지역 대학교 입학한 학생 대상 1회 200만원\n\n○ 특별-지역고교입학 : 지역 중학교 졸업 후 지역 고등학교 입학한 석차백분율 30%이하의 학생 대상으로 50만원\n\n○ 특별-예체기능상업 : 완주지역 중고등학생 또는 중고등학교 출신의 학생이 전국 또는 국제대회에서 수상한 학생 대상으로 장학금 지급(금액 100만원)",
   "category": "education",
   "contact_raw": "사무국/063-263-1101\n사무국/063-263-1104\n주무부서/0632902278",
-  "content_hash": "sha256:846825606fb1048c1ff4f0feb8b16286",
+  "content_hash": "sha256:cbef437a8152ecc5e7c11722c2d01855",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -52,11 +52,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-O00103800001",
   "is_mock": false,
-  "last_checked": "2026-09-01",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-01",
   "law_raw": "",
   "name": "완주군인재육성재단 애향장학금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00103800001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001285&bnefType=all&svcId=O00103800001",
   "org": "재단법인완주군인재육성재단",
   "primary_audience": "student",
   "receiver_raw": "",
@@ -65,7 +65,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "완주군인재육성재단-애향장학금",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -73,5 +73,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 일반장학생 : 2~4년제 대학생\n\n○ 특별-생활 : 부모합계 건강보험료 10만원 미만의 대학생\n\n○ 특별-지역대학입학 : 지역 고등학교 졸업, 지역 대학교 입학한 대학생\n\n○ 특별-지역고교입학(재학) : 지역 중학교 졸업 후 지역 고등학교 입학한 학생\n\n○ 특별-예체기능상업 : 완주지역 중고등학생 또는 중고등학교 출신의 학생",
-  "view_count": 1196
+  "view_count": 1316
 }

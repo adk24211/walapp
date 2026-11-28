@@ -33,7 +33,7 @@
   "benefit_raw": "○ 역량강화교육 프로그램, 상담·사례관리, 자조모임\n- (상담·사례관리) 상주하는 전문 상담가에 의해 운영\n* 종합상담, 동료상담, 생활법률상담, 인권상담, 성폭력상담, 사례관리\n\n- (역량강화교육 사업 프로그램) 교육, 건강, 사회, 문화, 경제 영역\n* 기초교육에서 사회참여 역량강화교육을 포괄하는 다양한 프로그램 구성\n\n- (자조모임) 회칙에 따라 이용 여성장애인의 회비를 징수하여 운영되는 모임\n* 등산모임, 문화탐방모임, 여행모임, 사회봉사모임\n\n- (지역사회 연계) 사업수행기관 및 지역사회 관련 기관과의 연계",
   "category": "education",
   "contact_raw": "해당지역 시군구청/126",
-  "content_hash": "sha256:87f266c8fd7be484e1890bbd19c18208",
+  "content_hash": "sha256:7674e821622d5651154dbd391506cf83",
   "criteria_raw": "○ 장애인복지법 제32조(장애인 등록)에 의한 등록 여성장애인",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-GMW000000120",
   "is_mock": false,
-  "last_checked": "2026-09-09",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-09",
   "law_raw": "",
   "name": "여성장애인 교육지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/GMW000000120",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=717972&bnefType=all&svcId=GMW000000120",
   "org": "보건복지부",
   "primary_audience": "disabled",
   "receiver_raw": "보건복지부콜센터",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "여성장애인-교육지원",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 개인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 등록 여성장애인",
-  "view_count": 15738
+  "view_count": 15843
 }

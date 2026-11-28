@@ -29,7 +29,7 @@
   "benefit_raw": "관내 학생(고등학생,대학생) 장학금 지원",
   "category": "education",
   "contact_raw": "교육정책과/053-951-8008",
-  "content_hash": "sha256:f1cae28a698f1a833b9ed6d9167ffe43",
+  "content_hash": "sha256:4e57ef27d30449d4cbe824976699d771",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -39,11 +39,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-O00075700001",
   "is_mock": false,
-  "last_checked": "2026-10-03",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-03",
   "law_raw": "",
   "name": "(재)대구동구교육재단 장학금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00075700001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001316&bnefType=all&svcId=O00075700001",
   "org": "(재)대구동구교육재단",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -52,7 +52,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "재-대구동구교육재단-장학금",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -60,5 +60,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "고등학생, 대학생",
-  "view_count": 1716
+  "view_count": 1766
 }

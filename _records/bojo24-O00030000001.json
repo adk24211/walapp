@@ -1,0 +1,65 @@
+{
+  "_prose": {
+    "eligibility": [
+      "다자녀가정 우대증 소지자",
+      "장애인복지카드 소지자",
+      "장기기증자",
+      "국가보훈대상자"
+    ],
+    "faq": [],
+    "note": "국가유공자 차량은 최초 3시간 전액 감면되고, 이후에는 50% 감면됩니다.",
+    "steps": [
+      {
+        "body": "상시 접수이며, 별도의 신청 방법이 제시되지 않았습니다.",
+        "title": "신청 안내"
+      }
+    ],
+    "summary": "전주시시설관리공단이 제공하는 생활·문화 분야 제도로, 다자녀가정 우대증·장애인복지카드·장기기증자·국가보훈대상자 등에게 공영·부설 주차장의 주차요금을 50% 감면해 주는 제도입니다."
+  },
+  "apply_period": {
+    "always": true,
+    "end": "",
+    "raw": "상시신청",
+    "start": ""
+  },
+  "apply_url": "",
+  "audiences": [
+    "parent",
+    "disabled"
+  ],
+  "benefit_raw": "○ 주차요금 감면(50%)\n\n- 자동차관리법 시행규칙 제2조에 따른 경영자동차\n\n- 장애인복지법 제32조에 따른 장애인등록증을 소지한 장애인이 탑승하고 장애인사용자동차 등 표지를\n부착한 차량\n\n- 전주시 저출생 대책 및 출산장려 지원 조례 시행규칙 제8조에 따라 전주시에 주민등록이 되어 있고 출산\n또는 입양으로 자녀가 3명 이상이며, 다자녀가정 우대증을 제시한 차량\n\n- 대기환경보전법에 따라 저공해자동차 표지를 부착한 차량\n\n- 환경친화적 자동차의 개발 및 보급 촉진에 관한 법률 제2조 제2호에 따른 환경친화적 자동차\n\n- 전주시 장기기증등록 장려에 관한 조례에 따른 장기기증자가 탑승하고 기증확인증을 제시한 차량]\n\n- 국가유공자 탑승하여 국가유공자 증서를 제한 차량은 100% 감면이 되나 3시간 이후는 50% 적용",
+  "category": "living",
+  "contact_raw": "전주시시설관리공단 주차운영부/063-239-2612",
+  "content_hash": "sha256:aa897909308e475ecac7f2f9789be9e3",
+  "criteria_raw": "",
+  "deferred_detail": false,
+  "documents_raw": [
+    "해당없음"
+  ],
+  "first_published": "2026-11-28",
+  "how_to_raw": "직접입력",
+  "id": "bojo24-O00030000001",
+  "is_mock": false,
+  "last_checked": "2026-11-28",
+  "last_updated": "2026-11-28",
+  "law_raw": "",
+  "name": "공영 및 부설 주차장 주차요금 감면",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2100904&bnefType=all&svcId=O00030000001",
+  "org": "전주시시설관리공단",
+  "primary_audience": "parent",
+  "receiver_raw": "",
+  "region": {
+    "scope": "national",
+    "sido": null,
+    "sigungu": null
+  },
+  "revision": 0,
+  "slug": "공영-및-부설-주차장-주차요금-감면",
+  "source": "bojo24",
+  "source_category_raw": "생활안정 현금(감면) 개인",
+  "source_id": "O00030000001",
+  "source_registered": "",
+  "status": "active",
+  "target_raw": "○ 다자녀가정 우대증 소지자\n\n○ 장애인복지카드소지자\n\n○ 장기기증자\n\n○ 국가보훈대상자",
+  "view_count": 1530
+}

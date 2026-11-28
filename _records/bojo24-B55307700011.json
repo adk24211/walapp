@@ -23,6 +23,7 @@
   "apply_period": {
     "always": false,
     "end": "",
+    "raw": "소상공인정책자금 사이트 별도 안내",
     "start": ""
   },
   "apply_url": "https://ols.semas.or.kr",
@@ -33,7 +34,7 @@
   "benefit_raw": "□ 융자범위\n◦ 운전자금 : 제품생산 비용 및 기업경영에 필요한 자금\n\n□ 융자조건\n◦ 대출금리(변동금리) : 정책자금 기준금리\n◦ 대출기간 : 5년 이내(거치기간 2년 포함)\n◦ 대출한도 : 7천만원(청년고용연계자금 대출잔액 합산)\n◦ 융자방식 : 금융기관을 통한 대리대출",
   "category": "jobs",
   "contact_raw": "중소기업통합콜센터/1357\n소상공인시장진흥공단 통합콜센터/1533-0100",
-  "content_hash": "sha256:b22d29ea766257dd62ad9360871c9d21",
+  "content_hash": "sha256:58f4cdb4697a7054ce6238080a41d268",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +44,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55307700011",
   "is_mock": false,
-  "last_checked": "2026-08-17",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-17",
   "law_raw": "",
   "name": "청년고용연계자금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55307700011",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001073&bnefType=all&svcId=B55307700011",
   "org": "소상공인시장진흥공단",
   "primary_audience": "business",
   "receiver_raw": "",
@@ -56,13 +57,13 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "청년고용연계자금",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금(융자) 소상공인",
   "source_id": "B55307700011",
-  "source_registered": "2022-07-15",
+  "source_registered": "",
   "status": "active",
   "target_raw": "다음 각 호 중 1개 이상의 요건을 충족하는 소상공인\n① 업력 3년 미만의 청년 소상공인(만39세 이하)\n② 상시근로자 중 과반수 이상이 청년 근로자(만39세 이하)인 소상공인\n③ 최근 1년 이내 청년 근로자 1인 이상 고용하고 유지 중인 소상공인",
-  "view_count": 17568
+  "view_count": 20015
 }

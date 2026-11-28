@@ -30,7 +30,7 @@
   "benefit_raw": "지원금액 : 1인 2회, 5만원 이내 실비 지원\n지원자격증 : 국가기술자격 및 국가전문자격 시험\n※ 국가자격증 세부종목은 Q-Net(www.q-net.go.kr) 사이트를 통해 확인 가능\n접수기간 : 공고일 ~ 예산 소진 시까지",
   "category": "jobs",
   "contact_raw": "전남일자리종합센터(동부)/061-750-7730\n전남일자리종합센터(서부)/061-287-1142",
-  "content_hash": "sha256:65cff366e4eb6eaf69baa3c924c47fa1",
+  "content_hash": "sha256:5056af1422042902fd77b328bbbc8460",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -45,11 +45,11 @@
   "how_to_raw": "방문신청\n직접입력",
   "id": "bojo24-O00168400001",
   "is_mock": false,
-  "last_checked": "2026-09-10",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-10",
   "law_raw": "",
   "name": "전남 구직자 자격증 취득지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00168400001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2110242&bnefType=all&svcId=O00168400001",
   "org": "재단법인전남광주통합특별시중소기업일자리경제진흥원",
   "primary_audience": "jobseeker",
   "receiver_raw": "",
@@ -58,7 +58,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "전남-구직자-자격증-취득지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 서비스(일자리)\n현금 개인",
@@ -66,5 +66,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "-필수요건\n신청일 기준 전라남도 거주자\n공고일 기준 만 18세 이상 미취업자\n워크넷 유효 구직신청자\n\n-제외대상\n재직 중인 자\n시험 접수 후 미응시자\n국민취업지원제도, 실업급여, 기타 구직활동수당 등 타 사업 참여자\n제출서류 미충족자, 사업의 운영목적에 부합되지 않는 자 등",
-  "view_count": 3324
+  "view_count": 3452
 }

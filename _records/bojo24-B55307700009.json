@@ -33,7 +33,7 @@
   "benefit_raw": "예비창업자의 성공적인 창업을 위한 보육공간 및 창업프로그램, 후속연계지원, 사업화자금 등 패키지 지원",
   "category": "jobs",
   "contact_raw": "로컬창업육성실 모두의창업TF/042-363-7738",
-  "content_hash": "sha256:daae0033401ba93b0015698930172256",
+  "content_hash": "sha256:2f0dc4f236c05004cadab3448e7a5130",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55307700009",
   "is_mock": false,
-  "last_checked": "2026-08-24",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-24",
   "law_raw": "",
   "name": "모두의창업(로컬트랙)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55307700009",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001070&bnefType=all&svcId=B55307700009",
   "org": "소상공인시장진흥공단",
   "primary_audience": "business",
   "receiver_raw": "",
@@ -56,7 +56,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "모두의창업-로컬트랙",
   "source": "bojo24",
   "source_category_raw": "고용·창업 기타(교육) 소상공인",
@@ -64,5 +64,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "예비창업자",
-  "view_count": 13487
+  "view_count": 14425
 }

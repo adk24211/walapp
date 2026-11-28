@@ -34,7 +34,7 @@
   "benefit_raw": "○ 일반형 일자리\n- 전일제 : 월 2,156,880원(주 40시간 근무)\n- 시간제 : 월 1,078,440원(주 20시간 근무)\n\n○ 복지일자리\n- 복지일자리 : 월577,920원(월 56시간 근무)\n\n○특화형 일자리\n- 시각장애인안마사파견 : 월 1,351,920원(주25시간 근무)\n- 발달장애인요양보호사보조 : 월 1,351,920원(주25시간 근무)",
   "category": "jobs",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:0738c3b1fb8dc23b12eafb03532c0e95",
+  "content_hash": "sha256:722e98c4230eb09cbeba2847287b4a6d",
   "criteria_raw": "○ 18세 이상 미취업 등록장애인",
   "deferred_detail": false,
   "documents_raw": [
@@ -52,11 +52,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SPE000000090",
   "is_mock": false,
-  "last_checked": "2026-09-12",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-12",
   "law_raw": "",
   "name": "장애인일자리지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SPE000000090",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=756534&bnefType=all&svcId=SPE000000090",
   "org": "보건복지부",
   "primary_audience": "disabled",
   "receiver_raw": "시도 또는 시군구청",
@@ -65,7 +65,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "장애인일자리지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 서비스(일자리) 개인",
@@ -73,5 +73,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 18세 이상 미취업 등록장애인",
-  "view_count": 13991
+  "view_count": 14987
 }

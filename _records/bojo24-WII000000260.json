@@ -28,7 +28,7 @@
   "benefit_raw": "○ 국민연금(노령연금) 수급 시점에 출생 또는 입양한 자녀수에 따라 국민연금 가입기간을 추가로 인정\n* (‘08.1.1. 이후) 둘째 12개월, 셋째부터 18개월씩 인정 (상한 50개월)\n(’26.1.1. 이후) 첫째·둘째 12개월, 셋째부터 18개월씩 인정 (상한 폐지)",
   "category": "care",
   "contact_raw": "국민연금공단 콜센터/1355",
-  "content_hash": "sha256:1505246ad635bb9035bbd34ef739d237",
+  "content_hash": "sha256:205314af33c8058ed9cf39fb10caa113",
   "criteria_raw": "○ 선정 기준\n- 자녀를 출산하거나 입양한 국민연금 가입자\n\n○ 자녀의 인정 범위\n- 친생자(민법 제844조)\n- 인지된 출생자(민법 제855조~제864조)\n- 양자(민법 제866조~제897조)\n- 친양자(민법 제908조의 2~제908조의 8)\n- 입양촉진 및 절차에 관한 특례법에 의해 입양된 자녀",
   "deferred_detail": false,
   "documents_raw": [
@@ -38,11 +38,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-WII000000260",
   "is_mock": false,
-  "last_checked": "2026-08-28",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-28",
   "law_raw": "",
   "name": "국민연금출산크레딧",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/WII000000260",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999129&bnefType=all&svcId=WII000000260",
   "org": "보건복지부",
   "primary_audience": "parent",
   "receiver_raw": "국민연금공단 지사",
@@ -51,7 +51,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "국민연금출산크레딧",
   "source": "bojo24",
   "source_category_raw": "임신·출산 기타 개인",
@@ -59,5 +59,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 지원 대상\n- 자녀를 출산하거나 입양한 국민연금 가입자",
-  "view_count": 16852
+  "view_count": 19009
 }

@@ -31,7 +31,7 @@
   "benefit_raw": "○ 입원 및 수술(당일 외래 수술 포함)\n\n○ 산전 진찰 : 산전 진찰에 따른 검사의 경우, 보건복지부 고시에 의한 요양급여 대상 검사 및 초음파 지원\n\n○ 외국인 근로자의 자녀(18세 미만), 국적 취득 전 결혼 이민자 및 난민 등 자녀의 외래진료\n\n○ 지원 내용\n- 입원부터 퇴원까지 발생한 총 진료비의 90%를 지원하고, 10%는 본인부담하며, 1회당 500만원 범위 내에서 지원\n- 1회당 총 진료비가 500만원을 초과하는 경우와 동일인이 1회이상 수술을 받을 경우에는 의료기관 자체심의를 거쳐 진료비 초과사유서 작성하여 시.도에 제출",
   "category": "health",
   "contact_raw": "보건복지부 공공의료과/044-202-2539\n국립중앙의료원 공공보건의료지원센터/02-6362-3751",
-  "content_hash": "sha256:86326052a5daebc25b042f656099748d",
+  "content_hash": "sha256:3156923287cbde56d02a82c8588a31a2",
   "criteria_raw": "외국인근로자등 의료지원 사업 '대상자 선정'기준\n\n(대상자 예) 외국인근로자: ①여권, 외국인등록증, 여행자증을 확인하여 신원확인 ②국내 체류기간 90일 경과 여부확인, 질병의 국내 발병 여부 확인 ③전현직 근로여부 확인 ④건강보험, 의료급여, 산재보험 적용대상 여부 확인",
   "deferred_detail": false,
   "documents_raw": [
@@ -45,11 +45,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SD0000006941",
   "is_mock": false,
-  "last_checked": "2026-08-24",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-24",
   "law_raw": "",
   "name": "외국인근로자 등 의료지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000006941",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999148&bnefType=all&svcId=SD0000006941",
   "org": "보건복지부",
   "primary_audience": "newlywed",
   "receiver_raw": "사업 수행 의료기관",
@@ -58,7 +58,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "외국인근로자-등-의료지원",
   "source": "bojo24",
   "source_category_raw": "보건·의료 서비스(의료) 개인",
@@ -66,5 +66,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 외국인 근로자 및 그 자녀(18세 미만), 국적 취득 전 결혼이민자 및 그 자녀, 난민 및 그 자녀 등으로서 건강보험, 의료급여 등 각종 의료보장제도에 의해서 의료혜택을 받을 수 없는 자",
-  "view_count": 10445
+  "view_count": 11153
 }

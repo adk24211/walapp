@@ -38,7 +38,7 @@
   "benefit_raw": "○ 문화체육시설 이용료 감면(30%) - 특화강좌 제외\n- 광진구시설관리공단 문화·체육시설 이용자가 경로우대자 요건을 충족하는 경우 해당 강좌 또는 시설 이용료의 30%를 감면하는 서비스입니다.\n- 다른 할인과 중복 적용되지 않으며, 특화강좌·소그룹강좌 등 일부 프로그램은 감면에서 제외될 수 있습니다.",
   "category": "living",
   "contact_raw": "광진구시설관리공단 문화체육부/02-2049-4570",
-  "content_hash": "sha256:50250b36244fe5c89a11cdbc04c90e2c",
+  "content_hash": "sha256:6ef21630bca00fe8e7d0c970bbfed8d3",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -50,11 +50,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-O00022600002",
   "is_mock": false,
-  "last_checked": "2026-09-17",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-17",
   "law_raw": "",
   "name": "문화체육시설 이용요금 감면(경로우대자)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00022600002",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000275&bnefType=all&svcId=O00022600002",
   "org": "광진구시설관리공단",
   "primary_audience": "senior",
   "receiver_raw": "",
@@ -63,7 +63,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "문화체육시설-이용요금-감면-경로우대자",
   "source": "bojo24",
   "source_category_raw": "문화·환경 현금(감면) 개인",
@@ -71,5 +71,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "만 65세 이상인 문화·체육시설 이용자\n- 지역 범위: 광진문화예술회관, 광진구민체육센터, 중곡문화체육센터, 자양문화체육센터 등 공단 문화·체육시설 이용자\n- 제외대상: 증빙서류를 제출하지 않거나 해당 프로그램이 감면 제외 프로그램인 경우",
-  "view_count": 701
+  "view_count": 858
 }

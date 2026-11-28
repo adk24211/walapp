@@ -35,7 +35,7 @@
   "benefit_raw": "시제품제작, 마케팅 등에 소요되는 사업화 자금(평균 0.5억원), 창업프로그램(MVP 제작, 멘토링 등) 등을 지원",
   "category": "jobs",
   "contact_raw": "창업진흥원 예비초기팀/044-410-1802\n창업진흥원 예비초기팀/044-410-1803\n창업진흥원 예비초기팀/044-410-1804\n창업진흥원 예비초기팀/044-410-1806\n창업진흥원 예비초기팀/044-410-1807\n창업진흥원 예비초기팀/044-410-1809",
-  "content_hash": "sha256:30bd673babfa35e41c18d2ffa7e00235",
+  "content_hash": "sha256:d909aceace6b6ff675efa8ef7ddf5f7a",
   "criteria_raw": "요건검토 → 서류평가 → 인큐베이팅 → 발표평가 → 대상자 선정(1단계)",
   "deferred_detail": false,
   "documents_raw": [
@@ -46,11 +46,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-999000000074",
   "is_mock": false,
-  "last_checked": "2026-08-25",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-25",
   "law_raw": "",
   "name": "예비창업패키지",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/999000000074",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999241&bnefType=all&svcId=999000000074",
   "org": "중소벤처기업부",
   "primary_audience": "business",
   "receiver_raw": "창업진흥원 예비창업실",
@@ -59,7 +59,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "예비창업패키지",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금 법인/시설/단체",
@@ -67,5 +67,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "예비창업자",
-  "view_count": 22084
+  "view_count": 24276
 }

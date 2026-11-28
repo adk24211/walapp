@@ -33,7 +33,7 @@
   "benefit_raw": "ㅇ 국내입양에 관한 특별법에 따라 보호대상아동을 국내입양한 가정 중에서 가정법원 입양확정일이 2026.1.1. 이후인 가정에 1회, 100만원 지급\n\n※ 동 사업은 복권기금에서 지원\nㆍ 복권기금 : 2004년 제정된 복권 및 복권기금법에 따라 복권사업으로 조성된 재원을 투명하고 효율적으로 관리, 사용하기 위해 설치한 기금(사용처 : 법정배분사업 35%, 공익사업 65%)",
   "category": "care",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:0ab1ab893d3e9b9228ecdf0540ef0fe5",
+  "content_hash": "sha256:41cb8baa71ed2a90751274376907b22c",
   "criteria_raw": "○ 국내입양에 관한 특별법에 따라 보호대상아동을 국내입양한 가정 중에서 가정법원 입양확정일이 2026.1.1. 이후인 가정",
   "deferred_detail": false,
   "documents_raw": [
@@ -45,11 +45,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SCY000000040",
   "is_mock": false,
-  "last_checked": "2026-10-23",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-23",
   "law_raw": "",
   "name": "입양비용지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SCY000000040",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=102404&bnefType=all&svcId=SCY000000040",
   "org": "보건복지부",
   "primary_audience": "parent",
   "receiver_raw": "시·군·구청",
@@ -58,7 +58,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "입양비용지원",
   "source": "bojo24",
   "source_category_raw": "임신·출산 현금 개인",
@@ -66,5 +66,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 국내입양에 관한 특별법에 따라 보호대상아동을 국내입양한 가정 중에서 가정법원 입양확정일이 2026.1.1. 이후인 가정",
-  "view_count": 2454
+  "view_count": 2521
 }

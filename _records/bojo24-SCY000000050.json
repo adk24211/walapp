@@ -31,7 +31,7 @@
   "benefit_raw": "○ 중증 장애 입양아동 : 월 721천원\n\n○ 경증 장애(등) 입양아동 : 월 634천원\n- 분만 시 조산/체중 미달/분만 장애 또는 유전 등으로 입양 당시 질환을 앓고 있는 아동 포함 (완치 시 지급 중단)\n\n○ 동 사업은 복권기금에서 지원\n-복권기금 : 2004년 제정된 복권 및 복권기금법에 따라 복권사업으로 조성된 재원을 투명하고 효율적으로 관리, 사용하기 위해 설치한 기금(사용처 : 법정배분사업 35%, 공익사업 65%)",
   "category": "care",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:cf7c7f0e110879c0d2f2786551954daa",
+  "content_hash": "sha256:cbb624bb417adfe5f2f6730322b69a28",
   "criteria_raw": "○ 국내입양에 관한 특별법에 따라 장애아동을 국내 입양한 가정(구 입양특례법상 허가를 받은 입양기관에 의해 보호대상아동을 국내입양한 가정도 포함)\n- 만 18세가 되는 날이 속할 달까지 지급\n* 다만, 「초‧중등교육법」 제2조에 따른 학교에 재학 중인(휴학생은 제외) 경우에는 졸업시까지 지원(재학 증명서 첨부 필요)",
   "deferred_detail": false,
   "documents_raw": [
@@ -45,11 +45,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SCY000000050",
   "is_mock": false,
-  "last_checked": "2026-10-11",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-11",
   "law_raw": "",
   "name": "장애입양아동 양육보조금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SCY000000050",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=741676&bnefType=all&svcId=SCY000000050",
   "org": "보건복지부",
   "primary_audience": "parent",
   "receiver_raw": "주민센터",
@@ -58,7 +58,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "장애입양아동-양육보조금",
   "source": "bojo24",
   "source_category_raw": "임신·출산 의료지원\n현금 개인",
@@ -66,5 +66,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 국내입양에 관한 특별법에 따라 장애아동을 국내 입양한 가정(구 입양특례법상 허가를 받은 입양기관에 의해 장애아동을 국내입양한 가정도 포함)\n- 만 18세가 되는 날이 속할 달까지 지급\n* 다만, 「초‧중등교육법」 제2조에 따른 학교에 재학 중인(휴학생은 제외) 경우에는 졸업시까지 지원(재학 증명서 첨부 필요)",
-  "view_count": 2751
+  "view_count": 2840
 }

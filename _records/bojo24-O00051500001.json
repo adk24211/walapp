@@ -36,7 +36,7 @@
   "benefit_raw": "- 만9세~만24세 청소년, 개인상담 및 심리검사 무료 진행(1회/주, 총12회)\n- 청소년전문상담사와 1:1로 만나 1시간 내외로 상담서비스 및 복지지원서비스 연계.\n- 내부회의를 거쳐 상담사가 현장까지 찾아가는 상담서비스 제공 가능.",
   "category": "health",
   "contact_raw": "상담팀/031-318-7100",
-  "content_hash": "sha256:314921dfce78820275eb3bdc42d8db3d",
+  "content_hash": "sha256:15c14b1730030b896bbc6b113a05b2eb",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -47,11 +47,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
   "id": "bojo24-O00051500001",
   "is_mock": false,
-  "last_checked": "2026-09-29",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-29",
   "law_raw": "",
   "name": "청소년 무료 개인상담 및 심리검사",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00051500001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000863&bnefType=all&svcId=O00051500001",
   "org": "재단법인시흥시청소년청년재단",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -60,7 +60,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "청소년-무료-개인상담-및-심리검사",
   "source": "bojo24",
   "source_category_raw": "보건·의료 기타(상담) 개인",
@@ -68,5 +68,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "만9세~만24세 대한민국에 거주하는 청소년 모두 해당",
-  "view_count": 1786
+  "view_count": 2011
 }

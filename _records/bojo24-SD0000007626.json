@@ -37,7 +37,7 @@
   "benefit_raw": "ㅇ 이용자: 장애인 등 정보소외계층에게 도서관 자료 택배비(왕복) 지원\n\nㅇ 운영도서관: 책나래 전용택배가방, 리플릿 지원",
   "category": "living",
   "contact_raw": "국립장애인도서관 지원협력과/02-3483-8857\n책나래 서비스 문의/02-3483-8883",
-  "content_hash": "sha256:4f487e5f088d42829c4714d7a24f3dce",
+  "content_hash": "sha256:e385112021710620415e55ad51c86d83",
   "criteria_raw": "○ 장애인 : 보건복지부 등록 장애인\n○ 국가유공상이자: 국가보훈부 등록 국가유공상이자\n○ 장기요양대상자: 국민건강보험공단 인정 장기요양대상자",
   "deferred_detail": false,
   "documents_raw": [
@@ -54,11 +54,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-SD0000007626",
   "is_mock": false,
-  "last_checked": "2026-08-31",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-31",
   "law_raw": "",
   "name": "장애인 등 대상 무료 우편 서비스(책나래 서비스)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000007626",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=790129&bnefType=all&svcId=SD0000007626",
   "org": "문화체육관광부",
   "primary_audience": "disabled",
   "receiver_raw": "국립장애인도서관 지원협력과",
@@ -67,7 +67,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "장애인-등-대상-무료-우편-서비스-책나래-서비스",
   "source": "bojo24",
   "source_category_raw": "문화·환경 기타\n문화/여가지원 개인",
@@ -75,5 +75,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 장애인, 국가유공상이자, 장기요양대상자\n\n1. 장애인: 시각, 청각 등 전체 장애인 / (증명서)장애인복지카드, 장애인증명서\n2. 국가유공상이자: 상이등급 전체(1-7급) / (증명서) 국가유공자증, 특수임무유공자증, 보훈보상대상자증, 지원대상자확인원\n3. 장기요양대상자: 장기요양등급 전체/ (증명서) 장기요양인정서",
-  "view_count": 35978
+  "view_count": 36157
 }

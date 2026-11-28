@@ -33,7 +33,7 @@
   "benefit_raw": "○ 지원범위 : 자궁내 정자주입 및 체외수정(신선 배아, 동결배아) 시술비 중 일부 본인부담금, 전액 본인부담금 및 비급여 3종(배아동결비, 유산방지제, 착상보조제)\n\n○ 지원금액\n- 체외수정 시술 20회까지 신선배아 1회당 최대 110만원, 동결배아 1회당 최대 50만원, 자궁내 정자주입 시술 5회까지 1회당 최대 30만원\n* 배아동결비 최대 30만원, 유산방지제 및 착상보조제 각각 최대 20만원 지원 한도 금액 내 지원\n\n○ 지원횟수 : 체외수정 20회, 인공수정 5회(단, 건강보험 횟수 적용되는 시술에 대해 지원)\n\n※ 2022. 1월부터 지방이양된 사업으로, 지방자치단체별 지원기준 및 내용의 차이가 있을 수 있음",
   "category": "care",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:e8544f24379eda47a800f979729e2576",
+  "content_hash": "sha256:33f8d5d60c84819511cca11662c66fea",
   "criteria_raw": "○ 지원신청 자격\n- 난임시술을 요하는 의사의 '난임진단서' 제출자\n- 법적 혼인상태에 있거나, 신청일 기준 최근 1년 이상 사실상 혼인관계를 유지하였다고 관할 보건소로부터 확인된 난임부부\n- 부부 중 최소한 한 명은 주민등록이 되어 있는 대한민국 국적 소유자(주민등록 말소자, 재외국민 주민등록자는 대상에서 제외)이면서, 부부 모두 건강보험 가입 및 보험료 고지 여부가 확인되는 자",
   "deferred_detail": false,
   "documents_raw": [
@@ -69,11 +69,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-SME000000100",
   "is_mock": false,
-  "last_checked": "2026-09-03",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-03",
   "law_raw": "",
   "name": "난임부부 시술비 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SME000000100",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=753142&bnefType=all&svcId=SME000000100",
   "org": "보건복지부",
   "primary_audience": "parent",
   "receiver_raw": "보건소",
@@ -82,7 +82,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "난임부부-시술비-지원",
   "source": "bojo24",
   "source_category_raw": "임신·출산 서비스(의료)\n의료지원 개인",
@@ -90,5 +90,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 지원신청 자격\n- 난임시술을 요하는 의사의 '난임진단서' 제출자\n- 법적 혼인상태에 있거나, 신청일 기준 최근 1년 이상 사실상 혼인관계를 유지하였다고 관할 보건소로부터 확인된 난임부부\n- 부부 중 최소한 한 명은 주민등록이 되어 있는 대한민국 국적 소유자(주민등록 말소자, 재외국민 주민등록자는 대상에서 제외)이면서, 부부 모두 건강보험 가입 및 보험료 고지 여부가 확인되는 자",
-  "view_count": 100712
+  "view_count": 102938
 }

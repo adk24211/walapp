@@ -35,7 +35,7 @@
   "benefit_raw": "○ 정기검사수수료 감면(100%)\n- 『노인복지법』 제32조 제1항 제1호에 따른 양로시설\n- 『노인복지법』 제34조 제1항 제1호에 따른 노인요양시설(「노인복지법 시행규칙」 제14조제1항제1호라목 또는 제18조제1항제1호라목에 따라 입 소자로부터 입소비용의 전부를 수납하여 운영하는 양로시설 또는 노인요양시설은 제외한 다)에 설치된 승강기",
   "category": "living",
   "contact_raw": "고객지원실/055-751-0915",
-  "content_hash": "sha256:2f68b42e0036045aa9be931fb8123015",
+  "content_hash": "sha256:9bb102e9f49f62f8d640372b3c45ce2d",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -47,11 +47,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55366400003",
   "is_mock": false,
-  "last_checked": "2026-09-07",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-07",
   "law_raw": "",
   "name": "승강기검사수수료 감면(노인복지시설)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55366400003",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002024&bnefType=all&svcId=B55366400003",
   "org": "한국승강기안전공단",
   "primary_audience": "",
   "receiver_raw": "",
@@ -60,7 +60,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "승강기검사수수료-감면-노인복지시설",
   "source": "bojo24",
   "source_category_raw": "행정·안전 현금(감면) 법인/시설/단체",
@@ -68,5 +68,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 『노인복지법』 제32조 제1항 제1호에 따른 양로시설\n\n○ 『노인복지법』 제34조 제1항 제1호에 따른 노인요양시설\n(「노인복지법 시행규칙」 제14조제1항제1호라목 또는 제18조제1항제1호라목에 따라 입 소자로부터 입소비용의 전부를 수납하여 운영하는 양로시설 또는 노인요양시설은 제외한 다)에 설치된 승강기",
-  "view_count": 1395
+  "view_count": 1512
 }

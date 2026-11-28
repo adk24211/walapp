@@ -37,7 +37,7 @@
   "benefit_raw": "○ 고용유지지원금\n- 역(曆)에 따른 1개월의 소정근로시간 중 100분의 20 이상을 단축하고 그 단축된 근로시간에 대한 임금을 보전하기 위하여 금품을 지급한 사업주\n- 사업주가 지급한 금품의 2/3(대규모 기업 1/2～2/3) 지원(1일 68,100원, 연간 180일 한도)",
   "category": "jobs",
   "contact_raw": "고용노동부 고객상담센터/1350",
-  "content_hash": "sha256:99ce3e4dc1811521ec637d9e0c662019",
+  "content_hash": "sha256:17041e5f7b0bf65c3a1af9d464af1f25",
   "criteria_raw": "지원대상과 동일",
   "deferred_detail": false,
   "documents_raw": [
@@ -56,11 +56,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-SD0000003418",
   "is_mock": false,
-  "last_checked": "2026-09-11",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-11",
   "law_raw": "",
   "name": "고용유지지원금 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SD0000003418",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999013&bnefType=all&svcId=SD0000003418",
   "org": "고용노동부",
   "primary_audience": "employer",
   "receiver_raw": "고용노동부 고용센터",
@@ -69,7 +69,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "고용유지지원금-지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금 법인/시설/단체",
@@ -77,5 +77,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 고용조정이 불가피한 상황임에도 휴업,휴직 등 고용유지조치를 통해 수당을 지급하고 근로자를 계속 고용하는 사업주",
-  "view_count": 13529
+  "view_count": 13833
 }

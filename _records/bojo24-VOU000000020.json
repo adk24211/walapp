@@ -43,7 +43,7 @@
   "benefit_raw": "○ 신변처리 지원, 가사지원, 일상생활 지원, 외출·이동·보조 등 활동 지원 및 방문목욕, 방문간호\n- 서비스 대상자에게는 활동지원등급에 해당하는 만큼의 매월 일정액의 바우처 지원\n* 매월 일정액의 본인 부담금 납부 후 바우처 지원액 사용 가능",
   "category": "care",
   "contact_raw": "보건복지상담센터/129\n국민연금공단 콜센터/1355",
-  "content_hash": "sha256:1c1a74177d3ee14b1b76ccad7b2e588d",
+  "content_hash": "sha256:f1fba8928d570fcc1650835b92c651e4",
   "criteria_raw": "○ 만6세∼만65세 미만 등록 장애인 중 서비스 지원 종합조사 결과 활동지원등급 판정을 받은 자\n\n* 활동지원 수급자였다가 65세 이후 혼자서 사회활동이 어려운 경우에는 지원 가능\n\n○ 소득 기준과 무관하게 신청 가능",
   "deferred_detail": false,
   "documents_raw": [
@@ -103,11 +103,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-VOU000000020",
   "is_mock": false,
-  "last_checked": "2026-08-19",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-19",
   "law_raw": "",
   "name": "장애인 활동지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/VOU000000020",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=719747&bnefType=all&svcId=VOU000000020",
   "org": "보건복지부",
   "primary_audience": "disabled",
   "receiver_raw": "주민센터",
@@ -116,7 +116,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "장애인-활동지원",
   "source": "bojo24",
   "source_category_raw": "보호·돌봄 이용권 개인",
@@ -124,5 +124,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 만6세∼만65세 미만 등록 장애인 중 서비스 지원 종합조사 결과 활동지원등급 판정을 받은 자\n\n* 활동지원 수급자였다가 65세 이후 혼자서 사회활동이 어려운 경우에는 지원 가능\n\n○ 소득 기준과 무관하게 신청 가능",
-  "view_count": 55851
+  "view_count": 57729
 }

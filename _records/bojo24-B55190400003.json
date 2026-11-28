@@ -29,7 +29,7 @@
   "benefit_raw": "○ 자신에 대한 이해를 돕고 개인의 특성에 보다 적합한 진로분야를 선택할 수 있도록 지원\n\n○ 개인의 능력과 흥미, 성격 등 다양한 심리 특성을 객관적으로 측정할 수 있도록 대상별 진로탐색 및 설계 지원을 위한 직업심리검사 서비스 제공",
   "category": "jobs",
   "contact_raw": "한국고용정보원/1577-7114",
-  "content_hash": "sha256:1ed1344b49215fde192093d50952f537",
+  "content_hash": "sha256:875c8364a20b18e4f11e6ff1cf4652c0",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -39,11 +39,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55190400003",
   "is_mock": false,
-  "last_checked": "2026-09-06",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-06",
   "law_raw": "",
   "name": "직업심리검사 서비스",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55190400003",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001464&bnefType=all&svcId=B55190400003",
   "org": "한국고용정보원",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -52,7 +52,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "직업심리검사-서비스",
   "source": "bojo24",
   "source_category_raw": "고용·창업 기타 개인",
@@ -60,5 +60,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "청소년, 대학생, 성인 구직자 등 검사별 대상 상이",
-  "view_count": 13102
+  "view_count": 13615
 }

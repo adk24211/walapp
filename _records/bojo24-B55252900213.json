@@ -29,7 +29,7 @@
   "benefit_raw": "○ 대학생 기숙사 지원 : 대학생 연합생활관(은행권, 고양)\n- 기숙사 위치 : 경기도 고양시 원흥1로 23 (수도권 지하철 3호선 원흥역 도보 10분 이내)\n- 기숙사 비용 : 월 150,000원 (학기별 900,000원)\n- 보증금 : 150,000원",
   "category": "housing",
   "contact_raw": "한국장학재단 상담센터/1599-2290\n대학생 연합생활관(은행권, 고양) 행정실/031-920-7200",
-  "content_hash": "sha256:552ad1b51f71ed491852959fdbbbccdb",
+  "content_hash": "sha256:ecedc47e5178f033f1adf8803eaef119",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -39,11 +39,11 @@
   "how_to_raw": "기타 온라인신청",
   "id": "bojo24-B55252900213",
   "is_mock": false,
-  "last_checked": "2026-08-20",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-20",
   "law_raw": "",
   "name": "대학생 기숙사 지원 (대학생 연합생활관)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252900213",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2101408&bnefType=all&svcId=B55252900213",
   "org": "한국장학재단",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -52,7 +52,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "대학생-기숙사-지원-대학생-연합생활관",
   "source": "bojo24",
   "source_category_raw": "주거·자립 시설이용 개인",
@@ -60,5 +60,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 대학생 연합생활관(은행권, 고양) : 아래의 대한민국 대학(원)에 입학 예정 또는 재적 중인 대학생(외국인 포함)\n- (대상대학) 대한민국 소재 국내 대학(원)\n·「고등교육법」 제2조 제1호 ~ 제4호 및 제7호에 해당하는 대학, 산업대학, 교육대학, 전문대학, 각종학교,\n동법 제29조에 해당하는 대학원(단, 원격대학 및 사이버대학의 대학원은 제외)\n·「근로자직업능력 개발법」 제2조제5호에 따른 기능대학\n·「평생교육법」제31조제4항에 따른 전공대학\n※ 단, 원격대학(원) 및 사이버대학(원)은 제외",
-  "view_count": 12609
+  "view_count": 13205
 }

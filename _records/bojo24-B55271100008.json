@@ -23,7 +23,7 @@
   "apply_period": {
     "always": true,
     "end": "",
-    "raw": "",
+    "raw": "상시신청",
     "start": ""
   },
   "apply_url": "https://eum.cw.or.kr",
@@ -33,7 +33,7 @@
   "benefit_raw": "○ 일용·임시직 건설노동자가 건설업 퇴직 시, 퇴직공제 가입사업장에서 납부한 공제부금에 이자를 더한 퇴직공제금 지급\n○ 장기적립한 노동자의 경우 특별퇴직공제금까지 추가 지급\n※ 적립일수 1,764일 이상 30만원 / 2,520일 이상 50만원 / 3,780일 이상 100만원",
   "category": "finance",
   "contact_raw": "고객관리부/1666-1122",
-  "content_hash": "sha256:1596e211eadc3b4a2d2c5b155f65d37a",
+  "content_hash": "sha256:381ccf169bfe5d1fa534d1c24ecdcc5c",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,11 +44,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
   "id": "bojo24-B55271100008",
   "is_mock": false,
-  "last_checked": "2026-08-16",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-16",
   "law_raw": "",
   "name": "건설근로자 퇴직공제금 지급",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55271100008",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001384&bnefType=all&svcId=B55271100008",
   "org": "건설근로자공제회",
   "primary_audience": "senior",
   "receiver_raw": "",
@@ -57,13 +57,13 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "건설근로자-퇴직공제금-지급",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금 개인",
   "source_id": "B55271100008",
-  "source_registered": "2022-07-15",
+  "source_registered": "",
   "status": "active",
   "target_raw": "1. 퇴직공제 적립일수 252일 이상인 건설근로자가 건설업에서 퇴직하거나 만 60세에 이른 경우\n2. 퇴직공제 적립일수 252일 미만인 건설근로자가 만 65세에 이른 경우\n3. 건설근로자가 사망한 경우",
-  "view_count": 48349
+  "view_count": 49963
 }

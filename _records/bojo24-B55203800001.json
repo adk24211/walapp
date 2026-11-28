@@ -46,7 +46,7 @@
   "benefit_raw": "○ 의료물품 확보 및 지원을 통한 국내외 취약계층의 보건의료서비스 질 제고\n- 의약품, 의료소모품 등 의료물품 무상 지원",
   "category": "health",
   "contact_raw": "한민족인도협력팀/02-3396-9800",
-  "content_hash": "sha256:3b222dca146f2be5c492ff0027355104",
+  "content_hash": "sha256:b0912b1c99178a5cc9fb3b22de585ad4",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -69,11 +69,11 @@
   "how_to_raw": "기타 온라인신청\n직접입력",
   "id": "bojo24-B55203800001",
   "is_mock": false,
-  "last_checked": "2026-08-25",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-25",
   "law_raw": "",
   "name": "국내외 취약계층 의료물자 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55203800001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001470&bnefType=all&svcId=B55203800001",
   "org": "한국국제보건의료재단",
   "primary_audience": "multicultural",
   "receiver_raw": "",
@@ -82,7 +82,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "국내외-취약계층-의료물자-지원",
   "source": "bojo24",
   "source_category_raw": "보건·의료 현물 법인/시설/단체",
@@ -90,5 +90,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "재단 사업으로 수행하고 있는 국가내의 기관, 의료민간단체와 연계한 현지 의료기관, 중점협력국 내의 보건부 산하 병원 및 기관, 국내외 의료봉사단체, 재외동포 및 외국인근로자(다문화가족) 진료를 위한 국·내외 병원 및 기관",
-  "view_count": 1100
+  "view_count": 1303
 }

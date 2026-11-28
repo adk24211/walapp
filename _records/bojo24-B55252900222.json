@@ -46,7 +46,7 @@
   "benefit_raw": "□ 중소기업 재직자 분할상환 약정제도\n○ 중소기업 재직자의 상환부담 경감을 위해 분할상환약정액 완제 시, 지연배상금(손해금)을 일부 감면해 주는 제도\n\n□ 지원 대상\n○ 다음 조건을 모두 충족하는 채무자\n- 중소기업기본법 제2조에 해당하는 중소기업에 재직 중인 자\n- 6개월 이상 장기연체 등 학자금대출 구상채권 또는 기한이익상실채권 등을 보유한 자\n* 약정대상 학자금대출\n· (구상채권) 정부보증 학자금대출(은행대출보증)\n· (기한이익상실채권) 일반 상환 학자금대출, 취업후 상환 학자금대출(일반상환방식 생활비대출만 가능), 학자금 유예대출(일반 상환 학자금 특별상환유예, 대졸 미\n취업자 원리금상환 유예, 군복무 중 이자납부 유예), 농어촌출신대학생 학자금융자(2016년도 이후 실행 채무에만 해당)\n\n□ 제출 서류\n○ 중소기업 확인서(중소벤처기업부 중소기업 현황 정보시스템에서 발급 가능)\n○ 재직증명서(입사일, 재직기간, 해당 기업 날인 필수)\n○ 신용교육원 교육 수료증(신용회복위원회 신용교육원 온라인 교육이수)",
   "category": "education",
   "contact_raw": "한국장학재단/1599-2000",
-  "content_hash": "sha256:3757b1d28518040d9db521f725862134",
+  "content_hash": "sha256:40fe20b57f23aeb70535d9da2418bd06",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -60,11 +60,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청",
   "id": "bojo24-B55252900222",
   "is_mock": false,
-  "last_checked": "2026-10-04",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-04",
   "law_raw": "",
   "name": "중소기업 재직자 분할상환약정제도",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252900222",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2105509&bnefType=all&svcId=B55252900222",
   "org": "한국장학재단",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -73,7 +73,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 2,
+  "revision": 3,
   "slug": "중소기업-재직자-분할상환약정제도",
   "source": "bojo24",
   "source_category_raw": "생활안정 현금(융자) 개인",
@@ -81,5 +81,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "□ 다음의 조건을 모두 충족하는 자\n○ 중소기업기본법 제2조에 해당하는 중소기업에 재직 중인 자\n○ 6개월 이상 장기연체 등 학자금대출 구상채권 또는 기한이익상실채권 등을 보유한 자\n- (구상채권) 정부보증 학자금대출(은행대출보증)\n- (기한이익상실채권) 일반 상환 학자금대출, 취업후 상환 학자금대출(일반상환방식 생활비대출만 가능), 학자금 유예대출(일반 상환 학자금 특별상환유예, 대졸 미취업자 원리금상환 유예, 군복무 중 이자납부 유예), 농어촌출신대학생 학자금융자(2016년도 이후 실행 채무에만 해당)",
-  "view_count": 6414
+  "view_count": 6671
 }

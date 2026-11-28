@@ -33,7 +33,7 @@
   "benefit_raw": "○ 직업상담, 직업평가, 직업적응 훈련 등 직업재활 서비스 제공\n○ 현장중심직업재활센터 등 참여 훈련수당(월 10만원) 지급",
   "category": "jobs",
   "contact_raw": "한국장애인개발원/02-3433-0600",
-  "content_hash": "sha256:d7f4b0a22bdf175ba5dca5a349f014a0",
+  "content_hash": "sha256:f2603bf18eba16d2bd412418c92cea1e",
   "criteria_raw": "○ 15세 이상 등록 중증장애인",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,11 +44,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-SPE000000080",
   "is_mock": false,
-  "last_checked": "2026-09-28",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-28",
   "law_raw": "",
   "name": "중증장애인직업재활 지원(훈련수당)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SPE000000080",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999160&bnefType=all&svcId=SPE000000080",
   "org": "보건복지부",
   "primary_audience": "disabled",
   "receiver_raw": "한국장애인개발원",
@@ -57,7 +57,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "중증장애인직업재활-지원-훈련수당",
   "source": "bojo24",
   "source_category_raw": "고용·창업 현금 개인",
@@ -65,5 +65,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 15세 이상 등록 중증장애인",
-  "view_count": 5912
+  "view_count": 6009
 }

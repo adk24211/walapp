@@ -30,7 +30,7 @@
   "benefit_raw": "○ 인정소득은 실직 전 3개월간 평균소득의 50%(최대70만원)로, 지원기간은 구직급여 수급기간으로하되 실업-재취업 반복시 지속수급이 가능하며 생애 최대 12개월까지 지원 받을 수 있음\n\n○ 월보험료의 25%를 본인이 부담하는 경우에 한해 연금보험료의 75%를 지원하여 가입기간을 추가 산입 받을 수 있음",
   "category": "jobs",
   "contact_raw": "국민연금공단 콜센터/1355",
-  "content_hash": "sha256:ffaaef190d5ed6f539f44dd128ecd1c8",
+  "content_hash": "sha256:a87f31785e6cf82dd1f442992aee628c",
   "criteria_raw": "실업크레딧 신청자 중 본인부담 연금보험료를 납부한 자",
   "deferred_detail": false,
   "documents_raw": [
@@ -42,11 +42,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-B55201500004",
   "is_mock": false,
-  "last_checked": "2026-09-06",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-06",
   "law_raw": "",
   "name": "실업크레딧 지원",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55201500004",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999145&bnefType=all&svcId=B55201500004",
   "org": "보건복지부",
   "primary_audience": "jobseeker",
   "receiver_raw": "고용노동부 각 지역 관할 고용센터 및 고객상담센터, 국민연금공단 지사",
@@ -55,7 +55,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 2,
+  "revision": 3,
   "slug": "실업크레딧-지원",
   "source": "bojo24",
   "source_category_raw": "고용·창업 기타 개인",
@@ -63,5 +63,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 국민연금 가입자 또는 가입자였던 사람 중 18세이상 60세미만의 구직급여 수급자, 다만 재산세 과세표준의 합이 6억원 또는 종합소득(사업 및 근로소득 제외)금액의 합이 1,680만원을 초과하는 분은 제외함",
-  "view_count": 256405
+  "view_count": 258381
 }

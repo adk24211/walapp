@@ -36,7 +36,7 @@
   "benefit_raw": "- 대학부 희망드림 / 고등부 성적우수 / 고등부 복지 / 고등부 선행 효행 / 특기 (초/중/고/대학생) 장학생\n- 성적 및 소득요건 등에 맞는 장학생을 선발하여 장학금 지급",
   "category": "education",
   "contact_raw": "사무국/031-345-2590",
-  "content_hash": "sha256:32780d9c119196e768b8a2b7ed39443d",
+  "content_hash": "sha256:4562805fa348733b7778e53ece771d38",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -46,11 +46,11 @@
   "how_to_raw": "직접입력",
   "id": "bojo24-O00055100001",
   "is_mock": false,
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-10-13",
   "law_raw": "",
   "name": "의왕시인재육성재단 장학금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00055100001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001333&bnefType=all&svcId=O00055100001",
   "org": "재단법인의왕시인재육성재단",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -59,7 +59,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "의왕시인재육성재단-장학금",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -67,5 +67,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 대학생\n- 의왕시에 주소를 두고 2년이상 거주하고 있는 대학생\n- 국내 대학(교)에 입학하였거나 재학중인 학생\n- 직전 학년 학업성적이 백분율 환산 점수 80점 이상인 학생\n- 신입생은 대학수학능력 평가 등급 평균 및 고등학교 3학년 내신등급 평점 4등급 이내\n- 부모 소득 전체 월평균 485만원 이하의 해당하는 가정\n\n○ 성적 우수 고등학생\n- 고등학교에 입학하였거나 재학중인 학생\n- 직전 학년 학업성적이 3과목(등급이 나오는 과목) 이상이 2등급 이상인 학생\n- 신입생은 고입 내신 성적 20%이내\n\n○ 복지 장학 고등학생\n- 저소득층 자녀중 고등학교에 입학 또는 재학중인 자녀\n- 직전 학년 성적이 3과목(등급이 나오는 과목)이상이 4등급 이상인 관내 고등학교 재학생\n- 신입생은 고입 내신 성적 50%이내\n- 부모 소득 전체 월평균 485만원 이하에 해당하는 가정\n\n○ 특기 장학 고등학생\n- 기능,예능,과학 등의 분야에서 도 단위 규모 대회에서 1위에 입상하거나 전국 규모대회에서 3위 이내 입상한 관내·외 학생\n- 의왕시에 주소를 두고 2년 이상 거주하고 있는 관내·외 학생\n\n○ 효행·선행 장학 고등학생\n- 각종 기관,단체의 표창 또는 언론에서 칭송을 받는 학생으로서 학교장 또는 관할동장의 추천을 받은 관내 고등학교 재학생",
-  "view_count": 1473
+  "view_count": 1519
 }

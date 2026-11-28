@@ -31,7 +31,7 @@
   "benefit_raw": "한국잡월드 체험료 징수규정 시행규칙에 따른 입장료 면제 및 할인",
   "category": "care",
   "contact_raw": "고객센터/1644-1333",
-  "content_hash": "sha256:951319cf45742871f2f241905dac8b75",
+  "content_hash": "sha256:020db050b96ad172428d2b4a75bca572",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,11 +44,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-B55283600001",
   "is_mock": false,
-  "last_checked": "2026-09-07",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-07",
   "law_raw": "",
   "name": "한국잡월드 입장료 면제 및 할인",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55283600001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001183&bnefType=all&svcId=B55283600001",
   "org": "한국잡월드",
   "primary_audience": "disabled",
   "receiver_raw": "",
@@ -57,7 +57,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "한국잡월드-입장료-면제-및-할인",
   "source": "bojo24",
   "source_category_raw": "보육·교육 시설이용 개인",
@@ -65,5 +65,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "- 「국민기초생활보장법」상의 수급자 및 그 자녀에 해당하는 자\n- 단체이용객 인솔자(이용객 15명당 인솔자 1인)\n- 장애인활동보조인 1인 면제\n- 국가유공자 및 장애인, 만 65세 이상자 50% 할인",
-  "view_count": 11289
+  "view_count": 11424
 }

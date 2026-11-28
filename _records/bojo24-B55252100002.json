@@ -25,7 +25,7 @@
   "benefit_raw": "○ 발전소주변지역 지역주민 또는 지역주민 자녀 대상 장학금 지원",
   "category": "education",
   "contact_raw": "경영기획부/070-7511-6109",
-  "content_hash": "sha256:891488539f82b88b5f7634b4b13b5fce",
+  "content_hash": "sha256:6ff6229084f957319afd1769ee12e7b1",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -43,11 +43,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-B55252100002",
   "is_mock": false,
-  "last_checked": "2026-09-06",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-06",
   "law_raw": "",
   "name": "발전소 주변지역 장학금 지원(신서천)",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/B55252100002",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001294&bnefType=all&svcId=B55252100002",
   "org": "한국중부발전(주)",
   "primary_audience": "",
   "receiver_raw": "",
@@ -56,13 +56,13 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "발전소-주변지역-장학금-지원-신서천",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
   "source_id": "B55252100002",
   "source_registered": "",
-  "status": "upcoming",
+  "status": "active",
   "target_raw": "충남 서천군 서면 주민 또는 주민의 자녀 대상 취약계층 및 성적우수학생",
-  "view_count": 653
+  "view_count": 794
 }

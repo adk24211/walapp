@@ -34,7 +34,7 @@
   "benefit_raw": "구인수요가 높은 직종에 대한 직업교육훈련과정 운영",
   "category": "jobs",
   "contact_raw": "취업지원부/063-254-3610",
-  "content_hash": "sha256:e4036e66011e821285b7f390e81c26a4",
+  "content_hash": "sha256:c6b084d648d1bf4ab41d15d90fd3d985",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -44,11 +44,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-O00100800001",
   "is_mock": false,
-  "last_checked": "2026-08-30",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-08-30",
   "law_raw": "",
   "name": "여성 직업교육훈련",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00100800001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000565&bnefType=all&svcId=O00100800001",
   "org": "(재)전북여성가족재단",
   "primary_audience": "jobseeker",
   "receiver_raw": "",
@@ -57,7 +57,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "여성-직업교육훈련",
   "source": "bojo24",
   "source_category_raw": "보육·교육 기타(교육) 개인",
@@ -65,5 +65,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "구직을 희망하는 경력단절여성 및 취업취약계층(결혼이민자, 여성가장 등) 여성",
-  "view_count": 1040
+  "view_count": 1151
 }

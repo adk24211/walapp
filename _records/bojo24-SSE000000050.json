@@ -52,7 +52,7 @@
   "benefit_raw": "○ 방문형, 통원형(집단 프로그램) 등의 직접서비스 및 연계서비스 제공\n- 직접서비스: 안전지원, 사회참여, 생활교육, 일상생활지원\n- 연계 서비스(민간후원 자원)\n- 특화서비스\n- 퇴원환자 단기집중 서비스",
   "category": "care",
   "contact_raw": "보건복지상담센터/129",
-  "content_hash": "sha256:1a5ccbcb169ad12093c4bc7ba97a9b86",
+  "content_hash": "sha256:655715ca012716684cf2037be3513d01",
   "criteria_raw": "○ 65세 이상 ①국민기초생활수급자, ②차상위계층 또는 ③기초연금수급자로서 유사중복사업 자격에 해당되지 않는 자\n(다만, 시장･군수･구청장이 서비스가 필요하다고 인정하는 경우 예외적으로 제공 가능)\n- 독거･조손･고령부부 가구 노인 등 돌봄이 필요한 노인\n- 신체적 기능 저하, 정신적 어려움(인지저하, 우울감 등) 등으로 돌봄이 필요한 노인\n- 고독사 및 자살 위험이 높은 노인\n① 일반돌봄군 : 사회적인 관계 단절 및 일상생활의 어려움으로 돌봄 필요가 있는 대상\n② 중점돌봄군 : 신체적인 기능제한으로 일상생활지원 필요가 큰 대상\n- 사회관계 단절, 우울증 등으로 집중적인 서비스가 필요한 대상(특화서비스)",
   "deferred_detail": false,
   "documents_raw": [
@@ -68,11 +68,11 @@
   "how_to_raw": "기타 온라인신청\n방문신청\n직접입력",
   "id": "bojo24-SSE000000050",
   "is_mock": false,
-  "last_checked": "2026-09-07",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-07",
   "law_raw": "",
   "name": "노인맞춤돌봄서비스",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/SSE000000050",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=757126&bnefType=all&svcId=SSE000000050",
   "org": "보건복지부",
   "primary_audience": "lowincome",
   "receiver_raw": "주민센터",
@@ -81,7 +81,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 1,
+  "revision": 2,
   "slug": "노인맞춤돌봄서비스",
   "source": "bojo24",
   "source_category_raw": "보호·돌봄 서비스(돌봄) 개인",
@@ -89,5 +89,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "○ 65세 이상 ①국민기초생활수급자, ②차상위계층 또는 ③기초연금수급자로서 유사중복사업 자격에 해당되지 않는 자\n(다만, 시장･군수･구청장이 서비스가 필요하다고 인정하는 경우 예외적으로 제공 가능)\n- 독거･조손･고령부부 가구 노인 등 돌봄이 필요한 노인\n- 신체적 기능 저하, 정신적 어려움(인지저하, 우울감 등) 등으로 돌봄이 필요한 노인\n- 고독사 및 자살 위험이 높은 노인\n① 일반돌봄군 : 사회적인 관계 단절 및 일상생활의 어려움으로 돌봄 필요가 있는 대상\n② 중점돌봄군 : 신체적인 기능제한으로 일상생활지원 필요가 큰 대상\n- 사회관계 단절, 우울증 등으로 집중적인 서비스가 필요한 대상(특화서비스)",
-  "view_count": 61957
+  "view_count": 65170
 }

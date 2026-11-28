@@ -27,7 +27,7 @@
   "benefit_raw": "○ 일반장학생 고등학생 100만원, 대학생 350만원 지급\n\n○ 특별장학생(예,체,기능 고등학생) 100만원 지급",
   "category": "education",
   "contact_raw": "부산진구장학회사무국/051-802-6469",
-  "content_hash": "sha256:d34497399cb43298d4ce61ce4ffdc1c8",
+  "content_hash": "sha256:6066b24f5bd9d21c19a8ff3445f9071a",
   "criteria_raw": "",
   "deferred_detail": false,
   "documents_raw": [
@@ -37,11 +37,11 @@
   "how_to_raw": "방문신청",
   "id": "bojo24-O00080700001",
   "is_mock": false,
-  "last_checked": "2026-09-19",
+  "last_checked": "2026-11-28",
   "last_updated": "2026-09-19",
   "law_raw": "",
   "name": "부산진구장학회 장학금",
-  "official_url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/O00080700001",
+  "official_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001511&bnefType=all&svcId=O00080700001",
   "org": "재단법인부산진구장학회",
   "primary_audience": "youth",
   "receiver_raw": "",
@@ -50,7 +50,7 @@
     "sido": null,
     "sigungu": null
   },
-  "revision": 0,
+  "revision": 1,
   "slug": "부산진구장학회-장학금",
   "source": "bojo24",
   "source_category_raw": "보육·교육 현금(장학금) 개인",
@@ -58,5 +58,5 @@
   "source_registered": "",
   "status": "active",
   "target_raw": "부산진구관내 고등학생, 대학생",
-  "view_count": 2297
+  "view_count": 2386
 }
