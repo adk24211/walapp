@@ -28,6 +28,11 @@
   · 마감일이 지나 상태만 바뀐 제도는 다시 찍은 뒤에도 구비서류·신청URL 이 남는다.
   · 해설을 새로 만드는 경로에서 상세 조회가 **실패하면** 저장된 상세 값을 이어
     쓰고, 조회에 **성공했는데** 비어 있으면 되살리지 않는다.
+  · 표적 재생성(regenerate.py)이 더 얇게 써서 되돌리면 원장 항목·레코드 파일·
+    페이지 파일이 **한 글자도 안 바뀐 채** 남고, 그 제도는 원문이 바뀌기 전까지
+    한동안 다시 고르지 않는다. 더 두껍게 쓴 것은 평소처럼 받아들인다.
+    (되돌린다면서 판·수정일을 올려 둔 채로 두던 것이 513번, 같은 제도를 매일
+     다시 골라 재생성 몫의 4분의 3을 버리던 것 — 2026-11-28)
 
 처음 만든 판에서 고친 것 (2026-11-28 리뷰)
 ──────────────────────────────────────────
@@ -298,13 +303,95 @@ def inside() -> int:
     print("상세 조회 실패한 날: " + " · ".join(
         f"{m} → {'이어 씀' if k else '비움'}" for m, k in outcomes.items()))
 
+    # ── ④ 표적 재생성이 더 얇게 쓴 날 ──
+    # 생성기만 바꿔 끼우고 진짜 regenerate_one 을 돌린다(클라이언트는 쓰이지 않는다).
+    import dataclasses
+    import generate_program
+    import regenerate
+    reg = registry.Registry()
+    recs = registry.load_all_records()
+    used = controls | set(planted) | set(trio)
+    fat = [pid for pid in pool if pid not in used
+           and len((registry.load_prose(pid) or {}).get("eligibility") or []) >= 2
+           and len((registry.load_prose(pid) or {}).get("steps") or []) >= 2]
+    if len(fat) < 2:
+        failures.append(f"재생성 시험에 쓸 제도가 모자랍니다 ({len(fat)}건)")
+    else:
+        thin_pid, thick_pid = fat[0], fat[1]
+        memory: dict = {}
+        real_generate = generate_program.generate
+
+        # (가) 더 얇게 썼다 → 통째로 되돌린다
+        prev = registry.load_prose(thin_pid)
+        generate_program.generate = lambda r, c: dict(
+            copy.deepcopy(prev), eligibility=prev["eligibility"][:1], steps=prev["steps"][:1], faq=[])
+        rec = recs[thin_pid]
+        e0 = dataclasses.asdict(reg.get(thin_pid))
+        rec_file = registry.RECORDS_DIR / f"{thin_pid}.json"
+        page_file = registry.PROGRAMS_DIR / rec.path()
+        rec_text, page_text = rec_file.read_text(encoding="utf-8"), page_file.read_text(encoding="utf-8")
+        outcome = regenerate.regenerate_one(rec, reg, day, object(), publish.WriteResult(), memory)
+        reg.save()
+        e1 = dataclasses.asdict(registry.Registry().get(thin_pid))
+        name = rec.name[:24]
+        if outcome != "reverted":
+            failures.append(f"{name}: 더 얇게 썼는데 되돌리지 않았습니다 ({outcome})")
+        else:
+            moved = [k for k in e0 if e0[k] != e1[k]]
+            if moved:
+                failures.append(f"{name}: 되돌렸는데 원장의 {', '.join(moved)} 이(가) 바뀌어 있습니다")
+            if rec_file.read_text(encoding="utf-8") != rec_text:
+                failures.append(f"{name}: 되돌렸는데 레코드 파일이 바뀌어 있습니다")
+            if page_file.read_text(encoding="utf-8") != page_text:
+                failures.append(f"{name}: 되돌렸는데 페이지 파일이 바뀌어 있습니다 (수정일·사이트맵이 '오늘' 이 된다)")
+            if memory.get(thin_pid, {}).get("date") != day.isoformat():
+                failures.append(f"{name}: 되돌린 것을 기억하지 않았습니다 — 내일 또 고른다")
+
+        # 이튿날 고르지 않아야 하고, 원문이 바뀌면 다시 골라야 한다
+        reg = registry.Registry()
+        recs = registry.load_all_records()
+        kw = dict(min_raw=0, max_own=10 ** 9, names=[])
+        nxt, cooling = regenerate.select_targets(recs, reg, memory, day + timedelta(days=1), **kw)
+        if thin_pid in {r.id for r in nxt}:
+            failures.append(f"{name}: 어제 되돌린 제도를 오늘 또 골랐습니다 (원문 그대로)")
+        reg.get(thin_pid).content_hash = "sha256:원문이-바뀌었다"
+        again, _ = regenerate.select_targets(recs, reg, memory, day + timedelta(days=1), **kw)
+        if thin_pid not in {r.id for r in again}:
+            failures.append(f"{name}: 원문이 바뀌었는데도 쉬는 중이라 고르지 않았습니다")
+        later, _ = regenerate.select_targets(recs, registry.Registry(), memory,
+                                             day + timedelta(days=regenerate.COOLDOWN_DAYS), **kw)
+        if thin_pid not in {r.id for r in later}:
+            failures.append(f"{name}: {regenerate.COOLDOWN_DAYS}일이 지났는데도 고르지 않았습니다")
+
+        # (나) 더 두껍게 썼다 → 평소처럼 받아들인다 (판 +1 · 수정일 오늘 · 기억 지움)
+        reg = registry.Registry()
+        prev2 = registry.load_prose(thick_pid)
+        generate_program.generate = lambda r, c: dict(
+            copy.deepcopy(prev2), eligibility=list(prev2["eligibility"]) + [
+                "같은 가구의 다른 구성원이 이미 지원을 받고 있으면 중복 지원이 제한될 수 있습니다",
+                "소득·재산 기준은 신청한 달의 공적 자료로 확인합니다"])
+        memory[thick_pid] = {"date": "2000-01-01", "content_hash": "x", "times": 3}
+        r0 = reg.get(thick_pid).revision
+        outcome2 = regenerate.regenerate_one(recs[thick_pid], reg, day, object(), publish.WriteResult(), memory)
+        e2 = reg.get(thick_pid)
+        nm2 = recs[thick_pid].name[:24]
+        if outcome2 != "accepted":
+            failures.append(f"{nm2}: 더 두껍게 썼는데 받아들이지 않았습니다 ({outcome2})")
+        elif e2.revision != r0 + 1 or e2.last_updated != day.isoformat():
+            failures.append(f"{nm2}: 받아들였는데 판·수정일이 오르지 않았습니다")
+        elif thick_pid in memory:
+            failures.append(f"{nm2}: 받아들였는데 되돌림 기억이 남아 있습니다")
+        generate_program.generate = real_generate
+        print(f"표적 재생성이 더 얇게 쓴 날: {outcome} · 이튿날 다시 고름 "
+              f"{'예' if thin_pid in {r.id for r in nxt} else '아니오'} · 더 두껍게 쓴 것 {outcome2}")
+
     if failures:
         print()
         for f in failures[:20]:
             print(f"  ✗ {f}")
         print(f"\n저장분으로 다시 찍는 경로에 문제가 있습니다 — {len(failures)}건.")
         return 1
-    print("\n✅ 저장분으로 다시 찍는 경로와 상세 조회 실패 처리가 링크·상세분·판·확인일을 바르게 다룹니다.")
+    print("\n✅ 저장분으로 다시 찍기 · 상세 조회 실패 · 재생성 되돌리기가 링크·상세분·판·날짜를 바르게 다룹니다.")
     return 0
 
 
