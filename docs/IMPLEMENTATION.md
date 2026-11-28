@@ -281,8 +281,11 @@ scripts/
 ├── scripts/check_audience.py  대상 분류 회귀 케이스 38건 ★ 키워드를 만지면 먼저 돌린다 (CI)
 ├── scripts/check_overrides.py 손으로 적은 대상 덮어쓰기가 아직 근거와 맞는지 (CI)
 ├── scripts/check_pages.py     페이지와 원장이 같은 말을 하는지 — 중복 주소·보이지 않는 제도·화면의 확인일 (CI)
-├── scripts/check_rerender.py  저장분으로 다시 찍는 경로(상태만·링크만 바뀜)가 상세분·판·확인일을 지키는지 (CI)
+├── scripts/check_rerender.py  저장분으로 다시 찍기(상태만·링크만 바뀜)·상세 조회 실패·재생성 되돌리기가
+│                             상세분·판·날짜를 지키는지 (CI · 파이프라인 앞)
 ├── scripts/site_review.py     사이트를 훑어 고칠 거리를 우선순위대로 ★ 매일 06시 루틴이 이걸로 시작한다
+├── scripts/regenerate.py     원문은 넉넉한데 우리 문장이 얇은 제도만 다시 쓴다 (LLM · 매일 8건)
+│                             더 얇아지면 통째로 되돌리고 30일 쉰다 → _data/regen_reverted.json
 ├── scripts/restore_thinner.py 재생성이 오히려 얇게 만든 페이지를 되살린다 (토큰 0)
 ├── scripts/reslug.py          slug 규칙을 고친 뒤 저장된 레코드에 반영한다 (토큰 0 · 주소가 바뀐다)
 └── scripts/inspect_api.py     새 API 의 필드명 조사 (--docs / --probe)
