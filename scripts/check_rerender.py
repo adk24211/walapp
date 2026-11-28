@@ -311,7 +311,12 @@ def inside() -> int:
     reg = registry.Registry()
     recs = registry.load_all_records()
     used = controls | set(planted) | set(trio)
-    fat = [pid for pid in pool if pid not in used
+    # ⚠️ 닫힌 제도는 고르지 않는다. ② 가 복사본에서 2030-01-01 로 동기화해 기간이
+    #    지난 제도를 전부 '종료' 로 바꿔 두었고, select_targets 는 종료된 것을 늘
+    #    뺀다. 그런 제도를 고르면 아래 '다시 고르는가' 검사가 쿨다운 탓처럼 거짓으로
+    #    실패한다(리뷰에서 재현됐다). 다시 읽은 레코드의 상태로 거른다.
+    fat = [pid for pid in pool if pid not in used and pid in recs
+           and recs[pid].status != "closed"
            and len((registry.load_prose(pid) or {}).get("eligibility") or []) >= 2
            and len((registry.load_prose(pid) or {}).get("steps") or []) >= 2]
     if len(fat) < 2:
@@ -320,6 +325,12 @@ def inside() -> int:
         thin_pid, thick_pid = fat[0], fat[1]
         memory: dict = {}
         real_generate = generate_program.generate
+        kw = dict(min_raw=0, max_own=10 ** 9, names=[])
+        # 양성 대조: 기억이 없으면 고르는 제도여야 아래 '안 고른다' 가 의미가 있다.
+        baseline, _ = regenerate.select_targets(recs, reg, {}, day + timedelta(days=1), **kw)
+        if thin_pid not in {r.id for r in baseline}:
+            failures.append(f"재생성 시험 준비 실패: {thin_pid} 는 기억이 없어도 대상이 아닙니다 "
+                            f"(상태 {recs[thin_pid].status}) — 시험 제도 고르기를 볼 것")
 
         # (가) 더 얇게 썼다 → 통째로 되돌린다
         prev = registry.load_prose(thin_pid)
@@ -347,18 +358,27 @@ def inside() -> int:
             if memory.get(thin_pid, {}).get("date") != day.isoformat():
                 failures.append(f"{name}: 되돌린 것을 기억하지 않았습니다 — 내일 또 고른다")
 
-        # 이튿날 고르지 않아야 하고, 원문이 바뀌면 다시 골라야 한다
+        # 이튿날 고르지 않아야 하고, 링크만 바뀌어도 계속 쉬어야 하고, 원문이 바뀌면
+        # 다시 골라야 하고, 쉬는 기간이 지나면 다시 골라야 한다.
         reg = registry.Registry()
         recs = registry.load_all_records()
-        kw = dict(min_raw=0, max_own=10 ** 9, names=[])
         nxt, cooling = regenerate.select_targets(recs, reg, memory, day + timedelta(days=1), **kw)
         if thin_pid in {r.id for r in nxt}:
             failures.append(f"{name}: 어제 되돌린 제도를 오늘 또 골랐습니다 (원문 그대로)")
-        reg.get(thin_pid).content_hash = "sha256:원문이-바뀌었다"
-        again, _ = regenerate.select_targets(recs, reg, memory, day + timedelta(days=1), **kw)
+        relinked = dict(recs)
+        relinked[thin_pid] = copy.copy(recs[thin_pid])
+        relinked[thin_pid].official_url = NEW_LINK.format(recs[thin_pid].source_id) + "&moved=again"
+        moved, _ = regenerate.select_targets(relinked, reg, memory, day + timedelta(days=1), **kw)
+        if thin_pid in {r.id for r in moved}:
+            failures.append(f"{name}: 상세 링크만 바뀌었는데 쉬던 것이 풀렸습니다 — 프롬프트는 그대로라 "
+                            f"또 얇게 쓰고 또 되돌린다")
+        changed_src = dict(recs)
+        changed_src[thin_pid] = copy.copy(recs[thin_pid])
+        changed_src[thin_pid].benefit_raw = (recs[thin_pid].benefit_raw or "") + " 지원 금액이 올랐습니다."
+        again, _ = regenerate.select_targets(changed_src, reg, memory, day + timedelta(days=1), **kw)
         if thin_pid not in {r.id for r in again}:
             failures.append(f"{name}: 원문이 바뀌었는데도 쉬는 중이라 고르지 않았습니다")
-        later, _ = regenerate.select_targets(recs, registry.Registry(), memory,
+        later, _ = regenerate.select_targets(recs, reg, memory,
                                              day + timedelta(days=regenerate.COOLDOWN_DAYS), **kw)
         if thin_pid not in {r.id for r in later}:
             failures.append(f"{name}: {regenerate.COOLDOWN_DAYS}일이 지났는데도 고르지 않았습니다")

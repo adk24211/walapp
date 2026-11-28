@@ -60,6 +60,8 @@ import publish           # noqa: E402
 import registry          # noqa: E402
 import render            # noqa: E402
 import run_all           # noqa: E402
+import schema            # noqa: E402
+import sync              # noqa: E402
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s",
                     datefmt="%H:%M:%S")
@@ -81,9 +83,15 @@ RAW_FIELDS = ("target_raw", "benefit_raw", "criteria_raw", "how_to_raw")
 #   그리고 조회수가 높은 그 제도들이 앞자리를 차지해, 조건에 맞는 나머지 28건은
 #   한 번도 차례가 오지 않았다.
 #
-# 그래서 되돌린 제도는 기억해 두고 COOLDOWN_DAYS 동안 고르지 않는다. 원문이
-# 바뀌면(원장 해시가 달라지면) 기다리지 않는다 — 쓸 거리가 달라졌으니 다시
-# 써 볼 만하다. --name 으로 직접 지정하면 기억을 무시한다.
+# 그래서 되돌린 제도는 기억해 두고 COOLDOWN_DAYS 동안 고르지 않는다. 모델에
+# 들어가는 원문이 바뀌면 기다리지 않는다 — 쓸 거리가 달라졌으니 다시 써 볼
+# 만하다. --name 으로 직접 지정하면 기억을 무시한다.
+#
+# ⚠️ '원문이 바뀌었나' 를 원장 해시로 보지 않는다(처음엔 그렇게 짰다). 원장 해시에는
+#    상세 링크(official_url)가 들어 있어, 원천이 링크만 옮겨도(10-28 처럼) 해시가
+#    바뀐다. 그러면 프롬프트에 들어가는 글자는 하나도 안 바뀌었는데 쉬던 제도가
+#    한꺼번에 풀려 또 얇게 쓰고 또 되돌린다. 링크는 템플릿이 찍는 값이고 프롬프트에
+#    들어가지 않는다 — 그래서 링크를 가린 해시(prompt_hash)로 본다.
 #
 # 영영 빼지 않고 날짜로 두는 이유: 모델 출력은 매번 조금씩 다르다. 오늘
 # 전세보증금반환보증 보증료 지원은 같은 줄에서 +106자로 성공했다. 한 달에 한 번
@@ -105,12 +113,25 @@ def save_reverted(memory: dict) -> None:
                              encoding="utf-8")
 
 
-def cooling_down(pid: str, entry, memory: dict, today: date) -> bool:
-    """최근에 되돌렸고, 그 뒤로 원문이 그대로인가."""
-    m = memory.get(pid)
-    if not m or entry is None:
+def prompt_hash(record) -> str:
+    """모델에 들어가는 원문의 해시 — 저장된 레코드에서 상세 링크만 가리고 만든다.
+
+    저장된 레코드에는 상세 조회분(구비서류·신청URL)이 들어 있고, 그것도 프롬프트에
+    들어간다(generate_program.build_prompt). 그래서 원장 해시(목록 값으로 만든 것)가
+    아니라 저장된 레코드로 만든다.
+    """
+    masked = copy.copy(record)
+    for f in sync.LINK_ONLY_FIELDS:
+        setattr(masked, f, "")
+    return schema.compute_hash(masked)
+
+
+def cooling_down(record, memory: dict, today: date) -> bool:
+    """최근에 되돌렸고, 그 뒤로 모델에 들어가는 원문이 그대로인가."""
+    m = memory.get(record.id)
+    if not m:
         return False
-    if m.get("content_hash") != entry.content_hash:
+    if m.get("prompt_hash") != prompt_hash(record):
         return False   # 원문이 바뀌었다 — 다시 써 볼 만하다
     try:
         return (today - date.fromisoformat(m["date"])).days < COOLDOWN_DAYS
@@ -223,10 +244,11 @@ def regenerate_one(record, reg: registry.Registry, today: date, client,
             page_file.write_text(render.to_markdown(record, prev_prose), encoding="utf-8")
         result.updated.remove(record.id)
         prev = memory.get(record.id) or {}
+        restored = registry.load_record(record.id) or record
         memory[record.id] = {
             "name": record.name,
             "date": today.isoformat(),
-            "content_hash": saved_entry.content_hash if saved_entry else record.content_hash,
+            "prompt_hash": prompt_hash(restored),
             "before": before, "after": after,
             "times": int(prev.get("times", 0)) + 1,
         }
@@ -251,7 +273,7 @@ def select_targets(records: dict, reg: registry.Registry, memory: dict, today: d
                 if r.status != "closed"
                 and raw_len(r) >= min_raw
                 and own_len(r) < max_own]
-    targets = [r for r in eligible if not cooling_down(r.id, reg.get(r.id), memory, today)]
+    targets = [r for r in eligible if not cooling_down(r, memory, today)]
     # 조회수 높은 것부터. 한도에 걸려 잘리더라도 많이 보는 쪽이 먼저 나아진다.
     targets.sort(key=lambda r: -(r.view_count or 0))
     return targets, len(eligible) - len(targets)
